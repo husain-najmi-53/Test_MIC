@@ -29,12 +29,26 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
     'otherCess': TextEditingController(),
   };
 
+  String? _selectedDepreciation;
   String? _selectedAge;
   String? _selectedZone;
   String? _selectedNoClaimBonus;
   String? _selectedLLPaidDriver;
 
-  final List<String> _ageOptions = ['Upto 5 Years', '6-10 Years', 'Above 10 Years'];
+  final List<String> _depreciationOptions = [
+    '0%',
+    '5%',
+    '10%',
+    '15%',
+    '20%',
+    '25%',
+    '30%',
+  ];
+  final List<String> _ageOptions = [
+    'Upto 5 Years',
+    '6-10 Years',
+    'Above 10 Years'
+  ];
   final List<String> _zoneOptions = ['A', 'B'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
   final List<String> _llPaidDriverOptions = ['0', '50'];
@@ -47,13 +61,50 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
     super.dispose();
   }
 
+  Widget _buildReadOnlyField(String key, String label) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 180,
+            child: Text(label, style: const TextStyle(fontSize: 16)),
+          ),
+          Expanded(
+            child: TextFormField(
+              controller: _controllers[key],
+              readOnly: true,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _updateCurrentIdv() {
+    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+    double depreciation = 0.0;
+
+    if (_selectedDepreciation != null) {
+      depreciation =
+          double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0;
+    }
+
+    double currentIdv = idv - ((idv * depreciation) / 100);
+    _controllers['currentIdv']!.text = currentIdv.toStringAsFixed(2);
+  }
+
   void _submitForm() {
     //if (_formKey.currentState!.validate()) {
     // Fetch form inputs
     double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
     String yearOfManufacture = _controllers['yearOfManufacture']!.text;
     String zone = _selectedZone ?? "A";
-    double kwCapacity = double.tryParse(_controllers['kwCapacity']!.text) ?? 0.0;
+    double kwCapacity =
+        double.tryParse(_controllers['kwCapacity']!.text) ?? 0.0;
     double discountOnOd =
         double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
     double accessoriesValue =
@@ -84,7 +135,8 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
     double totalA = netOdPremium + zeroDepreciation;
 
     // TP Section
-    double liabilityPremiumTP = _getElectricTwoWheelerTpRate(kwCapacity,isFiveYear: false);//Else True for 5 Year TP
+    double liabilityPremiumTP = _getElectricTwoWheelerTpRate(kwCapacity,
+        isFiveYear: false); //Else True for 5 Year TP
     double totalB = liabilityPremiumTP +
         paOwnerDriver +
         llToPaidDriver +
@@ -207,23 +259,49 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
             child: Column(
               children: [
                 _buildTextField('idv', 'IDV (₹)', 'Enter IDV'),
-                _buildTextField('depreciation', 'Depreciation (%)', 'Enter Depreciation'),
-                _buildTextField('currentIdv', 'Current IDV (₹)', 'Enter Current IDV'),
+                // _buildTextField(
+                //     'depreciation', 'Depreciation (%)', 'Enter Depreciation'),
+                _buildDropdownField(
+                  'Depreciation (%)',
+                  _depreciationOptions,
+                  _selectedDepreciation,
+                  (val) {
+                    setState(() {
+                      _selectedDepreciation = val;
+                      _updateCurrentIdv(); // <-- Add this
+                    });
+                  },
+                ),
+                _buildReadOnlyField(
+                    'currentIdv', 'Current IDV (₹)'), // Read-only field
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),
-                _buildTextField('yearOfManufacture', 'Year of Manufacture', 'Enter Year'),
+                _buildTextField(
+                    'yearOfManufacture', 'Year of Manufacture', 'Enter Year'),
                 _buildDropdownField('Zone', _zoneOptions, _selectedZone,
                     (val) => setState(() => _selectedZone = val)),
-                _buildTextField('kwCapacity', 'KW (Kilowatt Capacity)', 'Enter KW'),
-                _buildTextField('discountOnOd', 'Discount on OD Premium (%)', 'Enter Discount'),
-                _buildTextField('accessoriesValue', 'Accessories Value (₹)', 'Enter Value'),
-                _buildDropdownField('No Claim Bonus (%)', _ncbOptions, _selectedNoClaimBonus,
+                _buildTextField(
+                    'kwCapacity', 'KW (Kilowatt Capacity)', 'Enter KW'),
+                _buildTextField('discountOnOd', 'Discount on OD Premium (%)',
+                    'Enter Discount'),
+                _buildTextField(
+                    'accessoriesValue', 'Accessories Value (₹)', 'Enter Value'),
+                _buildDropdownField(
+                    'No Claim Bonus (%)',
+                    _ncbOptions,
+                    _selectedNoClaimBonus,
                     (val) => setState(() => _selectedNoClaimBonus = val)),
-                _buildTextField('zeroDepreciation', 'Zero Depreciation (₹)', 'Enter Amount'),
-                _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)', 'Enter Amount'),
-                _buildDropdownField('LL to Paid Driver', _llPaidDriverOptions, _selectedLLPaidDriver,
+                _buildTextField('zeroDepreciation', 'Zero Depreciation (₹)',
+                    'Enter Amount'),
+                _buildTextField(
+                    'paOwnerDriver', 'PA to Owner Driver (₹)', 'Enter Amount'),
+                _buildDropdownField(
+                    'LL to Paid Driver',
+                    _llPaidDriverOptions,
+                    _selectedLLPaidDriver,
                     (val) => setState(() => _selectedLLPaidDriver = val)),
-                _buildTextField('paUnnamedPassenger', 'PA to Unnamed Passenger (₹)', 'Enter Amount'),
+                _buildTextField('paUnnamedPassenger',
+                    'PA to Unnamed Passenger (₹)', 'Enter Amount'),
                 _buildTextField('otherCess', 'Other Cess (%)', 'Enter Cess'),
                 //const SizedBox(height: 80),
               ],
@@ -238,9 +316,11 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.indigo.shade700,
             padding: const EdgeInsets.symmetric(vertical: 16),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           ),
-          child: const Text('Calculate', style: TextStyle(color: Colors.white, fontSize: 18)),
+          child: const Text('Calculate',
+              style: TextStyle(color: Colors.white, fontSize: 18)),
         ),
       ),
     );
@@ -251,16 +331,23 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
-          SizedBox(width: 180, child: Text(label, style: const TextStyle(fontSize: 16))),
+          SizedBox(
+              width: 180,
+              child: Text(label, style: const TextStyle(fontSize: 16))),
           Expanded(
             child: TextFormField(
+              onChanged: (val) {
+                if (key == 'idv') _updateCurrentIdv();
+              },
               controller: _controllers[key],
               decoration: InputDecoration(
                 border: const OutlineInputBorder(),
                 hintText: placeholder,
               ),
               keyboardType: TextInputType.number,
-              inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))],
+              inputFormatters: [
+                FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
+              ],
               validator: (value) =>
                   value == null || value.trim().isEmpty ? 'Enter $label' : null,
             ),
@@ -280,12 +367,15 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
-          SizedBox(width: 180, child: Text(label, style: const TextStyle(fontSize: 16))),
+          SizedBox(
+              width: 180,
+              child: Text(label, style: const TextStyle(fontSize: 16))),
           Expanded(
             child: DropdownButtonFormField<String>(
               value: selected,
               items: options
-                  .map((item) => DropdownMenuItem(value: item, child: Text(item)))
+                  .map((item) =>
+                      DropdownMenuItem(value: item, child: Text(item)))
                   .toList(),
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
@@ -300,6 +390,7 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
     );
   }
 }
+
 double _getElectricTwoWheelerOdRate(double kwCapacity) {
   if (kwCapacity <= 3) {
     return 1.41;
@@ -309,7 +400,9 @@ double _getElectricTwoWheelerOdRate(double kwCapacity) {
     return 2.10;
   }
 }
-double _getElectricTwoWheelerTpRate(double kwCapacity, {bool isFiveYear = false}) {
+
+double _getElectricTwoWheelerTpRate(double kwCapacity,
+    {bool isFiveYear = false}) {
   if (isFiveYear) {
     if (kwCapacity <= 3) return 2466.0;
     if (kwCapacity <= 7) return 3273.0;

@@ -70,7 +70,40 @@ class InsuranceResultScreen extends StatelessWidget {
           "GST @ 18%",
           "Other CESS"
         ]
-      }
+      },
+      "Two Wheeler Passenger Carrying": {
+        "Basic Details": [
+          "IDV",
+          "Year of Manufacture",
+          "Zone",
+          "Cubic Capacity",
+          "No. of Passengers"
+        ],
+        "[A] Own Damage Premium": [
+          "Vehicle Basic Rate",
+          "Basic for Vehicle",
+          "Accessories Value",
+          "IMT 23",
+          "Discount on OD Premium",
+          "Basic OD Premium after discount",
+          "Total Basic Premium",
+          "No Claim Bonus",
+          "Net Own Damage Premium(A)",
+        ],
+        "[B] Liability Premium": [
+          "Liability Premium (TP)",
+          "Passenger Coverage",
+          "PA to Owner Driver",
+          "LL to Paid Driver",
+          "Restricted TPPD",
+          "Total Liability Premium (B)"
+        ],
+        "[C] Total Premium": [
+          "Total Package Premium[A+B]",
+          "GST @ 18%",
+          "Other CESS"
+        ]
+      },
     };
 
     final vehicleType = resultData.vehicleType;
@@ -154,39 +187,37 @@ class InsuranceResultScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 24),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => VehicleAgentFormScreen(
-                          insuranceResult:
-                              resultData), // Passing the calculation result
-                    ),
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.indigo.shade700,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  elevation: 2,
-                ),
-                child: const Text(
-                  "Next",
-                  style: TextStyle(
-                    fontSize: 18,
-                    //fontWeight: FontWeight.w600,
-                  ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16),
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => VehicleAgentFormScreen(
+                  insuranceResult: resultData,
                 ),
               ),
+            );
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.indigo.shade700,
+            foregroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
             ),
-          ],
+            elevation: 2,
+          ),
+          child: const Text(
+            "Next",
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
         ),
       ),
     );

@@ -29,11 +29,21 @@ class _ElectricTwoWheeler1YODFormScreenState
     'otherCess': TextEditingController(),
   };
 
+  String? _selectedDepreciation;
   String? _selectedAge;
   String? _selectedZone;
   String? _selectedNoClaimBonus;
   String? _selectedLLPaidDriver;
 
+  final List<String> _depreciationOptions = [
+    '0%',
+    '5%',
+    '10%',
+    '15%',
+    '20%',
+    '25%',
+    '30%',
+  ];
   final List<String> _ageOptions = [
     'Upto 5 Years',
     '6-10 Years',
@@ -49,6 +59,42 @@ class _ElectricTwoWheeler1YODFormScreenState
       controller.dispose();
     }
     super.dispose();
+  }
+
+  Widget _buildReadOnlyField(String key, String label) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 180,
+            child: Text(label, style: const TextStyle(fontSize: 16)),
+          ),
+          Expanded(
+            child: TextFormField(
+              controller: _controllers[key],
+              readOnly: true,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _updateCurrentIdv() {
+    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+    double depreciation = 0.0;
+
+    if (_selectedDepreciation != null) {
+      depreciation =
+          double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0;
+    }
+
+    double currentIdv = idv - ((idv * depreciation) / 100);
+    _controllers['currentIdv']!.text = currentIdv.toStringAsFixed(2);
   }
 
   void _submitForm() {
@@ -209,9 +255,22 @@ class _ElectricTwoWheeler1YODFormScreenState
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _buildTextField('idv', 'IDV(₹)', 'Enter IDV'),
-                _buildTextField(
-                    'depreciation', 'Depreciation (%)', 'Enter Depreciation'),
+                _buildTextField('idv', 'IDV (₹)', 'Enter IDV'),
+                // _buildTextField(
+                //     'depreciation', 'Depreciation (%)', 'Enter Depreciation'),
+                _buildDropdownField(
+                  'Depreciation (%)',
+                  _depreciationOptions,
+                  _selectedDepreciation,
+                  (val) {
+                    setState(() {
+                      _selectedDepreciation = val;
+                      _updateCurrentIdv(); // <-- Add this
+                    });
+                  },
+                ),
+                _buildReadOnlyField(
+                    'currentIdv', 'Current IDV (₹)'), // Read-only field
                 _buildTextField(
                     'currentIdv', 'Current IDV (₹)', 'Enter Current IDV'),
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
@@ -276,6 +335,9 @@ class _ElectricTwoWheeler1YODFormScreenState
               child: Text(label, style: const TextStyle(fontSize: 16))),
           Expanded(
             child: TextFormField(
+              onChanged: (val) {
+                if (key == 'idv') _updateCurrentIdv();
+              },
               controller: _controllers[key],
               decoration: InputDecoration(
                 border: const OutlineInputBorder(),

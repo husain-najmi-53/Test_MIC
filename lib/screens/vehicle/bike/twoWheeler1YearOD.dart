@@ -17,7 +17,6 @@ class _TwoWheeler1YearODFormScreenState
 
   final Map<String, TextEditingController> _controllers = {
     'idv': TextEditingController(),
-    'depreciation': TextEditingController(),
     'currentIdv': TextEditingController(),
     'yearOfManufacture': TextEditingController(),
     'cubicCapacity': TextEditingController(),
