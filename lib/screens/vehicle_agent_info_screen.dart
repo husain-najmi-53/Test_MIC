@@ -1,6 +1,7 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:motor_insurance_app/screens/pdf_generation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../models/result_data.dart';
 import '../models/quotation_data.dart';
 
@@ -34,11 +35,53 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
   DateTime? policyEndDate;
 
   @override
+  void initState() {
+    super.initState();
+    _loadSavedData();
+  }
+
+  @override
   void dispose() {
     for (var controller in _controllers.values) {
       controller.dispose();
     }
     super.dispose();
+  }
+
+  Future<void> _loadSavedData() async {
+    final prefs = await SharedPreferences.getInstance();
+    final savedData = prefs.getString('agent_form_data');
+    if (savedData != null) {
+      final data = json.decode(savedData);
+      setState(() {
+        for (var entry in data['controllers'].entries) {
+          _controllers[entry.key]?.text = entry.value;
+        }
+        if (data['dates'] != null) {
+          policyStartDate = data['dates']['start'] != null
+              ? DateTime.parse(data['dates']['start'])
+              : null;
+          policyEndDate = data['dates']['end'] != null
+              ? DateTime.parse(data['dates']['end'])
+              : null;
+        }
+      });
+    }
+  }
+
+  Future<void> _resetForm() async {
+    _formKey.currentState?.reset();
+    for (var controller in _controllers.values) {
+      controller.clear();
+    }
+    setState(() {
+      policyStartDate = null;
+      policyEndDate = null;
+    });
+
+    // Clear saved data
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('agent_form_data');
   }
 
   Future<void> _pickDate({required bool isStart}) async {
@@ -59,27 +102,128 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
     }
   }
 
-  void _saveQuotation() {
-    if (_formKey.currentState!.validate()) {
-      final quotation = QuotationData(
-        insuranceResult: widget.insuranceResult,
-        ownerName: _controllers['ownerName']!.text.trim(),
-        make: _controllers['make']!.text.trim(),
-        model: _controllers['model']!.text.trim(),
-        registrationNumber: _controllers['registrationNumber']!.text.trim(),
-        seatingCapacity: _controllers['seatingCapacity']!.text.trim(),
-        otherCoverage: _controllers['otherCoverage']!.text.trim(),
-        policyStartDate: policyStartDate!,
-        policyEndDate: policyEndDate!,
-        agentName: _controllers['agentName']!.text.trim(),
-        agentEmail: _controllers['agentEmail']!.text.trim(),
-        agentContact: _controllers['agentContact']!.text.trim(),
+  QuotationData? _validateAndCreateQuotation() {
+    if (!_formKey.currentState!.validate()) {
+      return null;
+    }
+    
+    if (policyStartDate == null || policyEndDate == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Please select both policy start and end dates'),
+          backgroundColor: Colors.red,
+        ),
       );
-      print('Quotation saved: ${jsonEncode(quotation)}');
+      return null;
+    }
+
+    if (policyEndDate!.isBefore(policyStartDate!)) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Policy end date cannot be before start date'),
+          backgroundColor: Colors.red,
+        ),
+      );
+      return null;
+    }
+
+    return QuotationData(
+      insuranceResult: widget.insuranceResult,
+      ownerName: _controllers['ownerName']!.text.trim(),
+      make: _controllers['make']!.text.trim(),
+      model: _controllers['model']!.text.trim(),
+      registrationNumber: _controllers['registrationNumber']!.text.trim(),
+      seatingCapacity: _controllers['seatingCapacity']!.text.trim(),
+      otherCoverage: _controllers['otherCoverage']!.text.trim().isNotEmpty
+          ? _controllers['otherCoverage']!.text.trim()
+          : null,
+      policyStartDate: policyStartDate!,
+      policyEndDate: policyEndDate!,
+      agentName: _controllers['agentName']!.text.trim(),
+      agentEmail: _controllers['agentEmail']!.text.trim(),
+      agentContact: _controllers['agentContact']!.text.trim(),
+    );
+  }
+
+  Future<void> _saveQuotation() async {
+    final quotation = _validateAndCreateQuotation();
+    if (quotation == null) return;
+    
+    try {
+      // Save form data to SharedPreferences
+      final prefs = await SharedPreferences.getInstance();
+      final formData = {
+        'controllers': {
+          for (var entry in _controllers.entries) entry.key: entry.value.text
+        },
+        'dates': {
+          'start': policyStartDate?.toIso8601String(),
+          'end': policyEndDate?.toIso8601String(),
+        },
+      };
+      await prefs.setString('agent_form_data', json.encode(formData));
+      // Show success message
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Form data saved successfully'),
+            duration: Duration(seconds: 2),
+          ),
+        );
+      }
+    } catch (e) {
+      // Show error message if save fails
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Error saving form data: ${e.toString()}'),
+            duration: const Duration(seconds: 2),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
     }
   }
 
-  Widget _buildTextField(String key, String label, String placeholder) {
+  String? _validateField(String key, String value) {
+    if (value.trim().isEmpty) {
+      return 'This field is required';
+    }
+    
+    switch (key) {
+      case 'seatingCapacity':
+        final number = int.tryParse(value);
+        if (number == null) {
+          return 'Please enter a valid number';
+        }
+        if (number <= 0) {
+          return 'Seating capacity must be greater than 0';
+        }
+        break;
+      case 'agentEmail':
+        final emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+        if (!emailRegex.hasMatch(value)) {
+          return 'Please enter a valid email';
+        }
+        break;
+      case 'agentContact':
+        final phoneRegex = RegExp(r'^\d{10}$');
+        if (!phoneRegex.hasMatch(value)) {
+          return 'Please enter a valid 10-digit contact number';
+        }
+        break;
+      case 'registrationNumber':
+        final regNoRegex = RegExp(r'^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}$');
+        if (!regNoRegex.hasMatch(value)) {
+          return 'Please enter a valid registration number (e.g., MH02AB1234)';
+        }
+        break;
+    }
+    return null;
+  }
+
+  Widget _buildTextField(String key, String label, String placeholder,
+      {bool isOptional = false}) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -95,8 +239,9 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
                 border: const OutlineInputBorder(),
                 hintText: placeholder,
               ),
-              validator: (value) =>
-                  value == null || value.trim().isEmpty ? 'Enter $label' : null,
+              validator: isOptional
+                  ? null
+                  : (value) => value == null ? 'Enter $label' : _validateField(key, value),
             ),
           ),
         ],
@@ -152,20 +297,24 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
         backgroundColor: Colors.indigo[700],
         automaticallyImplyLeading: false,
         centerTitle: true,
-        title: const Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            SizedBox(width: 8),
-            Text(
-              'Vehicle & Agent Information',
-              style: TextStyle(color: Colors.white),
-            ),
-          ],
+        title: const FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            'Vehicle & Agent Information',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.pop(context),
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh, color: Colors.white),
+            onPressed: _resetForm,
+            tooltip: 'Reset Form',
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -199,8 +348,11 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
                             'Registration Number', 'Enter registration number'),
                         _buildTextField('seatingCapacity', 'Seating Capacity',
                             'Enter seating capacity'),
-                        _buildTextField('otherCoverage', 'Other Coverage',
-                            'Enter other coverage'),
+                        _buildTextField(
+                            'otherCoverage',
+                            'Other Coverage (Optional)',
+                            'Enter other coverage if any',
+                            isOptional: true),
                         _buildDateField('Policy Start Date', true),
                         _buildDateField('Policy End Date', false),
                       ],
@@ -266,12 +418,16 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
             Expanded(
               child: ElevatedButton(
                 onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text("PDF generation is not implemented yet"),
-                      duration: Duration(seconds: 2),
-                    ),
-                  );
+                  final quotation = _validateAndCreateQuotation();
+                  if (quotation != null) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            PdfSelectionScreen(finalData: quotation),
+                      ),
+                    );
+                  }
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.indigo[100],
@@ -281,7 +437,8 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
                   ),
                 ),
                 child: Text(
-                  'SHARE (PDF)',
+                  //'SHARE (PDF)',
+                  'Next',
                   style: TextStyle(color: Colors.indigo[700], fontSize: 16),
                 ),
               ),

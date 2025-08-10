@@ -9,7 +9,7 @@ class QuotationData {
   final String model;
   final String registrationNumber;
   final String seatingCapacity;
-  final String otherCoverage;
+  final String? otherCoverage;  // Optional field
   final DateTime policyStartDate;
   final DateTime policyEndDate;
 
@@ -25,7 +25,7 @@ class QuotationData {
     required this.model,
     required this.registrationNumber,
     required this.seatingCapacity,
-    required this.otherCoverage,
+    this.otherCoverage,  // Made optional
     required this.policyStartDate,
     required this.policyEndDate,
     required this.agentName,

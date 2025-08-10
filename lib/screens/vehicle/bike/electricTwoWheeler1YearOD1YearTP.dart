@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:motor_insurance_app/screens/result_screen.dart';
+import 'package:motor_insurance_app/screens/vehicle/bike/bike_result_screen.dart';
 import 'package:motor_insurance_app/models/result_data.dart';
 
 class ElectricTwoWheeler1YearOD1YearTPFormScreen extends StatefulWidget {
@@ -195,7 +195,7 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => InsuranceResultScreen(resultData: resultData),
+        builder: (context) => BikeInsuranceResultScreen(resultData: resultData),
       ),
     );
   }

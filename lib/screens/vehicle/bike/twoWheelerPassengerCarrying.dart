@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:motor_insurance_app/models/result_data.dart';
-import 'package:motor_insurance_app/screens/result_screen.dart';
+import 'package:motor_insurance_app/screens/vehicle/bike/bike_result_screen.dart';
 
 class TwoWheelerPassengerCarryingFormScreen extends StatefulWidget {
   const TwoWheelerPassengerCarryingFormScreen({super.key});
@@ -206,13 +206,13 @@ Widget _buildReadOnlyField(String key, String label) {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => InsuranceResultScreen(resultData: resultData),
+        builder: (context) => BikeInsuranceResultScreen(resultData: resultData),
       ),
     );
   }
   //}
 
-  void _resetForm() {
+  Future<void> _resetForm() async {
     _formKey.currentState?.reset();
     for (var controller in _controllers.values) {
       controller.clear();
