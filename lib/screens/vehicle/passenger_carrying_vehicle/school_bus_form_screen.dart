@@ -76,11 +76,12 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
  
   void _submitForm() {
     // if (!_formKey.currentState!.validate()) return;
-
+    if (_formKey.currentState!.validate()) {
     double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
     double depreciation = double.tryParse((_selectedDepreciation ?? '0').replaceAll('%', '')) ?? 0.0;
     String age = _selectedAge ?? 'Upto 5 Years';
     String zone = _selectedZone ?? 'A';
+     String yearOfManufacture = _controllers['yearOfManufacture']!.text;
     int passengerCount = int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
     double discountOnOd = double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
     double accessories = double.tryParse(_controllers['electricalAccessories']!.text) ?? 0.0;
@@ -157,19 +158,22 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
     // Prepare result map
     Map<String, String> resultData = {
       'IDV (₹)': currentIdv.toStringAsFixed(2),
+      'Year Of Manufacture' :yearOfManufacture,
       'Depreciation (%)': depreciation.toStringAsFixed(2),
       'Current IDV (₹)': currentIdv.toStringAsFixed(2),
       'Age of Vehicle': age,
       'Zone': zone,
       'No. of Passengers': passengerCount.toString(),
+      'Basic OD Rate (%)': odRate.toStringAsFixed(3),
       'Basic OD Premium (₹)': basicOdPremium.toStringAsFixed(2),
       'IMT 23 Applied': imt23,
       'Anti Theft Applied': antiTheft,
+      'Discount on OD Premium (%)': discountOnOd.toStringAsFixed(2),
       'Discount on OD Premium (₹)': discountAmount.toStringAsFixed(2),
       'OD Premium after Discount (₹)': odAfterDiscount.toStringAsFixed(2),
-      'Electrical Accessories(₹)': accessories.toStringAsFixed(2),
+      'Electrical Accessories (₹)': accessories.toStringAsFixed(2),
       'CNG/LPG Kits':cngLpgKit,
-      'External CNG/LPG Kit (₹)': externalCng.toStringAsFixed(2),
+      'CNG/LPG Kits (Externally Fitted) (₹)': externalCng.toStringAsFixed(2),
       'RSA/Addons (₹)': rsaAddons.toStringAsFixed(2),
       'Total Basic Premium (₹)': totalBasicPremium.toStringAsFixed(2),
       'No Claim Bonus (%)': selectedNcbPercent.toStringAsFixed(2),
@@ -181,8 +185,8 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
       'LL to Paid Driver (₹)': llPaidDriverAmount.toStringAsFixed(2),
       'LL to Other Employees (₹)': llOtherEmployeeAmount.toStringAsFixed(2),
       'Premium Before Cess (₹)': premiumBeforeCess.toStringAsFixed(2),
-      'Other Cess (%)': otherCessPercent.toStringAsFixed(2),
-      'Other Cess Amount (₹)': otherCessAmount.toStringAsFixed(2),
+      'Other CESS (%)': otherCessPercent.toStringAsFixed(2),
+      'Other CESS Amount (₹)': otherCessAmount.toStringAsFixed(2),
       'GST @ 18% (₹)': gstAmount.toStringAsFixed(2),
       'Final Premium Payable (₹)': finalPremium.toStringAsFixed(2),
     };
@@ -199,7 +203,7 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
         builder: (context) => PcvInsuranceResultScreen(resultData: insuranceResultData),
       ),
     );
-  }
+  }}
 
   void _resetForm() {
     _formKey.currentState?.reset();

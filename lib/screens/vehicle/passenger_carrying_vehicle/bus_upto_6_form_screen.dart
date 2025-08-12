@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:motor_insurance_app/models/result_data.dart';
@@ -73,10 +74,12 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
   }
 
   void _submitForm() {
+    if (_formKey.currentState!.validate()) {
     double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
     double depreciation = double.tryParse(_selectedDepreciation?.replaceAll('%', '') ?? '0') ?? 0.0;
     String age = _selectedAge ?? 'Upto 5 Years';
     String zone = _selectedZone ?? 'A';
+     String yearOfManufacture = _controllers['yearOfManufacture']!.text;
     int passengerCount = int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
     double discountOnOdPercent = double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
     double accessories = double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
@@ -131,6 +134,7 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
       'Age of Vehicle': age,
       'Zone': zone,
       'No. of Passengers': passengerCount.toString(),
+      'Year Of Manufacture' :yearOfManufacture,
       'Basic OD Rate (%)': odRate.toStringAsFixed(3),
       'Basic OD Premium (₹)': basicOdPremium.toStringAsFixed(2),
       'IMT 23 Loading (₹)': imt23Loading.toStringAsFixed(2),
@@ -138,8 +142,9 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
       'Discount on OD Premium (%)': discountOnOdPercent.toStringAsFixed(2),
       'Discount Amount (₹)': discountAmount.toStringAsFixed(2),
       'OD Premium after Discount (₹)': odAfterDiscount.toStringAsFixed(2),
-      'Accessories Value (₹)': accessories.toStringAsFixed(2),
-      'External CNG/LPG Kit (₹)': externalCng.toStringAsFixed(2),
+      'Electrical/Electronic Accessories (₹)': accessories.toStringAsFixed(2),
+ 
+      'CNG/LPG Kits (Externally Fitted) (₹)': externalCng.toStringAsFixed(2),
       'CNG/LPG Kit Loading (₹)': cngKitLoading.toStringAsFixed(2),
       'OD Premium after Accessories and CNG Loading (₹)': odWithCngLoading.toStringAsFixed(2),
       'No Claim Bonus (%)': selectedNcbPercent.toStringAsFixed(2),
@@ -169,7 +174,7 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
         builder: (context) => PcvInsuranceResultScreen(resultData: insuranceResultData),
       ),
     );
-  }
+  }}
 
   void _resetForm() {
     _formKey.currentState?.reset();

@@ -167,7 +167,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
 
     final vehicleType = resultData.vehicleType;
     final sections = categoryFieldMapping[vehicleType] ??
-        categoryFieldMapping["Two Wheeler"]!;
+        categoryFieldMapping["Goods carrying Vehicle"]!;
 
     return Scaffold(
       appBar: AppBar(

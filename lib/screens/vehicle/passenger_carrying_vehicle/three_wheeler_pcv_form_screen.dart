@@ -103,7 +103,7 @@ class _ThreeWheelerPCVFormScreenState
 
 
   void _submitForm() {
-    // if (!_formKey.currentState!.validate()) {
+    if (_formKey.currentState!.validate()) {
     //   return;
     // }
 
@@ -253,7 +253,7 @@ class _ThreeWheelerPCVFormScreenState
         builder: (context) => PcvInsuranceResultScreen(resultData: resultData),
       ),
     );
-  }
+  }}
 
   void _resetForm() {
     _formKey.currentState!.reset();

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:motor_insurance_app/models/result_data.dart';
 import 'package:motor_insurance_app/screens/vehicle/passenger_carrying_vehicle/pcv_result_screen.dart';
+
 class TaxiFormScreen extends StatefulWidget {
   const TaxiFormScreen({super.key});
 
@@ -108,6 +109,7 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
   }
 
   void _submitForm() {
+    if (_formKey.currentState!.validate()) {
     double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
     String ageOfVehicle = _selectedAge ?? 'Upto 5 years';
     String yearOfManufacture = _controllers['yearOfManufacture']!.text;
@@ -228,6 +230,7 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
       "Year of Manufacture": yearOfManufacture,
       "Zone": zone,
       "Age of Vehicle": ageOfVehicle,
+      "No. of Passengers": numberOfPassengers.toString(),
       "Vehicle Basic Rate (%)": vehicleBasicRate.toStringAsFixed(3),
       "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
       "Discount on OD Premium (%)": discountOnOd.toStringAsFixed(2),
@@ -265,7 +268,7 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
         builder: (context) => PcvInsuranceResultScreen(resultData: resultData),
       ),
     );
-  }
+  }}
 
   void _resetForm() {
     _formKey.currentState!.reset();

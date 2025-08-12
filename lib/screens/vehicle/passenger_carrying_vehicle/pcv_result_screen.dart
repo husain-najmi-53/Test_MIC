@@ -136,23 +136,21 @@ class PcvInsuranceResultScreen extends StatelessWidget {
           "IDV (₹)",
           // "Depreciation (%)",
           // "Current IDV (₹)",
-          "Year of Manufacture",
+          "Year Of Manufacture",
           "Zone",
           "Age of Vehicle",
           "No. of Passengers",
         ],
         "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate (%)",
-          "Electrical/Electronic Accessories (₹)",
+          "Basic OD Rate (%)",
+          'Electrical/Electronic Accessories (₹)',
           "CNG/LPG Kits (Externally Fitted) (₹)",
           "Basic OD Premium (₹)",
           "IMT 23 Loading (₹)",
           "Discount on OD Premium (%)",
           "Discount Amount (₹)",
           "OD Premium after Discount (₹)",
-          
           "CNG/LPG Kit Loading (₹)",
-          
           "Total OD Premium before NCB (₹)",
           "No Claim Bonus (%)",
           "NCB Amount (₹)",
@@ -166,8 +164,8 @@ class PcvInsuranceResultScreen extends StatelessWidget {
           "Premium Before Cess (₹)",
         ],
         "[C] Total Premium": [
-          "Other CESS (%)",
-          "Other CESS Amount (₹)",
+          "Other Cess (%)",
+          'Other Cess Amount (₹)',
           "GST @ 18% (₹)",
           "Final Premium Payable (₹)",
         ],
@@ -177,14 +175,13 @@ class PcvInsuranceResultScreen extends StatelessWidget {
           "IDV (₹)",
           // "Depreciation (%)",
           // "Current IDV (₹)",
-          "Year of Manufacture",
+          "Year Of Manufacture",
           "Zone",
           "Age of Vehicle",
           "No. of Passengers",
         ],
         "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate (%)",
-        
+          "Basic OD Rate (%)",
           "Electrical Accessories (₹)",
           "CNG/LPG Kits (Externally Fitted) (₹)",
           "Basic OD Premium (₹)",
@@ -197,12 +194,12 @@ class PcvInsuranceResultScreen extends StatelessWidget {
           "Net OD Premium (₹)",
           "OD Premium after Discount (₹)",
           "RSA/Addons (₹)",
-          "Total Basic Premium (₹)",
           "NCB Amount (₹)",
+          "Total Basic Premium (₹)",
         ],
         "[B] Liability Premium": [
           "TP Premium (₹)",
-          "CNG/LPG kit",
+          "CNG/LPG Kits",
           "PA to Owner Driver (₹)",
           "LL to Paid Driver (₹)",
           "LL to Other Employees (₹)",
@@ -219,7 +216,7 @@ class PcvInsuranceResultScreen extends StatelessWidget {
 
     final vehicleType = resultData.vehicleType;
     final sections = categoryFieldMapping[vehicleType] ??
-        categoryFieldMapping["Two Wheeler"]!;
+        categoryFieldMapping["School Bus"]!;
 
     return Scaffold(
       appBar: AppBar(

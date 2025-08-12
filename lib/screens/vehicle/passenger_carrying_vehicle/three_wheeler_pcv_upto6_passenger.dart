@@ -108,7 +108,7 @@ class _ThreeWheelerPCV_upto6PassengerState
   }
 
   void _submitForm() {
-    // if (!_formKey.currentState!.validate()) {
+    if (_formKey.currentState!.validate()) {
     //   return;
     // }
 
@@ -262,6 +262,7 @@ class _ThreeWheelerPCV_upto6PassengerState
         builder: (context) => PcvInsuranceResultScreen(resultData: resultData),
       ),
     );
+  }
   }
 
   void _resetForm() {
