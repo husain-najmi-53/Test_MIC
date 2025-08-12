@@ -27,9 +27,6 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
     'paUnnamedPassenger': TextEditingController(),
     'zeroDepreciation': TextEditingController(),
     'otherCess': TextEditingController(),
-    // 'tpBasic': TextEditingController(), // TP Basic Premium
-    // 'tpCoverForCNG': TextEditingController(), // CNG LPG kit cover
-    // 'tpLegalLiabilityEmployees': TextEditingController(), // TP LL for employees
   };
 
   String? _selectedDepreciation;
@@ -101,9 +98,9 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
   }
 
   void _submitForm() {
-    //if (_formKey.currentState!.validate()) {
+    if (_formKey.currentState!.validate()) {
     // Fetch form inputs
-    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+    double idv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
     String yearOfManufacture = _controllers['yearOfManufacture']!.text;
     String zone = _selectedZone ?? "A";
     int cubicCapacity = int.tryParse(_controllers['cubicCapacity']!.text) ?? 0;
@@ -190,7 +187,7 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
 
     // Pass data to result screen
     InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Two Wheeler",
+      vehicleType: "Two Wheeler 1Y OD + 1Y TP",
       fieldData: resultMap,
       totalPremium: finalPremium,
     );
@@ -202,7 +199,7 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
       ),
     );
   }
-  //}
+  }
 
   void _resetForm() {
     _formKey.currentState?.reset();

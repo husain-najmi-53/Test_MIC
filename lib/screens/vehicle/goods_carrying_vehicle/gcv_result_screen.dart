@@ -2,231 +2,172 @@ import 'package:flutter/material.dart';
 import '../../../models/result_data.dart';
 import '../../vehicle_agent_info_screen.dart';
 
-class BikeInsuranceResultScreen extends StatelessWidget {
+class GcvInsuranceResultScreen extends StatelessWidget {
   final InsuranceResultData resultData;
 
-  const BikeInsuranceResultScreen({super.key, required this.resultData});
+  const GcvInsuranceResultScreen({super.key, required this.resultData});
 
   @override
   Widget build(BuildContext context) {
     final Map<String, String> fields = resultData.fieldData;
 
     final categoryFieldMapping = {
-      "Two Wheeler 1Y OD": {
+      "Goods Carrying Vehicle": {
         "Basic Details": [
           "IDV",
           "Year of Manufacture",
           "Zone",
-          "Cubic Capacity"
+          "Gross Vehicle Weight"
         ],
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Accessories Value",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Zero Dep Premium",
-          "Total A"
-        ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "PA to Owner Driver",
-          "LL to Paid Driver",
-          "PA to Unnamed Passenger",
-          "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ]
-      },
-      "Two Wheeler 1Y OD + 1Y TP": {
-        "Basic Details": [
-          "IDV",
-          "Year of Manufacture",
-          "Zone",
-          "Cubic Capacity"
-        ],
-        "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Accessories Value",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Zero Dep Premium",
-          "Total A"
-        ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "PA to Owner Driver",
-          "LL to Paid Driver",
-          "PA to Unnamed Passenger",
-          "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ]
-      },
-      "Two Wheeler 1Y OD + 5Y TP": {
-        "Basic Details": [
-          "IDV",
-          "Year of Manufacture",
-          "Zone",
-          "Cubic Capacity"
-        ],
-        "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Accessories Value",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Zero Dep Premium",
-          "Total A"
-        ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "PA to Owner Driver",
-          "LL to Paid Driver",
-          "PA to Unnamed Passenger",
-          "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ]
-      },
-      "Electric Two Wheeler 1Y OD": {
-        "Basic Details": ["IDV", "Year of Manufacture", "Zone", "Kilowatt"],
-        "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Accessories Value",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Zero Dep Premium",
-          "Total A"
-        ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "PA to Owner Driver",
-          "LL to Paid Driver",
-          "PA to Unnamed Passenger",
-          "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ]
-      },
-      "Electric Two Wheeler 1Y OD + 1Y TP": {
-        "Basic Details": ["IDV", "Year of Manufacture", "Zone", "Kilowatt"],
-        "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Accessories Value",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Zero Dep Premium",
-          "Total A"
-        ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "PA to Owner Driver",
-          "LL to Paid Driver",
-          "PA to Unnamed Passenger",
-          "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ]
-      },
-      "Electric Two Wheeler 1Y OD + 5Y TP": {
-        "Basic Details": ["IDV", "Year of Manufacture", "Zone", "Kilowatt"],
-        "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Accessories Value",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Zero Dep Premium",
-          "Total A"
-        ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "PA to Owner Driver",
-          "LL to Paid Driver",
-          "PA to Unnamed Passenger",
-          "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ]
-      },
-      "Two Wheeler Passenger Carrying": {
-        "Basic Details": [
-          "IDV",
-          "Year of Manufacture",
-          "Zone",
-          "Cubic Capacity",
-          "No. of Passengers"
-        ],
-        "[A] Own Damage Premium": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Accessories Value",
+          "Electrical Accessories",
+          "CNG/LPG Kits",
+          "Geographical Ext",
           "IMT 23",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium(A)",
+          "Anti-Theft",
+          "Basic OD before Discount",
+          "Discount on OD",
+          "Basic OD before NCB",
+          "NCB",
+          "Net Own Damage Premium (A)"
         ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "Passenger Coverage",
+        "[B] Addon Coverage": [
+          "Zero Depreciation",
+          "RSA",
+          "Total Addon Premium (B)"
+        ],
+        "[C] Liability Premium": [
+          "Basic Liability Premium (TP)",
+          "Restricted TPPD",
+          "CNG/LPG Kit (TP)",
+          "Geographical Ext (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
+          "LL to Other Employee",
+          "Total Liability Premium (C)"
+        ],
+        "[D] Total Premium": [
+          "Total Premium (A+B+C)",
+          "GST (18%)",
+          "Other CESS",
+          "Final Premium"
+        ],
+      },
+      "Electric Goods Carrying": {
+        "Basic Details": [
+          "IDV",
+          "Year of Manufacture",
+          "Zone",
+          "Gross Vehicle Weight"
+        ],
+        "[A] Own Damage Premium Package": [
+          "Vehicle Basic Rate",
+          "Basic for Vehicle",
+          "Electrical Accessories",
+          "CNG/LPG Kits",
+          "Geographical Ext",
+          "IMT 23",
+          "Anti-Theft",
+          "Basic OD before Discount",
+          "Discount on OD",
+          "Basic OD before NCB",
+          "NCB",
+          "Net Own Damage Premium (A)"
+        ],
+        "[B]Add-on Coverage": [
+          "RSA",
+          "Zero Depreciation",
+          "Total Addon Premium (B)"
+        ],
+        "[C] Liability Premium": [
+          "Basic Liability Premium (TP)",
           "Restricted TPPD",
-          "Total Liability Premium (B)"
+          "CNG/LPG Kit (TP)",
+          "Geographical Ext (TP)",
+          "PA to Owner Driver",
+          "LL to Paid Driver",
+          "LL to Other Employee",
+          "Total Liability Premium (C)"
+        ],
+        "[D] Total Premium": [
+          "Total Premium (A+B+C)",
+          "GST (18%)",
+          "Other CESS",
+          "Final Premium"
+        ]
+      },
+      "Three-Wheeler Goods Carrying": {
+        "Basic Details": [
+          "IDV",
+          "Year of Manufacture",
+          "Zone",
+        ],
+        "[A] Own Damage Premium Package": [
+          "Basic OD Rate (%)",
+          "Basic for Vehicle",
+          "External CNG/LPG",
+          "IMT 23",
+          "OD Before Discount",
+          "Discount on OD",
+          "OD Before NCB",
+          "NCB",
+          "Net OD Premium"
+        ],
+        "[B] Liability Premium": [
+          "Basic TP",
+          "Restricted TPPD",
+          "CNG TP",
+          "PA Owner Driver",
+          "LL to Paid Driver",
+          "Total TP Premium"
         ],
         "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
+          "Total Premium (OD+TP)",
+          "GST (18%)",
+          "Other Cess",
+          "Final Premium"
+        ]
+      },
+      "E-Rickshaw Goods Carrying": {
+        "Basic Details": [
+          "IDV",
+          "Year of Manufacture",
+          "Zone",
+        ],
+        "[A] Own Damage Premium Package": [
+          "Vehicle Basic rate",
+          "Basic for Vehicle",
+          "Electrical Accessories",
+          "IMT 23",
+          "OD Before Discount",
+          "Discount on OD Premium",
+          "Loading on Discount",
+          "OD Before NCB",
+          "NCB",
+          "Net OD Premium"
+        ],
+        "[B] Addon Coverage": ["Value Added Service", "Total Addon Premium:"],
+        "[C] Liability Premium": [
+          "Basic TP",
+          "Restricted TPPD",
+          "PA Owner Driver",
+          "LL to Paid Driver",
+          "Total TP Premium",
+        ],
+        "[D] Total Premium": [
+          "Total Premium (OD+TP)",
+          "GST (18%)",
+          "Other Cess",
+          "Final Premium"
         ]
       },
     };
 
     final vehicleType = resultData.vehicleType;
     final sections = categoryFieldMapping[vehicleType] ??
-        categoryFieldMapping["Two Wheeler Passenger Carrying"]!;
+        categoryFieldMapping["Two Wheeler"]!;
 
     return Scaffold(
       appBar: AppBar(

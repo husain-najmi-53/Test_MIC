@@ -1,0 +1,579 @@
+import 'dart:typed_data';
+import 'package:universal_html/html.dart' as html;
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/material.dart';
+import 'package:motor_insurance_app/models/quotation_data.dart';
+import 'package:motor_insurance_app/models/vehicle_data.dart';
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
+import 'package:file_saver/file_saver.dart';
+
+Future<void> _generatePDF({
+  required List<String> companies,
+  required bool includeAgentDetails,
+}) async {
+  final quotation = widget.finalData;
+  final vehicleType = quotation.insuranceResult.vehicleType;
+
+  for (final company in companies) {
+    try {
+      final pdf = pw.Document();
+      final timestamp = DateTime.now().millisecondsSinceEpoch;
+      final filename = '${quotation.registrationNumber}_${company.replaceAll(' ', '_')}_$timestamp.pdf';
+
+      // Define styles
+      final headerStyle = pw.TextStyle(
+        fontSize: 16,
+        fontWeight: pw.FontWeight.bold,
+        color: PdfColors.blue900,
+      );
+      
+      final titleStyle = pw.TextStyle(
+        fontSize: 18,
+        fontWeight: pw.FontWeight.bold,
+        color: PdfColors.blue900,
+      );
+      
+      final sectionTitleStyle = pw.TextStyle(
+        fontSize: 14,
+        fontWeight: pw.FontWeight.bold,
+        color: PdfColors.blue800,
+      );
+
+      pdf.addPage(
+        pw.Page(
+          pageFormat: PdfPageFormat.a4,
+          margin: const pw.EdgeInsets.all(24),
+          build: (context) {
+            return pw.Column(
+              crossAxisAlignment: pw.CrossAxisAlignment.start,
+              children: [
+                // Header with quotation title and number
+                pw.Center(
+                  child: pw.Text(
+                    'Quotation Worksheet For Auto Secure - Commercial Vehicle Package Policy',
+                    style: titleStyle,
+                  ),
+                ),
+                pw.SizedBox(height: 10),
+                pw.Center(
+                  child: pw.Text(
+                    'QT/${DateTime.now().day}/${DateTime.now().month}${quotation.registrationNumber}',
+                    style: pw.TextStyle(
+                      fontSize: 14,
+                      fontWeight: pw.FontWeight.bold,
+                    ),
+                  ),
+                ),
+                pw.SizedBox(height: 20),
+
+                // Company and Product Information
+                pw.Row(
+                  crossAxisAlignment: pw.CrossAxisAlignment.start,
+                  children: [
+                    pw.Expanded(
+                      child: pw.Column(
+                        crossAxisAlignment: pw.CrossAxisAlignment.start,
+                        children: [
+                          pw.Text('Product Code:', style: headerStyle),
+                          pw.Text('NA'),
+                          pw.SizedBox(height: 8),
+                          pw.Text('Producer Name:', style: headerStyle),
+                          pw.Text('NA'),
+                        ],
+                      ),
+                    ),
+                    pw.Expanded(
+                      child: pw.Column(
+                        crossAxisAlignment: pw.CrossAxisAlignment.start,
+                        children: [
+                          pw.Text('Producer Contact:', style: headerStyle),
+                          pw.Text('NA'),
+                          pw.SizedBox(height: 8),
+                          pw.Text('Product Email:', style: headerStyle),
+                          pw.Text('NA'),
+                        ],
+                      ),
+                    ),
+                    pw.Expanded(
+                      child: pw.Column(
+                        crossAxisAlignment: pw.CrossAxisAlignment.start,
+                        children: [
+                          pw.Text('Policy Plan:', style: headerStyle),
+                          pw.Text('Package (1 year OD + 1 year TP)'),
+                          pw.SizedBox(height: 8),
+                          pw.Text('Policy Start & End Date:', style: headerStyle),
+                          pw.Text('${quotation.policyStartDate.toLocal().toString().split(' ')[0]} To ${quotation.policyEndDate.toLocal().toString().split(' ')[0]}'),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                pw.SizedBox(height: 20),
+
+                // Vehicle Information Table
+                pw.Text('Vehicle Details', style: sectionTitleStyle),
+                pw.SizedBox(height: 8),
+                pw.Table(
+                  border: pw.TableBorder.all(),
+                  columnWidths: {
+                    0: const pw.FlexColumnWidth(1.5),
+                    1: const pw.FlexColumnWidth(2),
+                    2: const pw.FlexColumnWidth(1.5),
+                    3: const pw.FlexColumnWidth(1),
+                    4: const pw.FlexColumnWidth(1.5),
+                    5: const pw.FlexColumnWidth(2),
+                    6: const pw.FlexColumnWidth(1.5),
+                  },
+                  children: [
+                    pw.TableRow(
+                      children: [
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('RTO Location', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Registration Number', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Date of Registration', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Mfg. Year', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Vehicle Sub-Class', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Make, Model, Variant', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Cubic Capacity/KW', style: headerStyle),
+                        ),
+                      ],
+                    ),
+                    pw.TableRow(
+                      children: [
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text(quotation.rtoLocation ?? 'NA'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text(quotation.registrationNumber),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text(quotation.dateOfRegistration ?? 'NA'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text(quotation.manufacturingYear ?? 'NA'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text(quotation.vehicleSubClass ?? 'NA'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('${quotation.make}/${quotation.model}/${quotation.variant ?? 'NA'}'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text(quotation.cubicCapacity ?? 'NA'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                pw.SizedBox(height: 10),
+
+                // Second Vehicle Details Table
+                pw.Table(
+                  border: pw.TableBorder.all(),
+                  columnWidths: {
+                    0: const pw.FlexColumnWidth(1.5),
+                    1: const pw.FlexColumnWidth(1),
+                    2: const pw.FlexColumnWidth(1.5),
+                    3: const pw.FlexColumnWidth(1.5),
+                    4: const pw.FlexColumnWidth(1.5),
+                  },
+                  children: [
+                    pw.TableRow(
+                      children: [
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Seating Capacity', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Fuel Type', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Vehicle Usage', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Type of Body', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Carrying Capacity', style: headerStyle),
+                        ),
+                      ],
+                    ),
+                    pw.TableRow(
+                      children: [
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text(quotation.seatingCapacity ?? 'NA'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text(quotation.fuelType ?? 'NA'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text(quotation.vehicleUsage ?? 'NA'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text(quotation.typeOfBody ?? 'NA'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text(quotation.carryingCapacity ?? 'NA'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                pw.SizedBox(height: 20),
+
+                // IDV Tables
+                pw.Text('IDV Details', style: sectionTitleStyle),
+                pw.SizedBox(height: 8),
+                pw.Table(
+                  border: pw.TableBorder.all(),
+                  columnWidths: {
+                    0: const pw.FlexColumnWidth(2),
+                    1: const pw.FlexColumnWidth(1.5),
+                    2: const pw.FlexColumnWidth(1.5),
+                    3: const pw.FlexColumnWidth(1.5),
+                    4: const pw.FlexColumnWidth(1.5),
+                    5: const pw.FlexColumnWidth(1.5),
+                    6: const pw.FlexColumnWidth(1.5),
+                    7: const pw.FlexColumnWidth(1.5),
+                  },
+                  children: [
+                    pw.TableRow(
+                      children: [
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Policy Year', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('IDV of Vehicle', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Body IDV', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Chassis IDV', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Total Trailer IDV', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Bi-Fuel/CNG/LPG Kit IDV', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Electrical Accessories IDV', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Non-Electrical Accessories IDV', style: headerStyle),
+                        ),
+                      ],
+                    ),
+                    pw.TableRow(
+                      children: [
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('1'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Rs.${quotation.idvVehicle ?? '0'}'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Rs.${quotation.bodyIdv ?? '0'}'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Rs.${quotation.chassisIdv ?? '0'}'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Rs.${quotation.totalTrailerIdv ?? '0'}'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Rs.${quotation.biFuelIdv ?? '0'}'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Rs.${quotation.electricalAccessoriesIdv ?? '0'}'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Rs.${quotation.nonElectricalAccessoriesIdv ?? '0'}'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                pw.SizedBox(height: 20),
+
+                // Premium Calculation Section
+                pw.Row(
+                  crossAxisAlignment: pw.CrossAxisAlignment.start,
+                  children: [
+                    pw.Expanded(
+                      child: pw.Column(
+                        crossAxisAlignment: pw.CrossAxisAlignment.start,
+                        children: [
+                          pw.Text('Section-I OWN DAMAGE (A)', style: sectionTitleStyle),
+                          pw.SizedBox(height: 8),
+                          pw.Table(
+                            border: pw.TableBorder.all(),
+                            columnWidths: {
+                              0: const pw.FlexColumnWidth(3),
+                              1: const pw.FlexColumnWidth(1),
+                            },
+                            children: [
+                              pw.TableRow(
+                                children: [
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('Own Damage Premium on Vehicle and Accessories', style: headerStyle),
+                                  ),
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('Premium Amount', style: headerStyle),
+                                  ),
+                                ],
+                              ),
+                              pw.TableRow(
+                                children: [
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('Add: Basic OD Premium'),
+                                  ),
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('Rs.${quotation.basicOdPremium?.toStringAsFixed(2) ?? '0.00'}'),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          pw.SizedBox(height: 10),
+                          pw.Text('Loadings under Own Damage Section', style: headerStyle),
+                          pw.SizedBox(height: 5),
+                          pw.Text('Add: Cover for lamps, tyres/tubes mudguards/Bonnet/side parts-IMT 23'),
+                          pw.SizedBox(height: 10),
+                          pw.Text('Discounts under Own Damage Section', style: headerStyle),
+                          pw.SizedBox(height: 5),
+                          pw.Table(
+                            border: pw.TableBorder.all(),
+                            columnWidths: {
+                              0: const pw.FlexColumnWidth(3),
+                              1: const pw.FlexColumnWidth(1),
+                            },
+                            children: [
+                              pw.TableRow(
+                                children: [
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('Less: No claim bonus (45%)'),
+                                  ),
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('Rs.${quotation.noClaimBonus?.toStringAsFixed(2) ?? '0.00'}'),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          pw.SizedBox(height: 10),
+                          pw.Table(
+                            border: pw.TableBorder.all(),
+                            columnWidths: {
+                              0: const pw.FlexColumnWidth(3),
+                              1: const pw.FlexColumnWidth(1),
+                            },
+                            children: [
+                              pw.TableRow(
+                                children: [
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('TOTAL OWN DAMAGE PREMIUM (A)', style: headerStyle),
+                                  ),
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('Rs.${quotation.totalOwnDamagePremium?.toStringAsFixed(2) ?? '0.00'}'),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    pw.SizedBox(width: 20),
+                    pw.Expanded(
+                      child: pw.Column(
+                        crossAxisAlignment: pw.CrossAxisAlignment.start,
+                        children: [
+                          pw.Text('Section-II LIABILITY (B)', style: sectionTitleStyle),
+                          pw.SizedBox(height: 8),
+                          pw.Table(
+                            border: pw.TableBorder.all(),
+                            columnWidths: {
+                              0: const pw.FlexColumnWidth(3),
+                              1: const pw.FlexColumnWidth(1),
+                            },
+                            children: [
+                              pw.TableRow(
+                                children: [
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('Third Party Premium', style: headerStyle),
+                                  ),
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('Premium Amount', style: headerStyle),
+                                  ),
+                                ],
+                              ),
+                              pw.TableRow(
+                                children: [
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('Basic TP premium'),
+                                  ),
+                                  pw.Padding(
+                                    padding: const pw.EdgeInsets.all(4),
+                                    child: pw.Text('Rs.${quotation.basicTpPremium?.toStringAsFixed(2) ?? '0.00'}'),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                pw.SizedBox(height: 20),
+
+                // Add On Covers Section
+                pw.Text('Section-I ADD ON COVERS', style: sectionTitleStyle),
+                pw.SizedBox(height: 8),
+                pw.Table(
+                  border: pw.TableBorder.all(),
+                  columnWidths: {
+                    0: const pw.FlexColumnWidth(3),
+                    1: const pw.FlexColumnWidth(1),
+                  },
+                  children: [
+                    pw.TableRow(
+                      children: [
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Add: Repair of glass, plastic, fibre and Rubber (TA 06)'),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Rs.${quotation.glassRepairCover?.toStringAsFixed(2) ?? '0.00'}'),
+                        ),
+                      ],
+                    ),
+                    pw.TableRow(
+                      children: [
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('TOTAL ADD ON PREMIUM (C)', style: headerStyle),
+                        ),
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.all(4),
+                          child: pw.Text('Rs.${quotation.totalAddOnPremium?.toStringAsFixed(2) ?? '0.00'}'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                pw.SizedBox(height: 20),
+
+                // Footer Notes
+                pw.Text(
+                  'Note: Above mentioned Premium is subject to Positive vehicle inspection, if required as per Underwriting Guidelines.',
+                  style: pw.TextStyle(fontStyle: pw.FontStyle.italic),
+                ),
+                pw.SizedBox(height: 10),
+                pw.Text(
+                  'The Quotation is subject to Underwriter approval for below Deviations -',
+                  style: pw.TextStyle(fontStyle: pw.FontStyle.italic),
+                ),
+                pw.Text('a. Deviation 1 - Renewal as Rollover'),
+                
+                // Add agent details if requested
+                if (includeAgentDetails) ...[
+                  pw.SizedBox(height: 20),
+                  pw.Divider(),
+                  pw.Text(
+                    "Agent Details",
+                    style: pw.TextStyle(
+                      fontSize: 14,
+                      fontWeight: pw.FontWeight.bold,
+                    ),
+                  ),
+                  pw.SizedBox(height: 8),
+                  pw.Column(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.Text("Name: ${quotation.agentName}"),
+                      pw.Text("Email: ${quotation.agentEmail}"),
+                      pw.Text("Contact: ${quotation.agentContact}"),
+                    ],
+                  ),
+                ],
+              ],
+            );
+          },
+        ),
+      );
+
+      // Save the PDF (same as your existing code)
+      final pdfBytes = await pdf.save();
+      // ... rest of your save logic remains the same
+    } catch (e) {
+      // Error handling remains the same
+    }
+  }
+}

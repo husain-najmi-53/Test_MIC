@@ -1,108 +1,219 @@
 import 'package:flutter/material.dart';
-import '../models/result_data.dart';
-import 'vehicle_agent_info_screen.dart';
+import '../../../models/result_data.dart';
+import '../../vehicle_agent_info_screen.dart';
 
-class InsuranceResultScreen extends StatelessWidget {
+class PcvInsuranceResultScreen extends StatelessWidget {
   final InsuranceResultData resultData;
 
-  const InsuranceResultScreen({super.key, required this.resultData});
+  const PcvInsuranceResultScreen({super.key, required this.resultData});
 
   @override
   Widget build(BuildContext context) {
     final Map<String, String> fields = resultData.fieldData;
 
     final categoryFieldMapping = {
-      "Two Wheeler": {
+      "Three Wheeler PCV(Upto 6 Passengers)": {
         "Basic Details": [
           "IDV",
+          // "Depreciation %",
+          // "Current IDV",
           "Year of Manufacture",
           "Zone",
-          "Cubic Capacity"
+          "Age of Vehicle",
+          "No. of Passengers",
         ],
         "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Accessories Value",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Zero Dep Premium",
-          "Total A"
+          "Base OD Rate (%)",
+          "Basic OD Premium",
+          "IMT 23 Loading",
+          "CNG/LPG Kit Loading",
+          "External CNG/LPG Kit Loading",
+          "Total OD before Discount",
+          "Discount on OD Premium (%)",
+          "Discount Amount",
+          "OD after Discount",
+          "No Claim Bonus (%)",
+          "NCB Amount",
+          "Net OD Premium",
         ],
         "[B] Liability Premium": [
-          "Liability Premium (TP)",
+          "Base TP Premium",
+          "Restricted TPPD",
+          "TP Premium after restriction",
           "PA to Owner Driver",
           "LL to Paid Driver",
-          "PA to Unnamed Passenger",
-          "Total B"
+          "Total Liability Premium (TP + PA + LL)",
         ],
         "[C] Total Premium": [
-          "Total Package Premium[A+B]",
+          "Total Premium before Taxes",
           "GST @ 18%",
-          "Other CESS"
-        ]
-      },
-      "Electric Two Wheeler": {
-        "Basic Details": ["IDV", "Year of Manufacture", "Zone", "Kilowatt"],
-        "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Accessories Value",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Zero Dep Premium",
-          "Total A"
+          "Other CESS (%)",
+          "Other CESS Amount",
+          "Final Premium Payable",
         ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "PA to Owner Driver",
-          "LL to Paid Driver",
-          "PA to Unnamed Passenger",
-          "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ]
       },
-      "Two Wheeler Passenger Carrying": {
+      "Three Wheeler PCV (More Than 6 Upto 17 passenger)": {
         "Basic Details": [
           "IDV",
+          // "Depreciation %",
+          // "Current IDV",
           "Year of Manufacture",
           "Zone",
-          "Cubic Capacity",
+          "Age of Vehicle",
+          "No. of Passengers",
+        ],
+        "[A] Own Damage Premium Package": [
+          "Base OD Rate (%)",
+          "Basic OD Premium",
+          "IMT 23 Loading",
+          "CNG/LPG Kit Loading",
+          "External CNG/LPG Kit Loading",
+          "Total OD before Discount",
+          "Discount on OD Premium (%)",
+          "Discount Amount",
+          "OD after Discount",
+          "No Claim Bonus (%)",
+          "NCB Amount",
+          "Net OD Premium",
+        ],
+        "[B] Liability Premium": [
+          "Base TP Premium",
+          "Restricted TPPD",
+          "TP Premium after restriction",
+          "PA to Owner Driver",
+          "LL to Paid Driver",
+          "Total Liability Premium (TP + PA + LL)",
+        ],
+        "[C] Total Premium": [
+          "Total Premium before Taxes",
+          "GST @ 18%",
+          "Other CESS (%)",
+          "Other CESS Amount",
+          "Final Premium Payable",
+        ],
+      },
+      "Taxi (Upto 6 Passengers)": {
+        "Basic Details": [
+          "IDV",
+          // "Depreciation (%)",
+          // "Current IDV",
+          "Year of Manufacture",
+          "Zone",
+          "Age of Vehicle",
           "No. of Passengers"
         ],
-        "[A] Own Damage Premium": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Accessories Value",
-          "IMT 23",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium(A)",
+        "[A] Own Damage Premium Package": [
+          "Vehicle Basic Rate (%)",
+          "Basic OD Premium",
+          "Discount on OD Premium (%)",
+          "Discount Amount",
+          "Anti Theft Discount",
+          "OD Premium after Discounts",
+          "Accessories Loading",
+          "No Claim Bonus (%)",
+          "NCB Amount",
+          "Net OD Premium",
+          "Zero Depreciation Premium",
+          "RSA Amount",
+          "Total A (Net OD Premium + Zero Dep + RSA)"
         ],
         "[B] Liability Premium": [
           "Liability Premium (TP)",
-          "Passenger Coverage",
           "PA to Owner Driver",
           "LL to Paid Driver",
-          "Restricted TPPD",
-          "Total Liability Premium (B)"
+          "Total B (Liability Premium)"
         ],
         "[C] Total Premium": [
-          "Total Package Premium[A+B]",
+          "Total Package Premium (A + B)",
           "GST @ 18%",
-          "Other CESS"
+          "Other CESS (%)",
+          "Other CESS Amount",
+          "Final Premium Payable"
         ]
+      },
+      "Bus Upto 6 Passenger": {
+        "Basic Details": [
+          "IDV (₹)",
+          // "Depreciation (%)",
+          // "Current IDV (₹)",
+          "Year of Manufacture",
+          "Zone",
+          "Age of Vehicle",
+          "No. of Passengers",
+        ],
+        "[A] Own Damage Premium Package": [
+          "Vehicle Basic Rate (%)",
+          "Electrical/Electronic Accessories (₹)",
+          "CNG/LPG Kits (Externally Fitted) (₹)",
+          "Basic OD Premium (₹)",
+          "IMT 23 Loading (₹)",
+          "Discount on OD Premium (%)",
+          "Discount Amount (₹)",
+          "OD Premium after Discount (₹)",
+          
+          "CNG/LPG Kit Loading (₹)",
+          
+          "Total OD Premium before NCB (₹)",
+          "No Claim Bonus (%)",
+          "NCB Amount (₹)",
+          "Net OD Premium (₹)",
+        ],
+        "[B] Liability Premium": [
+          "TP Premium (₹)",
+          "Restricted TPPD",
+          "PA to Owner Driver (₹)",
+          "LL to Paid Driver (₹)",
+          "Premium Before Cess (₹)",
+        ],
+        "[C] Total Premium": [
+          "Other CESS (%)",
+          "Other CESS Amount (₹)",
+          "GST @ 18% (₹)",
+          "Final Premium Payable (₹)",
+        ],
+      },
+      "School Bus": {
+        "Basic Details": [
+          "IDV (₹)",
+          // "Depreciation (%)",
+          // "Current IDV (₹)",
+          "Year of Manufacture",
+          "Zone",
+          "Age of Vehicle",
+          "No. of Passengers",
+        ],
+        "[A] Own Damage Premium Package": [
+          "Vehicle Basic Rate (%)",
+        
+          "Electrical Accessories (₹)",
+          "CNG/LPG Kits (Externally Fitted) (₹)",
+          "Basic OD Premium (₹)",
+          "Geographical Extension (₹)",
+          "IMT 23 Applied",
+          "Anti Theft Applied",
+          "Discount on OD Premium (%)",
+          "Discount on OD Premium (₹)",
+          "No Claim Bonus (%)",
+          "Net OD Premium (₹)",
+          "OD Premium after Discount (₹)",
+          "RSA/Addons (₹)",
+          "Total Basic Premium (₹)",
+          "NCB Amount (₹)",
+        ],
+        "[B] Liability Premium": [
+          "TP Premium (₹)",
+          "CNG/LPG kit",
+          "PA to Owner Driver (₹)",
+          "LL to Paid Driver (₹)",
+          "LL to Other Employees (₹)",
+          "Premium Before Cess (₹)",
+        ],
+        "[C] Total Premium": [
+          "Other CESS (%)",
+          "Other CESS Amount (₹)",
+          "GST @ 18% (₹)",
+          "Final Premium Payable (₹)",
+        ],
       },
     };
 

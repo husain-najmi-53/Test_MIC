@@ -97,9 +97,11 @@ class _TwoWheeler1YearODFormScreenState
   }
 
   void _submitForm() {
-    //if (_formKey.currentState!.validate()) {
+    if (_formKey.currentState!.validate()) {
     // Fetch form inputs
-    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+    //double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+    double currentIdv =
+        double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
     String yearOfManufacture = _controllers['yearOfManufacture']!.text;
     String zone = _selectedZone ?? "A";
     int cubicCapacity = int.tryParse(_controllers['cubicCapacity']!.text) ?? 0;
@@ -125,7 +127,7 @@ class _TwoWheeler1YearODFormScreenState
         _getOdRate(zone, yearOfManufacture, cubicCapacity);
 
     // OD Calculations
-    double basicForVehicle = (idv * vehicleBasicRate) / 100;
+    double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
     double discountAmount = (basicForVehicle * discountOnOd) / 100;
     double basicOdAfterDiscount = basicForVehicle - discountAmount;
     double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
@@ -149,7 +151,7 @@ class _TwoWheeler1YearODFormScreenState
     // Result Map
     Map<String, String> resultMap = {
       // Basic Details
-      "IDV": idv.toStringAsFixed(2),
+      "IDV": currentIdv.toStringAsFixed(2),
       "Year of Manufacture": yearOfManufacture.toString(),
       "Zone": zone,
       "Cubic Capacity": cubicCapacity.toString(),
@@ -185,7 +187,7 @@ class _TwoWheeler1YearODFormScreenState
 
     // Pass data to result screen
     InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Two Wheeler",
+      vehicleType: "Two Wheeler 1Y OD",
       fieldData: resultMap,
       totalPremium: finalPremium,
     );
@@ -197,7 +199,7 @@ class _TwoWheeler1YearODFormScreenState
       ),
     );
   }
-  //}
+  }
 
   void _resetForm() {
     _formKey.currentState?.reset();
@@ -225,7 +227,7 @@ class _TwoWheeler1YearODFormScreenState
             //Icon(Icons.two_wheeler, color: Colors.white),
             SizedBox(width: 8),
             Text(
-              'Two Wheeler 1 Year OD',
+              'Two Wheeler 1Y OD',
               style: TextStyle(color: Colors.white),
             ),
           ],

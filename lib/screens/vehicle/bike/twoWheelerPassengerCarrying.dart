@@ -35,7 +35,7 @@ class _TwoWheelerPassengerCarryingFormScreenState
   String? _selectedLlPaidDriver;
   String? _selectedRestrictedTppd;
 
-final List<String> _depreciationOptions = [
+  final List<String> _depreciationOptions = [
     '0%',
     '5%',
     '10%',
@@ -63,7 +63,7 @@ final List<String> _depreciationOptions = [
     super.dispose();
   }
 
-Widget _buildReadOnlyField(String key, String label) {
+  Widget _buildReadOnlyField(String key, String label) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -98,119 +98,127 @@ Widget _buildReadOnlyField(String key, String label) {
     double currentIdv = idv - ((idv * depreciation) / 100);
     _controllers['currentIdv']!.text = currentIdv.toStringAsFixed(2);
   }
+
   void _submitForm() {
-    //if (_formKey.currentState!.validate()) {
-    // Fetch form inputs
-    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
-    String yearOfManufacture = _controllers['yearOfManufacture']!.text;
-    String zone = _selectedZone ?? "A";
-    int cubicCapacity = int.tryParse(_controllers['cubicCapacity']!.text) ?? 0;
-    double discountOnOd =
-        double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-    double accessoriesValue =
-        double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
-    double paOwnerDriver =
-        double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
-    double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
-    double llToPaidDriver =
-        double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
-    String selectedNCBText = _selectedNcb ?? "0%"; 
-    double ncbPercentage =
-        double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
-    String selectedImt23 = _selectedImt23 ?? "No";
-    String selectedRestrictedTppd = _selectedRestrictedTppd ?? "No";
-    int numberOfPassengers =
-        int.tryParse(_controllers['numberOfPassengers']!.text) ?? 1;
+    if (_formKey.currentState!.validate()) {
+      // Fetch form inputs
+      double idv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
+      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
+      String zone = _selectedZone ?? "A";
+      int cubicCapacity =
+          int.tryParse(_controllers['cubicCapacity']!.text) ?? 0;
+      double discountOnOd =
+          double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+      double accessoriesValue =
+          double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
+      double paOwnerDriver =
+          double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      double otherCess =
+          double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+      double llToPaidDriver =
+          double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
+      String selectedNCBText = _selectedNcb ?? "0%";
+      double ncbPercentage =
+          double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
+      String selectedImt23 = _selectedImt23 ?? "No";
+      String selectedRestrictedTppd = _selectedRestrictedTppd ?? "No";
+      int numberOfPassengers =
+          int.tryParse(_controllers['numberOfPassengers']!.text) ?? 1;
 
-    // Get base rate from function
-    double vehicleBasicRate =
-        _getOdRate(zone, yearOfManufacture, cubicCapacity);
+      // Get base rate from function
+      double vehicleBasicRate =
+          _getOdRate(zone, yearOfManufacture, cubicCapacity);
 
-    double passenegrCoverage = numberOfPassengers * 580.0;
+      double passenegrCoverage = numberOfPassengers * 580.0;
 
-    // OD Calculations
-    double basicForVehicle = (idv * vehicleBasicRate) / 100;
-    double discountAmount = (basicForVehicle * discountOnOd) / 100;
-    double basicOdAfterDiscount = basicForVehicle - discountAmount;
-    double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
-    double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
-    double netOdPremium = totalBasicPremium - ncbAmount;
-    double totalA = netOdPremium;
-    double imt23Premium = 0.0;
-    if (selectedImt23 == "Yes") {
-      imt23Premium = (accessoriesValue * 4) / 100;
-      totalA += imt23Premium;
+      // OD Calculations
+      double basicForVehicle = (idv * vehicleBasicRate) / 100;
+      double discountAmount = (basicForVehicle * discountOnOd) / 100;
+      double basicOdAfterDiscount = basicForVehicle - discountAmount;
+      double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
+      double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
+      double netOdPremium = totalBasicPremium - ncbAmount;
+      double totalA = netOdPremium;
+      double imt23Premium = 0.0;
+      if (selectedImt23 == "Yes") {
+        imt23Premium = (accessoriesValue * 4) / 100;
+        totalA += imt23Premium;
+      }
+
+      String restrictedTppd = selectedRestrictedTppd == "Yes" ? "-50.00" : "0.00";
+      // TP Section
+      double liabilityPremiumTP =
+          _getTpPremiumPCV(cubicCapacity, numberOfPassengers);
+      double totalLiabilityPremium = liabilityPremiumTP;
+      if (selectedRestrictedTppd == "Yes") {
+        totalLiabilityPremium =
+            (totalLiabilityPremium - 50); // Apply restricted TPPD discount
+      }
+      double totalB = totalLiabilityPremium +
+          paOwnerDriver +
+          llToPaidDriver +
+          passenegrCoverage;
+
+      // Total Premium (C)
+      double totalAB = totalA + totalB;
+      double gst = totalAB * 0.18;
+      double otherCessAmt = (otherCess * totalAB) / 100;
+      double finalPremium = totalAB + gst + otherCessAmt;
+
+      // Result Map
+      Map<String, String> resultMap = {
+        // Basic Details
+        "IDV": idv.toStringAsFixed(2),
+        "Year of Manufacture": yearOfManufacture.toString(),
+        "Zone": zone,
+        "Cubic Capacity": cubicCapacity.toString(),
+        "No. of Passengers": numberOfPassengers.toString(),
+
+        // A - Own Damage Premium Package
+        "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
+        "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
+        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Basic OD Premium after discount":
+            basicOdAfterDiscount.toStringAsFixed(2),
+        "Accessories Value": accessoriesValue.toStringAsFixed(2),
+        "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
+        "No Claim Bonus": ncbAmount.toStringAsFixed(2),
+        "Net Own Damage Premium(A)": netOdPremium.toStringAsFixed(2),
+        "IMT 23": imt23Premium.toStringAsFixed(2),
+
+        // B - Liability Premium
+        "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "Passenger Coverage": passenegrCoverage.toStringAsFixed(2),
+        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
+        "Restricted TPPD": restrictedTppd,
+        "Total Liability Premium (B)": totalB.toStringAsFixed(2),
+
+        // C - Total Premium
+        "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
+        "GST @ 18%": gst.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2).trim(),
+
+        // Final Premium
+        "Final Premium": finalPremium.toStringAsFixed(2),
+      };
+
+      // Pass data to result screen
+      InsuranceResultData resultData = InsuranceResultData(
+        vehicleType: "Two Wheeler Passenger Carrying",
+        fieldData: resultMap,
+        totalPremium: finalPremium,
+      );
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              BikeInsuranceResultScreen(resultData: resultData),
+        ),
+      );
     }
-
-    // TP Section
-    double liabilityPremiumTP = _getTpPremiumPCV(cubicCapacity,numberOfPassengers);
-    if (selectedRestrictedTppd == "Yes") {
-      liabilityPremiumTP =
-          (liabilityPremiumTP - 50.0).clamp(0.0, double.infinity);
-    }
-    double totalB = liabilityPremiumTP +
-        paOwnerDriver +
-        llToPaidDriver ;
-
-    // Total Premium (C)
-    double totalAB = totalA + totalB;
-    double gst = totalAB * 0.18;
-    double otherCessAmt = (otherCess * totalAB) / 100;
-    double finalPremium = totalAB + gst + otherCessAmt;
-
-    // Result Map
-    Map<String, String> resultMap = {
-      // Basic Details
-      "IDV": idv.toStringAsFixed(2),
-      "Year of Manufacture": yearOfManufacture.toString(),
-      "Zone": zone,
-      "Cubic Capacity": cubicCapacity.toString(),
-      "No. of Passengers": numberOfPassengers.toString(),
-
-      // A - Own Damage Premium Package
-      "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
-      "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-      "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-      "Basic OD Premium after discount":
-          basicOdAfterDiscount.toStringAsFixed(2),
-      "Accessories Value": accessoriesValue.toStringAsFixed(2),
-      "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
-      "No Claim Bonus": ncbAmount.toStringAsFixed(2),
-      "Net Own Damage Premium(A)": netOdPremium.toStringAsFixed(2),
-      "IMT 23": imt23Premium.toStringAsFixed(2),
-
-      // B - Liability Premium
-      "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-      "Passenger Coverage": passenegrCoverage.toStringAsFixed(2),
-      "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-      "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
-      "Restricted TPPD": selectedRestrictedTppd,
-      "Total Liability Premium (B)": totalB.toStringAsFixed(2),
-
-      // C - Total Premium
-      "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
-      "GST @ 18%": gst.toStringAsFixed(2),
-      "Other CESS": otherCessAmt.toStringAsFixed(2).trim(),
-
-      // Final Premium
-      "Final Premium": finalPremium.toStringAsFixed(2),
-    };
-
-    // Pass data to result screen
-    InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Two Wheeler Passenger Carrying",
-      fieldData: resultMap,
-      totalPremium: finalPremium,
-    );
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => BikeInsuranceResultScreen(resultData: resultData),
-      ),
-    );
   }
-  //}
 
   Future<void> _resetForm() async {
     _formKey.currentState?.reset();
@@ -451,5 +459,4 @@ double _getTpPremiumPCV(int cubicCapacity, int numberOfPassengers) {
   }
 
   return basicRate + (numberOfPassengers * passengerRate);
-  
 }

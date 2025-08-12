@@ -2,28 +2,36 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:motor_insurance_app/models/result_data.dart';
 import 'package:motor_insurance_app/screens/vehicle/miscellaneous_vehicle/misc_result_screen.dart';
-class AmbulanceFormScreen extends StatefulWidget {
-  const AmbulanceFormScreen({super.key});
+class AgricultureTractorFormScreen extends StatefulWidget {
+  const AgricultureTractorFormScreen({super.key});
 
   @override
-  State<AmbulanceFormScreen> createState() => _AmbulanceFormScreenState();
+  State<AgricultureTractorFormScreen> createState() =>
+      _AgricultureTractorFormScreenState();
 }
 
-class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
+class _AgricultureTractorFormScreenState
+    extends State<AgricultureTractorFormScreen> {
   final _formKey = GlobalKey<FormState>();
 
   final Map<String, TextEditingController> _controllers = {
-    'idv': TextEditingController(),       
-    'depreciation': TextEditingController(),  
-    'currentIdv': TextEditingController(),                       
-    'yearOfManufacture': TextEditingController(),     
-    'discountOnOd': TextEditingController(),          
-    'loading_on_discount_premium': TextEditingController(), 
-    'CNG_LPG_kits_Ex_fitted': TextEditingController(),
-    'Value_added_services': TextEditingController(),
-    'paOwnerDriver': TextEditingController(),
-    'll2Passenger': TextEditingController(),
-    'otherCess': TextEditingController(),
+      'idv': TextEditingController(),      
+      'depreciation': TextEditingController(),  
+      'currentIdv': TextEditingController(),       
+      'yearOfManufacture': TextEditingController(), 
+      'discountOnOd': TextEditingController(),     
+      'loading_on_discount_premium': TextEditingController(),
+      'CNG_LPG_kits': TextEditingController(),
+      'CNG_LPG_kits_Ex_fitted': TextEditingController(),
+      // 'Imt23': TextEditingController(),
+      // 'noClaimBonus': TextEditingController(),     
+      'ValueAddedServices': TextEditingController(),   
+      'paOwnerDriver': TextEditingController(),    
+      // 'llPaidDriver': TextEditingController(),     
+      // 'll2EmpOtherThanPaidDriver': TextEditingController(),     
+      'll2Passenger': TextEditingController(),     
+      // 'restrictedTppd': TextEditingController(),   
+      'otherCess': TextEditingController(),       
   };
 
   String? _selectedAge;
@@ -33,9 +41,8 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
   String? _selectedNcb;
   String? _selectedImt23;
   String? _selectedLlPaidDriver;
-  String? _selectedLlEmployeeOther;
+  String? _selectedLlEmployeePaidDriver;
   String? _selectedRestrictedTppd;
-
 
   final List<String> _depreciationOptions = [
       '0%',
@@ -45,14 +52,14 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
       '20%',
       '25%',
       '30%',
-  ];  
-  final List<String> _ageOptions = ['Upto 5 Years', '6-10 Years', 'Above 10 Years'];
-  final List<String> _zoneOptions = ['A', 'B','C'];
+  ];
+  final List<String> _ageOptions = ['Upto 5 Years', '6-7 Years', 'Above 7 Years'];
+  final List<String> _zoneOptions = ['A', 'B', 'C'];
   final List<String> _cngOptions = ['Yes', 'No'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
   final List<String> _imt23Options = ['Yes', 'No'];
   final List<String> _llPaidDriverOptions = ['0', '50'];
-  final List<String> _llEmployeeOtherOptions = ['0', '50'];
+  final List<String> _llEmployeePaidDriverOptions = ['0','50','100','150'];
   final List<String> _restrictedTppdOptions = ['Yes', 'No'];
 
   @override
@@ -62,8 +69,6 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
     }
     super.dispose();
   }
-
-
 
 Widget _buildReadOnlyField(String key, String label) {
     return Padding(
@@ -87,6 +92,7 @@ Widget _buildReadOnlyField(String key, String label) {
       ),
     );
   }
+
 
   void _updateCurrentIdv() {
     double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
@@ -112,11 +118,12 @@ void _submitForm() {
     double discountOnOd = double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
     double paOwnerDriver = double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
     double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+    double cngKitExternal = double.tryParse(_controllers['CNG_LPG_kits_Ex_fitted']!.text) ?? 0.0;
     double ll2Passenger = double.tryParse(_controllers['ll2Passenger']!.text) ?? 0.0;
+    double imt23Value = _selectedImt23 == 'Yes' ? 1000.0 : 0.0; 
     double loadingOnDiscountPremium = double.tryParse(_controllers['loading_on_discount_premium']!.text) ?? 0.0;
-    double CNG_LPG_kits_Ex_fitted = double.tryParse(_controllers['CNG_LPG_kits_Ex_fitted']!.text) ?? 0.0;
     double llPaidDriver = double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
-    double llLEmployeeOther = double.tryParse(_selectedLlEmployeeOther ?? "0") ?? 0.0;
+    double llLEmployeeOther = double.tryParse(_selectedLlEmployeePaidDriver ?? "0") ?? 0.0;
     double llToPaidDriver =double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
     double restrictedTppd = double.tryParse(_selectedRestrictedTppd ?? "0")?? 0.0;
     String selectedNCBText = _selectedNcb ?? "0%";
@@ -129,10 +136,12 @@ void _submitForm() {
     // OD Calculations
     double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
     double discountAmount = (basicForVehicle * discountOnOd) / 100;
-    double basicOdPremium = currentIdv * vehicleBasicRate / 100;
-    double discountOdPremium = basicOdPremium * vehicleBasicRate / 100;
-    double loadingOdPremium = basicOdPremium * loadingOnDiscountPremium / 100;
+    double basicOdPremium = (currentIdv * vehicleBasicRate) / 100;
+    double discountOdPremium = basicOdPremium * discountOnOd / 100;
+    double loadingOdPremium = basicOdPremium * loadingOnDiscountPremium/ 100;
     double odBeforeNcb = (basicOdPremium - discountOdPremium) + loadingOdPremium;
+    odBeforeNcb += cngKitExternal;
+    odBeforeNcb += imt23Value;
     double ncbAmount = (odBeforeNcb * ncbPercentage) / 100;
     double totalA = odBeforeNcb - ncbAmount;
 
@@ -140,9 +149,10 @@ void _submitForm() {
     double liabilityPremiumTP = _getTpRate();
     double totalB = liabilityPremiumTP +
       paOwnerDriver +
-      restrictedTppd+
       llPaidDriver+
       llLEmployeeOther+
+      restrictedTppd+
+      otherCess+
       ll2Passenger;
 
 
@@ -163,10 +173,10 @@ void _submitForm() {
       // A - Own Damage Premium Package
       "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
       "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-      "CNG/LPG kit (Externally Mounted)": CNG_LPG_kits_Ex_fitted.toStringAsFixed(2),
+      "CNG/LPG kit (Externally Fitted)": cngKitExternal.toStringAsFixed(2),
       "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
-      "IMT 23": _selectedImt23 ?? 'No',
-      "Basic OD Premium Before discount":basicOdPremium.toStringAsFixed(2),
+      "IMT 23": imt23Value.toStringAsFixed(2),
+      "Basic OD Before Discount": basicOdPremium.toStringAsFixed(2),
       "Discount on OD Premium": discountAmount.toStringAsFixed(2),
       "Loading on OD Premium": loadingOdPremium.toStringAsFixed(2),
       "Basic OD Before NCB": odBeforeNcb.toStringAsFixed(2),
@@ -195,7 +205,7 @@ void _submitForm() {
 
     // Pass data to result screen
     InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Ambulance",
+      vehicleType: "Pedestrian Controlled Agricultural Tractors",
       fieldData: resultMap,
       totalPremium: finalPremium,
     );
@@ -239,7 +249,7 @@ void _submitForm() {
               // Icon(Icons.people, color: Colors.white),
               // SizedBox(width: 8),
               Text(
-                'Ambulance',
+                'Pedestrian Controlled Agricultural Tractors',
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
             ],
@@ -264,7 +274,7 @@ void _submitForm() {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _buildTextField('idv', 'IDV (₹)', 'IDV'),        
+                _buildTextField('idv', 'IDV (₹)', 'IDV'),
                 _buildDropdownField(
                   'Depreciation (%)',
                   _depreciationOptions,
@@ -275,33 +285,33 @@ void _submitForm() {
                       _updateCurrentIdv(); // <-- Add this
                     });
                   },
-                ),        
+                ),
                 _buildReadOnlyField(
-                    'currentIdv', 'Current IDV (₹)'), // Read-only field                        
+                    'currentIdv', 'Current IDV (₹)'), // Read-only field
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),
-                _buildTextField('yearOfManufacture', 'Year of Manufacture','Year of manufacture'),             
+                _buildTextField('yearOfManufacture', 'Year of Manufacture', 'Year of Manufacture'),
                 _buildDropdownField('Zone', _zoneOptions, _selectedZone,
-                    (val) => setState(() => _selectedZone = val)),                                                           
-                _buildTextField('discountOnOd', 'Discount on OD Premium (%)','Discount on OD Premium'),   
-                _buildTextField('loading_on_discount_premium', 'Loading on discount premium (%)','Loading on discount premium'),
+                    (val) => setState(() => _selectedZone = val)),
+                _buildTextField('discountOnOd', 'Discount on OD Premium (%)','Discount on OD Premium (%)'),
+                _buildTextField('loading_on_discount_premium', 'Loading on discount premium (%)','Loading on discount premium (%)'),
                 _buildDropdownField('CNG/LPG kits', _cngOptions, _selectedCNG,
-                    (val) => setState(() => _selectedCNG = val)),                         
-                _buildTextField('CNG_LPG_kits_Ex_fitted', 'CNG/LPG kits (externally fitted)','CNG LPG kits (externally fitted)'), 
+                    (val) => setState(() => _selectedCNG = val)),
+                _buildTextField('CNG_LPG_kits_Ex_fitted', 'CNG/LPG kits (externally fitted)','Cng LPG kits (externally fitted)'),
                 _buildDropdownField('IMT 23', _imt23Options, _selectedImt23,
                     (val) => setState(() => _selectedImt23 = val)),
-                _buildDropdownField('No Claim Bonus(%)', _ncbOptions, _selectedNcb,
-                    (val) => setState(() => _selectedNcb = val)), 
-                _buildTextField('Value_added_services', 'Value Added Services (₹)', 'Value Added Services'),                     
-                _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)','PA to Owner Driver'),            
+                _buildDropdownField('No Claim Bonus', _ncbOptions, _selectedNcb,
+                    (val) => setState(() => _selectedNcb = val)),
+                _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)','PA to Owner Driver (₹)'),
                 _buildDropdownField('LL to Paid Driver', _llPaidDriverOptions, _selectedLlPaidDriver,
-                    (val) => setState(() => _selectedLlPaidDriver = val)),              
-                _buildDropdownField('LL to Employee (Other Than Paid Driver)', _llEmployeeOtherOptions, _selectedLlEmployeeOther,
-                    (val) => setState(() => _selectedLlEmployeeOther = val)),
+                    (val) => setState(() => _selectedLlPaidDriver = val)),
+                _buildDropdownField('LL to employee other than Paid Driver', _llEmployeePaidDriverOptions, _selectedLlEmployeePaidDriver,
+                    (val) => setState(() => _selectedLlEmployeePaidDriver = val)),
                 _buildTextField('ll2Passenger', 'LL to passenger (Number of passenger)', 'LL to passenger (Number of passenger)'),
-                 _buildDropdownField('Restrcited TPPD', _restrictedTppdOptions, _selectedRestrictedTppd,
+                _buildDropdownField('Restricted TPPD', _restrictedTppdOptions, _selectedRestrictedTppd,
                     (val) => setState(() => _selectedRestrictedTppd = val)),
-                _buildTextField('otherCess', 'Other Cess (%)', 'Other Cess (%)'),
+                _buildTextField('otherCess', 'Other Cess (%)','Other Cess (%)'),
+                
                 // const SizedBox(height: 80),
               ],
             ),
@@ -372,65 +382,40 @@ void _submitForm() {
 }
 
 
-// double _getOdRate(String zone, double age) {
-//   if (age < 5) return zone == 'Zone A' ? 0.018 : 0.017;
-//   else if (age < 10) return zone == 'Zone A' ? 0.020 : 0.019;
-//   else return zone == 'Zone A' ? 0.0225 : 0.021;
-// }
-// Function to get the Own Damage (OD) base premium rate for an ambulance.
 double _getOdRate(String zone, double age) {
-  // These rates are for demonstration purposes, based on typical industry standards.
-  // You should verify and use the actual rates from your insurance provider.
-  if (zone == 'A') { // Metropolitan areas like Delhi, Mumbai
-    if (age <= 5) {
-      return 1.208; 
-    } else if (age <= 7) {
-      return 1.238; 
-    } else {
-      return 1.268; // (Above 7 yrs)
-    }
-  } else if (zone == 'B') { // Rest of India
-    if (age <= 5) {
-      return 1.202;
-    } else if (age <= 7) {
-      return 1.232; 
-    } else {
-      return 1.262; // (Above 7 yrs)
-    } 
-  }else if (zone == 'C') { // Rural areas
-      if (age <= 5) {
-        return 1.190;
-      } else if (age <= 7) {
-        return 1.220;
-      } else {
-        return 1.250; // (Above 7 yrs)
-      }
-    }
-  return 2.5; // Safe fallback rate
+  if (zone == 'A') {
+    if (age <= 5) return 1.208;
+    if (age <= 7) return 1.238;
+    return 1.268; // Above 7 years
+  } 
+  else if (zone == 'B') {
+    if (age <= 5) return 1.202;
+    if (age <= 7) return 1.232;
+    return 1.262;
+  }
+  else if (zone == 'C') {
+    if (age <= 5) return 1.190;
+    if (age <= 7) return 1.220;
+    return 1.250;
+  }
+
+  // Safe fallback rate
+  return 1.75; 
 }
 
 
-
-
-
-// double _getTpRate({
-//   required String zone,
-//   required double age,
-// }) {
-//   if (zone == 'A') {
-//     if (age <= 5) return 1000.0;
-//     else return 700.0;
-//   } else if (zone == 'B') {
-//     if (age <= 5) return 900.0;
-//     else return 600.0;
+// double _getTpRate({bool isFiveYear = false}) {
+//   if (isFiveYear) {
+//     // Official IRDA 5-year bundled TP premium (example placeholder)
+//     return 3200.0;
+//   } else {
+//     // Official IRDA 1-year TP premium (example placeholder)
+//     return 650.0;
 //   }
-//   return 0.0;
 // }
-
-// Function to get the Third-Party (TP) premium for an ambulance.
 double _getTpRate() {
-  // As per IRDAI, ambulances fall under the "Public Service Vehicles" category
+  // As per IRDAI, Tractor 
   // or a similar commercial vehicle class. The rate is a fixed amount.
   // This is a representative rate and must be verified with the latest IRDAI circular.
-  return 7267; // A fixed rate, for instance, based on vehicles up to 7500 kg GVW.
+  return 1645; // A fixed rate, for instance, based on vehicles up to 7500 kg GVW.
 }

@@ -98,9 +98,9 @@ final List<String> _depreciationOptions = [
   }
 
   void _submitForm() {
-    //if (_formKey.currentState!.validate()) {
+    if (_formKey.currentState!.validate()) {
     // Fetch form inputs
-    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+    double idv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
     String yearOfManufacture = _controllers['yearOfManufacture']!.text;
     String zone = _selectedZone ?? "A";
     int cubicCapacity = int.tryParse(_controllers['cubicCapacity']!.text) ?? 0;
@@ -186,7 +186,7 @@ final List<String> _depreciationOptions = [
 
     // Pass data to result screen
     InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Two Wheeler",
+      vehicleType: "Two Wheeler 1Y OD + 5Y TP",
       fieldData: resultMap,
       totalPremium: finalPremium,
     );
@@ -198,7 +198,7 @@ final List<String> _depreciationOptions = [
       ),
     );
   }
-  //}
+  }
 
   void _resetForm() {
     _formKey.currentState?.reset();
@@ -367,26 +367,26 @@ final List<String> _depreciationOptions = [
 double _getOdRate(String zone, String age, int cc) {
   if (zone == 'A') {
     if (cc <= 150) {
-      if (age == 'Upto 5 Years') return 2.0;
-      if (age == '6-10 Years') return 2.5;
-      return 3.0; // Above 10 years
+      if (age == 'Upto 5 Years') return 1.713;
+      if (age == '6-10 Years') return 1.788;
+      return 1.908; // Above 10 years
     } else {
-      if (age == 'Upto 5 Years') return 2.5;
-      if (age == '6-10 Years') return 3.0;
-      return 3.5;
+      if (age == 'Upto 5 Years') return 1.794;
+      if (age == '6-10 Years') return 1.889;
+      return 2.028; // Above 10 years
     }
   } else if (zone == 'B') {
     if (cc <= 150) {
-      if (age == 'Upto 5 Years') return 1.8;
-      if (age == '6-10 Years') return 2.3;
-      return 2.8;
+      if (age == 'Upto 5 Years') return 1.678;
+      if (age == '6-10 Years') return 1.753;
+      return 1.873; // Above 10 years
     } else {
-      if (age == 'Upto 5 Years') return 2.3;
-      if (age == '6-10 Years') return 2.8;
-      return 3.3;
+      if (age == 'Upto 5 Years') return 1.758;
+      if (age == '6-10 Years') return 1.853;
+      return 1.993; // Above 10 years
     }
   }
-  return 2.5; // Safe fallback
+  return 1.713; // Fallback if inputs don't match // Safe fallback
 }
 double getTpRate(int cc, {bool isFiveYear = false}) {
   if (isFiveYear) {

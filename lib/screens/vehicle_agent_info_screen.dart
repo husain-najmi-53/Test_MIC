@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:motor_insurance_app/screens/pdf_generation.dart';
+import 'package:motor_insurance_app/screens/pdf_gen_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/result_data.dart';
 import '../models/quotation_data.dart';
@@ -9,9 +9,9 @@ class VehicleAgentFormScreen extends StatefulWidget {
   final InsuranceResultData insuranceResult;
 
   const VehicleAgentFormScreen({
-    Key? key,
+    super.key,
     required this.insuranceResult,
-  }) : super(key: key);
+  });
 
   @override
   State<VehicleAgentFormScreen> createState() => _VehicleAgentFormScreenState();
@@ -54,16 +54,12 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
     if (savedData != null) {
       final data = json.decode(savedData);
       setState(() {
-        for (var entry in data['controllers'].entries) {
-          _controllers[entry.key]?.text = entry.value;
-        }
-        if (data['dates'] != null) {
-          policyStartDate = data['dates']['start'] != null
-              ? DateTime.parse(data['dates']['start'])
-              : null;
-          policyEndDate = data['dates']['end'] != null
-              ? DateTime.parse(data['dates']['end'])
-              : null;
+        // Only load agent-related fields
+        final agentFields = ['agentName', 'agentEmail', 'agentContact'];
+        for (var field in agentFields) {
+          if (data[field] != null) {
+            _controllers[field]?.text = data[field];
+          }
         }
       });
     }
@@ -150,16 +146,12 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
     if (quotation == null) return;
     
     try {
-      // Save form data to SharedPreferences
+      // Save only agent form data to SharedPreferences
       final prefs = await SharedPreferences.getInstance();
       final formData = {
-        'controllers': {
-          for (var entry in _controllers.entries) entry.key: entry.value.text
-        },
-        'dates': {
-          'start': policyStartDate?.toIso8601String(),
-          'end': policyEndDate?.toIso8601String(),
-        },
+        'agentName': _controllers['agentName']?.text,
+        'agentEmail': _controllers['agentEmail']?.text,
+        'agentContact': _controllers['agentContact']?.text,
       };
       await prefs.setString('agent_form_data', json.encode(formData));
       // Show success message
@@ -371,7 +363,7 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
                     child: Column(
                       children: [
                         const Text(
-                          'Agent Information',
+                          'Producer Information',
                           style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
@@ -379,10 +371,10 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
                         ),
                         const SizedBox(height: 16),
                         _buildTextField(
-                            'agentName', 'Agent Name', 'Enter agent name'),
+                            'agentName', 'Producer Name', 'Enter Producer name'),
                         _buildTextField(
-                            'agentEmail', 'Agent Email', 'Enter email'),
-                        _buildTextField('agentContact', 'Agent Contact',
+                            'agentEmail', 'Producer Email', 'Enter email'),
+                        _buildTextField('agentContact', 'Producer Contact',
                             'Enter contact number'),
                       ],
                     ),

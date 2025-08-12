@@ -117,7 +117,7 @@ class HomeScreen extends StatelessWidget {
                 title: '🔢 Calculators',
                 items: [
                   SectionItem(
-                      title: 'Basic Calculator',
+                      title: 'Calculator',
                       icon: Icons.calculate,
                       onTap: () {
                         Navigator.pushNamed(context, '/vehicleType');

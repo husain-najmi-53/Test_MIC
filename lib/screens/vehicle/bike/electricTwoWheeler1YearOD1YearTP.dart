@@ -98,9 +98,9 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
   }
 
   void _submitForm() {
-    //if (_formKey.currentState!.validate()) {
+    if (_formKey.currentState!.validate()) {
     // Fetch form inputs
-    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+    double idv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;// Current IDV
     String yearOfManufacture = _controllers['yearOfManufacture']!.text;
     String zone = _selectedZone ?? "A";
     double kwCapacity =
@@ -187,7 +187,7 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
 
     // Pass data to result screen
     InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Electric Two Wheeler",
+      vehicleType: "Electric Two Wheeler 1Y OD + 1Y TP",
       fieldData: resultMap,
       totalPremium: finalPremium,
     );
@@ -199,7 +199,7 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
       ),
     );
   }
-  //}
+  }
 
   void _resetForm() {
     _formKey.currentState?.reset();

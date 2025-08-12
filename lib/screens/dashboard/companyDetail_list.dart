@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -31,6 +32,12 @@ class _CompanydetailListState extends State<CompanydetailList> {
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(bottomLeft: Radius.circular(12),bottomRight: Radius.circular(12),)
         ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         title: Text("Companies Details", style: GoogleFonts.poppins(
             fontWeight: FontWeight.bold,
             color: Colors.white
@@ -47,11 +54,11 @@ class _CompanydetailListState extends State<CompanydetailList> {
                 primary: false,
                 shrinkWrap: true,
                   itemCount: companyDetailsList.length,
-                separatorBuilder:(context,index)=>SizedBox(height: height*0.05,) ,
+                separatorBuilder:(context,index)=>SizedBox(height: height*0.0,) ,
                 itemBuilder: (context,index)=>
                 _buildCard(height: height, width: width, name: companyDetailsList[index].name,
                     toll: companyDetailsList[index].tollno, email: companyDetailsList[index].email,
-                    website: companyDetailsList[index].email)
+                    website: companyDetailsList[index].website)
               )
             ],
           ),
@@ -69,7 +76,7 @@ class _CompanydetailListState extends State<CompanydetailList> {
     required String website,
   }) {
     return Container(
-            height: height*0.22,
+            height: height*0.24,
             width: double.infinity,
             child: Stack(
               children: [
@@ -77,7 +84,8 @@ class _CompanydetailListState extends State<CompanydetailList> {
                   height: height*0.09,
                   decoration: BoxDecoration(
                       // color: Colors.blue.shade200,
-                      color: Colors.indigoAccent.shade100,
+                      // color: Colors.indigoAccent.shade100,
+                      color: const Color(0xFFF0F4FF),
                       borderRadius:const BorderRadius.only(
                         bottomLeft: Radius.circular(12),
                         bottomRight: Radius.circular(12),
@@ -88,7 +96,7 @@ class _CompanydetailListState extends State<CompanydetailList> {
                     top: 10,
                     left: 20,
                     child: Container(
-                      height: height*0.19,
+                      height: height*0.21,
                       width: width*0.9,
                       decoration: BoxDecoration(
                           color: Colors.white,
@@ -108,52 +116,75 @@ class _CompanydetailListState extends State<CompanydetailList> {
                       child: Column(
                         children: [
                           Container(
-                            height: height*0.05,
+                            height: height*0.065,
                             width: width*0.9,
                             decoration: BoxDecoration(
-                                // color: Colors.red,
-                                color: Colors.blue.shade200,
+                                color: Colors.indigo.shade500,
+                                // color: Colors.blue.shade200,
                                 borderRadius: const BorderRadius.only(topRight: Radius.circular(12),topLeft: Radius.circular(12))
                             ),
                             child: Center(child:
                             Padding(
-                                padding: const EdgeInsets.only(left: 4),
-                                child: Text(name, style: GoogleFonts.poppins(fontSize: 15,fontWeight: FontWeight.bold),))),
+                                padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 5),
+                                child: Text(name, style: GoogleFonts.poppins(color:Colors.white,fontSize: 15,fontWeight: FontWeight.bold),))),
                           ),
-                          _cardRaw(width: width, fieldName: 'Toll Free Number', fieldValue: toll),
+                          Padding(padding:const EdgeInsets.symmetric(vertical: 2),child: _cardRaw(width: width, fieldName: 'Toll Free Number', fieldValue: toll)),
                           _cardRaw(width: width, fieldName: 'Email', fieldValue: email),
-                          _cardRaw(width: width, fieldName: 'Website', fieldValue: website),
+                          Padding(padding:const EdgeInsets.only(bottom: 1,top: 2),child: _cardRaw(width: width, fieldName: 'Website', fieldValue: website)),
                           const Divider(color: Colors.black,),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            // crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              GestureDetector(
+                                onTap:()async{
+                                  await _launchWebsite("https://${website}");
+                                },
+                                child: Card(
+                                  color: Colors.transparent,
+                                  elevation: 0,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const Padding(padding:const EdgeInsets.symmetric(horizontal: 3),child: Icon(CupertinoIcons.arrow_up_right_square_fill)),
+                                      Text("Website",style: GoogleFonts.poppins(fontWeight: FontWeight.w500),)
+                                    ],
+                                  ),
+                                ),
+                              ),
                               GestureDetector(
                                 onTap:()async{
                                   await _launchCall(toll);
                                 },
-                                child: Container(
-                                  width: width*0.4,
-                                  child: Center(child: Row(
+                                child: Card(
+                                  color: Colors.transparent,
+                                  elevation: 0,
+                                  child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                     const Padding(padding:EdgeInsets.symmetric(horizontal: 5),child: Icon(Icons.call)),
+                                     const Padding(padding:const EdgeInsets.symmetric(horizontal: 3),child: Icon(Icons.call)),
                                       Text("Call",style: GoogleFonts.poppins(fontWeight: FontWeight.w500),)
                                     ],
-                                  ),),
+                                  ),
                                 ),
                               ),
                               GestureDetector(
                                 onTap: ()async{
                                   await _launchEmail(email);
                                 },
-                                child: Container(
-                                  width: width*0.4,
-                                  child: Center(child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      const Padding(padding:EdgeInsets.symmetric(horizontal: 5),child: Icon(Icons.email_rounded)),
-                                      Text("Email",style: GoogleFonts.poppins(fontWeight: FontWeight.w500),)
-                                    ],
-                                  ),),
+                                child: Padding(
+                                  padding:const EdgeInsets.symmetric(horizontal: 15),
+                                  child: Card(
+                                    color: Colors.transparent,
+                                    elevation: 0,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        const Padding(padding:const EdgeInsets.symmetric(horizontal: 3),child: Icon(Icons.email_rounded)),
+                                        Text("Email",style: GoogleFonts.poppins(fontWeight: FontWeight.w500),)
+                                      ],
+                                    ),
+                                  ),
                                 ),
                               ),
                             ],
@@ -169,7 +200,7 @@ class _CompanydetailListState extends State<CompanydetailList> {
 
   Row _cardRaw({required double width,required String fieldName,required fieldValue}) {
     return Row(
-                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
                                 padding: const EdgeInsets.only(left: 10),
@@ -190,6 +221,15 @@ class _CompanydetailListState extends State<CompanydetailList> {
     final uri =Uri.parse('mailto:${email}?subject=&body=');
     if(await canLaunchUrl(uri)){
       await launchUrl(uri);
+    }else{
+      throw Exception('Could not launch $uri');
+    }
+  }
+
+  Future<void> _launchWebsite(String url) async {
+    final Uri uri = Uri.parse(url);
+    if(await canLaunchUrl(uri)){
+      await launchUrl(uri,mode: LaunchMode.externalNonBrowserApplication );
     }else{
       throw Exception('Could not launch $uri');
     }

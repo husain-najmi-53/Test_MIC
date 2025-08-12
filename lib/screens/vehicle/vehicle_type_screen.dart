@@ -37,8 +37,9 @@ class _VehicleTypeScreenState extends State<VehicleTypeScreen> {
     // Passenger
     'Three Wheeler PCV(Upto 6 Passengers)': '/threeWheelerPCVUpto6',
     'Three Wheeler PCV(More than 6 upto 17 Passengers)': '/threeWheelerPCVMoreThan6',
+    'Bus(Upto 6 Passengers)': '/busUpto6',
     'Taxi(Upto 6 Passengers)': '/taxiUpto6',
-    'Bus': '/bus',
+    // 'Bus': '/bus',
     'School Bus': '/schoolBus',
 
     // Misc

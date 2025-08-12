@@ -1,0 +1,313 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:motor_insurance_app/models/result_data.dart';
+import 'package:motor_insurance_app/screens/vehicle/miscellaneous_vehicle/misc_result_screen.dart';
+
+class OtherMiscFormScreen extends StatefulWidget {
+  const OtherMiscFormScreen({super.key});
+
+  @override
+  State<OtherMiscFormScreen> createState() => _OtherMiscFormScreenState();
+}
+
+class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
+  final _formKey = GlobalKey<FormState>();
+
+  final Map<String, TextEditingController> _controllers = {
+    'idv': TextEditingController(),
+    'depreciation': TextEditingController(),
+    'currentIdv': TextEditingController(),
+    'yearOfManufacture': TextEditingController(),
+    'discountOnOd': TextEditingController(),
+    'paOwnerDriver': TextEditingController(),
+    'otherCess': TextEditingController(),
+  };
+
+  String? _selectedAge;
+  String? _selectedDepreciation;
+  String? _selectedOverTurningForCranes;
+  String? _selectedVehicleType;
+  String? _selectedGeographicalExt;
+  String? _selectedZone;
+  String? _selectedNcb;
+  String? _selectedImt23;
+  String? _selectedLlPaidDriver;
+  String? _selectedLlEmployeeOther;
+
+  final List<String> _depreciationOptions = ['0%', '5%', '10%', '15%', '20%', '25%', '30%'];
+  final List<String> _ageOptions = ['Upto 5 Years', '6-10 Years', 'Above 10 Years'];
+  final List<String> _vehicletypeOptions = ['Others Vehicle', 'Agriculture upto 6 HP'];
+  final List<String> _geographicalExtOptions = ['0', '400'];
+  final List<String> _overTurningForCranesOptions = ['Yes', 'No'];
+  final List<String> _zoneOptions = ['A', 'B', 'C'];
+  final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
+  final List<String> _imt23Options = ['Yes', 'No'];
+  final List<String> _llPaidDriverOptions = ['0', '50'];
+  final List<String> _llEmployeeOtherOptions = ['0','50','100','150','200','250','300','350'];
+
+  @override
+  void dispose() {
+    for (var controller in _controllers.values) {
+      controller.dispose();
+    }
+    super.dispose();
+  }
+
+  Widget _buildReadOnlyField(String key, String label) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Row(
+        children: [
+          SizedBox(width: 180, child: Text(label, style: const TextStyle(fontSize: 16))),
+          Expanded(
+            child: TextFormField(
+              controller: _controllers[key],
+              readOnly: true,
+              decoration: const InputDecoration(border: OutlineInputBorder()),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _updateCurrentIdv() {
+    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+    double depreciation = 0.0;
+
+    if (_selectedDepreciation != null) {
+      depreciation = double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0;
+    }
+
+    double currentIdv = idv - ((idv * depreciation) / 100);
+    _controllers['currentIdv']!.text = currentIdv.toStringAsFixed(2);
+  }
+
+  void _submitForm() {
+    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+    double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
+    double selectIMT = double.tryParse(_selectedImt23 ?? "0") ?? 0.0;
+    double ageOfVehicle = double.tryParse(_selectedAge ?? "0") ?? 0.0;
+    double geographicalExtent = double.tryParse(_selectedGeographicalExt ?? "0") ?? 0.0;
+    double overTurning = double.tryParse(_selectedOverTurningForCranes ?? "0") ?? 0.0;
+    String vehicleType = _selectedVehicleType ?? "Others Vehicle";
+    String yearOfManufacture = _controllers['yearOfManufacture']!.text;
+    String zone = _selectedZone ?? "A";
+    double discountOnOd = double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+    double paOwnerDriver = double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+    double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+    double llLEmployeeOther = double.tryParse(_selectedLlEmployeeOther ?? "0") ?? 0.0;
+    double llToPaidDriver = double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
+    String selectedNCBText = _selectedNcb ?? "0%";
+    double ncbPercentage = double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
+
+    double vehicleBasicRate = _getOdRate(zone, ageOfVehicle);
+
+    double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
+    double basicOdPremium = (currentIdv * vehicleBasicRate) / 100.0;
+    double discountAmount = (basicOdPremium * discountOnOd) / 100.0;
+    double basicAfterDiscount = basicOdPremium - discountAmount;
+    double geographicalExtensionAmount = (basicAfterDiscount * geographicalExtent) / 100.0;
+    double overturningAmount = (basicAfterDiscount * overTurning) / 100.0;
+    double imt23Amount = selectIMT;
+    double odBeforeNcb = geographicalExtensionAmount + overturningAmount + imt23Amount;
+    double ncbAmount = (odBeforeNcb * ncbPercentage) / 100;
+    double totalA = odBeforeNcb - ncbAmount;
+
+    double liabilityPremiumTP = _getTpRate(vehicleType);
+    double totalB = liabilityPremiumTP + geographicalExtensionAmount + paOwnerDriver + llToPaidDriver + llLEmployeeOther;
+
+    double totalAB = totalA + totalB;
+    double gst = totalAB * 0.18;
+    otherCess = (otherCess * totalAB) / 100;
+    double finalPremium = totalAB + gst + otherCess;
+
+    Map<String, String> resultMap = {
+      "IDV": idv.toStringAsFixed(2),
+      "Year of Manufacture": yearOfManufacture.toString(),
+      "Zone": zone,
+      "Vehicle Type": vehicleType,
+      "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
+      "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
+      "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+      "Basic OD Premium After discount": basicOdPremium.toStringAsFixed(2),
+      "Geographical Ext": geographicalExtensionAmount.toStringAsFixed(2),
+      "Overturning For Cranes": overturningAmount.toStringAsFixed(2),
+      "IMT 23": imt23Amount.toStringAsFixed(2),
+      "No Claim Bonus": ncbAmount.toStringAsFixed(2),
+      "Net Own Damage Premium": totalA.toStringAsFixed(2),
+      "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+      "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+      "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
+      "LL to Employee Other than Paid Driver": llLEmployeeOther.toStringAsFixed(2),
+      "Total B": totalB.toStringAsFixed(2),
+      "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
+      "GST @ 18%": gst.toStringAsFixed(2),
+      "Other CESS": otherCess.toStringAsFixed(2),
+      "Final Premium": finalPremium.toStringAsFixed(2),
+    };
+
+    InsuranceResultData resultData = InsuranceResultData(
+      vehicleType: "Other MISC Vehicle",
+      fieldData: resultMap,
+      totalPremium: finalPremium,
+    );
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => MiscInsuranceResultScreen(resultData: resultData),
+      ),
+    );
+  }
+
+  void _resetForm() {
+    _formKey.currentState?.reset();
+    for (var controller in _controllers.values) {
+      controller.clear();
+    }
+    setState(() {
+      _selectedZone = null;
+      _selectedNcb = null;
+      _selectedImt23 = null;
+      _selectedLlPaidDriver = null;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.indigo.shade700,
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        title: const Text('Other MISC Vehicle', style: TextStyle(color: Colors.white)),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh, color: Colors.white),
+            onPressed: _resetForm,
+          ),
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                _buildTextField('idv', 'IDV (₹)', 'Enter IDV'),
+                _buildDropdownField('Depreciation (%)', _depreciationOptions, _selectedDepreciation, (val) {
+                  setState(() {
+                    _selectedDepreciation = val;
+                    _updateCurrentIdv();
+                  });
+                }),
+                _buildReadOnlyField('currentIdv', 'Current IDV (₹)'),
+                _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge, (val) => setState(() => _selectedAge = val)),
+                _buildTextField('yearOfManufacture', 'Year of Manufacture', 'Enter Year'),
+                _buildDropdownField('Zone', _zoneOptions, _selectedZone, (val) => setState(() => _selectedZone = val)),
+                _buildDropdownField('Vehicle Type', _vehicletypeOptions, _selectedVehicleType, (val) => setState(() => _selectedVehicleType = val)),
+                _buildTextField('discountOnOd', 'Discount on OD Premium (%)', 'Enter Discount'),
+                _buildDropdownField('Geographical Extension', _geographicalExtOptions, _selectedGeographicalExt, (val) => setState(() => _selectedGeographicalExt = val)),
+                _buildDropdownField('Over Turning for Cranes', _overTurningForCranesOptions, _selectedOverTurningForCranes, (val) => setState(() => _selectedOverTurningForCranes = val)),
+                _buildDropdownField('IMT 23', _imt23Options, _selectedImt23, (val) => setState(() => _selectedImt23 = val)),
+                _buildDropdownField('No Claim Bonus (%)', _ncbOptions, _selectedNcb, (val) => setState(() => _selectedNcb = val)),
+                _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)', 'Enter Amount'),
+                _buildDropdownField('LL to Paid Driver', _llPaidDriverOptions, _selectedLlPaidDriver, (val) => setState(() => _selectedLlPaidDriver = val)),
+                _buildDropdownField('LL to Employee Other than Paid Driver', _llEmployeeOtherOptions, _selectedLlEmployeeOther, (val) => setState(() => _selectedLlEmployeeOther = val)),
+                _buildTextField('otherCess', 'Other Cess (%)', 'Enter Cess %'),
+              ],
+            ),
+          ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: ElevatedButton(
+          onPressed: _submitForm,
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.indigo.shade700,
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          ),
+          child: const Text('Calculate', style: TextStyle(color: Colors.white, fontSize: 18)),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTextField(String key, String label, String placeholder) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Row(
+        children: [
+          SizedBox(width: 180, child: Text(label, style: const TextStyle(fontSize: 16))),
+          Expanded(
+            child: TextFormField(
+              controller: _controllers[key],
+              decoration: InputDecoration(border: const OutlineInputBorder(), hintText: placeholder),
+              keyboardType: TextInputType.number,
+              inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))],
+              validator: (value) => value == null || value.trim().isEmpty ? 'Enter $label' : null,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDropdownField(String label, List<String> options, String? selected, Function(String?) onChanged) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Row(
+        children: [
+          SizedBox(width: 180, child: Text(label, style: const TextStyle(fontSize: 16))),
+          Expanded(
+            child: DropdownButtonFormField<String>(
+              isExpanded: true,
+              value: selected,
+              items: options.map((item) => DropdownMenuItem(value: item, child: Text(item, overflow: TextOverflow.ellipsis))).toList(),
+              onChanged: onChanged,
+              decoration: const InputDecoration(border: OutlineInputBorder()),
+              validator: (value) => value == null ? 'Select $label' : null,
+              hint: const Text('Select Option'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+double _getOdRate(String zone, double ageOfVehicle) {
+  if (zone == 'A') {
+    if (ageOfVehicle <= 5) return 1.20;
+    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.25;
+    if (ageOfVehicle > 7) return 1.30;
+  } else if (zone == 'B') {
+    if (ageOfVehicle <= 5) return 1.15;
+    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.20;
+    if (ageOfVehicle > 7) return 1.25;
+  } else if (zone == 'C') {
+    if (ageOfVehicle <= 5) return 1.10;
+    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.15;
+    if (ageOfVehicle > 7) return 1.20;
+  }
+  return 1.20;
+}
+
+double _getTpRate(String vehicleType) {
+  switch (vehicleType) {
+    case 'Others Vehicle':
+      return 7267;
+    case 'Agriculture Tractors upto 6 Hp':
+      return 1645;
+    default:
+      return 0;
+  }
+}

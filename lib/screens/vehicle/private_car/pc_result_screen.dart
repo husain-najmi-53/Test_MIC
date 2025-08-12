@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import '../../../models/result_data.dart';
 import '../../vehicle_agent_info_screen.dart';
 
-class BikeInsuranceResultScreen extends StatelessWidget {
+class InsuranceCarResultScreen extends StatelessWidget {
   final InsuranceResultData resultData;
 
-  const BikeInsuranceResultScreen({super.key, required this.resultData});
+  const InsuranceCarResultScreen({super.key, required this.resultData});
 
   @override
   Widget build(BuildContext context) {
     final Map<String, String> fields = resultData.fieldData;
 
     final categoryFieldMapping = {
-      "Two Wheeler 1Y OD": {
+      "Four Wheeler": {
         "Basic Details": [
           "IDV",
           "Year of Manufacture",
@@ -28,23 +28,66 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "Total Basic Premium",
           "No Claim Bonus",
           "Net Own Damage Premium",
-          "Zero Dep Premium",
           "Total A"
         ],
-        "[B] Liability Premium": [
+
+        "[B] Addon Coverage": [
+          "Zero Dep Premium",
+          "RSA",
+          "Other Addon Coverage",
+          "Value Added Services",
+          "Total B"
+        ],
+
+        "[C] Liability Premium": [
           "Liability Premium (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
-          "Total B"
+          "Total C"
         ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
+        "[D] Total Premium": [
+          "Total Package Premium[A+B+C]",
           "GST @ 18%",
           "Other CESS"
         ]
       },
-      "Two Wheeler 1Y OD + 1Y TP": {
+      "Electric Four Wheeler": {
+        "Basic Details": ["IDV", "Year of Manufacture", "Zone", "Kilowatt"],
+        "[A] Own Damage Premium Package": [
+          "Vehicle Basic Rate",
+          "Basic for Vehicle",
+          "Discount on OD Premium",
+          "Basic OD Premium after discount",
+          "Accessories Value",
+          "Total Basic Premium",
+          "No Claim Bonus",
+          "Net Own Damage Premium",
+          "Total A"
+        ],
+
+        "[B] Addon Coverage": [
+          "Zero Dep Premium",
+          "RSA",
+          "Other Addon Coverage",
+          "Value Added Services",
+          "Total B"
+        ],
+
+        "[C] Liability Premium": [
+          "Liability Premium (TP)",
+          "PA to Owner Driver",
+          "LL to Paid Driver",
+          "PA to Unnamed Passenger",
+          "Total C"
+        ],
+        "[D] Total Premium": [
+          "Total Package Premium[A+B+C]",
+          "GST @ 18%",
+          "Other CESS"
+        ]
+      },
+      "Four Wheeler Complete": {
         "Basic Details": [
           "IDV",
           "Year of Manufacture",
@@ -57,31 +100,46 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "Discount on OD Premium",
           "Basic OD Premium after discount",
           "Accessories Value",
+          "Optional Extensions(GeoExt+FiberGT+DrTutions)",
+          "Total Discounts(AntiTheft+Handicap+AAI+VoluntaryDeduct)",
           "Total Basic Premium",
           "No Claim Bonus",
           "Net Own Damage Premium",
-          "Zero Dep Premium",
           "Total A"
         ],
-        "[B] Liability Premium": [
+
+        "[B] Addon Coverage": [
+          "Zero Dep Premium",
+          "RSA",
+          "Consumables",
+          "Tyre Cover",
+          "NCB Protection",
+          "Engine Protector",
+          "Return To Invoice",
+          "Other Addon Coverage",
+          "Value Added Services",
+          "Total B"
+        ],
+
+        "[C] Liability Premium": [
           "Liability Premium (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
-          "Total B"
+          "Total C"
         ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
+        "[D] Total Premium": [
+          "Total Package Premium[A+B+C]",
           "GST @ 18%",
           "Other CESS"
         ]
       },
-      "Two Wheeler 1Y OD + 5Y TP": {
+      "Electric Four Wheeler Complete": {
         "Basic Details": [
           "IDV",
           "Year of Manufacture",
           "Zone",
-          "Cubic Capacity"
+          "Kilowatt"
         ],
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
@@ -89,135 +147,36 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "Discount on OD Premium",
           "Basic OD Premium after discount",
           "Accessories Value",
+          "Optional Extensions(GeoExt+FiberGT+DrTutions)",
+          "Total Discounts(AntiTheft+Handicap+AAI+VoluntaryDeduct)",
           "Total Basic Premium",
           "No Claim Bonus",
           "Net Own Damage Premium",
-          "Zero Dep Premium",
           "Total A"
         ],
-        "[B] Liability Premium": [
+
+        "[B] Addon Coverage": [
+          "Zero Dep Premium",
+          "RSA",
+          "Consumables",
+          "Tyre Cover",
+          "NCB Protection",
+          "Engine Protector",
+          "Return To Invoice",
+          "Other Addon Coverage",
+          "Value Added Services",
+          "Total B"
+        ],
+
+        "[C] Liability Premium": [
           "Liability Premium (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
-          "Total B"
+          "Total C"
         ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ]
-      },
-      "Electric Two Wheeler 1Y OD": {
-        "Basic Details": ["IDV", "Year of Manufacture", "Zone", "Kilowatt"],
-        "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Accessories Value",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Zero Dep Premium",
-          "Total A"
-        ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "PA to Owner Driver",
-          "LL to Paid Driver",
-          "PA to Unnamed Passenger",
-          "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ]
-      },
-      "Electric Two Wheeler 1Y OD + 1Y TP": {
-        "Basic Details": ["IDV", "Year of Manufacture", "Zone", "Kilowatt"],
-        "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Accessories Value",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Zero Dep Premium",
-          "Total A"
-        ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "PA to Owner Driver",
-          "LL to Paid Driver",
-          "PA to Unnamed Passenger",
-          "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ]
-      },
-      "Electric Two Wheeler 1Y OD + 5Y TP": {
-        "Basic Details": ["IDV", "Year of Manufacture", "Zone", "Kilowatt"],
-        "[A] Own Damage Premium Package": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Accessories Value",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Zero Dep Premium",
-          "Total A"
-        ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "PA to Owner Driver",
-          "LL to Paid Driver",
-          "PA to Unnamed Passenger",
-          "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ]
-      },
-      "Two Wheeler Passenger Carrying": {
-        "Basic Details": [
-          "IDV",
-          "Year of Manufacture",
-          "Zone",
-          "Cubic Capacity",
-          "No. of Passengers"
-        ],
-        "[A] Own Damage Premium": [
-          "Vehicle Basic Rate",
-          "Basic for Vehicle",
-          "Accessories Value",
-          "IMT 23",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
-          "Total Basic Premium",
-          "No Claim Bonus",
-          "Net Own Damage Premium(A)",
-        ],
-        "[B] Liability Premium": [
-          "Liability Premium (TP)",
-          "Passenger Coverage",
-          "PA to Owner Driver",
-          "LL to Paid Driver",
-          "Restricted TPPD",
-          "Total Liability Premium (B)"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
+        "[D] Total Premium": [
+          "Total Package Premium[A+B+C]",
           "GST @ 18%",
           "Other CESS"
         ]
@@ -226,7 +185,7 @@ class BikeInsuranceResultScreen extends StatelessWidget {
 
     final vehicleType = resultData.vehicleType;
     final sections = categoryFieldMapping[vehicleType] ??
-        categoryFieldMapping["Two Wheeler Passenger Carrying"]!;
+        categoryFieldMapping["Two Wheeler"]!;
 
     return Scaffold(
       appBar: AppBar(

@@ -1,66 +1,18 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:motor_insurance_app/models/rto_data.dart';
 
 class RtoZoneFinder extends StatefulWidget {
-  const RtoZoneFinder({super.key});
+  const RtoZoneFinder({Key? key}) : super(key: key);
 
   @override
   State<RtoZoneFinder> createState() => _RtoZoneFinderState();
 }
 
 class _RtoZoneFinderState extends State<RtoZoneFinder> {
-  final TextEditingController _findController = TextEditingController();
-
-  String location = "-";
-  String privateCar = "-";
-  String twoWheeler = "-";
-  String taxi = "-";
-  String commercialVehicle = "-";
-
-  Map<String, Map<String, String>> rtoData = {};
-
-  @override
-  void initState() {
-    super.initState();
-    loadRtoData();
-  }
-
-  Future<void> loadRtoData() async {
-    final String jsonString = await rootBundle.loadString('assets/rto_data.json');
-    final Map<String, dynamic> jsonMap = json.decode(jsonString);
-    setState(() {
-      rtoData = jsonMap.map((key, value) => MapEntry(
-            key,
-            Map<String, String>.from(value),
-          ));
-    });
-  }
-
-  void findRtoZone() {
-    String input = _findController.text.trim().toUpperCase();
-    if (rtoData.containsKey(input)) {
-      setState(() {
-        location = rtoData[input]!["Location"]!;
-        privateCar = rtoData[input]!["Private Car"]!;
-        twoWheeler = rtoData[input]!["Two Wheeler"]!;
-        taxi = rtoData[input]!["Taxi"]!;
-        commercialVehicle = rtoData[input]!["Commercial vehicle"]!;
-      });
-    } else {
-      setState(() {
-        location = "-";
-        privateCar = "-";
-        twoWheeler = "-";
-        taxi = "-";
-        commercialVehicle = "-";
-      });
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("RTO code not found")),
-      );
-    }
-  }
+  TextEditingController _findController = TextEditingController();
+  String? Location;
+  RTOData rtoData = RTOData();
 
   @override
   Widget build(BuildContext context) {
@@ -68,13 +20,19 @@ class _RtoZoneFinderState extends State<RtoZoneFinder> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
+      // backgroundColor: const Color(0xFFF0F4FF),
       appBar: AppBar(
         backgroundColor: Colors.indigo.shade700,
-        iconTheme: const IconThemeData(color: Colors.white),
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(12),
-              bottomRight: Radius.circular(12)),
+            borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(12),
+          bottomRight: Radius.circular(12),
+        )),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         title: Text(
           "RTO Zone Finder",
@@ -89,125 +47,202 @@ class _RtoZoneFinderState extends State<RtoZoneFinder> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: height * 0.05),
+              SizedBox(
+                height: height * 0.1,
+              ),
               TextFormField(
                 controller: _findController,
+                obscureText: false,
+                keyboardType: TextInputType.text,
+                validator: (val) {
+                  if (val == null || val.isEmpty) {
+                    return "Please enter the value ";
+                  } else {
+                    return null;
+                  }
+                },
                 decoration: InputDecoration(
-                  hintText: "Enter First 4 digits (Ex. MH12)",
-                  hintStyle: GoogleFonts.poppins(
-                    color: Colors.black54,
-                    fontWeight: FontWeight.w400,
-                  ),
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding:
-                      const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide:
-                        BorderSide(color: Colors.indigo.shade200, width: 1),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide:
-                        BorderSide(color: Colors.indigo.shade700, width: 2),
-                  ),
-                ),
-                style: GoogleFonts.poppins(fontSize: 16),
+                    hintText: "Enter First 4 digit EX. MH12",
+                    hintStyle: GoogleFonts.poppins(
+                        color: Colors.black45, fontWeight: FontWeight.w400),
+                    filled: true,
+                    // fillColor:Colors.indigo.shade50,
+                    // fillColor:Colors.blue.shade50,
+                    fillColor: const Color(0xFFF0F4FF),
+                    border: const UnderlineInputBorder(),
+                    focusedBorder: UnderlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    )),
               ),
-              SizedBox(height: height * 0.03),
               SizedBox(
-                width: width * 0.5,
-                height: 48,
-                child: ElevatedButton(
-                  onPressed: findRtoZone,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.indigo.shade700,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                  ),
-                  child: Text(
-                    "Find",
-                    style:
-                        GoogleFonts.poppins(color: Colors.white, fontSize: 16),
-                  ),
-                ),
+                height: height * 0.03,
               ),
-              SizedBox(height: height * 0.06),
+              Container(
+                width: width * 0.5,
+                child: ElevatedButton(
+                    onPressed: () {
+                      String upCase = _findController.text.trim().toUpperCase();
+                      setState(() {
+                        Location = rtoData.rtoCodes[upCase];
+                      });
+                      print(Location);
+                    },
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.indigo.shade700,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12))),
+                    child: Text(
+                      "Find",
+                      style: GoogleFonts.poppins(color: Colors.white),
+                    )),
+              ),
+              SizedBox(
+                height: height * 0.15,
+              ),
               Card(
-                elevation: 6,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16)),
-                shadowColor: Colors.indigo.withOpacity(0.2),
+               color: const Color(0xFFF0F4FF),
                 child: Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: const EdgeInsets.all(18),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                  Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6),
+                    child: _details(
+                      width: width,
+                      height: height,
+                      fieldName: 'Location',
+                      fielValue: Location != null ? Location! : '-',
+                       )),
+                     ]
+                  ),
+                )
+              ),
+              /*Container(
+                height: height * 0.35,
+                width: width * 0.9,
+                decoration: BoxDecoration(
+                  // color: Colors.indigo.shade200,
+                  color: const Color(0xFFF0F4FF),
+                  borderRadius: BorderRadius.circular(12),
+                  // border: Border.fromBorderSide(BorderSide(color: Colors.indigo.withOpacity(0.3))),
+                  border: Border.fromBorderSide(
+                      BorderSide(color: Colors.indigo.shade700)),
+                  *//*boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5), // Shadow color
+                      spreadRadius: 2,                     // Spread radius
+                      blurRadius: 7,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],*//*
+
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(18),
+                  child: Column(
                     children: [
-                      Row(
-                        children: [
-                          Icon(Icons.receipt_long,
-                              color: Colors.indigo.shade200, size: 28),
-                          const SizedBox(width: 10),
-                          Text(
-                            "RTO Zone Details",
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20,
-                              color: Colors.indigo.shade700,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 12),
-                      Divider(color: Colors.grey.shade300, thickness: 1),
-                      const SizedBox(height: 10),
-                      _buildDetailTile("Location", location, Icons.location_on),
-                      _buildDetailTile(
-                          "Private Car", privateCar, Icons.directions_car),
-                      _buildDetailTile(
-                          "Two Wheeler", twoWheeler, Icons.pedal_bike),
-                      _buildDetailTile("Taxi", taxi, Icons.local_taxi),
-                      _buildDetailTile("Commercial vehicle", commercialVehicle,
-                          Icons.local_shipping),
+                      Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 6),
+                          child: _details(
+                            width: width,
+                            height: height,
+                            fieldName: 'Location',
+                            fielValue: Location != null ? Location! : 'Pune',
+                          )),
+                      const Divider(color: Colors.black),
+                      Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 6),
+                          child: _details(
+                            width: width,
+                            height: height,
+                            fieldName: 'Private Car',
+                            fielValue: 'A',
+                          )),
+                      const Divider(color: Colors.black),
+                      Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 6),
+                          child: _details(
+                            width: width,
+                            height: height,
+                            fieldName: 'Two Wheeler',
+                            fielValue: 'A',
+                          )),
+                      const Divider(color: Colors.black),
+                      Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 6),
+                          child: _details(
+                            width: width,
+                            height: height,
+                            fieldName: 'Taxi',
+                            fielValue: 'A',
+                          )),
+                      const Divider(color: Colors.black),
+                      Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 6),
+                          child: _details(
+                            width: width,
+                            height: height,
+                            fieldName: 'Commercial vehicle',
+                            fielValue: 'C',
+                          )),
                     ],
                   ),
                 ),
-              ),
+              )*/
             ],
           ),
         ),
       ),
     );
   }
+}
 
-  Widget _buildDetailTile(String title, String value, IconData icon) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6.0),
-      child: Row(
-        children: [
-          Icon(icon, color: Colors.indigo.shade200, size: 22),
-          const SizedBox(width: 12),
-          Expanded(
+class _details extends StatelessWidget {
+  const _details(
+      {required this.width,
+      required this.height,
+      required this.fieldName,
+      required this.fielValue});
+
+  final double width;
+  final double height;
+  final String fieldName;
+  final String fielValue;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(
+            width: width * 0.4,
+            height: height * 0.03,
+            // color:Colors.red,
             child: Text(
-              title,
+              fieldName,
               style: GoogleFonts.poppins(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-                color: Colors.black87,
-              ),
-            ),
-          ),
-          Text(
-            value,
-            style: GoogleFonts.poppins(
-              fontSize: 15,
-              fontWeight: FontWeight.w400,
-              color: Colors.grey.shade700,
-            ),
-          ),
-        ],
-      ),
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500),
+              overflow: TextOverflow.visible,
+            )),
+        SizedBox(
+          width: width * 0.05,
+        ),
+        Container(
+            width: width * 0.3,
+            height: height * 0.03,
+            // color:Colors.red,
+            child: Text(
+              fielValue,
+              style: GoogleFonts.poppins(
+                  color: Colors.black,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w300),
+            )),
+      ],
     );
   }
 }
