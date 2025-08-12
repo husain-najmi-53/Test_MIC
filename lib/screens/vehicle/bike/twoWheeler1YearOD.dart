@@ -320,6 +320,9 @@ class _TwoWheeler1YearODFormScreenState
   }
 
   Widget _buildTextField(String key, String label, String placeholder) {
+    // Optional dropdown fields
+  const optionalFields=['accessoriesValue',
+  ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -342,8 +345,14 @@ class _TwoWheeler1YearODFormScreenState
               inputFormatters: [
                 FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
               ],
-              validator: (value) =>
-                  value == null || value.trim().isEmpty ? 'Enter $label' : null,
+              validator: (value) {
+              // Skip validation if this field is optional
+              if (optionalFields.contains(key)) return null;
+
+              // Required validation
+              if (value == null || value.trim().isEmpty) {
+                return 'Enter $label';
+              }}
             ),
           ),
         ],
@@ -352,7 +361,12 @@ class _TwoWheeler1YearODFormScreenState
   }
 
   Widget _buildDropdownField(String label, List<String> options,
-      String? selected, Function(String?) onChanged) {
+      String? selected, Function(String?) onChanged,) {
+        String? keyName; // Optional: pass a key for validation skip
+        const optionalDropdowns = [
+    'LL to Paid Driver', // matches label or keyName
+  ];
+  
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -370,7 +384,18 @@ class _TwoWheeler1YearODFormScreenState
                   .toList(),
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
-              validator: (value) => value == null ? 'Select $label' : null,
+              validator: (value) {
+              // Skip validation if optional
+              if (optionalDropdowns.contains(label) ||
+                  (keyName!= null && optionalDropdowns.contains(keyName))) {
+                return null;
+              }
+
+              if (value == null) {
+                return 'Select $label';
+              }
+              return null;
+            },
               hint: label == 'Zone'
                   ? const Text('Select Zone')
                   : const Text('Select Option'),
@@ -385,25 +410,25 @@ class _TwoWheeler1YearODFormScreenState
 double _getOdRate(String zone, String age, int cc) {
   if (zone == 'A') {
     if (cc <= 150) {
-      if (age == 'Upto 5 Years') return 2.0;
-      if (age == '6-10 Years') return 2.5;
-      return 3.0; // Above 10 years
+      if (age == 'Upto 5 Years') return 1.713;
+      if (age == '6-10 Years') return 1.788;
+      return 1.908; // Above 10 years
     } else {
-      if (age == 'Upto 5 Years') return 2.5;
-      if (age == '6-10 Years') return 3.0;
-      return 3.5;
+      if (age == 'Upto 5 Years') return 1.794;
+      if (age == '6-10 Years') return 1.889;
+      return 2.028; // Above 10 years
     }
   } else if (zone == 'B') {
     if (cc <= 150) {
-      if (age == 'Upto 5 Years') return 1.8;
-      if (age == '6-10 Years') return 2.3;
-      return 2.8;
+      if (age == 'Upto 5 Years') return 1.678;
+      if (age == '6-10 Years') return 1.753;
+      return 1.873; // Above 10 years
     } else {
-      if (age == 'Upto 5 Years') return 2.3;
-      if (age == '6-10 Years') return 2.8;
-      return 3.3;
+      if (age == 'Upto 5 Years') return 1.758;
+      if (age == '6-10 Years') return 1.853;
+      return 1.993; // Above 10 years
     }
   }
-  return 2.5; // Safe fallback
+  return 1.713; // Fallback if inputs don't match // Safe fallback
 }
 

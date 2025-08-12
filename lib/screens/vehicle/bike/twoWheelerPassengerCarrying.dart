@@ -346,13 +346,17 @@ class _TwoWheelerPassengerCarryingFormScreenState
   }
 
   Widget _buildTextField(String key, String label, String placeholder) {
+    // Optional dropdown fields
+  const optionalFields=['accessoriesValue',
+  ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
           SizedBox(
-              width: 180,
-              child: Text(label, style: const TextStyle(fontSize: 16))),
+            width: 180,
+            child: Text(label, style: const TextStyle(fontSize: 16)),
+          ),
           Expanded(
             child: TextFormField(
               onChanged: (val) {
@@ -367,8 +371,14 @@ class _TwoWheelerPassengerCarryingFormScreenState
               inputFormatters: [
                 FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
               ],
-              validator: (value) =>
-                  value == null || value.trim().isEmpty ? 'Enter $label' : null,
+              validator: (value) {
+              // Skip validation if this field is optional
+              if (optionalFields.contains(key)) return null;
+
+              // Required validation
+              if (value == null || value.trim().isEmpty) {
+                return 'Enter $label';
+              }}
             ),
           ),
         ],
@@ -377,14 +387,20 @@ class _TwoWheelerPassengerCarryingFormScreenState
   }
 
   Widget _buildDropdownField(String label, List<String> options,
-      String? selected, Function(String?) onChanged) {
+      String? selected, Function(String?) onChanged,) {
+        String? keyName; // Optional: pass a key for validation skip
+        const optionalDropdowns = [
+    'LL to Paid Driver', // matches label or keyName
+  ];
+  
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
           SizedBox(
-              width: 180,
-              child: Text(label, style: const TextStyle(fontSize: 16))),
+            width: 180,
+            child: Text(label, style: const TextStyle(fontSize: 16)),
+          ),
           Expanded(
             child: DropdownButtonFormField<String>(
               value: selected,
@@ -394,7 +410,18 @@ class _TwoWheelerPassengerCarryingFormScreenState
                   .toList(),
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
-              validator: (value) => value == null ? 'Select $label' : null,
+              validator: (value) {
+              // Skip validation if optional
+              if (optionalDropdowns.contains(label) ||
+                  (keyName!= null && optionalDropdowns.contains(keyName))) {
+                return null;
+              }
+
+              if (value == null) {
+                return 'Select $label';
+              }
+              return null;
+            },
               hint: label == 'Zone'
                   ? const Text('Select Zone')
                   : const Text('Select Option'),
