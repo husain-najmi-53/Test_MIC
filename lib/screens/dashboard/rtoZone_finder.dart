@@ -10,8 +10,12 @@ class RtoZoneFinder extends StatefulWidget {
 }
 
 class _RtoZoneFinderState extends State<RtoZoneFinder> {
-  TextEditingController _findController = TextEditingController();
+  final TextEditingController _findController = TextEditingController();
+  final GlobalKey<FormState> _key = GlobalKey<FormState>();
   String? Location;
+  String? Zone;
+  String? District;
+  String? State;
   RTOData rtoData = RTOData();
 
   @override
@@ -44,155 +48,127 @@ class _RtoZoneFinderState extends State<RtoZoneFinder> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: height * 0.1,
-              ),
-              TextFormField(
-                controller: _findController,
-                obscureText: false,
-                keyboardType: TextInputType.text,
-                validator: (val) {
-                  if (val == null || val.isEmpty) {
-                    return "Please enter the value ";
-                  } else {
-                    return null;
-                  }
-                },
-                decoration: InputDecoration(
-                    hintText: "Enter First 4 digit EX. MH12",
-                    hintStyle: GoogleFonts.poppins(
-                        color: Colors.black45, fontWeight: FontWeight.w400),
-                    filled: true,
-                    // fillColor:Colors.indigo.shade50,
-                    // fillColor:Colors.blue.shade50,
-                    fillColor: const Color(0xFFF0F4FF),
-                    border: const UnderlineInputBorder(),
-                    focusedBorder: UnderlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+          child: Form(
+            key: _key,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: height * 0.1,
+                ),
+                TextFormField(
+                  controller: _findController,
+                  obscureText: false,
+                  keyboardType: TextInputType.text,
+                  validator: (val) {
+                    final regex = RegExp(r'^[A-Za-z]{2}\d{2}$');
+                    if (val == null || val.isEmpty) {
+                      return "Please enter the value ";
+                    } else if (!regex.hasMatch(val)) {
+                      return "Please enter correct format Ex: mh12 or MH12  ";
+                    } else {
+                      return null;
+                    }
+                  },
+                  decoration: InputDecoration(
+                      hintText: "Enter First 4 digit EX. MH12",
+                      hintStyle: GoogleFonts.poppins(
+                          color: Colors.black45, fontWeight: FontWeight.w400),
+                      filled: true,
+                      // fillColor:Colors.indigo.shade50,
+                      // fillColor:Colors.blue.shade50,
+                      fillColor: const Color(0xFFF0F4FF),
+                      border: const UnderlineInputBorder(),
+                      focusedBorder: UnderlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      )),
+                ),
+                SizedBox(
+                  height: height * 0.03,
+                ),
+                Container(
+                  width: width * 0.5,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        if (_key.currentState!.validate()) {
+                          String upCase =
+                              _findController.text.trim().toUpperCase();
+                          if (rtoData.rtoCodes[upCase] != null) {
+                            setState(() {
+                              Location = rtoData.rtoCodes[upCase]['Location'];
+                              Zone = rtoData.rtoCodes[upCase]['Zone'];
+                              District = rtoData.rtoCodes[upCase]['District'];
+                              State = rtoData.rtoCodes[upCase]['State'];
+                            });
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text("Data did not Match")));
+                          }
+                        }
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.indigo.shade700,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12))),
+                      child: Text(
+                        "Find",
+                        style: GoogleFonts.poppins(color: Colors.white),
+                      )),
+                ),
+                SizedBox(
+                  height: height * 0.15,
+                ),
+                /*  Card(
+                 color: const Color(0xFFF0F4FF),
+                  child: Padding(
+                    padding: const EdgeInsets.all(18),
+                    child: Column(
+                        children: [
+                    Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 6),
+                      child: _details(
+                        width: width,
+                        height: height,
+                        fieldName: 'Location',
+                        fielValue: Location != null ? Location! : '-',
+                         )),
+                       ]
                     ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    )),
-              ),
-              SizedBox(
-                height: height * 0.03,
-              ),
-              Container(
-                width: width * 0.5,
-                child: ElevatedButton(
-                    onPressed: () {
-                      String upCase = _findController.text.trim().toUpperCase();
-                      setState(() {
-                        Location = rtoData.rtoCodes[upCase];
-                      });
-                      print(Location);
-                    },
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.indigo.shade700,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12))),
-                    child: Text(
-                      "Find",
-                      style: GoogleFonts.poppins(color: Colors.white),
-                    )),
-              ),
-              SizedBox(
-                height: height * 0.15,
-              ),
-              Card(
-               color: const Color(0xFFF0F4FF),
-                child: Padding(
-                  padding: const EdgeInsets.all(18),
-                  child: Column(
+                  )
+                ),*/
+                Container(
+                  constraints: BoxConstraints(
+                    minHeight: height * 0.29, // Minimum height
+                    maxWidth: width * 0.9, // Max width stays same
+                  ),
+                  padding: EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Color(0xFFF0F4FF),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: Colors.indigo.shade700),
+                  ),
+                  child: IntrinsicHeight(
+                    // Makes all rows equal height
+                    child: Column(
+                      mainAxisSize:
+                          MainAxisSize.min, // Allows container to grow
                       children: [
-                  Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 6),
-                    child: _details(
-                      width: width,
-                      height: height,
-                      fieldName: 'Location',
-                      fielValue: Location != null ? Location! : '-',
-                       )),
-                     ]
+                        _buildExpandableRow('Location', Location),
+                        Divider(color: Colors.black54),
+                        _buildExpandableRow('Zone', Zone),
+                        Divider(color: Colors.black54),
+                        _buildExpandableRow('District', District),
+                        Divider(color: Colors.black54),
+                        _buildExpandableRow('State', State),
+                      ],
+                    ),
                   ),
                 )
-              ),
-              /*Container(
-                height: height * 0.35,
-                width: width * 0.9,
-                decoration: BoxDecoration(
-                  // color: Colors.indigo.shade200,
-                  color: const Color(0xFFF0F4FF),
-                  borderRadius: BorderRadius.circular(12),
-                  // border: Border.fromBorderSide(BorderSide(color: Colors.indigo.withOpacity(0.3))),
-                  border: Border.fromBorderSide(
-                      BorderSide(color: Colors.indigo.shade700)),
-                  *//*boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5), // Shadow color
-                      spreadRadius: 2,                     // Spread radius
-                      blurRadius: 7,
-                      offset: const Offset(0, 4),
-                    ),
-                  ],*//*
-
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(18),
-                  child: Column(
-                    children: [
-                      Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 6),
-                          child: _details(
-                            width: width,
-                            height: height,
-                            fieldName: 'Location',
-                            fielValue: Location != null ? Location! : 'Pune',
-                          )),
-                      const Divider(color: Colors.black),
-                      Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 6),
-                          child: _details(
-                            width: width,
-                            height: height,
-                            fieldName: 'Private Car',
-                            fielValue: 'A',
-                          )),
-                      const Divider(color: Colors.black),
-                      Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 6),
-                          child: _details(
-                            width: width,
-                            height: height,
-                            fieldName: 'Two Wheeler',
-                            fielValue: 'A',
-                          )),
-                      const Divider(color: Colors.black),
-                      Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 6),
-                          child: _details(
-                            width: width,
-                            height: height,
-                            fieldName: 'Taxi',
-                            fielValue: 'A',
-                          )),
-                      const Divider(color: Colors.black),
-                      Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 6),
-                          child: _details(
-                            width: width,
-                            height: height,
-                            fieldName: 'Commercial vehicle',
-                            fielValue: 'C',
-                          )),
-                    ],
-                  ),
-                ),
-              )*/
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -245,4 +221,41 @@ class _details extends StatelessWidget {
       ],
     );
   }
+}
+// New helper widget (place outside build method)
+Widget _buildExpandableRow(String label, String? value) {
+  return Padding(
+    padding: EdgeInsets.symmetric(vertical: 8),
+    child: Row(
+      children: [
+        // Column 1: Labels (left-aligned)
+        Container(
+          width: 130,  // Fixed width for labels
+          alignment: Alignment.centerLeft,
+          child: Text(
+            label,
+            style: GoogleFonts.poppins(
+              fontWeight: FontWeight.w500,
+              color: Colors.indigo.shade800,
+            ),
+          ),
+        ),
+        // Column 2: Values (left-aligned but starts after labels)
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.only(left: 16),  // Space between columns
+            child: Text(
+              value ?? '-',
+              style: GoogleFonts.poppins(
+                fontWeight: FontWeight.w400,
+                color: Colors.grey.shade800,
+              ),
+              textAlign: TextAlign.left,  // Left-align within the column
+              softWrap: true,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
 }

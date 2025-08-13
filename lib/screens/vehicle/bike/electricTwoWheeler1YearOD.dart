@@ -99,104 +99,108 @@ class _ElectricTwoWheeler1YODFormScreenState
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-    // Fetch form inputs
-    double idv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;//Current IDV
-    String yearOfManufacture = _controllers['yearOfManufacture']!.text;
-    String zone = _selectedZone ?? "A";
-    double kwCapacity = double.tryParse(_controllers['kwCapacity']!.text) ?? 0.0;
-    double discountOnOd =
-        double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-    double accessoriesValue =
-        double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
-    double zeroDepreciation =
-        double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
-    double paOwnerDriver =
-        double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
-    double paUnnamedPassenger =
-        double.tryParse(_controllers['paUnnamedPassenger']!.text) ?? 0.0;
-    double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
-    double llToPaidDriver =
-        double.tryParse(_selectedLLPaidDriver ?? "0") ?? 0.0;
-    String selectedNCBText = _selectedNoClaimBonus ?? "0%";
-    double ncbPercentage =
-        double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
+      // Fetch form inputs
+      double idv = double.tryParse(_controllers['currentIdv']!.text) ??
+          0.0; //Current IDV
+      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
+      String zone = _selectedZone ?? "A";
+      double kwCapacity =
+          double.tryParse(_controllers['kwCapacity']!.text) ?? 0.0;
+      double discountOnOd =
+          double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+      double accessoriesValue =
+          double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
+      double zeroDepreciation =
+          double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
+      double paOwnerDriver =
+          double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      double paUnnamedPassenger =
+          double.tryParse(_controllers['paUnnamedPassenger']!.text) ?? 0.0;
+      double otherCess =
+          double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+      double llToPaidDriver =
+          double.tryParse(_selectedLLPaidDriver ?? "0") ?? 0.0;
+      String selectedNCBText = _selectedNoClaimBonus ?? "0%";
+      double ncbPercentage =
+          double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
 
-    // Get base rate from function
-    double vehicleBasicRate = _getElectricTwoWheelerOdRate(kwCapacity);
+      // Get base rate from function
+      double vehicleBasicRate = _getElectricTwoWheelerOdRate(kwCapacity);
 
-    // OD Calculations
-    double basicForVehicle = (idv * vehicleBasicRate) / 100;
-    double discountAmount = (basicForVehicle * discountOnOd) / 100;
-    double basicOdAfterDiscount = basicForVehicle - discountAmount;
-    double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
-    double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
-    double netOdPremium = totalBasicPremium - ncbAmount;
-    double totalA = netOdPremium + zeroDepreciation;
+      // OD Calculations
+      double basicForVehicle = (idv * vehicleBasicRate) / 100;
+      double discountAmount = (basicForVehicle * discountOnOd) / 100;
+      double basicOdAfterDiscount = basicForVehicle - discountAmount;
+      double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
+      double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
+      double netOdPremium = totalBasicPremium - ncbAmount;
+      double totalA = netOdPremium + zeroDepreciation;
 
-    // TP Section
-    double liabilityPremiumTP = 00.00;
-    double totalB = liabilityPremiumTP +
-        paOwnerDriver +
-        llToPaidDriver +
-        paUnnamedPassenger;
+      // TP Section
+      double liabilityPremiumTP = 00.00;
+      double totalB = liabilityPremiumTP +
+          paOwnerDriver +
+          llToPaidDriver +
+          paUnnamedPassenger;
 
-    // Total Premium (C)
-    double totalAB = totalA + totalB;
-    double gst = totalAB * 0.18;
-    double otherCessAmt = (otherCess * totalAB) / 100;
-    double finalPremium = totalAB + gst + otherCessAmt;
+      // Total Premium (C)
+      double totalAB = totalA + totalB;
+      double gst = totalAB * 0.18;
+      double otherCessAmt = (otherCess * totalAB) / 100;
+      double finalPremium = totalAB + gst + otherCessAmt;
 
-    // Result Map
-    Map<String, String> resultMap = {
-      // Basic Details
-      "IDV": idv.toStringAsFixed(2),
-      "Year of Manufacture": yearOfManufacture.toString(),
-      "Zone": zone,
-      "Kilowatt": kwCapacity.toString(),
+      // Result Map
+      Map<String, String> resultMap = {
+        // Basic Details
+        "IDV": idv.toStringAsFixed(2),
+        "Year of Manufacture": yearOfManufacture.toString(),
+        "Zone": zone,
+        "Kilowatt": kwCapacity.toString(),
 
-      // A - Own Damage Premium Package
-      "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
-      "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-      "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-      "Basic OD Premium after discount":
-          basicOdAfterDiscount.toStringAsFixed(2),
-      "Accessories Value": accessoriesValue.toStringAsFixed(2),
-      "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
-      "No Claim Bonus": ncbAmount.toStringAsFixed(2),
-      "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
-      "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
-      "Total A": totalA.toStringAsFixed(2),
+        // A - Own Damage Premium Package
+        "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
+        "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
+        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Basic OD Premium after discount":
+            basicOdAfterDiscount.toStringAsFixed(2),
+        "Accessories Value": accessoriesValue.toStringAsFixed(2),
+        "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
+        "No Claim Bonus": ncbAmount.toStringAsFixed(2),
+        "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
+        "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
+        "Total A": totalA.toStringAsFixed(2),
 
-      // B - Liability Premium
-      "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-      "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-      "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
-      "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
-      "Total B": totalB.toStringAsFixed(2),
+        // B - Liability Premium
+        "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
+        "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
+        "Total B": totalB.toStringAsFixed(2),
 
-      // C - Total Premium
-      "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
-      "GST @ 18%": gst.toStringAsFixed(2),
-      "Other CESS": otherCessAmt.toStringAsFixed(2).trim(),
+        // C - Total Premium
+        "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
+        "GST @ 18%": gst.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2).trim(),
 
-      // Final Premium
-      "Final Premium": finalPremium.toStringAsFixed(2),
-    };
+        // Final Premium
+        "Final Premium": finalPremium.toStringAsFixed(2),
+      };
 
-    // Pass data to result screen
-    InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Electric Two Wheeler 1Y OD",
-      fieldData: resultMap,
-      totalPremium: finalPremium,
-    );
+      // Pass data to result screen
+      InsuranceResultData resultData = InsuranceResultData(
+        vehicleType: "Electric Two Wheeler 1Y OD",
+        fieldData: resultMap,
+        totalPremium: finalPremium,
+      );
 
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => BikeInsuranceResultScreen(resultData: resultData),
-      ),
-    );
-  }
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              BikeInsuranceResultScreen(resultData: resultData),
+        ),
+      );
+    }
   }
 
   void _resetForm() {
@@ -271,8 +275,6 @@ class _ElectricTwoWheeler1YODFormScreenState
                 ),
                 _buildReadOnlyField(
                     'currentIdv', 'Current IDV (₹)'), // Read-only field
-                _buildTextField(
-                    'currentIdv', 'Current IDV (₹)', 'Enter Current IDV'),
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),
                 _buildTextField(
@@ -327,8 +329,14 @@ class _ElectricTwoWheeler1YODFormScreenState
 
   Widget _buildTextField(String key, String label, String placeholder) {
     // Optional dropdown fields
-  const optionalFields=['accessoriesValue',
-  ];
+    const optionalFields = [
+      'accessoriesValue',
+      'zeroDepreciation',
+      'paOwnerDriver',
+      'paUnnamedPassenger',
+      'otherCess',
+      'discountOnOd'
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -339,40 +347,44 @@ class _ElectricTwoWheeler1YODFormScreenState
           ),
           Expanded(
             child: TextFormField(
-              onChanged: (val) {
-                if (key == 'idv') _updateCurrentIdv();
-              },
-              controller: _controllers[key],
-              decoration: InputDecoration(
-                border: const OutlineInputBorder(),
-                hintText: placeholder,
-              ),
-              keyboardType: TextInputType.number,
-              inputFormatters: [
-                FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
-              ],
-              validator: (value) {
-              // Skip validation if this field is optional
-              if (optionalFields.contains(key)) return null;
+                onChanged: (val) {
+                  if (key == 'idv') _updateCurrentIdv();
+                },
+                controller: _controllers[key],
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  hintText: placeholder,
+                ),
+                keyboardType: TextInputType.number,
+                inputFormatters: [
+                  FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
+                ],
+                validator: (value) {
+                  // Skip validation if this field is optional
+                  if (optionalFields.contains(key)) return null;
 
-              // Required validation
-              if (value == null || value.trim().isEmpty) {
-                return 'Enter $label';
-              }}
-            ),
+                  // Required validation
+                  if (value == null || value.trim().isEmpty) {
+                    return 'Enter $label';
+                  }
+                  return null;
+                }),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildDropdownField(String label, List<String> options,
-      String? selected, Function(String?) onChanged,) {
-        String? keyName; // Optional: pass a key for validation skip
-        const optionalDropdowns = [
-    'LL to Paid Driver', // matches label or keyName
-  ];
-  
+  Widget _buildDropdownField(
+    String label,
+    List<String> options,
+    String? selected,
+    Function(String?) onChanged,
+  ) {
+    String? keyName; // Optional: pass a key for validation skip
+    const optionalDropdowns = [
+      'LL to Paid Driver', 'No Claim Bonus (%)' // matches label or keyName
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -391,17 +403,17 @@ class _ElectricTwoWheeler1YODFormScreenState
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
-              // Skip validation if optional
-              if (optionalDropdowns.contains(label) ||
-                  (keyName!= null && optionalDropdowns.contains(keyName))) {
-                return null;
-              }
+                // Skip validation if optional
+                if (optionalDropdowns.contains(label) ||
+                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                  return null;
+                }
 
-              if (value == null) {
-                return 'Select $label';
-              }
-              return null;
-            },
+                if (value == null) {
+                  return 'Select $label';
+                }
+                return null;
+              },
               hint: label == 'Zone'
                   ? const Text('Select Zone')
                   : const Text('Select Option'),
@@ -422,4 +434,3 @@ double _getElectricTwoWheelerOdRate(double kwCapacity) {
     return 2.10;
   }
 }
-

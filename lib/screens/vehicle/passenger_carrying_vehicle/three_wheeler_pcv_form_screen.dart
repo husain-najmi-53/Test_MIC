@@ -2,12 +2,13 @@
 // import 'package:flutter/services.dart';
 // import 'package:motor_insurance_app/models/result_data.dart';
 // import 'package:motor_insurance_app/screens/vehicle/passenger_carrying_vehicle/pcv_result_screen.dart';
-// class ThreeWheelerPCVFormScreen 
+// class ThreeWheelerPCVFormScreen
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:motor_insurance_app/models/result_data.dart';
 import 'package:motor_insurance_app/screens/vehicle/passenger_carrying_vehicle/pcv_result_screen.dart';
+
 class ThreeWheelerPCVFormScreen extends StatefulWidget {
   const ThreeWheelerPCVFormScreen({super.key});
 
@@ -16,8 +17,7 @@ class ThreeWheelerPCVFormScreen extends StatefulWidget {
       _ThreeWheelerPCVFormScreenState();
 }
 
-class _ThreeWheelerPCVFormScreenState
-    extends State<ThreeWheelerPCVFormScreen> {
+class _ThreeWheelerPCVFormScreenState extends State<ThreeWheelerPCVFormScreen> {
   final _formKey = GlobalKey<FormState>();
   final Map<String, TextEditingController> _controllers = {
     'idv': TextEditingController(),
@@ -54,7 +54,11 @@ class _ThreeWheelerPCVFormScreenState
     '25%',
     '30%'
   ];
-  final List<String> _ageOptions = ['Upto 5 Years', '5 to 7 Years', 'Above 7 Years'];
+  final List<String> _ageOptions = [
+    'Upto 5 Years',
+    '5 to 7 Years',
+    'Above 7 Years'
+  ];
 
   @override
   void dispose() {
@@ -64,7 +68,7 @@ class _ThreeWheelerPCVFormScreenState
     super.dispose();
   }
 
-   Widget _buildReadOnlyField(String key, String label) {
+  Widget _buildReadOnlyField(String key, String label) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -100,160 +104,169 @@ class _ThreeWheelerPCVFormScreenState
     _controllers['currentIdv']!.text = currentIdv.toStringAsFixed(2);
   }
 
-
-
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-    //   return;
-    // }
+      //   return;
+      // }
 
-    double lastYearIdv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
-    String ageOfVehicle = _selectedAge ?? 'Upto 5 Years'; // dropdown value
-    String yearOfManufacture = _controllers['yearOfManufacture']!.text;
-    String zone = _selectedZone ?? "A";
-    int numberOfPassengers =
-        int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
-    double discountOnOd =
-        double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-    double electronicAccessories =
-        double.tryParse(_controllers['electronicAccessories']!.text) ?? 0.0;
-    double externalCngLpgKit =
-        double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
-    double paOwnerDriver =
-        double.tryParse(_controllers['paOwnerDriver']!.text) ?? 150.0; // default 150 if blank
-    double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+      double lastYearIdv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+      String ageOfVehicle = _selectedAge ?? 'Upto 5 Years'; // dropdown value
+      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
+      String zone = _selectedZone ?? "A";
+      int numberOfPassengers =
+          int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
+      double discountOnOd =
+          double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+      double electronicAccessories =
+          double.tryParse(_controllers['electronicAccessories']!.text) ?? 0.0;
+      double externalCngLpgKit =
+          double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
+      double paOwnerDriver =
+          double.tryParse(_controllers['paOwnerDriver']!.text) ??
+              150.0; // default 150 if blank
+      double otherCess =
+          double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
 
-    String selectedImt23 = _selectedImt23 ?? "No";
-    String cngLpgKit = _selectedCngLpgKit ?? "No";
-    double selectedNcb =
-        _selectedNcb != null ? double.tryParse(_selectedNcb!) ?? 0.0 : 0.0;
-    String llPaidDriver = _selectedLlPaidDriver ?? "0";
-    String restrictedTPPD = _selectedRestrictedTPPD ?? "No";
+      String selectedImt23 = _selectedImt23 ?? "No";
+      String cngLpgKit = _selectedCngLpgKit ?? "No";
+      double selectedNcb =
+          _selectedNcb != null ? double.tryParse(_selectedNcb!) ?? 0.0 : 0.0;
+      String llPaidDriver = _selectedLlPaidDriver ?? "0";
+      String restrictedTPPD = _selectedRestrictedTPPD ?? "No";
 
-    // Calculate current IDV based on depreciation
-    double depreciationPercent = _selectedDepreciation != null
-        ? double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0
-        : 0.0;
-    double currentIdv = lastYearIdv * (1 - depreciationPercent / 100);
+      // Calculate current IDV based on depreciation
+      double depreciationPercent = _selectedDepreciation != null
+          ? double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0
+          : 0.0;
+      double currentIdv = lastYearIdv * (1 - depreciationPercent / 100);
 
-    // Helper to get base OD rate
-    double vehicleBasicRate = _getOdRate(zone, ageOfVehicle);
+      // Helper to get base OD rate
+      double vehicleBasicRate = _getOdRate(zone, ageOfVehicle);
 
-    // 1) Base OD premium on current IDV
-    double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
+      // 1) Base OD premium on current IDV
+      double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
 
-    // 2) IMT 23 Loading
-    double imt23Loading = 0.0;
-    if (selectedImt23 == 'Yes') {
-      // 2% on electrical accessories value
-      imt23Loading = electronicAccessories * 0.02;
+      // 2) IMT 23 Loading
+      double imt23Loading = 0.0;
+      if (selectedImt23 == 'Yes') {
+        // 2% on electrical accessories value
+        imt23Loading = electronicAccessories * 0.02;
+      }
+
+      // 3) CNG/LPG factory fitted kit loading
+      double cngKitLoading = 0.0;
+      if (cngLpgKit == 'Yes') {
+        cngKitLoading = currentIdv * 0.10; // 10% of current IDV
+      }
+
+      // 4) CNG/LPG external kit loading
+      double cngExternalLoading =
+          externalCngLpgKit * 0.02; // 2% of external kit value
+
+      // 5) Sum OD before discounts
+      double totalOdBeforeDiscount =
+          basicForVehicle + imt23Loading + cngKitLoading + cngExternalLoading;
+
+      // 6) Apply discount on OD premium
+      double discountAmount = (totalOdBeforeDiscount * discountOnOd) / 100;
+      double odAfterDiscount = totalOdBeforeDiscount - discountAmount;
+
+      // 7) Apply No Claim Bonus (NCB) on OD premium after discount
+      double ncbAmount = (odAfterDiscount * selectedNcb) / 100;
+      double netOdPremium = odAfterDiscount - ncbAmount;
+
+      // TP Premium calculation (use existing function)
+      double baseTpPremium = _getTpRate(
+        passengerCount: numberOfPassengers,
+        usePerPassenger: false,
+      );
+
+      // Apply restricted TPPD discount if yes (20%)
+      double tpPremium =
+          restrictedTPPD == 'Yes' ? baseTpPremium * 0.80 : baseTpPremium;
+
+      // PA to owner driver and LL to paid driver fixed premium
+      double llPaidDriverAmount = double.tryParse(llPaidDriver) ?? 0.0;
+      if (paOwnerDriver == 0.0)
+        paOwnerDriver = 150.0; // default if user left blank
+
+      double totalLiabilityPremium =
+          tpPremium + paOwnerDriver + llPaidDriverAmount;
+
+      // Total premium before taxes
+      double totalPremiumBeforeTaxes = netOdPremium + totalLiabilityPremium;
+
+      // GST 18%
+      double gst = totalPremiumBeforeTaxes * 0.18;
+
+      // Other CESS (%)
+      double otherCessAmt = (otherCess * totalPremiumBeforeTaxes) / 100;
+
+      // Final premium payable
+      double finalPremium = totalPremiumBeforeTaxes + gst + otherCessAmt;
+
+      // Result map for display
+      Map<String, String> resultMap = {
+        // Basic Details
+        "IDV": currentIdv.toStringAsFixed(2),
+        // "Depreciation %": depreciationPercent.toStringAsFixed(2),
+        // "Current IDV": currentIdv.toStringAsFixed(2),
+        "Year of Manufacture": yearOfManufacture,
+        "Zone": zone,
+        "Age of Vehicle": ageOfVehicle,
+        'No. of Passengers': numberOfPassengers.toString(),
+
+        // A - Own Damage Premium Package
+        "Base OD Rate (%)": vehicleBasicRate.toStringAsFixed(2),
+        "Basic OD Premium": basicForVehicle.toStringAsFixed(2),
+        "IMT 23 Loading": imt23Loading.toStringAsFixed(2),
+        "CNG/LPG Kit Loading": cngKitLoading.toStringAsFixed(2),
+        "External CNG/LPG Kit Loading": cngExternalLoading.toStringAsFixed(2),
+        "Total OD before Discount": totalOdBeforeDiscount.toStringAsFixed(2),
+        "Discount on OD Premium (%)": discountOnOd.toStringAsFixed(2),
+        "Discount Amount": discountAmount.toStringAsFixed(2),
+        "OD after Discount": odAfterDiscount.toStringAsFixed(2),
+        "No Claim Bonus (%)": selectedNcb.toStringAsFixed(2),
+        "NCB Amount": ncbAmount.toStringAsFixed(2),
+        "Net OD Premium": netOdPremium.toStringAsFixed(2),
+
+        // B - Liability Premium
+        "Base TP Premium": baseTpPremium.toStringAsFixed(2),
+        "Restricted TPPD":
+            restrictedTPPD == 'Yes' ? "Yes (20% discount)" : "No",
+        "TP Premium after restriction": tpPremium.toStringAsFixed(2),
+        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
+        "Total Liability Premium (TP + PA + LL)":
+            totalLiabilityPremium.toStringAsFixed(2),
+
+        // C - Total Premium and Taxes
+        "Total Premium before Taxes":
+            totalPremiumBeforeTaxes.toStringAsFixed(2),
+        "GST @ 18%": gst.toStringAsFixed(2),
+        "Other CESS (%)": otherCess.toStringAsFixed(2),
+        "Other CESS Amount": otherCessAmt.toStringAsFixed(2),
+
+        // Final Premium
+        "Final Premium Payable": finalPremium.toStringAsFixed(2),
+      };
+
+      // Pass data to result screen
+      InsuranceResultData resultData = InsuranceResultData(
+        vehicleType: "Three Wheeler PCV (More Than 6 Upto 17 passenger)",
+        fieldData: resultMap,
+        totalPremium: finalPremium,
+      );
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              PcvInsuranceResultScreen(resultData: resultData),
+        ),
+      );
     }
-
-    // 3) CNG/LPG factory fitted kit loading
-    double cngKitLoading = 0.0;
-    if (cngLpgKit == 'Yes') {
-      cngKitLoading = currentIdv * 0.10; // 10% of current IDV
-    }
-
-    // 4) CNG/LPG external kit loading
-    double cngExternalLoading = externalCngLpgKit * 0.02; // 2% of external kit value
-
-    // 5) Sum OD before discounts
-    double totalOdBeforeDiscount =
-        basicForVehicle + imt23Loading + cngKitLoading + cngExternalLoading;
-
-    // 6) Apply discount on OD premium
-    double discountAmount = (totalOdBeforeDiscount * discountOnOd) / 100;
-    double odAfterDiscount = totalOdBeforeDiscount - discountAmount;
-
-    // 7) Apply No Claim Bonus (NCB) on OD premium after discount
-    double ncbAmount = (odAfterDiscount * selectedNcb) / 100;
-    double netOdPremium = odAfterDiscount - ncbAmount;
-
-    // TP Premium calculation (use existing function)
-    double baseTpPremium = _getTpRate(
-      passengerCount: numberOfPassengers,
-      usePerPassenger: false,
-    );
-
-    // Apply restricted TPPD discount if yes (20%)
-    double tpPremium = restrictedTPPD == 'Yes' ? baseTpPremium * 0.80 : baseTpPremium;
-
-    // PA to owner driver and LL to paid driver fixed premium
-    double llPaidDriverAmount = double.tryParse(llPaidDriver) ?? 0.0;
-    if (paOwnerDriver == 0.0) paOwnerDriver = 150.0; // default if user left blank
-
-    double totalLiabilityPremium = tpPremium + paOwnerDriver + llPaidDriverAmount;
-
-    // Total premium before taxes
-    double totalPremiumBeforeTaxes = netOdPremium + totalLiabilityPremium;
-
-    // GST 18%
-    double gst = totalPremiumBeforeTaxes * 0.18;
-
-    // Other CESS (%)
-    double otherCessAmt = (otherCess * totalPremiumBeforeTaxes) / 100;
-
-    // Final premium payable
-    double finalPremium = totalPremiumBeforeTaxes + gst + otherCessAmt;
-
-    // Result map for display
-    Map<String, String> resultMap = {
-      // Basic Details
-      "IDV": currentIdv.toStringAsFixed(2),
-      // "Depreciation %": depreciationPercent.toStringAsFixed(2),
-      // "Current IDV": currentIdv.toStringAsFixed(2),
-      "Year of Manufacture": yearOfManufacture,
-      "Zone": zone,
-      "Age of Vehicle": ageOfVehicle,
-      'No. of Passengers': numberOfPassengers.toString(),
-
-      // A - Own Damage Premium Package
-      "Base OD Rate (%)": vehicleBasicRate.toStringAsFixed(2),
-      "Basic OD Premium": basicForVehicle.toStringAsFixed(2),
-      "IMT 23 Loading": imt23Loading.toStringAsFixed(2),
-      "CNG/LPG Kit Loading": cngKitLoading.toStringAsFixed(2),
-      "External CNG/LPG Kit Loading": cngExternalLoading.toStringAsFixed(2),
-      "Total OD before Discount": totalOdBeforeDiscount.toStringAsFixed(2),
-      "Discount on OD Premium (%)": discountOnOd.toStringAsFixed(2),
-      "Discount Amount": discountAmount.toStringAsFixed(2),
-      "OD after Discount": odAfterDiscount.toStringAsFixed(2),
-      "No Claim Bonus (%)": selectedNcb.toStringAsFixed(2),
-      "NCB Amount": ncbAmount.toStringAsFixed(2),
-      "Net OD Premium": netOdPremium.toStringAsFixed(2),
-
-      // B - Liability Premium
-      "Base TP Premium": baseTpPremium.toStringAsFixed(2),
-      "Restricted TPPD": restrictedTPPD == 'Yes' ? "Yes (20% discount)" : "No",
-      "TP Premium after restriction": tpPremium.toStringAsFixed(2),
-      "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-      "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
-      "Total Liability Premium (TP + PA + LL)": totalLiabilityPremium.toStringAsFixed(2),
-
-      // C - Total Premium and Taxes
-      "Total Premium before Taxes": totalPremiumBeforeTaxes.toStringAsFixed(2),
-      "GST @ 18%": gst.toStringAsFixed(2),
-      "Other CESS (%)": otherCess.toStringAsFixed(2),
-      "Other CESS Amount": otherCessAmt.toStringAsFixed(2),
-
-      // Final Premium
-      "Final Premium Payable": finalPremium.toStringAsFixed(2),
-    };
-
-    // Pass data to result screen
-    InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Three Wheeler PCV (More Than 6 Upto 17 passenger)",
-      fieldData: resultMap,
-      totalPremium: finalPremium,
-    );
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => PcvInsuranceResultScreen(resultData: resultData),
-      ),
-    );
-  }}
+  }
 
   void _resetForm() {
     _formKey.currentState!.reset();
@@ -313,15 +326,15 @@ class _ThreeWheelerPCVFormScreenState
               children: [
                 _buildTextField('idv', 'IDV', 'Enter IDV',
                     onChanged: (val) => _updateCurrentIdv()),
-                _buildDropdownField('Depreciation', _depreciationOptions,
-                    _selectedDepreciation, (val) {
+                _buildDropdownField(
+                    'Depreciation', _depreciationOptions, _selectedDepreciation,
+                    (val) {
                   setState(() {
                     _selectedDepreciation = val;
                     _updateCurrentIdv();
                   });
                 }),
-                _buildReadOnlyField(
-                    'currentIdv', 'Current IDV (₹)'),
+                _buildReadOnlyField('currentIdv', 'Current IDV (₹)'),
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),
                 _buildTextField(
@@ -382,52 +395,92 @@ class _ThreeWheelerPCVFormScreenState
 
   Widget _buildTextField(String key, String label, String placeholder,
       {bool enabled = true, Function(String)? onChanged}) {
+    const optionalFields = [
+      'electronicAccessories',
+      'zeroDepreciation',
+      'paOwnerDriver',
+      'paUnnamedPassenger',
+      'otherCess',
+      'discountOnOd',
+      'externalCngLpgKit',
+      'rsaAddon'
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
           SizedBox(
-              width: 180, child: Text(label, style: const TextStyle(fontSize: 16))),
+              width: 180,
+              child: Text(label, style: const TextStyle(fontSize: 16))),
           Expanded(
             child: TextFormField(
-              controller: _controllers[key],
-              enabled: enabled,
-              decoration: InputDecoration(
-                border: const OutlineInputBorder(),
-                hintText: placeholder,
-              ),
-              keyboardType: TextInputType.number,
-              inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))],
-              validator: (value) =>
-                  (value == null || value.trim().isEmpty) && enabled
-                      ? 'Enter $label'
-                      : null,
-              // onChanged: onChanged,
-            ),
+                controller: _controllers[key],
+                enabled: enabled,
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  hintText: placeholder,
+                ),
+                keyboardType: TextInputType.number,
+                inputFormatters: [
+                  FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
+                ],
+                validator: (value) {
+                  // Skip validation if this field is optional
+                  if (optionalFields.contains(key)) return null;
+
+                  // Required validation
+                  if (value == null || value.trim().isEmpty) {
+                    return 'Enter $label';
+                  }
+                  return null;
+                }
+                // onChanged: onChanged,
+                ),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildDropdownField(String label, List<String> options, String? selected,
-      Function(String?) onChanged) {
+  Widget _buildDropdownField(String label, List<String> options,
+      String? selected, Function(String?) onChanged) {
+    String? keyName; // Optional: pass a key for validation skip
+    const optionalDropdowns = [
+      'LL to Paid Driver', 'No Claim Bonus (%)', 'Geographical Extn.',
+      'CNG/LPG Kits', 'IMT 23', 'Restricted TPPD', 'LL to Other Employees',
+      'Anti Theft' // matches label or keyName
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
           SizedBox(
-              width: 180, child: Text(label, style: const TextStyle(fontSize: 16))),
+              width: 180,
+              child: Text(label, style: const TextStyle(fontSize: 16))),
           Expanded(
             child: DropdownButtonFormField<String>(
               value: selected,
               items: options
-                  .map((item) => DropdownMenuItem(value: item, child: Text(item)))
+                  .map((item) =>
+                      DropdownMenuItem(value: item, child: Text(item)))
                   .toList(),
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
-              validator: (value) => value == null ? 'Select $label' : null,
-              hint: label == 'Zone' ? const Text('Select Zone') : const Text('Select Option'),
+              validator: (value) {
+                // Skip validation if optional
+                if (optionalDropdowns.contains(label) ||
+                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                  return null;
+                }
+
+                if (value == null) {
+                  return 'Select $label';
+                }
+                return null;
+              },
+              hint: label == 'Zone'
+                  ? const Text('Select Zone')
+                  : const Text('Select Option'),
             ),
           ),
         ],

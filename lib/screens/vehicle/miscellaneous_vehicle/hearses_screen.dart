@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:motor_insurance_app/models/result_data.dart';
 import 'package:motor_insurance_app/screens/vehicle/miscellaneous_vehicle/misc_result_screen.dart';
+
 class HearsesFormScreen extends StatefulWidget {
   const HearsesFormScreen({super.key});
 
@@ -15,10 +16,10 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
   final Map<String, TextEditingController> _controllers = {
     'idv': TextEditingController(),
     'depreciation': TextEditingController(),
-    'currentIdv': TextEditingController(),                              
-    'yearOfManufacture': TextEditingController(),     
-    'discountOnOd': TextEditingController(),          
-    'loading_on_discount_premium': TextEditingController(), 
+    'currentIdv': TextEditingController(),
+    'yearOfManufacture': TextEditingController(),
+    'discountOnOd': TextEditingController(),
+    'loading_on_discount_premium': TextEditingController(),
     'CNG_LPG_kits_Ex_fitted': TextEditingController(),
     'paOwnerDriver': TextEditingController(),
     'll2Passenger': TextEditingController(),
@@ -35,7 +36,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
   String? _selectedLlEmployeeOther;
   String? _selectedRestrictedTppd;
 
-    final List<String> _depreciationOptions = [
+  final List<String> _depreciationOptions = [
     '0%',
     '5%',
     '10%',
@@ -44,8 +45,12 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
     '25%',
     '30%',
   ];
-  final List<String> _ageOptions = ['Upto 5 Years', '6-10 Years', 'Above 10 Years'];
-  final List<String> _zoneOptions = ['A', 'B'];
+  final List<String> _ageOptions = [
+    'Upto 5 Years',
+    '6-7 Years',
+    'Above 7 Years'
+  ];
+  final List<String> _zoneOptions = ['A', 'B', 'C'];
   final List<String> _cngOptions = ['Yes', 'No'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
   final List<String> _imt23Options = ['Yes', 'No'];
@@ -68,7 +73,6 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
     }
     super.dispose();
   }
-
 
   Widget _buildReadOnlyField(String key, String label) {
     return Padding(
@@ -106,112 +110,161 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
     _controllers['currentIdv']!.text = currentIdv.toStringAsFixed(2);
   }
 
-
-void _submitForm() {
+  void _submitForm() {
     if (_formKey.currentState!.validate()) {
-    // Fetch form inputs
-    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
-    double ageOfVehicle = double.tryParse(_selectedAge ?? '0') ?? 0.0;
-    String yearOfManufacture = _controllers['yearOfManufacture']!.text;
-    String zone = _selectedZone ?? "A";
-    double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
-    double discountOnOd = double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-    double paOwnerDriver = double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
-    double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
-    double ll2Passenger = double.tryParse(_controllers['ll2Passenger']!.text) ?? 0.0;
-    double CNG_LPG_kits_Ex_fitted = double.tryParse(_controllers['CNG_LPG_kits_Ex_fitted']!.text) ?? 0.0;
-    double loadingOnDiscountPremium =double.tryParse(_controllers['loading_on_discount_premium']!.text) ?? 0.0;
-    double llPaidDriver = double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
-    double llEmployeeOther = double.tryParse(_selectedLlEmployeeOther ?? "0") ?? 0.0;
-    double llToPaidDriver =double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
-    double restrictedTppd = double.tryParse(_selectedRestrictedTppd ?? "0")?? 0.0;
-    String selectedNCBText = _selectedNcb ?? "0%";
-    double ncbPercentage = double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
+      // Fetch form inputs
+      // double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+      // double selectIMT = (_selectedImt23?.toLowerCase() == 'yes') ? 15.0 : 0.0;
+      // double ageOfVehicle = double.tryParse(_selectedAge ?? '0') ?? 0.0;
+      // double yearOfManufacture = double.tryParse(_controllers['yearOfManufacture']!.text) ?? 0.0;
+      // String zone = _selectedZone ?? "A";
+      // double selectNCB = double.tryParse((_selectedNcb ?? "0").replaceAll('%', '')) ?? 0.0;
+      // double selectedCNG = double.tryParse(_selectedCNG ?? "0") ?? 0.0;
+      // double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
+      // double discountOnOd = double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+      // double paOwnerDriver = double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      // double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+      // double ll2Passenger = double.tryParse(_controllers['ll2Passenger']!.text) ?? 0.0;
+      // double cngLpgKitsExFitted = double.tryParse(_controllers['CNG_LPG_kits_Ex_fitted']!.text) ?? 0.0;
+      // double loadingOnDiscountPremium =double.tryParse(_controllers['loading_on_discount_premium']!.text) ?? 0.0;
+      // double llEmployeeOther = double.tryParse(_selectedLlEmployeeOther ?? "0") ?? 0.0;
+      // double llToPaidDriver =double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
+      // double restrictedTppd = double.tryParse(_selectedRestrictedTppd ?? "0")?? 0.0;
 
-    // Get base rate from function
-    double vehicleBasicRate =
-        _getOdRate(zone, ageOfVehicle);
+      double selectIMT =
+          _selectedImt23 == 'Yes' ? 15.0 : 0.0; // IMT 23 percentage
+      double ageOfVehicle = double.tryParse(_selectedAge ?? '0') ?? 0;
+      double yearOfManufacture =
+          double.tryParse(_controllers['yearOfManufacture']!.text) ?? 0;
+      String zone = _selectedZone ?? "A";
+      double selectNCB =
+          double.tryParse((_selectedNcb ?? "0").replaceAll('%', '')) ?? 0.0;
+      double selectedCNG = double.tryParse(_selectedCNG ?? "0") ?? 0.0;
+      double currentIdv =
+          double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
+      double discountOnOd =
+          double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+      double paOwnerDriver =
+          double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      double otherCess =
+          double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+      double ll2Passenger =
+          double.tryParse(_controllers['ll2Passenger']!.text) ?? 0.0;
+      double cngLpgKitsExFitted =
+          double.tryParse(_controllers['CNG_LPG_kits_Ex_fitted']!.text) ?? 0.0;
+      double loadingOnDiscountPremium =
+          double.tryParse(_controllers['loading_on_discount_premium']!.text) ??
+              0.0;
+      double llToPaidDriver =
+          double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
+      double llEmployeeOther =
+          double.tryParse(_selectedLlEmployeeOther ?? "0") ?? 0.0;
+      double restrictedTppd = _selectedRestrictedTppd == 'Yes'
+          ? 100.0
+          : 0.0; // Assuming a fixed value for restricted TPPD
 
-    // OD Calculations
-    double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
-    double discountAmount = (basicForVehicle * discountOnOd) / 100;
-    double basicOdPremium = currentIdv * vehicleBasicRate / 100;
-    double discountOdPremium = (basicOdPremium * discountOnOd) / 100;
-    double loadingOdPremium = (basicOdPremium * loadingOnDiscountPremium ) / 100;
-    double odBeforeNcb = (basicOdPremium - discountOdPremium) + loadingOdPremium;
-    double ncbAmount = (odBeforeNcb * ncbPercentage) / 100;
-    double totalA = odBeforeNcb - ncbAmount;
+      // Get base rate from function
+      double vehicleBasicRate = _getOdRate(zone, ageOfVehicle);
 
+      // OD Calculations
+      double cngLpgRate = 4; // change when got IRDA from client
+      double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
+      double cngLpgValue = (cngLpgKitsExFitted * cngLpgRate) /
+          100; //  CNG/LPG kit (Externally Fitted)
+      double basicOdPremium = basicForVehicle +
+          cngLpgValue; // Basic OD Premium (Basic for vehicle + CNG/LPG)
+      // double imt23Value = (basicForVehicle * selectIMT) / 100;      // IMT 23
+      double imt23Value = (basicForVehicle * selectIMT) / 100;
+      double basicOdBeforeDiscount =
+          basicOdPremium + imt23Value; //  Basic OD Before Discount
+      double discountValue = (basicOdBeforeDiscount * discountOnOd) /
+          100; //  Discount on OD Premium
+      double loadingValue = (basicOdBeforeDiscount * loadingOnDiscountPremium) /
+          100; // Loading on OD Premium
+      double basicOdBeforeNcb = basicOdBeforeDiscount -
+          discountValue +
+          loadingValue; // Basic OD Before NCB
+      double ncbValue = (basicOdBeforeNcb * selectNCB) / 100; // NCB
+      double netOdPremium =
+          basicOdBeforeNcb - ncbValue; // Net Own Damage Premium
+      double totalA = netOdPremium; // Total A
 
-    // TP Section
-    double liabilityPremiumTP = _getTpRate();
-    double totalB = liabilityPremiumTP +
-      paOwnerDriver +
-      llPaidDriver+
-      llEmployeeOther+
-      ll2Passenger;
+      // TP Section
+      // double cngLpgRate = 4.0;
+      double cngLpgKit = (cngLpgKitsExFitted * cngLpgRate) / 100;
+      double liabilityPremiumTP = _getTpRate();
+      double totalB = liabilityPremiumTP +
+          restrictedTppd +
+          selectedCNG +
+          cngLpgKit +
+          paOwnerDriver +
+          llToPaidDriver +
+          llEmployeeOther +
+          ll2Passenger;
 
+      // Total Premium (C)
+      double totalAB = totalA + totalB;
+      double gst = totalAB * 0.18;
+      otherCess = (otherCess * totalAB) / 100;
+      double finalPremium = totalAB + gst + otherCess;
 
+      // Result Map
+      Map<String, String> resultMap = {
+        // Basic Details
+        "IDV": currentIdv.toStringAsFixed(2),
+        "Year of Manufacture": yearOfManufacture.toString(),
+        "Zone": zone,
 
-    // Total Premium (C)
-    double totalAB = totalA + totalB;
-    double gst = totalAB * 0.18;
-    otherCess = (otherCess * totalAB) / 100;
-    double finalPremium = totalAB + gst + otherCess;
+        // A - Own Damage Premium Package
+        "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
+        "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
+        "CNG/LPG kit (Externally Fitted)": cngLpgValue.toStringAsFixed(2),
+        "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
+        "IMT23": imt23Value.toString(),
+        // "Basic OD Before Discount": basicOdBeforeDiscount.toStringAsFixed(2),
+        "Discount on OD Premium": discountValue.toStringAsFixed(2),
+        "Loading on OD Premium": loadingValue.toStringAsFixed(2),
+        "Basic OD Before NCB": basicOdBeforeNcb.toStringAsFixed(2),
+        "No Claim Bonus": ncbValue.toStringAsFixed(2),
+        "Net Own Damage Premium [A]": netOdPremium.toStringAsFixed(2),
+        // "Total A": totalA.toStringAsFixed(2),
 
-    // Result Map
-    Map<String, String> resultMap = {
-      // Basic Details
-      "IDV": idv.toStringAsFixed(2),
-      "Year of Manufacture": yearOfManufacture.toString(),
-      "Zone": zone,
+        // B - Liability Premium
+        "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "Restricted TPPD": restrictedTppd.toStringAsFixed(2),
+        "CNG/LPG Kit": cngLpgKit.toString(),
+        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
+        "LL to Employee Other than Paid Driver":
+            llEmployeeOther.toStringAsFixed(2),
+        "LL to Passenger": ll2Passenger.toStringAsFixed(2),
+        "Total B": totalB.toStringAsFixed(2),
 
-      // A - Own Damage Premium Package
-      "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
-      "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-      "CNG/LPG kit (Externally Fitted)": CNG_LPG_kits_Ex_fitted.toStringAsFixed(2),
-      "IMT23": _selectedImt23 ?? 'No',
-      "Basic OD Before Discount": basicOdPremium.toStringAsFixed(2),
-      "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-      "Loading on OD Premium": loadingOdPremium.toStringAsFixed(2),
-      "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
-      "No Claim Bonus": ncbAmount.toStringAsFixed(2),
-      "Net Own Damage Premium": totalA.toStringAsFixed(2),
-      "Total A": totalA.toStringAsFixed(2),
+        // C - Total Premium
+        "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
+        "GST @ 18%": gst.toStringAsFixed(2),
+        "Other CESS": otherCess.toStringAsFixed(2),
 
-      // B - Liability Premium
-      "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-      "Restricted TPPD": restrictedTppd.toStringAsFixed(2),
-      "CNG/LPG Kit": _selectedCNG ?? 'No',
-      "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-      "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
-      "LL to Employee/Other": llEmployeeOther.toStringAsFixed(2),
-      "LL to Passenger":ll2Passenger.toStringAsFixed(2),
-      "Total B": totalB.toStringAsFixed(2),
+        // Final Premium
+        "Final Premium": finalPremium.toStringAsFixed(2),
+      };
 
-      // C - Total Premium
-      "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
-      "GST @ 18%": gst.toStringAsFixed(2),
-      "Other CESS": otherCess.toStringAsFixed(2),
+      // Pass data to result screen
+      InsuranceResultData resultData = InsuranceResultData(
+        vehicleType: "Hearses",
+        fieldData: resultMap,
+        totalPremium: finalPremium,
+      );
 
-      // Final Premium
-      "Final Premium": finalPremium.toStringAsFixed(2),
-    };
-
-    // Pass data to result screen
-    InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Hearses",
-      fieldData: resultMap,
-      totalPremium: finalPremium,
-    );
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => MiscInsuranceResultScreen(resultData: resultData),
-      ),
-    );
-  }}
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              MiscInsuranceResultScreen(resultData: resultData),
+        ),
+      );
+    }
+  }
 
   void _resetForm() {
     _formKey.currentState?.reset();
@@ -268,7 +321,7 @@ void _submitForm() {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _buildTextField('idv', 'IDV (₹)', 'IDV'),        
+                _buildTextField('idv', 'IDV (₹)', 'IDV'),
                 _buildDropdownField(
                   'Depreciation (%)',
                   _depreciationOptions,
@@ -279,32 +332,54 @@ void _submitForm() {
                       _updateCurrentIdv(); // <-- Add this
                     });
                   },
-                ),        
+                ),
                 _buildReadOnlyField(
-                    'currentIdv', 'Current IDV (₹)'), // Read-only field  
+                    'currentIdv', 'Current IDV (₹)'), // Read-only field
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),
-                _buildTextField('yearOfManufacture', 'Year of Manufacture','Year of manufacture'),             
+                _buildTextField('yearOfManufacture', 'Year of Manufacture',
+                    'Year of manufacture'),
                 _buildDropdownField('Zone', _zoneOptions, _selectedZone,
-                    (val) => setState(() => _selectedZone = val)),                                                           
-                _buildTextField('discountOnOd', 'Discount on OD Premium (%)','Discount on OD Premium'),   
-                _buildTextField('loading_on_discount_premium', 'Loading on discount premium (%)','Loading on discount premium'),
+                    (val) => setState(() => _selectedZone = val)),
+                _buildTextField('discountOnOd', 'Discount on OD Premium (%)',
+                    'Discount on OD Premium'),
+                _buildTextField(
+                    'loading_on_discount_premium',
+                    'Loading on discount premium (%)',
+                    'Loading on discount premium'),
                 _buildDropdownField('CNG/LPG kits', _cngOptions, _selectedCNG,
-                    (val) => setState(() => _selectedCNG = val)),                         
-                _buildTextField('CNG_LPG_kits_Ex_fitted', 'CNG/LPG kits (externally fitted)','CNG LPG kits (externally fitted)'), 
+                    (val) => setState(() => _selectedCNG = val)),
+                _buildTextField(
+                    'CNG_LPG_kits_Ex_fitted',
+                    'CNG/LPG kits (externally fitted)',
+                    'CNG LPG kits (externally fitted)'),
                 _buildDropdownField('IMT 23', _imt23Options, _selectedImt23,
                     (val) => setState(() => _selectedImt23 = val)),
-                _buildDropdownField('No Claim Bonus(%)', _ncbOptions, _selectedNcb,
-                    (val) => setState(() => _selectedNcb = val)),                  
-                _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)','PA to Owner Driver'),            
-                _buildDropdownField('LL to Paid Driver', _llPaidDriverOptions, _selectedLlPaidDriver,
-                    (val) => setState(() => _selectedLlPaidDriver = val)),              
-                _buildDropdownField('LL to Employee (Other Than Paid Driver)', _llEmployeeOtherOptions, _selectedLlEmployeeOther,
+                _buildDropdownField('No Claim Bonus(%)', _ncbOptions,
+                    _selectedNcb, (val) => setState(() => _selectedNcb = val)),
+                _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)',
+                    'PA to Owner Driver'),
+                _buildDropdownField(
+                    'LL to Paid Driver',
+                    _llPaidDriverOptions,
+                    _selectedLlPaidDriver,
+                    (val) => setState(() => _selectedLlPaidDriver = val)),
+                _buildDropdownField(
+                    'LL to Employee (Other Than Paid Driver)',
+                    _llEmployeeOtherOptions,
+                    _selectedLlEmployeeOther,
                     (val) => setState(() => _selectedLlEmployeeOther = val)),
-                _buildTextField('ll2Passenger', 'LL to passenger (Number of passenger)', 'LL to passenger (Number of passenger)'),
-                 _buildDropdownField('Restrcited TPPD', _restrictedTppdOptions, _selectedRestrictedTppd,
+                _buildTextField(
+                    'll2Passenger',
+                    'LL to passenger (Number of passenger)',
+                    'LL to passenger (Number of passenger)'),
+                _buildDropdownField(
+                    'Restrcited TPPD',
+                    _restrictedTppdOptions,
+                    _selectedRestrictedTppd,
                     (val) => setState(() => _selectedRestrictedTppd = val)),
-                _buildTextField('otherCess', 'Other Cess (%)', 'Other Cess (%)'),
+                _buildTextField(
+                    'otherCess', 'Other Cess (%)', 'Other Cess (%)'),
                 // const SizedBox(height: 80),
               ],
             ),
@@ -318,51 +393,101 @@ void _submitForm() {
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.indigo.shade700,
             padding: const EdgeInsets.symmetric(vertical: 16),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           ),
-          child: const Text('Calculate', style: TextStyle(color: Colors.white, fontSize: 18)),
+          child: const Text('Calculate',
+              style: TextStyle(color: Colors.white, fontSize: 18)),
         ),
       ),
     );
   }
 
   Widget _buildTextField(String key, String label, String placeholder) {
+    // Optional dropdown fields
+    const optionalFields = [
+      'otherCess',
+      'paOwnerDriver',
+      'CNG_LPG_kits_Ex_fitted',
+      'loading_on_discount_premium',
+      'discountOnOd',
+      'll2Passenger'
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
-          SizedBox(width: 180, child: Text(label, style: const TextStyle(fontSize: 16))),
+          SizedBox(
+              width: 180,
+              child: Text(label, style: const TextStyle(fontSize: 16))),
           Expanded(
             child: TextFormField(
-              controller: _controllers[key],
-              decoration: InputDecoration(
-                border: const OutlineInputBorder(),
-                hintText: placeholder,
-              ),
-              keyboardType: TextInputType.number,
-              inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))],
-              validator: (value) => value == null || value.trim().isEmpty ? 'Enter $label' : null,
-            ),
+                onChanged: (val) {
+                  if (key == 'idv') _updateCurrentIdv();
+                },
+                controller: _controllers[key],
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  hintText: placeholder,
+                ),
+                keyboardType: TextInputType.number,
+                inputFormatters: [
+                  FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
+                ],
+                validator: (value) {
+                  // Skip validation if this field is optional
+                  if (optionalFields.contains(key)) return null;
+
+                  // Required validation
+                  if (value == null || value.trim().isEmpty) {
+                    return 'Enter $label';
+                  }
+                }),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildDropdownField(
-      String label, List<String> options, String? selected, Function(String?) onChanged) {
+  Widget _buildDropdownField(String label, List<String> options,
+      String? selected, Function(String?) onChanged) {
+    String? keyName; // Optional: pass a key for validation skip
+    const optionalDropdowns = [
+      'Restrcited TPPD',
+      'No Claim Bonus(%)',
+      'IMT 23',
+      'CNG/LPG kits',
+      'LL to Paid Driver',
+      'LL to Employee (Other Than Paid Driver)', // matches label or keyName
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
-          SizedBox(width: 180, child: Text(label, style: const TextStyle(fontSize: 16))),
+          SizedBox(
+              width: 180,
+              child: Text(label, style: const TextStyle(fontSize: 16))),
           Expanded(
             child: DropdownButtonFormField<String>(
               value: selected,
-              items: options.map((item) => DropdownMenuItem(value: item, child: Text(item))).toList(),
+              items: options
+                  .map((item) =>
+                      DropdownMenuItem(value: item, child: Text(item)))
+                  .toList(),
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
-              validator: (value) => value == null ? 'Select $label' : null,
+              validator: (value) {
+                // Skip validation if optional
+                if (optionalDropdowns.contains(label) ||
+                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                  return null;
+                }
+
+                if (value == null) {
+                  return 'Select $label';
+                }
+                return null;
+              },
               hint: label == 'Zone'
                   ? const Text('Select Zone')
                   : const Text('Select Option'),
@@ -374,38 +499,39 @@ void _submitForm() {
   }
 }
 
-
 double _getOdRate(String zone, double age) {
   // These rates are for demonstration purposes, based on typical industry standards.
   // You should verify and use the actual rates from your insurance provider.
-  if (zone == 'A') { // Metropolitan areas like Delhi, Mumbai
+  if (zone == 'A') {
+    // Metropolitan areas like Delhi, Mumbai
     if (age <= 5) {
-      return 1.208; 
+      return 1.208;
     } else if (age <= 7) {
-      return 1.238; 
+      return 1.238;
     } else {
       return 1.268; // (Above 7 yrs)
     }
-  } else if (zone == 'B') { // Rest of India
+  } else if (zone == 'B') {
+    // Rest of India
     if (age <= 5) {
       return 1.202;
     } else if (age <= 7) {
-      return 1.232; 
+      return 1.232;
     } else {
       return 1.262; // (Above 7 yrs)
-    } 
-  }else if (zone == 'C') { // Rural areas
-      if (age <= 5) {
-        return 1.190;
-      } else if (age <= 7) {
-        return 1.220;
-      } else {
-        return 1.250; // (Above 7 yrs)
-      }
     }
+  } else if (zone == 'C') {
+    // Rural areas
+    if (age <= 5) {
+      return 1.190;
+    } else if (age <= 7) {
+      return 1.220;
+    } else {
+      return 1.250; // (Above 7 yrs)
+    }
+  }
   return 2.5; // Safe fallback rate
 }
-
 
 double _getTpRate() {
   // As per IRDAI, Hearses fall under the "Public Service Vehicles" category

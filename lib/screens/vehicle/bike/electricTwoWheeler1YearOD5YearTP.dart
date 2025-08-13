@@ -323,8 +323,14 @@ class _ElectricTwoWheeler1YOD5YTPFormScreenState
 
   Widget _buildTextField(String key, String label, String placeholder) {
     // Optional dropdown fields
-  const optionalFields=['accessoriesValue',
-  ];
+    const optionalFields = [
+      'accessoriesValue',
+      'zeroDepreciation',
+      'paOwnerDriver',
+      'paUnnamedPassenger',
+      'otherCess',
+      'discountOnOd'
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -335,40 +341,44 @@ class _ElectricTwoWheeler1YOD5YTPFormScreenState
           ),
           Expanded(
             child: TextFormField(
-              onChanged: (val) {
-                if (key == 'idv') _updateCurrentIdv();
-              },
-              controller: _controllers[key],
-              decoration: InputDecoration(
-                border: const OutlineInputBorder(),
-                hintText: placeholder,
-              ),
-              keyboardType: TextInputType.number,
-              inputFormatters: [
-                FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
-              ],
-              validator: (value) {
-              // Skip validation if this field is optional
-              if (optionalFields.contains(key)) return null;
+                onChanged: (val) {
+                  if (key == 'idv') _updateCurrentIdv();
+                },
+                controller: _controllers[key],
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  hintText: placeholder,
+                ),
+                keyboardType: TextInputType.number,
+                inputFormatters: [
+                  FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
+                ],
+                validator: (value) {
+                  // Skip validation if this field is optional
+                  if (optionalFields.contains(key)) return null;
 
-              // Required validation
-              if (value == null || value.trim().isEmpty) {
-                return 'Enter $label';
-              }}
-            ),
+                  // Required validation
+                  if (value == null || value.trim().isEmpty) {
+                    return 'Enter $label';
+                  }
+                  return null;
+                }),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildDropdownField(String label, List<String> options,
-      String? selected, Function(String?) onChanged,) {
-        String? keyName; // Optional: pass a key for validation skip
-        const optionalDropdowns = [
-    'LL to Paid Driver', // matches label or keyName
-  ];
-  
+  Widget _buildDropdownField(
+    String label,
+    List<String> options,
+    String? selected,
+    Function(String?) onChanged,
+  ) {
+    String? keyName; // Optional: pass a key for validation skip
+    const optionalDropdowns = [
+      'LL to Paid Driver', 'No Claim Bonus (%)' // matches label or keyName
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -387,17 +397,17 @@ class _ElectricTwoWheeler1YOD5YTPFormScreenState
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
-              // Skip validation if optional
-              if (optionalDropdowns.contains(label) ||
-                  (keyName!= null && optionalDropdowns.contains(keyName))) {
-                return null;
-              }
+                // Skip validation if optional
+                if (optionalDropdowns.contains(label) ||
+                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                  return null;
+                }
 
-              if (value == null) {
-                return 'Select $label';
-              }
-              return null;
-            },
+                if (value == null) {
+                  return 'Select $label';
+                }
+                return null;
+              },
               hint: label == 'Zone'
                   ? const Text('Select Zone')
                   : const Text('Select Option'),

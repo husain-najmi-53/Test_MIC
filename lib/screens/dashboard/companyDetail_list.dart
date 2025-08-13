@@ -11,14 +11,137 @@ class CompanydetailList extends StatefulWidget {
 }
 
 class _CompanydetailListState extends State<CompanydetailList> {
-
   List<CompanyDetails> companyDetailsList = [
-    CompanyDetails(name: 'Acko General Insurance Limited', tollno: '1860-266-2256', email: 'hello@acko.com', website: 'www.acko.com'),
-    CompanyDetails(name: 'Bajaj Allianz General Insurance Company Limited', tollno: '1800-209-5858', email: 'customercare@ bajajallianz.co.in', website: 'www.bajajallianz.com'),
-    CompanyDetails(name: 'Bharti Axa General Insurance Company Limited', tollno: '1800-103-2292', email: 'claims@bharti-axagi.co.in', website: 'www.bharti-axagi.co.in'),
-    CompanyDetails(name: 'Cholamandalam MS General Insurance Company Ltd', tollno: '1800-200-5544', email: 'customercare@chola.murugappa.com', website: 'www.cholainsurance.com'),
-    CompanyDetails(name: 'DHFL General Insurance Limited', tollno: '1800-123-0004', email: 'mycare@dhflinsurance.com', website: 'www.dhflinsurance.com'),
-    CompanyDetails(name: 'Future Generali India Insurance Company Ltd', tollno: '1800-220-233', email: 'fgcare@futuregenerali.in', website: 'www.general.futuregenerali.in'),
+    CompanyDetails(
+        name: 'Acko General Insurance Limited',
+        tollno: '1860-266-2256',
+        email: 'hello@acko.com',
+        website: 'www.acko.com'),
+    CompanyDetails(
+        name: 'Bajaj Allianz General Insurance Company Limited',
+        tollno: '1800-209-5858',
+        email: 'customercare@ bajajallianz.co.in',
+        website: 'www.bajajallianz.com'),
+    // CompanyDetails(
+    //     name: 'Bharti Axa General Insurance Company Limited',
+    //     tollno: '1800-103-2292',
+    //     email: 'service@bhartiaxa.com',
+    //     website: 'www.bhartiaxa.com'),
+    CompanyDetails(
+        name: 'Cholamandalam MS General Insurance Company Ltd',
+        tollno: '1800-200-5544',
+        email: 'customercare@cholams.murugappa.com',
+        website: 'www.cholainsurance.com'),
+    // CompanyDetails(
+    //     name: 'DHFL General Insurance Limited',
+    //     tollno: '1800-123-0004',
+    //     email: 'mycare@dhflinsurance.com',
+    //     website: 'www.dhflinsurance.com'),
+    CompanyDetails(
+        name: 'Future Generali India Insurance Company Ltd',
+        tollno: '1800-220-233',
+        email: 'fgcare@futuregenerali.in',
+        website: 'www.general.futuregenerali.in'),
+    CompanyDetails(
+        name: 'Go Digit General Insurance Limited',
+        tollno: '1800-258-5956',
+        email: 'hello@godigit.com',
+        website: 'www.godigit.com'),
+    CompanyDetails(
+        name: 'HDFC ERGO General Insurance Company Limited',
+        tollno: '1800-2700-700',
+        email: 'care@hdfcergo.com',
+        website: 'www.hdfcergo.com'),
+    CompanyDetails(
+        name: 'ICICI Lombard General Insurance Company Limited',
+        tollno: '1800-2666',
+        email: 'customersupport@icicilombard.com',
+        website: 'www.icicilombard.com'),
+    CompanyDetails(
+        name: 'Iffco Tokio General Insurance Company Ltd',
+        tollno: '1800-103-5499',
+        email: 'websupport@iffcotokio.co.in',
+        website: 'www.iffcotokio.co.in'),
+    CompanyDetails(
+        name: 'Kotak Mahindra General Insurance Co. Ltd.',
+        tollno: '1800-266-4545',
+        email: 'care@kotak.com',
+        website: 'www.kotakgeneral.com'),
+    CompanyDetails(
+        name: 'Liberty General Insurance Ltd.',
+        tollno: '1800-266-5844',
+        email: 'care@libertyinsurance.in',
+        website: 'www.libertyinsurance.in'),
+    CompanyDetails(
+        name: 'Magma HDI General Insurance Co. Ltd.',
+        tollno: '1800-266-3202',
+        email: 'info@magma-hdi.co.in',
+        website: 'www.magmahdi.com'),
+    CompanyDetails(
+        name: 'National Insurance Co. Ltd.',
+        tollno: '1800-345-0330',
+        email: 'customer.support@nic.co.in',
+        website: 'www.nationalinsurance.nic.co.in'),
+    CompanyDetails(
+        name: 'Navi General Insurance Ltd.',
+        tollno: '1860-266-7711',
+        email: 'service@navi.com',
+        website: 'www.navi.com'),
+    CompanyDetails(
+        name: 'The New India Assurance Co. Ltd.',
+        tollno: '1800-209-1415',
+        email: 'newindia@newindia.co.in',
+        website: 'www.newindia.co.in'),
+    CompanyDetails(
+        name: 'The Oriental Insurance Company Ltd.',
+        tollno: '1800-118-485',
+        email: 'customer.support@orientalinsurance.co.in',
+        website: 'www.orientalinsurance.org.in'),
+    CompanyDetails(
+        name: 'Raheja QBE General Insurance Co. Ltd.',
+        tollno: '1800-102-7406',
+        email: 'customer.service@rahejaqbe.com',
+        website: 'www.rahejaqbe.com'),
+    CompanyDetails(
+        name: 'Reliance General Insurance Co. Ltd.',
+        tollno: '1800-3009',
+        email: 'rgicl.services@relianceada.com',
+        website: 'www.reliancegeneral.co.in'),
+    CompanyDetails(
+        name: 'Royal Sundaram General Insurance Co. Ltd.',
+        tollno: '1860-425-0000',
+        email: 'customer.services@royalsundaram.in',
+        website: 'www.royalsundaram.in'),
+    CompanyDetails(
+        name: 'SBI General Insurance Co. Ltd.',
+        tollno: '1800-102-1111',
+        email: 'customer.care@sbigeneral.in',
+        website: 'www.sbigeneral.in'),
+    CompanyDetails(
+        name: 'Shriram General Insurance Co. Ltd.',
+        tollno: '1800-300-30000',
+        email: 'customercare@shriramgi.com',
+        website: 'www.shriramgi.com'),
+    CompanyDetails(
+        name: 'Tata AIG General Insurance Co. Ltd.',
+        tollno: '1800-266-7780',
+        email: 'customersupport@tataaig.com',
+        website: 'www.tataaig.com'),
+    CompanyDetails(
+        name: 'United India Insurance Company Limited',
+        tollno: '1800-425-3333',
+        email: 'customercare@uiic.co.in',
+        website: 'www.uiic.co.in'),
+    CompanyDetails(
+        name: 'Universal Sompo General Insurance Co. Ltd.',
+        tollno: '1800-22-4030',
+        email: 'contactus@universalsompo.com',
+        website: 'www.universalsompo.com'),
+    CompanyDetails(
+        name: 'Zuno General Insurance',
+        tollno: '1800-123-0004',
+        email: 'customercare@zunoi.com',
+        website: 'www.zunoi.com'),
   ];
 
   @override
@@ -28,38 +151,45 @@ class _CompanydetailListState extends State<CompanydetailList> {
     return Scaffold(
       // backgroundColor: Colors.indigo.shade50,
       appBar: AppBar(
-        backgroundColor:Colors.indigo.shade700,
+        backgroundColor: Colors.indigo.shade700,
         shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(12),bottomRight: Radius.circular(12),)
-        ),
+            borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(12),
+          bottomRight: Radius.circular(12),
+        )),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: Text("Companies Details", style: GoogleFonts.poppins(
-            fontWeight: FontWeight.bold,
-            color: Colors.white
-        ),),
+        title: Text(
+          "Companies Details",
+          style: GoogleFonts.poppins(
+              fontWeight: FontWeight.bold, color: Colors.white),
+        ),
         centerTitle: true,
       ),
       body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 0),
+        padding: const EdgeInsets.symmetric(horizontal: 0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ListView.separated(
-                primary: false,
-                shrinkWrap: true,
+                  primary: false,
+                  shrinkWrap: true,
                   itemCount: companyDetailsList.length,
-                separatorBuilder:(context,index)=>SizedBox(height: height*0.0,) ,
-                itemBuilder: (context,index)=>
-                _buildCard(height: height, width: width, name: companyDetailsList[index].name,
-                    toll: companyDetailsList[index].tollno, email: companyDetailsList[index].email,
-                    website: companyDetailsList[index].website)
-              )
+                  separatorBuilder: (context, index) => SizedBox(
+                        height: height * 0.0,
+                      ),
+                  itemBuilder: (context, index) => _buildCard(
+                      height: height,
+                      width: width,
+                      name: companyDetailsList[index].name,
+                      toll: companyDetailsList[index].tollno,
+                      email: companyDetailsList[index].email,
+                      website: companyDetailsList[index].website))
             ],
           ),
         ),
@@ -76,181 +206,230 @@ class _CompanydetailListState extends State<CompanydetailList> {
     required String website,
   }) {
     return Container(
-            height: height*0.24,
-            width: double.infinity,
-            child: Stack(
-              children: [
-                Container(
-                  height: height*0.09,
-                  decoration: BoxDecoration(
-                      // color: Colors.blue.shade200,
-                      // color: Colors.indigoAccent.shade100,
-                      color: const Color(0xFFF0F4FF),
-                      borderRadius:const BorderRadius.only(
-                        bottomLeft: Radius.circular(12),
-                        bottomRight: Radius.circular(12),
-                      )
-                  ),
-                ),
-                Positioned(
-                    top: 10,
-                    left: 20,
-                    child: Container(
-                      height: height*0.21,
-                      width: width*0.9,
+      height: height * 0.24,
+      width: double.infinity,
+      child: Stack(
+        children: [
+          Container(
+            height: height * 0.09,
+            decoration: BoxDecoration(
+                // color: Colors.blue.shade200,
+                // color: Colors.indigoAccent.shade100,
+                color: const Color(0xFFF0F4FF),
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(12),
+                  bottomRight: Radius.circular(12),
+                )),
+          ),
+          Positioned(
+              top: 10,
+              left: 20,
+              child: Container(
+                height: height * 0.21,
+                width: width * 0.9,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    // color: Colors.indigo.shade200,
+                    // color: Colors.blue.shade200,
+                    borderRadius: BorderRadius.circular(12),
+                    // border: Border.fromBorderSide(BorderSide(color: Colors.indigo.shade700)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5), // Shadow color
+                        spreadRadius: 2, // Spread radius
+                        blurRadius: 7,
+                        offset: const Offset(0, 4),
+                      ),
+                    ]),
+                child: Column(
+                  children: [
+                    Container(
+                      height: height * 0.065,
+                      width: width * 0.9,
                       decoration: BoxDecoration(
-                          color: Colors.white,
-                          // color: Colors.indigo.shade200,
+                          color: Colors.indigo.shade500,
                           // color: Colors.blue.shade200,
-                          borderRadius: BorderRadius.circular(12),
-                          // border: Border.fromBorderSide(BorderSide(color: Colors.indigo.shade700)),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5), // Shadow color
-                            spreadRadius: 2,                     // Spread radius
-                            blurRadius: 7,
-                            offset: const Offset(0, 4),
-                          ),
-                        ]
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: height*0.065,
-                            width: width*0.9,
-                            decoration: BoxDecoration(
-                                color: Colors.indigo.shade500,
-                                // color: Colors.blue.shade200,
-                                borderRadius: const BorderRadius.only(topRight: Radius.circular(12),topLeft: Radius.circular(12))
+                          borderRadius: const BorderRadius.only(
+                              topRight: Radius.circular(12),
+                              topLeft: Radius.circular(12))),
+                      child: Center(
+                          child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15, vertical: 5),
+                              child: Text(
+                                name,
+                                style: GoogleFonts.poppins(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold),
+                              ))),
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 2),
+                        child: _cardRaw(
+                            width: width,
+                            fieldName: 'Toll Free Number',
+                            fieldValue: toll)),
+                    _cardRaw(
+                        width: width, fieldName: 'Email', fieldValue: email),
+                    Padding(
+                        padding: const EdgeInsets.only(bottom: 1, top: 2),
+                        child: _cardRaw(
+                            width: width,
+                            fieldName: 'Website',
+                            fieldValue: website)),
+                    const Divider(
+                      color: Colors.black,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      // crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        GestureDetector(
+                          onTap: () async {
+                            await _launchWebsite("https://${website}");
+                          },
+                          child: Card(
+                            color: Colors.transparent,
+                            elevation: 0,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 3),
+                                    child: Icon(CupertinoIcons
+                                        .arrow_up_right_square_fill)),
+                                Text(
+                                  "Website",
+                                  style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w500),
+                                )
+                              ],
                             ),
-                            child: Center(child:
-                            Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 5),
-                                child: Text(name, style: GoogleFonts.poppins(color:Colors.white,fontSize: 15,fontWeight: FontWeight.bold),))),
                           ),
-                          Padding(padding:const EdgeInsets.symmetric(vertical: 2),child: _cardRaw(width: width, fieldName: 'Toll Free Number', fieldValue: toll)),
-                          _cardRaw(width: width, fieldName: 'Email', fieldValue: email),
-                          Padding(padding:const EdgeInsets.only(bottom: 1,top: 2),child: _cardRaw(width: width, fieldName: 'Website', fieldValue: website)),
-                          const Divider(color: Colors.black,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            // crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              GestureDetector(
-                                onTap:()async{
-                                  await _launchWebsite("https://${website}");
-                                },
-                                child: Card(
-                                  color: Colors.transparent,
-                                  elevation: 0,
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      const Padding(padding:const EdgeInsets.symmetric(horizontal: 3),child: Icon(CupertinoIcons.arrow_up_right_square_fill)),
-                                      Text("Website",style: GoogleFonts.poppins(fontWeight: FontWeight.w500),)
-                                    ],
-                                  ),
-                                ),
+                        ),
+                        GestureDetector(
+                          onTap: () async {
+                            await _launchCall(toll);
+                          },
+                          child: Card(
+                            color: Colors.transparent,
+                            elevation: 0,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 3),
+                                    child: Icon(Icons.call)),
+                                Text(
+                                  "Call",
+                                  style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w500),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () async {
+                            await _launchEmail(email);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                            child: Card(
+                              color: Colors.transparent,
+                              elevation: 0,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 3),
+                                      child: Icon(Icons.email_rounded)),
+                                  Text(
+                                    "Email",
+                                    style: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.w500),
+                                  )
+                                ],
                               ),
-                              GestureDetector(
-                                onTap:()async{
-                                  await _launchCall(toll);
-                                },
-                                child: Card(
-                                  color: Colors.transparent,
-                                  elevation: 0,
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                     const Padding(padding:const EdgeInsets.symmetric(horizontal: 3),child: Icon(Icons.call)),
-                                      Text("Call",style: GoogleFonts.poppins(fontWeight: FontWeight.w500),)
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: ()async{
-                                  await _launchEmail(email);
-                                },
-                                child: Padding(
-                                  padding:const EdgeInsets.symmetric(horizontal: 15),
-                                  child: Card(
-                                    color: Colors.transparent,
-                                    elevation: 0,
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        const Padding(padding:const EdgeInsets.symmetric(horizontal: 3),child: Icon(Icons.email_rounded)),
-                                        Text("Email",style: GoogleFonts.poppins(fontWeight: FontWeight.w500),)
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                )
-                )
-              ],
-            ),
-          );
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ))
+        ],
+      ),
+    );
   }
 
-  Row _cardRaw({required double width,required String fieldName,required fieldValue}) {
+  Row _cardRaw(
+      {required double width, required String fieldName, required fieldValue}) {
     return Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.only(left: 10),
-                                width: width*0.35,
-                                child: Text(fieldName,
-                                  style: GoogleFonts.poppins(fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                              Container(
-                                width: width*0.5,
-                                child: Text(fieldValue,overflow: TextOverflow.ellipsis,),
-                              )
-                            ],
-                          );
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(
+          padding: const EdgeInsets.only(left: 10),
+          width: width * 0.35,
+          child: Text(
+            fieldName,
+            style: GoogleFonts.poppins(fontWeight: FontWeight.w500),
+          ),
+        ),
+        Container(
+          width: width * 0.5,
+          child: Text(
+            fieldValue,
+            overflow: TextOverflow.ellipsis,
+          ),
+        )
+      ],
+    );
   }
 
   Future<void> _launchEmail(String email) async {
-    final uri =Uri.parse('mailto:${email}?subject=&body=');
-    if(await canLaunchUrl(uri)){
+    final uri = Uri.parse('mailto:${email}?subject=&body=');
+    if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
-    }else{
+    } else {
       throw Exception('Could not launch $uri');
     }
   }
 
   Future<void> _launchWebsite(String url) async {
     final Uri uri = Uri.parse(url);
-    if(await canLaunchUrl(uri)){
-      await launchUrl(uri,mode: LaunchMode.externalNonBrowserApplication );
-    }else{
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalNonBrowserApplication);
+    } else {
       throw Exception('Could not launch $uri');
     }
   }
 
   Future<void> _launchCall(String PhoneNo) async {
-    String phone ="+91"+PhoneNo;
-    Uri uri =Uri.parse("tel:${phone}") ;
-    if(await canLaunchUrl(uri)){
+    String phone = "+91" + PhoneNo;
+    Uri uri = Uri.parse("tel:${phone}");
+    if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
-    }else{
+    } else {
       throw Exception('Could not launch $uri');
     }
   }
 }
 
-class CompanyDetails{
+class CompanyDetails {
   String name;
   String tollno;
   String email;
   String website;
 
-  CompanyDetails({required this.name,required this.tollno,required this.email,required this.website});
+  CompanyDetails(
+      {required this.name,
+      required this.tollno,
+      required this.email,
+      required this.website});
 }

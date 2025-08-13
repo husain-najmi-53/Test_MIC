@@ -375,7 +375,7 @@ class _IdvMasterState extends State<IdvMaster> {
     if(selectedVehicleType!=null && selectedMakeType!=null && selectedModelType!=null && selectedVarientType!=null && selectedMonth!=null&&selectedYear!=null &&
         selectedVehicleType!.isNotEmpty && selectedMakeType!.isNotEmpty && selectedModelType!.isNotEmpty && selectedVarientType!.isNotEmpty&&selectedYear!.isNotEmpty&&selectedMonth!.isNotEmpty){
 
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Success")));
+      //ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Success")));
       setState(() {
         vehiclesResult = vehiclesData[selectedVehicleType][selectedMakeType][selectedYear][selectedModelType][selectedVarientType];
       });
@@ -431,7 +431,10 @@ class _IdvMasterState extends State<IdvMaster> {
     }
 
     if(yearDif>5){
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Contact with Agent to Evaluate IDV of Vehicle Above 5 Years ")));
+      setState(() {
+        idv = null;
+      });
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Contact with Agent to Evaluate IDV of Vehicle Above 5 Years "),duration: Duration(seconds: 3),));
     }
 
 

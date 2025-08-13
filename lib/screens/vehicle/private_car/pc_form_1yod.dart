@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:motor_insurance_app/models/result_data.dart';
 import 'package:motor_insurance_app/screens/vehicle/private_car/pc_result_screen.dart';
-class PCForm1YOD extends StatefulWidget {
 
-  const PCForm1YOD({super.key, });
+class PCForm1YOD extends StatefulWidget {
+  const PCForm1YOD({
+    super.key,
+  });
 
   @override
   State<PCForm1YOD> createState() => _PCForm1YODState();
@@ -55,28 +57,27 @@ class _PCForm1YODState extends State<PCForm1YOD> {
     _controllers = {
       'od': TextEditingController(), //1
       // 'tp': TextEditingController(), //2
-      'idv': TextEditingController(),   //3
-      'currentIdv': TextEditingController(),   //3
-      'vehicleAge': TextEditingController(),       //4
+      'idv': TextEditingController(), //3
+      'currentIdv': TextEditingController(), //3
+      'vehicleAge': TextEditingController(), //4
       'yearOfManufacture': TextEditingController(), //5
-      'cubicCapacity': TextEditingController(),    //7
-      'discountOnOd': TextEditingController(),     //8
-      'loading_on_discount_premium': TextEditingController(),//9
-      'electricAccessories': TextEditingController(),   //10
-      'nonElectricAccessories': TextEditingController(),  //11
-      'CNG_LPG_kits_Ex_fitted': TextEditingController(),//13
-      'zeroDepreciation': TextEditingController(),//15
-      'RSAaddons': TextEditingController(),//16
-      'otherAddonCoverage': TextEditingController(),//17
-      'ValueAddedServices': TextEditingController(),     //18
-      'paOwnerDriver': TextEditingController(),    //319
+      'cubicCapacity': TextEditingController(), //7
+      'discountOnOd': TextEditingController(), //8
+      'loading_on_discount_premium': TextEditingController(), //9
+      'electricAccessories': TextEditingController(), //10
+      'nonElectricAccessories': TextEditingController(), //11
+      'CNG_LPG_kits_Ex_fitted': TextEditingController(), //13
+      'zeroDepreciation': TextEditingController(), //15
+      'RSAaddons': TextEditingController(), //16
+      'otherAddonCoverage': TextEditingController(), //17
+      'ValueAddedServices': TextEditingController(), //18
+      'paOwnerDriver': TextEditingController(), //319
       'paUnnamedPassenger': TextEditingController(), //21
-      'otherCess': TextEditingController(),        //22
+      'otherCess': TextEditingController(), //22
       // 'currentIdv': TextEditingController(),
     };
-    _controllers['od']!.text='1';
+    _controllers['od']!.text = '1';
   }
-
 
   @override
   void dispose() {
@@ -87,186 +88,188 @@ class _PCForm1YODState extends State<PCForm1YOD> {
   }
 
   Widget _buildReadOnlyField(String key, String label) {
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 16),
-          child: Row(
-            children: [
-              SizedBox(
-                width: 180,
-                child: Text(label, style: const TextStyle(fontSize: 16)),
-              ),
-              Expanded(
-                child: TextFormField(
-                  controller: _controllers[key],
-                  readOnly: true,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                  ),
-                ),
-              ),
-            ],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 180,
+            child: Text(label, style: const TextStyle(fontSize: 16)),
           ),
-        );
-      }
-
-      void _updateCurrentIdv() {
-        double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
-        double depreciation = 0.0;
-
-        if (_selectedDepreciation != null) {
-          depreciation =
-              double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0;
-        }
-
-        double currentIdv = idv - ((idv * depreciation) / 100);
-        _controllers['currentIdv']!.text = currentIdv.toStringAsFixed(2);
-      }
-
-      void _submitForm() {
-        if (_formKey.currentState!.validate()) {
-          // Fetch form inputs
-          double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
-          double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
-          String yearOfManufacture = _controllers['yearOfManufacture']!.text;
-          String zone = _selectedZone ?? "A";
-          int cubicCapacity = int.tryParse(
-              _controllers['cubicCapacity']!.text) ?? 0;
-          double discountOnOd = double.tryParse(
-              _controllers['discountOnOd']!.text) ?? 0.0;
-          double loading_on_discount_premium = double.tryParse(
-              _controllers['loading_on_discount_premium']!.text) ?? 0.0;
-          double electricAccessories = double.tryParse(
-              _controllers['electricAccessories']!.text) ?? 0.0;
-          double nonElectricAccessories = double.tryParse(
-              _controllers['nonElectricAccessories']!.text) ?? 0.0;
-          double CNG_LPG_kits_Ex_fitted = double.tryParse(
-              _controllers['CNG_LPG_kits_Ex_fitted']!.text) ?? 0.0;
-          double zeroDepreciation = double.tryParse(
-              _controllers['zeroDepreciation']!.text) ?? 0.0;
-          double RSAaddons = double.tryParse(_controllers['RSAaddons']!.text) ??
-              0.0;
-          double otherAddonCoverage = double.tryParse(
-              _controllers['otherAddonCoverage']!.text) ?? 0.0;
-          double ValueAddedServices = double.tryParse(
-              _controllers['ValueAddedServices']!.text) ?? 0.0;
-          double paOwnerDriver = double.tryParse(
-              _controllers['paOwnerDriver']!.text) ?? 0.0;
-          double paUnnamedPassenger = double.tryParse(
-              _controllers['paUnnamedPassenger']!.text) ?? 0.0;
-          double otherCess = double.tryParse(_controllers['otherCess']!.text) ??
-              0.0;
-          double llToPaidDriver = double.tryParse(
-              _selectedLlPaidDriver ?? "0") ?? 0.0;
-          String selectedNCBText = _selectedNcb ?? "0%";
-          double ncbPercentage =
-              double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
-
-          // Get base rate from function
-          int cc = int.tryParse(_controllers['cubicCapacity']?.text ?? "") ??
-              1000;
-          int age = (_selectedAge != null && _selectedAge != _ageOptions.last) ? int.tryParse(_selectedAge!) ?? 1 : 6;
-          // double vehicleBasicRate = getOdRateByAgeZoneCc(vehicleAgeYears: age<=5?age:6, zone:_selectedZone!, cubicCapacity: cc); // ODRate
-          double vehicleBasicRate = getOdRate(vehicleAgeYears: age,
-            zone: zone,
-            cubicCapacity: cc,
-            kiloWatt: 0,
-            isElectric: false,); // ODRate
-          print(vehicleBasicRate);
-
-          // OD Calculations
-          double basicForVehicle = currentIdv * vehicleBasicRate / 100;
-          double discountAmount = (basicForVehicle * discountOnOd) / 100;
-          double basicOdAfterDiscount = basicForVehicle - discountAmount;
-          basicOdAfterDiscount +=
-              (basicOdAfterDiscount * loading_on_discount_premium) / 100;
-          double accessoriesValue = electricAccessories +
-              nonElectricAccessories;
-          double totalBasicPremium = basicOdAfterDiscount + accessoriesValue +
-              CNG_LPG_kits_Ex_fitted;
-          double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
-          double netOdPremium = totalBasicPremium - ncbAmount;
-          double totalA = netOdPremium;
-
-          //Add-ons
-          double totalB = zeroDepreciation +
-              RSAaddons +
-              otherAddonCoverage +
-              ValueAddedServices;
-
-          // TP Section
-          double liabilityPremiumTP = 00.00;
-          double totalC = liabilityPremiumTP +
-              paOwnerDriver +
-              llToPaidDriver +
-              paUnnamedPassenger;
-
-          // Total Premium (C)
-          double totalABC = totalA + totalB + totalC;
-          double gst = totalABC * 0.18;
-          double otherCessAmt = (otherCess * totalABC) / 100;
-          double finalPremium = totalABC + gst + otherCessAmt;
-
-          // Result Map
-          Map<String, String> resultMap = {
-            // Basic Details
-            "IDV": currentIdv.toStringAsFixed(2),
-            "Year of Manufacture": yearOfManufacture.toString(),
-            "Zone": zone,
-            "Cubic Capacity": cubicCapacity.toString(),
-
-            // A - Own Damage Premium Package
-            "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
-            "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-            "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-            "Basic OD Premium after discount": basicOdAfterDiscount
-                .toStringAsFixed(2),
-            "Accessories Value": accessoriesValue.toStringAsFixed(2),
-            "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
-            "No Claim Bonus": ncbAmount.toStringAsFixed(2),
-            "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
-            "Total A": totalA.toStringAsFixed(2),
-
-            // B - Add-ons
-            "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
-            "RSA": RSAaddons.toStringAsFixed(2),
-            "Other Addon Coverage": otherAddonCoverage.toStringAsFixed(2),
-            "Value Added Services": ValueAddedServices.toStringAsFixed(2),
-            "Total B": totalB.toStringAsFixed(2),
-
-            // C - Liability Premium
-            "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-            "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-            "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
-            "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
-            "Total C": totalC.toStringAsFixed(2),
-
-
-            // D - Total Premium
-            "Total Package Premium[A+B+C]": totalABC.toStringAsFixed(2),
-            "GST @ 18%": gst.toStringAsFixed(2),
-            "Other CESS": otherCessAmt.toStringAsFixed(2).trim(),
-
-            // Final Premium
-            "Final Premium": finalPremium.toStringAsFixed(2),
-          };
-
-          // Pass data to result screen
-          InsuranceResultData resultData = InsuranceResultData(
-            vehicleType: "Four Wheeler",
-            fieldData: resultMap,
-            totalPremium: finalPremium,
-          );
-
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) =>
-                  InsuranceCarResultScreen(resultData: resultData),
+          Expanded(
+            child: TextFormField(
+              controller: _controllers[key],
+              readOnly: true,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+              ),
             ),
-          );
-        }
-      }
+          ),
+        ],
+      ),
+    );
+  }
 
+  void _updateCurrentIdv() {
+    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+    double depreciation = 0.0;
+
+    if (_selectedDepreciation != null) {
+      depreciation =
+          double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0;
+    }
+
+    double currentIdv = idv - ((idv * depreciation) / 100);
+    _controllers['currentIdv']!.text = currentIdv.toStringAsFixed(2);
+  }
+
+  void _submitForm() {
+    if (_formKey.currentState!.validate()) {
+      // Fetch form inputs
+      double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+      double currentIdv =
+          double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
+      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
+      String zone = _selectedZone ?? "A";
+      int cubicCapacity =
+          int.tryParse(_controllers['cubicCapacity']!.text) ?? 0;
+      double discountOnOd =
+          double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+      double loading_on_discount_premium =
+          double.tryParse(_controllers['loading_on_discount_premium']!.text) ??
+              0.0;
+      double electricAccessories =
+          double.tryParse(_controllers['electricAccessories']!.text) ?? 0.0;
+      double nonElectricAccessories =
+          double.tryParse(_controllers['nonElectricAccessories']!.text) ?? 0.0;
+      double CNG_LPG_kits_Ex_fitted =
+          double.tryParse(_controllers['CNG_LPG_kits_Ex_fitted']!.text) ?? 0.0;
+      double zeroDepreciation =
+          double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
+      double RSAaddons =
+          double.tryParse(_controllers['RSAaddons']!.text) ?? 0.0;
+      double otherAddonCoverage =
+          double.tryParse(_controllers['otherAddonCoverage']!.text) ?? 0.0;
+      double ValueAddedServices =
+          double.tryParse(_controllers['ValueAddedServices']!.text) ?? 0.0;
+      double paOwnerDriver =
+          double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      double paUnnamedPassenger =
+          double.tryParse(_controllers['paUnnamedPassenger']!.text) ?? 0.0;
+      double otherCess =
+          double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+      double llToPaidDriver =
+          double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
+      String selectedNCBText = _selectedNcb ?? "0%";
+      double ncbPercentage =
+          double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
+
+      // Get base rate from function
+      int cc = int.tryParse(_controllers['cubicCapacity']?.text ?? "") ?? 1000;
+      int age = (_selectedAge != null && _selectedAge != _ageOptions.last)
+          ? int.tryParse(_selectedAge!) ?? 1
+          : 6;
+      // double vehicleBasicRate = getOdRateByAgeZoneCc(vehicleAgeYears: age<=5?age:6, zone:_selectedZone!, cubicCapacity: cc); // ODRate
+      double vehicleBasicRate = getOdRate(
+        vehicleAgeYears: age,
+        zone: zone,
+        cubicCapacity: cc,
+        kiloWatt: 0,
+        isElectric: false,
+      ); // ODRate
+      
+
+      // OD Calculations
+      double basicForVehicle = currentIdv * vehicleBasicRate / 100;
+      double discountAmount = (basicForVehicle * discountOnOd) / 100;
+      double basicOdAfterDiscount = basicForVehicle - discountAmount;
+      basicOdAfterDiscount +=
+          (basicOdAfterDiscount * loading_on_discount_premium) / 100;
+      double accessoriesValue = electricAccessories + nonElectricAccessories;
+      double totalBasicPremium =
+          basicOdAfterDiscount + accessoriesValue + CNG_LPG_kits_Ex_fitted;
+      double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
+      double netOdPremium = totalBasicPremium - ncbAmount;
+      double totalA = netOdPremium;
+
+      //Add-ons
+      double totalB = zeroDepreciation +
+          RSAaddons +
+          otherAddonCoverage +
+          ValueAddedServices;
+
+      // TP Section
+      double liabilityPremiumTP = 00.00;
+      double totalC = liabilityPremiumTP +
+          paOwnerDriver +
+          llToPaidDriver +
+          paUnnamedPassenger;
+
+      // Total Premium (C)
+      double totalABC = totalA + totalB + totalC;
+      double gst = totalABC * 0.18;
+      double otherCessAmt = (otherCess * totalABC) / 100;
+      double finalPremium = totalABC + gst + otherCessAmt;
+
+      // Result Map
+      Map<String, String> resultMap = {
+        // Basic Details
+        "IDV": currentIdv.toStringAsFixed(2),
+        "Year of Manufacture": yearOfManufacture.toString(),
+        "Zone": zone,
+        "Cubic Capacity": cubicCapacity.toString(),
+
+        // A - Own Damage Premium Package
+        "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
+        "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
+        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Basic OD Premium after discount":
+            basicOdAfterDiscount.toStringAsFixed(2),
+        "Accessories Value": accessoriesValue.toStringAsFixed(2),
+        "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
+        "No Claim Bonus": ncbAmount.toStringAsFixed(2),
+        "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
+        "Total A": totalA.toStringAsFixed(2),
+
+        // B - Add-ons
+        "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
+        "RSA": RSAaddons.toStringAsFixed(2),
+        "Other Addon Coverage": otherAddonCoverage.toStringAsFixed(2),
+        "Value Added Services": ValueAddedServices.toStringAsFixed(2),
+        "Total B": totalB.toStringAsFixed(2),
+
+        // C - Liability Premium
+        "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
+        "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
+        "Total C": totalC.toStringAsFixed(2),
+
+        // D - Total Premium
+        "Total Package Premium[A+B+C]": totalABC.toStringAsFixed(2),
+        "GST @ 18%": gst.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2).trim(),
+
+        // Final Premium
+        "Final Premium": finalPremium.toStringAsFixed(2),
+      };
+
+      // Pass data to result screen
+      InsuranceResultData resultData = InsuranceResultData(
+        vehicleType: "Four Wheeler",
+        fieldData: resultMap,
+        totalPremium: finalPremium,
+      );
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              InsuranceCarResultScreen(resultData: resultData),
+        ),
+      );
+    }
+  }
 
   void _resetForm() {
     _formKey.currentState?.reset();
@@ -324,35 +327,62 @@ class _PCForm1YODState extends State<PCForm1YOD> {
             child: Column(
               children: [
                 const SizedBox(height: 20),
-                _buildTextField('od', 'OD Term (in years)', true,"Enter OD "),
-                _buildTextField('idv', 'IDV (₹)', true,"Enter IDV "),
-                _buildDropdownField('Depreciation', _depreciationOptions, _selectedDepreciation,
-                        (val) => setState(() { _selectedDepreciation = val; _updateCurrentIdv(); })),
-                _buildReadOnlyField('currentIdv', 'Current IDV (₹)'), // Read-only field
+                _buildTextField('od', 'OD Term (in years)', true, "Enter OD "),
+                _buildTextField('idv', 'IDV (₹)', true, "Enter IDV "),
+                _buildDropdownField(
+                    'Depreciation',
+                    _depreciationOptions,
+                    _selectedDepreciation,
+                    (val) => setState(() {
+                          _selectedDepreciation = val;
+                          _updateCurrentIdv();
+                        })),
+                _buildReadOnlyField(
+                    'currentIdv', 'Current IDV (₹)'), // Read-only field
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
-                        (val) => setState(() => _selectedAge = val)),
-                _buildTextField('yearOfManufacture', 'Year of Manufacture', true,"Enter Year"),
+                    (val) => setState(() => _selectedAge = val)),
+                _buildTextField('yearOfManufacture', 'Year of Manufacture',
+                    true, "Enter Year"),
                 _buildDropdownField('Zone', _zoneOptions, _selectedZone,
-                        (val) => setState(() => _selectedZone = val)),
-                _buildTextField('cubicCapacity', 'Cubic Capacity (cc)', true,"Enter Capacity"),
-                _buildTextField('discountOnOd', 'Discount on OD Premium (%)', true,"Enter Discount "),
-                _buildTextField('loading_on_discount_premium', 'Loading on Discount Premium (%)', true,"Enter Discount"),
-                _buildTextField('electricAccessories', 'Electrical Accessories', true,"Enter value"),
-                _buildTextField('nonElectricAccessories', 'Non Electrical Accessories', true,"Enter Value"),
-                _buildDropdownField('CNG/ LPG kits', _cngLpgKitOptions, _selectedCngLpgKit,
-                        (val) => setState(() => _selectedCngLpgKit = val)),
-                _buildTextField('CNG_LPG_kits_Ex_fitted', 'CNG/LPG kits (externally fitted)', true,"Enter Value"),
-                _buildDropdownField('No Claim Bonus (%)', _ncbOptions, _selectedNcb,
-                        (val) => setState(() => _selectedNcb = val)),
-                _buildTextField('zeroDepreciation', 'Zero Depreciation (rate)', true,"Enter Depreciation "),
-                _buildTextField('RSAaddons', 'RSA/Additional for Addons(amount)', true,"Enter Addons "),
-                _buildTextField('otherAddonCoverage', 'Other Addon Coverage(rate)', true,"Enter rate "),
-                _buildTextField('ValueAddedServices', 'Value Added Service(amount)', true,"Enter Amount "),
-                _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)', true,"Enter Amount "),
-                _buildDropdownField('LL to Paid Driver', _llPaidDriverOptions, _selectedLlPaidDriver,
-                        (val) => setState(() => _selectedLlPaidDriver = val)),
-                _buildTextField('paUnnamedPassenger', 'PA to Unnamed Passenger (₹)', true,"Enter Passengers "),
-                _buildTextField('otherCess', 'Other Cess (%)', true,"Enter Cess % "),
+                    (val) => setState(() => _selectedZone = val)),
+                _buildTextField('cubicCapacity', 'Cubic Capacity (cc)', true,
+                    "Enter Capacity"),
+                _buildTextField('discountOnOd', 'Discount on OD Premium (%)',
+                    true, "Enter Discount "),
+                _buildTextField('loading_on_discount_premium',
+                    'Loading on Discount Premium (%)', true, "Enter Discount"),
+                _buildTextField('electricAccessories', 'Electrical Accessories',
+                    true, "Enter value"),
+                _buildTextField('nonElectricAccessories',
+                    'Non Electrical Accessories', true, "Enter Value"),
+                _buildDropdownField(
+                    'CNG/ LPG kits',
+                    _cngLpgKitOptions,
+                    _selectedCngLpgKit,
+                    (val) => setState(() => _selectedCngLpgKit = val)),
+                _buildTextField('CNG_LPG_kits_Ex_fitted',
+                    'CNG/LPG kits (externally fitted)', true, "Enter Value"),
+                _buildDropdownField('No Claim Bonus (%)', _ncbOptions,
+                    _selectedNcb, (val) => setState(() => _selectedNcb = val)),
+                _buildTextField('zeroDepreciation', 'Zero Depreciation (rate)',
+                    true, "Enter Depreciation "),
+                _buildTextField('RSAaddons',
+                    'RSA/Additional for Addons(amount)', true, "Enter Addons "),
+                _buildTextField('otherAddonCoverage',
+                    'Other Addon Coverage(rate)', true, "Enter rate "),
+                _buildTextField('ValueAddedServices',
+                    'Value Added Service(amount)', true, "Enter Amount "),
+                _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)', true,
+                    "Enter Amount "),
+                _buildDropdownField(
+                    'LL to Paid Driver',
+                    _llPaidDriverOptions,
+                    _selectedLlPaidDriver,
+                    (val) => setState(() => _selectedLlPaidDriver = val)),
+                _buildTextField('paUnnamedPassenger',
+                    'PA to Unnamed Passenger (₹)', true, "Enter Passengers "),
+                _buildTextField(
+                    'otherCess', 'Other Cess (%)', true, "Enter Cess % "),
               ],
             ),
           ),
@@ -395,7 +425,7 @@ class _PCForm1YODState extends State<PCForm1YOD> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(CupertinoIcons.car,color: Color.fromARGB(255, 167, 13, 13)),
+          Icon(CupertinoIcons.car, color: Color.fromARGB(255, 167, 13, 13)),
           const SizedBox(width: 8),
           Text(
             'Private Car 1 Year Old ',
@@ -410,7 +440,22 @@ class _PCForm1YODState extends State<PCForm1YOD> {
     );
   }
 
-  Widget _buildTextField(String key, String label, bool isNumeric,String placeholder) {
+  Widget _buildTextField(
+      String key, String label, bool isNumeric, String placeholder) {
+    const optionalFields = [
+      'electricAccessories',
+      'nonElectricAccessories',
+      'loading_on_discount_premium',
+      'discountOnOd',
+      'zeroDepreciation',
+      'RSAaddons',
+      'otherAddonCoverage',
+      'ValueAddedServices',
+      'paOwnerDriver',
+      'paUnnamedPassenger',
+      'otherCess',
+      'CNG_LPG_kits_Ex_fitted'
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -429,24 +474,25 @@ class _PCForm1YODState extends State<PCForm1YOD> {
           Expanded(
             child: TextFormField(
               controller: _controllers[key],
-              readOnly: key=='od'?true:false,
+              readOnly: key == 'od' || key == 'tp' ? true : false,
               onChanged: (val) {
                 if (key == 'idv') _updateCurrentIdv();
               },
               decoration: InputDecoration(
-                  border: const OutlineInputBorder(),
-                  hintText: placeholder
-              ),
+                  border: const OutlineInputBorder(), hintText: placeholder),
               keyboardType:
-              isNumeric ? TextInputType.number : TextInputType.text,
+                  isNumeric ? TextInputType.number : TextInputType.text,
               inputFormatters: isNumeric
                   ? [FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))]
                   : null,
               validator: (value) {
+                // Skip validation if this field is optional
+                if (optionalFields.contains(key)) return null;
+
+                // Required validation
                 if (value == null || value.trim().isEmpty) {
-                  return 'Please enter $label';
+                  return 'Enter $label';
                 }
-                return null;
               },
             ),
           ),
@@ -455,20 +501,41 @@ class _PCForm1YODState extends State<PCForm1YOD> {
     );
   }
 
-  Widget _buildDropdownField(
-      String label, List<String> options, String? selected, Function(String?) onChanged) {
+  Widget _buildDropdownField(String label, List<String> options,
+      String? selected, Function(String?) onChanged) {
+    String? keyName;
+    const optionalDropdowns = [
+      'LL to Paid Driver', 'CNG/ LPG kits',
+      'No Claim Bonus (%)' // matches label or keyName
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
-          SizedBox(width: 180, child: Text(label, style: const TextStyle(fontSize: 16))),
+          SizedBox(
+              width: 180,
+              child: Text(label, style: const TextStyle(fontSize: 16))),
           Expanded(
             child: DropdownButtonFormField<String>(
               value: selected,
-              items: options.map((item) => DropdownMenuItem(value: item, child: Text(item))).toList(),
+              items: options
+                  .map((item) =>
+                      DropdownMenuItem(value: item, child: Text(item)))
+                  .toList(),
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
-              validator: (value) => value == null ? 'Select $label' : null,
+              validator: (value) {
+                // Skip validation if optional
+                if (optionalDropdowns.contains(label) ||
+                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                  return null;
+                }
+
+                if (value == null) {
+                  return 'Select $label';
+                }
+                return null;
+              },
               hint: label == 'Zone'
                   ? const Text('Select Zone')
                   : const Text('Select Option'),
@@ -478,72 +545,86 @@ class _PCForm1YODState extends State<PCForm1YOD> {
       ),
     );
   }
-}
 
-double getOdRate({
-  required int vehicleAgeYears,
-  required String zone, // "A" or "B"
-  int? cubicCapacity,   // For Petrol/Diesel
-  double? kiloWatt,     // For Electric Vehicle
-  required bool isElectric,
-}) {
-  print("age= ${vehicleAgeYears} , zone= ${zone} cubicCapacity= ${cubicCapacity}");
-  // Petrol/Diesel rate table (CC based)
-  Map<String, Map<String, List<double>>> rateTableCC = {
-    "A": {
-      "<=1000": [2.752, 2.708, 2.636, 2.538, 2.431, 2.30],
-      "1001-1500": [2.843, 2.795, 2.721, 2.623, 2.514, 2.40],
-      ">1500": [2.960, 2.912, 2.830, 2.728, 2.616, 2.50],
-    },
-    "B": {
-      "<=1000": [2.622, 2.579, 2.509, 2.414, 2.310, 2.20],
-      "1001-1500": [2.712, 2.663, 2.593, 2.498, 2.392, 2.28],
-      ">1500": [2.826, 2.776, 2.701, 2.599, 2.487, 2.37],
-    },
-  };
+  double getOdRate({
+    required int vehicleAgeYears,
+    required String zone, // "A" or "B"
+    int? cubicCapacity, // For Petrol/Diesel
+    double? kiloWatt, // For Electric Vehicle
+    required bool isElectric,
+  }) {
+    print(
+        "age= ${vehicleAgeYears} , zone= ${zone} cubicCapacity= ${cubicCapacity}");
+    // Petrol/Diesel rate table (CC based)
+    Map<String, Map<String, List<double>>> rateTableCC = {
+      "A": {
+        "<=1000": [2.752, 2.708, 2.636, 2.538, 2.431, 2.30],
+        "1001-1500": [2.843, 2.795, 2.721, 2.623, 2.514, 2.40],
+        ">1500": [2.960, 2.912, 2.830, 2.728, 2.616, 2.50],
+      },
+      "B": {
+        "<=1000": [2.622, 2.579, 2.509, 2.414, 2.310, 2.20],
+        "1001-1500": [2.712, 2.663, 2.593, 2.498, 2.392, 2.28],
+        ">1500": [2.826, 2.776, 2.701, 2.599, 2.487, 2.37],
+      },
+    };
 
-  // Electric Vehicle rate table (kW based)
-  Map<String, Map<String, List<double>>> rateTableKW = {
-    "A": {
-      "<=30": [2.0, 1.95, 1.92, 1.88, 1.85, 1.80],
-      "31-65": [2.2, 2.15, 2.12, 2.08, 2.05, 2.00],
-      ">65": [2.4, 2.35, 2.32, 2.28, 2.25, 2.20],
-    },
-    "B": {
-      "<=30": [1.9, 1.85, 1.82, 1.78, 1.75, 1.70],
-      "31-65": [2.1, 2.05, 2.02, 1.98, 1.95, 1.90],
-      ">65": [2.3, 2.25, 2.22, 2.18, 2.15, 2.10],
-    },
-  };
+    // Electric Vehicle rate table (kW based)
+    Map<String, Map<String, List<double>>> rateTableKW = {
+      "A": {
+        "<=30": [2.0, 1.95, 1.92, 1.88, 1.85, 1.80],
+        "31-65": [2.2, 2.15, 2.12, 2.08, 2.05, 2.00],
+        ">65": [2.4, 2.35, 2.32, 2.28, 2.25, 2.20],
+      },
+      "B": {
+        "<=30": [1.9, 1.85, 1.82, 1.78, 1.75, 1.70],
+        "31-65": [2.1, 2.05, 2.02, 1.98, 1.95, 1.90],
+        ">65": [2.3, 2.25, 2.22, 2.18, 2.15, 2.10],
+      },
+    };
 
-  // Pick correct rate table
-  var table = isElectric ? rateTableKW : rateTableCC;
+    // Pick correct rate table
+    var table = isElectric ? rateTableKW : rateTableCC;
 
-  // Determine band based on type
-  String band;
-  if (isElectric) {
-    if (kiloWatt == null) throw ArgumentError("kiloWatt is required for EV");
-    if (kiloWatt <= 30) band = "<=30";
-    else if (kiloWatt <= 65) band = "31-65";
-    else band = ">65";
-  } else {
-    if (cubicCapacity == null) throw ArgumentError("cubicCapacity is required for Petrol/Diesel");
-    if (cubicCapacity <= 1000) band = "<=1000";
-    else if (cubicCapacity <= 1500) band = "1001-1500";
-    else band = ">1500";
+    // Determine band based on type
+    String band;
+    if (isElectric) {
+      if (kiloWatt == null) throw ArgumentError("kiloWatt is required for EV");
+      if (kiloWatt <= 30)
+        band = "<=30";
+      else if (kiloWatt <= 65)
+        band = "31-65";
+      else
+        band = ">65";
+    } else {
+      if (cubicCapacity == null)
+        throw ArgumentError("cubicCapacity is required for Petrol/Diesel");
+      if (cubicCapacity <= 1000)
+        band = "<=1000";
+      else if (cubicCapacity <= 1500)
+        band = "1001-1500";
+      else
+        band = ">1500";
+    }
+
+    // Determine age index
+    int idx;
+    if (vehicleAgeYears == 1)
+      idx = 0;
+    else if (vehicleAgeYears == 2)
+      idx = 1;
+    else if (vehicleAgeYears == 3)
+      idx = 2;
+    else if (vehicleAgeYears == 4)
+      idx = 3;
+    else if (vehicleAgeYears == 5)
+      idx = 4;
+    else
+      idx = 5;
+
+    // Get the rate
+    List<double>? list = table[zone]?[band];
+    if (list == null) return 2.5; // fallback
+    return list[idx];
   }
-
-  // Determine age index
-  int idx;
-  if (vehicleAgeYears == 1) idx = 0;
-  else if (vehicleAgeYears == 2) idx = 1;
-  else if (vehicleAgeYears == 3) idx = 2;
-  else if (vehicleAgeYears == 4) idx = 3;
-  else if (vehicleAgeYears == 5) idx = 4;
-  else idx = 5;
-
-  // Get the rate
-  List<double>? list = table[zone]?[band];
-  if (list == null) return 2.5; // fallback
-  return list[idx];
 }

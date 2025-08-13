@@ -21,7 +21,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "CNG/LPG kit (Externally Mounted)",
+          "CNG/LPG kit (Externally Fitted)",
           "Basic OD Premium",
           "IMT 23",
           "Basic OD Premium Before discount",
@@ -29,8 +29,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "Loading on OD Premium",
           "Basic OD Before NCB",
           "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Total A"
+          "Net Own Damage Premium [Total A]"
         ],
         "[B] Liability Premium": [
           "Basic Liability Premium (TP)",
@@ -38,7 +37,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "CNG/LPG Kit",
           "PA to Owner Driver",
           "LL to Paid Driver",
-          "LL to Employee/Other",
+          "LL to Employee Other than Paid Driver",
           "LL to Passenger",
           "Total B"
         ],
@@ -52,6 +51,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
         "Basic Details": [
           "IDV",
           "no of Trailers (Attached)",
+          "Trailer Towed By",
           "Year of Manufacture",
           "Zone",
         ],
@@ -92,16 +92,15 @@ class MiscInsuranceResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "CNG/LPG kit (Externally Mounted)",
+          "CNG/LPG kit (Externally Fitted)",
           "Basic OD Premium",
-          "IMT 23",
+          "IMT23",
           "Basic OD Before Discount",
           "Discount on OD Premium",
           "Loading on OD Premium",
           "Basic OD Before NCB",
           "No Claim Bonus",
-          "Net Own Damage Premium",
-          "Total A"
+          "Net Own Damage Premium [A]"
         ],
         "[B] Liability Premium": [
           "Basic Liability Premium (TP)",
@@ -109,7 +108,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "CNG/LPG Kit",
           "PA to Owner Driver",
           "LL to Paid Driver",
-          "LL to Employee/Other",
+          "LL to Employee Other than Paid Driver",
           "LL to Passenger",
           "Total B"
         ],
@@ -127,13 +126,13 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "CNG/LPG kit (Externally Fitted)",
           "Basic OD Premium",
           "IMT 23",
-          "Basic OD Premium Before Discount",
+          "Basic OD Before Discount",
           "Discount on OD Premium",
           "Loading on OD Premium",
           "Basic OD Before NCB",
           "No Claim Bonus",
           "Net Own Damage Premium",
-          "Total A"
+          // "Total A"
         ],
         "[B] Liability Premium": [
           "Basic Liability Premium (TP)",
@@ -165,7 +164,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "Net Own Damage Premium",
         ],
         "[B] Liability Premium": [
-          "Basic Liability Premium (TP)",
+          "Liability Premium (TP)",
           "Geographical Ext",
           "PA to Owner Driver",
           "LL to Paid Driver",
@@ -195,7 +194,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "Overturning for Cranes",
           "IMT 23",
           "CNG/LPG kit (Externally Fitted)",
-          "Basic OD Before Discount",
+          "Basic OD Premium before discount",
           "Discount on OD Premium",
           "Loading on OD Premium",
           "Basic OD Before NCB",
@@ -210,15 +209,15 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "CNG/LPG Kit",
           "PA to Owner Driver",
           "LL to Paid Driver",
-          "LL to Employee/Other",
+          "LL to Employee Other than Paid Driver",
           "Total Liability Premium (B)"
         ]
       }
     };
 
     final vehicleType = resultData.vehicleType;
-    final sections = categoryFieldMapping[vehicleType] ??
-        categoryFieldMapping["Ambulance"]!;
+    final sections =
+        categoryFieldMapping[vehicleType] ?? categoryFieldMapping["Ambulance"]!;
 
     return Scaffold(
       appBar: AppBar(

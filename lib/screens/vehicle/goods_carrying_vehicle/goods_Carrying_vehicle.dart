@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:motor_insurance_app/screens/vehicle/goods_carrying_vehicle/gcv_result_screen.dart';import 'package:motor_insurance_app/models/result_data.dart';
+import 'package:motor_insurance_app/screens/vehicle/goods_carrying_vehicle/gcv_result_screen.dart';
+import 'package:motor_insurance_app/models/result_data.dart';
 
 class GoodsCarryingVehicleScreen extends StatefulWidget {
   const GoodsCarryingVehicleScreen({super.key});
@@ -98,112 +99,119 @@ class _GoodsCarryingVehicleScreenState
   }
 
   void _submitForm() {
-    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
-    String year = _controllers['yearOfManufacture']!.text;
-    String zone = _selectedZone ?? 'A';
-    String age = _selectedAge ?? 'Upto 5 Years';
-    int gvw = int.tryParse(_controllers['grossVehicleWeight']!.text) ?? 0;
-    double discount =
-        double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-    double electricalAccessories =
-        double.tryParse(_controllers['electricalAccessories']!.text) ?? 0.0;
-    double externalCngLpgKit =
-        double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
-    double zeroDep =
-        double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
-    double rsaAmount = double.tryParse(_controllers['rsaAmount']!.text) ?? 0.0;
-    double paOwnerDriver =
-        double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
-    double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
-    double ncb =
-        double.tryParse((_selectedNcb ?? '0%').replaceAll('%', '')) ?? 0.0;
+    if (_formKey.currentState!.validate()) {
+      double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+      String year = _controllers['yearOfManufacture']!.text;
+      String zone = _selectedZone ?? 'A';
+      String age = _selectedAge ?? 'Upto 5 Years';
+      int gvw = int.tryParse(_controllers['grossVehicleWeight']!.text) ?? 0;
+      double discount =
+          double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+      double electricalAccessories =
+          double.tryParse(_controllers['electricalAccessories']!.text) ?? 0.0;
+      double externalCngLpgKit =
+          double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
+      double zeroDep =
+          double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
+      double rsaAmount =
+          double.tryParse(_controllers['rsaAmount']!.text) ?? 0.0;
+      double paOwnerDriver =
+          double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      double otherCess =
+          double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+      double ncb =
+          double.tryParse((_selectedNcb ?? '0%').replaceAll('%', '')) ?? 0.0;
 
-    double geoExtAmt = _selectedGeographicalExtn == 0 ? 0.0 : 50;
-    double imt23Amt = _selectedImt23 == 'Yes' ? 200.0 : 0.0;
-    double antiTheftAmt = _selectedAntiTheft == 'Yes' ? -200.0 : 0.0;
-    double restrictedTppdAmt = _selectedRestrictedTppd == 'Yes' ? -100.0 : 0.0;
-    double llPaidDriverAmt = _selectedLlPaidDriver == 0 ? 0.0 : 50;
-    double llOtherEmpAmt =
-        double.tryParse(_selectedLlOtherEmployee ?? '0') ?? 0.0;
-    double cngTpAmt = _selectedCngLpgKit == 'Yes' ? 60.0 : 0.0;
+      double geoExtAmt = _selectedGeographicalExtn == 0 ? 0.0 : 50;
+      double imt23Amt = _selectedImt23 == 'Yes' ? 200.0 : 0.0;
+      double antiTheftAmt = _selectedAntiTheft == 'Yes' ? -200.0 : 0.0;
+      double restrictedTppdAmt =
+          _selectedRestrictedTppd == 'Yes' ? -100.0 : 0.0;
+      double llPaidDriverAmt = _selectedLlPaidDriver == 0 ? 0.0 : 50;
+      double llOtherEmpAmt =
+          double.tryParse(_selectedLlOtherEmployee ?? '0') ?? 0.0;
+      double cngTpAmt = _selectedCngLpgKit == 'Yes' ? 60.0 : 0.0;
 
-    double basicRate = _getOdRate(zone, age, gvw);
+      double basicRate = _getOdRate(zone, age, gvw);
 
-    double basicForVehicle = (idv * basicRate) / 100;
-    double basicOdBeforeDiscount = basicForVehicle +
-        electricalAccessories +
-        externalCngLpgKit +
-        geoExtAmt +
-        imt23Amt +
-        antiTheftAmt;
-    double discountAmt = (basicOdBeforeDiscount * discount) / 100;
-    double basicOdBeforeNcb = basicOdBeforeDiscount - discountAmt;
-    double ncbAmt = (basicOdBeforeNcb * ncb) / 100;
-    double netOdPremium = basicOdBeforeNcb - ncbAmt;
-    double totalA = netOdPremium;
+      double basicForVehicle = (idv * basicRate) / 100;
+      double basicOdBeforeDiscount = basicForVehicle +
+          electricalAccessories +
+          externalCngLpgKit +
+          geoExtAmt +
+          imt23Amt +
+          antiTheftAmt;
+      double discountAmt = (basicOdBeforeDiscount * discount) / 100;
+      double basicOdBeforeNcb = basicOdBeforeDiscount - discountAmt;
+      double ncbAmt = (basicOdBeforeNcb * ncb) / 100;
+      double netOdPremium = basicOdBeforeNcb - ncbAmt;
+      double totalA = netOdPremium;
 
-    double totalB = zeroDep + rsaAmount;
+      double totalB = zeroDep + rsaAmount;
 
-    double basicTp = 12000.0;
-    double totalC = basicTp +
-        restrictedTppdAmt +
-        cngTpAmt +
-        geoExtAmt +
-        paOwnerDriver +
-        llPaidDriverAmt +
-        llOtherEmpAmt;
+      double basicTp = _getTpRate(gvw);
 
-    double totalABC = totalA + totalB + totalC;
-    double gst = totalABC * 0.18;
-    double otherCessAmt = (totalABC * otherCess) / 100;
-    double finalPremium = totalABC + gst + otherCessAmt;
+      double totalC = basicTp +
+          restrictedTppdAmt +
+          cngTpAmt +
+          geoExtAmt +
+          paOwnerDriver +
+          llPaidDriverAmt +
+          llOtherEmpAmt;
 
-    Map<String, String> resultMap = {
-      "IDV": idv.toStringAsFixed(2),
-      "Year of Manufacture": year,
-      "Zone": zone,
-      "Gross Vehicle Weight": gvw.toString(),
-      "Vehicle Basic Rate": basicRate.toStringAsFixed(2),
-      "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-      "Electrical Accessories": electricalAccessories.toStringAsFixed(2),
-      "CNG/LPG Kits": externalCngLpgKit.toStringAsFixed(2),
-      "Geographical Ext": geoExtAmt.toStringAsFixed(2),
-      "IMT 23": imt23Amt.toStringAsFixed(2),
-      "Anti-Theft": antiTheftAmt.toStringAsFixed(2),
-      "Basic OD before Discount": basicOdBeforeDiscount.toStringAsFixed(2),
-      "Discount on OD": discountAmt.toStringAsFixed(2),
-      "Basic OD before NCB": basicOdBeforeNcb.toStringAsFixed(2),
-      "NCB": ncbAmt.toStringAsFixed(2),
-      "Net Own Damage Premium (A)": totalA.toStringAsFixed(2),
-      "Zero Depreciation": zeroDep.toStringAsFixed(2),
-      "RSA": rsaAmount.toStringAsFixed(2),
-      "Total Addon Premium (B)": totalB.toStringAsFixed(2),
-      "Basic Liability Premium (TP)": basicTp.toStringAsFixed(2),
-      "Restricted TPPD": restrictedTppdAmt.toStringAsFixed(2),
-      "CNG/LPG Kit (TP)": cngTpAmt.toStringAsFixed(2),
-      "Geographical Ext (TP)": geoExtAmt.toStringAsFixed(2),
-      "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-      "LL to Paid Driver": llPaidDriverAmt.toStringAsFixed(2),
-      "LL to Other Employee": llOtherEmpAmt.toStringAsFixed(2),
-      "Total Liability Premium (C)": totalC.toStringAsFixed(2),
-      "Total Premium (A+B+C)": totalABC.toStringAsFixed(2),
-      "GST (18%)": gst.toStringAsFixed(2),
-      "Other CESS": otherCessAmt.toStringAsFixed(2),
-      "Final Premium": finalPremium.toStringAsFixed(2),
-    };
+      double totalABC = totalA + totalB + totalC;
+      double gst = totalABC * 0.18;
+      double otherCessAmt = (totalABC * otherCess) / 100;
+      double finalPremium = totalABC + gst + otherCessAmt;
 
-    InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Goods Carrying Vehicle",
-      fieldData: resultMap,
-      totalPremium: finalPremium,
-    );
+      Map<String, String> resultMap = {
+        "IDV": idv.toStringAsFixed(2),
+        "Year of Manufacture": year,
+        "Zone": zone,
+        "Gross Vehicle Weight": gvw.toString(),
+        "Vehicle Basic Rate": basicRate.toStringAsFixed(2),
+        "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
+        "Electrical Accessories": electricalAccessories.toStringAsFixed(2),
+        "CNG/LPG Kits": externalCngLpgKit.toStringAsFixed(2),
+        "Geographical Ext": geoExtAmt.toStringAsFixed(2),
+        "IMT 23": imt23Amt.toStringAsFixed(2),
+        "Anti-Theft": antiTheftAmt.toStringAsFixed(2),
+        "Basic OD before Discount": basicOdBeforeDiscount.toStringAsFixed(2),
+        "Discount on OD": discountAmt.toStringAsFixed(2),
+        "Basic OD before NCB": basicOdBeforeNcb.toStringAsFixed(2),
+        "NCB": ncbAmt.toStringAsFixed(2),
+        "Net Own Damage Premium (A)": totalA.toStringAsFixed(2),
+        "Zero Depreciation": zeroDep.toStringAsFixed(2),
+        "RSA": rsaAmount.toStringAsFixed(2),
+        "Total Addon Premium (B)": totalB.toStringAsFixed(2),
+        "Basic Liability Premium (TP)": basicTp.toStringAsFixed(2),
+        "Restricted TPPD": restrictedTppdAmt.toStringAsFixed(2),
+        "CNG/LPG Kit (TP)": cngTpAmt.toStringAsFixed(2),
+        "Geographical Ext (TP)": geoExtAmt.toStringAsFixed(2),
+        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llPaidDriverAmt.toStringAsFixed(2),
+        "LL to Other Employee": llOtherEmpAmt.toStringAsFixed(2),
+        "Total Liability Premium (C)": totalC.toStringAsFixed(2),
+        "Total Premium (A+B+C)": totalABC.toStringAsFixed(2),
+        "GST (18%)": gst.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2),
+        "Final Premium": finalPremium.toStringAsFixed(2),
+      };
 
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => GcvInsuranceResultScreen(resultData: resultData),
-      ),
-    );
+      InsuranceResultData resultData = InsuranceResultData(
+        vehicleType: "Goods Carrying Vehicle",
+        fieldData: resultMap,
+        totalPremium: finalPremium,
+      );
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              GcvInsuranceResultScreen(resultData: resultData),
+        ),
+      );
+    }
   }
 
   void _resetForm() {
@@ -349,6 +357,15 @@ class _GoodsCarryingVehicleScreenState
 
   Widget _buildTextField(String key, String label, String placeholder,
       {bool readOnly = false}) {
+    const optionalFields = [
+      'electricalAccessories',
+      'externalCngLpgKit',
+      'zeroDepreciation',
+      'rsaAmount',
+      'paOwnerDriver',
+      'otherCess',
+      'discountOnOd'
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -358,19 +375,24 @@ class _GoodsCarryingVehicleScreenState
               child: Text(label, style: const TextStyle(fontSize: 16))),
           Expanded(
             child: TextFormField(
-              controller: _controllers[key],
-              readOnly: readOnly,
-              decoration: InputDecoration(
-                border: const OutlineInputBorder(),
-                hintText: placeholder,
-              ),
-              keyboardType: TextInputType.number,
-              inputFormatters: readOnly
-                  ? []
-                  : [FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))],
-              validator: (value) =>
-                  value == null || value.trim().isEmpty ? 'Enter $label' : null,
-            ),
+                controller: _controllers[key],
+                readOnly: readOnly,
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  hintText: placeholder,
+                ),
+                keyboardType: TextInputType.number,
+                inputFormatters: readOnly
+                    ? []
+                    : [FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))],
+                validator: (value) {
+                  if (optionalFields.contains(key)) return null;
+
+                  // Required validation
+                  if (value == null || value.trim().isEmpty) {
+                    return 'Enter $label';
+                  }
+                }),
           ),
         ],
       ),
@@ -379,6 +401,15 @@ class _GoodsCarryingVehicleScreenState
 
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged) {
+    String? keyName;
+    const optionalDropdowns = [
+      'LL to Paid Driver', 'IMT 23',
+      'Geographical Extn.', 'Anti Theft',
+      'No Claim Bonus (%)', 'LL to Paid Driver',
+      'LL to Employee Other than paid Driver',
+      'CNG/LPG Kits',
+      'Restricted TPPD' // matches label or keyName
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -395,8 +426,20 @@ class _GoodsCarryingVehicleScreenState
                   .toList(),
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
-              validator: (value) => value == null ? 'Select $label' : null,
-              hint: const Text('Select Option'),
+              validator: (value) {
+                if (optionalDropdowns.contains(label) ||
+                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                  return null;
+                }
+
+                if (value == null) {
+                  return 'Select $label';
+                }
+                return null;
+              },
+              hint: label == 'Zone'
+                  ? const Text('Select Zone')
+                  : const Text('Select Option'),
             ),
           ),
         ],
@@ -436,4 +479,12 @@ double _getOdRate(String zone, String age, int gvw) {
     }
   }
   return 3.5; // Safe fallback
+}
+
+double _getTpRate(int gvw) {
+  if (gvw <= 7500) return 16049;
+  if (gvw <= 12000) return 27186;
+  if (gvw <= 20000) return 35313;
+  if (gvw <= 40000) return 43950;
+  return 44242;
 }

@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CashlessgarageList extends StatefulWidget {
-  const CashlessgarageList({Key? key}) : super(key: key);
+  const CashlessgarageList({super.key});
 
   @override
   State<CashlessgarageList> createState() => _CashlessgarageListState();
@@ -12,104 +12,106 @@ class CashlessgarageList extends StatefulWidget {
 class _CashlessgarageListState extends State<CashlessgarageList> {
   List<CashlessGarage> cashlessGarageList = [
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/acko.jpg',
         name: 'Acko General Insurance Limited',
         url: 'https://www.acko.com'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/bajaj.png',
         name: 'Bajaj Allianz General Insurance Co. Ltd.',
         url: 'https://www.bajajallianz.com'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/chola.png',
         name: 'Cholamandalam MS General Insurance Company Ltd',
         url: 'https://www.cholainsurance.com'),
+    // CashlessGarage(
+    //     logo: '',
+    //     name: 'DHFL General Insurance Limited',
+    //     url:
+    //         'https://www.hizuno.com'), // DHFL General Insurance is now Zuno General Insurance
     CashlessGarage(
-        logo: '',
-        name: 'DHFL General Insurance Limited',
-        url:
-            'https://www.zunoi.com'), // DHFL General Insurance is now Zuno General Insurance
-    CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/future_generali.png',
         name: 'Future Generali India Insurance Company Ltd',
         url: 'https://general.futuregenerali.in'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/digit.png',
         name: 'Go Digit General Insurance Limited',
         url: 'https://www.godigit.com'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/hdfc.png',
         name: 'HDFC ERGO General Insurance Company Limited',
         url: 'https://www.hdfcergo.com'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/icici.png',
         name: 'ICICI Lombard General Insurance Company Limited',
         url: 'https://www.icicilombard.com'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/iffco.png',
         name: 'Iffco Tokio General Insurance Company Ltd',
         url: 'https://www.iffcotokio.co.in'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/zurich.jpg',
         name: 'Kotak Mahindra General Insurance Co. Ltd.',
         url: 'https://www.kotakgeneral.com'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/Liberty_General_Insurance.jpg',
         name: 'Liberty General Insurance Ltd.',
         url: 'https://www.libertyinsurance.in'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/magma.jpg',
         name: 'Magma HDI General Insurance Co. Ltd.',
         url: 'https://www.magmahdi.com'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/national.jpg',
         name: 'National Insurance Co. Ltd.',
         url: 'https://nationalinsurance.nic.co.in'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/Navi.png',
         name: 'Navi General Insurance Ltd.',
         url: 'https://www.navi.com'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/newindia.png',
         name: 'The New India Assurance Co. Ltd.',
         url: 'https://www.newindia.co.in'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/oriental.png',
         name: 'The Oriental Insurance Company Ltd.',
         url: 'https://orientalinsurance.org.in'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/raheja.png',
         name: 'Raheja QBE General Insurance Co. Ltd.',
         url: 'https://www.rahejaqbe.com'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/reliance.png',
         name: 'Reliance General Insurance Co. Ltd.',
         url: 'https://www.reliancegeneral.co.in'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/royal_sundaram.jpg',
         name: 'Royal Sundaram General Insurance Co. Ltd.',
         url: 'https://www.royalsundaram.in'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/sbi.png',
         name: 'SBI General Insurance Co. Ltd.',
         url: 'https://www.sbigeneral.in'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/shriram.jpg',
         name: 'Shriram General Insurance Co. Ltd.',
         url: 'https://www.shriramgi.com'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/tataaig.png',
         name: 'Tata AIG General Insurance Co. Ltd.',
         url: 'https://www.tataaig.com'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/uiic.png',
         name: 'United India Insurance Company Limited',
         url: 'https://www.uiic.co.in'),
     CashlessGarage(
-        logo: '',
+        logo: 'assets/logos/universalsompo.png',
         name: 'Universal Sompo General Insurance Co. Ltd.',
         url: 'https://www.universalsompo.com'),
     CashlessGarage(
-        logo: '', name: 'Zuno General Insurance', url: 'https://www.zunoi.com'),
+        logo: 'assets/logos/zuno.png',
+        name: 'Zuno General Insurance',
+        url: 'https://www.hizuno.com'),
   ];
 
   @override
@@ -198,10 +200,11 @@ class _CashlessgarageListState extends State<CashlessgarageList> {
         child: Row(
           children: [
             CircleAvatar(
+              backgroundColor: Colors.transparent,
               radius: 30,
               child: logo.isEmpty
                   ? Image.asset('assets/fillerLogo.jpeg')
-                  : Image.network(logo),
+                  : Image.asset(logo),
             ),
             const SizedBox(width: 16),
             Expanded(

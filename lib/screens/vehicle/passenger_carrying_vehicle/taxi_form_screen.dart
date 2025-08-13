@@ -412,6 +412,15 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
 
   Widget _buildTextField(String key, String label, String placeholder,
       {bool readOnly = false}) {
+        const optionalFields = [
+      'electronicAccessories',
+      'zeroDepRate',
+      'paOwnerDriver',
+      'paUnnamedPassenger',
+      'otherCess',
+      'discountOnOd',
+      'externalCngLpgKit','rsaAmount'
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -432,10 +441,16 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
               inputFormatters: [
                 FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
               ],
-              validator: (value) =>
-                  (value == null || value.trim().isEmpty) && !readOnly
-                      ? 'Enter $label'
-                      : null,
+              validator: (value) {
+                  // Skip validation if this field is optional
+                  if (optionalFields.contains(key)) return null;
+
+                  // Required validation
+                  if (value == null || value.trim().isEmpty) {
+                    return 'Enter $label';
+                  }
+                  return null;
+                }
             ),
           ),
         ],
@@ -446,6 +461,11 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged,
       {String placeholder = 'Select Option'}) {
+        String? keyName; // Optional: pass a key for validation skip
+    const optionalDropdowns = [
+      'LL To Paid Driver', 'No Claim Bonus (%)', 'Geographical Extn.',
+      'CNG/LPG Kits', 'IMT 23','Restricted TPPD','Anti Theft' // matches label or keyName
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -462,7 +482,18 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
                   .toList(),
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
-              validator: (value) => value == null ? 'Select $label' : null,
+              validator: (value) {
+                // Skip validation if optional
+                if (optionalDropdowns.contains(label) ||
+                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                  return null;
+                }
+
+                if (value == null) {
+                  return 'Select $label';
+                }
+                return null;
+              },
               hint: Text(placeholder),
             ),
           ),

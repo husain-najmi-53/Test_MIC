@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:motor_insurance_app/models/result_data.dart';
 import 'package:motor_insurance_app/screens/vehicle/goods_carrying_vehicle/gcv_result_screen.dart';
+
 class ThreeWheelerGoodsScreen extends StatefulWidget {
   const ThreeWheelerGoodsScreen({super.key});
 
@@ -83,90 +84,95 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
   }
 
   void _submitForm() {
-    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
-    String year = _controllers['yearOfManufacture']!.text;
-    String zone = _selectedZone ?? 'A';
-    String age = _selectedAge ?? 'Upto 5 Years';
-    double discount =
-        double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-    double externalCngLpgKit =
-        double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
-    double paOwnerDriver =
-        double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
-    double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
-    double ncb =
-        double.tryParse((_selectedNcb ?? '0%').replaceAll('%', '')) ?? 0.0;
+    if (_formKey.currentState!.validate()) {
+      double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+      String year = _controllers['yearOfManufacture']!.text;
+      String zone = _selectedZone ?? 'A';
+      String age = _selectedAge ?? 'Upto 5 Years';
+      double discount =
+          double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+      double externalCngLpgKit =
+          double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
+      double paOwnerDriver =
+          double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      double otherCess =
+          double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+      double ncb =
+          double.tryParse((_selectedNcb ?? '0%').replaceAll('%', '')) ?? 0.0;
 
-    // Add-ons
-    double imt23Amt = _selectedImt23 == 'Yes' ? 200.0 : 0.0;
-    double cngTpAmt = _selectedCngLpgKit == 'Yes' ? 60.0 : 0.0;
-    double restrictedTppdAmt = _selectedRestrictedTppd == 'Yes' ? -100.0 : 0.0;
-    double llPaidDriverAmt =
-        (_selectedLlPaidDriver != null && _selectedLlPaidDriver != '0')
-            ? double.tryParse(_selectedLlPaidDriver!) ?? 0.0
-            : 0.0;
+      // Add-ons
+      double imt23Amt = _selectedImt23 == 'Yes' ? 200.0 : 0.0;
+      double cngTpAmt = _selectedCngLpgKit == 'Yes' ? 60.0 : 0.0;
+      double restrictedTppdAmt =
+          _selectedRestrictedTppd == 'Yes' ? -100.0 : 0.0;
+      double llPaidDriverAmt =
+          (_selectedLlPaidDriver != null && _selectedLlPaidDriver != '0')
+              ? double.tryParse(_selectedLlPaidDriver!) ?? 0.0
+              : 0.0;
 
-    // ---- OD Calculation ----
-    double basicRate = _getThreeWheelerOdRate(zone, age);
-    double basicOd = (idv * basicRate) / 100;
-    double odBeforeDiscount = basicOd + externalCngLpgKit + imt23Amt;
-    double discountAmt = (odBeforeDiscount * discount) / 100;
-    double odBeforeNcb = odBeforeDiscount - discountAmt;
-    double ncbAmt = (odBeforeNcb * ncb) / 100;
-    double netOdPremium = odBeforeNcb - ncbAmt;
+      // ---- OD Calculation ----
+      double basicRate = _getThreeWheelerOdRate(zone, age);
+      double basicOd = (idv * basicRate) / 100;
+      double odBeforeDiscount = basicOd + externalCngLpgKit + imt23Amt;
+      double discountAmt = (odBeforeDiscount * discount) / 100;
+      double odBeforeNcb = odBeforeDiscount - discountAmt;
+      double ncbAmt = (odBeforeNcb * ncb) / 100;
+      double netOdPremium = odBeforeNcb - ncbAmt;
 
-    // ---- TP Calculation ----
-    double basicTp = 5077.0;
-    double totalTp = basicTp +
-        cngTpAmt +
-        paOwnerDriver +
-        llPaidDriverAmt +
-        restrictedTppdAmt;
+      // ---- TP Calculation ----
+      double basicTp = 5077.0;
+      double totalTp = basicTp +
+          cngTpAmt +
+          paOwnerDriver +
+          llPaidDriverAmt +
+          restrictedTppdAmt;
 
-    // ---- Total ----
-    double totalAB = netOdPremium + totalTp;
-    double gst = totalAB * 0.18;
-    double otherCessAmt = (totalAB * otherCess) / 100;
-    double finalPremium = totalAB + gst + otherCessAmt;
+      // ---- Total ----
+      double totalAB = netOdPremium + totalTp;
+      double gst = totalAB * 0.18;
+      double otherCessAmt = (totalAB * otherCess) / 100;
+      double finalPremium = totalAB + gst + otherCessAmt;
 
-    // Prepare result map
-    Map<String, String> resultMap = {
-      "IDV": idv.toStringAsFixed(2),
-      "Year of Manufacture": year,
-      "Zone": zone,
-      "Basic OD Rate (%)": basicRate.toStringAsFixed(2),
-      "Basic for Vehicle": basicOd.toStringAsFixed(2),
-      "External CNG/LPG": externalCngLpgKit.toStringAsFixed(2),
-      "IMT 23": imt23Amt.toStringAsFixed(2),
-      "OD Before Discount": odBeforeDiscount.toStringAsFixed(2),
-      "Discount on OD": discountAmt.toStringAsFixed(2),
-      "OD Before NCB": odBeforeNcb.toStringAsFixed(2),
-      "NCB": ncbAmt.toStringAsFixed(2),
-      "Net OD Premium": netOdPremium.toStringAsFixed(2),
-      "Basic TP": basicTp.toStringAsFixed(2),
-      "CNG TP": cngTpAmt.toStringAsFixed(2),
-      "PA Owner Driver": paOwnerDriver.toStringAsFixed(2),
-      "LL to Paid Driver": llPaidDriverAmt.toStringAsFixed(2),
-      "Restricted TPPD": restrictedTppdAmt.toStringAsFixed(2),
-      "Total TP Premium": totalTp.toStringAsFixed(2),
-      "Total Premium (OD+TP)": totalAB.toStringAsFixed(2),
-      "GST (18%)": gst.toStringAsFixed(2),
-      "Other Cess": otherCessAmt.toStringAsFixed(2),
-      "Final Premium": finalPremium.toStringAsFixed(2),
-    };
+      // Prepare result map
+      Map<String, String> resultMap = {
+        "IDV": idv.toStringAsFixed(2),
+        "Year of Manufacture": year,
+        "Zone": zone,
+        "Basic OD Rate (%)": basicRate.toStringAsFixed(2),
+        "Basic for Vehicle": basicOd.toStringAsFixed(2),
+        "External CNG/LPG": externalCngLpgKit.toStringAsFixed(2),
+        "IMT 23": imt23Amt.toStringAsFixed(2),
+        "OD Before Discount": odBeforeDiscount.toStringAsFixed(2),
+        "Discount on OD": discountAmt.toStringAsFixed(2),
+        "OD Before NCB": odBeforeNcb.toStringAsFixed(2),
+        "NCB": ncbAmt.toStringAsFixed(2),
+        "Net OD Premium": netOdPremium.toStringAsFixed(2),
+        "Basic TP": basicTp.toStringAsFixed(2),
+        "CNG TP": cngTpAmt.toStringAsFixed(2),
+        "PA Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llPaidDriverAmt.toStringAsFixed(2),
+        "Restricted TPPD": restrictedTppdAmt.toStringAsFixed(2),
+        "Total TP Premium": totalTp.toStringAsFixed(2),
+        "Total Premium (OD+TP)": totalAB.toStringAsFixed(2),
+        "GST (18%)": gst.toStringAsFixed(2),
+        "Other Cess": otherCessAmt.toStringAsFixed(2),
+        "Final Premium": finalPremium.toStringAsFixed(2),
+      };
 
-    InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Three-Wheeler Goods Carrying",
-      fieldData: resultMap,
-      totalPremium: finalPremium,
-    );
+      InsuranceResultData resultData = InsuranceResultData(
+        vehicleType: "Three-Wheeler Goods Carrying",
+        fieldData: resultMap,
+        totalPremium: finalPremium,
+      );
 
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => GcvInsuranceResultScreen(resultData: resultData),
-      ),
-    );
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              GcvInsuranceResultScreen(resultData: resultData),
+        ),
+      );
+    }
   }
 
   // OD Rate for Three-Wheeler Goods Carrying
@@ -302,27 +308,49 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
     );
   }
 
-  Widget _buildTextField(String key, String label, String placeholder) {
+  Widget _buildTextField(String key, String label, String placeholder,
+      {bool enabled = true}) {
+    const optionalFields = [
+      'electricalAccessories',
+      'externalCngLpgKit',
+      'zeroDepreciation',
+      'rsaAmount',
+      'paOwnerDriver',
+      'otherCess',
+      'discountOnOd'
+    ];
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
           SizedBox(
-              width: 180,
-              child: Text(label, style: const TextStyle(fontSize: 16))),
+            width: 180,
+            child: Text(label, style: const TextStyle(fontSize: 16)),
+          ),
           Expanded(
             child: TextFormField(
               controller: _controllers[key],
+              enabled: enabled,
               decoration: InputDecoration(
                 border: const OutlineInputBorder(),
                 hintText: placeholder,
               ),
               keyboardType: TextInputType.number,
-              inputFormatters: [
-                FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
-              ],
-              validator: (value) =>
-                  value == null || value.trim().isEmpty ? 'Enter $label' : null,
+              inputFormatters: enabled
+                  ? [FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))]
+                  : [],
+              validator: (value) {
+                // Skip validation if this field is optional
+                if (optionalFields.contains(key)) return null;
+
+                // Required validation
+                if (value == null || value.trim().isEmpty) {
+                  return 'Enter $label';
+                }
+
+                return null; // ✅ Always return null if valid
+              },
             ),
           ),
         ],
@@ -332,13 +360,26 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
 
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged) {
+    const optionalDropdowns = [
+      'LL to Paid Driver',
+      'IMT 23',
+      'Geographical Extn.',
+      'Anti Theft',
+      'No Claim Bonus (%)',
+      'LL to Paid Driver',
+      'LL to Employee Other than paid Driver',
+      'CNG/LPG Kits',
+      'Restricted TPPD'
+    ];
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
           SizedBox(
-              width: 180,
-              child: Text(label, style: const TextStyle(fontSize: 16))),
+            width: 180,
+            child: Text(label, style: const TextStyle(fontSize: 16)),
+          ),
           Expanded(
             child: DropdownButtonFormField<String>(
               value: selected,
@@ -348,8 +389,18 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
                   .toList(),
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
-              validator: (value) => value == null ? 'Select $label' : null,
-              hint: const Text('Select Option'),
+              validator: (value) {
+                if (optionalDropdowns.contains(label)) return null;
+
+                if (value == null) {
+                  return 'Select $label';
+                }
+
+                return null;
+              },
+              hint: label == 'Zone'
+                  ? const Text('Select Zone')
+                  : const Text('Select Option'),
             ),
           ),
         ],

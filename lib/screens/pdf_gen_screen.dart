@@ -135,47 +135,116 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
               List<pw.Widget> content = [];
 
               // Add company header
+              // Company Header with padding
               content.add(
-                pw.Text(
-                  company,
-                  style: pw.TextStyle(
-                      fontSize: 18, fontWeight: pw.FontWeight.bold),
+                pw.Container(
+                  padding: const pw.EdgeInsets.only(bottom: 5),
+                  child: pw.Text(
+                    company,
+                    style: pw.TextStyle(
+                        fontSize: 14, fontWeight: pw.FontWeight.bold),
+                  ),
                 ),
               );
+
+              // Producer and Policy Details with better spacing
               content.add(
-                pw.Row(
-                  crossAxisAlignment: pw.CrossAxisAlignment.start,
-                  mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-                  children: [
-                    ...(includeAgentDetails
-                        ? [
-                            // Left Column: Producer details
-                            pw.Column(
+                pw.Container(
+                  padding: const pw.EdgeInsets.fromLTRB(20, 0, 20, 2),
+                  decoration: pw.BoxDecoration(
+                    border: pw.Border.all(color: PdfColors.grey300),
+                    borderRadius:
+                        const pw.BorderRadius.all(pw.Radius.circular(8)),
+                  ),
+                  child: pw.Row(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      if (includeAgentDetails) ...[
+                        // Producer Details Section
+                        pw.Expanded(
+                          flex: 1,
+                          child: pw.Container(
+                            padding:
+                                const pw.EdgeInsets.only(top: 2, right: 20),
+                            decoration: const pw.BoxDecoration(
+                              border: pw.Border(
+                                right: pw.BorderSide(color: PdfColors.grey300),
+                              ),
+                            ),
+                            child: pw.Column(
                               crossAxisAlignment: pw.CrossAxisAlignment.start,
                               children: [
                                 pw.Text(
-                                    "Producer Name: ${quotation.agentName}"),
+                                  "Producer Details",
+                                  style: pw.TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: pw.FontWeight.bold,
+                                  ),
+                                ),
+                                pw.SizedBox(height: 8),
+                                pw.Text("Producer Name: ${quotation.agentName}",
+                                    style: pw.TextStyle(
+                                      fontSize: 10,
+                                    )),
+                                pw.SizedBox(height: 4),
                                 pw.Text(
-                                    "Producer Email: ${quotation.agentEmail}"),
+                                    "Producer Email: ${quotation.agentEmail}",
+                                    style: pw.TextStyle(
+                                      fontSize: 10,
+                                    )),
+                                pw.SizedBox(height: 4),
                                 pw.Text(
-                                    "Producer Contact: ${quotation.agentContact}"),
+                                    "Producer Contact: ${quotation.agentContact}",
+                                    style: pw.TextStyle(
+                                      fontSize: 10,
+                                    )),
                               ],
                             ),
-                          ]
-                        : []),
-                    // Right Column: Policy details
-                    pw.Column(
-                      crossAxisAlignment: pw.CrossAxisAlignment.start,
-                      children: [
-                        pw.Text(
-                            "Policy Plan: ${quotation.insuranceResult.vehicleType}"),
-                        pw.Text(
-                            "Policy Start Date: ${quotation.policyStartDate.day}/${quotation.policyStartDate.month}/${quotation.policyStartDate.year}"),
-                        pw.Text(
-                            "Policy End Date: ${quotation.policyEndDate.day}/${quotation.policyEndDate.month}/${quotation.policyEndDate.year}"),
+                          ),
+                        ),
                       ],
-                    ),
-                  ],
+                      // Policy Details Section
+                      pw.Expanded(
+                        flex: includeAgentDetails ? 1 : 2,
+                        child: pw.Container(
+                          padding: pw.EdgeInsets.only(
+                            top: 2,
+                            left: includeAgentDetails ? 20 : 0,
+                          ),
+                          child: pw.Column(
+                            crossAxisAlignment: pw.CrossAxisAlignment.start,
+                            children: [
+                              pw.Text(
+                                "Policy Details",
+                                style: pw.TextStyle(
+                                  fontSize: 10,
+                                  fontWeight: pw.FontWeight.bold,
+                                ),
+                              ),
+                              pw.SizedBox(height: 8),
+                              pw.Text(
+                                  "Policy Plan: ${quotation.insuranceResult.vehicleType}",
+                                    style: pw.TextStyle(
+                                      fontSize: 10,
+                                    )),
+                              pw.SizedBox(height: 4),
+                              pw.Text(
+                                  "Policy Start Date: ${quotation.policyStartDate.day}/${quotation.policyStartDate.month}/${quotation.policyStartDate.year}",
+                                    style: pw.TextStyle(
+                                      fontSize: 10,
+                                    )),
+                              pw.SizedBox(height: 4),
+                              pw.Text(
+                                  "Policy End Date: ${quotation.policyEndDate.day}/${quotation.policyEndDate.month}/${quotation.policyEndDate.year}",
+                                    style: pw.TextStyle(
+                                      fontSize: 10,
+                                    )),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               );
 
@@ -497,13 +566,12 @@ pw.Widget buildPdfSection({
         mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
         children: [
           pw.Text(key,
-              style:
-                  pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold)),
-          pw.Text(value, style: pw.TextStyle(fontSize: 10)),
+              style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+          pw.Text(value, style: pw.TextStyle(fontSize: 8)),
         ],
       ),
     );
-    rows.add(pw.SizedBox(height: 6));
+    rows.add(pw.SizedBox(height: 3));
   }
 
   return pw.Column(
@@ -512,14 +580,14 @@ pw.Widget buildPdfSection({
       pw.Text(
         sectionTitle,
         style: pw.TextStyle(
-          fontSize: 12,
+          fontSize: 10,
           fontWeight: pw.FontWeight.bold,
           decoration: pw.TextDecoration.underline,
         ),
       ),
-      pw.SizedBox(height: 8),
+      pw.SizedBox(height: 6),
       pw.Column(children: rows),
-      pw.SizedBox(height: 16),
+      pw.SizedBox(height: 14),
     ],
   );
 }

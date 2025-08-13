@@ -392,6 +392,15 @@ class _ThreeWheelerPCV_upto6PassengerState
 
   Widget _buildTextField(String key, String label, String placeholder,
       {bool enabled = true, Function(String)? onChanged}) {
+        const optionalFields = [
+      'electronicAccessories',
+      'zeroDepreciation',
+      'paOwnerDriver',
+      'paUnnamedPassenger',
+      'otherCess',
+      'discountOnOd',
+      'externalCngLpgKit','rsaAddon'
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -414,11 +423,16 @@ class _ThreeWheelerPCV_upto6PassengerState
               inputFormatters: [
                 FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
               ],
-              validator: (value) =>
-                  (value == null || value.trim().isEmpty) && enabled
-                      ? 'Enter $label'
-                      : null,
-              // onChanged: onChanged,
+              validator: (value) {
+                  // Skip validation if this field is optional
+                  if (optionalFields.contains(key)) return null;
+
+                  // Required validation
+                  if (value == null || value.trim().isEmpty) {
+                    return 'Enter $label';
+                  }
+                  return null;
+                }
             ),
           ),
         ],
@@ -428,6 +442,11 @@ class _ThreeWheelerPCV_upto6PassengerState
 
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged) {
+        String? keyName; // Optional: pass a key for validation skip
+        const optionalDropdowns = [
+      'LL to Paid Driver', 'No Claim Bonus (%)', 'Geographical Extn.',
+      'CNG/LPG Kits', 'IMT 23', 'Restricted TPPD','LL to Other Employees','Anti Theft' // matches label or keyName
+    ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -444,7 +463,18 @@ class _ThreeWheelerPCV_upto6PassengerState
                   .toList(),
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
-              validator: (value) => value == null ? 'Select $label' : null,
+              validator: (value) {
+                // Skip validation if optional
+                if (optionalDropdowns.contains(label) ||
+                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                  return null;
+                }
+
+                if (value == null) {
+                  return 'Select $label';
+                }
+                return null;
+              },
               hint: label == 'Zone'
                   ? const Text('Select Zone')
                   : const Text('Select Option'),
