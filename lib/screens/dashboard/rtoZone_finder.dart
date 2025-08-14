@@ -58,6 +58,7 @@ class _RtoZoneFinderState extends State<RtoZoneFinder> {
                 ),
                 TextFormField(
                   controller: _findController,
+                  textCapitalization: TextCapitalization.characters,
                   obscureText: false,
                   keyboardType: TextInputType.text,
                   validator: (val) {
@@ -141,30 +142,32 @@ class _RtoZoneFinderState extends State<RtoZoneFinder> {
                 ),*/
                 Container(
                   constraints: BoxConstraints(
-                    minHeight: height * 0.29, // Minimum height
-                    maxWidth: width * 0.9, // Max width stays same
+                    minHeight: height * 0.25, // Reduced minimum height
                   ),
-                  padding: EdgeInsets.all(16),
+                  width: width * 0.9,
+                  padding: EdgeInsets.symmetric(
+                    // Balanced vertical padding
+                    vertical: 12,
+                    horizontal: 16,
+                  ),
                   decoration: BoxDecoration(
                     color: Color(0xFFF0F4FF),
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(color: Colors.indigo.shade700),
                   ),
-                  child: IntrinsicHeight(
-                    // Makes all rows equal height
-                    child: Column(
-                      mainAxisSize:
-                          MainAxisSize.min, // Allows container to grow
-                      children: [
-                        _buildExpandableRow('Location', Location),
-                        Divider(color: Colors.black54),
-                        _buildExpandableRow('Zone', Zone),
-                        Divider(color: Colors.black54),
-                        _buildExpandableRow('District', District),
-                        Divider(color: Colors.black54),
-                        _buildExpandableRow('State', State),
-                      ],
-                    ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      SizedBox(height: 4), // Small top buffer
+                      _buildExpandableRow('Location', Location),
+                      Divider(color: Colors.black54),
+                      _buildExpandableRow('Zone', Zone),
+                      Divider(color: Colors.black54),
+                      _buildExpandableRow('District', District),
+                      Divider(color: Colors.black54),
+                      _buildExpandableRow('State', State),
+                      SizedBox(height: 4), // Matching bottom buffer
+                    ],
                   ),
                 )
               ],
@@ -222,6 +225,7 @@ class _details extends StatelessWidget {
     );
   }
 }
+
 // New helper widget (place outside build method)
 Widget _buildExpandableRow(String label, String? value) {
   return Padding(
@@ -230,7 +234,7 @@ Widget _buildExpandableRow(String label, String? value) {
       children: [
         // Column 1: Labels (left-aligned)
         Container(
-          width: 130,  // Fixed width for labels
+          width: 130, // Fixed width for labels
           alignment: Alignment.centerLeft,
           child: Text(
             label,
@@ -243,14 +247,14 @@ Widget _buildExpandableRow(String label, String? value) {
         // Column 2: Values (left-aligned but starts after labels)
         Expanded(
           child: Padding(
-            padding: EdgeInsets.only(left: 16),  // Space between columns
+            padding: EdgeInsets.only(left: 16), // Space between columns
             child: Text(
               value ?? '-',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w400,
                 color: Colors.grey.shade800,
               ),
-              textAlign: TextAlign.left,  // Left-align within the column
+              textAlign: TextAlign.left, // Left-align within the column
               softWrap: true,
             ),
           ),

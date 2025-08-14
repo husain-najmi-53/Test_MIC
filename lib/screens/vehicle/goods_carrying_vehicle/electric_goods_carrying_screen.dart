@@ -126,7 +126,8 @@ class _ElectricGoodsCarryingScreenState
           double.tryParse((_selectedNcb ?? '0%').replaceAll('%', '')) ?? 0.0;
 
       // Optional Add-ons
-      double geoExtAmt = _selectedGeographicalExtn == '0' ? 0.0 : 50;
+      double geoExtAmt =
+          (int.tryParse(_selectedGeographicalExtn ?? '0') == 0) ? 0.0 : 400;
       double imt23Amt = _selectedImt23 == 'Yes' ? 200.0 : 0.0;
       double antiTheftAmt = _selectedAntiTheft == 'Yes' ? -200.0 : 0.0;
       double restrictedTppdAmt =

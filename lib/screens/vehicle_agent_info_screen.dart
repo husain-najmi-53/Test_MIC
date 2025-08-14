@@ -102,39 +102,42 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
     if (!_formKey.currentState!.validate()) {
       return null;
     }
-    
-    if (policyStartDate == null || policyEndDate == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Please select both policy start and end dates'),
-          backgroundColor: Colors.red,
-        ),
-      );
-      return null;
+
+    // If both dates are filled, validate their order
+    if (policyStartDate != null && policyEndDate != null) {
+      if (policyEndDate!.isBefore(policyStartDate!)) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Policy end date cannot be before start date'),
+            backgroundColor: Colors.red,
+          ),
+        );
+        return null;
+      }
     }
 
-    if (policyEndDate!.isBefore(policyStartDate!)) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Policy end date cannot be before start date'),
-          backgroundColor: Colors.red,
-        ),
-      );
-      return null;
-    }
+    // Get the trimmed values
+    final ownerName = _controllers['ownerName']!.text.trim();
+    final make = _controllers['make']!.text.trim();
+    final model = _controllers['model']!.text.trim();
+    // Convert registration number to uppercase before using it
+    final registrationNumber =
+        _controllers['registrationNumber']!.text.toUpperCase().trim();
+    final seatingCapacity = _controllers['seatingCapacity']!.text.trim();
+    final otherCoverage = _controllers['otherCoverage']!.text.trim();
 
     return QuotationData(
       insuranceResult: widget.insuranceResult,
-      ownerName: _controllers['ownerName']!.text.trim(),
-      make: _controllers['make']!.text.trim(),
-      model: _controllers['model']!.text.trim(),
-      registrationNumber: _controllers['registrationNumber']!.text.trim(),
-      seatingCapacity: _controllers['seatingCapacity']!.text.trim(),
-      otherCoverage: _controllers['otherCoverage']!.text.trim().isNotEmpty
-          ? _controllers['otherCoverage']!.text.trim()
-          : null,
-      policyStartDate: policyStartDate!,
-      policyEndDate: policyEndDate!,
+      ownerName: ownerName.isNotEmpty ? ownerName : 'N/A',
+      make: make.isNotEmpty ? make : 'N/A',
+      model: model.isNotEmpty ? model : 'N/A',
+      registrationNumber:
+          registrationNumber.isNotEmpty ? registrationNumber : 'N/A',
+      seatingCapacity: seatingCapacity.isNotEmpty ? seatingCapacity : 'N/A',
+      otherCoverage: otherCoverage.isNotEmpty ? otherCoverage : null,
+      policyStartDate: policyStartDate ?? DateTime.now(),
+      policyEndDate:
+          policyEndDate ?? DateTime.now().add(const Duration(days: 365)),
       agentName: _controllers['agentName']!.text.trim(),
       agentEmail: _controllers['agentEmail']!.text.trim(),
       agentContact: _controllers['agentContact']!.text.trim(),
@@ -144,7 +147,7 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
   Future<void> _saveQuotation() async {
     final quotation = _validateAndCreateQuotation();
     if (quotation == null) return;
-    
+
     try {
       // Save only agent form data to SharedPreferences
       final prefs = await SharedPreferences.getInstance();
@@ -178,18 +181,29 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
   }
 
   String? _validateField(String key, String value) {
+    final isAgentField =
+        ['agentName', 'agentEmail', 'agentContact'].contains(key);
+
+    // Convert registration number to uppercase before validation
+    final processedValue =
+        key == 'registrationNumber' ? value.toUpperCase() : value;
+    // If the field is empty
     if (value.trim().isEmpty) {
-      return 'This field is required';
+      // Only agent fields are required
+      return isAgentField ? 'This field is required' : null;
     }
-    
+
+    // If the field has a value (even optional), validate its format
     switch (key) {
       case 'seatingCapacity':
-        final number = int.tryParse(value);
-        if (number == null) {
-          return 'Please enter a valid number';
-        }
-        if (number <= 0) {
-          return 'Seating capacity must be greater than 0';
+        if (value.isNotEmpty) {
+          final number = int.tryParse(value);
+          if (number == null) {
+            return 'Please enter a valid number';
+          }
+          if (number <= 0) {
+            return 'Seating capacity must be greater than 0';
+          }
         }
         break;
       case 'agentEmail':
@@ -205,9 +219,11 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
         }
         break;
       case 'registrationNumber':
-        final regNoRegex = RegExp(r'^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}$');
-        if (!regNoRegex.hasMatch(value)) {
-          return 'Please enter a valid registration number (e.g., MH02AB1234)';
+        if (value.isNotEmpty) {
+          final regNoRegex = RegExp(r'^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}$');
+          if (!regNoRegex.hasMatch(processedValue)) {
+            return 'Please enter a valid registration number (e.g., MH02AB1234)';
+          }
         }
         break;
     }
@@ -216,24 +232,49 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
 
   Widget _buildTextField(String key, String label, String placeholder,
       {bool isOptional = false}) {
+    bool isAgentField =
+        ['agentName', 'agentEmail', 'agentContact'].contains(key);
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
-            width: 180,
-            child: Text(label, style: const TextStyle(fontSize: 16)),
+          // Label container with fixed width
+          Container(
+            width: 160,
+            margin: const EdgeInsets.only(right: 16),
+            child: Row(
+              children: [
+                Flexible(
+                  child: Text(
+                    label,
+                    style: const TextStyle(fontSize: 16),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                if (!isOptional && isAgentField)
+                  const Text('*',
+                      style: TextStyle(color: Colors.red, fontSize: 16)),
+              ],
+            ),
           ),
+          // Input field with expanded width
           Expanded(
             child: TextFormField(
               controller: _controllers[key],
+              textCapitalization: key == 'registrationNumber'
+                  ? TextCapitalization
+                      .characters // Auto-capitalize for registration
+                  : TextCapitalization.none,
               decoration: InputDecoration(
                 border: const OutlineInputBorder(),
                 hintText: placeholder,
+                contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                isDense: true,
               ),
-              validator: isOptional
-                  ? null
-                  : (value) => value == null ? 'Enter $label' : _validateField(key, value),
+              validator: (value) => _validateField(key, value ?? ''),
             ),
           ),
         ],
@@ -245,11 +286,19 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
-            width: 180,
-            child: Text(label, style: const TextStyle(fontSize: 16)),
+          // Label container with fixed width
+          Container(
+            width: 160,
+            margin: const EdgeInsets.only(right: 16),
+            child: Text(
+              label,
+              style: const TextStyle(fontSize: 16),
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
+          // Date field with expanded width
           Expanded(
             child: GestureDetector(
               onTap: () => _pickDate(isStart: isStartDate),
@@ -266,13 +315,13 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
                   ),
                   decoration: InputDecoration(
                     border: const OutlineInputBorder(),
-                    hintText: 'Select date',
+                    hintText: 'Select date (Optional)',
                     suffixIcon:
                         Icon(Icons.calendar_today, color: Colors.indigo[700]),
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 12, vertical: 12),
+                    isDense: true,
                   ),
-                  validator: (value) => value == null || value.trim().isEmpty
-                      ? 'Select $label'
-                      : null,
                 ),
               ),
             ),
@@ -370,8 +419,8 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
                               color: Colors.indigo),
                         ),
                         const SizedBox(height: 16),
-                        _buildTextField(
-                            'agentName', 'Producer Name', 'Enter Producer name'),
+                        _buildTextField('agentName', 'Producer Name',
+                            'Enter Producer name'),
                         _buildTextField(
                             'agentEmail', 'Producer Email', 'Enter email'),
                         _buildTextField('agentContact', 'Producer Contact',

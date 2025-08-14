@@ -45,7 +45,7 @@ class _VehicleTypeScreenState extends State<VehicleTypeScreen> {
     // Misc
     'Ambulance': '/ambulance',
     'Trailer': '/trailer',
-    'Hearses(Dead Body carry Vehicle)': '/hearses',
+    'Hearse(Dead Body Carry Vehicle)': '/hearses',
     'Pedestrian Controlled Agricultural Tractors': '/agriculturalTractors',
     'Trailer and other MISC': '/trailerAndOtherMisc',
     'Other MISC vehicle': '/otherMiscVehicle',
@@ -140,7 +140,7 @@ class _VehicleTypeScreenState extends State<VehicleTypeScreen> {
         {'name': 'Ambulance', 'icon': Icons.local_hospital},
         {'name': 'Trailer', 'icon': Icons.local_shipping},
         {
-          'name': 'Hearses(Dead Body carry Vehicle)',
+          'name': 'Hearse(Dead Body Carry Vehicle)',
           'icon': Icons.airport_shuttle
         },
         {

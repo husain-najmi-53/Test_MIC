@@ -387,10 +387,10 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
                 ),
                 _buildReadOnlyField(
                     'currentIdv', 'Current IDV (₹)'), // Read-only field
-                _buildTextField('idvAttached', 'IDV (Attached trailer)',
-                    'IDV (Attached trailer)'),
+                _buildTextField('idvAttached', 'IDV (Attached Trailer)',
+                    'IDV (Attached Trailer)'),
                 _buildDropdownField(
-                  'Depreciation (Attached trailer)',
+                  'Depreciation (Attached Trailer)',
                   _depreciationAttachedOptions,
                   _selectedDepreciationAttached,
                   (val) {
@@ -400,12 +400,18 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
                     });
                   },
                 ),
-                _buildReadOnlyField('currentIdv (Attached trailer)',
+                _buildReadOnlyField('currentIdv (Attached Trailer)',
                     'Current IDV (Attached) (₹)'), // Read-only field
+                _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
+                    (val) => setState(() => _selectedAge = val)),
+                _buildTextField('Year_of_manufacture', 'Year of Manufacture',
+                    'Year of Manufacture'),
+                _buildDropdownField('Zone', _zoneOptions, _selectedZone,
+                    (val) => setState(() => _selectedZone = val)),
                 _buildTextField('No_of_trailers(Attached)',
-                    'No. of trailers(Attached)', 'No_of_trailers(Attached)'),
+                    'No. of Trailers(Attached)', 'No of Trailers(Attached)'),
                 _buildDropdownField(
-                    'Trailer towed by',
+                    'Trailer Towed by',
                     _trailerTowedByOptions,
                     _selectedTrailerTowedBy,
                     (val) => setState(() => _selectedTrailerTowedBy = val)),
@@ -415,18 +421,12 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
                     _selectedOverturningForCranes,
                     (val) =>
                         setState(() => _selectedOverturningForCranes = val)),
-                _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
-                    (val) => setState(() => _selectedAge = val)),
-                _buildTextField('Year_of_manufacture', 'Year of manufacture',
-                    'Year of manufacture'),
-                _buildDropdownField('Zone', _zoneOptions, _selectedZone,
-                    (val) => setState(() => _selectedZone = val)),
                 _buildTextField('Discount_on_OD_premium(%)',
-                    'Discount on OD premium(%)', 'Discount on OD premium(%)'),
+                    'Discount on OD Premium(%)', 'Discount on OD Premium(%)'),
                 _buildTextField(
                     'Loading_on_discount_premium(%)',
-                    'Loading on discount premium(%)',
-                    'Loading on discount premium(%)'),
+                    'Loading on Discount Premium(%)',
+                    'Loading on Discount Premium(%)'),
                 _buildDropdownField('CNG/LPG kits', _cngOptions, _selectedCNG,
                     (val) => setState(() => _selectedCNG = val)),
                 _buildTextField(
@@ -486,7 +486,9 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       'PA_to_owner_driver',
       'CNG/LPG_kit(Externally_fitted)',
       'Loading_on_discount_premium(%)',
-      'Discount_on_OD_premium(%)'
+      'Discount_on_OD_premium(%)',
+      'No_of_trailers(Attached)',
+      'idvAttached'
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -536,7 +538,8 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       'Restrcited TPPD', 'LL to Employee (Other Than Paid Driver)',
       'LL to Paid Driver', 'No Claim Bonus(%)',
       'IMT 23', 'CNG/LPG kits',
-      'Overturning For Cranes' // matches label or keyName
+      'Overturning For Cranes', 'Depreciation (Attached Trailer)',
+      'Trailer Towed by' // matches label or keyName
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),

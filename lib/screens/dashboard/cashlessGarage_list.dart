@@ -14,104 +14,105 @@ class _CashlessgarageListState extends State<CashlessgarageList> {
     CashlessGarage(
         logo: 'assets/logos/acko.jpg',
         name: 'Acko General Insurance Limited',
-        url: 'https://www.acko.com'),
+        url: 'https://www.acko.com/garages/'),
     CashlessGarage(
         logo: 'assets/logos/bajaj.png',
         name: 'Bajaj Allianz General Insurance Co. Ltd.',
-        url: 'https://www.bajajallianz.com'),
+        url: 'https://www.bajajallianz.com/branch-locator.html'),
     CashlessGarage(
         logo: 'assets/logos/chola.png',
         name: 'Cholamandalam MS General Insurance Company Ltd',
-        url: 'https://www.cholainsurance.com'),
-    // CashlessGarage(
-    //     logo: '',
-    //     name: 'DHFL General Insurance Limited',
-    //     url:
-    //         'https://www.hizuno.com'), // DHFL General Insurance is now Zuno General Insurance
+        url: 'https://www.cholainsurance.com/cashless-garages/auto-centre'),
     CashlessGarage(
         logo: 'assets/logos/future_generali.png',
         name: 'Future Generali India Insurance Company Ltd',
-        url: 'https://general.futuregenerali.in'),
+        url: 'https://general.futuregenerali.in/garage-locator'),
     CashlessGarage(
         logo: 'assets/logos/digit.png',
         name: 'Go Digit General Insurance Limited',
-        url: 'https://www.godigit.com'),
+        url: 'https://www.godigit.com/garages-map-page'),
     CashlessGarage(
         logo: 'assets/logos/hdfc.png',
         name: 'HDFC ERGO General Insurance Company Limited',
-        url: 'https://www.hdfcergo.com'),
+        url: 'https://www.hdfcergo.com/locators/cashless-garages-networks'),
     CashlessGarage(
         logo: 'assets/logos/icici.png',
         name: 'ICICI Lombard General Insurance Company Limited',
-        url: 'https://www.icicilombard.com'),
+        url:
+            'https://www.icicilombard.com/cashless-garages'),
     CashlessGarage(
         logo: 'assets/logos/iffco.png',
         name: 'Iffco Tokio General Insurance Company Ltd',
-        url: 'https://www.iffcotokio.co.in'),
+        url: 'https://www.iffcotokio.co.in/contact-us?tab=garage'),
     CashlessGarage(
         logo: 'assets/logos/zurich.jpg',
         name: 'Kotak Mahindra General Insurance Co. Ltd.',
-        url: 'https://www.kotakgeneral.com'),
+        url: 'https://www.zurichkotak.com/network-locator/cashless-garages'),
     CashlessGarage(
         logo: 'assets/logos/Liberty_General_Insurance.jpg',
         name: 'Liberty General Insurance Ltd.',
-        url: 'https://www.libertyinsurance.in'),
+        url:
+            'https://www.libertyinsurance.in/products/CPMigration/PrefferedPartnerNetworks'),
     CashlessGarage(
         logo: 'assets/logos/magma.jpg',
         name: 'Magma HDI General Insurance Co. Ltd.',
-        url: 'https://www.magmahdi.com'),
+        url: 'https://www.magmainsurance.com/web/magmainsurance/branches'),
     CashlessGarage(
         logo: 'assets/logos/national.jpg',
         name: 'National Insurance Co. Ltd.',
-        url: 'https://nationalinsurance.nic.co.in'),
+        url:
+            'https://uat-nationalinsurance.nic.co.in/key-links/our-networks/cashless-garages'),
     CashlessGarage(
         logo: 'assets/logos/Navi.png',
         name: 'Navi General Insurance Ltd.',
-        url: 'https://www.navi.com'),
+        url: 'https://navi.com'), // Navi Doesnt have Cashless Garage Locator
     CashlessGarage(
         logo: 'assets/logos/newindia.png',
         name: 'The New India Assurance Co. Ltd.',
-        url: 'https://www.newindia.co.in'),
+        url: 'https://www.newindia.co.in/garage-list'),
     CashlessGarage(
         logo: 'assets/logos/oriental.png',
         name: 'The Oriental Insurance Company Ltd.',
-        url: 'https://orientalinsurance.org.in'),
+        url: 'https://orientalinsurance.org.in/network-garage'),
     CashlessGarage(
         logo: 'assets/logos/raheja.png',
         name: 'Raheja QBE General Insurance Co. Ltd.',
-        url: 'https://www.rahejaqbe.com'),
+        url: 'https://www.rahejaqbe.com/garage-locator'),
     CashlessGarage(
         logo: 'assets/logos/reliance.png',
         name: 'Reliance General Insurance Co. Ltd.',
-        url: 'https://www.reliancegeneral.co.in'),
+        url:
+            'https://www.reliancegeneral.co.in/insurance/self-help/cashless-garages-and-hospitals.aspx'),
     CashlessGarage(
         logo: 'assets/logos/royal_sundaram.jpg',
         name: 'Royal Sundaram General Insurance Co. Ltd.',
-        url: 'https://www.royalsundaram.in'),
+        url: 'https://www.royalsundaram.in/cashless-garage'),
     CashlessGarage(
         logo: 'assets/logos/sbi.png',
         name: 'SBI General Insurance Co. Ltd.',
-        url: 'https://www.sbigeneral.in'),
+        url:
+            'https://www.sbigeneral.in/claim/garage-network'),
     CashlessGarage(
         logo: 'assets/logos/shriram.jpg',
         name: 'Shriram General Insurance Co. Ltd.',
-        url: 'https://www.shriramgi.com'),
+        url: 'https://www.shriramgi.com/cashless-garages'),
     CashlessGarage(
         logo: 'assets/logos/tataaig.png',
         name: 'Tata AIG General Insurance Co. Ltd.',
-        url: 'https://www.tataaig.com'),
+        url:
+            'https://www.tataaig.com/locator/cashless-car-network-garages'),
     CashlessGarage(
         logo: 'assets/logos/uiic.png',
         name: 'United India Insurance Company Limited',
-        url: 'https://www.uiic.co.in'),
+        url: 'https://uiic.co.in'),// UIIC Doesnt have Cashless Garage Locator
     CashlessGarage(
         logo: 'assets/logos/universalsompo.png',
         name: 'Universal Sompo General Insurance Co. Ltd.',
-        url: 'https://www.universalsompo.com'),
+        url: 'https://www.universalsompo.com/cashless-hospitals/garages/'),
     CashlessGarage(
         logo: 'assets/logos/zuno.png',
         name: 'Zuno General Insurance',
-        url: 'https://www.hizuno.com'),
+        url: 'https://www.hizuno.com/cashless-garage-network'),
   ];
 
   @override

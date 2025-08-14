@@ -253,7 +253,7 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
                   });
                 }),
                 _buildTextField(
-                    'idv', 'IDV (₹)', 'Enter IDV (auto-calculated)'),
+                    'idv', 'IDV (₹)', 'Enter IDV (auto-calculated)',enabled: false,),
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),
                 _buildTextField(

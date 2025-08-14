@@ -234,7 +234,6 @@ class _PCFormCompleteState extends State<PCFormComplete> {
         kiloWatt: 0,
         isElectric: false,
       ); // ODRate
-      
 
       //values for these Variable
       double basicOD = currentIdv * vehicleBasicRate / 100;
@@ -586,7 +585,15 @@ class _PCFormCompleteState extends State<PCFormComplete> {
       'paOwnerDriver',
       'paUnnamedPassenger',
       'otherCess',
-      'CNG_LPG_kits_Ex_fitted'
+      'CNG_LPG_kits_Ex_fitted',
+      'drivingTutions',
+      'geographicalExt',
+      'fiberGlassTank',
+      'returnToInvoice',
+      'engineProtector',
+      'NCBprotection',
+      'tyreCover',
+      'consumables'
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -638,7 +645,8 @@ class _PCFormCompleteState extends State<PCFormComplete> {
     String? keyName;
     const optionalDropdowns = [
       'LL to Paid Driver', 'CNG/ LPG kits',
-      'No Claim Bonus (%)' // matches label or keyName
+      'No Claim Bonus (%)', 'Voluntary Deductible', 'AAI', 'Handicap',
+      'Anti Theft' // matches label or keyName
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),

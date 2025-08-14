@@ -174,7 +174,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
       double basicOdPremium = basicForVehicle +
           cngLpgValue; // Basic OD Premium (Basic for vehicle + CNG/LPG)
       // double imt23Value = (basicForVehicle * selectIMT) / 100;      // IMT 23
-      double imt23Value = (basicForVehicle * selectIMT) / 100;
+      double imt23Value = (basicForVehicle * selectIMT) / 100 ;
       double basicOdBeforeDiscount =
           basicOdPremium + imt23Value; //  Basic OD Before Discount
       double discountValue = (basicOdBeforeDiscount * discountOnOd) /
@@ -220,7 +220,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
         "CNG/LPG kit (Externally Fitted)": cngLpgValue.toStringAsFixed(2),
         "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
-        "IMT23": imt23Value.toString(),
+        "IMT23": imt23Value.toStringAsFixed(2),
         // "Basic OD Before Discount": basicOdBeforeDiscount.toStringAsFixed(2),
         "Discount on OD Premium": discountValue.toStringAsFixed(2),
         "Loading on OD Premium": loadingValue.toStringAsFixed(2),
@@ -232,7 +232,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
         // B - Liability Premium
         "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppd.toStringAsFixed(2),
-        "CNG/LPG Kit": cngLpgKit.toString(),
+        "CNG/LPG Kit": cngLpgKit.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "LL to Employee Other than Paid Driver":
@@ -251,7 +251,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
 
       // Pass data to result screen
       InsuranceResultData resultData = InsuranceResultData(
-        vehicleType: "Hearses",
+        vehicleType: "Hearse",
         fieldData: resultMap,
         totalPremium: finalPremium,
       );
@@ -296,7 +296,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
               // Icon(Icons.people, color: Colors.white),
               // SizedBox(width: 8),
               Text(
-                'Hearses (Dead Body Carry Vehicle)',
+                'Hearse (Dead Body Carry Vehicle)',
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
             ],

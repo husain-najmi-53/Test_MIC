@@ -594,7 +594,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
   "Trailer": {
     "Basic Details": [
       "IDV",
-      "no of Trailers (Attached)",
+      "No. of Trailers (Attached)",
       "Trailer Towed By",
       "Year of Manufacture",
       "Zone",
@@ -627,7 +627,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Other CESS"
     ],
   },
-  "Hearses": {
+  "Hearse": {
     "Basic Details": [
       "IDV",
       "Year of Manufacture",

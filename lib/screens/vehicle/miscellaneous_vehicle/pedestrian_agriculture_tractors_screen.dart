@@ -314,10 +314,10 @@ void _submitForm() {
                 _buildDropdownField('Zone', _zoneOptions, _selectedZone,
                     (val) => setState(() => _selectedZone = val)),
                 _buildTextField('discountOnOd', 'Discount on OD Premium (%)','Discount on OD Premium (%)'),
-                _buildTextField('loadingOnDiscountPremium', 'Loading on discount premium (%)','Loading on discount premium (%)'),
+                _buildTextField('loadingOnDiscountPremium', 'Loading on Discount Premium (%)','Loading on Discount Premium (%)'),
                 _buildDropdownField('CNG/LPG kits', _cngOptions, _selectedCNG,
                     (val) => setState(() => _selectedCNG = val)),
-                _buildTextField('cngLpgKitsExFitted', 'CNG/LPG kits (externally fitted)','Cng LPG kits (externally fitted)'),
+                _buildTextField('cngLpgKitsExFitted', 'CNG/LPG kits (Externally Fitted)','CNG LPG kits (Externally Fitted)'),
                 _buildDropdownField('IMT 23', _imt23Options, _selectedImt23,
                     (val) => setState(() => _selectedImt23 = val)),
                 _buildDropdownField('No Claim Bonus', _ncbOptions, _selectedNcb,
@@ -325,9 +325,9 @@ void _submitForm() {
                 _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)','PA to Owner Driver (₹)'),
                 _buildDropdownField('LL to Paid Driver', _llPaidDriverOptions, _selectedLlPaidDriver,
                     (val) => setState(() => _selectedLlPaidDriver = val)),
-                _buildDropdownField('LL to employee other than Paid Driver', _llEmployeePaidDriverOptions, _selectedLlEmployeePaidDriver,
+                _buildDropdownField('LL to Employee other than Paid Driver', _llEmployeePaidDriverOptions, _selectedLlEmployeePaidDriver,
                     (val) => setState(() => _selectedLlEmployeePaidDriver = val)),
-                _buildTextField('ll2Passenger', 'LL to passenger (Number of passenger)', 'LL to passenger (Number of passenger)'),
+                _buildTextField('ll2Passenger', 'LL to Passenger (Number of Passenger)', 'LL to Passenger (Number of Passenger)'),
                 _buildDropdownField('Restricted TPPD', _restrictedTppdOptions, _selectedRestrictedTppd,
                     (val) => setState(() => _selectedRestrictedTppd = val)),
                 _buildTextField('otherCess', 'Other Cess (%)','Other Cess (%)'),
@@ -355,7 +355,7 @@ void _submitForm() {
 
   Widget _buildTextField(String key, String label, String placeholder) {
         // Optional dropdown fields
-  const optionalFields=['otherCess','paOwnerDriver','cngLpgKitsExFitted','discountOnOd','loadingOnDiscountPremium'
+  const optionalFields=['otherCess','paOwnerDriver','cngLpgKitsExFitted','discountOnOd','loadingOnDiscountPremium','ll2Passenger'
   ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -393,7 +393,7 @@ void _submitForm() {
       String label, List<String> options, String? selected, Function(String?) onChanged) {
         String? keyName; // Optional: pass a key for validation skip
         const optionalDropdowns = [
-    'Restricted TPPD','LL to employee other than Paid Driver','LL to Paid Driver',
+    'Restricted TPPD','LL to Employee other than Paid Driver','LL to Paid Driver',
     'No Claim Bonus','IMT 23','CNG/LPG kits' // matches label or keyName
   ];
     return Padding(

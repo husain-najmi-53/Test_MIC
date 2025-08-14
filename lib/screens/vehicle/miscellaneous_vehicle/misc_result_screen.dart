@@ -50,7 +50,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
       "Trailer": {
         "Basic Details": [
           "IDV",
-          "no of Trailers (Attached)",
+          "No. of Trailers (Attached)",
           "Trailer Towed By",
           "Year of Manufacture",
           "Zone",
@@ -83,7 +83,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "Other CESS"
         ],
       },
-      "Hearses": {
+      "Hearse": {
         "Basic Details": [
           "IDV",
           "Year of Manufacture",

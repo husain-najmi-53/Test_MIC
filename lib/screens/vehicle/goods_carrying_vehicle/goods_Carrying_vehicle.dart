@@ -86,16 +86,18 @@ class _GoodsCarryingVehicleScreenState
   }
 
   void _calculateIdv() {
-    if (_selectedDepreciation != null &&
-        _controllers['lastYearIdv']!.text.isNotEmpty) {
-      double lastYearIdv =
-          double.tryParse(_controllers['lastYearIdv']!.text) ?? 0.0;
-      double depPercent =
+    double lastYearIdv =
+        double.tryParse(_controllers['lastYearIdv']!.text) ?? 0.0;
+    double depreciationPercent = 0.0;
+    if (_selectedDepreciation != null) {
+      depreciationPercent =
           double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0;
-
-      double newIdv = lastYearIdv * (1 - depPercent / 100);
-      _controllers['idv']!.text = newIdv.toStringAsFixed(2);
     }
+    double currentIdv = lastYearIdv * (1 - depreciationPercent / 100);
+    setState(() {
+      _controllers['idv']!.text =
+          currentIdv > 0 ? currentIdv.toStringAsFixed(2) : '';
+    });
   }
 
   void _submitForm() {
@@ -122,7 +124,8 @@ class _GoodsCarryingVehicleScreenState
       double ncb =
           double.tryParse((_selectedNcb ?? '0%').replaceAll('%', '')) ?? 0.0;
 
-      double geoExtAmt = _selectedGeographicalExtn == 0 ? 0.0 : 50;
+      double geoExtAmt =
+          (int.tryParse(_selectedGeographicalExtn ?? '0') == 0) ? 0.0 : 400;
       double imt23Amt = _selectedImt23 == 'Yes' ? 200.0 : 0.0;
       double antiTheftAmt = _selectedAntiTheft == 'Yes' ? -200.0 : 0.0;
       double restrictedTppdAmt =

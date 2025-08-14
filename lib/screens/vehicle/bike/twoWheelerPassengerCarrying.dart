@@ -401,7 +401,7 @@ class _TwoWheelerPassengerCarryingFormScreenState
   ) {
     String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
-      'LL to Paid Driver', 'No Claim Bonus (%)' // matches label or keyName
+      'LL to Paid Driver', 'No Claim Bonus (%)','IMT 23','Restricted TPPD' // matches label or keyName
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
