@@ -1,14 +1,26 @@
 import 'dart:typed_data';
 import 'dart:io';
+//import 'package:printing/printing.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
-import 'package:motor_insurance_app/models/quotation_data.dart';
-import 'package:motor_insurance_app/models/vehicle_data.dart';
+import 'package:intl/intl.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:motor_insurance_app/models/quotation_data.dart';
+import 'package:motor_insurance_app/models/vehicle_data.dart';
+
+// Helper function to safely parse a string value to a double
+double _safeParseDouble(dynamic value) {
+  if (value is num) {
+    return value.toDouble();
+  } else if (value is String) {
+    return double.tryParse(value) ?? 0.0;
+  }
+  return 0.0;
+}
 
 class PdfSelectionScreen extends StatefulWidget {
   final QuotationData finalData;
@@ -28,13 +40,13 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
 
   final List<String> allCompanies = [
     "Acko General Insurance Limited",
-    "Bajaj Allianz General Insurance Co. Ltd.",
-    "Cholamandalam MS General Insurance Co. Ltd.",
-    "Future Generali India Insurance Co. Ltd.",
+    "Bajaj Allianz General Insurance Company Limited",
+    "Cholamandalam MS General Insurance Company Ltd",
+    "Future Generali India Insurance Company Ltd",
     "Go Digit General Insurance Limited",
-    "HDFC ERGO General Insurance Co. Ltd.",
-    "ICICI Lombard General Insurance Co. Ltd.",
-    "IFFCO-Tokio General Insurance Co. Ltd.",
+    "HDFC ERGO General Insurance Company Limited",
+    "ICICI Lombard General Insurance Company Limited",
+    "Iffco Tokio General Insurance Company Ltd",
     "Kotak Mahindra General Insurance Co. Ltd.",
     "Liberty General Insurance Ltd.",
     "Magma HDI General Insurance Co. Ltd.",
@@ -53,10 +65,132 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
     "Zuno General Insurance"
   ];
 
+  final Map<String, Map<String, String>> insurerContactInfo = {
+    "Acko General Insurance Limited": {
+      "phone": "1860-266-2256",
+      "email": "hello@acko.com",
+      "claims": "Visit www.acko.com for claims information.",
+    },
+    "Bajaj Allianz General Insurance Company Limited": {
+      "phone": "1800-209-5858",
+      "email": "customercare@bajajallianz.co.in",
+      "claims": "Visit www.bajajallianz.com for claims information.",
+    },
+    "Cholamandalam MS General Insurance Company Ltd": {
+      "phone": "1800-200-5544",
+      "email": "customercare@cholams.murugappa.com",
+      "claims": "Visit www.cholainsurance.com for claims information.",
+    },
+    "Future Generali India Insurance Company Ltd": {
+      "phone": "1800-220-233",
+      "email": "fgcare@futuregenerali.in",
+      "claims": "Visit www.general.futuregenerali.in for claims information.",
+    },
+    "Go Digit General Insurance Limited": {
+      "phone": "1800-258-5956",
+      "email": "hello@godigit.com",
+      "claims": "Visit www.godigit.com for claims information.",
+    },
+    "HDFC ERGO General Insurance Company Limited": {
+      "phone": "1800-2700-700",
+      "email": "care@hdfcergo.com",
+      "claims": "Visit www.hdfcergo.com for claims information.",
+    },
+    "ICICI Lombard General Insurance Company Limited": {
+      "phone": "1800-2666",
+      "email": "customersupport@icicilombard.com",
+      "claims": "Visit www.icicilombard.com for claims information.",
+    },
+    "Iffco Tokio General Insurance Company Ltd": {
+      "phone": "1800-103-5499",
+      "email": "websupport@iffcotokio.co.in",
+      "claims": "Visit www.iffcotokio.co.in for claims information.",
+    },
+    "Kotak Mahindra General Insurance Co. Ltd.": {
+      "phone": "1800-266-4545",
+      "email": "care@kotak.com",
+      "claims": "Visit www.kotakgeneral.com for claims information.",
+    },
+    "Liberty General Insurance Ltd.": {
+      "phone": "1800-266-5844",
+      "email": "care@libertyinsurance.in",
+      "claims": "Visit www.libertyinsurance.in for claims information.",
+    },
+    "Magma HDI General Insurance Co. Ltd.": {
+      "phone": "1800-266-3202",
+      "email": "info@magma-hdi.co.in",
+      "claims": "Visit www.magmahdi.com for claims information.",
+    },
+    "National Insurance Co. Ltd.": {
+      "phone": "1800-345-0330",
+      "email": "customer.support@nic.co.in",
+      "claims": "Visit www.nationalinsurance.nic.co.in for claims information.",
+    },
+    "Navi General Insurance Ltd.": {
+      "phone": "1860-266-7711",
+      "email": "service@navi.com",
+      "claims": "Visit www.navi.com for claims information.",
+    },
+    "The New India Assurance Co. Ltd.": {
+      "phone": "1800-209-1415",
+      "email": "newindia@newindia.co.in",
+      "claims": "Visit www.newindia.co.in for claims information.",
+    },
+    "The Oriental Insurance Company Ltd.": {
+      "phone": "1800-118-485",
+      "email": "customer.support@orientalinsurance.co.in",
+      "claims": "Visit www.orientalinsurance.org.in for claims information.",
+    },
+    "Raheja QBE General Insurance Co. Ltd.": {
+      "phone": "1800-102-7406",
+      "email": "customer.service@rahejaqbe.com",
+      "claims": "Visit www.rahejaqbe.com for claims information.",
+    },
+    "Reliance General Insurance Co. Ltd.": {
+      "phone": "1800-3009",
+      "email": "rgicl.services@relianceada.com",
+      "claims": "Visit www.reliancegeneral.co.in for claims information.",
+    },
+    "Royal Sundaram General Insurance Co. Ltd.": {
+      "phone": "1860-425-0000",
+      "email": "customer.services@royalsundaram.in",
+      "claims": "Visit www.royalsundaram.in for claims information.",
+    },
+    "SBI General Insurance Co. Ltd.": {
+      "phone": "1800-102-1111",
+      "email": "customer.care@sbigeneral.in",
+      "claims": "Visit www.sbigeneral.in for claims information.",
+    },
+    "Shriram General Insurance Co. Ltd.": {
+      "phone": "1800-300-30000",
+      "email": "customercare@shriramgi.com",
+      "claims": "Visit www.shriramgi.com for claims information.",
+    },
+    "Tata AIG General Insurance Co. Ltd.": {
+      "phone": "1800-266-7780",
+      "email": "customersupport@tataaig.com",
+      "claims": "Visit www.tataaig.com for claims information.",
+    },
+    "United India Insurance Company Limited": {
+      "phone": "1800-425-3333",
+      "email": "customercare@uiic.co.in",
+      "claims": "Visit www.uiic.co.in for claims information.",
+    },
+    "Universal Sompo General Insurance Co. Ltd.": {
+      "phone": "1800-22-4030",
+      "email": "contactus@universalsompo.com",
+      "claims": "Visit www.universalsompo.com for claims information.",
+    },
+    "Zuno General Insurance": {
+      "phone": "1800-123-0004",
+      "email": "customercare@zunoi.com",
+      "claims": "Visit www.zunoi.com for claims information.",
+    },
+  };
+
   void toggleCompany(String company, bool? isSelected) {
     setState(() {
       if (selectedMode == "Company-wise") {
-        // Only allow one company selection
         selectedCompanies.clear();
         if (isSelected ?? false) {
           selectedCompanies.add(company);
@@ -116,198 +250,117 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
     final quotation = widget.finalData;
     final vehicleType = quotation.insuranceResult.vehicleType;
     final List<XFile> generatedFiles = [];
-    final sections = vehicleCategorySections[vehicleType] ?? {};
 
     for (final company in companies) {
       try {
-        // Create a new document for each company
         final pdf = pw.Document();
         final timestamp = DateTime.now().millisecondsSinceEpoch;
         final filename =
             '${vehicleType}_${company.replaceAll(' ', '_')}_$timestamp.pdf';
 
-        // Add page with company-specific content
-        pdf.addPage(
-          pw.Page(
-            pageFormat: PdfPageFormat.a4,
-            margin: const pw.EdgeInsets.all(18),
-            build: (context) {
-              List<pw.Widget> content = [];
+        final page = pw.Page(
+          pageFormat: PdfPageFormat.a4,
+          margin: const pw.EdgeInsets.all(20),
+          build: (context) {
+            final currentCompanyContact = insurerContactInfo[company] ?? {
+              'phone': 'N/A',
+              'email': 'N/A',
+              'claims': 'Contact customer service for details.',
+            };
 
-              // Add company header
-              // Company Header with padding
-              content.add(
+            return pw.Stack(
+              children: [
+                _buildWatermark(),
+                
                 pw.Container(
-                  padding: const pw.EdgeInsets.only(bottom: 5),
-                  child: pw.Text(
-                    company,
-                    style: pw.TextStyle(
-                        fontSize: 14, fontWeight: pw.FontWeight.bold),
-                  ),
-                ),
-              );
-
-              // Producer and Policy Details with better spacing
-              content.add(
-                pw.Container(
-                  padding: const pw.EdgeInsets.fromLTRB(20, 0, 20, 2),
+                  padding: const pw.EdgeInsets.all(10),
                   decoration: pw.BoxDecoration(
-                    border: pw.Border.all(color: PdfColors.grey300),
-                    borderRadius:
-                        const pw.BorderRadius.all(pw.Radius.circular(8)),
+                    border: pw.Border.all(
+                      color: PdfColors.black,
+                      width: 1.0,
+                    ),
                   ),
-                  child: pw.Row(
+                  child: pw.Column(
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
                     children: [
-                      if (includeAgentDetails) ...[
-                        // Producer Details Section
-                        pw.Expanded(
-                          flex: 1,
-                          child: pw.Container(
-                            padding:
-                                const pw.EdgeInsets.only(top: 2, right: 20),
-                            decoration: const pw.BoxDecoration(
-                              border: pw.Border(
-                                right: pw.BorderSide(color: PdfColors.grey300),
-                              ),
-                            ),
+                      _buildQuotationHeader(),
+                      pw.SizedBox(height: 8),
+
+                      _buildCompanyHeader(company),
+                      pw.SizedBox(height: 12),
+
+                      pw.Row(
+                        crossAxisAlignment: pw.CrossAxisAlignment.start,
+                        children: [
+                          pw.Expanded(
+                            flex: 2,
                             child: pw.Column(
                               crossAxisAlignment: pw.CrossAxisAlignment.start,
                               children: [
-                                pw.Text(
-                                  "Producer Details",
-                                  style: pw.TextStyle(
-                                    fontSize: 10,
-                                    fontWeight: pw.FontWeight.bold,
-                                  ),
-                                ),
+                                _buildDetailsSection(quotation, includeAgentDetails),
                                 pw.SizedBox(height: 8),
-                                pw.Text("Producer Name: ${quotation.agentName}",
-                                    style: pw.TextStyle(
-                                      fontSize: 10,
-                                    )),
-                                pw.SizedBox(height: 4),
-                                pw.Text(
-                                    "Producer Email: ${quotation.agentEmail}",
-                                    style: pw.TextStyle(
-                                      fontSize: 10,
-                                    )),
-                                pw.SizedBox(height: 4),
-                                pw.Text(
-                                    "Producer Contact: ${quotation.agentContact}",
-                                    style: pw.TextStyle(
-                                      fontSize: 10,
-                                    )),
+                                _buildVehicleDetailsSection(quotation),
+                                if (quotation.otherCoverage != null &&
+                                    quotation.otherCoverage!.isNotEmpty)
+                                  _buildOtherCoverageSection(quotation)!,
                               ],
                             ),
                           ),
-                        ),
-                      ],
-                      // Policy Details Section
-                      pw.Expanded(
-                        flex: includeAgentDetails ? 1 : 2,
-                        child: pw.Container(
-                          padding: pw.EdgeInsets.only(
-                            top: 2,
-                            left: includeAgentDetails ? 20 : 0,
+
+                          pw.SizedBox(width: 12),
+
+                          pw.Expanded(
+                            flex: 3,
+                            child: pw.Column(
+                              crossAxisAlignment: pw.CrossAxisAlignment.start,
+                              children: [
+                                _buildPremiumSummarySection(quotation),
+                                pw.SizedBox(height: 8),
+                                _buildTotalPremiumSection(quotation),
+                              ],
+                            ),
                           ),
-                          child: pw.Column(
-                            crossAxisAlignment: pw.CrossAxisAlignment.start,
-                            children: [
-                              pw.Text(
-                                "Policy Details",
-                                style: pw.TextStyle(
-                                  fontSize: 10,
-                                  fontWeight: pw.FontWeight.bold,
-                                ),
-                              ),
-                              pw.SizedBox(height: 8),
-                              pw.Text(
-                                  "Policy Plan: ${quotation.insuranceResult.vehicleType}",
-                                    style: pw.TextStyle(
-                                      fontSize: 10,
-                                    )),
-                              pw.SizedBox(height: 4),
-                              pw.Text(
-                                  "Policy Start Date: ${quotation.policyStartDate.day}/${quotation.policyStartDate.month}/${quotation.policyStartDate.year}",
-                                    style: pw.TextStyle(
-                                      fontSize: 10,
-                                    )),
-                              pw.SizedBox(height: 4),
-                              pw.Text(
-                                  "Policy End Date: ${quotation.policyEndDate.day}/${quotation.policyEndDate.month}/${quotation.policyEndDate.year}",
-                                    style: pw.TextStyle(
-                                      fontSize: 10,
-                                    )),
-                            ],
-                          ),
-                        ),
+                        ],
                       ),
+                      pw.SizedBox(height: 12),
+                      
+                      pw.SizedBox(height: 20),
+                      _buildInsurerContactSection(
+                          company,
+                          currentCompanyContact['phone']!,
+                          currentCompanyContact['email']!,
+                          currentCompanyContact['claims']!),
+                      
+                      pw.SizedBox(height: 20),
                     ],
                   ),
                 ),
-              );
-
-              content.add(pw.SizedBox(height: 12));
-
-              // Add sections
-              sections.forEach((sectionTitle, fields) {
-                content.add(
-                  buildPdfSection(
-                    sectionTitle: sectionTitle,
-                    fields: fields,
-                    quotation: quotation,
-                  ),
-                );
-              });
-              // Add total premium section
-              content.add(pw.Divider());
-              content.add(
-                pw.Text(
-                  "Total Premium: ${quotation.insuranceResult.totalPremium.toStringAsFixed(2)}",
-                  style: pw.TextStyle(
-                      fontSize: 14, fontWeight: pw.FontWeight.bold),
-                ),
-              );
-
-              return pw.Column(
-                crossAxisAlignment: pw.CrossAxisAlignment.start,
-                children: content,
-              );
-            },
-          ),
+              ],
+            );
+          },
         );
 
-        // Save the PDF for this company
+        pdf.addPage(page);
+
         final pdfBytes = await pdf.save();
 
         if (kIsWeb) {
-          // Create blob and trigger download
           final bytes = Uint8List.fromList(pdfBytes);
           final blob = html.Blob([bytes]);
           final url = html.Url.createObjectUrlFromBlob(blob);
-
-          // Create download link
           final anchor = html.AnchorElement()
             ..href = url
             ..style.display = 'none'
             ..download = filename;
-
-          // Add to document, click, and cleanup
           html.document.body?.append(anchor);
           anchor.click();
           anchor.remove();
           html.Url.revokeObjectUrl(url);
         } else {
-          // Get the temporary directory
           final directory = await getTemporaryDirectory();
           final filePath = '${directory.path}/$filename';
-
-          // Write the PDF file
           final file = File(filePath);
           await file.writeAsBytes(pdfBytes);
-
-          // Add to the list of files to share
           generatedFiles.add(XFile(filePath));
 
           if (context.mounted) {
@@ -332,7 +385,6 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
       }
     }
 
-    // Share all generated PDFs
     if (!kIsWeb && generatedFiles.isNotEmpty) {
       try {
         await Share.shareXFiles(
@@ -351,7 +403,6 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
       }
     }
 
-    // Show completion message
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -362,12 +413,319 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
     }
   }
 
+  // New method for building the repeating watermark pattern
+  pw.Widget _buildWatermark() {
+    return pw.GridView(
+      crossAxisCount: 3,
+      childAspectRatio: 1,
+      children: List.generate(
+        9,
+        (index) => pw.Transform.rotate(
+          angle: -30 * (3.1415926535 / 180),
+          child: pw.Center(
+            child: pw.Text(
+              "Bhartiya Bima Fintech",
+              style: pw.TextStyle(
+                color: PdfColors.grey200,
+                fontSize: 18,
+                fontWeight: pw.FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  pw.Widget _buildPremiumSummarySection(QuotationData quotation) {
+    final sections =
+        vehicleCategorySections[quotation.insuranceResult.vehicleType] ?? {};
+    final insuranceResult = quotation.insuranceResult;
+    final brand = PdfColor.fromInt(0xFF303F9F);
+
+    return pw.Column(
+      crossAxisAlignment: pw.CrossAxisAlignment.stretch,
+      children: sections.entries.map((section) {
+        return pw.Column(
+          crossAxisAlignment: pw.CrossAxisAlignment.stretch,
+          children: [
+            _buildSectionHeader(section.key,
+                color: brand, textColor: PdfColors.white),
+            pw.SizedBox(height: 2),
+            ...section.value.map((field) {
+              final value = insuranceResult.fieldData[field] ?? '-';
+              String displayValue = value == '-'
+                  ? '-'
+                  : (double.tryParse(value.toString())?.toStringAsFixed(2) ??
+                      value.toString());
+
+              return pw.Padding(
+                padding: const pw.EdgeInsets.symmetric(vertical: 1),
+                child: pw.Row(
+                  mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                  children: [
+                    pw.Text(field, style: const pw.TextStyle(fontSize: 8)),
+                    pw.Text(displayValue,
+                        style: pw.TextStyle(
+                            fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                  ],
+                ),
+              );
+            }).toList(),
+            pw.Divider(color: PdfColors.grey300, thickness: 1),
+            pw.SizedBox(height: 4),
+          ],
+        );
+      }).toList(),
+    );
+  }
+
+  pw.Widget _buildTotalPremiumSection(QuotationData quotation) {
+    final brand = PdfColor.fromInt(0xFF303F9F);
+    
+    final double totalPackagePremium = _safeParseDouble(quotation.insuranceResult.fieldData['Total Package Premium']);
+    final double gst = _safeParseDouble(quotation.insuranceResult.fieldData['GST @ 18%']);
+
+    double totalPolicyPremium = totalPackagePremium + gst;
+
+    if (totalPolicyPremium == 0.0) {
+      totalPolicyPremium = _safeParseDouble(quotation.insuranceResult.totalPremium);
+    }
+
+    return pw.Container(
+      decoration: pw.BoxDecoration(
+        color: brand,
+        borderRadius: pw.BorderRadius.circular(6),
+      ),
+      padding: const pw.EdgeInsets.all(15),
+      child: pw.Row(
+        mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+        children: [
+          pw.Text(
+            'TOTAL POLICY PREMIUM',
+            style: pw.TextStyle(
+              fontSize: 12,
+              fontWeight: pw.FontWeight.bold,
+              color: PdfColors.white,
+            ),
+          ),
+          pw.Text(
+            totalPolicyPremium.toStringAsFixed(2),
+            style: pw.TextStyle(
+              fontSize: 12,
+              fontWeight: pw.FontWeight.bold,
+              color: PdfColors.white,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  pw.Widget _buildSectionHeader(String title,
+      {PdfColor? color, PdfColor? textColor}) {
+    return pw.Container(
+      padding: const pw.EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      decoration: pw.BoxDecoration(
+        color: color ?? PdfColors.grey200,
+        borderRadius: pw.BorderRadius.circular(4),
+      ),
+      child: pw.Text(
+        title.toUpperCase(),
+        style: pw.TextStyle(
+          fontSize: 8,
+          fontWeight: pw.FontWeight.bold,
+          color: textColor ?? PdfColors.black,
+        ),
+      ),
+    );
+  }
+
+  pw.Widget _buildCompanyHeader(String company, {bool isContinuation = false}) {
+    final brand = PdfColor.fromInt(0xFF303F9F);
+    return pw.Container(
+      width: double.infinity,
+      padding: const pw.EdgeInsets.symmetric(vertical: 6, horizontal: 8),
+      decoration: pw.BoxDecoration(
+        color: brand,
+        borderRadius: pw.BorderRadius.circular(6),
+      ),
+      child: pw.Text(
+        isContinuation ? '$company (continued)' : company,
+        style: pw.TextStyle(
+          fontSize: 14,
+          fontWeight: pw.FontWeight.bold,
+          color: PdfColors.white,
+        ),
+      ),
+    );
+  }
+ 
+  pw.Widget _buildQuotationHeader() {
+    return pw.Row(
+      mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+      children: [
+        pw.Text(
+          'Quotation Number: QT/25/${DateTime.now().millisecondsSinceEpoch}',
+          style: pw.TextStyle(fontSize: 7, color: PdfColors.grey700),
+        ),
+        pw.Text(
+          'Date: ${DateFormat('dd/MM/yyyy').format(DateTime.now())}',
+          style: pw.TextStyle(fontSize: 7, color: PdfColors.grey700),
+        ),
+      ],
+    );
+  }
+
+  // Modified method to always show policy details
+  pw.Widget _buildDetailsSection(
+      QuotationData quotation, bool includeAgentDetails) {
+    return pw.Container(
+      decoration: pw.BoxDecoration(
+        border: pw.Border.all(width: 0.5, color: PdfColors.grey300),
+        borderRadius: pw.BorderRadius.circular(6),
+      ),
+      padding: const pw.EdgeInsets.all(5),
+      child: pw.Column(
+        crossAxisAlignment: pw.CrossAxisAlignment.start,
+        children: [
+          if (includeAgentDetails) ...[
+            pw.Text('PRODUCER DETAILS',
+                style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+            pw.Divider(color: PdfColors.grey300, height: 2),
+            _buildDetailRow('Name:', quotation.agentName),
+            _buildDetailRow('Contact:', quotation.agentContact),
+            _buildDetailRow('Email:', quotation.agentEmail),
+            pw.SizedBox(height: 4),
+          ],
+          pw.Text('POLICY DETAILS',
+              style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+          pw.Divider(color: PdfColors.grey300, height: 2),
+          _buildDetailRow('Policy:', quotation.insuranceResult.vehicleType),
+          _buildDetailRow(
+              'Start Date:', DateFormat('dd/MM/yyyy').format(quotation.policyStartDate)),
+          _buildDetailRow(
+              'End Date:', DateFormat('dd/MM/yyyy').format(quotation.policyEndDate)),
+        ],
+      ),
+    );
+  }
+
+  pw.Widget _buildDetailRow(String label, String value) {
+    return pw.Padding(
+      padding: const pw.EdgeInsets.symmetric(vertical: 1),
+      child: pw.Row(
+        children: [
+          pw.Text(
+            label,
+            style: pw.TextStyle(fontSize: 7, fontWeight: pw.FontWeight.bold),
+          ),
+          pw.SizedBox(width: 3),
+          pw.Expanded(
+            child: pw.Text(
+              value,
+              style: pw.TextStyle(fontSize: 7),
+              textAlign: pw.TextAlign.right,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  pw.Widget _buildVehicleDetailsSection(QuotationData quotation) {
+    final insuranceResult = quotation.insuranceResult;
+    return pw.Container(
+      decoration: pw.BoxDecoration(
+        border: pw.Border.all(width: 0.5, color: PdfColors.grey300),
+        borderRadius: pw.BorderRadius.circular(6),
+      ),
+      padding: const pw.EdgeInsets.all(5),
+      child: pw.Column(
+        crossAxisAlignment: pw.CrossAxisAlignment.start,
+        children: [
+          pw.Text('VEHICLE DETAILS',
+              style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+          pw.Divider(color: PdfColors.grey300, height: 2),
+          _buildDetailRow('Registration No:', quotation.registrationNumber),
+          _buildDetailRow('Make:', quotation.make),
+          _buildDetailRow('Model:', quotation.model),
+          _buildDetailRow(
+              'MFG Year:', insuranceResult.fieldData['Year of Manufacture'] ?? '-'),
+          _buildDetailRow('Seating Capacity:', quotation.seatingCapacity),
+          _buildDetailRow(
+              'CC/KW:',
+              insuranceResult.fieldData['Cubic Capacity'] ??
+                  insuranceResult.fieldData['Kilowatt'] ??
+                  '-'),
+        ],
+      ),
+    );
+  }
+
+  pw.Widget _buildInsurerContactSection(
+      String companyName, String contactNumber, String email, String claimsInfo) {
+    return pw.Container(
+      decoration: pw.BoxDecoration(
+        border: pw.Border.all(width: 0.5, color: PdfColors.grey300),
+        borderRadius: pw.BorderRadius.circular(6),
+      ),
+      padding: const pw.EdgeInsets.all(5),
+      child: pw.Column(
+        crossAxisAlignment: pw.CrossAxisAlignment.start,
+        children: [
+          pw.Text('INSURER CONTACT INFORMATION',
+              style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+          pw.Divider(color: PdfColors.grey300, height: 2),
+          _buildDetailRow('Company:', companyName),
+          _buildDetailRow('Contact No.:', contactNumber),
+          _buildDetailRow('Email:', email),
+          _buildDetailRow('Claims:', claimsInfo),
+        ],
+      ),
+    );
+  }
+
+  // UPDATED: Now uses proper formatting for each coverage
+  pw.Widget? _buildOtherCoverageSection(QuotationData quotation) {
+    if (quotation.otherCoverage == null || quotation.otherCoverage!.isEmpty) {
+      return null;
+    }
+    
+    // Split the comma-separated string into a list of coverages
+    List<String> coverages = quotation.otherCoverage!.split(',');
+
+    return pw.Container(
+      decoration: pw.BoxDecoration(
+        border: pw.Border.all(width: 0.5, color: PdfColors.grey300),
+        borderRadius: pw.BorderRadius.circular(6),
+      ),
+      padding: const pw.EdgeInsets.all(5),
+      child: pw.Column(
+        crossAxisAlignment: pw.CrossAxisAlignment.start,
+        children: [
+          pw.Text('OTHER COVERAGES',
+              style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+          pw.Divider(color: PdfColors.grey300, height: 2),
+          ...coverages.map((coverage) {
+            final parts = coverage.trim().split(' ');
+            if (parts.length > 1) {
+              // Assume a format like "Coverage Value"
+              return _buildDetailRow(parts.sublist(0, parts.length - 1).join(' '), parts.last);
+            }
+            // If just a single word, display it with no value
+            return _buildDetailRow(coverage.trim(), '');
+          }).toList(),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Select PDF Options",
-            style: TextStyle(color: Colors.white)),
+        title: const Text("Select PDF Options", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.indigo[700],
         iconTheme: const IconThemeData(color: Colors.white),
         elevation: 4,
@@ -377,7 +735,6 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Mode Selection
             Card(
               elevation: 1,
               shape: RoundedRectangleBorder(
@@ -442,8 +799,6 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
               ),
             ),
             const SizedBox(height: 16),
-
-            // Company Selection
             Card(
               elevation: 1,
               shape: RoundedRectangleBorder(
@@ -491,8 +846,7 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
-          border:
-              Border(top: BorderSide(color: Colors.grey.shade200, width: 1)),
+          border: Border(top: BorderSide(color: Colors.grey.shade200, width: 1)),
         ),
         child: ElevatedButton.icon(
           onPressed: generateSelectedPDFs,
@@ -512,82 +866,4 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
       ),
     );
   }
-}
-
-pw.Widget buildPdfSection({
-  required String sectionTitle,
-  required List<String> fields,
-  required QuotationData quotation,
-}) {
-  final insuranceResult = quotation.insuranceResult;
-  final rows = <pw.Widget>[];
-
-  for (var key in fields) {
-    String? value;
-
-    // Fetch from QuotationData for vehicle details
-    switch (key) {
-      case "ownerName":
-        value = quotation.ownerName;
-        break;
-      case "make":
-        value = quotation.make;
-        break;
-      case "model":
-        value = quotation.model;
-        break;
-      case "registrationNumber":
-        value = quotation.registrationNumber;
-        break;
-      case "seatingCapacity":
-        value = quotation.seatingCapacity;
-        break;
-      case "otherCoverage":
-        value = quotation.otherCoverage ?? '-';
-        break;
-      case "policyStartDate":
-        value = "${quotation.policyStartDate.toLocal()}".split(' ')[0];
-        break;
-      case "policyEndDate":
-        value = "${quotation.policyEndDate.toLocal()}".split(' ')[0];
-        break;
-
-      default:
-        // Otherwise, get from insuranceResult.fieldData
-        value = insuranceResult.fieldData[key] ?? '-';
-    }
-
-    if (key == "totalPremium") {
-      value = insuranceResult.totalPremium.toStringAsFixed(2);
-    }
-
-    rows.add(
-      pw.Row(
-        mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-        children: [
-          pw.Text(key,
-              style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
-          pw.Text(value, style: pw.TextStyle(fontSize: 8)),
-        ],
-      ),
-    );
-    rows.add(pw.SizedBox(height: 3));
-  }
-
-  return pw.Column(
-    crossAxisAlignment: pw.CrossAxisAlignment.start,
-    children: [
-      pw.Text(
-        sectionTitle,
-        style: pw.TextStyle(
-          fontSize: 10,
-          fontWeight: pw.FontWeight.bold,
-          decoration: pw.TextDecoration.underline,
-        ),
-      ),
-      pw.SizedBox(height: 6),
-      pw.Column(children: rows),
-      pw.SizedBox(height: 14),
-    ],
-  );
 }

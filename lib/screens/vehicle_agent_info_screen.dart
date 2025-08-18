@@ -391,7 +391,7 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
                             'Enter seating capacity'),
                         _buildTextField(
                             'otherCoverage',
-                            'Other Coverage (Optional)',
+                            'Other Coverage',
                             'Enter other coverage if any',
                             isOptional: true),
                         _buildDateField('Policy Start Date', true),

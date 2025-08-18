@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motor_insurance_app/screens/custom/custom_drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser;
     return Scaffold(
       backgroundColor: const Color(0xFFF0F4FF),
       appBar: AppBar(
@@ -45,53 +48,72 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(16),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      blurRadius: 8,
-                      offset: const Offset(0, 4),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.blue.shade100,
-                      child: const Icon(Icons.person,
-                          size: 30, color: Colors.blue),
-                    ),
-                    const SizedBox(width: 16),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'nitesh kudmethe',
-                          style: GoogleFonts.poppins(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.blue.shade900,
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          'nitesh@email.com',
-                          style: GoogleFonts.poppins(
-                            fontSize: 14,
-                            color: Colors.grey.shade700,
-                          ),
+              FutureBuilder<DocumentSnapshot>(
+                future: FirebaseFirestore.instance
+                    .collection("users")
+                    .doc(user?.uid)
+                    .get(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                  if (!snapshot.hasData || !snapshot.data!.exists) {
+                    return const Text("No user data found");
+                  }
+
+                  final data = snapshot.data!.data() as Map<String, dynamic>;
+                  final name = data["name"] ?? "No Name";
+
+                  return Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 16, horizontal: 12),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          blurRadius: 8,
+                          offset: const Offset(0, 4),
                         ),
                       ],
                     ),
-                  ],
-                ),
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Colors.blue.shade100,
+                          child: const Icon(Icons.person,
+                              size: 30, color: Colors.blue),
+                        ),
+                        const SizedBox(width: 16),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              name,
+                              style: GoogleFonts.poppins(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.blue.shade900,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              user?.email ?? "No Email",
+                              style: GoogleFonts.poppins(
+                                fontSize: 14,
+                                color: Colors.grey.shade700,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  );
+                },
               ),
+
               const SizedBox(height: 24),
               Text(
                 'Welcome to Motor Insurance!',
@@ -152,7 +174,8 @@ class HomeScreen extends StatelessWidget {
                 title: '🏢 Company Info',
                 items: [
                   SectionItem(
-                      title: 'Company Details', icon: Icons.info,
+                      title: 'Company Details',
+                      icon: Icons.info,
                       onTap: () {
                         Navigator.pushNamed(context, '/CompanyDetails');
                       }),
@@ -180,25 +203,27 @@ class HomeScreen extends StatelessWidget {
                 title: '🚘 Vehicle Info',
                 items: [
                   SectionItem(
-                      title: 'RC Check', icon: Icons.card_travel,
-                      onTap: ()async{
-                        await _launchWebsite("https://vahan.parivahan.gov.in/nrservices/faces/user/citizen/citizenlogin.xhtml");
+                      title: 'RC Check',
+                      icon: Icons.card_travel,
+                      onTap: () async {
+                        await _launchWebsite(
+                            "https://vahan.parivahan.gov.in/nrservices/faces/user/citizen/citizenlogin.xhtml");
                         // await _launchWebsite("https://www.google.com");
-                      }
-                      ),
+                      }),
                   SectionItem(
                       title: 'DL Status',
                       icon: Icons.account_circle,
-                      onTap: ()async{
-                        await _launchWebsite("https://parivahan.gov.in/rcdlstatus/?pur_cd=101");
-                      }
-                  ),
+                      onTap: () async {
+                        await _launchWebsite(
+                            "https://parivahan.gov.in/rcdlstatus/?pur_cd=101");
+                      }),
                   SectionItem(
-                      title: 'E-Challan', icon: Icons.money,
-                      onTap: ()async{
-                        await _launchWebsite("https://echallan.parivahan.gov.in/index/accused-challan");
-                      }
-                  ),
+                      title: 'E-Challan',
+                      icon: Icons.money,
+                      onTap: () async {
+                        await _launchWebsite(
+                            "https://echallan.parivahan.gov.in/index/accused-challan");
+                      }),
                 ],
               ),
             ],
@@ -210,9 +235,9 @@ class HomeScreen extends StatelessWidget {
 
   Future<void> _launchWebsite(String url) async {
     final Uri uri = Uri.parse(url);
-    if(await canLaunchUrl(uri)){
-      await launchUrl(uri,mode: LaunchMode.externalNonBrowserApplication );
-    }else{
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalNonBrowserApplication);
+    } else {
       throw Exception('Could not launch $uri');
     }
   }

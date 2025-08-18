@@ -51,6 +51,7 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
   final List<String> _llPaidDriverOptions = ['0', '50'];
   final List<String> _llOtherEmployeeOptions = ['0', '50', '100', '150'];
   final List<String> _depreciationOptions = [
+    '0%',
     '5%',
     '10%',
     '15%',

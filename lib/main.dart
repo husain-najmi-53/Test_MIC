@@ -38,9 +38,15 @@ import 'package:motor_insurance_app/screens/vehicle/passenger_carrying_vehicle/t
 import 'package:motor_insurance_app/screens/vehicle/passenger_carrying_vehicle/three_wheeler_pcv_form_screen.dart';
 import 'package:motor_insurance_app/screens/vehicle/passenger_carrying_vehicle/school_bus_form_screen.dart';
 import 'package:motor_insurance_app/screens/vehicle/passenger_carrying_vehicle/bus_upto_6_form_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:motor_insurance_app/screens/auth/signup.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MotorInsuranceApp());
 }
 
@@ -50,7 +56,7 @@ class MotorInsuranceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Motor Insurance Calculator',
+      title: 'Easy Insurance Calculator (Motor)',
       debugShowCheckedModeBanner: false, // This removes the debug banner
 
       theme: ThemeData(primarySwatch: Colors.indigo),
@@ -58,6 +64,7 @@ class MotorInsuranceApp extends StatelessWidget {
       routes: {
         '/': (context) => const SplashScreen(),
         '/login': (context) => LoginScreen(),
+        '/signup': (context) => SignUpScreen(),
         '/home': (context) => const HomeScreen(),
         '/vehicleType': (context) => const VehicleTypeScreen(),
         '/RtoZoneFinder': (context) => const RtoZoneFinder(),

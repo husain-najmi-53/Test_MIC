@@ -63,6 +63,7 @@ class _ElectricGoodsCarryingScreenState
   ];
   final List<String> _restrictedTppdOptions = ['Yes', 'No'];
   final List<String> _depreciationOptions = [
+    '0%',
     '5%',
     '10%',
     '15%',

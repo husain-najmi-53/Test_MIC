@@ -41,6 +41,7 @@ class _ThreeWheelerPCV_upto6PassengerState
   final List<String> _ncbOptions = ['0', '20', '25', '35', '45', '50'];
   final List<String> _llPaidDriverOptions = ['0', '50'];
   final List<String> _depreciationOptions = [
+    '0%',
     '5%',
     '10%',
     '15%',

@@ -3677,10 +3677,10 @@ class RTOData {
       "Zone": "A"
     },
     "MH50": {
-      "Location": "Kurla",
-      "District": "Mumbai Suburban",
+      "Location": "Karad",
+      "District": "Satara",
       "State": "Maharashtra",
-      "Zone": "A"
+      "Zone": "B"
     },
     "MH51": {
       "Location": "Chembur",

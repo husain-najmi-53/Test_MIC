@@ -1,14 +1,66 @@
 import 'package:flutter/material.dart';
+import 'package:motor_insurance_app/screens/auth/signup.dart';
+import 'package:motor_insurance_app/screens/auth/auth_service.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:motor_insurance_app/screens/auth/enter_mpin.dart';
+import 'package:motor_insurance_app/screens/auth/set_mpin.dart';
 
-class LoginScreen extends StatelessWidget {
-  final TextEditingController emailController = TextEditingController();
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  final TextEditingController identifierController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  LoginScreen({super.key});
+  final AuthService _authService = AuthService();
+  final FlutterSecureStorage _storage = const FlutterSecureStorage();
 
-  void login(BuildContext context) {
-    // Later: Call backend API here
-    Navigator.pushReplacementNamed(context, '/home');
+  // 🔹 Normal email/phone + password login
+  void login(BuildContext context) async {
+    String identifier = identifierController.text.trim();
+    String password = passwordController.text.trim();
+
+    if (identifier.isEmpty || password.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Please enter Email/Mobile No. and Password")),
+      );
+      return;
+    }
+
+    String? error = await _authService.signIn(
+      identifier: identifier,
+      password: password,
+    );
+
+    if (error == null) {
+      Navigator.pushReplacementNamed(context, '/home');
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(error)),
+      );
+    }
+  }
+
+  // 🔐 MPIN button handler: decide Enter vs Set based on local storage
+  Future<void> _handleMpinTap(BuildContext context) async {
+    final mpin = await _storage.read(key: 'user_mpin');
+    if (mpin != null && mpin.isNotEmpty) {
+      // MPIN exists -> go to Enter MPIN
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => const EnterMPINScreen()),
+      );
+    } else {
+      // MPIN doesn't exist -> go to Set MPIN
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => const SetMPINScreen()),
+      );
+    }
   }
 
   @override
@@ -16,66 +68,51 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Motar Insurance Calculator',
-          style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+          'Easy Insurance Calculator (Motor)',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
         ),
-        backgroundColor: Colors.indigo.shade700, // Matching AppBar color
+        backgroundColor: Colors.indigo.shade700,
         elevation: 0,
-        automaticallyImplyLeading: false, // Hide the back button
-
-        // leading: IconButton(
-        //   icon: const Icon(Icons.arrow_back,
-        //       color: Colors.white), // Set the back icon color to white
-        //   onPressed: () {
-        //     Navigator.pop(context); // Handle back navigation
-        //   },
-        // ),
+        automaticallyImplyLeading: false,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
             const SizedBox(height: 100),
-            // Logo Image
             Center(
               child: Image.asset(
-                'assets/insurance.png', // Add your logo image here
-                height: 120, // Adjust the size as per your preference
+                'assets/insurance.png',
+                height: 120,
                 width: 120,
               ),
             ),
             const SizedBox(height: 20),
             const Center(
               child: Text(
-                'Motar Insurance Calculator',
-                style: TextStyle(
-                    fontSize: 26,
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold),
+                'Sign In',
+                style: TextStyle(fontSize: 26, color: Colors.blue, fontWeight: FontWeight.bold),
               ),
             ),
             const SizedBox(height: 20),
-            // Sticky note like container for branding
 
-            // Email Input Field
+            // Email/Phone input
             _buildTextField(
-              controller: emailController,
+              controller: identifierController,
               label: 'Email / Mobile',
               isNumeric: false,
             ),
             const SizedBox(height: 16),
 
-            // Password Input Field
+            // Password input
             _buildTextField(
               controller: passwordController,
               label: 'Password',
-              isNumeric: false,
               obscureText: true,
             ),
             const SizedBox(height: 30),
 
-            // Login Button
+            // Normal Login Button
             ElevatedButton(
               onPressed: () => login(context),
               style: ElevatedButton.styleFrom(
@@ -86,81 +123,53 @@ class LoginScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              child: const Text(
-                'Login',
-                style: TextStyle(color: Colors.white),
-              ),
+              child: const Text('Login', style: TextStyle(color: Colors.white)),
             ),
-            const SizedBox(height: 20),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.indigo.shade100,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.3),
-                    blurRadius: 6,
-                    offset: const Offset(2, 4),
-                  ),
-                ],
+
+            const SizedBox(height: 16),
+
+            // ✅ Always show MPIN Login button; route based on existence
+            ElevatedButton.icon(
+              onPressed: () => _handleMpinTap(context),
+              icon: const Icon(Icons.lock, color: Colors.white),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.indigo.shade600,
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.lock, color: Color.fromARGB(255, 167, 13, 13)),
-                  SizedBox(width: 8),
-                  Text(
-                    'Secure Login with MPIN',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 167, 13, 13),
-                    ),
-                  ),
-                ],
+              label: const Text(
+                'Login with MPIN',
+                style: TextStyle(color: Colors.white, fontSize: 16),
               ),
             ),
 
             const SizedBox(height: 20),
-            // Forgot MPIN and Create Account Links
+
+            // Bottom Links
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
                   onPressed: () {
-                    // Navigate to Forgot MPIN screen
+                    // TODO: Forgot Password flow
                   },
-                  child: const Text(
-                    'Forgot MPIN?',
-                    style: TextStyle(fontSize: 14, color: Colors.indigo),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Navigate to Create Account screen
-                  },
-                  child: const Text(
-                    'Change Mobile No',
-                    style: TextStyle(fontSize: 14, color: Colors.indigo),
-                  ),
+                  child: const Text('Forgot Password?', style: TextStyle(fontSize: 14, color: Colors.indigo)),
                 ),
               ],
             ),
             const SizedBox(height: 20),
 
-            // Sign Up Link (if needed)
+            // Sign Up
             Center(
               child: TextButton(
                 onPressed: () {
-                  // Navigate to Sign Up page
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
                 },
                 child: const Text(
-                  'Don\'t have an account? Sign Up',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.indigo,
-                  ),
+                  "Don't have an account? Sign Up",
+                  style: TextStyle(fontSize: 14, color: Colors.indigo),
                 ),
               ),
             ),
@@ -170,7 +179,6 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  // A reusable method to build text fields with a consistent design
   Widget _buildTextField({
     required TextEditingController controller,
     required String label,

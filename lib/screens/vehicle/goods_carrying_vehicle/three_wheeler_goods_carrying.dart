@@ -44,6 +44,7 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
   final List<String> _llPaidDriverOptions = ['0', '50'];
   final List<String> _restrictedTppdOptions = ['Yes', 'No'];
   final List<String> _depreciationOptions = [
+    '0%',
     '5%',
     '10%',
     '15%',

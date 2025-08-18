@@ -1,6 +1,3 @@
-// Map defining sections and their fields per vehicle category.
-// Replace the sample fields with your actual field names from result screens.
-
 const Map<String, Map<String, List<String>>> vehicleCategorySections = {
   
   // Two Wheeler categories

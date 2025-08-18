@@ -24,7 +24,6 @@ class _RtoZoneFinderState extends State<RtoZoneFinder> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      // backgroundColor: const Color(0xFFF0F4FF),
       appBar: AppBar(
         backgroundColor: Colors.indigo.shade700,
         shape: const RoundedRectangleBorder(
@@ -51,11 +50,30 @@ class _RtoZoneFinderState extends State<RtoZoneFinder> {
           child: Form(
             key: _key,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: height * 0.1,
+                SizedBox(height: height * 0.1),
+
+                /// 🔹 Label with * mark
+                RichText(
+                  text: TextSpan(
+                    text: "Enter RTO Code (e.g. MH12)",
+                    style: GoogleFonts.poppins(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black87,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "*",
+                        style: TextStyle(color: Colors.red, fontSize: 16),
+                      ),
+                    ],
+                  ),
                 ),
+                SizedBox(height: 6),
+
+                /// Input Box
                 TextFormField(
                   controller: _findController,
                   textCapitalization: TextCapitalization.characters,
@@ -64,35 +82,54 @@ class _RtoZoneFinderState extends State<RtoZoneFinder> {
                   validator: (val) {
                     final regex = RegExp(r'^[A-Za-z]{2}\d{2}$');
                     if (val == null || val.isEmpty) {
-                      return "Please enter the value ";
+                      return "This field is required";
                     } else if (!regex.hasMatch(val)) {
-                      return "Please enter correct format Ex: mh12 or MH12  ";
+                      return "Enter correct format Ex: MH12";
                     } else {
                       return null;
                     }
                   },
                   decoration: InputDecoration(
-                      hintText: "Enter First 4 digit EX. MH12",
-                      hintStyle: GoogleFonts.poppins(
-                          color: Colors.black45, fontWeight: FontWeight.w400),
-                      filled: true,
-                      // fillColor:Colors.indigo.shade50,
-                      // fillColor:Colors.blue.shade50,
-                      fillColor: const Color(0xFFF0F4FF),
-                      border: const UnderlineInputBorder(),
-                      focusedBorder: UnderlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      )),
+                    hintText: "Ex: MH12",
+                    hintStyle: GoogleFonts.poppins(
+                      color: Colors.grey.shade600,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    filled: true,
+                    fillColor: Colors.white,
+                    contentPadding:
+                        const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide:
+                          BorderSide(color: Colors.indigo.shade300, width: 1),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide:
+                          BorderSide(color: Colors.indigo.shade700, width: 2),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide:
+                          BorderSide(color: Colors.red.shade400, width: 1),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide:
+                          BorderSide(color: Colors.red.shade600, width: 2),
+                    ),
+                  ),
                 ),
-                SizedBox(
-                  height: height * 0.03,
-                ),
-                Container(
-                  width: width * 0.5,
-                  child: ElevatedButton(
+
+                SizedBox(height: height * 0.03),
+
+                /// 🔹 Find Button (ORIGINAL PLACE)
+                Center(
+                  child: SizedBox(
+                    width: width * 0.55,
+                    height: 50,
+                    child: ElevatedButton(
                       onPressed: () {
                         if (_key.currentState!.validate()) {
                           String upCase =
@@ -106,70 +143,61 @@ class _RtoZoneFinderState extends State<RtoZoneFinder> {
                             });
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text("Data did not Match")));
+                              SnackBar(content: Text("Data did not Match")),
+                            );
                           }
                         }
                       },
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.indigo.shade700,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12))),
+                        backgroundColor: Colors.indigo.shade700,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
                       child: Text(
                         "Find",
-                        style: GoogleFonts.poppins(color: Colors.white),
-                      )),
-                ),
-                SizedBox(
-                  height: height * 0.15,
-                ),
-                /*  Card(
-                 color: const Color(0xFFF0F4FF),
-                  child: Padding(
-                    padding: const EdgeInsets.all(18),
-                    child: Column(
-                        children: [
-                    Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6),
-                      child: _details(
-                        width: width,
-                        height: height,
-                        fieldName: 'Location',
-                        fielValue: Location != null ? Location! : '-',
-                         )),
-                       ]
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                        ),
+                      ),
                     ),
-                  )
-                ),*/
+                  ),
+                ),
+
+                SizedBox(height: height * 0.08),
+
+                /// 🔹 Info Box
                 Container(
                   constraints: BoxConstraints(
-                    minHeight: height * 0.25, // Reduced minimum height
+                    minHeight: height * 0.30,
+                    maxWidth: width * 0.95,
                   ),
-                  width: width * 0.9,
-                  padding: EdgeInsets.symmetric(
-                    // Balanced vertical padding
-                    vertical: 12,
-                    horizontal: 16,
-                  ),
+                  padding: EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: Color(0xFFF0F4FF),
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: Colors.indigo.shade700),
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      SizedBox(height: 4), // Small top buffer
-                      _buildExpandableRow('Location', Location),
-                      Divider(color: Colors.black54),
-                      _buildExpandableRow('Zone', Zone),
-                      Divider(color: Colors.black54),
-                      _buildExpandableRow('District', District),
-                      Divider(color: Colors.black54),
-                      _buildExpandableRow('State', State),
-                      SizedBox(height: 4), // Matching bottom buffer
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.indigo.withOpacity(0.1),
+                        blurRadius: 8,
+                        offset: Offset(0, 4),
+                      ),
                     ],
                   ),
-                )
+                  child: Column(
+                    children: [
+                      _buildInfoTile(Icons.location_on, 'Location', Location),
+                      Divider(),
+                      _buildInfoTile(Icons.map, 'Zone', Zone),
+                      Divider(),
+                      _buildInfoTile(Icons.location_city, 'District', District),
+                      Divider(),
+                      _buildInfoTile(Icons.flag, 'State', State),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
@@ -177,89 +205,53 @@ class _RtoZoneFinderState extends State<RtoZoneFinder> {
       ),
     );
   }
-}
 
-class _details extends StatelessWidget {
-  const _details(
-      {required this.width,
-      required this.height,
-      required this.fieldName,
-      required this.fielValue});
-
-  final double width;
-  final double height;
-  final String fieldName;
-  final String fielValue;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-            width: width * 0.4,
-            height: height * 0.03,
-            // color:Colors.red,
-            child: Text(
-              fieldName,
-              style: GoogleFonts.poppins(
-                  color: Colors.black,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500),
-              overflow: TextOverflow.visible,
-            )),
-        SizedBox(
-          width: width * 0.05,
+  /// 🔹 Interactive Row Tile Widget
+  Widget _buildInfoTile(IconData icon, String label, String? value) {
+    return InkWell(
+      // onTap: () {
+      //   ScaffoldMessenger.of(context).showSnackBar(
+      //     SnackBar(content: Text('$label: ${value ?? "-"}')),
+      //   );
+      // },
+      borderRadius: BorderRadius.circular(12),
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+        child: Row(
+          children: [
+            CircleAvatar(
+              radius: 18,
+              backgroundColor: Colors.indigo.shade50,
+              child: Icon(icon, color: Colors.indigo.shade700, size: 20),
+            ),
+            SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    label,
+                    style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      color: Colors.indigo.shade800,
+                    ),
+                  ),
+                  SizedBox(height: 2),
+                  Text(
+                    value ?? '-',
+                    style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 13,
+                      color: Colors.grey.shade700,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
-        Container(
-            width: width * 0.3,
-            height: height * 0.03,
-            // color:Colors.red,
-            child: Text(
-              fielValue,
-              style: GoogleFonts.poppins(
-                  color: Colors.black,
-                  fontSize: 15,
-                  fontWeight: FontWeight.w300),
-            )),
-      ],
+      ),
     );
   }
-}
-
-// New helper widget (place outside build method)
-Widget _buildExpandableRow(String label, String? value) {
-  return Padding(
-    padding: EdgeInsets.symmetric(vertical: 8),
-    child: Row(
-      children: [
-        // Column 1: Labels (left-aligned)
-        Container(
-          width: 130, // Fixed width for labels
-          alignment: Alignment.centerLeft,
-          child: Text(
-            label,
-            style: GoogleFonts.poppins(
-              fontWeight: FontWeight.w500,
-              color: Colors.indigo.shade800,
-            ),
-          ),
-        ),
-        // Column 2: Values (left-aligned but starts after labels)
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.only(left: 16), // Space between columns
-            child: Text(
-              value ?? '-',
-              style: GoogleFonts.poppins(
-                fontWeight: FontWeight.w400,
-                color: Colors.grey.shade800,
-              ),
-              textAlign: TextAlign.left, // Left-align within the column
-              softWrap: true,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
 }

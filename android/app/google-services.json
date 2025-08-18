@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "291574915194",
+    "project_id": "easy-insurance-calculator",
+    "storage_bucket": "easy-insurance-calculator.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291574915194:android:fea4ccbcdd9c1fba965bc3",
+        "android_client_info": {
+          "package_name": "com.example.motor_insurance_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwQXB2EJv8GkvbfDs7cvMTRy9cSOvFpiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
