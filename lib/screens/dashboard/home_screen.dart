@@ -164,6 +164,12 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.pushNamed(context, '/IdvMaster');
                       }),
+                  SectionItem(
+                      title: 'Claim Calculator',
+                      icon: Icons.calculate,
+                      onTap: () {
+                        Navigator.pushNamed(context, '/ClaimcalulatorType');
+                      }),
                 ],
               ),
 

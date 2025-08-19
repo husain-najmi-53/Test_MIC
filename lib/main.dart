@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:motor_insurance_app/screens/dashboard/claimCalculator/claimCalulator_Type.dart';
+import 'package:motor_insurance_app/screens/dashboard/claimCalculator/odClaim_screen.dart';
+import 'package:motor_insurance_app/screens/dashboard/claimCalculator/tpClaim_screen.dart';
 import 'package:motor_insurance_app/screens/vehicle/calculation_form_screen.dart';
 import 'package:motor_insurance_app/screens/dashboard/home_screen.dart';
 import 'package:motor_insurance_app/screens/auth/login_screen.dart';
@@ -130,6 +133,10 @@ class MotorInsuranceApp extends StatelessWidget {
             const AgricultureTractorFormScreen(),
         '/trailerAndOtherMisc': (context) => const TrailerAndOtherFormScreen(),
         '/otherMiscVehicle': (context) => const OtherMiscFormScreen(),
+
+         '/ClaimcalulatorType': (context) => const ClaimcalulatorType(),
+        '/TpclaimScreen': (context) => const TpclaimScreen(),
+        '/OdclaimScreen': (context) => const OdclaimScreen(),
       },
     );
   }

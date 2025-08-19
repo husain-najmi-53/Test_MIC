@@ -129,23 +129,23 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(height: 16),
 
             // ✅ Always show MPIN Login button; route based on existence
-            ElevatedButton.icon(
-              onPressed: () => _handleMpinTap(context),
-              icon: const Icon(Icons.lock, color: Colors.white),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.indigo.shade600,
-                padding: const EdgeInsets.symmetric(vertical: 14),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-              label: const Text(
-                'Login with MPIN',
-                style: TextStyle(color: Colors.white, fontSize: 16),
-              ),
-            ),
+            // ElevatedButton.icon(
+            //   onPressed: () => _handleMpinTap(context),
+            //   icon: const Icon(Icons.lock, color: Colors.white),
+            //   style: ElevatedButton.styleFrom(
+            //     backgroundColor: Colors.indigo.shade600,
+            //     padding: const EdgeInsets.symmetric(vertical: 14),
+            //     shape: RoundedRectangleBorder(
+            //       borderRadius: BorderRadius.circular(10),
+            //     ),
+            //   ),
+            //   label: const Text(
+            //     'Login with MPIN',
+            //     style: TextStyle(color: Colors.white, fontSize: 16),
+            //   ),
+            // ),
 
-            const SizedBox(height: 20),
+            // const SizedBox(height: 20),
 
             // Bottom Links
             Row(

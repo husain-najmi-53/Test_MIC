@@ -257,12 +257,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
           const SnackBar(content: Text('✅ Account created successfully'),
           behavior: SnackBarBehavior.floating,),
         );
-
+        // Navigating to Home
+        Navigator.pushReplacement(context, "/home" as Route<Object?>);
         // ✅ Redirect to SetMPINScreen instead of Home
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const SetMPINScreen()),
-        );
+        // Navigator.pushReplacement(
+        //   context,
+        //   MaterialPageRoute(builder: (context) => const SetMPINScreen()),
+        // );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(message)),
