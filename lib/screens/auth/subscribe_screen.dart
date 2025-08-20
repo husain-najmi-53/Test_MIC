@@ -2,22 +2,80 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:motor_insurance_app/screens/auth/auth_service.dart';
+import 'package:razorpay_flutter/razorpay_flutter.dart';
 
-class SubscribeScreen extends StatelessWidget {
+class SubscribeScreen extends StatefulWidget {
   const SubscribeScreen({super.key});
+
+  @override
+  State<SubscribeScreen> createState() => _SubscribeScreenState();
+}
+
+class _SubscribeScreenState extends State<SubscribeScreen> {
+  late Razorpay _razorpay;
+  String? _selectedPlan;
+  int? _selectedDays;
+
+  bool _loading = true;
+  bool _showPlans = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _razorpay = Razorpay();
+    _razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, _handlePaymentSuccess);
+    _razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, _handlePaymentError);
+    _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, _handleExternalWallet);
+
+    _checkSubscription();
+  }
+
+  @override
+  void dispose() {
+    _razorpay.clear();
+    super.dispose();
+  }
+
+  /// 🔹 Check subscription status
+  Future<void> _checkSubscription() async {
+    final uid = FirebaseAuth.instance.currentUser?.uid;
+    if (uid == null) return;
+
+    final doc =
+        await FirebaseFirestore.instance.collection('subscriptions').doc(uid).get();
+
+    if (!doc.exists) {
+      // No subscription record → show plans
+      setState(() {
+        _loading = false;
+        _showPlans = true;
+      });
+      return;
+    }
+
+    final data = doc.data()!;
+    final expiry = data['expiryDate'];
+    final DateTime? expiryDate =
+        expiry is Timestamp ? expiry.toDate() : DateTime.tryParse(expiry ?? '');
+
+    if (expiryDate != null && expiryDate.isAfter(DateTime.now())) {
+      // Still valid subscription → skip to home
+      if (mounted) Navigator.pushReplacementNamed(context, '/home');
+    } else {
+      // Expired → show plans
+      setState(() {
+        _loading = false;
+        _showPlans = true;
+      });
+    }
+  }
 
   Future<void> _handleSignOut(BuildContext context) async {
     try {
       final authService = AuthService();
       await authService.signOut();
-      
       if (context.mounted) {
-        // Clear navigation stack and go to login
-        Navigator.pushNamedAndRemoveUntil(
-          context,
-          '/login',
-          (route) => false,
-        );
+        Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
       }
     } catch (e) {
       if (context.mounted) {
@@ -28,38 +86,13 @@ class SubscribeScreen extends StatelessWidget {
     }
   }
 
-  Future<void> _activatePlan(
-      BuildContext context, String plan, int days) async {
-    final uid = FirebaseAuth.instance.currentUser?.uid;
-    if (uid == null) return;
-
-    final now = DateTime.now().toUtc();
-    final expiry = now.add(Duration(days: days));
-
-    await FirebaseFirestore.instance.collection('subscriptions').doc(uid).set({
-      'subscriptionStatus': 'active',
-      'plan': plan,
-      'trialStart': null,
-      'trialEnd': null,
-      'paymentId': 'MOCK_PAYMENT_${DateTime.now().millisecondsSinceEpoch}',
-      'expiryDate': expiry.toIso8601String(),
-    }, SetOptions(merge: true));
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text("$plan Plan Activated ✅")),
-    );
-
-    Navigator.pushReplacementNamed(context, '/home');
-  }
-
+  /// 🔹 Trial flow
   Future<bool> _hasUsedTrial(String uid) async {
-    final doc = await FirebaseFirestore.instance
-        .collection('subscriptions')
-        .doc(uid)
-        .get();
+    final doc =
+        await FirebaseFirestore.instance.collection('subscriptions').doc(uid).get();
     if (!doc.exists) return false;
     final data = doc.data();
-    return data?['trialStart'] != null; // means already used trial
+    return data?['trialStart'] != null;
   }
 
   Future<void> _activateTrial(BuildContext context) async {
@@ -85,13 +118,85 @@ class SubscribeScreen extends StatelessWidget {
       'expiryDate': Timestamp.fromDate(trialEnd),
     }, SetOptions(merge: true));
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text("Trial Activated ✅")),
-    );
-
-    Navigator.pushReplacementNamed(context, '/home');
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Trial Activated ✅")),
+      );
+      Navigator.pushReplacementNamed(context, '/home');
+    }
   }
 
+  /// 🔹 Razorpay checkout
+  void _openCheckout(String plan, int amount, int days) {
+    _selectedPlan = plan;
+    _selectedDays = days;
+
+    var options = {
+      'key': 'rzp_test_xxxxxxxx', // Replace with your Razorpay Key
+      'amount': amount * 100,
+      'name': 'Motor Insurance App',
+      'description': '$plan Subscription',
+      'prefill': {
+        'contact': '9999999999',
+        'email': 'test@example.com',
+      },
+      'external': {
+        'wallets': ['paytm']
+      }
+    };
+
+    try {
+      _razorpay.open(options);
+    } catch (e) {
+      debugPrint(e.toString());
+    }
+  }
+
+  /// 🔹 Payment Handlers
+  void _handlePaymentSuccess(PaymentSuccessResponse response) async {
+    final uid = FirebaseAuth.instance.currentUser?.uid;
+    if (uid == null) return;
+
+    if (_selectedPlan == null || _selectedDays == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Plan details missing ❌")),
+      );
+      return;
+    }
+
+    final now = DateTime.now().toUtc();
+    final expiry = now.add(Duration(days: _selectedDays!));
+
+    await FirebaseFirestore.instance.collection('subscriptions').doc(uid).set({
+      'subscriptionStatus': 'active',
+      'plan': _selectedPlan,
+      'trialStart': null,
+      'trialEnd': null,
+      'paymentId': response.paymentId,
+      'expiryDate': Timestamp.fromDate(expiry),
+    }, SetOptions(merge: true));
+
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("${_selectedPlan!.toUpperCase()} Activated ✅")),
+      );
+      Navigator.pushReplacementNamed(context, '/home');
+    }
+  }
+
+  void _handlePaymentError(PaymentFailureResponse response) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text("Payment Failed ❌")),
+    );
+  }
+
+  void _handleExternalWallet(ExternalWalletResponse response) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text("External Wallet Selected: ${response.walletName}")),
+    );
+  }
+
+  /// 🔹 UI
   Widget _buildPlanCard({
     required String title,
     required String price,
@@ -115,17 +220,29 @@ class SubscribeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (_loading) {
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    if (!_showPlans) {
+      return const Scaffold(
+        body: Center(child: Text("Checking subscription...")),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Choose a Plan"),
-        automaticallyImplyLeading: false, // Disable back button
+        automaticallyImplyLeading: false,
         actions: [
           IconButton(
             icon: const Icon(Icons.logout, color: Colors.black),
-            tooltip: 'Sign Out', // Shows on long press
+            tooltip: 'Sign Out',
             onPressed: () => _handleSignOut(context),
           ),
-          const SizedBox(width: 8), // Add some padding on the right
+          const SizedBox(width: 8),
         ],
       ),
       body: ListView(
@@ -140,19 +257,19 @@ class SubscribeScreen extends StatelessWidget {
             title: "Monthly Plan",
             price: "₹149",
             subtitle: "",
-            onTap: () async => await _activatePlan(context, "monthly", 30),
+            onTap: () => _openCheckout("monthly", 149, 30),
           ),
           _buildPlanCard(
             title: "6-Month Plan",
             price: "₹699",
             subtitle: "Equivalent to ₹116/month (save ~22%)",
-            onTap: () async => await _activatePlan(context, "6_months", 180),
+            onTap: () => _openCheckout("6_months", 699, 180),
           ),
           _buildPlanCard(
             title: "Yearly Plan",
             price: "₹999",
             subtitle: "Equivalent to ₹83/month (save ~44%)",
-            onTap: () async => await _activatePlan(context, "yearly", 365),
+            onTap: () => _openCheckout("yearly", 999, 365),
           ),
         ],
       ),
