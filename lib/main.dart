@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:motor_insurance_app/screens/auth/subscribe_screen.dart';
 import 'package:motor_insurance_app/screens/dashboard/claimCalculator/claimCalulator_Type.dart';
 import 'package:motor_insurance_app/screens/dashboard/claimCalculator/odClaim_screen.dart';
 import 'package:motor_insurance_app/screens/dashboard/claimCalculator/tpClaim_screen.dart';
@@ -68,6 +69,7 @@ class MotorInsuranceApp extends StatelessWidget {
         '/': (context) => const SplashScreen(),
         '/login': (context) => LoginScreen(),
         '/signup': (context) => SignUpScreen(),
+        '/subscribe': (context) => SubscribeScreen(),
         '/home': (context) => const HomeScreen(),
         '/vehicleType': (context) => const VehicleTypeScreen(),
         '/RtoZoneFinder': (context) => const RtoZoneFinder(),
@@ -134,7 +136,7 @@ class MotorInsuranceApp extends StatelessWidget {
         '/trailerAndOtherMisc': (context) => const TrailerAndOtherFormScreen(),
         '/otherMiscVehicle': (context) => const OtherMiscFormScreen(),
 
-         '/ClaimcalulatorType': (context) => const ClaimcalulatorType(),
+        '/ClaimcalulatorType': (context) => const ClaimcalulatorType(),
         '/TpclaimScreen': (context) => const TpclaimScreen(),
         '/OdclaimScreen': (context) => const OdclaimScreen(),
       },

@@ -434,26 +434,29 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
 double _getOdRate(String zone, String age, int cc) {
   if (zone == 'A') {
     if (cc <= 150) {
-      if (age == 'Upto 5 Years') return 1.713;
-      if (age == '6-10 Years') return 1.788;
-      return 1.908; // Above 10 years
+      if (age == 'Upto 5 Years') return 1.708;
+      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.793;
+    } else if (cc <= 350) {
+      if (age == 'Upto 5 Years') return 1.793;
+      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.883;
     } else {
-      if (age == 'Upto 5 Years') return 1.794;
-      if (age == '6-10 Years') return 1.889;
-      return 2.028; // Above 10 years
+      if (age == 'Upto 5 Years') return 1.879;
+      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.973;
     }
   } else if (zone == 'B') {
     if (cc <= 150) {
-      if (age == 'Upto 5 Years') return 1.678;
-      if (age == '6-10 Years') return 1.753;
-      return 1.873; // Above 10 years
+      if (age == 'Upto 5 Years') return 1.676;
+      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.760;
+    } else if (cc <= 350) {
+      if (age == 'Upto 5 Years') return 1.760;
+      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.848;
     } else {
-      if (age == 'Upto 5 Years') return 1.758;
-      if (age == '6-10 Years') return 1.853;
-      return 1.993; // Above 10 years
+      if (age == 'Upto 5 Years') return 1.884;
+      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.936;
     }
   }
-  return 1.713; // Fallback if inputs don't match // Safe fallback
+
+  return 1.936; // fallback
 }
 
 double getTpRate(int cc, {bool isFiveYear = false}) {

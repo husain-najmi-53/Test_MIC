@@ -107,14 +107,15 @@ class _TpclaimScreenState extends State<TpclaimScreen>
           child: Column(
             children: [
               Container(
-                color: Colors.indigo.shade300,
+                color: Colors.indigo.shade100,
+                //color: Colors.indigo.shade700,
                 child: TabBar(
                     controller: tabController,
                     labelStyle: GoogleFonts.poppins(
-                        color: Colors.white,
+                        color: Colors.indigo.shade800,
                         fontSize: 16,
-                        fontWeight: FontWeight.w400),
-                    indicatorColor: Colors.white,
+                        fontWeight: FontWeight.w500),
+                    indicatorColor: Colors.indigo.shade800,
                     indicatorSize: TabBarIndicatorSize.tab,
                     onTap: (index) {
                       print("Tapped tab index: $index");
@@ -138,7 +139,8 @@ class _TpclaimScreenState extends State<TpclaimScreen>
                       Container(
                         height: height * 0.12,
                         decoration: BoxDecoration(
-                          color: Colors.indigo.shade300,
+                          color: Colors.indigo.shade100,
+                          //color: Colors.indigo.shade700,
                         ),
                       ),
                       Positioned(
@@ -276,10 +278,9 @@ class _TpclaimScreenState extends State<TpclaimScreen>
                   },
                   fieldValue: _selectedDependentNumber),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 5),
-            child: GestureDetector(
-              onTap: () {
-                // if(_deathKey.currentState!.validate() && _selectedDeathMarriedStatus!=null && _selectedDependentNumber!=null &&_selectedEmploymentType!=null && _selectedJobType!=null){
+            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+            child: ElevatedButton(
+              onPressed: () {
                 if (_deathKey.currentState!.validate() &&
                     _selectedDeathMarriedStatus != null &&
                     _selectedEmploymentType != null) {
@@ -302,10 +303,9 @@ class _TpclaimScreenState extends State<TpclaimScreen>
                         jobType: _selectedEmploymentType == "Student"
                             ? "Temporary"
                             : _selectedJobType!,
-                        // grossAnnualIncome:double.parse(injuryGrossAnnualIncomeController.text.trim()),
                         grossAnnualIncome: _selectedEmploymentType == "Student"
                             ? 0
-                            : 40000, // Rs Fixed as per rule there is salary cap of 40
+                            : 40000,
                       );
                       deathLiabilityFault = calculateFaultLiabilityDeath(
                           age: int.parse(deathAgeController.text.trim()),
@@ -319,11 +319,9 @@ class _TpclaimScreenState extends State<TpclaimScreen>
                           jobType: _selectedEmploymentType == "Student"
                               ? "Temporary"
                               : _selectedJobType!,
-                          // grossAnnualIncome:double.parse(injuryGrossAnnualIncomeController.text.trim()),
-                          grossAnnualIncome: _selectedEmploymentType ==
-                                  "Student"
+                          grossAnnualIncome: _selectedEmploymentType == "Student"
                               ? 0
-                              : 40000, // Rs Fixed as per rule there is salary cap of 40
+                              : 40000,
                           specialDamages: double.parse(
                               deathSpecialExpenseController.text.trim()));
                     });
@@ -333,20 +331,22 @@ class _TpclaimScreenState extends State<TpclaimScreen>
                       content: Text("Please Select the required Field")));
                 }
               },
-              child: Container(
-                height: 40,
-                decoration: BoxDecoration(
-                  color: Colors.indigo.shade300,
-                  borderRadius: BorderRadiusDirectional.only(
-                    bottomStart: Radius.circular(12),
-                    bottomEnd: Radius.circular(12),
-                  ),
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(double.infinity, 50),
+                backgroundColor: Colors.indigo.shade700,
+                foregroundColor: Colors.white,
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
                 ),
-                child: Center(
-                  child: Text(
-                    "Calculate",
-                    style: TextStyle(color: Colors.white),
-                  ),
+                padding: EdgeInsets.symmetric(vertical: 12),
+              ),
+              child: Text(
+                "Calculate",
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  letterSpacing: 1.2,
                 ),
               ),
             ),
@@ -494,9 +494,9 @@ class _TpclaimScreenState extends State<TpclaimScreen>
               },
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 5),
-              child: GestureDetector(
-                onTap: () {
+              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+              child: ElevatedButton(
+                onPressed: () {
                   if (_injuryKey.currentState!.validate() &&
                       _selectedInjuryEmploymentType != null) {
                     if (_selectedInjuryEmploymentType != "Student" &&
@@ -511,11 +511,9 @@ class _TpclaimScreenState extends State<TpclaimScreen>
                             jobType: _selectedInjuryEmploymentType == "Student"
                                 ? "Contractual"
                                 : _selectedInjuryJobType!,
-                            // grossAnnualIncome:double.parse(injuryGrossAnnualIncomeController.text.trim()),
-                            grossAnnualIncome: _selectedInjuryEmploymentType ==
-                                    "Student"
+                            grossAnnualIncome: _selectedInjuryEmploymentType == "Student"
                                 ? 0
-                                : 40000, // Rs Fixed as per rule there is salary cap of 40
+                                : 40000,
                             disabilityPercent: double.parse(
                                 injuryDisabilityPercentController.text.trim()),
                             extraExpenses: double.parse(
@@ -526,11 +524,9 @@ class _TpclaimScreenState extends State<TpclaimScreen>
                             jobType: _selectedInjuryEmploymentType == "Student"
                                 ? "Contractual"
                                 : _selectedInjuryJobType!,
-                            // grossAnnualIncome:double.parse(injuryGrossAnnualIncomeController.text.trim()),
-                            grossAnnualIncome: _selectedInjuryEmploymentType ==
-                                    "Student"
+                            grossAnnualIncome: _selectedInjuryEmploymentType == "Student"
                                 ? 0
-                                : 40000, // Rs Fixed as per rule there is salary cap of 40
+                                : 40000,
                             disabilityPercent: double.parse(
                                 injuryDisabilityPercentController.text.trim()),
                             extraExpenses: double.parse(
@@ -544,20 +540,22 @@ class _TpclaimScreenState extends State<TpclaimScreen>
                         content: Text("Please Select the required Field")));
                   }
                 },
-                child: Container(
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: Colors.indigo.shade300,
-                    borderRadius: BorderRadiusDirectional.only(
-                      bottomStart: Radius.circular(12),
-                      bottomEnd: Radius.circular(12),
-                    ),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(double.infinity, 50),
+                  backgroundColor: Colors.indigo.shade700,
+                  foregroundColor: Colors.white,
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  child: Center(
-                    child: Text(
-                      "Calculate",
-                      style: TextStyle(color: Colors.white),
-                    ),
+                  padding: EdgeInsets.symmetric(vertical: 12),
+                ),
+                child: Text(
+                  "Calculate",
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    letterSpacing: 1.2,
                   ),
                 ),
               ),

@@ -482,16 +482,6 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
 
   pw.Widget _buildTotalPremiumSection(QuotationData quotation) {
     final brand = PdfColor.fromInt(0xFF303F9F);
-    
-    final double totalPackagePremium = _safeParseDouble(quotation.insuranceResult.fieldData['Total Package Premium']);
-    final double gst = _safeParseDouble(quotation.insuranceResult.fieldData['GST @ 18%']);
-
-    double totalPolicyPremium = totalPackagePremium + gst;
-
-    if (totalPolicyPremium == 0.0) {
-      totalPolicyPremium = _safeParseDouble(quotation.insuranceResult.totalPremium);
-    }
-
     return pw.Container(
       decoration: pw.BoxDecoration(
         color: brand,
@@ -510,7 +500,7 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
             ),
           ),
           pw.Text(
-            totalPolicyPremium.toStringAsFixed(2),
+            quotation.insuranceResult.totalPremium.toStringAsFixed(2),
             style: pw.TextStyle(
               fontSize: 12,
               fontWeight: pw.FontWeight.bold,

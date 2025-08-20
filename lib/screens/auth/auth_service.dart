@@ -4,59 +4,60 @@ import 'package:firebase_auth/firebase_auth.dart';
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _db = FirebaseFirestore.instance;
+  
 
   /// 🔹 Signup user with Email, Phone & Password
- Future<String?> signUp({
-  required String name,
-  required String email,
-  required String phone,
-  required String password,
-  required String occupation,
-  required String state,
-  required String city,
-}) async {
-  try {
-    //  1. Check if phone already exists in Firestore
-    var existing = await _db
-        .collection('users')
-        .where('phone', isEqualTo: phone)
-        .limit(1)
-        .get();
+  Future<String?> signUp({
+    required String name,
+    required String email,
+    required String phone,
+    required String password,
+    required String occupation,
+    required String state,
+    required String city,
+  }) async {
+    try {
+      //  1. Check if phone already exists in Firestore
+      var existing = await _db
+          .collection('users')
+          .where('phone', isEqualTo: phone)
+          .limit(1)
+          .get();
 
-    if (existing.docs.isNotEmpty) {
-      return "Phone number already registered. Please use another.";
+      if (existing.docs.isNotEmpty) {
+        return "Phone number already registered. Please use another.";
+      }
+
+      // 2. Create user with email & password in Firebase Auth
+      UserCredential result = await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
+      User? user = result.user;
+
+      // 3. Save all extra user details in Firestore
+      if (user != null) {
+        await _db.collection('users').doc(user.uid).set({
+          'uid': user.uid,
+          'name': name,
+          'email': email,
+          'phone': phone,
+          'occupation': occupation,
+          'state': state,
+          'city': city,
+          'createdAt': Timestamp.now(),
+        });
+        return null; // ✅ Success
+      }
+
+      return "Unknown error occurred. Please try again.";
+    } on FirebaseAuthException catch (e) {
+      return _getFirebaseAuthError(e);
+    } catch (e) {
+      return "Something went wrong. Please try again.";
     }
-
-    // 2. Create user with email & password in Firebase Auth
-    UserCredential result = await _auth.createUserWithEmailAndPassword(
-      email: email,
-      password: password,
-    );
-
-    User? user = result.user;
-
-    // 3. Save all extra user details in Firestore
-    if (user != null) {
-      await _db.collection('users').doc(user.uid).set({
-        'uid': user.uid,
-        'name': name,
-        'email': email,
-        'phone': phone,
-        'occupation': occupation,
-        'state': state,
-        'city': city,
-        'createdAt': Timestamp.now(),
-      });
-      return null; // ✅ Success
-    }
-
-    return "Unknown error occurred. Please try again.";
-  } on FirebaseAuthException catch (e) {
-    return _getFirebaseAuthError(e);
-  } catch (e) {
-    return "Something went wrong. Please try again.";
   }
-}
 
   /// 🔹 Sign in with Email/Phone & Password
   Future<String?> signIn(
@@ -102,6 +103,103 @@ class AuthService {
   /// 🔹 Get Current User
   User? getCurrentUser() {
     return _auth.currentUser;
+  }
+
+  Future<Map<String, dynamic>?> getSubscriptionStatus(String uid) async {
+    final doc = await _db.collection("subscriptions").doc(uid).get();
+    return doc.exists ? doc.data() : null;
+  }
+
+//   Future<void> createTrial(String uid) async {
+//   final doc = await _db.collection("subscriptions").doc(uid).get();
+//   if (doc.exists && doc.data()?["trialStart"] != null) {
+//     throw Exception("Trial already used");
+//   }
+
+//   final now = DateTime.now().toUtc();
+//   final trialEnd = now.add(const Duration(days: 7));
+
+//   await _db.collection("subscriptions").doc(uid).set({
+//     "subscriptionStatus": "trial",
+//     "plan": "trial",
+//     "trialStart": now.toIso8601String(),
+//     "trialEnd": trialEnd.toIso8601String(),
+//     "paymentId": null,
+//     "expiryDate": trialEnd.toIso8601String(),
+//   });
+// }
+
+
+  Future<String> getRedirectRoute(String uid) async {
+    try {
+      final subData = await getSubscriptionStatus(uid);
+      final now = DateTime.now().toUtc();
+      
+      // If no subscription data, redirect to subscribe
+      if (subData == null) {
+        return "/subscribe";
+      }
+
+      final status = subData["subscriptionStatus"];
+      if (status == null) {
+        throw "Subscription status not found. Please contact support.";
+      }
+
+      // Check active subscription
+      if (status == "active") {
+        final expiryDate = subData["expiryDate"];
+        if (expiryDate == null) {
+          throw "Invalid subscription: Missing expiry date. Please contact support.";
+        }
+        
+        if (!expiryDate is Timestamp) {
+          throw "Invalid expiry date format. Please contact support.";
+        }
+
+        final expiry = (expiryDate as Timestamp).toDate();
+        if (expiry.isAfter(now)) {
+          return "/home";  // Valid active subscription
+        }
+        return "/subscribe"; // Expired subscription
+      }
+
+      // Check trial subscription
+      if (status == "trial") {
+        final trialEnd = subData["trialEnd"];
+        if (trialEnd == null) {
+          throw "Invalid trial: Missing end date. Please contact support.";
+        }
+
+        try {
+          DateTime endDate;
+          if (trialEnd is Timestamp) {
+            endDate = trialEnd.toDate();
+          } else if (trialEnd is String) {
+            endDate = DateTime.parse(trialEnd);
+          } else {
+            throw "Invalid trial end date format. Please contact support.";
+          }
+          
+          if (endDate.isAfter(now)) {
+            return "/home";  // Valid trial period
+          }
+          return "/subscribe"; // Trial expired
+        } catch (e) {
+          throw "Error processing trial end date. Please contact support.";
+        }
+      }
+
+      // Invalid subscription status
+      throw "Invalid subscription status: $status. Please contact support.";
+    } catch (e) {
+      print("Error in getRedirectRoute: $e");
+      // Rethrow the error with our custom message if it's a String
+      if (e is String) {
+        throw e;
+      }
+      // For unexpected errors
+      throw "An unexpected error occurred. Please try again or contact support.";
+    }
   }
 
   /// 🔹 Map FirebaseAuth errors to clean messages

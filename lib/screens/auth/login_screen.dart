@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:motor_insurance_app/screens/auth/forgot_password.dart';
 import 'package:motor_insurance_app/screens/auth/signup.dart';
 import 'package:motor_insurance_app/screens/auth/auth_service.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -15,33 +16,70 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController identifierController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  bool isLoading = false;
 
   final AuthService _authService = AuthService();
   final FlutterSecureStorage _storage = const FlutterSecureStorage();
 
   // 🔹 Normal email/phone + password login
   void login(BuildContext context) async {
-    String identifier = identifierController.text.trim();
-    String password = passwordController.text.trim();
+    try {
+      // Start loading
+      setState(() {
+        isLoading = true;
+      });
 
-    if (identifier.isEmpty || password.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Please enter Email/Mobile No. and Password")),
+      String identifier = identifierController.text.trim();
+      String password = passwordController.text.trim();
+
+      if (identifier.isEmpty || password.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+              content: Text("Please enter Email/Mobile No. and Password")),
+        );
+        return;
+      }
+
+      // Attempt to sign in
+      String? error = await _authService.signIn(
+        identifier: identifier,
+        password: password,
       );
-      return;
-    }
 
-    String? error = await _authService.signIn(
-      identifier: identifier,
-      password: password,
-    );
-
-    if (error == null) {
-      Navigator.pushReplacementNamed(context, '/home');
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(error)),
-      );
+      if (error == null) {
+        final user = _authService.getCurrentUser();
+        if (user != null) {
+          try {
+            String route = await _authService.getRedirectRoute(user.uid);
+            if (mounted) {
+              Navigator.pushReplacementNamed(context, route);
+            }
+          } catch (routeError) {
+            // Show specific subscription/trial error messages
+            throw routeError.toString();
+          }
+        } else {
+          throw "Failed to get user after login. Please try again.";
+        }
+      } else {
+        throw error;
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(e.toString().replaceAll("Exception: ", "")),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    } finally {
+      // Stop loading if still mounted
+      if (mounted) {
+        setState(() {
+          isLoading = false;
+        });
+      }
     }
   }
 
@@ -69,7 +107,8 @@ class _LoginScreenState extends State<LoginScreen> {
       appBar: AppBar(
         title: const Text(
           'Easy Insurance Calculator (Motor)',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
         ),
         backgroundColor: Colors.indigo.shade700,
         elevation: 0,
@@ -91,7 +130,10 @@ class _LoginScreenState extends State<LoginScreen> {
             const Center(
               child: Text(
                 'Sign In',
-                style: TextStyle(fontSize: 26, color: Colors.blue, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 26,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold),
               ),
             ),
             const SizedBox(height: 20),
@@ -114,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
             // Normal Login Button
             ElevatedButton(
-              onPressed: () => login(context),
+              onPressed: isLoading ? null : () => login(context),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.indigo.shade700,
                 padding: const EdgeInsets.symmetric(vertical: 16),
@@ -122,8 +164,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
+                disabledBackgroundColor: Colors.indigo.shade300,
               ),
-              child: const Text('Login', style: TextStyle(color: Colors.white)),
+              child: isLoading
+                  ? const SizedBox(
+                      height: 20,
+                      width: 20,
+                      child: CircularProgressIndicator(
+                        color: Colors.white,
+                        strokeWidth: 2,
+                      ),
+                    )
+                  : const Text('Login', style: TextStyle(color: Colors.white)),
             ),
 
             const SizedBox(height: 16),
@@ -153,9 +205,14 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 TextButton(
                   onPressed: () {
-                    // TODO: Forgot Password flow
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ForgotPasswordScreen()),
+                    );
                   },
-                  child: const Text('Forgot Password?', style: TextStyle(fontSize: 14, color: Colors.indigo)),
+                  child: const Text('Forgot Password?',
+                      style: TextStyle(fontSize: 14, color: Colors.indigo)),
                 ),
               ],
             ),
@@ -165,7 +222,10 @@ class _LoginScreenState extends State<LoginScreen> {
             Center(
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SignUpScreen()));
                 },
                 child: const Text(
                   "Don't have an account? Sign Up",

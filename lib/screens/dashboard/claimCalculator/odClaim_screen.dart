@@ -64,7 +64,7 @@ class _OdclaimScreenState extends State<OdclaimScreen> {
                       Container(
                         height: height * 0.12,
                         decoration: BoxDecoration(
-                          color: Colors.indigo.shade300,
+                          color: Colors.indigo.shade100,
                         ),
                       ),
                       Positioned(
@@ -219,9 +219,9 @@ class _OdclaimScreenState extends State<OdclaimScreen> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 9),
-              child: GestureDetector(
-                onTap: () {
+              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+              child: ElevatedButton(
+                onPressed: () {
                   if (_key.currentState!.validate() &&
                       selectedVehicleType != null &&
                       selectedVehicleAge != null &&
@@ -253,20 +253,22 @@ class _OdclaimScreenState extends State<OdclaimScreen> {
                     );
                   }
                 },
-                child: Container(
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: Colors.indigo.shade300,
-                    borderRadius: BorderRadiusDirectional.only(
-                      bottomStart: Radius.circular(12),
-                      bottomEnd: Radius.circular(12),
-                    ),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(double.infinity, 50),
+                  backgroundColor: Colors.indigo.shade700,
+                  foregroundColor: Colors.white,
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  child: Center(
-                    child: Text(
-                      "Calculate",
-                      style: TextStyle(color: Colors.white),
-                    ),
+                  padding: EdgeInsets.symmetric(vertical: 12),
+                ),
+                child: Text(
+                  "Calculate",
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    letterSpacing: 1.2,
                   ),
                 ),
               ),

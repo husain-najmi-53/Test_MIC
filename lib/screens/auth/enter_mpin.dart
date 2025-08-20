@@ -1,5 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class EnterMPINScreen extends StatefulWidget {
   const EnterMPINScreen({Key? key}) : super(key: key);
@@ -15,13 +17,51 @@ class _EnterMPINScreenState extends State<EnterMPINScreen> {
   Future<void> _verifyMPIN() async {
     if (_enteredPin.length != 4) return;
 
-    
     String? savedMpin = await _storage.read(key: "user_mpin");
-    await Future.delayed(const Duration(milliseconds: 500)); // Simulate processing
+    await Future.delayed(
+        const Duration(milliseconds: 500)); // Simulate processing
 
     if (savedMpin == _enteredPin.join()) {
-      Navigator.pushReplacementNamed(context, '/home');
+      // ✅ MPIN correct → check subscription
+      final uid = FirebaseAuth.instance.currentUser?.uid;
+      if (uid == null) return;
+
+      try {
+        final subDoc = await FirebaseFirestore.instance
+            .collection("subscriptions")
+            .doc(uid)
+            .get();
+
+        final now = DateTime.now().toUtc();
+
+        if (!subDoc.exists) {
+          // No subscription yet
+          Navigator.pushReplacementNamed(context, '/subscribe');
+          return;
+        }
+
+        final data = subDoc.data()!;
+        final expiry = DateTime.parse(data["expiryDate"]);
+
+        if (data["subscriptionStatus"] == "active" && expiry.isAfter(now)) {
+          Navigator.pushReplacementNamed(context, '/home');
+        } else if (data["subscriptionStatus"] == "trial" &&
+            DateTime.parse(data["trialEnd"]).isAfter(now)) {
+          Navigator.pushReplacementNamed(context, '/home');
+        } else {
+          // expired
+          Navigator.pushReplacementNamed(context, '/subscribe');
+        }
+      } catch (e) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Error checking subscription: $e"),
+            backgroundColor: Colors.red.shade400,
+          ),
+        );
+      }
     } else {
+      // ❌ Wrong MPIN
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: const Text("Incorrect MPIN"),

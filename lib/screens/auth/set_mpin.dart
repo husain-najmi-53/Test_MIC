@@ -42,7 +42,7 @@ class _SetMPINScreenState extends State<SetMPINScreen> {
         backgroundColor: Colors.indigo.shade700,
       ),
     );
-    Navigator.pushReplacementNamed(context, '/home');
+    Navigator.pushReplacementNamed(context, "/subscribe");
   }
 
   void _onKeyPressed(String value) {
