@@ -12,66 +12,95 @@ class EnterMPINScreen extends StatefulWidget {
 
 class _EnterMPINScreenState extends State<EnterMPINScreen> {
   final List<String> _enteredPin = [];
+  //final _storage = const FlutterSecureStorage();
+
+ Future<void> _verifyMPIN() async {
+  if (_enteredPin.length != 4) return;
+
+  final user = FirebaseAuth.instance.currentUser;
+  if (user == null) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text("Please login first")),
+    );
+    Navigator.pushReplacementNamed(context, '/login');
+    return;
+  }
+
   final _storage = const FlutterSecureStorage();
+  String? savedMpin = await _storage.read(key: "user_mpin_${user.uid}");
+  //await Future.delayed(const Duration(milliseconds: 500)); // Simulate processing
 
-  Future<void> _verifyMPIN() async {
-    if (_enteredPin.length != 4) return;
+  if (savedMpin == _enteredPin.join()) {
+    // ✅ Correct MPIN → check subscription
+    final uid = user.uid;
 
-    String? savedMpin = await _storage.read(key: "user_mpin");
-    await Future.delayed(
-        const Duration(milliseconds: 500)); // Simulate processing
+    try {
+      final subDoc = await FirebaseFirestore.instance
+          .collection("subscriptions")
+          .doc(uid)
+          .get();
 
-    if (savedMpin == _enteredPin.join()) {
-      // ✅ MPIN correct → check subscription
-      final uid = FirebaseAuth.instance.currentUser?.uid;
-      if (uid == null) return;
+      final now = DateTime.now().toUtc();
 
-      try {
-        final subDoc = await FirebaseFirestore.instance
-            .collection("subscriptions")
-            .doc(uid)
-            .get();
-
-        final now = DateTime.now().toUtc();
-
-        if (!subDoc.exists) {
-          // No subscription yet
-          Navigator.pushReplacementNamed(context, '/subscribe');
-          return;
-        }
-
-        final data = subDoc.data()!;
-        final expiry = DateTime.parse(data["expiryDate"]);
-
-        if (data["subscriptionStatus"] == "active" && expiry.isAfter(now)) {
-          Navigator.pushReplacementNamed(context, '/home');
-        } else if (data["subscriptionStatus"] == "trial" &&
-            DateTime.parse(data["trialEnd"]).isAfter(now)) {
-          Navigator.pushReplacementNamed(context, '/home');
-        } else {
-          // expired
-          Navigator.pushReplacementNamed(context, '/subscribe');
-        }
-      } catch (e) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text("Error checking subscription: $e"),
-            backgroundColor: Colors.red.shade400,
-          ),
-        );
+      if (!subDoc.exists) {
+        Navigator.pushReplacementNamed(context, '/subscribe');
+        return;
       }
-    } else {
-      // ❌ Wrong MPIN
+
+      final data = subDoc.data()!;
+
+      // 🔑 Safe expiryDate parsing
+      DateTime expiry;
+      final expiryDate = data["expiryDate"];
+      if (expiryDate is Timestamp) {
+        expiry = expiryDate.toDate();
+      } else if (expiryDate is String) {
+        expiry = DateTime.tryParse(expiryDate) ??
+            now.subtract(const Duration(days: 1));
+      } else {
+        throw "Invalid expiry date format";
+      }
+
+      // 🔑 Safe trialEnd parsing
+      DateTime? trialEnd;
+      if (data["trialEnd"] != null) {
+        final trialEndRaw = data["trialEnd"];
+        if (trialEndRaw is Timestamp) {
+          trialEnd = trialEndRaw.toDate();
+        } else if (trialEndRaw is String) {
+          trialEnd = DateTime.tryParse(trialEndRaw);
+        }
+      }
+
+      if (data["subscriptionStatus"] == "active" && expiry.isAfter(now)) {
+        Navigator.pushReplacementNamed(context, '/home');
+      } else if (data["subscriptionStatus"] == "trial" &&
+          trialEnd != null &&
+          trialEnd.isAfter(now)) {
+        Navigator.pushReplacementNamed(context, '/home');
+      } else {
+        Navigator.pushReplacementNamed(context, '/subscribe');
+      }
+    } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text("Incorrect MPIN"),
-          behavior: SnackBarBehavior.floating,
+          content: Text("Error checking subscription: $e"),
           backgroundColor: Colors.red.shade400,
         ),
       );
-      setState(() => _enteredPin.clear());
     }
+  } else {
+    // ❌ Wrong MPIN
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text("Incorrect MPIN"),
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: Colors.red,
+      ),
+    );
+    setState(() => _enteredPin.clear());
   }
+}
 
   void _onKeyPressed(String value) {
     if (_enteredPin.length < 4) {
@@ -90,7 +119,7 @@ class _EnterMPINScreenState extends State<EnterMPINScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Enter MPIN"),
+        title: const Text("Enter MPIN", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.indigo.shade700,
         elevation: 0,
       ),

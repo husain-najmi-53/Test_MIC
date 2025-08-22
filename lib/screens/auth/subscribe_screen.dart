@@ -127,18 +127,29 @@ class _SubscribeScreenState extends State<SubscribeScreen> {
   }
 
   /// 🔹 Razorpay checkout
-  void _openCheckout(String plan, int amount, int days) {
+  Future<void> _openCheckout(String plan, int amount, int days) async {
     _selectedPlan = plan;
     _selectedDays = days;
+    final uid = FirebaseAuth.instance.currentUser?.uid;
+    String contact = '';
+    String email = '';
+    if (uid != null) {
+      final doc = await FirebaseFirestore.instance.collection('users').doc(uid).get();
+      if (doc.exists) {
+        final data = doc.data();
+        contact = data?['phone'] ?? '';
+        email = data?['email'] ?? '';
+      }
+    }
 
     var options = {
-      'key': 'rzp_test_xxxxxxxx', // Replace with your Razorpay Key
+      'key': 'rzp_test_R7wSPViMlDXu00', // Replace with your Razorpay Key
       'amount': amount * 100,
       'name': 'Motor Insurance App',
       'description': '$plan Subscription',
       'prefill': {
-        'contact': '9999999999',
-        'email': 'test@example.com',
+        'contact': contact.isNotEmpty ? contact : '9999999999',
+        'email': email.isNotEmpty ? email : 'test@example.com',
       },
       'external': {
         'wallets': ['paytm']

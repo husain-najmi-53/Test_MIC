@@ -10,28 +10,35 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   bool _isLoading = false;
+  bool _showCheckSpam = false;
 
   Future<void> _resetPassword() async {
     if (!_formKey.currentState!.validate()) return;
 
-    setState(() => _isLoading = true);
+    setState(() {
+      _isLoading = true;
+      _showCheckSpam = false;
+    });
 
     try {
       await FirebaseAuth.instance.sendPasswordResetEmail(
         email: _emailController.text.trim(),
       );
 
+      setState(() {
+        _showCheckSpam = true;
+      });
+
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text("Password reset link has been sent to your email."),
+          content:
+              const Text("Password reset link has been sent to your email."),
           backgroundColor: Colors.indigo.shade600,
         ),
       );
-
-      Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
       String errorMessage = "Something went wrong. Please try again.";
-      
+
       if (e.code == "user-not-found") {
         errorMessage = "No account found with this email.";
       } else if (e.code == "invalid-email") {
@@ -93,7 +100,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 ),
               ),
               const SizedBox(height: 32),
-              
+
               // Email Field
               TextFormField(
                 controller: _emailController,
@@ -110,14 +117,14 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your email';
                   }
-                  if (!value.contains('@')) {
+                  if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
                     return 'Enter a valid email address';
                   }
                   return null;
                 },
               ),
               const SizedBox(height: 32),
-              
+
               // Reset Button
               SizedBox(
                 width: double.infinity,
@@ -148,6 +155,18 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                         ),
                 ),
               ),
+
+              if (_showCheckSpam) ...[
+                const SizedBox(height: 18),
+                const Text(
+                  'Check spam/junk if you don’t see the reset email.',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
             ],
           ),
         ),

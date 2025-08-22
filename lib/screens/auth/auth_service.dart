@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _db = FirebaseFirestore.instance;
-  
 
   /// 🔹 Signup user with Email, Phone & Password
   Future<String?> signUp({
@@ -105,9 +104,42 @@ class AuthService {
     return _auth.currentUser;
   }
 
+  /// 🔹 Get Subscription Details from Firestore
   Future<Map<String, dynamic>?> getSubscriptionStatus(String uid) async {
     final doc = await _db.collection("subscriptions").doc(uid).get();
-    return doc.exists ? doc.data() : null;
+
+    if (!doc.exists) return null;
+
+    final data = doc.data();
+    if (data == null) return null;
+
+    final now = DateTime.now().toUtc();
+
+    if (data.containsKey("endDate")) {
+      final expiryDate = data["endDate"];
+      DateTime expiry;
+
+      if (expiryDate is Timestamp) {
+        expiry = expiryDate.toDate().toUtc();
+      } else if (expiryDate is String) {
+        expiry = DateTime.tryParse(expiryDate)?.toUtc() ??
+            now.subtract(const Duration(days: 1));
+      } else {
+        // Unknown format → treat as expired
+        return null;
+      }
+
+      if (expiry.isBefore(now)) {
+        // Subscription expired
+        return null;
+      }
+    } else {
+      // No endDate field → treat as not subscribed
+      return null;
+    }
+
+    // ✅ Subscription is valid
+    return data;
   }
 
 //   Future<void> createTrial(String uid) async {
@@ -129,12 +161,11 @@ class AuthService {
 //   });
 // }
 
-
   Future<String> getRedirectRoute(String uid) async {
     try {
       final subData = await getSubscriptionStatus(uid);
       final now = DateTime.now().toUtc();
-      
+
       // If no subscription data, redirect to subscribe
       if (subData == null) {
         return "/subscribe";
@@ -145,59 +176,61 @@ class AuthService {
         throw "Subscription status not found. Please contact support.";
       }
 
-      // Check active subscription
+      // 🔹 Active subscription
       if (status == "active") {
         final expiryDate = subData["expiryDate"];
         if (expiryDate == null) {
           throw "Invalid subscription: Missing expiry date. Please contact support.";
         }
-        
-        if (!expiryDate is Timestamp) {
+
+        DateTime expiry;
+        if (expiryDate is Timestamp) {
+          expiry = expiryDate.toDate();
+        } else if (expiryDate is String) {
+          expiry = DateTime.tryParse(expiryDate) ??
+              now.subtract(const Duration(days: 1));
+        } else {
           throw "Invalid expiry date format. Please contact support.";
         }
 
-        final expiry = (expiryDate as Timestamp).toDate();
         if (expiry.isAfter(now)) {
-          return "/home";  // Valid active subscription
+          return "/home"; // Valid active subscription
         }
         return "/subscribe"; // Expired subscription
       }
 
-      // Check trial subscription
+      // 🔹 Trial subscription
       if (status == "trial") {
         final trialEnd = subData["trialEnd"];
         if (trialEnd == null) {
           throw "Invalid trial: Missing end date. Please contact support.";
         }
 
-        try {
-          DateTime endDate;
-          if (trialEnd is Timestamp) {
-            endDate = trialEnd.toDate();
-          } else if (trialEnd is String) {
-            endDate = DateTime.parse(trialEnd);
-          } else {
-            throw "Invalid trial end date format. Please contact support.";
-          }
-          
-          if (endDate.isAfter(now)) {
-            return "/home";  // Valid trial period
-          }
-          return "/subscribe"; // Trial expired
-        } catch (e) {
-          throw "Error processing trial end date. Please contact support.";
+        DateTime endDate;
+        if (trialEnd is Timestamp) {
+          endDate = trialEnd.toDate();
+        } else if (trialEnd is String) {
+          endDate = DateTime.tryParse(trialEnd) ??
+              now.subtract(const Duration(days: 1));
+        } else {
+          throw "Invalid trial end date format. Please contact support.";
         }
+
+        if (endDate.isAfter(now)) {
+          return "/home"; // Valid trial
+        }
+        return "/subscribe"; // Trial expired
       }
 
-      // Invalid subscription status
+      // 🔹 Unknown status
       throw "Invalid subscription status: $status. Please contact support.";
     } catch (e) {
-      print("Error in getRedirectRoute: $e");
-      // Rethrow the error with our custom message if it's a String
+      //print("Error in getRedirectRoute: $e");
+
+      // Rethrow the error with proper message
       if (e is String) {
         throw e;
       }
-      // For unexpected errors
       throw "An unexpected error occurred. Please try again or contact support.";
     }
   }

@@ -36,12 +36,9 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
     '30%',
   ];
   final List<String> _ageOptions = [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    'above 5',
+    'Upto 5 Years',
+    '6-10 Years',
+    'Above 10 Years'
   ];
   final List<String> _zoneOptions = ['A', 'B'];
   final List<String> _cngLpgKitOptions = ['Yes', 'No'];
@@ -167,10 +164,10 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
 
       // Get base rate from function
       int cc = int.tryParse(_controllers['cubicCapacity']?.text ?? "") ?? 1000;
-      int age = (_selectedAge != null && _selectedAge != _ageOptions.last)
+      /*int age = (_selectedAge != null && _selectedAge != _ageOptions.last)
           ? int.tryParse(_selectedAge!) ?? 1
-          : 6;
-      // double vehicleBasicRate = getOdRateByAgeZoneCc(vehicleAgeYears: age<=5?age:6, zone:_selectedZone!, cubicCapacity: cc); // ODRate
+          : 6;*/
+      String age = _selectedAge ?? 'Upto 5 Years';
       double vehicleBasicRate = getOdRate(
         vehicleAgeYears: age,
         zone: zone,
@@ -559,7 +556,7 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
 }
 
 double getOdRate({
-  required int vehicleAgeYears,
+  required String vehicleAgeYears,
   required String zone, // "A" or "B"
   int? cubicCapacity, // For Petrol/Diesel
   double? kiloWatt, // For Electric Vehicle
@@ -570,28 +567,28 @@ double getOdRate({
   // Petrol/Diesel rate table (CC based)
   Map<String, Map<String, List<double>>> rateTableCC = {
     "A": {
-      "<=1000": [2.752, 2.708, 2.636, 2.538, 2.431, 2.30],
-      "1001-1500": [2.843, 2.795, 2.721, 2.623, 2.514, 2.40],
-      ">1500": [2.960, 2.912, 2.830, 2.728, 2.616, 2.50],
+      "<=1000": [3.127, 3.283, 3.362],
+      "1001-1500": [3.283, 3.447, 3.529],
+      ">1500": [3.440, 3.612, 3.698],
     },
     "B": {
-      "<=1000": [2.622, 2.579, 2.509, 2.414, 2.310, 2.20],
-      "1001-1500": [2.712, 2.663, 2.593, 2.498, 2.392, 2.28],
-      ">1500": [2.826, 2.776, 2.701, 2.599, 2.487, 2.37],
+      "<=1000": [3.039, 3.191,3.267 ],
+      "1001-1500": [3.191, 3.351,3.430],
+      ">1500": [3.343, 3.510,3.594],
     },
   };
 
   // Electric Vehicle rate table (kW based)
   Map<String, Map<String, List<double>>> rateTableKW = {
     "A": {
-      "<=30": [2.0, 1.95, 1.92, 1.88, 1.85, 1.80],
-      "31-65": [2.2, 2.15, 2.12, 2.08, 2.05, 2.00],
-      ">65": [2.4, 2.35, 2.32, 2.28, 2.25, 2.20],
+      "<=30": [3.127, 3.283, 3.362],
+      "31-65": [3.283, 3.447, 3.529],
+      ">65": [3.440, 3.612, 3.698],
     },
     "B": {
-      "<=30": [1.9, 1.85, 1.82, 1.78, 1.75, 1.70],
-      "31-65": [2.1, 2.05, 2.02, 1.98, 1.95, 1.90],
-      ">65": [2.3, 2.25, 2.22, 2.18, 2.15, 2.10],
+      "<=30": [3.039, 3.191,3.267 ],
+      "31-65": [3.191, 3.351,3.430],
+      ">65": [3.343, 3.510,3.594],
     },
   };
 
@@ -621,18 +618,14 @@ double getOdRate({
 
   // Determine age index
   int idx;
-  if (vehicleAgeYears == 1)
+  if (vehicleAgeYears == 'Upto 5 Years')
     idx = 0;
-  else if (vehicleAgeYears == 2)
+  else if (vehicleAgeYears == '6-10 Years')
     idx = 1;
-  else if (vehicleAgeYears == 3)
-    idx = 2;
-  else if (vehicleAgeYears == 4)
-    idx = 3;
-  else if (vehicleAgeYears == 5)
-    idx = 4;
+  // else if (vehicleAgeYears == 'Above 10 Years')
+  //   idx = 2;
   else
-    idx = 5;
+    idx = 2;
 
   // Get the rate
   List<double>? list = table[zone]?[band];

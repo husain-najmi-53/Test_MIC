@@ -1,5 +1,11 @@
+import 'dart:convert';
+import 'dart:io';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:motor_insurance_app/notification_services/flutter_local_notification_service.dart';
 import 'package:motor_insurance_app/screens/auth/subscribe_screen.dart';
+import 'package:motor_insurance_app/screens/custom/profile.dart';
 import 'package:motor_insurance_app/screens/dashboard/claimCalculator/claimCalulator_Type.dart';
 import 'package:motor_insurance_app/screens/dashboard/claimCalculator/odClaim_screen.dart';
 import 'package:motor_insurance_app/screens/dashboard/claimCalculator/tpClaim_screen.dart';
@@ -45,24 +51,61 @@ import 'package:motor_insurance_app/screens/vehicle/passenger_carrying_vehicle/b
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:motor_insurance_app/screens/auth/signup.dart';
+import 'package:timezone/data/latest.dart';
+import 'notification_services/firebase_notification_service.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await FirebaseNotificationService.initialize();
+  initializeTimeZones(); // since we are using timezone package to schedule
+  final notificationService = FlutterLocalNotificationService();
+  await notificationService.initNotification();
+
+  if (Platform.isAndroid) {
+    final androidPlugin = notificationService.notificationPlugin
+        .resolvePlatformSpecificImplementation<
+        AndroidFlutterLocalNotificationsPlugin>();
+    final granted = await androidPlugin?.requestNotificationsPermission();
+    print("Android Notification Permission Granted: $granted");
+  }
+
+
+
   runApp(const MotorInsuranceApp());
 }
 
-class MotorInsuranceApp extends StatelessWidget {
+class MotorInsuranceApp extends StatefulWidget {
   const MotorInsuranceApp({super.key});
+
+  @override
+  State<MotorInsuranceApp> createState() => _MotorInsuranceAppState();
+}
+
+class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
+
+  final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
+  @override
+  void initState() {
+    super.initState();
+    // Configure Firebase Messaging
+    onOpenAppFirebaseMessage();
+    //onOpenAppFirebaseMessageWithDialog(); //will implement later
+    onFirebaseNotificationClicked();
+    checkInitialMessage(); //This is when app is closed  and then clicked on message
+  }
+
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Easy Insurance Calculator (Motor)',
       debugShowCheckedModeBanner: false, // This removes the debug banner
-
+      navigatorKey: navigatorKey, // attach it here
       theme: ThemeData(primarySwatch: Colors.indigo),
       initialRoute: '/',
       routes: {
@@ -81,6 +124,7 @@ class MotorInsuranceApp extends StatelessWidget {
               ModalRoute.of(context)?.settings.arguments as String? ?? '';
           return CalculationFormScreen(selectedType: selectedType);
         },
+        '/profile': (context) => const ProfilePage(),
 
         // Bike Routes
         '/twoWheeler1YearOD': (context) => const TwoWheeler1YearODFormScreen(),
@@ -142,4 +186,99 @@ class MotorInsuranceApp extends StatelessWidget {
       },
     );
   }
+
+  void onOpenAppFirebaseMessage() {
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      print("onMessage: $message");
+      String payloadData = jsonEncode(message.data);
+      if (message.notification != null) {
+        FlutterLocalNotificationService().showNotification(
+            id: 0,
+            title: message.notification!.title!,
+            body: message.notification!.body!,
+            payload: payloadData
+        );
+      }
+    });
+  }
+
+  void onOpenAppFirebaseMessageWithDialog() {
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      print("📩 onMessage: ${message.data}");
+
+      if (message.notification != null) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          showDialog(
+            context: navigatorKey.currentContext!,
+            builder: (context) => AlertDialog(
+              title: Text(message.notification!.title ?? "No Title"),
+              content: Text(message.notification!.body ?? "No Body"),
+              actions: [
+                TextButton(
+                  onPressed: () {},
+                  child: const Text("Next"),
+                ),
+                TextButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: const Text("Cancel"),
+                ),
+              ],
+            ),
+          );
+        });
+      }
+    });
+  }
+
+  void onFirebaseNotificationClicked() {
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      print("📲 Notification clicked! Data: ${message.data}");
+
+      // Example: Navigate to a details page
+      if (message.data.containsKey('route')) {
+        navigatorKey.currentState?.pushNamed(
+          message.data['route'],
+          arguments: message.data,
+        );
+      } else {
+        print("onFirebaseNotificationClicked Imvoled and title: ${message.notification?.title ?? "No Title"} body ${message.notification?.body ?? "No Body"}");
+
+      }
+    });
+
+  }
+
+  void checkInitialMessage() async {
+    // When the app is completely terminated and opened via notification
+    RemoteMessage? initialMessage =
+    await FirebaseMessaging.instance.getInitialMessage();
+
+    if (initialMessage != null) {
+      print("🚀 App opened from terminated state via notification!");
+      print("Data: ${initialMessage.data}");
+
+      // Example 1: Navigate to a specific route
+      if (initialMessage.data.containsKey('route')) {
+        navigatorKey.currentState?.pushNamed(
+          initialMessage.data['route'],
+          arguments: initialMessage.data,
+        );
+      }
+      else {
+        print("checkInitailMessage Imvoled and title: ${initialMessage.notification?.title ?? "No Title"} body ${initialMessage.notification?.body ?? "No Body"}");
+
+      }
+    }
+  }
+
+
+
 }
+
+
+
+
+
+// Foreground (onMessage) → Handle while app is open.
+// Background (onMessageOpenedApp) → User taps notification, app comes to foreground.
+// Terminated (getInitialMessage) → App was killed, user taps notification, app launches.

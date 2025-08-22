@@ -5964,6 +5964,3442 @@ class VehicleData {
             }
           }
         }
+      },
+      "Yamaha": {
+        "2015": {
+          "FZ-S V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 82000.0
+            }
+          },
+          "Fazer FI V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000.0
+            }
+          },
+          "Saluto RX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 110,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000.0
+            }
+          },
+          "SZ RR V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70000.0
+            }
+          },
+          "Alpha": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55000.0
+            }
+          },
+          "Cygnus Ray ZR": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57000.0
+            }
+          },
+          "Ray Z": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54000.0
+            }
+          }
+        },
+        "2016": {
+          "FZ-S V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 84000.0
+            }
+          },
+          "Fazer FI V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 90000.0
+            }
+          },
+          "Saluto RX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 110,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53000.0
+            }
+          },
+          "SZ RR V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72000.0
+            }
+          },
+          "Alpha": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 56000.0
+            }
+          },
+          "Cygnus Ray ZR": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58000.0
+            }
+          },
+          "Ray Z": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55000.0
+            }
+          },
+          "SMAX": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 110000.0
+            }
+          },
+          "XSR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 689,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 800000.0
+            }
+          },
+          "Super Tenere ES": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1700000.0
+            }
+          }
+        },
+        "2017": {
+          "FZ-S V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 85000.0
+            }
+          },
+          "Fazer FI V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000.0
+            }
+          },
+          "Saluto RX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 110,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54000.0
+            }
+          },
+          "SZ RR V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73000.0
+            }
+          },
+          "Alpha": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57000.0
+            }
+          },
+          "Cygnus Ray ZR": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59000.0
+            }
+          },
+          "Ray Z": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 56000.0
+            }
+          },
+          "SMAX": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112000.0
+            }
+          },
+          "XSR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 689,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 805000.0
+            }
+          },
+          "Super Tenere ES": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1710000.0
+            }
+          },
+          "MT-09": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 847,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1050000.0
+            }
+          },
+          "SCR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 942,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 800000.0
+            }
+          }
+        },
+        "2018": {
+          "FZ-S V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 85000.0
+            }
+          },
+          "Fazer FI V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000.0
+            }
+          },
+          "Saluto RX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 110,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54000.0
+            }
+          },
+          "SZ RR V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73000.0
+            }
+          },
+          "Alpha": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57000.0
+            }
+          },
+          "Cygnus Ray ZR": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59000.0
+            }
+          },
+          "Ray Z": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 56000.0
+            }
+          },
+          "SMAX": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112000.0
+            }
+          },
+          "XSR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 689,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 805000.0
+            }
+          },
+          "Super Tenere ES": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1710000.0
+            }
+          },
+          "MT-09": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 847,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1050000.0
+            }
+          },
+          "SCR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 942,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 800000.0
+            }
+          },
+          "YZF R15 V3": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 145000.0
+            }
+          },
+          "MT-15": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 160000.0
+            }
+          },
+          "FZ V3": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 96000.0
+            }
+          },
+          "YZF R15 S": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 125000.0
+            }
+          },
+          "Royal Star Venture": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1854,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 2500000.0
+            }
+          },
+          "STAR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 175000.0
+            }
+          },
+          "TRACER": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 847,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1100000.0
+            }
+          }
+        },
+        "2019": {
+          "FZ-S V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 85000.0
+            }
+          },
+          "Fazer FI V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000.0
+            }
+          },
+          "Saluto RX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 110,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54000.0
+            }
+          },
+          "SZ RR V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73000.0
+            }
+          },
+          "Alpha": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57000.0
+            }
+          },
+          "Cygnus Ray ZR": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59000.0
+            }
+          },
+          "Ray Z": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 56000.0
+            }
+          },
+          "SMAX": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112000.0
+            }
+          },
+          "XSR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 689,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 805000.0
+            }
+          },
+          "Super Tenere ES": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1710000.0
+            }
+          },
+          "MT-09": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 847,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1060000.0
+            }
+          },
+          "SCR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 942,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 800000.0
+            }
+          },
+          "YZF R15 V3": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 145000.0
+            }
+          },
+          "MT-15": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 160000.0
+            }
+          },
+          "FZ V3": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 96000.0
+            }
+          },
+          "YZF R15 S": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 125000.0
+            }
+          },
+          "Royal Star Venture": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1854,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 2500000.0
+            }
+          },
+          "STAR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 175000.0
+            }
+          },
+          "TRACER": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 847,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1100000.0
+            }
+          },
+          "YZF R3": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 321,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 348000.0
+            }
+          }
+        },
+        "2020": {
+          "FZ-S V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87500.0
+            }
+          },
+          "Fazer FI V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 93500.0
+            }
+          },
+          "Saluto RX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 110,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55000.0
+            }
+          },
+          "SZ RR V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74500.0
+            }
+          },
+          "Alpha": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58000.0
+            }
+          },
+          "Cygnus Ray ZR": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000.0
+            }
+          },
+          "Ray Z": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57000.0
+            }
+          },
+          "SMAX": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 113000.0
+            }
+          },
+          "XSR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 689,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 815000.0
+            }
+          },
+          "Super Tenere ES": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1725000.0
+            }
+          },
+          "MT-09": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 847,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1070000.0
+            }
+          },
+          "SCR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 942,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 810000.0
+            }
+          },
+          "YZF R15 V3 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 148000.0
+            }
+          },
+          "MT-15 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 162000.0
+            }
+          },
+          "FZ V3 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 97500.0
+            }
+          },
+          "YZF R15 S": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 127000.0
+            }
+          },
+          "Royal Star Venture": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1854,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 2520000.0
+            }
+          },
+          "STAR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 178000.0
+            }
+          },
+          "TRACER": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 847,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1115000.0
+            }
+          },
+          "YZF R3": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 321,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 352000.0
+            }
+          },
+          "Fascino 125 FI": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72000.0
+            }
+          },
+          "Ray ZR 125 FI": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74000.0
+            }
+          }
+        },
+        "2021": {
+          "FZ-S V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87500.0
+            }
+          },
+          "Fazer FI V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 93500.0
+            }
+          },
+          "Saluto RX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 110,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55000.0
+            }
+          },
+          "SZ RR V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74500.0
+            }
+          },
+          "Alpha": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58000.0
+            }
+          },
+          "Cygnus Ray ZR": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000.0
+            }
+          },
+          "Ray Z": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57000.0
+            }
+          },
+          "MT-09": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 847,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1100000.0
+            }
+          },
+          "YZF R15 V3 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 152000.0
+            }
+          },
+          "MT-15 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 164000.0
+            }
+          },
+          "FZ V3 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 99500.0
+            }
+          },
+          "YZF R15 S": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 140000.0
+            }
+          },
+          "XSR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 689,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 820000.0
+            }
+          },
+          "Fascino 125 FI": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73000.0
+            }
+          },
+          "Ray ZR 125 FI": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75000.0
+            }
+          },
+          "Aerox 155": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 129000.0
+            }
+          },
+          "FZ-X": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118000.0
+            }
+          },
+          "YZF R15M": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 178000.0
+            }
+          }
+        },
+        "2022": {
+          "FZ-S V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 90000.0
+            }
+          },
+          "Fazer FI V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 95000.0
+            }
+          },
+          "Saluto RX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 110,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 56000.0
+            }
+          },
+          "SZ RR V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76000.0
+            }
+          },
+          "Alpha": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59000.0
+            }
+          },
+          "Cygnus Ray ZR": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61000.0
+            }
+          },
+          "Ray Z": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58000.0
+            }
+          },
+          "MT-09": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 847,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1100000.0
+            }
+          },
+          "YZF R15 V3 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 155000.0
+            }
+          },
+          "MT-15 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 165000.0
+            }
+          },
+          "FZ V3 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 100000.0
+            }
+          },
+          "YZF R15 S": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 142000.0
+            }
+          },
+          "XSR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 689,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 825000.0
+            }
+          },
+          "Fascino 125 FI": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74000.0
+            }
+          },
+          "Ray ZR 125 FI": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76000.0
+            }
+          },
+          "Aerox 155": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 130000.0
+            }
+          },
+          "FZ-X": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 119000.0
+            }
+          },
+          "YZF R15M": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 179000.0
+            }
+          },
+          "MT-15 V2": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 160000.0
+            }
+          },
+          "FZS FI V4": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121000.0
+            }
+          }
+        },
+        "2023": {
+          "FZ-S V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 92000.0
+            }
+          },
+          "Fazer FI V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 96000.0
+            }
+          },
+          "Saluto RX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 110,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57000.0
+            }
+          },
+          "Alpha": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000.0
+            }
+          },
+          "Cygnus Ray ZR": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62000.0
+            }
+          },
+          "MT-09": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 847,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1120000.0
+            }
+          },
+          "YZF R15 V4": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000.0
+            }
+          },
+          "MT-15 V2": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 167000.0
+            }
+          },
+          "FZ V3 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 104000.0
+            }
+          },
+          "YZF R15 S": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 146000.0
+            }
+          },
+          "XSR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 689,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 835000.0
+            }
+          },
+          "Fascino 125 FI Hybrid": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000.0
+            }
+          },
+          "Ray ZR 125 FI Hybrid": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 79000.0
+            }
+          },
+          "Aerox 155 (2023)": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 142000.0
+            }
+          },
+          "FZ-X": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121000.0
+            }
+          },
+          "YZF R15M": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000.0
+            }
+          },
+          "FZS FI V4 DLX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 124000.0
+            }
+          },
+          "MT-03": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 321,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 480000.0
+            }
+          },
+          "R3": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 321,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 465000.0
+            }
+          }
+        },
+        "2024": {
+          "FZ-S V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 94000.0
+            }
+          },
+          "Fazer FI V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 98000.0
+            }
+          },
+          "Saluto RX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 110,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58000.0
+            }
+          },
+          "Alpha": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61000.0
+            }
+          },
+          "Cygnus Ray ZR": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 64000.0
+            }
+          },
+          "MT-09": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 890,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1150000.0
+            }
+          },
+          "YZF R15 V4": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 185000.0
+            }
+          },
+          "MT-15 V2": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 170000.0
+            }
+          },
+          "FZ V3 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 106000.0
+            }
+          },
+          "YZF R15 S": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 148000.0
+            }
+          },
+          "XSR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 689,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 850000.0
+            }
+          },
+          "Fascino 125 FI Hybrid": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 80000.0
+            }
+          },
+          "Ray ZR 125 FI Hybrid": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81000.0
+            }
+          },
+          "Aerox 155 (2024)": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 145000.0
+            }
+          },
+          "FZ-X": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 123000.0
+            }
+          },
+          "YZF R15M": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 185000.0
+            }
+          },
+          "FZS FI V5 DLX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 126000.0
+            }
+          },
+          "MT-15 V2 MotoGP Edition": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 172000.0
+            }
+          },
+          "MT-03": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 321,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 482000.0
+            }
+          },
+          "R3": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 321,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 468000.0
+            }
+          }
+        },
+        "2025": {
+          "FZ-S V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 94000.0
+            }
+          },
+          "Fazer FI V 2.0": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 98000.0
+            }
+          },
+          "Saluto RX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 110,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58000.0
+            }
+          },
+          "Alpha": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61000.0
+            }
+          },
+          "Cygnus Ray ZR": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 64000.0
+            }
+          },
+          "MT-09": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 890,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1150000.0
+            }
+          },
+          "YZF R15 V4": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 185000.0
+            }
+          },
+          "MT-15 V2": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 170000.0
+            }
+          },
+          "FZ V3 (BS6)": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 106000.0
+            }
+          },
+          "YZF R15 S": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 148000.0
+            }
+          },
+          "XSR": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 689,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 850000.0
+            }
+          },
+          "Fascino 125 FI Hybrid": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 80000.0
+            }
+          },
+          "Ray ZR 125 FI Hybrid": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81000.0
+            }
+          },
+          "Aerox 155 (2024)": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 145000.0
+            }
+          },
+          "FZ-X": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 123000.0
+            }
+          },
+          "YZF R15M": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 185000.0
+            }
+          },
+          "FZS FI V5 DLX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 126000.0
+            }
+          },
+          "MT-15 V2 MotoGP Edition": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 172000.0
+            }
+          },
+          "MT-03": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 321,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 482000.0
+            }
+          },
+          "R3": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 321,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 468000.0
+            }
+          },
+          "FZ S Hybrid": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 144800
+            }
+          },
+          "MT-15 Version 2.0": {
+            "STD": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 169000
+            },
+            "DLX": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 180000
+            }
+          },
+          "FZ-X Hybrid": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 150000
+            }
+          }
+        }
+      },
+
+      "Suzuki": {
+        "2015": {
+          "Gixxer 155": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75000.0
+            }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 83000.0
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55000.0
+            }
+          }
+        },
+        "2016": {
+          "Gixxer 155": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77000.0
+            }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 85000.0
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57000.0
+            }
+          },
+          "Lets": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 112,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47000.0
+            }
+          }
+        },
+        "2017": {
+          "Gixxer 155": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000.0
+            }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86000.0
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58000.0
+            }
+          },
+          "Lets": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 112,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48000.0
+            }
+          },
+          "Intruder 150": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 99000.0
+            }
+          }
+        },
+        "2018": {
+          "Gixxer 155": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 79000.0
+            }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87000.0
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59000.0
+            }
+          },
+          "Lets": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 112,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49000.0
+            }
+          },
+          "Intruder 150": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 101000.0
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69000.0
+            }
+          }
+        },
+        "2019": {
+          "Gixxer 155": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 80000.0
+            }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000.0
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000.0
+            }
+          },
+          "Lets": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 112,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50000.0
+            }
+          },
+          "Intruder 150": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 103000.0
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71000.0
+            }
+          },
+          "Gixxer 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 165000.0
+            }
+          },
+          "Gixxer SF 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 171000.0
+            }
+          }
+        },
+        "2021": {
+          "Gixxer 155": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 83000.0
+            }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000.0
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63000.0
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74000.0
+            }
+          },
+          "Gixxer 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 169000.0
+            }
+          },
+          "Gixxer SF 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 175000.0
+            }
+          },
+          "Avenis 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86000.0
+            }
+          }
+        },
+        "2022": {
+          "Gixxer 155": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 85000.0
+            }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 93000.0
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 65000.0
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76000.0
+            }
+          },
+          "Gixxer 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 171000.0
+            }
+          },
+          "Gixxer SF 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 177000.0
+            }
+          },
+          "Avenis 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000.0
+            }
+          },
+          "V-Strom SX 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 211000.0
+            }
+          }
+        },
+        "2023": {
+          "Gixxer 155": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 85000.0
+            }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 93000.0
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 65000.0
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76000.0
+            }
+          },
+          "Gixxer 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 171000.0
+            }
+          },
+          "Gixxer SF 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 177000.0
+            }
+          },
+          "Avenis 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000.0
+            }
+          },
+          "V-Strom SX 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 211000.0
+            }
+          },
+          "Katana": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 999,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1370000.0
+            }
+          }
+        },
+        "2024": {
+          "Gixxer 155": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87000.0
+            }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 95000.0
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68000.0
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000.0
+            }
+          },
+          "Gixxer 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 175000.0
+            }
+          },
+          "Gixxer SF 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 181000.0
+            }
+          },
+          "Avenis 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 90000.0
+            }
+          },
+          "V-Strom SX 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 214000.0
+            }
+          },
+          "Katana": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 999,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1390000.0
+            }
+          },
+          "GSX-8R": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 776,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1100000.0
+            }
+          }
+        },
+        "2025": {
+          "Gixxer 155": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87000.0
+            }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 95000.0
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68000.0
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000.0
+            }
+          },
+          "Gixxer 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 175000.0
+            }
+          },
+          "Gixxer SF 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 181000.0
+            }
+          },
+          "Avenis 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 90000.0
+            }
+          },
+          "V-Strom SX 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 214000.0
+            }
+          },
+          "Katana": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 999,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1390000.0
+            }
+          },
+          "GSX-8R": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 776,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1100000.0
+            }
+          },
+          "Hayabusa 2025": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1340,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1700000.0
+            }
+          }
+        }
+      },
+
+      "Mahindra Two Wheeler": {
+        "2015": {
+          "Gusto 110": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 109,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47500.0
+            }
+          },
+          "Gusto 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51000.0
+            }
+          },
+          "Centuro": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000.0
+            }
+          },
+          "Mojo": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 165000.0
+            }
+          },
+          "Rodeo UZO 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49000.0
+            }
+          },
+          "Duro DZ": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46000.0
+            }
+          },
+          "Pantero": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 40000.0
+            }
+          }
+        },
+        "2016": {
+          "Gusto 110": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 109,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48500.0
+            }
+          },
+          "Gusto 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000.0
+            }
+          },
+          "Centuro": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44000.0
+            }
+          },
+          "Mojo": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 168000.0
+            }
+          },
+          "Rodeo UZO 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50000.0
+            }
+          },
+          "Duro DZ": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47000.0
+            }
+          },
+          "Pantero": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 41000.0
+            }
+          }
+        },
+        "2017": {
+          "Gusto 110": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 109,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49000.0
+            }
+          },
+          "Gusto 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52500.0
+            }
+          },
+          "Centuro": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44500.0
+            }
+          },
+          "Mojo": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 170000.0
+            }
+          },
+          "Rodeo UZO 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50500.0
+            }
+          },
+          "Duro DZ": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47500.0
+            }
+          },
+          "Pantero": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 41500.0
+            }
+          }
+        },
+        "2018": {
+          "Gusto 110": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 109,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50000.0
+            }
+          },
+          "Gusto 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53500.0
+            }
+          },
+          "Centuro": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 45500.0
+            }
+          },
+          "Mojo": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 172000.0
+            }
+          },
+          "Rodeo UZO 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51000.0
+            }
+          },
+          "Duro DZ": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48000.0
+            }
+          },
+          "Pantero": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 42000.0
+            }
+          },
+          "Mojo XT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 178000.0
+            }
+          },
+          "Mojo UT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 160000.0
+            }
+          }
+        },
+        "2019": {
+          "Gusto 110": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 109,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51000.0
+            }
+          },
+          "Gusto 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54500.0
+            }
+          },
+          "Centuro": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46500.0
+            }
+          },
+          "Mojo": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 174000.0
+            }
+          },
+          "Rodeo UZO 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000.0
+            }
+          },
+          "Duro DZ": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49000.0
+            }
+          },
+          "Pantero": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000.0
+            }
+          },
+          "Mojo XT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 180000.0
+            }
+          },
+          "Mojo UT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 162000.0
+            }
+          },
+          "Mojo 300 ABS": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 189000.0
+            }
+          }
+        },
+        "2020": {
+          "Gusto 110": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 109,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000.0
+            }
+          },
+          "Gusto 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55500.0
+            }
+          },
+          "Centuro": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47500.0
+            }
+          },
+          "Mojo": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 176000.0
+            }
+          },
+          "Rodeo UZO 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53000.0
+            }
+          },
+          "Duro DZ": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50000.0
+            }
+          },
+          "Pantero": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44000.0
+            }
+          },
+          "Mojo XT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000.0
+            }
+          },
+          "Mojo UT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 164000.0
+            }
+          },
+          "Mojo 300 ABS": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 191000.0
+            }
+          },
+          "Mojo BS6": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 199000.0
+            }
+          }
+        },
+        "2021": {
+          "Gusto 110": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 109,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000.0
+            }
+          },
+          "Gusto 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55500.0
+            }
+          },
+          "Centuro": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47500.0
+            }
+          },
+          "Mojo": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 176000.0
+            }
+          },
+          "Rodeo UZO 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53000.0
+            }
+          },
+          "Duro DZ": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50000.0
+            }
+          },
+          "Pantero": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44000.0
+            }
+          },
+          "Mojo XT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000.0
+            }
+          },
+          "Mojo UT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 164000.0
+            }
+          },
+          "Mojo 300 ABS": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 191000.0
+            }
+          },
+          "Mojo BS6": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 199000.0
+            }
+          }
+        },
+        "2022": {
+          "Gusto 110": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 109,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000.0
+            }
+          },
+          "Gusto 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55500.0
+            }
+          },
+          "Centuro": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47500.0
+            }
+          },
+          "Mojo": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 176000.0
+            }
+          },
+          "Rodeo UZO 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53000.0
+            }
+          },
+          "Duro DZ": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50000.0
+            }
+          },
+          "Pantero": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44000.0
+            }
+          },
+          "Mojo XT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000.0
+            }
+          },
+          "Mojo UT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 164000.0
+            }
+          },
+          "Mojo 300 ABS": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 191000.0
+            }
+          },
+          "Mojo BS6": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 199000.0
+            }
+          }
+        },
+        "2023": {
+          "Gusto 110": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 109,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000.0
+            }
+          },
+          "Gusto 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55500.0
+            }
+          },
+          "Centuro": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47500.0
+            }
+          },
+          "Mojo": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 176000.0
+            }
+          },
+          "Rodeo UZO 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53000.0
+            }
+          },
+          "Duro DZ": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50000.0
+            }
+          },
+          "Pantero": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44000.0
+            }
+          },
+          "Mojo XT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000.0
+            }
+          },
+          "Mojo UT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 164000.0
+            }
+          },
+          "Mojo 300 ABS": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 191000.0
+            }
+          },
+          "Mojo BS6": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 199000.0
+            }
+          },
+          "Mojo TR": {
+            "Touring Edition": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 210000.0
+            }
+          }
+        },
+        "2024": {
+          "Gusto 110": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 109,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000.0
+            }
+          },
+          "Gusto 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55500.0
+            }
+          },
+          "Centuro": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47500.0
+            }
+          },
+          "Mojo": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 176000.0
+            }
+          },
+          "Rodeo UZO 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53000.0
+            }
+          },
+          "Duro DZ": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50000.0
+            }
+          },
+          "Pantero": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44000.0
+            }
+          },
+          "Mojo XT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000.0
+            }
+          },
+          "Mojo UT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 164000.0
+            }
+          },
+          "Mojo 300 ABS": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 191000.0
+            }
+          },
+          "Mojo BS6": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 199000.0
+            }
+          },
+          "Mojo TR": {
+            "Touring Edition": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 210000.0
+            }
+          },
+          "Mojo XT 350": {
+            "Adventure Edition": {
+              "bodyType": "BIKE",
+              "cc": 348,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 230000.0
+            }
+          }
+        },
+        "2025": {
+          "Gusto 110": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 109,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000.0
+            }
+          },
+          "Gusto 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55500.0
+            }
+          },
+          "Centuro": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47500.0
+            }
+          },
+          "Mojo": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 176000.0
+            }
+          },
+          "Rodeo UZO 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53000.0
+            }
+          },
+          "Duro DZ": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50000.0
+            }
+          },
+          "Pantero": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 106,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44000.0
+            }
+          },
+          "Mojo XT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000.0
+            }
+          },
+          "Mojo UT 300": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 164000.0
+            }
+          },
+          "Mojo 300 ABS": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 191000.0
+            }
+          },
+          "Mojo BS6": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 199000.0
+            }
+          },
+          "Mojo TR": {
+            "Touring Edition": {
+              "bodyType": "BIKE",
+              "cc": 295,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 210000.0
+            }
+          },
+          "Mojo XT 350": {
+            "Adventure Edition": {
+              "bodyType": "BIKE",
+              "cc": 348,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 230000.0
+            }
+          },
+          "Mojo Electric": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 250000.0
+            }
+          }
+        }
       }
     },
     "Private Car": {
