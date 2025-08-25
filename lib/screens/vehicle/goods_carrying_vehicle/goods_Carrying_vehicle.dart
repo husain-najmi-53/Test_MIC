@@ -396,6 +396,7 @@ class _GoodsCarryingVehicleScreenState
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+                  return null;
                 }),
           ),
         ],
@@ -454,41 +455,39 @@ class _GoodsCarryingVehicleScreenState
 
 double _getOdRate(String zone, String age, int gvw) {
   if (zone == 'A') {
-    if (gvw < 7500) {
-      if (age == 'Upto 5 Years') return 3.0;
-      if (age == '6-10 Years') return 3.5;
-      return 4.0;
-    } else if (gvw < 12000) {
-      if (age == 'Upto 5 Years') return 3.5;
-      if (age == '6-10 Years') return 4.0;
-      return 4.5;
+    if (gvw <= 1000) {
+      if (age == 'Upto 5 Years') return 3.284;
+      if (age == '>5 to 7 Years') return 3.366;
+      return 3.448; // >7 Years
+    } else if (gvw <= 1500) {
+      if (age == 'Upto 5 Years') return 3.448;
+      if (age == '>5 to 7 Years') return 3.534;
+      return 3.620; // >7 Years
     } else {
-      if (age == 'Upto 5 Years') return 4.0;
-      if (age == '6-10 Years') return 4.5;
-      return 5.0;
+      if (age == 'Upto 5 Years') return 3.612;
+      if (age == '>5 to 7 Years') return 3.703;
+      return 3.793; // >7 Years
     }
   } else if (zone == 'B') {
-    if (gvw < 7500) {
-      if (age == 'Upto 5 Years') return 2.8;
-      if (age == '6-10 Years') return 3.3;
-      return 3.8;
-    } else if (gvw < 12000) {
-      if (age == 'Upto 5 Years') return 3.3;
-      if (age == '6-10 Years') return 3.8;
-      return 4.3;
+    if (gvw <= 1000) {
+      if (age == 'Upto 5 Years') return 3.191;
+      if (age == '>5 to 7 Years') return 3.271;
+      return 3.351; // >7 Years
+    } else if (gvw <= 1500) {
+      if (age == 'Upto 5 Years') return 3.351;
+      if (age == '>5 to 7 Years') return 3.435;
+      return 3.519; // >7 Years
     } else {
-      if (age == 'Upto 5 Years') return 3.8;
-      if (age == '6-10 Years') return 4.3;
-      return 4.8;
+      if (age == 'Upto 5 Years') return 3.510;
+      if (age == '>5 to 7 Years') return 3.598;
+      return 3.686; // >7 Years
     }
   }
-  return 3.5; // Safe fallback
+  return 0.0; // Safe fallback
 }
 
 double _getTpRate(int gvw) {
-  if (gvw <= 7500) return 16049;
-  if (gvw <= 12000) return 27186;
-  if (gvw <= 20000) return 35313;
-  if (gvw <= 40000) return 43950;
-  return 44242;
+  if (gvw <= 1000) return 6040;
+  if (gvw <= 1500) return 7940;
+  return 10523;
 }

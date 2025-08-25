@@ -121,7 +121,7 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
       double netOdPremium = odBeforeNcb - ncbAmt;
 
       // ---- TP Calculation ----
-      double basicTp = 5077.0;
+      double basicTp = 2595.0;
       double totalTp = basicTp +
           cngTpAmt +
           paOwnerDriver +
@@ -179,13 +179,19 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
   // OD Rate for Three-Wheeler Goods Carrying
   double _getThreeWheelerOdRate(String zone, String age) {
     if (zone == 'A') {
-      if (age == 'Upto 5 Years') return 3.0;
-      return 3.3; // Above 5 Years
+      if (age == 'Upto 5 Years') return 1.278;
+      if (age == '>5-7 Years') return 1.310;
+      if (age == '>7 Years') return 1.342;
     } else if (zone == 'B') {
-      if (age == 'Upto 5 Years') return 2.8;
-      return 3.0; // Above 5 Years
+      if (age == 'Upto 5 Years') return 1.272;
+      if (age == '>5-7 Years') return 1.304;
+      if (age == '>7 Years') return 1.336;
+    } else if (zone == 'C') {
+      if (age == 'Upto 5 Years') return 1.260;
+      if (age == '>5-7 Years') return 1.292;
+      if (age == '>7 Years') return 1.323;
     }
-    return 3.0; // fallback
+    return 0.0; // fallback
   }
 
   void _resetForm() {

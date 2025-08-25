@@ -5,6 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:motor_insurance_app/notification_services/flutter_local_notification_service.dart';
 import 'package:motor_insurance_app/screens/auth/subscribe_screen.dart';
+import 'package:motor_insurance_app/screens/custom/drawer/app_features_screen.dart';
+import 'package:motor_insurance_app/screens/custom/drawer/handbook_screen.dart';
+import 'package:motor_insurance_app/screens/custom/drawer/rate_app_screen.dart';
+import 'package:motor_insurance_app/screens/custom/drawer/share_app_screen.dart';
+import 'package:motor_insurance_app/screens/custom/drawer/update_app_screen.dart';
+import 'package:motor_insurance_app/screens/custom/drawer/whatsapp_us_screen.dart';
 import 'package:motor_insurance_app/screens/custom/profile.dart';
 import 'package:motor_insurance_app/screens/dashboard/claimCalculator/claimCalulator_Type.dart';
 import 'package:motor_insurance_app/screens/dashboard/claimCalculator/odClaim_screen.dart';
@@ -53,6 +59,7 @@ import 'firebase_options.dart';
 import 'package:motor_insurance_app/screens/auth/signup.dart';
 import 'package:timezone/data/latest.dart';
 import 'notification_services/firebase_notification_service.dart';
+import 'package:motor_insurance_app/screens/custom/setting_page.dart';
 
 
 void main() async {
@@ -69,11 +76,9 @@ void main() async {
     final androidPlugin = notificationService.notificationPlugin
         .resolvePlatformSpecificImplementation<
         AndroidFlutterLocalNotificationsPlugin>();
-    final granted = await androidPlugin?.requestNotificationsPermission();
-    print("Android Notification Permission Granted: $granted");
+    //final granted = await androidPlugin?.requestNotificationsPermission();
+    //print("Android Notification Permission Granted: $granted");
   }
-
-
 
   runApp(const MotorInsuranceApp());
 }
@@ -124,7 +129,16 @@ class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
               ModalRoute.of(context)?.settings.arguments as String? ?? '';
           return CalculationFormScreen(selectedType: selectedType);
         },
+
+        //Custom Drawer Routes
         '/profile': (context) => const ProfilePage(),
+        '/settings': (context) => const SettingsPage(),
+        '/appFeatures': (context) => const AppFeaturesScreen(),
+        '/updateApp': (context) => const UpdateApplicationScreen(),
+        '/rateApp': (context) => const RateApplicationScreen(),
+        '/whatsappUs': (context) => const WhatsAppUsScreen(),
+        '/handbook': (context) => const HandbookScreen(),
+        '/shareApp': (context) => const ShareAppScreen(),
 
         // Bike Routes
         '/twoWheeler1YearOD': (context) => const TwoWheeler1YearODFormScreen(),
@@ -189,7 +203,7 @@ class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
 
   void onOpenAppFirebaseMessage() {
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      print("onMessage: $message");
+      //print("onMessage: $message");
       String payloadData = jsonEncode(message.data);
       if (message.notification != null) {
         FlutterLocalNotificationService().showNotification(
@@ -204,7 +218,7 @@ class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
 
   void onOpenAppFirebaseMessageWithDialog() {
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      print("📩 onMessage: ${message.data}");
+      //print("📩 onMessage: ${message.data}");
 
       if (message.notification != null) {
         WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -232,7 +246,7 @@ class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
 
   void onFirebaseNotificationClicked() {
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
-      print("📲 Notification clicked! Data: ${message.data}");
+      //print("📲 Notification clicked! Data: ${message.data}");
 
       // Example: Navigate to a details page
       if (message.data.containsKey('route')) {
@@ -241,7 +255,7 @@ class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
           arguments: message.data,
         );
       } else {
-        print("onFirebaseNotificationClicked Imvoled and title: ${message.notification?.title ?? "No Title"} body ${message.notification?.body ?? "No Body"}");
+        //print("onFirebaseNotificationClicked Imvoled and title: ${message.notification?.title ?? "No Title"} body ${message.notification?.body ?? "No Body"}");
 
       }
     });
@@ -254,8 +268,8 @@ class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
     await FirebaseMessaging.instance.getInitialMessage();
 
     if (initialMessage != null) {
-      print("🚀 App opened from terminated state via notification!");
-      print("Data: ${initialMessage.data}");
+      // print("🚀 App opened from terminated state via notification!");
+      // print("Data: ${initialMessage.data}");
 
       // Example 1: Navigate to a specific route
       if (initialMessage.data.containsKey('route')) {
@@ -265,19 +279,12 @@ class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
         );
       }
       else {
-        print("checkInitailMessage Imvoled and title: ${initialMessage.notification?.title ?? "No Title"} body ${initialMessage.notification?.body ?? "No Body"}");
+        // print("checkInitailMessage Imvoled and title: ${initialMessage.notification?.title ?? "No Title"} body ${initialMessage.notification?.body ?? "No Body"}");
 
       }
     }
   }
-
-
-
 }
-
-
-
-
 
 // Foreground (onMessage) → Handle while app is open.
 // Background (onMessageOpenedApp) → User taps notification, app comes to foreground.

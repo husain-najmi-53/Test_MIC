@@ -84,6 +84,7 @@ flutter:
     - assets/insurance.png
     - assets/fillerLogo.jpeg
     - assets/logos/
+    - assets/drawer/
     # - assets/insuranceIcon.png
     # - images/a_dot_ham.jpeg
 

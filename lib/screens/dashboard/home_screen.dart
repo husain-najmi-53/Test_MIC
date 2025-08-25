@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:motor_insurance_app/screens/custom/custom_drawer.dart';
+import 'package:motor_insurance_app/screens/custom/drawer/custom_drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  // Store the CustomDrawer widget instance here.
+  // This ensures it's created only once for the lifetime of the State object.
+  final _customDrawer = const CustomDrawer();
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +38,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         iconTheme: const IconThemeData(
-          color: Colors.white, // Set the hamburger icon color here
+          color: Colors.white,
         ),
         actions: [
           IconButton(
@@ -40,7 +49,8 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      drawer: const CustomDrawer(), // Using the custom drawer
+      // Use the stored instance here
+      drawer: _customDrawer,
 
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
@@ -55,62 +65,16 @@ class HomeScreen extends StatelessWidget {
                     .get(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
-                    return const Center(child: CircularProgressIndicator());
+                    return _buildUserDataShimmer();
                   }
                   if (!snapshot.hasData || !snapshot.data!.exists) {
-                    return const Text("No user data found");
+                    return _buildUserDataError();
                   }
 
                   final data = snapshot.data!.data() as Map<String, dynamic>;
                   final name = data["name"] ?? "No Name";
 
-                  return Container(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 16, horizontal: 12),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(16),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          blurRadius: 8,
-                          offset: const Offset(0, 4),
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Colors.blue.shade100,
-                          child: const Icon(Icons.person,
-                              size: 30, color: Colors.blue),
-                        ),
-                        const SizedBox(width: 16),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              name,
-                              style: GoogleFonts.poppins(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600,
-                                color: Colors.blue.shade900,
-                              ),
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              user?.email ?? "No Email",
-                              style: GoogleFonts.poppins(
-                                fontSize: 14,
-                                color: Colors.grey.shade700,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  );
+                  return _buildUserData(name, user?.email ?? "No Email");
                 },
               ),
 
@@ -123,7 +87,6 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.blue.shade900,
                 ),
               ),
-
               const SizedBox(height: 8),
               Text(
                 'Select a section to get started.',
@@ -145,13 +108,13 @@ class HomeScreen extends StatelessWidget {
                         Navigator.pushNamed(context, '/vehicleType');
                       }),
                   // SectionItem(
-                  //     title: 'Advanced Calculator',
-                  //     icon: Icons.calculate_outlined,
-                  //     onTap: () {}),
+                  //     title: 'Advanced Calculator',
+                  //     icon: Icons.calculate_outlined,
+                  //     onTap: () {}),
                   // SectionItem(
-                  //     title: 'Company-wise Calculator',
-                  //     icon: Icons.business,
-                  //     onTap: () {}),
+                  //     title: 'Company-wise Calculator',
+                  //     icon: Icons.business,
+                  //     onTap: () {}),
                   SectionItem(
                       title: 'RTO Zone Finder',
                       icon: Icons.location_on,
@@ -164,7 +127,7 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.pushNamed(context, '/IdvMaster');
                       }),
-                      SectionItem(
+                  SectionItem(
                       title: 'Claim Calculator',
                       icon: Icons.description,
                       onTap: () {
@@ -192,13 +155,13 @@ class HomeScreen extends StatelessWidget {
                         Navigator.pushNamed(context, '/CashlessGarage');
                       }),
                   // SectionItem(
-                  //     title: 'Claim Forms',
-                  //     icon: Icons.document_scanner,
-                  //     onTap: () {}),
+                  //     title: 'Claim Forms',
+                  //     icon: Icons.document_scanner,
+                  //     onTap: () {}),
                   // SectionItem(
-                  //     title: 'RTO Forms', icon: Icons.article, onTap: () {}),
+                  //     title: 'RTO Forms', icon: Icons.article, onTap: () {}),
                   // SectionItem(
-                  //     title: 'IRDA', icon: Icons.security, onTap: () {}),
+                  //     title: 'IRDA', icon: Icons.security, onTap: () {}),
                 ],
               ),
 
@@ -214,7 +177,6 @@ class HomeScreen extends StatelessWidget {
                       onTap: () async {
                         await _launchWebsite(
                             "https://vahan.parivahan.gov.in/nrservices/faces/user/citizen/citizenlogin.xhtml");
-                        // await _launchWebsite("https://www.google.com");
                       }),
                   SectionItem(
                       title: 'DL Status',
@@ -235,6 +197,166 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildUserData(String name, String email) {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          CircleAvatar(
+            radius: 30,
+            backgroundColor: Colors.blue.shade100,
+            child: const Icon(Icons.person, size: 30, color: Colors.blue),
+          ),
+          const SizedBox(width: 16),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                name,
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.blue.shade900,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                email,
+                style: GoogleFonts.poppins(
+                  fontSize: 14,
+                  color: Colors.grey.shade700,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildUserDataShimmer() {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          // Avatar shimmer
+          ShimmerLoader(
+            child: Container(
+              width: 60,
+              height: 60,
+              decoration: BoxDecoration(
+                color: Colors.grey.shade300,
+                shape: BoxShape.circle,
+              ),
+            ),
+          ),
+          const SizedBox(width: 16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Name shimmer
+                ShimmerLoader(
+                  child: Container(
+                    width: 120,
+                    height: 18,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade300,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                // Email shimmer
+                ShimmerLoader(
+                  child: Container(
+                    width: 160,
+                    height: 14,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade300,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildUserDataError() {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          CircleAvatar(
+            radius: 30,
+            backgroundColor: Colors.red.shade100,
+            child:
+                Icon(Icons.error_outline, size: 30, color: Colors.red.shade700),
+          ),
+          const SizedBox(width: 16),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Error loading profile",
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.red.shade700,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                "Tap to retry",
+                style: GoogleFonts.poppins(
+                  fontSize: 14,
+                  color: Colors.grey.shade700,
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -341,6 +463,56 @@ class SectionItem extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+// Shimmer Loader Widget (same as in CustomDrawer)
+class ShimmerLoader extends StatefulWidget {
+  final Widget child;
+  final Duration duration;
+
+  const ShimmerLoader({
+    Key? key,
+    required this.child,
+    this.duration = const Duration(milliseconds: 1500),
+  }) : super(key: key);
+
+  @override
+  _ShimmerLoaderState createState() => _ShimmerLoaderState();
+}
+
+class _ShimmerLoaderState extends State<ShimmerLoader>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: widget.duration,
+    )..repeat(reverse: true);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _controller,
+      builder: (context, child) {
+        return Opacity(
+          opacity:
+              0.5 + (_controller.value * 0.5), // Oscillates between 0.5 and 1.0
+          child: child,
+        );
+      },
+      child: widget.child,
     );
   }
 }

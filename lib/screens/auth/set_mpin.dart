@@ -101,7 +101,7 @@ class _SetMPINScreenState extends State<SetMPINScreen> {
       Navigator.pushReplacementNamed(context, "/subscribe");
     } else {
       // Already subscribed → go to home/dashboard
-      Navigator.pushReplacementNamed(context, "/home");
+      Navigator.pushReplacementNamed(context, "/login");
     }
   }
 

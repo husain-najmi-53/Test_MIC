@@ -178,13 +178,19 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
 
   double _getERickshawOdRate(String zone, String age) {
     if (zone == 'A') {
-      if (age == 'Upto 5 Years') return 1.5;
-      return 1.7;
+      if (age == 'Upto 5 Years') return 1.278;
+      if (age == '>5-7 Years') return 1.310;
+      if (age == '>7 Years') return 1.342;
     } else if (zone == 'B') {
-      if (age == 'Upto 5 Years') return 1.4;
-      return 1.6;
+      if (age == 'Upto 5 Years') return 1.272;
+      if (age == '>5-7 Years') return 1.304;
+      if (age == '>7 Years') return 1.336;
+    } else if (zone == 'C') {
+      if (age == 'Upto 5 Years') return 1.260;
+      if (age == '>5-7 Years') return 1.292;
+      if (age == '>7 Years') return 1.323;
     }
-    return 1.5;
+    return 0.0; // fallback
   }
 
   void _resetForm() {

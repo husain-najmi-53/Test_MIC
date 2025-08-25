@@ -474,47 +474,41 @@ class _ElectricGoodsCarryingScreenState
 // IRDA OD rate table for Electric Goods Carrying Vehicle
 
   double _getOdRate(String zone, String age, int gvw) {
-    // IRDAI OD Rates for Goods Carrying Vehicles - Public/Private (Approx 2024–25)
-    // GVW slabs: < 7500 kg, 7501–12000 kg, > 12000 kg
-
     if (zone == 'A') {
-      if (gvw <= 7500) {
-        if (age == 'Upto 5 Years') return 3.038; // %
-        if (age == '6 to 7 Years') return 3.180;
-        return 3.320; // Above 7 Years
-      } else if (gvw <= 12000) {
-        if (age == 'Upto 5 Years') return 3.156;
-        if (age == '6 to 7 Years') return 3.300;
-        return 3.442;
+      if (gvw <= 1000) {
+        if (age == 'Upto 5 Years') return 3.284;
+        if (age == '>5 to 7 Years') return 3.366;
+        return 3.448; // >7 Years
+      } else if (gvw <= 1500) {
+        if (age == 'Upto 5 Years') return 3.448;
+        if (age == '>5 to 7 Years') return 3.534;
+        return 3.620; // >7 Years
       } else {
-        if (age == 'Upto 5 Years') return 3.274;
-        if (age == '6 to 7 Years') return 3.420;
-        return 3.564;
+        if (age == 'Upto 5 Years') return 3.612;
+        if (age == '>5 to 7 Years') return 3.703;
+        return 3.793; // >7 Years
       }
     } else if (zone == 'B') {
-      if (gvw <= 7500) {
-        if (age == 'Upto 5 Years') return 2.903;
-        if (age == '6 to 7 Years') return 3.045;
-        return 3.187;
-      } else if (gvw <= 12000) {
-        if (age == 'Upto 5 Years') return 3.021;
-        if (age == '6 to 7 Years') return 3.165;
-        return 3.307;
+      if (gvw <= 1000) {
+        if (age == 'Upto 5 Years') return 3.191;
+        if (age == '>5 to 7 Years') return 3.271;
+        return 3.351; // >7 Years
+      } else if (gvw <= 1500) {
+        if (age == 'Upto 5 Years') return 3.351;
+        if (age == '>5 to 7 Years') return 3.435;
+        return 3.519; // >7 Years
       } else {
-        if (age == 'Upto 5 Years') return 3.139;
-        if (age == '6 to 7 Years') return 3.285;
-        return 3.427;
+        if (age == 'Upto 5 Years') return 3.510;
+        if (age == '>5 to 7 Years') return 3.598;
+        return 3.686; // >7 Years
       }
     }
-
-    return 3.0; // fallback
+    return 0.0; // Safe fallback
   }
-}
 
-double _getTpRate(int gvw) {
-  if (gvw <= 7500) return 13642;
-  if (gvw <= 12000) return 23108;
-  if (gvw <= 20000) return 29016;
-  if (gvw <= 40000) return 36357;
-  return 36635;
+  double _getTpRate(int gvw) {
+    if (gvw <= 1000) return 6040;
+    if (gvw <= 1500) return 7940;
+    return 10523;
+  }
 }

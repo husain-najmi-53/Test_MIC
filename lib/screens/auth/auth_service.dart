@@ -47,6 +47,8 @@ class AuthService {
           'city': city,
           'createdAt': Timestamp.now(),
         });
+        // Send verification email
+        await result.user?.sendEmailVerification();
         return null; // ✅ Success
       }
 
@@ -59,8 +61,10 @@ class AuthService {
   }
 
   /// 🔹 Sign in with Email/Phone & Password
-  Future<String?> signIn(
-      {required String identifier, required String password}) async {
+  Future<String?> signIn({
+    required String identifier,
+    required String password,
+  }) async {
     try {
       String emailToUse = identifier;
 
@@ -80,11 +84,18 @@ class AuthService {
         emailToUse = query.docs.first["email"];
       }
 
-      // Use email to login
-      await _auth.signInWithEmailAndPassword(
+      // Sign in with email & password
+      final credential = await _auth.signInWithEmailAndPassword(
         email: emailToUse,
         password: password,
       );
+
+      // 🔑 Check email verification
+      if (!credential.user!.emailVerified) {
+        await credential.user!.sendEmailVerification(); // resend verification
+        await _auth.signOut(); // prevent unverified login
+        return "Please verify your email before logging in. We've sent a new verification link.";
+      }
 
       return null; // ✅ Success
     } on FirebaseAuthException catch (e) {

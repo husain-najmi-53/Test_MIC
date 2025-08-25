@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:motor_insurance_app/screens/auth/auth_service.dart';
 import 'package:motor_insurance_app/screens/auth/set_mpin.dart';
@@ -21,6 +22,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _cityController = TextEditingController();
   String? _selectedState;
   bool _isLoading = false;
+
+  bool _isPhoneVerified = false;
+  bool _otpSent = false;
+  // bool _isPhoneEditable = true;
+  // late String _lastPhoneValue;
+  final TextEditingController _otpController = TextEditingController();
+  String? _verificationId;
 
   // A comprehensive list of all states and union territories in India
   final List<String> _states = [
@@ -61,6 +69,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
     "Puducherry",
     "Ladakh"
   ];
+
+  
+  // @override
+  // void initState() {
+  //   super.initState();
+
+  //   _lastPhoneValue = _phoneController.text;
+
+  //   _phoneController.addListener(() {
+  //     final current = _phoneController.text;
+  //     // Only reset if text actually changes after verification
+  //     if (_isPhoneVerified && current != _lastPhoneValue) {
+  //       setState(() {
+  //         _otpSent = false;
+  //         _isPhoneVerified = false;
+  //         _isPhoneEditable = true;
+  //         _otpController.clear();
+  //       });
+  //     }
+  //     _lastPhoneValue = current;
+  //   });
+  // }
 
   @override
   void dispose() {
@@ -107,8 +137,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 170.0),
               child: SingleChildScrollView(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 24.0, vertical: 32.0),
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 100),
                   child: Column(
@@ -135,6 +165,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   icon: Icons.person_outline,
                                 ),
                                 const SizedBox(height: 24),
+                                //Email Field
                                 _buildTextField(
                                   controller: _emailController,
                                   label: 'Email Address',
@@ -142,18 +173,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   isEmail: true,
                                 ),
                                 const SizedBox(height: 24),
-                                _buildTextField(
-                                  controller: _phoneController,
-                                  label: 'Phone Number',
-                                  icon: Icons.phone_android_outlined,
-                                  isNumeric: true,
-                                ),
+                                //Phone Field
+                                _buildPhoneField(),
                                 const SizedBox(height: 24),
                                 _buildTextField(
                                   controller: _passwordController,
                                   label: 'Password',
                                   icon: Icons.lock_outline,
                                   obscureText: true,
+                                  showVisibilityToggle: true,
                                 ),
                                 const SizedBox(height: 24),
                                 _buildTextField(
@@ -161,6 +189,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   label: 'Confirm Password',
                                   icon: Icons.lock_open_outlined,
                                   obscureText: true,
+                                  showVisibilityToggle: true,
                                 ),
                                 const SizedBox(height: 24),
                                 _buildTextField(
@@ -195,7 +224,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               right: 0,
               child: Container(
                 color: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 24.0, vertical: 16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
@@ -235,8 +265,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               alignment: Alignment.bottomCenter,
               child: Container(
                 color: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 24.0, vertical: 24.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -333,6 +363,166 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
+  final FocusNode _phoneFocusNode = FocusNode();
+
+  Widget _buildPhoneField() {
+  return Column(
+    children: [
+      Stack(
+        alignment: Alignment.centerRight,
+        children: [
+          TextFormField(
+            controller: _phoneController,
+            focusNode: _phoneFocusNode,
+            enabled: !_isPhoneVerified,
+            keyboardType: TextInputType.phone,
+            decoration: InputDecoration(
+              labelText: "Phone Number",
+              labelStyle: TextStyle(
+                color: Colors.grey.shade800,
+                fontWeight: FontWeight.w500
+              ),
+              prefixIcon: Padding(
+                padding: const EdgeInsets.only(right: 16.0),
+                child: Icon(Icons.phone_android_outlined, color: Colors.indigo.shade700),
+              ),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide.none,
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide.none,
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.indigo.shade700, width: 2.0),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: const BorderSide(color: Colors.red, width: 1.0),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: const BorderSide(color: Colors.red, width: 2.0),
+              ),
+            ),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "Enter phone number";
+              }
+              if (!RegExp(r'^[0-9]{10}$').hasMatch(value)) {
+                return "Enter valid 10-digit phone";
+              }
+              return null;
+            },
+          ),
+          Positioned(
+            right: 8,
+            child: _isPhoneVerified
+              ? Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.verified_user, color: Colors.green, size: 20),
+                    const SizedBox(width: 8),
+                    IconButton(
+                      icon: const Icon(Icons.edit, color: Colors.indigo),
+                      onPressed: () {
+                        setState(() {
+                          _isPhoneVerified = false;
+                          _otpSent = false;
+                          _otpController.clear();
+                          //_phoneController.text = "";
+                        });
+                        Future.delayed(const Duration(milliseconds: 100), () {
+                          FocusScope.of(context).requestFocus(_phoneFocusNode);
+                        });
+                      },
+                    ),
+                  ],
+                )
+              : ElevatedButton(
+                  onPressed: _sendOtp,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo.shade700,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                  ),
+                  child: const Text("Send OTP"),
+                ),
+          ),
+        ],
+      ),
+      // OTP field remains the same as above
+      if (_otpSent && !_isPhoneVerified) ...[
+        const SizedBox(height: 16),
+        Stack(
+          alignment: Alignment.centerRight,
+          children: [
+            TextFormField(
+              controller: _otpController,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: "Enter OTP",
+                labelStyle: TextStyle(
+                  color: Colors.grey.shade800,
+                  fontWeight: FontWeight.w500
+                ),
+                prefixIcon: Padding(
+                  padding: const EdgeInsets.only(right: 16.0),
+                  child: Icon(Icons.sms_outlined, color: Colors.indigo.shade700),
+                ),
+                filled: true,
+                fillColor: Colors.white,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide.none,
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide.none,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide(color: Colors.indigo.shade700, width: 2.0),
+                ),
+                errorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: const BorderSide(color: Colors.red, width: 1.0),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: const BorderSide(color: Colors.red, width: 2.0),
+                ),
+              ),
+            ),
+            Positioned(
+              right: 8,
+              child: ElevatedButton(
+                onPressed: _verifyOtp,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.indigo.shade700,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                ),
+                child: const Text("Verify"),
+              ),
+            ),
+          ],
+        ),
+      ]
+    ],
+  );
+}
+
   Widget _buildTextField({
     required TextEditingController controller,
     required String label,
@@ -340,62 +530,83 @@ class _SignUpScreenState extends State<SignUpScreen> {
     bool isNumeric = false,
     bool isEmail = false,
     bool obscureText = false,
+    bool showVisibilityToggle = false,
   }) {
-    return TextFormField(
-      controller: controller,
-      obscureText: obscureText,
-      keyboardType: isNumeric
-          ? TextInputType.phone
-          : isEmail
-              ? TextInputType.emailAddress
-              : TextInputType.text,
-      decoration: InputDecoration(
-        labelText: label,
-        labelStyle:
-            TextStyle(color: Colors.grey.shade800, fontWeight: FontWeight.w500),
-        prefixIcon: icon != null
-            ? Padding(
-                padding: const EdgeInsets.only(right: 16.0),
-                child: Icon(icon, color: Colors.indigo.shade700),
-              )
-            : null,
-        filled: true,
-        fillColor: Colors.white,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none,
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none,
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.indigo.shade700, width: 2.0),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Colors.red, width: 1.0),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Colors.red, width: 2.0),
-        ),
-      ),
-      validator: (value) {
-        if (value == null || value.trim().isEmpty) {
-          return 'Please enter $label';
-        }
-        if (isEmail && !RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
-          return 'Enter a valid email';
-        }
-        if (isNumeric && !RegExp(r'^[0-9]{10}$').hasMatch(value)) {
-          return 'Enter a valid 10-digit phone number';
-        }
-        if (label.contains('Password') && value.length < 6) {
-          return 'Password must be at least 6 characters';
-        }
-        return null;
+    // State for password visibility
+    bool isObscured = obscureText;
+
+    return StatefulBuilder(
+      builder: (context, setState) {
+        return TextFormField(
+          controller: controller,
+          obscureText: isObscured,
+          keyboardType: isNumeric
+              ? TextInputType.phone
+              : isEmail
+                  ? TextInputType.emailAddress
+                  : TextInputType.text,
+          decoration: InputDecoration(
+            labelText: label,
+            labelStyle: TextStyle(
+                color: Colors.grey.shade800, fontWeight: FontWeight.w500),
+            prefixIcon: icon != null
+                ? Padding(
+                    padding: const EdgeInsets.only(right: 16.0),
+                    child: Icon(icon, color: Colors.indigo.shade700),
+                  )
+                : null,
+            suffixIcon: showVisibilityToggle
+                ? IconButton(
+                    icon: Icon(
+                      isObscured ? Icons.visibility_off : Icons.visibility,
+                      color: Colors.grey.shade600,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        isObscured = !isObscured;
+                      });
+                    },
+                  )
+                : null,
+            filled: true,
+            fillColor: Colors.white,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide.none,
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide.none,
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide(color: Colors.indigo.shade700, width: 2.0),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: const BorderSide(color: Colors.red, width: 1.0),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: const BorderSide(color: Colors.red, width: 2.0),
+            ),
+          ),
+          validator: (value) {
+            if (value == null || value.trim().isEmpty) {
+              return 'Please enter $label';
+            }
+            if (isEmail && !RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
+              return 'Enter a valid email';
+            }
+            if (isNumeric && !RegExp(r'^[0-9]{10}$').hasMatch(value)) {
+              return 'Enter a valid 10-digit phone number';
+            }
+            if (label.contains('Password') && value.length < 6) {
+              return 'Password must be at least 6 characters';
+            }
+            return null;
+          },
+        );
       },
     );
   }
@@ -410,11 +621,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
         value: _selectedState,
         decoration: InputDecoration(
           labelText: 'State',
-          labelStyle:
-              TextStyle(color: Colors.grey.shade600, fontWeight: FontWeight.w500),
+          labelStyle: TextStyle(
+              color: Colors.grey.shade600, fontWeight: FontWeight.w500),
           prefixIcon: Padding(
             padding: const EdgeInsets.only(right: 16.0),
-            child: Icon(Icons.location_on_outlined, color: Colors.indigo.shade700),
+            child:
+                Icon(Icons.location_on_outlined, color: Colors.indigo.shade700),
           ),
           filled: true,
           fillColor: Colors.transparent,
@@ -459,18 +671,82 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
+  Future<void> _sendOtp() async {
+    if (_phoneController.text.trim().length != 10) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+            content: Text("Please enter a valid 10-digit mobile number")),
+      );
+      return;
+    }
+    await FirebaseAuth.instance.verifyPhoneNumber(
+      phoneNumber: "+91${_phoneController.text.trim()}",
+      verificationCompleted: (PhoneAuthCredential credential) async {
+        await FirebaseAuth.instance.signInWithCredential(credential);
+        setState(() {
+          _isPhoneVerified = true;
+          // _isPhoneEditable = false;
+        });
+      },
+      verificationFailed: (FirebaseAuthException e) {
+        ScaffoldMessenger.of(context)
+            .showSnackBar(SnackBar(content: Text(e.message ?? "Error")));
+      },
+      codeSent: (String verificationId, int? resendToken) {
+        setState(() {
+          _otpSent = true;
+          _verificationId = verificationId;
+        });
+      },
+      codeAutoRetrievalTimeout: (String verificationId) {
+        _verificationId = verificationId;
+      },
+    );
+  }
+
+  Future<void> _verifyOtp() async {
+    try {
+      final credential = PhoneAuthProvider.credential(
+        verificationId: _verificationId!,
+        smsCode: _otpController.text.trim(),
+      );
+      await FirebaseAuth.instance.signInWithCredential(credential);
+      setState(() {
+        _isPhoneVerified = true;
+        // _isPhoneEditable = false;
+      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Phone verified ✅")),
+      );
+    } catch (e) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text("Invalid OTP")));
+    }
+  }
+
   Future<void> _submitForm() async {
     if (_formKey.currentState!.validate()) {
       if (_passwordController.text != _confirmPasswordController.text) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Passwords do not match'),
-          behavior: SnackBarBehavior.floating,),
+          const SnackBar(
+            content: Text('Passwords do not match'),
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+        return;
+      }
+
+      if (!_isPhoneVerified) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+              content: Text("Please verify your phone via OTP first")),
         );
         return;
       }
 
       setState(() {
         _isLoading = true;
+        _otpSent = false;
       });
 
       try {
@@ -487,8 +763,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
         if (message == null) {
           if (mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('✅ Account created successfully'),
-              behavior: SnackBarBehavior.floating,),
+              const SnackBar(
+                content: Text('✅ Account created successfully'),
+                behavior: SnackBarBehavior.floating,
+              ),
             );
 
             Navigator.pushReplacement(
@@ -519,4 +797,3 @@ class _SignUpScreenState extends State<SignUpScreen> {
     }
   }
 }
-
