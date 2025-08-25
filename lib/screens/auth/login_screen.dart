@@ -80,6 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
+  /// Handle MPIN tap
   Future<void> _handleMpinTap(BuildContext context) async {
     final user = FirebaseAuth.instance.currentUser;
 
@@ -210,7 +211,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                                 const SizedBox(height: 16),
                                 _AnimatedButton(
-                                  onPressed: () async => await _handleMpinTap(context),
+                                  onPressed: () async =>
+                                      await _handleMpinTap(context),
                                   color: Colors.indigo.shade600,
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -339,7 +341,8 @@ class _LoginScreenState extends State<LoginScreen> {
       builder: (context, setState) {
         return TextFormField(
           controller: controller,
-          obscureText: obscureText && !(!obscureText || controller != passwordController),
+          obscureText: obscureText &&
+              !(!obscureText || controller != passwordController),
           style: const TextStyle(
             color: Colors.black87,
             fontSize: 16,

@@ -1,9 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:motor_insurance_app/notification_services/flutter_local_notification_service.dart';
+//import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+//import 'package:uuid/uuid.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _db = FirebaseFirestore.instance;
+  //final FlutterSecureStorage _storage = const FlutterSecureStorage();
 
   /// 🔹 Signup user with Email, Phone & Password
   Future<String?> signUp({
@@ -117,63 +121,80 @@ class AuthService {
 
   /// 🔹 Get Subscription Details from Firestore
   Future<Map<String, dynamic>?> getSubscriptionStatus(String uid) async {
-    final doc = await _db.collection("subscriptions").doc(uid).get();
+    try {
+      // Force fresh data from server, not cache
+      final doc = await _db.collection("subscriptions").doc(uid).get(
+        const GetOptions(source: Source.server)
+      );
 
-    if (!doc.exists) return null;
+      if (!doc.exists) return null;
 
-    final data = doc.data();
-    if (data == null) return null;
+      final data = doc.data();
+      if (data == null) return null;
 
-    final now = DateTime.now().toUtc();
+      final now = DateTime.now().toUtc();
 
-    if (data.containsKey("endDate")) {
-      final expiryDate = data["endDate"];
-      DateTime expiry;
+      // Check if subscription has expired based on expiryDate
+      if (data.containsKey("expiryDate")) {
+        final expiryDate = data["expiryDate"];
+        DateTime expiry;
 
-      if (expiryDate is Timestamp) {
-        expiry = expiryDate.toDate().toUtc();
-      } else if (expiryDate is String) {
-        expiry = DateTime.tryParse(expiryDate)?.toUtc() ??
-            now.subtract(const Duration(days: 1));
+        if (expiryDate is Timestamp) {
+          expiry = expiryDate.toDate().toUtc();
+        } else if (expiryDate is String) {
+          expiry = DateTime.tryParse(expiryDate)?.toUtc() ??
+              now.subtract(const Duration(days: 1));
+        } else {
+          // Unknown format → treat as expired
+          return null;
+        }
+
+        // If subscription has expired, update the status in Firestore
+        if (expiry.isBefore(now)) {
+          await _db.collection("subscriptions").doc(uid).update({
+            "subscriptionStatus": "expired",
+            "lastUpdated": FieldValue.serverTimestamp(),
+          });
+          
+          // Return null to indicate expired subscription
+          return null;
+        }
       } else {
-        // Unknown format → treat as expired
+        // No expiryDate field → treat as not subscribed
         return null;
       }
 
-      if (expiry.isBefore(now)) {
-        // Subscription expired
-        return null;
-      }
-    } else {
-      // No endDate field → treat as not subscribed
+      // ✅ Subscription is valid
+      return data;
+    } catch (e) {
       return null;
     }
-
-    // ✅ Subscription is valid
-    return data;
   }
 
-//   Future<void> createTrial(String uid) async {
-//   final doc = await _db.collection("subscriptions").doc(uid).get();
-//   if (doc.exists && doc.data()?["trialStart"] != null) {
-//     throw Exception("Trial already used");
-//   }
+  Future<void> checkExpiryAndNotify(DateTime expiryDate) async {
+    DateTime today = DateTime.now();
+    Duration difference = expiryDate.difference(today);
 
-//   final now = DateTime.now().toUtc();
-//   final trialEnd = now.add(const Duration(days: 7));
+    int daysLeft = difference.inDays;
 
-//   await _db.collection("subscriptions").doc(uid).set({
-//     "subscriptionStatus": "trial",
-//     "plan": "trial",
-//     "trialStart": now.toIso8601String(),
-//     "trialEnd": trialEnd.toIso8601String(),
-//     "paymentId": null,
-//     "expiryDate": trialEnd.toIso8601String(),
-//   });
-// }
+    // await FlutterLocalNotificationService().showNotification(
+    //     id: 0,
+    //     title: 'Subscription Renewal Reminder',
+    //     body:
+    //         'Your Subscription Plan is about expire in $daysLeft ${daysLeft == 1 ? 'day' : 'days'}');
+
+    if ([1, 3, 7].contains(daysLeft)) {
+      await FlutterLocalNotificationService().showNotification(
+          id: 0,
+          title: 'Subscription Renewal Reminder',
+          body:
+              'Your Subscription Plan is about expire in $daysLeft ${daysLeft == 1 ? 'day' : 'days'}');
+    }
+  }
 
   Future<String> getRedirectRoute(String uid) async {
     try {
+      // Force fresh subscription data check
       final subData = await getSubscriptionStatus(uid);
       final now = DateTime.now().toUtc();
 
@@ -182,29 +203,31 @@ class AuthService {
         return "/subscribe";
       }
 
-      final status = subData["subscriptionStatus"];
+      final status =
+          subData["subscriptionStatus"]?.toString().trim().toLowerCase();
       if (status == null) {
-        throw "Subscription status not found. Please contact support.";
+        return "/subscribe";
       }
 
       // 🔹 Active subscription
       if (status == "active") {
         final expiryDate = subData["expiryDate"];
         if (expiryDate == null) {
-          throw "Invalid subscription: Missing expiry date. Please contact support.";
+          return "/subscribe";
         }
 
         DateTime expiry;
         if (expiryDate is Timestamp) {
-          expiry = expiryDate.toDate();
+          expiry = expiryDate.toDate().toUtc();
         } else if (expiryDate is String) {
-          expiry = DateTime.tryParse(expiryDate) ??
+          expiry = DateTime.tryParse(expiryDate)?.toUtc() ??
               now.subtract(const Duration(days: 1));
         } else {
-          throw "Invalid expiry date format. Please contact support.";
+          return "/subscribe";
         }
 
         if (expiry.isAfter(now)) {
+          checkExpiryAndNotify(expiry);
           return "/home"; // Valid active subscription
         }
         return "/subscribe"; // Expired subscription
@@ -214,17 +237,17 @@ class AuthService {
       if (status == "trial") {
         final trialEnd = subData["trialEnd"];
         if (trialEnd == null) {
-          throw "Invalid trial: Missing end date. Please contact support.";
+          return "/subscribe";
         }
 
         DateTime endDate;
         if (trialEnd is Timestamp) {
-          endDate = trialEnd.toDate();
+          endDate = trialEnd.toDate().toUtc();
         } else if (trialEnd is String) {
-          endDate = DateTime.tryParse(trialEnd) ??
+          endDate = DateTime.tryParse(trialEnd)?.toUtc() ??
               now.subtract(const Duration(days: 1));
         } else {
-          throw "Invalid trial end date format. Please contact support.";
+          return "/subscribe";
         }
 
         if (endDate.isAfter(now)) {
@@ -233,18 +256,70 @@ class AuthService {
         return "/subscribe"; // Trial expired
       }
 
-      // 🔹 Unknown status
-      throw "Invalid subscription status: $status. Please contact support.";
-    } catch (e) {
-      //print("Error in getRedirectRoute: $e");
-
-      // Rethrow the error with proper message
-      if (e is String) {
-        throw e;
+      // 🔹 Expired subscription
+      if (status == "expired") {
+        return "/subscribe"; // Redirect to subscribe screen for expired subscriptions
       }
-      throw "An unexpected error occurred. Please try again or contact support.";
+
+      // 🔹 Unknown status
+      return "/subscribe";
+    } catch (e) {
+      return "/subscribe"; // Default to subscribe on any error
     }
   }
+
+//   // Generate new session and save to Firestore + local storage
+//   Future<void> createSession(String uid) async {
+//     final sessionId = const Uuid().v4();
+
+//     // Save to Firestore
+//     await _db.collection("users").doc(uid).set({
+//       "activeSession": sessionId,
+//       "lastLogin": FieldValue.serverTimestamp(),
+//     }, SetOptions(merge: true));
+
+//     // Save locally
+//     await _storage.write(key: "sessionId_$uid", value: sessionId);
+//   }
+
+//   // Monitor session changes in Firestore
+//   void monitorSession(String uid, Function onInvalidSession) {
+//     _db.collection("users").doc(uid).snapshots().listen((doc) async {
+//       final serverSession = doc["activeSession"];
+//       final localSession = await _storage.read(key: "sessionId_$uid");
+
+//       if (serverSession != localSession) {
+//         // Session invalid → trigger callback (logout, navigation, etc.)
+//         onInvalidSession();
+//       }
+//     });
+//   }
+
+//   // Check session on app startup
+//   Future<bool> checkInitialSession() async {
+//     final user = _auth.currentUser;
+//     if (user == null) return false;
+
+//     final uid = user.uid;
+//     final localSession = await _storage.read(key: "sessionId_$uid");
+
+//     final doc = await _db.collection("users").doc(uid).get();
+//     if (!doc.exists) return false;
+
+//     final serverSession = doc["activeSession"];
+
+//     return localSession == serverSession;
+//   }
+
+//   // Sign out user and clear local session
+//   Future<void> singleDeviceSignOut() async {
+//     final user = _auth.currentUser;
+//     if (user != null) {
+//       await _storage.delete(key: "sessionId_${user.uid}");
+//     }
+//     await _auth.signOut();
+//   }
+// }
 
   /// 🔹 Map FirebaseAuth errors to clean messages
   String _getFirebaseAuthError(FirebaseAuthException e) {

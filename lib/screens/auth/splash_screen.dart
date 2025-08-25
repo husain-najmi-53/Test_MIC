@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.indigo,
       body: Center(
         child: Text(
-          'Easy Insurance Calculator (Motor)',
+          'AutoInsure',
           style: TextStyle(
               fontSize: 26, color: Colors.white, fontWeight: FontWeight.bold),
         ),

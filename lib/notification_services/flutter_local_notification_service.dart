@@ -36,19 +36,26 @@ class FlutterLocalNotificationService {
     return notificationPlugin.show(id, title, body, notificationDetails());
   }
 
-Future<void> scheduleNotification( {int id = 1, String? title, String? body}) async {
-  DateTime scheduleDate = DateTime.now().add(Duration(seconds: 5));
-  return notificationPlugin.zonedSchedule(
+Future<void> scheduleNotification({
+    required int id,
+    String? title,
+    String? body,
+    Duration? duration,
+  }) async {
+    // Default: trigger after 5 seconds if no duration provided
+    final scheduledDate = DateTime.now().add(duration ?? const Duration(seconds: 5));
+
+    await notificationPlugin.zonedSchedule(
       id,
       title,
       body,
-      TZDateTime.from(scheduleDate, local) ,  //here local comes from timezone package which means current location
+      TZDateTime.from(scheduledDate, local),
       notificationDetails(),
       payload: "Notification-payload",
-    androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-    matchDateTimeComponents: null, // 👈 set this for daily/weekly repeats
-  );
-}
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      matchDateTimeComponents: null,
+    );
+  }
 
   void checkNotificationDetails()async{
     NotificationAppLaunchDetails ? details =await notificationPlugin.getNotificationAppLaunchDetails();

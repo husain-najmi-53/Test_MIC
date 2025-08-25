@@ -400,6 +400,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Zone",
       "Age of Vehicle",
       "No. of Passengers",
+      "Cubic Capacity"
     ],
     "[A] Own Damage Premium Package": [
       "Base OD Rate (%)",

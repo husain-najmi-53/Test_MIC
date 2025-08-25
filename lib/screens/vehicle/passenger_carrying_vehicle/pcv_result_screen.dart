@@ -21,6 +21,7 @@ class PcvInsuranceResultScreen extends StatelessWidget {
           "Zone",
           "Age of Vehicle",
           "No. of Passengers",
+          
         ],
         "[A] Own Damage Premium Package": [
           "Base OD Rate (%)",
@@ -100,7 +101,8 @@ class PcvInsuranceResultScreen extends StatelessWidget {
           "Year of Manufacture",
           "Zone",
           "Age of Vehicle",
-          "No. of Passengers"
+          "No. of Passengers",
+          "Cubic Capacity"  // added this 
         ],
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate (%)",

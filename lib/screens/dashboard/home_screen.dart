@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
         ),
         title: Text(
-          'Motor Insurance Dashboard',
+          'AutoInsure Dashboard',
           style: GoogleFonts.poppins(
             fontSize: 20,
             fontWeight: FontWeight.bold,
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               const SizedBox(height: 24),
               Text(
-                'Welcome to Motor Insurance!',
+                'Welcome To AutoInsure!',
                 style: GoogleFonts.poppins(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,

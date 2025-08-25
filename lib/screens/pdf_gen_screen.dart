@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 import 'dart:io';
 //import 'package:printing/printing.dart';
+import 'package:motor_insurance_app/notification_services/flutter_local_notification_service.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
@@ -262,16 +263,16 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
           pageFormat: PdfPageFormat.a4,
           margin: const pw.EdgeInsets.all(20),
           build: (context) {
-            final currentCompanyContact = insurerContactInfo[company] ?? {
-              'phone': 'N/A',
-              'email': 'N/A',
-              'claims': 'Contact customer service for details.',
-            };
+            final currentCompanyContact = insurerContactInfo[company] ??
+                {
+                  'phone': 'N/A',
+                  'email': 'N/A',
+                  'claims': 'Contact customer service for details.',
+                };
 
             return pw.Stack(
               children: [
                 _buildWatermark(),
-                
                 pw.Container(
                   padding: const pw.EdgeInsets.all(10),
                   decoration: pw.BoxDecoration(
@@ -285,10 +286,8 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
                     children: [
                       _buildQuotationHeader(),
                       pw.SizedBox(height: 8),
-
                       _buildCompanyHeader(company),
                       pw.SizedBox(height: 12),
-
                       pw.Row(
                         crossAxisAlignment: pw.CrossAxisAlignment.start,
                         children: [
@@ -297,7 +296,8 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
                             child: pw.Column(
                               crossAxisAlignment: pw.CrossAxisAlignment.start,
                               children: [
-                                _buildDetailsSection(quotation, includeAgentDetails),
+                                _buildDetailsSection(
+                                    quotation, includeAgentDetails),
                                 pw.SizedBox(height: 8),
                                 _buildVehicleDetailsSection(quotation),
                                 if (quotation.otherCoverage != null &&
@@ -306,9 +306,7 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
                               ],
                             ),
                           ),
-
                           pw.SizedBox(width: 12),
-
                           pw.Expanded(
                             flex: 3,
                             child: pw.Column(
@@ -323,14 +321,12 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
                         ],
                       ),
                       pw.SizedBox(height: 12),
-                      
                       pw.SizedBox(height: 20),
                       _buildInsurerContactSection(
                           company,
                           currentCompanyContact['phone']!,
                           currentCompanyContact['email']!,
                           currentCompanyContact['claims']!),
-                      
                       pw.SizedBox(height: 20),
                     ],
                   ),
@@ -362,15 +358,6 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
           final file = File(filePath);
           await file.writeAsBytes(pdfBytes);
           generatedFiles.add(XFile(filePath));
-
-          if (context.mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: Text("Generated PDF for $company"),
-                backgroundColor: Colors.green,
-              ),
-            );
-          }
         }
       } catch (e) {
         if (context.mounted) {
@@ -387,10 +374,25 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
 
     if (!kIsWeb && generatedFiles.isNotEmpty) {
       try {
-        await Share.shareXFiles(
+        final result = await Share.shareXFiles(
           generatedFiles,
           text: 'Insurance Quotation PDFs',
         );
+
+        // Only show notification and snackbar if the share was completed (not cancelled)
+        if (result.status == ShareResultStatus.success && context.mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                  "Generated and shared PDFs for ${companies.length} companies"),
+              backgroundColor: Colors.green,
+            ),
+          );
+          FlutterLocalNotificationService().showNotification(
+              id: 0,
+              title: 'Quotation Generated and Shared ✅',
+              body: 'Your motor insurance quotes were successfully generated and shared!');
+        }
       } catch (e) {
         if (context.mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -401,12 +403,12 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
           );
         }
       }
-    }
-
-    if (context.mounted) {
+    } else if (kIsWeb && context.mounted) {
+      // For web, show success message after download
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text("Generated PDFs for ${companies.length} companies"),
+          content: Text(
+              "PDFs generated successfully for ${companies.length} companies"),
           backgroundColor: Colors.green,
         ),
       );
@@ -550,7 +552,7 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
       ),
     );
   }
- 
+
   pw.Widget _buildQuotationHeader() {
     return pw.Row(
       mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
@@ -581,7 +583,8 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
         children: [
           if (includeAgentDetails) ...[
             pw.Text('PRODUCER DETAILS',
-                style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                style:
+                    pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
             pw.Divider(color: PdfColors.grey300, height: 2),
             _buildDetailRow('Name:', quotation.agentName),
             _buildDetailRow('Contact:', quotation.agentContact),
@@ -592,10 +595,10 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
               style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
           pw.Divider(color: PdfColors.grey300, height: 2),
           _buildDetailRow('Policy:', quotation.insuranceResult.vehicleType),
-          _buildDetailRow(
-              'Start Date:', DateFormat('dd/MM/yyyy').format(quotation.policyStartDate)),
-          _buildDetailRow(
-              'End Date:', DateFormat('dd/MM/yyyy').format(quotation.policyEndDate)),
+          _buildDetailRow('Start Date:',
+              DateFormat('dd/MM/yyyy').format(quotation.policyStartDate)),
+          _buildDetailRow('End Date:',
+              DateFormat('dd/MM/yyyy').format(quotation.policyEndDate)),
         ],
       ),
     );
@@ -640,8 +643,8 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
           _buildDetailRow('Registration No:', quotation.registrationNumber),
           _buildDetailRow('Make:', quotation.make),
           _buildDetailRow('Model:', quotation.model),
-          _buildDetailRow(
-              'MFG Year:', insuranceResult.fieldData['Year of Manufacture'] ?? '-'),
+          _buildDetailRow('MFG Year:',
+              insuranceResult.fieldData['Year of Manufacture'] ?? '-'),
           _buildDetailRow('Seating Capacity:', quotation.seatingCapacity),
           _buildDetailRow(
               'CC/KW:',
@@ -653,8 +656,8 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
     );
   }
 
-  pw.Widget _buildInsurerContactSection(
-      String companyName, String contactNumber, String email, String claimsInfo) {
+  pw.Widget _buildInsurerContactSection(String companyName,
+      String contactNumber, String email, String claimsInfo) {
     return pw.Container(
       decoration: pw.BoxDecoration(
         border: pw.Border.all(width: 0.5, color: PdfColors.grey300),
@@ -681,7 +684,7 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
     if (quotation.otherCoverage == null || quotation.otherCoverage!.isEmpty) {
       return null;
     }
-    
+
     // Split the comma-separated string into a list of coverages
     List<String> coverages = quotation.otherCoverage!.split(',');
 
@@ -701,7 +704,8 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
             final parts = coverage.trim().split(' ');
             if (parts.length > 1) {
               // Assume a format like "Coverage Value"
-              return _buildDetailRow(parts.sublist(0, parts.length - 1).join(' '), parts.last);
+              return _buildDetailRow(
+                  parts.sublist(0, parts.length - 1).join(' '), parts.last);
             }
             // If just a single word, display it with no value
             return _buildDetailRow(coverage.trim(), '');
@@ -715,7 +719,8 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Select PDF Options", style: TextStyle(color: Colors.white)),
+        title: const Text("Select PDF Options",
+            style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.indigo[700],
         iconTheme: const IconThemeData(color: Colors.white),
         elevation: 4,
@@ -836,7 +841,8 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
-          border: Border(top: BorderSide(color: Colors.grey.shade200, width: 1)),
+          border:
+              Border(top: BorderSide(color: Colors.grey.shade200, width: 1)),
         ),
         child: ElevatedButton.icon(
           onPressed: generateSelectedPDFs,

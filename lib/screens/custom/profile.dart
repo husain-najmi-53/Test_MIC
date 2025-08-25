@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:motor_insurance_app/notification_services/flutter_local_notification_service.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -567,17 +568,6 @@ class _ProfilePageState extends State<ProfilePage>
     }
   }
 
-  // 🔹 Buy subscription flow
-  void _buySubscription() async {
-    // Show snackbar or loader
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text("Redirecting to purchase...")),
-    );
-
-    // Navigate to your payment/subscribe screen
-    Navigator.pushNamed(context, "/subscribe");
-  }
-
   // 🔹 Confirm cancel flow
   void _confirmCancelSubscription() async {
     final shouldCancel = await showDialog<bool>(
@@ -592,7 +582,9 @@ class _ProfilePageState extends State<ProfilePage>
             child: const Text("No"),
           ),
           ElevatedButton(
-            onPressed: () => Navigator.pop(ctx, true),
+            onPressed: () => {
+              Navigator.pop(ctx, true),
+            },
             child: const Text("Yes, cancel"),
           ),
         ],
@@ -605,6 +597,8 @@ class _ProfilePageState extends State<ProfilePage>
       // 🔹 Update Firestore
       await _db.collection("subscriptions").doc(uid).update({
         "subscriptionStatus": "Expired",
+        "plan": null,
+        "expiryDate": DateTime.now().toUtc(),
       });
 
       // 🔹 Update local state
@@ -617,8 +611,16 @@ class _ProfilePageState extends State<ProfilePage>
         const SnackBar(content: Text("Subscription canceled")),
       );
 
-      // 🔹 Redirect to subscribe page (but they can still re-enter app)
-      Navigator.pushReplacementNamed(context, "/subscribe");
+      // 🔹 Redirect to subscribe page (they can't enter app again)
+      Navigator.pushNamedAndRemoveUntil(context, "/subscribe", (route) => false);
+      
+      // 🔹 Show notification
+      FlutterLocalNotificationService().showNotification(
+        id: 0,
+        title: 'Subscription canceled',
+        body: 'Your Subscription Plan has been successfully cancelled.',
+      );
+      return;
     }
   }
 

@@ -129,6 +129,7 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
         double.tryParse(_controllers['zeroDepRate']!.text) ?? 0.0;
     double rsaAmount = double.tryParse(_controllers['rsaAmount']!.text) ?? 0.0;
     double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+    int cubicCapacity = int.tryParse(_controllers['cubicCapacity']!.text) ?? 0;
 
     double selectedNcb = 0.0;
     if (_selectedNcb != null) {
@@ -205,8 +206,8 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
     double totalA = netOdPremium + zeroDepPremium + rsaAmount;
 
     // Liability Premium (TP)
-    double liabilityPremiumTP =
-        _getTpRate(passengerCount: numberOfPassengers, usePerPassenger: false);
+    double liabilityPremiumTP = _getTpRate(cubicCapacity);
+        // _getTpRate(passengerCount: numberOfPassengers, usePerPassenger: false);
 
     // Total Liability premium includes TP + PA Owner Driver + LL to Paid Driver
     double totalB = liabilityPremiumTP + paOwnerDriver + llPaidDriverAmount;
@@ -232,6 +233,7 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
       "Zone": zone,
       "Age of Vehicle": ageOfVehicle,
       "No. of Passengers": numberOfPassengers.toString(),
+      "Cubic Capacity":cubicCapacity.toString(),
       "Vehicle Basic Rate (%)": vehicleBasicRate.toStringAsFixed(3),
       "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
       "Discount on OD Premium (%)": discountOnOd.toStringAsFixed(2),
@@ -504,25 +506,25 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
   }
 }
 
+
 double _getOdRate(String zone, String age) {
   if (age == 'Upto5Years') {
-    if (zone == 'A') return 2.432;
-    if (zone == 'B') return 2.424;
+    if (zone == 'A') return 3.284;
+    if (zone == 'B') return 3.191;
   } else if (age == '5to7Years') {
-    if (zone == 'A') return 2.493;
-    if (zone == 'B') return 2.484;
+    if (zone == 'A') return 3.366;
+    if (zone == 'B') return 3.271;
   } else if (age == 'Above7Years') {
-    if (zone == 'A') return 2.552;
-    if (zone == 'B') return 2.544;
+    if (zone == 'A') return 3.448;
+    if (zone == 'B') return 3.351;
   }
   return 1.0;
 }
 
-double _getTpRate({required int passengerCount, bool usePerPassenger = false}) {
-  if (passengerCount <= 6) {
-    return usePerPassenger ? 1214.0 * passengerCount : 2539.0;
-  } else if (passengerCount > 6 && passengerCount <= 17) {
-    return usePerPassenger ? 1349.0 * passengerCount : 6763.0;
-  }
+
+double _getTpRate(int cc) {
+  if (cc <= 1000) return 6040.0;
+  if (cc > 1000 && cc <= 1500) return 7940.0;
+  if (cc > 1500) return 10523.0;
   return 0.0;
 }

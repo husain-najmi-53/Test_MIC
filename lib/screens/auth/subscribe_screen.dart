@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:motor_insurance_app/notification_services/flutter_local_notification_service.dart';
 import 'package:motor_insurance_app/screens/auth/auth_service.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:animate_do/animate_do.dart';
@@ -136,6 +137,7 @@ class _SubscribeScreenState extends State<SubscribeScreen> {
     return data?['trialUsed'] == true; // 🔹 Reliable check
   }
 
+  /// 🔹 Activate Trial
   Future<void> _activateTrial(BuildContext context) async {
     final uid = FirebaseAuth.instance.currentUser?.uid;
     if (uid == null) return;
@@ -162,6 +164,10 @@ class _SubscribeScreenState extends State<SubscribeScreen> {
     }, SetOptions(merge: true));
 
     if (mounted) {
+      //Trial Active Notification Message
+      FlutterLocalNotificationService().scheduleNotification(
+          id: 0, title: 'Trail Activated ✅', body: 'Your Trial is Active!');
+
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Trial Activated ✅")),
       );
@@ -224,21 +230,44 @@ class _SubscribeScreenState extends State<SubscribeScreen> {
     await FirebaseFirestore.instance.collection('subscriptions').doc(uid).set({
       'subscriptionStatus': 'Active',
       'plan': _selectedPlan,
-      // trialFlag, trialStart and trialEnd should NOT be nulled out here
+      'trialStart': null,
+      'trialEnd': null,
       'paymentId': response.paymentId,
       'startDate': Timestamp.fromDate(now),
       'expiryDate': Timestamp.fromDate(expiry),
+      'trialUsed': true, // 🔹 Prevent trial after paid subscription
     }, SetOptions(merge: true));
 
     if (mounted) {
+      //Payment Success Notification Message
+      FlutterLocalNotificationService().scheduleNotification(
+          id: 0,
+          title: 'Payment Success',
+          body: 'Your Payment was Successful!!');
+
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("${_selectedPlan!.toUpperCase()} Activated ✅")),
       );
+
+      //Activate Notification Message
+      FlutterLocalNotificationService().scheduleNotification(
+          id: 1,
+          title: 'Subscription Activated ✅',
+          body: 'Your Subscription is Active. Enjoy Premium Features!',
+          duration: Duration(seconds: 15));
+
       Navigator.pushReplacementNamed(context, '/home');
     }
   }
 
   void _handlePaymentError(PaymentFailureResponse response) {
+    //Payment Failed Notification Message
+    FlutterLocalNotificationService().scheduleNotification(
+      id: 0,
+      title: 'Failed Payment ❌ ',
+      body: 'Your recent payment Failed. Please retry ',
+    );
+
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text("Payment Failed ❌")),
     );
