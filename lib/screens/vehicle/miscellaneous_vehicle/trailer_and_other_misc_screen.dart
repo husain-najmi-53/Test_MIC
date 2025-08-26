@@ -169,7 +169,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       String selectedTrailerTowedBy =
           _selectedTrailerTowedBy ?? 'Other Vehicle';
       double overturningForCranes = _selectedOverturningForCranes == 'Yes'
-          ? 5.0
+          ? 0.50
           : 0.0; // Overturning for Cranes percentage change as per client given IRDA Rates
       double discountRate =
           double.tryParse(_controllers['Discount_on_OD_premium(%)']!.text) ??

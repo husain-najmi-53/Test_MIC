@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:motor_insurance_app/screens/auth/forgot_password.dart';
@@ -7,6 +8,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:motor_insurance_app/screens/auth/enter_mpin.dart';
 import 'package:motor_insurance_app/screens/auth/set_mpin.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:motor_insurance_app/screens/auth/single_device_check.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -54,6 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
         final user = _authService.getCurrentUser();
         if (user != null) {
           try {
+            SingleDeviceCheck().checkAndPromptDeviceId(context, user.uid);
             String route = await _authService.getRedirectRoute(user.uid);
             if (mounted) {
               Navigator.pushReplacementNamed(context, route);
@@ -79,7 +82,6 @@ class _LoginScreenState extends State<LoginScreen> {
       }
     }
   }
-
   /// Handle MPIN tap
   Future<void> _handleMpinTap(BuildContext context) async {
     final user = FirebaseAuth.instance.currentUser;

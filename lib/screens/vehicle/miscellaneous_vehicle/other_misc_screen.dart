@@ -108,7 +108,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
     // Fetch form inputs
     // double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
     double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
-    double selectIMT = double.tryParse(_selectedImt23 ?? "0") ?? 0.0;
+    double selectIMT =_selectedImt23 == 'Yes' ? 15.0 : 0.0;
     double ageOfVehicle = double.tryParse(_selectedAge ?? "0") ?? 0.0;
     double geographicalExtent = double.tryParse(_selectedGeographicalExt ?? "0") ?? 0.0;
     double overturning = _selectedOverTurningForCranes == 'Yes' ? 5.0 : 0.0; 

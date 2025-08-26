@@ -1,9 +1,13 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:motor_insurance_app/notification_services/flutter_local_notification_service.dart';
+import 'package:motor_insurance_app/screens/auth/auth_service.dart';
+import 'package:motor_insurance_app/screens/auth/single_device_check.dart';
 import 'package:motor_insurance_app/screens/auth/subscribe_screen.dart';
 import 'package:motor_insurance_app/screens/custom/drawer/app_features_screen.dart';
 import 'package:motor_insurance_app/screens/custom/drawer/handbook_screen.dart';
@@ -62,7 +66,9 @@ import 'package:motor_insurance_app/screens/auth/signup.dart';
 import 'package:timezone/data/latest.dart';
 import 'notification_services/firebase_notification_service.dart';
 import 'package:motor_insurance_app/screens/custom/setting_page.dart';
+import 'package:motor_insurance_app/screens/auth/navigation_service.dart';
 
+//final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -94,16 +100,40 @@ class MotorInsuranceApp extends StatefulWidget {
 
 class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
 
-  final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+  //Timer? timer;
 
   @override
   void initState() {
     super.initState();
+    User? user  = FirebaseAuth.instance.currentUser;
+    if(user!=null){
+      SingleDeviceCheck().startChecking(context, user.uid);
+      // VerifySingleDeviceLogin();
+    }
     // Configure Firebase Messaging
     onOpenAppFirebaseMessage();
     //onOpenAppFirebaseMessageWithDialog(); //will implement later
     onFirebaseNotificationClicked();
     checkInitialMessage(); //This is when app is closed  and then clicked on message
+  }
+
+  // verifySingleDeviceLogin(){
+  //   User? user = AuthService().getCurrentUser();
+  //   if(user!=null){
+  //     timer = Timer.periodic(
+  //       Duration(seconds: 10),
+  //           (_)=>SingleDeviceCheck().checkAndPromptDeviceIdandAction(context,user.uid),
+  //     );
+  //   }else{
+  //     //Navigator.pushReplacementNamed(context, '/login');
+  //   }
+
+  // }
+
+  @override
+  void dispose(){
+    //timer?.cancel();
+    super.dispose();
   }
 
 

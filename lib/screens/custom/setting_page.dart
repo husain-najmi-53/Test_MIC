@@ -1,4 +1,7 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -13,6 +16,32 @@ class _SettingsPageState extends State<SettingsPage> {
   bool notificationVibration = false;
 
   @override
+  void initState() {
+    super.initState();
+    _loadSettings();
+  }
+
+  Future<void> _loadSettings() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      pushNotifications = prefs.getBool("pushNotifications") ?? true;
+      notificationSound = prefs.getBool("notificationSound") ?? true;
+      notificationVibration = prefs.getBool("notificationVibration") ?? false;
+    });
+  }
+
+  Future<void> _updateSetting(String key, bool value) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(key, value);
+
+    if (key == "pushNotifications") {
+      if (value) {
+        FirebaseMessaging.instance.subscribeToTopic("general");
+      } else {
+        FirebaseMessaging.instance.unsubscribeFromTopic("general");
+      }
+    }
+  }  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -218,33 +247,93 @@ class _SettingsPageState extends State<SettingsPage> {
           style: TextStyle(
               fontWeight: FontWeight.w600, color: Colors.indigo.shade800)),
       trailing: Switch(
-          value: value,
-          onChanged: onChanged,
-          activeColor: Colors.indigo.shade700),
-    );
-  }
-
-  Widget _buildListTile(String title, IconData icon, VoidCallback onTap) {
-    return ListTile(
-      leading: Icon(icon, color: Colors.indigo.shade700),
-      title: Text(title,
-          style: TextStyle(
-              fontWeight: FontWeight.w600, color: Colors.indigo.shade800)),
-      trailing: Icon(Icons.chevron_right, color: Colors.indigo.shade300),
-      onTap: onTap,
-    );
-  }
-
-  void _openDummyPage(BuildContext context, String title, dynamic content,
-      {String pageType = "text"}) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) =>
-            DummyPage(title: title, content: content, pageType: pageType),
+        value: value,
+        onChanged: (v) async {
+          if (title == "Push Notifications") {
+            // Handle push notifications specially
+            await _handlePushNotificationToggle(v);
+          } else {
+            // For other settings, update immediately
+            setState(() => onChanged(v));
+            String key = title == "Notification Sound"
+                ? "notificationSound"
+                : "notificationVibration";
+            await _updateSetting(key, v);
+          }
+        },
+        activeColor: Colors.indigo.shade700,
       ),
     );
   }
+
+  Future<void> _handlePushNotificationToggle(bool value) async {
+    if (value) {
+      // Optimistically update UI first
+      setState(() {
+        pushNotifications = true;
+      });
+      
+      // Trying to enable notifications
+      PermissionStatus status = await Permission.notification.status;
+      
+      if (status.isGranted) {
+        // Permission already granted, just enable
+        await _updateSetting("pushNotifications", true);
+      } else if (status.isDenied) {
+        // Request permission
+        PermissionStatus newStatus = await Permission.notification.request();
+        
+        if (newStatus.isGranted) {
+          // Permission granted, enable notifications
+          await _updateSetting("pushNotifications", true);
+        } else {
+          // Permission denied, revert toggle
+          setState(() {
+            pushNotifications = false;
+          });
+          
+          if (newStatus.isPermanentlyDenied) {
+            // Take user to settings
+            openAppSettings();
+          }
+        }
+      } else if (status.isPermanentlyDenied) {
+        // Permission permanently denied, revert toggle and take to settings
+        setState(() {
+          pushNotifications = false;
+        });
+        openAppSettings();
+      }
+    } else {
+      // Disable notifications - update UI immediately
+      setState(() {
+        pushNotifications = false;
+      });
+      await _updateSetting("pushNotifications", false);
+    }
+  }
+}
+
+Widget _buildListTile(String title, IconData icon, VoidCallback onTap) {
+  return ListTile(
+    leading: Icon(icon, color: Colors.indigo.shade700),
+    title: Text(title,
+        style: TextStyle(
+            fontWeight: FontWeight.w600, color: Colors.indigo.shade800)),
+    trailing: Icon(Icons.chevron_right, color: Colors.indigo.shade300),
+    onTap: onTap,
+  );
+}
+
+void _openDummyPage(BuildContext context, String title, dynamic content,
+    {String pageType = "text"}) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (_) =>
+          DummyPage(title: title, content: content, pageType: pageType),
+    ),
+  );
 }
 
 class DummyPage extends StatefulWidget {

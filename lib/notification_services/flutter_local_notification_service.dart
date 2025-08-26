@@ -4,18 +4,19 @@ import 'package:timezone/timezone.dart';
 class FlutterLocalNotificationService {
   final notificationPlugin = FlutterLocalNotificationsPlugin();
   bool _isInitialised = false;
-  // bool get isIntialiised => _isInitialised;
 
   Future<void> initNotification() async {
     if (_isInitialised) return;
 
-    const initsSettingsAndroid = AndroidInitializationSettings('@mipmap/ic_launcher');
+    const initsSettingsAndroid =
+        AndroidInitializationSettings('@mipmap/ic_launcher');
     const initSettingIos = DarwinInitializationSettings(
         requestAlertPermission: true,
         requestSoundPermission: true,
         requestBadgePermission: true);
 
-    const initSettings = InitializationSettings(android: initsSettingsAndroid, iOS: initSettingIos);
+    const initSettings = InitializationSettings(
+        android: initsSettingsAndroid, iOS: initSettingIos);
 
     await notificationPlugin.initialize(initSettings);
     _isInitialised = true;
@@ -36,14 +37,15 @@ class FlutterLocalNotificationService {
     return notificationPlugin.show(id, title, body, notificationDetails());
   }
 
-Future<void> scheduleNotification({
+  /// ✅ Respect sound/vibration when scheduling notification
+  Future<void> scheduleNotification({
     required int id,
     String? title,
     String? body,
     Duration? duration,
   }) async {
-    // Default: trigger after 5 seconds if no duration provided
-    final scheduledDate = DateTime.now().add(duration ?? const Duration(seconds: 5));
+    final scheduledDate =
+        DateTime.now().add(duration ?? const Duration(seconds: 5));
 
     await notificationPlugin.zonedSchedule(
       id,
@@ -64,13 +66,12 @@ Future<void> scheduleNotification({
       if(details.didNotificationLaunchApp){
         NotificationResponse? response = details.notificationResponse;
 
-        if(response!=null){
+        if (response != null) {
           String? payload = response.payload;
           print(payload);
-          //and here through payload message we can go to different pages and can do certain event using condition on payload message
+          // 👉 Here you can navigate based on payload
         }
       }
     }
   }
-
 }

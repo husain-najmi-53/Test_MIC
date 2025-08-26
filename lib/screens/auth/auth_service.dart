@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:motor_insurance_app/notification_services/flutter_local_notification_service.dart';
+import 'package:motor_insurance_app/screens/auth/single_device_check.dart';
 //import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 //import 'package:uuid/uuid.dart';
 
@@ -38,6 +40,10 @@ class AuthService {
       );
 
       User? user = result.user;
+      String? token = await FirebaseMessaging.instance.getToken();
+      String deviceId = await SingleDeviceCheck.getCurrentDeviceId();
+      print("Device ID: $deviceId");
+      print("FCM Token: $token");
 
       // 3. Save all extra user details in Firestore
       if (user != null) {
@@ -49,6 +55,8 @@ class AuthService {
           'occupation': occupation,
           'state': state,
           'city': city,
+          'deviceId': deviceId,
+          'token': token,
           'createdAt': Timestamp.now(),
         });
         // Send verification email
@@ -123,9 +131,10 @@ class AuthService {
   Future<Map<String, dynamic>?> getSubscriptionStatus(String uid) async {
     try {
       // Force fresh data from server, not cache
-      final doc = await _db.collection("subscriptions").doc(uid).get(
-        const GetOptions(source: Source.server)
-      );
+      final doc = await _db
+          .collection("subscriptions")
+          .doc(uid)
+          .get(const GetOptions(source: Source.server));
 
       if (!doc.exists) return null;
 
@@ -155,7 +164,7 @@ class AuthService {
             "subscriptionStatus": "expired",
             "lastUpdated": FieldValue.serverTimestamp(),
           });
-          
+
           // Return null to indicate expired subscription
           return null;
         }
@@ -188,7 +197,7 @@ class AuthService {
           id: 0,
           title: 'Subscription Renewal Reminder',
           body:
-              'Your Subscription Plan is about expire in $daysLeft ${daysLeft == 1 ? 'day' : 'days'}');
+              'Your Subscription Plan is about to expire in $daysLeft ${daysLeft == 1 ? 'day' : 'days'}');
     }
   }
 
@@ -267,59 +276,6 @@ class AuthService {
       return "/subscribe"; // Default to subscribe on any error
     }
   }
-
-//   // Generate new session and save to Firestore + local storage
-//   Future<void> createSession(String uid) async {
-//     final sessionId = const Uuid().v4();
-
-//     // Save to Firestore
-//     await _db.collection("users").doc(uid).set({
-//       "activeSession": sessionId,
-//       "lastLogin": FieldValue.serverTimestamp(),
-//     }, SetOptions(merge: true));
-
-//     // Save locally
-//     await _storage.write(key: "sessionId_$uid", value: sessionId);
-//   }
-
-//   // Monitor session changes in Firestore
-//   void monitorSession(String uid, Function onInvalidSession) {
-//     _db.collection("users").doc(uid).snapshots().listen((doc) async {
-//       final serverSession = doc["activeSession"];
-//       final localSession = await _storage.read(key: "sessionId_$uid");
-
-//       if (serverSession != localSession) {
-//         // Session invalid → trigger callback (logout, navigation, etc.)
-//         onInvalidSession();
-//       }
-//     });
-//   }
-
-//   // Check session on app startup
-//   Future<bool> checkInitialSession() async {
-//     final user = _auth.currentUser;
-//     if (user == null) return false;
-
-//     final uid = user.uid;
-//     final localSession = await _storage.read(key: "sessionId_$uid");
-
-//     final doc = await _db.collection("users").doc(uid).get();
-//     if (!doc.exists) return false;
-
-//     final serverSession = doc["activeSession"];
-
-//     return localSession == serverSession;
-//   }
-
-//   // Sign out user and clear local session
-//   Future<void> singleDeviceSignOut() async {
-//     final user = _auth.currentUser;
-//     if (user != null) {
-//       await _storage.delete(key: "sessionId_${user.uid}");
-//     }
-//     await _auth.signOut();
-//   }
-// }
 
   /// 🔹 Map FirebaseAuth errors to clean messages
   String _getFirebaseAuthError(FirebaseAuthException e) {
