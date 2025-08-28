@@ -182,6 +182,8 @@ class _ProfilePageState extends State<ProfilePage>
           "My Profile",
           style: TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
@@ -213,58 +215,83 @@ class _ProfilePageState extends State<ProfilePage>
                   child: Icon(Icons.person, size: 60, color: primaryColor),
                 ),
                 const SizedBox(height: 12),
-                Text(
-                  userData?['name'] ?? '',
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    userData?['name'] ?? '',
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
                 const SizedBox(height: 4),
-                Text(
-                  userData?['occupation'] ?? '',
-                  style: const TextStyle(color: Colors.white70, fontSize: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    userData?['occupation'] ?? '',
+                    style: const TextStyle(color: Colors.white70, fontSize: 16),
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
                 const SizedBox(height: 12),
                 isEditing
-                    ? Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ElevatedButton.icon(
-                            onPressed: _saveProfile,
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              foregroundColor: primaryColor,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)),
+                    ? Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Wrap(
+                          alignment: WrapAlignment.center,
+                          spacing: 10,
+                          runSpacing: 8,
+                          children: [
+                            ElevatedButton.icon(
+                              onPressed: _saveProfile,
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.white,
+                                foregroundColor: primaryColor,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20)),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 16, vertical: 8),
+                              ),
+                              icon: const Icon(Icons.save, size: 18),
+                              label: const Text("Save", style: TextStyle(fontSize: 14)),
                             ),
-                            icon: const Icon(Icons.save),
-                            label: const Text("Save"),
-                          ),
-                          const SizedBox(width: 10),
-                          OutlinedButton.icon(
-                            onPressed: _cancelEditing,
-                            style: OutlinedButton.styleFrom(
-                              foregroundColor: Colors.white,
-                              side: const BorderSide(color: Colors.white),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)),
+                            OutlinedButton.icon(
+                              onPressed: _cancelEditing,
+                              style: OutlinedButton.styleFrom(
+                                foregroundColor: Colors.white,
+                                side: const BorderSide(color: Colors.white),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20)),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 16, vertical: 8),
+                              ),
+                              icon: const Icon(Icons.cancel, size: 18),
+                              label: const Text("Cancel", style: TextStyle(fontSize: 14)),
                             ),
-                            icon: const Icon(Icons.cancel),
-                            label: const Text("Cancel"),
-                          ),
-                        ],
-                      )
-                    : ElevatedButton.icon(
-                        onPressed: _startEditing,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          foregroundColor: primaryColor,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
+                          ],
                         ),
-                        icon: const Icon(Icons.edit),
-                        label: const Text("Edit Profile"),
+                      )
+                    : Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: ElevatedButton.icon(
+                          onPressed: _startEditing,
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: primaryColor,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 10),
+                          ),
+                          icon: const Icon(Icons.edit, size: 18),
+                          label: const Text("Edit Profile", style: TextStyle(fontSize: 14)),
+                        ),
                       ),
               ],
             ),
@@ -320,48 +347,61 @@ class _ProfilePageState extends State<ProfilePage>
           color: Colors.white,
           border: Border(top: BorderSide(color: Colors.grey.shade300)),
         ),
-        child: Row(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(
-              isActive
-                  ? Icons.verified_user
-                  : isTrial
-                      ? Icons.access_time
-                      : Icons.error_outline,
-              color: isActive
-                  ? Colors.green
-                  : isTrial
-                      ? Colors.blue
-                      : Colors.orange,
-              size: 28,
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(
+                  isActive
+                      ? Icons.verified_user
+                      : isTrial
+                          ? Icons.access_time
+                          : Icons.error_outline,
+                  color: isActive
+                      ? Colors.green
+                      : isTrial
+                          ? Colors.blue
+                          : Colors.orange,
+                  size: 28,
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    isActive
+                        ? "Your subscription is active and valid until ${_formatDate(subscriptionData?['expiryDate'])}."
+                        : isTrial
+                            ? "Your trial is active until ${_formatDate(subscriptionData?['expiryDate'])}."
+                            : "Your subscription has expired. Please subscribe to continue.",
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.grey.shade700,
+                        fontWeight: FontWeight.w500),
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
             ),
-            const SizedBox(width: 10),
-            Expanded(
-              child: Text(
-                isActive
-                    ? "Your subscription is active and valid until ${_formatDate(subscriptionData?['expiryDate'])}."
-                    : isTrial
-                        ? "Your trial is active until ${_formatDate(subscriptionData?['expiryDate'])}."
-                        : "Your subscription has expired. Please subscribe to continue.",
-                style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey.shade700,
-                    fontWeight: FontWeight.w500),
-              ),
-            ),
-            const SizedBox(width: 8),
-            if (isActive) // 🔹 Show cancel only if active
-              OutlinedButton.icon(
-                onPressed: _confirmCancelSubscription,
-                icon: const Icon(Icons.cancel_outlined),
-                label: const Text("Cancel"),
-                style: OutlinedButton.styleFrom(
-                  foregroundColor: Colors.red.shade700,
-                  side: BorderSide(color: Colors.red.shade300),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
+            if (isActive) ...[
+              const SizedBox(height: 8),
+              Align(
+                alignment: Alignment.centerRight,
+                child: OutlinedButton.icon(
+                  onPressed: _confirmCancelSubscription,
+                  icon: const Icon(Icons.cancel_outlined, size: 18),
+                  label: const Text("Cancel", style: TextStyle(fontSize: 14)),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: Colors.red.shade700,
+                    side: BorderSide(color: Colors.red.shade300),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  ),
                 ),
               ),
+            ],
           ],
         ),
       ),
@@ -445,6 +485,8 @@ class _ProfilePageState extends State<ProfilePage>
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                   color: primaryColor),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
             ),
             children: [
               ...data!.entries.map((entry) {
@@ -455,10 +497,15 @@ class _ProfilePageState extends State<ProfilePage>
                   ),
                   title: Text(entry.key,
                       style: TextStyle(
-                          fontWeight: FontWeight.bold, color: primaryColor)),
+                          fontWeight: FontWeight.bold, color: primaryColor),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis),
                   subtitle: isEditing && title == "Profile Details"
                       ? _buildEditableField(entry.key, entry.value)
-                      : Text(entry.value, style: const TextStyle(fontSize: 15)),
+                      : Text(entry.value, 
+                          style: const TextStyle(fontSize: 15),
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis),
                   // Add blinking effect to the tile when editing
                   tileColor: isEditing && title == "Profile Details"
                       ? Colors.blue.withOpacity(_blinkAnimation.value * 0.1)
@@ -532,7 +579,11 @@ class _ProfilePageState extends State<ProfilePage>
               items: states.map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(value),
+                  child: Text(
+                    value,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 );
               }).toList(),
               onChanged: isEditing

@@ -121,9 +121,12 @@ final List<String> _depreciationOptions = [
     double ncbPercentage =
         double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
 
-    // Get base rate from function
-    double vehicleBasicRate =
-        _getOdRate(zone, yearOfManufacture, cubicCapacity);
+     // Get age of vehicle
+      String ageOfVehicle = _selectedAge ?? "Upto 5 Years";
+
+      // Get base rate from function
+      double vehicleBasicRate =
+          _getOdRate(zone, ageOfVehicle, cubicCapacity);
 
     // OD Calculations
     double basicForVehicle = (idv * vehicleBasicRate) / 100;
@@ -206,6 +209,7 @@ final List<String> _depreciationOptions = [
       controller.clear();
     }
     setState(() {
+      _selectedDepreciation = null;
       _selectedAge = null;
       _selectedZone = null;
       _selectedNoClaimBonus = null;

@@ -377,6 +377,15 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
     }
     setState(() {
       _selectedZone = null;
+      _selectedAAI = null;
+      _selectedAge = null;
+      _selectedAntiTheft = null;
+      _selectedCngLpgKit = null;
+      _selectedDepreciation = null;
+      _selectedHandicap = null;
+      _selectedLlPaidDriver = null;
+      _selectedNcb = null;
+      _selectedVoluntaryDeduct = null;
     });
   }
 

@@ -185,7 +185,7 @@ class InsuranceCarResultScreen extends StatelessWidget {
 
     final vehicleType = resultData.vehicleType;
     final sections = categoryFieldMapping[vehicleType] ??
-        categoryFieldMapping["Two Wheeler"]!;
+        categoryFieldMapping["Four Wheeler"]!;
 
     return Scaffold(
       appBar: AppBar(

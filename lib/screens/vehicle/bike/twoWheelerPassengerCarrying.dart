@@ -125,9 +125,12 @@ class _TwoWheelerPassengerCarryingFormScreenState
       int numberOfPassengers =
           int.tryParse(_controllers['numberOfPassengers']!.text) ?? 1;
 
+       // Get age of vehicle
+      String ageOfVehicle = _selectedAge ?? "Upto 5 Years";
+
       // Get base rate from function
       double vehicleBasicRate =
-          _getOdRate(zone, yearOfManufacture, cubicCapacity);
+          _getOdRate(zone, ageOfVehicle, cubicCapacity);
 
       double passenegrCoverage = numberOfPassengers * 580.0;
 
@@ -226,6 +229,7 @@ class _TwoWheelerPassengerCarryingFormScreenState
       controller.clear();
     }
     setState(() {
+      _selectedDepreciation = null;
       _selectedAge = null;
       _selectedZone = null;
       _selectedNcb = null;

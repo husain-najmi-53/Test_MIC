@@ -280,7 +280,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
                 // _buildTextField('depreciation', 'Depreciation (%)', 'Enter Depreciation'),
                 _buildDropdownField('Age Of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),
-                _buildTextField('YearOfManufacture', 'Year of Manufacture', 'Enter Year'),
+                _buildTextField('yearOfManufacture', 'Year of Manufacture', 'Enter Year'),
                 _buildDropdownField('Zone', _zoneOptions, _selectedZone,
                     (val) => setState(() => _selectedZone = val)),
                 _buildDropdownField('Vehicle Type', _vehicletypeOptions, _selectedVehicleType,
@@ -419,17 +419,17 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
 
 double _getOdRate(String zone, double ageOfVehicle) {
   if (zone == 'A') {
-    if (ageOfVehicle <= 5) return 1.20;
-    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.25;
-    if (ageOfVehicle > 7) return 1.30;
+    if (ageOfVehicle <= 5) return 1.208;
+    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.238;
+    if (ageOfVehicle > 7) return 1.268;
   } else if (zone == 'B') {
-    if (ageOfVehicle <= 5) return 1.15;
-    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.20;
-    if (ageOfVehicle > 7) return 1.25;
+    if (ageOfVehicle <= 5) return 1.202;
+    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.232;
+    if (ageOfVehicle > 7) return 1.262;
   } else if (zone == 'C') {
-    if (ageOfVehicle <= 5) return 1.10;
-    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.15;
-    if (ageOfVehicle > 7) return 1.20;
+    if (ageOfVehicle <= 5) return 1.190;
+    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.220;
+    if (ageOfVehicle > 7) return 1.250;
   }
 
   return 1.20; // Safe fallback

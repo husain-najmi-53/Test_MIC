@@ -120,7 +120,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
       double ncbAmt = (odBeforeNcb * ncb) / 100;
       double netOdPremium = odBeforeNcb - ncbAmt;
 
-      double basicTp = 3760.0;
+      double basicTp = 2595.00;
       double totalTp = basicTp +
           valueAddedService +
           paOwnerDriver +
@@ -179,18 +179,18 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
   double _getERickshawOdRate(String zone, String age) {
     if (zone == 'A') {
       if (age == 'Upto 5 Years') return 1.278;
-      if (age == '>5-7 Years') return 1.310;
-      if (age == '>7 Years') return 1.342;
+      if (age == '6 to 7 Years') return 1.310;
+      if (age == 'Above 7 Years') return 1.342;
     } else if (zone == 'B') {
       if (age == 'Upto 5 Years') return 1.272;
-      if (age == '>5-7 Years') return 1.304;
-      if (age == '>7 Years') return 1.336;
+      if (age == '6 to 7 Years') return 1.304;
+      if (age == 'Above 7 Years') return 1.336;
     } else if (zone == 'C') {
       if (age == 'Upto 5 Years') return 1.260;
-      if (age == '>5-7 Years') return 1.292;
-      if (age == '>7 Years') return 1.323;
+      if (age == '6 to 7 Years') return 1.292;
+      if (age == 'Above 7 Years') return 1.323;
     }
-    return 0.0; // fallback
+    return 0.00; // fallback
   }
 
   void _resetForm() {
@@ -257,11 +257,8 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
                     _updateIdv();
                   });
                 }),
-                _buildTextField(
-                  'idv',
-                  'IDV (₹)',
-                  'Auto calculated',enabled: false
-                ),
+                _buildTextField('idv', 'IDV (₹)', 'Auto calculated',
+                    enabled: false),
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),
                 _buildTextField(

@@ -3200,8 +3200,7 @@ class VehicleData {
           },
         }
       },
-// Honda
-
+      // Honda
       "Honda": {
         "2015": {
           "Activa 3G": {
@@ -54917,7 +54916,6 @@ class VehicleData {
               "seating": 1,
               "payloadKg": 500,
               "exShowroom": 235000
-              
             },
             "LPG": {
               "bodyType": "3-Wheeler Goods Carrier NGT",
@@ -58202,8 +58200,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "Sumo Gold":{
-            "Diesel":{
+          "Sumo Gold": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -58212,7 +58210,7 @@ class VehicleData {
             }
           },
           "Magic": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "Diesel",
@@ -58221,7 +58219,7 @@ class VehicleData {
             }
           },
           "Ace Zip": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 611,
               "fuelType": "Diesel",
@@ -58229,8 +58227,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "LPT 1613":{
-            "Diesel":{
+          "LPT 1613": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5675,
               "fuelType": "Diesel",
@@ -58249,15 +58247,15 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "Sumo Gold":{
-            "Diesel":{
+          "Sumo Gold": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 907838.5
             },
-            "EX BS-IV Diesel":{
+            "EX BS-IV Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -58266,14 +58264,14 @@ class VehicleData {
             }
           },
           "Magic": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 907838.5
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "CNG",
@@ -58282,7 +58280,7 @@ class VehicleData {
             }
           },
           "Ace Zip": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 611,
               "fuelType": "Diesel",
@@ -58290,8 +58288,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "LPT 1613":{
-            "Diesel":{
+          "LPT 1613": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5675,
               "fuelType": "Diesel",
@@ -58299,7 +58297,6 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-
         },
         "2017": {
           "Winger": {
@@ -58311,15 +58308,15 @@ class VehicleData {
               "exShowroom": 800000
             }
           },
-          "Sumo Gold":{
-            "Diesel":{
+          "Sumo Gold": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 626000
             },
-            "EX BS-IV Diesel":{
+            "EX BS-IV Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -58328,14 +58325,14 @@ class VehicleData {
             }
           },
           "Magic": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 440000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "CNG",
@@ -58344,7 +58341,7 @@ class VehicleData {
             }
           },
           "Ace Zip": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 611,
               "fuelType": "Diesel",
@@ -58352,8 +58349,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "LPT 1613":{
-            "Diesel":{
+          "LPT 1613": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5675,
               "fuelType": "Diesel",
@@ -58361,10 +58358,9 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-
         },
         "2018": {
-         "Winger": {
+          "Winger": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
@@ -58373,15 +58369,15 @@ class VehicleData {
               "exShowroom": 1205000
             }
           },
-          "Sumo Gold":{
-            "Diesel":{
+          "Sumo Gold": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 626000
             },
-            "EX BS-IV Diesel":{
+            "EX BS-IV Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -58390,14 +58386,14 @@ class VehicleData {
             }
           },
           "Magic": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 440000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "CNG",
@@ -58406,7 +58402,7 @@ class VehicleData {
             }
           },
           "Ace Zip": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 611,
               "fuelType": "Diesel",
@@ -58414,8 +58410,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "LPT 1613":{
-            "Diesel":{
+          "LPT 1613": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5675,
               "fuelType": "Diesel",
@@ -58423,7 +58419,6 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-
         },
         "2019": {
           "Winger": {
@@ -58434,7 +58429,7 @@ class VehicleData {
               "seating": 15,
               "exShowroom": 1205000
             },
-            "9 Seater":{
+            "9 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58456,15 +58451,15 @@ class VehicleData {
               "exShowroom": 1730000
             }
           },
-          "Sumo Gold":{
-            "Diesel":{
+          "Sumo Gold": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 626000
             },
-            "EX BS-IV Diesel":{
+            "EX BS-IV Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -58473,14 +58468,14 @@ class VehicleData {
             }
           },
           "Magic": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 440000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "CNG",
@@ -58489,7 +58484,7 @@ class VehicleData {
             }
           },
           "Ace Zip": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 611,
               "fuelType": "Diesel",
@@ -58497,8 +58492,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "LPT 1613":{
-            "Diesel":{
+          "LPT 1613": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5675,
               "fuelType": "Diesel",
@@ -58507,7 +58502,7 @@ class VehicleData {
             }
           },
           "Magic Express": {
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 694,
               "fuelType": "Petrol",
@@ -58515,8 +58510,6 @@ class VehicleData {
               "exShowroom": 500000
             }
           },
-
-
         },
         "2020": {
           "Winger": {
@@ -58527,7 +58520,7 @@ class VehicleData {
               "seating": 15,
               "exShowroom": 1730000
             },
-            "9 Seater":{
+            "9 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58548,7 +58541,7 @@ class VehicleData {
               "seating": 13,
               "exShowroom": 1730000
             },
-            "20 Seater":{
+            "20 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58556,15 +58549,15 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Sumo Gold":{
-            "Diesel":{
+          "Sumo Gold": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 626000
             },
-            "EX BS-IV Diesel":{
+            "EX BS-IV Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -58573,14 +58566,14 @@ class VehicleData {
             }
           },
           "Magic": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 440000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "CNG",
@@ -58589,7 +58582,7 @@ class VehicleData {
             }
           },
           "Ace Zip": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 611,
               "fuelType": "Diesel",
@@ -58597,8 +58590,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "LPT 1613":{
-            "Diesel":{
+          "LPT 1613": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5675,
               "fuelType": "Diesel",
@@ -58607,7 +58600,7 @@ class VehicleData {
             }
           },
           "Magic Express": {
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 694,
               "fuelType": "Petrol",
@@ -58615,7 +58608,6 @@ class VehicleData {
               "exShowroom": 500000
             }
           },
-
         },
         "2021": {
           "Winger": {
@@ -58626,7 +58618,7 @@ class VehicleData {
               "seating": 15,
               "exShowroom": 1250000
             },
-            "9 Seater":{
+            "9 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58647,7 +58639,7 @@ class VehicleData {
               "seating": 13,
               "exShowroom": 1730000
             },
-            "20 Seater":{
+            "20 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58655,15 +58647,15 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Sumo Gold":{
-            "Diesel":{
+          "Sumo Gold": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 626000
             },
-            "EX BS-IV Diesel":{
+            "EX BS-IV Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -58672,14 +58664,14 @@ class VehicleData {
             }
           },
           "Magic": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 440000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "CNG",
@@ -58688,7 +58680,7 @@ class VehicleData {
             }
           },
           "Ace Zip": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 611,
               "fuelType": "Diesel",
@@ -58696,8 +58688,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "LPT 1613":{
-            "Diesel":{
+          "LPT 1613": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5675,
               "fuelType": "Diesel",
@@ -58706,7 +58698,7 @@ class VehicleData {
             }
           },
           "Magic Express": {
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 694,
               "fuelType": "Petrol",
@@ -58714,8 +58706,8 @@ class VehicleData {
               "exShowroom": 637000
             }
           },
-          "Winger Cargo":{
-            "Diesel":{
+          "Winger Cargo": {
+            "Diesel": {
               "bodyType": "CARGO",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58724,7 +58716,7 @@ class VehicleData {
             }
           },
           "Starbus 4/12 Electric": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -58742,14 +58734,14 @@ class VehicleData {
               "seating": 15,
               "exShowroom": 1250000
             },
-            "9 Seater":{
+            "9 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
               "seating": 9,
               "exShowroom": 1500000
             },
-            "10 Seater":{
+            "10 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58770,7 +58762,7 @@ class VehicleData {
               "seating": 13,
               "exShowroom": 1730000
             },
-            "20 Seater":{
+            "20 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58778,15 +58770,15 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Sumo Gold":{
-            "Diesel":{
+          "Sumo Gold": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 626000
             },
-            "EX BS-IV Diesel":{
+            "EX BS-IV Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -58795,14 +58787,14 @@ class VehicleData {
             }
           },
           "Magic": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 440000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "CNG",
@@ -58811,7 +58803,7 @@ class VehicleData {
             }
           },
           "Ace Zip": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 611,
               "fuelType": "Diesel",
@@ -58819,8 +58811,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "LPT 1613":{
-            "Diesel":{
+          "LPT 1613": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5675,
               "fuelType": "Diesel",
@@ -58829,7 +58821,7 @@ class VehicleData {
             }
           },
           "Magic Express": {
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 694,
               "fuelType": "Petrol",
@@ -58837,8 +58829,8 @@ class VehicleData {
               "exShowroom": 637000
             }
           },
-          "Winger Cargo":{
-            "Diesel":{
+          "Winger Cargo": {
+            "Diesel": {
               "bodyType": "CARGO",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58847,7 +58839,7 @@ class VehicleData {
             }
           },
           "Starbus 4/12 Electric": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -58865,14 +58857,14 @@ class VehicleData {
               "seating": 15,
               "exShowroom": 1250000
             },
-            "9 Seater":{
+            "9 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
               "seating": 9,
               "exShowroom": 1500000
             },
-            "10 Seater":{
+            "10 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58893,7 +58885,7 @@ class VehicleData {
               "seating": 13,
               "exShowroom": 1730000
             },
-            "20 Seater":{
+            "20 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58901,15 +58893,15 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Sumo Gold":{
-            "Diesel":{
+          "Sumo Gold": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 626000
             },
-            "EX BS-IV Diesel":{
+            "EX BS-IV Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -58918,14 +58910,14 @@ class VehicleData {
             }
           },
           "Magic": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 440000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "CNG",
@@ -58934,7 +58926,7 @@ class VehicleData {
             }
           },
           "Ace Zip": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 611,
               "fuelType": "Diesel",
@@ -58942,8 +58934,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "LPT 1613":{
-            "Diesel":{
+          "LPT 1613": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5675,
               "fuelType": "Diesel",
@@ -58952,7 +58944,7 @@ class VehicleData {
             }
           },
           "Magic Express": {
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 694,
               "fuelType": "Petrol",
@@ -58960,8 +58952,8 @@ class VehicleData {
               "exShowroom": 637000
             }
           },
-          "Winger Cargo":{
-            "Diesel":{
+          "Winger Cargo": {
+            "Diesel": {
               "bodyType": "CARGO",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58970,7 +58962,7 @@ class VehicleData {
             }
           },
           "Starbus 4/12 Electric": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -58978,8 +58970,8 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Winger FL 3200 FR 13S AC":{
-            "Diesel":{
+          "Winger FL 3200 FR 13S AC": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -58997,14 +58989,14 @@ class VehicleData {
               "seating": 15,
               "exShowroom": 1799000
             },
-            "9 Seater":{
+            "9 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
               "seating": 9,
               "exShowroom": 1521000
             },
-            "10 Seater":{
+            "10 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -59025,31 +59017,30 @@ class VehicleData {
               "seating": 13,
               "exShowroom": 1730000
             },
-            "20 Seater":{
+            "20 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
               "seating": 20,
               "exShowroom": 1800000
             },
-            "12+D/13+D":{
-                "bodyType": "PASSENGER",
-                "cc": 694,
-                "fuelType": "Petrol",
-                "seating": 10,
-                "exShowroom": 734000
-               
+            "12+D/13+D": {
+              "bodyType": "PASSENGER",
+              "cc": 694,
+              "fuelType": "Petrol",
+              "seating": 10,
+              "exShowroom": 734000
             }
           },
-          "Sumo Gold":{
-            "Diesel":{
+          "Sumo Gold": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 626000
             },
-            "EX BS-IV Diesel":{
+            "EX BS-IV Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -59058,14 +59049,14 @@ class VehicleData {
             }
           },
           "Magic": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 440000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "CNG",
@@ -59074,7 +59065,7 @@ class VehicleData {
             }
           },
           "Ace Zip": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 611,
               "fuelType": "Diesel",
@@ -59082,8 +59073,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "LPT 1613":{
-            "Diesel":{
+          "LPT 1613": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5675,
               "fuelType": "Diesel",
@@ -59092,7 +59083,7 @@ class VehicleData {
             }
           },
           "Magic Express": {
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 694,
               "fuelType": "Petrol",
@@ -59100,8 +59091,8 @@ class VehicleData {
               "exShowroom": 637000
             }
           },
-          "Winger Cargo":{
-            "Diesel":{
+          "Winger Cargo": {
+            "Diesel": {
               "bodyType": "CARGO",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -59110,7 +59101,7 @@ class VehicleData {
             }
           },
           "Starbus 4/12 Electric": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59118,8 +59109,8 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Winger FL 3200 FR 13S AC":{
-            "Diesel":{
+          "Winger FL 3200 FR 13S AC": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -59127,8 +59118,8 @@ class VehicleData {
               "exShowroom": 1500000
             }
           },
-          "Magic Express CNG+ 2024":{
-            "CNG":{
+          "Magic Express CNG+ 2024": {
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "CNG",
@@ -59146,14 +59137,14 @@ class VehicleData {
               "seating": 15,
               "exShowroom": 1799000
             },
-            "9 Seater":{
+            "9 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
               "seating": 9,
               "exShowroom": 1521000
             },
-            "10 Seater":{
+            "10 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -59174,31 +59165,30 @@ class VehicleData {
               "seating": 13,
               "exShowroom": 1730000
             },
-            "20 Seater":{
+            "20 Seater": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
               "seating": 20,
               "exShowroom": 1800000
             },
-            "12+D/13+D":{
-                "bodyType": "PASSENGER",
-                "cc": 694,
-                "fuelType": "Petrol",
-                "seating": 10,
-                "exShowroom": 734000
-               
+            "12+D/13+D": {
+              "bodyType": "PASSENGER",
+              "cc": 694,
+              "fuelType": "Petrol",
+              "seating": 10,
+              "exShowroom": 734000
             }
           },
-          "Sumo Gold":{
-            "Diesel":{
+          "Sumo Gold": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 626000
             },
-            "EX BS-IV Diesel":{
+            "EX BS-IV Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -59207,14 +59197,14 @@ class VehicleData {
             }
           },
           "Magic": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 440000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 702,
               "fuelType": "CNG",
@@ -59223,7 +59213,7 @@ class VehicleData {
             }
           },
           "Ace Zip": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 611,
               "fuelType": "Diesel",
@@ -59231,8 +59221,8 @@ class VehicleData {
               "exShowroom": 907838.5
             }
           },
-          "LPT 1613":{
-            "Diesel":{
+          "LPT 1613": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5675,
               "fuelType": "Diesel",
@@ -59241,7 +59231,7 @@ class VehicleData {
             }
           },
           "Magic Express": {
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 694,
               "fuelType": "Petrol",
@@ -59249,8 +59239,8 @@ class VehicleData {
               "exShowroom": 637000
             }
           },
-          "Winger Cargo":{
-            "Diesel":{
+          "Winger Cargo": {
+            "Diesel": {
               "bodyType": "CARGO",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -59259,7 +59249,7 @@ class VehicleData {
             }
           },
           "Starbus 4/12 Electric": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59267,8 +59257,8 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Winger FL 3200 FR 13S AC":{
-            "Diesel":{
+          "Winger FL 3200 FR 13S AC": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2184,
               "fuelType": "Diesel",
@@ -59276,8 +59266,8 @@ class VehicleData {
               "exShowroom": 1500000
             }
           },
-          "Magic Express CNG+ 2024":{
-            "CNG":{
+          "Magic Express CNG+ 2024": {
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "CNG",
@@ -59286,8 +59276,7 @@ class VehicleData {
             }
           }
         },
-      }, 
-
+      },
       "Mahindra": {
         "2015": {
           "Jeeto": {
@@ -59310,8 +59299,8 @@ class VehicleData {
               "exShowroom": 235000
             }
           },
-          "e-Supro Van":{
-            "Passenger (2016 Launch)":{
+          "e-Supro Van": {
+            "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59330,8 +59319,8 @@ class VehicleData {
               "exShowroom": 235000
             }
           },
-          "e-Supro Van":{
-            "Passenger (2016 Launch)":{
+          "e-Supro Van": {
+            "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59339,7 +59328,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Jeeto Minivan":{
+          "Jeeto Minivan": {
             "BS-IV Diesel Semi-Hard Top (2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 625,
@@ -59348,29 +59337,29 @@ class VehicleData {
               "exShowroom": 345000
             }
           },
-          "Supro Minivan":{
-            "Base (BS-IV, 2017 Launch)":{
+          "Supro Minivan": {
+            "Base (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 471000
             },
-            "VX (BS-IV, 2017 Launch)":{
+            "VX (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 499000
             },
-            "CNG (BS-IV, 2017 Launch)":{
+            "CNG (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "CNG",
               "seating": 8,
               "exShowroom": 490000
             },
-            "School Van (BS-IV, 2017 Launch)":{
+            "School Van (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
@@ -59389,8 +59378,8 @@ class VehicleData {
               "exShowroom": 235000
             }
           },
-          "e-Supro Van":{
-            "Passenger (2016 Launch)":{
+          "e-Supro Van": {
+            "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59398,7 +59387,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Jeeto Minivan":{
+          "Jeeto Minivan": {
             "BS-IV Diesel Semi-Hard Top (2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 625,
@@ -59406,7 +59395,7 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 345000
             },
-            "CNG Variant (2018 Continuation)":{
+            "CNG Variant (2018 Continuation)": {
               "bodyType": "PASSENGER",
               "cc": 625,
               "fuelType": "CNG",
@@ -59414,29 +59403,29 @@ class VehicleData {
               "exShowroom": 350000
             }
           },
-          "Supro Minivan":{
-            "Base (BS-IV, 2017 Launch)":{
+          "Supro Minivan": {
+            "Base (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 471000
             },
-            "VX (BS-IV, 2017 Launch)":{
+            "VX (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 499000
             },
-            "CNG (BS-IV, 2017 Launch)":{
+            "CNG (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "CNG",
               "seating": 8,
               "exShowroom": 490000
             },
-            "School Van (BS-IV, 2017 Launch)":{
+            "School Van (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
@@ -59444,7 +59433,6 @@ class VehicleData {
               "exShowroom": 499000
             }
           },
-
         },
         "2019": {
           "Jeeto": {
@@ -59456,8 +59444,8 @@ class VehicleData {
               "exShowroom": 235000
             }
           },
-          "e-Supro Van":{
-            "Passenger (2016 Launch)":{
+          "e-Supro Van": {
+            "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59465,7 +59453,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Jeeto Minivan":{
+          "Jeeto Minivan": {
             "BS-IV Diesel Semi-Hard Top (2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 625,
@@ -59473,7 +59461,7 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 345000
             },
-            "CNG Variant (2018 Continuation)":{
+            "CNG Variant (2018 Continuation)": {
               "bodyType": "PASSENGER",
               "cc": 625,
               "fuelType": "CNG",
@@ -59481,29 +59469,29 @@ class VehicleData {
               "exShowroom": 350000
             }
           },
-          "Supro Minivan":{
-            "Base (BS-IV, 2017 Launch)":{
+          "Supro Minivan": {
+            "Base (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 471000
             },
-            "VX (BS-IV, 2017 Launch)":{
+            "VX (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 499000
             },
-            "CNG (BS-IV, 2017 Launch)":{
+            "CNG (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "CNG",
               "seating": 8,
               "exShowroom": 490000
             },
-            "School Van (BS-IV, 2017 Launch)":{
+            "School Van (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
@@ -59511,12 +59499,12 @@ class VehicleData {
               "exShowroom": 499000
             }
           },
-          "Cruzio Bus":{
-            "LPO Passenger Bus (2019 Launch)":{
+          "Cruzio Bus": {
+            "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000  // update afterwards
+              "exShowroom": 1200000 // update afterwards
             }
           },
         },
@@ -59530,8 +59518,8 @@ class VehicleData {
               "exShowroom": 235000
             }
           },
-          "e-Supro Van":{
-            "Passenger (2016 Launch)":{
+          "e-Supro Van": {
+            "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59539,7 +59527,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Jeeto Minivan":{
+          "Jeeto Minivan": {
             "BS-IV Diesel Semi-Hard Top (2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 625,
@@ -59547,7 +59535,7 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 345000
             },
-            "CNG Variant (2018 Continuation)":{
+            "CNG Variant (2018 Continuation)": {
               "bodyType": "PASSENGER",
               "cc": 625,
               "fuelType": "CNG",
@@ -59555,29 +59543,29 @@ class VehicleData {
               "exShowroom": 350000
             }
           },
-          "Supro Minivan":{
-            "Base (BS-IV, 2017 Launch)":{
+          "Supro Minivan": {
+            "Base (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 471000
             },
-            "VX (BS-IV, 2017 Launch)":{
+            "VX (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 499000
             },
-            "CNG (BS-IV, 2017 Launch)":{
+            "CNG (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "CNG",
               "seating": 8,
               "exShowroom": 490000
             },
-            "School Van (BS-IV, 2017 Launch)":{
+            "School Van (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
@@ -59585,12 +59573,12 @@ class VehicleData {
               "exShowroom": 499000
             }
           },
-          "Cruzio Bus":{
-            "LPO Passenger Bus (2019 Launch)":{
+          "Cruzio Bus": {
+            "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000  // update afterwards
+              "exShowroom": 1200000 // update afterwards
             }
           },
         },
@@ -59604,8 +59592,8 @@ class VehicleData {
               "exShowroom": 235000
             }
           },
-          "e-Supro Van":{
-            "Passenger (2016 Launch)":{
+          "e-Supro Van": {
+            "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59613,7 +59601,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Jeeto Minivan":{
+          "Jeeto Minivan": {
             "BS-IV Diesel Semi-Hard Top (2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 625,
@@ -59621,7 +59609,7 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 345000
             },
-            "CNG Variant (2018 Continuation)":{
+            "CNG Variant (2018 Continuation)": {
               "bodyType": "PASSENGER",
               "cc": 625,
               "fuelType": "CNG",
@@ -59629,29 +59617,29 @@ class VehicleData {
               "exShowroom": 350000
             }
           },
-          "Supro Minivan":{
-            "Base (BS-IV, 2017 Launch)":{
+          "Supro Minivan": {
+            "Base (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 471000
             },
-            "VX (BS-IV, 2017 Launch)":{
+            "VX (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 499000
             },
-            "CNG (BS-IV, 2017 Launch)":{
+            "CNG (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "CNG",
               "seating": 8,
               "exShowroom": 490000
             },
-            "School Van (BS-IV, 2017 Launch)":{
+            "School Van (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
@@ -59659,12 +59647,12 @@ class VehicleData {
               "exShowroom": 499000
             }
           },
-          "Cruzio Bus":{
-            "LPO Passenger Bus (2019 Launch)":{
+          "Cruzio Bus": {
+            "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000  // update afterwards
+              "exShowroom": 1200000 // update afterwards
             }
           },
         },
@@ -59678,8 +59666,8 @@ class VehicleData {
               "exShowroom": 235000
             }
           },
-          "e-Supro Van":{
-            "Passenger (2016 Launch)":{
+          "e-Supro Van": {
+            "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59687,7 +59675,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Jeeto Minivan":{
+          "Jeeto Minivan": {
             "BS-IV Diesel Semi-Hard Top (2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 625,
@@ -59695,7 +59683,7 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 345000
             },
-            "CNG Variant (2018 Continuation)":{
+            "CNG Variant (2018 Continuation)": {
               "bodyType": "PASSENGER",
               "cc": 625,
               "fuelType": "CNG",
@@ -59703,29 +59691,29 @@ class VehicleData {
               "exShowroom": 350000
             }
           },
-          "Supro Minivan":{
-            "Base (BS-IV, 2017 Launch)":{
+          "Supro Minivan": {
+            "Base (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 471000
             },
-            "VX (BS-IV, 2017 Launch)":{
+            "VX (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 499000
             },
-            "CNG (BS-IV, 2017 Launch)":{
+            "CNG (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "CNG",
               "seating": 8,
               "exShowroom": 490000
             },
-            "School Van (BS-IV, 2017 Launch)":{
+            "School Van (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
@@ -59733,16 +59721,16 @@ class VehicleData {
               "exShowroom": 499000
             }
           },
-          "Cruzio Bus":{
-            "LPO Passenger Bus (2019 Launch)":{
+          "Cruzio Bus": {
+            "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000  // update afterwards
+              "exShowroom": 1200000 // update afterwards
             }
           },
-          "Jeeto Plus CNG “CharSau”":{
-            "2022 Launch":{
+          "Jeeto Plus CNG “CharSau”": {
+            "2022 Launch": {
               "bodyType": "COMMERCIAL",
               "fuelType": "CNG",
               "payloadKg": 650,
@@ -59760,8 +59748,8 @@ class VehicleData {
               "exShowroom": 235000
             }
           },
-          "e-Supro Van":{
-            "Passenger (2016 Launch)":{
+          "e-Supro Van": {
+            "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59769,7 +59757,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Jeeto Minivan":{
+          "Jeeto Minivan": {
             "BS-IV Diesel Semi-Hard Top (2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 625,
@@ -59777,7 +59765,7 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 345000
             },
-            "CNG Variant (2018 Continuation)":{
+            "CNG Variant (2018 Continuation)": {
               "bodyType": "PASSENGER",
               "cc": 625,
               "fuelType": "CNG",
@@ -59785,29 +59773,29 @@ class VehicleData {
               "exShowroom": 350000
             }
           },
-          "Supro Minivan":{
-            "Base (BS-IV, 2017 Launch)":{
+          "Supro Minivan": {
+            "Base (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 471000
             },
-            "VX (BS-IV, 2017 Launch)":{
+            "VX (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 499000
             },
-            "CNG (BS-IV, 2017 Launch)":{
+            "CNG (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "CNG",
               "seating": 8,
               "exShowroom": 490000
             },
-            "School Van (BS-IV, 2017 Launch)":{
+            "School Van (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
@@ -59815,12 +59803,12 @@ class VehicleData {
               "exShowroom": 499000
             }
           },
-          "Cruzio Bus":{
-            "LPO Passenger Bus (2019 Launch)":{
+          "Cruzio Bus": {
+            "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000  // update afterwards
+              "exShowroom": 1200000 // update afterwards
             }
           },
         },
@@ -59834,8 +59822,8 @@ class VehicleData {
               "exShowroom": 235000
             }
           },
-          "e-Supro Van":{
-            "Passenger (2016 Launch)":{
+          "e-Supro Van": {
+            "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59843,7 +59831,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Jeeto Minivan":{
+          "Jeeto Minivan": {
             "BS-IV Diesel Semi-Hard Top (2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 625,
@@ -59851,7 +59839,7 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 345000
             },
-            "CNG Variant (2018 Continuation)":{
+            "CNG Variant (2018 Continuation)": {
               "bodyType": "PASSENGER",
               "cc": 625,
               "fuelType": "CNG",
@@ -59859,29 +59847,29 @@ class VehicleData {
               "exShowroom": 350000
             }
           },
-          "Supro Minivan":{
-            "Base (BS-IV, 2017 Launch)":{
+          "Supro Minivan": {
+            "Base (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 471000
             },
-            "VX (BS-IV, 2017 Launch)":{
+            "VX (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 499000
             },
-            "CNG (BS-IV, 2017 Launch)":{
+            "CNG (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "CNG",
               "seating": 8,
               "exShowroom": 490000
             },
-            "School Van (BS-IV, 2017 Launch)":{
+            "School Van (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
@@ -59889,24 +59877,24 @@ class VehicleData {
               "exShowroom": 499000
             }
           },
-          "Cruzio Bus":{
-            "LPO Passenger Bus (2019 Launch)":{
+          "Cruzio Bus": {
+            "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000  // update afterwards
+              "exShowroom": 1200000 // update afterwards
             }
           },
-          "Jeeto Plus CNG “CharSau”":{
-            "2022 Launch":{
+          "Jeeto Plus CNG “CharSau”": {
+            "2022 Launch": {
               "bodyType": "COMMERCIAL",
               "fuelType": "CNG",
               "payloadKg": 650,
               "exShowroom": 526000
             }
           },
-          "Supro CNG Duo":{
-            "Dual-Fuel Small Commercial Vehicle (2023 Launch)":{
+          "Supro CNG Duo": {
+            "Dual-Fuel Small Commercial Vehicle (2023 Launch)": {
               "bodyType": "COMMERCIAL",
               "fuelType": "CNG/Petrol",
               "payloadKg": 750,
@@ -59935,8 +59923,8 @@ class VehicleData {
               "exShowroom": 235000
             }
           },
-          "e-Supro Van":{
-            "Passenger (2016 Launch)":{
+          "e-Supro Van": {
+            "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -59944,7 +59932,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Jeeto Minivan":{
+          "Jeeto Minivan": {
             "BS-IV Diesel Semi-Hard Top (2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 625,
@@ -59952,7 +59940,7 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 345000
             },
-            "CNG Variant (2018 Continuation)":{
+            "CNG Variant (2018 Continuation)": {
               "bodyType": "PASSENGER",
               "cc": 625,
               "fuelType": "CNG",
@@ -59960,29 +59948,29 @@ class VehicleData {
               "exShowroom": 350000
             }
           },
-          "Supro Minivan":{
-            "Base (BS-IV, 2017 Launch)":{
+          "Supro Minivan": {
+            "Base (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 471000
             },
-            "VX (BS-IV, 2017 Launch)":{
+            "VX (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 499000
             },
-            "CNG (BS-IV, 2017 Launch)":{
+            "CNG (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "CNG",
               "seating": 8,
               "exShowroom": 490000
             },
-            "School Van (BS-IV, 2017 Launch)":{
+            "School Van (BS-IV, 2017 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 909,
               "fuelType": "Diesel",
@@ -59990,24 +59978,24 @@ class VehicleData {
               "exShowroom": 499000
             }
           },
-          "Cruzio Bus":{
-            "LPO Passenger Bus (2019 Launch)":{
+          "Cruzio Bus": {
+            "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000  // update afterwards
+              "exShowroom": 1200000 // update afterwards
             }
           },
-          "Jeeto Plus CNG “CharSau”":{
-            "2022 Launch":{
+          "Jeeto Plus CNG “CharSau”": {
+            "2022 Launch": {
               "bodyType": "COMMERCIAL",
               "fuelType": "CNG",
               "payloadKg": 650,
               "exShowroom": 526000
             }
           },
-          "Supro CNG Duo":{
-            "Dual-Fuel Small Commercial Vehicle (2023 Launch)":{
+          "Supro CNG Duo": {
+            "Dual-Fuel Small Commercial Vehicle (2023 Launch)": {
               "bodyType": "COMMERCIAL",
               "fuelType": "CNG/Petrol",
               "payloadKg": 750,
@@ -60015,19 +60003,18 @@ class VehicleData {
             }
           },
         }
-      
       },
-      "Ashok Leyland":{
-        "2016":{
-          "Sunshine School Bus":{
-            "32 Seater (2016 Launch)":{
+      "Ashok Leyland": {
+        "2016": {
+          "Sunshine School Bus": {
+            "32 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
               "seating": 32,
               "exShowroom": 2660000
             },
-            "39 Seater (2016 Launch)":{
+            "39 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
@@ -60035,8 +60022,8 @@ class VehicleData {
               "exShowroom": 2720000
             }
           },
-          "Hybus Hybrid Bus":{
-            "Urban Hybrid (2016 Showcase)":{
+          "Hybus Hybrid Bus": {
+            "Urban Hybrid (2016 Showcase)": {
               "bodyType": "PASSENGER",
               "cc": 1496,
               "fuelType": "Diesel-Hybrid",
@@ -60045,16 +60032,16 @@ class VehicleData {
             }
           },
         },
-        "2017":{
-          "Sunshine School Bus":{
-            "32 Seater (2016 Launch)":{
+        "2017": {
+          "Sunshine School Bus": {
+            "32 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
               "seating": 32,
               "exShowroom": 2660000
             },
-            "39 Seater (2016 Launch)":{
+            "39 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
@@ -60062,8 +60049,8 @@ class VehicleData {
               "exShowroom": 2720000
             }
           },
-          "Hybus Hybrid Bus":{
-            "Urban Hybrid (2016 Showcase)":{
+          "Hybus Hybrid Bus": {
+            "Urban Hybrid (2016 Showcase)": {
               "bodyType": "PASSENGER",
               "cc": 1496,
               "fuelType": "Diesel-Hybrid",
@@ -60071,8 +60058,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "1616 IL (2017 Launch)":{
-            "Diesel":{
+          "1616 IL (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60080,8 +60067,8 @@ class VehicleData {
               "exShowroom": 1470000
             }
           },
-          "1618 (2017 Launch)":{
-            "Diesel":{
+          "1618 (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60089,8 +60076,8 @@ class VehicleData {
               "exShowroom": 2561000
             }
           },
-          "1613 Base (2017 Launch)":{
-            "Diesel":{
+          "1613 Base (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60099,16 +60086,16 @@ class VehicleData {
             }
           },
         },
-        "2018":{
-          "Sunshine School Bus":{
-            "32 Seater (2016 Launch)":{
+        "2018": {
+          "Sunshine School Bus": {
+            "32 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
               "seating": 32,
               "exShowroom": 2660000
             },
-            "39 Seater (2016 Launch)":{
+            "39 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
@@ -60116,8 +60103,8 @@ class VehicleData {
               "exShowroom": 2720000
             }
           },
-          "Hybus Hybrid Bus":{
-            "Urban Hybrid (2016 Showcase)":{
+          "Hybus Hybrid Bus": {
+            "Urban Hybrid (2016 Showcase)": {
               "bodyType": "PASSENGER",
               "cc": 1496,
               "fuelType": "Diesel-Hybrid",
@@ -60125,8 +60112,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "1616 IL (2017 Launch)":{
-            "Diesel":{
+          "1616 IL (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60134,8 +60121,8 @@ class VehicleData {
               "exShowroom": 1470000
             }
           },
-          "1618 (2017 Launch)":{
-            "Diesel":{
+          "1618 (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60143,8 +60130,8 @@ class VehicleData {
               "exShowroom": 2561000
             }
           },
-          "1613 Base (2017 Launch)":{
-            "Diesel":{
+          "1613 Base (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60152,8 +60139,8 @@ class VehicleData {
               "exShowroom": 1630000
             }
           },
-          "2518 HD (2018 Launch)":{
-            "Diesel":{
+          "2518 HD (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60161,8 +60148,8 @@ class VehicleData {
               "exShowroom": 2450000
             }
           },
-          "1618 XL C BS-IV (2018 Launch)":{
-            "Diesel":{
+          "1618 XL C BS-IV (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60171,16 +60158,16 @@ class VehicleData {
             }
           },
         },
-        "2019":{
-          "Sunshine School Bus":{
-            "32 Seater (2016 Launch)":{
+        "2019": {
+          "Sunshine School Bus": {
+            "32 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
               "seating": 32,
               "exShowroom": 2660000
             },
-            "39 Seater (2016 Launch)":{
+            "39 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
@@ -60188,8 +60175,8 @@ class VehicleData {
               "exShowroom": 2720000
             }
           },
-          "Hybus Hybrid Bus":{
-            "Urban Hybrid (2016 Showcase)":{
+          "Hybus Hybrid Bus": {
+            "Urban Hybrid (2016 Showcase)": {
               "bodyType": "PASSENGER",
               "cc": 1496,
               "fuelType": "Diesel-Hybrid",
@@ -60197,8 +60184,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "1616 IL (2017 Launch)":{
-            "Diesel":{
+          "1616 IL (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60206,8 +60193,8 @@ class VehicleData {
               "exShowroom": 1470000
             }
           },
-          "1618 (2017 Launch)":{
-            "Diesel":{
+          "1618 (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60215,8 +60202,8 @@ class VehicleData {
               "exShowroom": 2561000
             }
           },
-          "1613 Base (2017 Launch)":{
-            "Diesel":{
+          "1613 Base (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60224,8 +60211,8 @@ class VehicleData {
               "exShowroom": 1630000
             }
           },
-          "2518 HD (2018 Launch)":{
-            "Diesel":{
+          "2518 HD (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60233,8 +60220,8 @@ class VehicleData {
               "exShowroom": 2450000
             }
           },
-          "1618 XL C BS-IV (2018 Launch)":{
-            "Diesel":{
+          "1618 XL C BS-IV (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60243,7 +60230,7 @@ class VehicleData {
             }
           },
           "4019 (2019 Launch)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60252,16 +60239,16 @@ class VehicleData {
             }
           }
         },
-        "2020":{
-          "Sunshine School Bus":{
-            "32 Seater (2016 Launch)":{
+        "2020": {
+          "Sunshine School Bus": {
+            "32 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
               "seating": 32,
               "exShowroom": 2660000
             },
-            "39 Seater (2016 Launch)":{
+            "39 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
@@ -60269,8 +60256,8 @@ class VehicleData {
               "exShowroom": 2720000
             }
           },
-          "Hybus Hybrid Bus":{
-            "Urban Hybrid (2016 Showcase)":{
+          "Hybus Hybrid Bus": {
+            "Urban Hybrid (2016 Showcase)": {
               "bodyType": "PASSENGER",
               "cc": 1496,
               "fuelType": "Diesel-Hybrid",
@@ -60278,8 +60265,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "1616 IL (2017 Launch)":{
-            "Diesel":{
+          "1616 IL (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60287,8 +60274,8 @@ class VehicleData {
               "exShowroom": 1470000
             }
           },
-          "1618 (2017 Launch)":{
-            "Diesel":{
+          "1618 (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60296,8 +60283,8 @@ class VehicleData {
               "exShowroom": 2561000
             }
           },
-          "1613 Base (2017 Launch)":{
-            "Diesel":{
+          "1613 Base (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60305,8 +60292,8 @@ class VehicleData {
               "exShowroom": 1630000
             }
           },
-          "2518 HD (2018 Launch)":{
-            "Diesel":{
+          "2518 HD (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60314,8 +60301,8 @@ class VehicleData {
               "exShowroom": 2450000
             }
           },
-          "1618 XL C BS-IV (2018 Launch)":{
-            "Diesel":{
+          "1618 XL C BS-IV (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60324,7 +60311,7 @@ class VehicleData {
             }
           },
           "4019 (2019 Launch)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60332,107 +60319,8 @@ class VehicleData {
               "exShowroom": 2796000
             }
           },
-          "1920 4x2 Series (2020 Launch)":{
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2392000
-            } 
-          },
-        },
-        "2021":{
-          "Sunshine School Bus":{
-            "32 Seater (2016 Launch)":{
-              "bodyType": "PASSENGER",
-              "cc": 3839,
-              "fuelType": "Diesel",
-              "seating": 32,
-              "exShowroom": 2660000
-            },
-            "39 Seater (2016 Launch)":{
-              "bodyType": "PASSENGER",
-              "cc": 3839,
-              "fuelType": "Diesel",
-              "seating": 39,
-              "exShowroom": 2720000
-            }
-          },
-          "Hybus Hybrid Bus":{
-            "Urban Hybrid (2016 Showcase)":{
-              "bodyType": "PASSENGER",
-              "cc": 1496,
-              "fuelType": "Diesel-Hybrid",
-              "seating": 35,
-              "exShowroom": 3500000
-            }
-          },
-          "1616 IL (2017 Launch)":{
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1470000
-            }
-          },
-          "1618 (2017 Launch)":{
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2561000
-            }
-          },
-          "1613 Base (2017 Launch)":{
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1630000
-            }
-          },
-          "2518 HD (2018 Launch)":{
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2450000
-            }
-          },
-          "1618 XL C BS-IV (2018 Launch)":{
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2561000
-            }
-          },
-          "4019 (2019 Launch)": {
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2796000
-            }
-          },
-          "1920 4x2 Series (2020 Launch)":{
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2392000
-            } 
-          },
-          "1920 4x2 Series (2021 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2020 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60441,16 +60329,16 @@ class VehicleData {
             }
           },
         },
-        "2022":{
-          "Sunshine School Bus":{
-            "32 Seater (2016 Launch)":{
+        "2021": {
+          "Sunshine School Bus": {
+            "32 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
               "seating": 32,
               "exShowroom": 2660000
             },
-            "39 Seater (2016 Launch)":{
+            "39 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
@@ -60458,8 +60346,8 @@ class VehicleData {
               "exShowroom": 2720000
             }
           },
-          "Hybus Hybrid Bus":{
-            "Urban Hybrid (2016 Showcase)":{
+          "Hybus Hybrid Bus": {
+            "Urban Hybrid (2016 Showcase)": {
               "bodyType": "PASSENGER",
               "cc": 1496,
               "fuelType": "Diesel-Hybrid",
@@ -60467,8 +60355,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "1616 IL (2017 Launch)":{
-            "Diesel":{
+          "1616 IL (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60476,8 +60364,8 @@ class VehicleData {
               "exShowroom": 1470000
             }
           },
-          "1618 (2017 Launch)":{
-            "Diesel":{
+          "1618 (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60485,8 +60373,8 @@ class VehicleData {
               "exShowroom": 2561000
             }
           },
-          "1613 Base (2017 Launch)":{
-            "Diesel":{
+          "1613 Base (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60494,8 +60382,8 @@ class VehicleData {
               "exShowroom": 1630000
             }
           },
-          "2518 HD (2018 Launch)":{
-            "Diesel":{
+          "2518 HD (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60503,8 +60391,8 @@ class VehicleData {
               "exShowroom": 2450000
             }
           },
-          "1618 XL C BS-IV (2018 Launch)":{
-            "Diesel":{
+          "1618 XL C BS-IV (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60513,7 +60401,7 @@ class VehicleData {
             }
           },
           "4019 (2019 Launch)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60521,17 +60409,8 @@ class VehicleData {
               "exShowroom": 2796000
             }
           },
-          "1920 4x2 Series (2020 Launch)":{
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2392000
-            } 
-          },
-          "1920 4x2 Series (2021 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2020 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60539,8 +60418,116 @@ class VehicleData {
               "exShowroom": 2392000
             }
           },
-          "1920 4x2 Series (2022 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2021 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2392000
+            }
+          },
+        },
+        "2022": {
+          "Sunshine School Bus": {
+            "32 Seater (2016 Launch)": {
+              "bodyType": "PASSENGER",
+              "cc": 3839,
+              "fuelType": "Diesel",
+              "seating": 32,
+              "exShowroom": 2660000
+            },
+            "39 Seater (2016 Launch)": {
+              "bodyType": "PASSENGER",
+              "cc": 3839,
+              "fuelType": "Diesel",
+              "seating": 39,
+              "exShowroom": 2720000
+            }
+          },
+          "Hybus Hybrid Bus": {
+            "Urban Hybrid (2016 Showcase)": {
+              "bodyType": "PASSENGER",
+              "cc": 1496,
+              "fuelType": "Diesel-Hybrid",
+              "seating": 35,
+              "exShowroom": 3500000
+            }
+          },
+          "1616 IL (2017 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 1470000
+            }
+          },
+          "1618 (2017 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2561000
+            }
+          },
+          "1613 Base (2017 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 1630000
+            }
+          },
+          "2518 HD (2018 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2450000
+            }
+          },
+          "1618 XL C BS-IV (2018 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2561000
+            }
+          },
+          "4019 (2019 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2796000
+            }
+          },
+          "1920 4x2 Series (2020 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2392000
+            }
+          },
+          "1920 4x2 Series (2021 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2392000
+            }
+          },
+          "1920 4x2 Series (2022 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60549,16 +60536,16 @@ class VehicleData {
             }
           },
         },
-        "2023":{
-          "Sunshine School Bus":{
-            "32 Seater (2016 Launch)":{
+        "2023": {
+          "Sunshine School Bus": {
+            "32 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
               "seating": 32,
               "exShowroom": 2660000
             },
-            "39 Seater (2016 Launch)":{
+            "39 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
@@ -60566,8 +60553,8 @@ class VehicleData {
               "exShowroom": 2720000
             }
           },
-          "Hybus Hybrid Bus":{
-            "Urban Hybrid (2016 Showcase)":{
+          "Hybus Hybrid Bus": {
+            "Urban Hybrid (2016 Showcase)": {
               "bodyType": "PASSENGER",
               "cc": 1496,
               "fuelType": "Diesel-Hybrid",
@@ -60575,8 +60562,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "1616 IL (2017 Launch)":{
-            "Diesel":{
+          "1616 IL (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60584,8 +60571,8 @@ class VehicleData {
               "exShowroom": 1470000
             }
           },
-          "1618 (2017 Launch)":{
-            "Diesel":{
+          "1618 (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60593,8 +60580,8 @@ class VehicleData {
               "exShowroom": 2561000
             }
           },
-          "1613 Base (2017 Launch)":{
-            "Diesel":{
+          "1613 Base (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60602,8 +60589,8 @@ class VehicleData {
               "exShowroom": 1630000
             }
           },
-          "2518 HD (2018 Launch)":{
-            "Diesel":{
+          "2518 HD (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60611,8 +60598,8 @@ class VehicleData {
               "exShowroom": 2450000
             }
           },
-          "1618 XL C BS-IV (2018 Launch)":{
-            "Diesel":{
+          "1618 XL C BS-IV (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60621,7 +60608,7 @@ class VehicleData {
             }
           },
           "4019 (2019 Launch)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60629,17 +60616,8 @@ class VehicleData {
               "exShowroom": 2796000
             }
           },
-          "1920 4x2 Series (2020 Launch)":{
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2392000
-            } 
-          },
-          "1920 4x2 Series (2021 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2020 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60647,8 +60625,17 @@ class VehicleData {
               "exShowroom": 2392000
             }
           },
-          "1920 4x2 Series (2022 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2021 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2392000
+            }
+          },
+          "1920 4x2 Series (2022 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60656,8 +60643,8 @@ class VehicleData {
               "exShowroom": 2407000
             }
           },
-          "1920 4x2 Series (2023 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2023 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60666,16 +60653,16 @@ class VehicleData {
             }
           },
         },
-        "2024":{
-          "Sunshine School Bus":{
-            "32 Seater (2016 Launch)":{
+        "2024": {
+          "Sunshine School Bus": {
+            "32 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
               "seating": 32,
               "exShowroom": 2660000
             },
-            "39 Seater (2016 Launch)":{
+            "39 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
@@ -60683,8 +60670,8 @@ class VehicleData {
               "exShowroom": 2720000
             }
           },
-          "Hybus Hybrid Bus":{
-            "Urban Hybrid (2016 Showcase)":{
+          "Hybus Hybrid Bus": {
+            "Urban Hybrid (2016 Showcase)": {
               "bodyType": "PASSENGER",
               "cc": 1496,
               "fuelType": "Diesel-Hybrid",
@@ -60692,8 +60679,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "1616 IL (2017 Launch)":{
-            "Diesel":{
+          "1616 IL (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60701,8 +60688,8 @@ class VehicleData {
               "exShowroom": 1470000
             }
           },
-          "1618 (2017 Launch)":{
-            "Diesel":{
+          "1618 (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60710,8 +60697,8 @@ class VehicleData {
               "exShowroom": 2561000
             }
           },
-          "1613 Base (2017 Launch)":{
-            "Diesel":{
+          "1613 Base (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60719,8 +60706,8 @@ class VehicleData {
               "exShowroom": 1630000
             }
           },
-          "2518 HD (2018 Launch)":{
-            "Diesel":{
+          "2518 HD (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60728,8 +60715,8 @@ class VehicleData {
               "exShowroom": 2450000
             }
           },
-          "1618 XL C BS-IV (2018 Launch)":{
-            "Diesel":{
+          "1618 XL C BS-IV (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60738,7 +60725,7 @@ class VehicleData {
             }
           },
           "4019 (2019 Launch)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60746,17 +60733,8 @@ class VehicleData {
               "exShowroom": 2796000
             }
           },
-          "1920 4x2 Series (2020 Launch)":{
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2392000
-            } 
-          },
-          "1920 4x2 Series (2021 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2020 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60764,8 +60742,17 @@ class VehicleData {
               "exShowroom": 2392000
             }
           },
-          "1920 4x2 Series (2022 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2021 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2392000
+            }
+          },
+          "1920 4x2 Series (2022 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60773,8 +60760,8 @@ class VehicleData {
               "exShowroom": 2407000
             }
           },
-          "1920 4x2 Series (2023 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2023 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60782,8 +60769,8 @@ class VehicleData {
               "exShowroom": 2488000
             }
           },
-          "1920 4x2 Series (2024 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2024 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60792,16 +60779,16 @@ class VehicleData {
             }
           },
         },
-        "2025":{
-          "Sunshine School Bus":{
-            "32 Seater (2016 Launch)":{
+        "2025": {
+          "Sunshine School Bus": {
+            "32 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
               "seating": 32,
               "exShowroom": 2660000
             },
-            "39 Seater (2016 Launch)":{
+            "39 Seater (2016 Launch)": {
               "bodyType": "PASSENGER",
               "cc": 3839,
               "fuelType": "Diesel",
@@ -60809,8 +60796,8 @@ class VehicleData {
               "exShowroom": 2720000
             }
           },
-          "Hybus Hybrid Bus":{
-            "Urban Hybrid (2016 Showcase)":{
+          "Hybus Hybrid Bus": {
+            "Urban Hybrid (2016 Showcase)": {
               "bodyType": "PASSENGER",
               "cc": 1496,
               "fuelType": "Diesel-Hybrid",
@@ -60818,8 +60805,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "1616 IL (2017 Launch)":{
-            "Diesel":{
+          "1616 IL (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60827,8 +60814,8 @@ class VehicleData {
               "exShowroom": 1470000
             }
           },
-          "1618 (2017 Launch)":{
-            "Diesel":{
+          "1618 (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60836,8 +60823,8 @@ class VehicleData {
               "exShowroom": 2561000
             }
           },
-          "1613 Base (2017 Launch)":{
-            "Diesel":{
+          "1613 Base (2017 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60845,8 +60832,8 @@ class VehicleData {
               "exShowroom": 1630000
             }
           },
-          "2518 HD (2018 Launch)":{
-            "Diesel":{
+          "2518 HD (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60854,8 +60841,8 @@ class VehicleData {
               "exShowroom": 2450000
             }
           },
-          "1618 XL C BS-IV (2018 Launch)":{
-            "Diesel":{
+          "1618 XL C BS-IV (2018 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60864,7 +60851,7 @@ class VehicleData {
             }
           },
           "4019 (2019 Launch)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60872,17 +60859,8 @@ class VehicleData {
               "exShowroom": 2796000
             }
           },
-          "1920 4x2 Series (2020 Launch)":{
-            "Diesel":{
-              "bodyType": "PASSENGER/Commercial",
-              "cc": 5660,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2392000
-            } 
-          },
-          "1920 4x2 Series (2021 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2020 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60890,8 +60868,17 @@ class VehicleData {
               "exShowroom": 2392000
             }
           },
-          "1920 4x2 Series (2022 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2021 Launch)": {
+            "Diesel": {
+              "bodyType": "PASSENGER/Commercial",
+              "cc": 5660,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2392000
+            }
+          },
+          "1920 4x2 Series (2022 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60899,8 +60886,8 @@ class VehicleData {
               "exShowroom": 2407000
             }
           },
-          "1920 4x2 Series (2023 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2023 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60908,8 +60895,8 @@ class VehicleData {
               "exShowroom": 2488000
             }
           },
-          "1920 4x2 Series (2024 Launch)":{
-            "Diesel":{
+          "1920 4x2 Series (2024 Launch)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60917,8 +60904,8 @@ class VehicleData {
               "exShowroom": 2437000
             }
           },
-          "1920 4x2 Series (2025)":{
-            "Diesel":{
+          "1920 4x2 Series (2025)": {
+            "Diesel": {
               "bodyType": "PASSENGER/Commercial",
               "cc": 5660,
               "fuelType": "Diesel",
@@ -60928,10 +60915,10 @@ class VehicleData {
           }
         },
       },
-      "EKA Mobility":{
-        "2022":{
-          "E9 Electric Bus (2022 Launch)":{
-            "Electric":{
+      "EKA Mobility": {
+        "2022": {
+          "E9 Electric Bus (2022 Launch)": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -60940,9 +60927,9 @@ class VehicleData {
             }
           }
         },
-        "2023":{
-          "E9 Electric Bus (2022 Launch)":{
-            "Electric":{
+        "2023": {
+          "E9 Electric Bus (2022 Launch)": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -60951,9 +60938,9 @@ class VehicleData {
             }
           }
         },
-        "2024":{
-          "E9 Electric Bus (2022 Launch)":{
-            "Electric":{
+        "2024": {
+          "E9 Electric Bus (2022 Launch)": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -60962,9 +60949,9 @@ class VehicleData {
             }
           }
         },
-        "2025":{
-          "E9 Electric Bus (2022 Launch)":{
-            "Electric":{
+        "2025": {
+          "E9 Electric Bus (2022 Launch)": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -60972,8 +60959,8 @@ class VehicleData {
               "exShowroom": 10000000
             }
           },
-          "EKA Coach":{
-            "Electric":{
+          "EKA Coach": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -60981,8 +60968,8 @@ class VehicleData {
               "exShowroom": 18000000
             }
           },
-          "EKA 12M":{
-            "Electric":{
+          "EKA 12M": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -60990,8 +60977,8 @@ class VehicleData {
               "exShowroom": 15000000
             }
           },
-          "EKA 9M":{
-            "Electric":{
+          "EKA 9M": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -60999,8 +60986,8 @@ class VehicleData {
               "exShowroom": 12000000
             }
           },
-          "EKA LF":{
-            "Electric":{
+          "EKA LF": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -61008,8 +60995,8 @@ class VehicleData {
               "exShowroom": 10000000
             }
           },
-          "EKA 7M":{
-            "Electric":{
+          "EKA 7M": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -61019,17 +61006,17 @@ class VehicleData {
           }
         }
       },
-      "Maruti Suzuki":{
-        "2020":{
-          "Eeco":{
-            "Petrol":{
+      "Maruti Suzuki": {
+        "2020": {
+          "Eeco": {
+            "Petrol": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "Petrol",
               "seating": 7,
               "exShowroom": 380000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1197,
               "fuelType": "CNG",
@@ -61037,18 +61024,17 @@ class VehicleData {
               "exShowroom": 658000
             }
           },
-
         },
-        "2021":{
-          "Eeco":{
-            "Petrol":{
+        "2021": {
+          "Eeco": {
+            "Petrol": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "Petrol",
               "seating": 7,
               "exShowroom": 380000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1197,
               "fuelType": "CNG",
@@ -61056,15 +61042,15 @@ class VehicleData {
               "exShowroom": 658000
             }
           },
-          "Eeco (2022 facelift)":{
-            "Petrol":{
+          "Eeco (2022 facelift)": {
+            "Petrol": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "Petrol",
               "seating": 7,
               "exShowroom": 510000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "CNG",
@@ -61073,16 +61059,16 @@ class VehicleData {
             }
           }
         },
-        "2022":{
-          "Eeco":{
-            "Petrol":{
+        "2022": {
+          "Eeco": {
+            "Petrol": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "Petrol",
               "seating": 7,
               "exShowroom": 380000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1197,
               "fuelType": "CNG",
@@ -61090,15 +61076,15 @@ class VehicleData {
               "exShowroom": 658000
             }
           },
-          "Eeco (2022 facelift)":{
-            "Petrol":{
+          "Eeco (2022 facelift)": {
+            "Petrol": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "Petrol",
               "seating": 7,
               "exShowroom": 510000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "CNG",
@@ -61107,16 +61093,16 @@ class VehicleData {
             }
           }
         },
-        "2023":{
-          "Eeco":{
-            "Petrol":{
+        "2023": {
+          "Eeco": {
+            "Petrol": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "Petrol",
               "seating": 7,
               "exShowroom": 542200
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1197,
               "fuelType": "CNG",
@@ -61124,50 +61110,15 @@ class VehicleData {
               "exShowroom": 644200
             }
           },
-          "Eeco (2022 facelift)":{
-            "Petrol":{
+          "Eeco (2022 facelift)": {
+            "Petrol": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "Petrol",
               "seating": 7,
               "exShowroom": 510000
             },
-            "CNG":{
-              "bodyType": "MULTI-PURPOSE VAN",
-              "cc": 1200,
-              "fuelType": "CNG",
-              "seating": 7,
-              "exShowroom": 644000
-            }
-          },
-
-        },
-        "2024":{
-          "Eeco":{
-            "Petrol":{
-              "bodyType": "MULTI-PURPOSE VAN",
-              "cc": 1200,
-              "fuelType": "Petrol",
-              "seating": 7,
-              "exShowroom": 542200
-            },
-            "CNG":{
-              "bodyType": "MULTI-PURPOSE VAN",
-              "cc": 1197,
-              "fuelType": "CNG",
-              "seating": 5,
-              "exShowroom": 644200
-            }
-          },
-          "Eeco (2022 facelift)":{
-            "Petrol":{
-              "bodyType": "MULTI-PURPOSE VAN",
-              "cc": 1200,
-              "fuelType": "Petrol",
-              "seating": 7,
-              "exShowroom": 510000
-            },
-            "CNG":{
+            "CNG": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "CNG",
@@ -61176,16 +61127,16 @@ class VehicleData {
             }
           },
         },
-        "2025":{
-          "Eeco":{
-            "Petrol":{
+        "2024": {
+          "Eeco": {
+            "Petrol": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "Petrol",
               "seating": 7,
               "exShowroom": 542200
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1197,
               "fuelType": "CNG",
@@ -61193,15 +61144,49 @@ class VehicleData {
               "exShowroom": 644200
             }
           },
-          "Eeco (2022 facelift)":{
-            "Petrol":{
+          "Eeco (2022 facelift)": {
+            "Petrol": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "Petrol",
               "seating": 7,
               "exShowroom": 510000
             },
-            "CNG":{
+            "CNG": {
+              "bodyType": "MULTI-PURPOSE VAN",
+              "cc": 1200,
+              "fuelType": "CNG",
+              "seating": 7,
+              "exShowroom": 644000
+            }
+          },
+        },
+        "2025": {
+          "Eeco": {
+            "Petrol": {
+              "bodyType": "MULTI-PURPOSE VAN",
+              "cc": 1200,
+              "fuelType": "Petrol",
+              "seating": 7,
+              "exShowroom": 542200
+            },
+            "CNG": {
+              "bodyType": "MULTI-PURPOSE VAN",
+              "cc": 1197,
+              "fuelType": "CNG",
+              "seating": 5,
+              "exShowroom": 644200
+            }
+          },
+          "Eeco (2022 facelift)": {
+            "Petrol": {
+              "bodyType": "MULTI-PURPOSE VAN",
+              "cc": 1200,
+              "fuelType": "Petrol",
+              "seating": 7,
+              "exShowroom": 510000
+            },
+            "CNG": {
               "bodyType": "MULTI-PURPOSE VAN",
               "cc": 1200,
               "fuelType": "CNG",
@@ -61211,24 +61196,24 @@ class VehicleData {
           },
         }
       },
-      "Piaggio":{
-        "2015":{
-          "Piaggio Ape City":{
-            "Diesel":{
+      "Piaggio": {
+        "2015": {
+          "Piaggio Ape City": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 130000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 145000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61236,8 +61221,8 @@ class VehicleData {
               "exShowroom": 120000
             }
           },
-          "Piaggio Ape City Compact RE":{
-            "Diesel":{
+          "Piaggio Ape City Compact RE": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "Diesel",
@@ -61246,23 +61231,23 @@ class VehicleData {
             }
           }
         },
-        "2016":{
-          "Piaggio Ape City":{
-            "Diesel":{
+        "2016": {
+          "Piaggio Ape City": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 140000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 150000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61270,8 +61255,8 @@ class VehicleData {
               "exShowroom": 125000
             }
           },
-          "Piaggio Ape City Compact RE":{
-            "Diesel":{
+          "Piaggio Ape City Compact RE": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "Diesel",
@@ -61279,8 +61264,8 @@ class VehicleData {
               "exShowroom": 135000
             }
           },
-          "Piaggio Ape City Diesel BSIII":{
-            "Diesel":{
+          "Piaggio Ape City Diesel BSIII": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61289,23 +61274,23 @@ class VehicleData {
             }
           },
         },
-        "2017":{
-          "Piaggio Ape City":{
-            "Diesel":{
+        "2017": {
+          "Piaggio Ape City": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 140000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 150000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61313,8 +61298,8 @@ class VehicleData {
               "exShowroom": 125000
             }
           },
-          "Piaggio Ape City Compact RE":{
-            "Diesel":{
+          "Piaggio Ape City Compact RE": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "Diesel",
@@ -61322,8 +61307,8 @@ class VehicleData {
               "exShowroom": 135000
             }
           },
-          "Piaggio Ape City Diesel BSIII":{
-            "Diesel":{
+          "Piaggio Ape City Diesel BSIII": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61331,7 +61316,7 @@ class VehicleData {
               "exShowroom": 138000
             }
           },
-          "Piaggio Ape City Plus BSIV":{
+          "Piaggio Ape City Plus BSIV": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
@@ -61339,14 +61324,14 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 145000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 155000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61354,8 +61339,8 @@ class VehicleData {
               "exShowroom": 130000
             }
           },
-          "Piaggio Ape Xtra LDX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Xtra LDX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61364,23 +61349,23 @@ class VehicleData {
             }
           },
         },
-        "2018":{
-          "Piaggio Ape City":{
-            "Diesel":{
+        "2018": {
+          "Piaggio Ape City": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 140000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 150000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61388,8 +61373,8 @@ class VehicleData {
               "exShowroom": 125000
             }
           },
-          "Piaggio Ape City Compact RE":{
-            "Diesel":{
+          "Piaggio Ape City Compact RE": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "Diesel",
@@ -61397,8 +61382,8 @@ class VehicleData {
               "exShowroom": 135000
             }
           },
-          "Piaggio Ape City Diesel BSIII":{
-            "Diesel":{
+          "Piaggio Ape City Diesel BSIII": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61406,7 +61391,7 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape City Plus BSIV":{
+          "Piaggio Ape City Plus BSIV": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
@@ -61414,14 +61399,14 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 145000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 155000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61429,8 +61414,8 @@ class VehicleData {
               "exShowroom": 130000
             }
           },
-          "Piaggio Ape Xtra LDX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Xtra LDX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61438,15 +61423,15 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Auto DX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto DX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 155000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
@@ -61455,23 +61440,23 @@ class VehicleData {
             }
           },
         },
-        "2019":{
-          "Piaggio Ape City":{
-            "Diesel":{
+        "2019": {
+          "Piaggio Ape City": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 140000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 150000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61479,8 +61464,8 @@ class VehicleData {
               "exShowroom": 125000
             }
           },
-          "Piaggio Ape City Compact RE":{
-            "Diesel":{
+          "Piaggio Ape City Compact RE": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "Diesel",
@@ -61488,8 +61473,8 @@ class VehicleData {
               "exShowroom": 135000
             }
           },
-          "Piaggio Ape City Diesel BSIII":{
-            "Diesel":{
+          "Piaggio Ape City Diesel BSIII": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61497,7 +61482,7 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape City Plus BSIV":{
+          "Piaggio Ape City Plus BSIV": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
@@ -61505,14 +61490,14 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 170000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 180000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61520,8 +61505,8 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Xtra LDX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Xtra LDX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61529,15 +61514,15 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Auto DX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto DX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 155000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
@@ -61545,8 +61530,8 @@ class VehicleData {
               "exShowroom": 165000
             }
           },
-          "Piaggio Ape Auto HT Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto HT Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 597,
               "fuelType": "Diesel",
@@ -61554,8 +61539,8 @@ class VehicleData {
               "exShowroom": 190000
             }
           },
-          "Piaggio Ape E-City (Electric Rickshaw Launch)":{
-            "Electric":{
+          "Piaggio Ape E-City (Electric Rickshaw Launch)": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -61564,23 +61549,23 @@ class VehicleData {
             }
           },
         },
-        "2020":{
-          "Piaggio Ape City":{
-            "Diesel":{
+        "2020": {
+          "Piaggio Ape City": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 140000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 150000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61588,8 +61573,8 @@ class VehicleData {
               "exShowroom": 125000
             }
           },
-          "Piaggio Ape City Compact RE":{
-            "Diesel":{
+          "Piaggio Ape City Compact RE": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "Diesel",
@@ -61597,8 +61582,8 @@ class VehicleData {
               "exShowroom": 135000
             }
           },
-          "Piaggio Ape City Diesel BSIII":{
-            "Diesel":{
+          "Piaggio Ape City Diesel BSIII": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61606,7 +61591,7 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape City Plus BSIV":{
+          "Piaggio Ape City Plus BSIV": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
@@ -61614,14 +61599,14 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 170000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 180000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61629,8 +61614,8 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Xtra LDX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Xtra LDX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61638,22 +61623,22 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Auto DX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto DX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 175000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 185000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
@@ -61661,8 +61646,8 @@ class VehicleData {
               "exShowroom": 160000
             }
           },
-          "Piaggio Ape Auto HT Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto HT Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 597,
               "fuelType": "Diesel",
@@ -61670,8 +61655,8 @@ class VehicleData {
               "exShowroom": 190000
             }
           },
-          "Piaggio Ape E-City (Electric Rickshaw Launch)":{
-            "Electric":{
+          "Piaggio Ape E-City (Electric Rickshaw Launch)": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -61680,23 +61665,23 @@ class VehicleData {
             }
           },
         },
-        "2021":{
-          "Piaggio Ape City":{
-            "Diesel":{
+        "2021": {
+          "Piaggio Ape City": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 140000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 150000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61704,8 +61689,8 @@ class VehicleData {
               "exShowroom": 125000
             }
           },
-          "Piaggio Ape City Compact RE":{
-            "Diesel":{
+          "Piaggio Ape City Compact RE": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "Diesel",
@@ -61713,8 +61698,8 @@ class VehicleData {
               "exShowroom": 135000
             }
           },
-          "Piaggio Ape City Diesel BSIII":{
-            "Diesel":{
+          "Piaggio Ape City Diesel BSIII": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61722,7 +61707,7 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape City Plus BSIV":{
+          "Piaggio Ape City Plus BSIV": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
@@ -61730,14 +61715,14 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 170000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 180000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61745,8 +61730,8 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Xtra LDX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Xtra LDX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61754,22 +61739,22 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Auto DX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto DX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 175000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 185000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
@@ -61777,8 +61762,8 @@ class VehicleData {
               "exShowroom": 160000
             }
           },
-          "Piaggio Ape Auto HT Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto HT Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 597,
               "fuelType": "Diesel",
@@ -61786,8 +61771,8 @@ class VehicleData {
               "exShowroom": 190000
             }
           },
-          "Piaggio Ape E-City (Electric Rickshaw Launch)":{
-            "Electric":{
+          "Piaggio Ape E-City (Electric Rickshaw Launch)": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -61795,8 +61780,8 @@ class VehicleData {
               "exShowroom": 200000
             }
           },
-          "Piaggio Ape E-Xtra FX":{
-            "Electric":{
+          "Piaggio Ape E-Xtra FX": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -61805,7 +61790,7 @@ class VehicleData {
             }
           },
           "Piaggio Ape E-City FX": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -61814,23 +61799,23 @@ class VehicleData {
             }
           },
         },
-        "2022":{
-          "Piaggio Ape City":{
-            "Diesel":{
+        "2022": {
+          "Piaggio Ape City": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 140000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 150000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61838,8 +61823,8 @@ class VehicleData {
               "exShowroom": 125000
             }
           },
-          "Piaggio Ape City Compact RE":{
-            "Diesel":{
+          "Piaggio Ape City Compact RE": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "Diesel",
@@ -61847,8 +61832,8 @@ class VehicleData {
               "exShowroom": 135000
             }
           },
-          "Piaggio Ape City Diesel BSIII":{
-            "Diesel":{
+          "Piaggio Ape City Diesel BSIII": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61856,7 +61841,7 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape City Plus BSIV":{
+          "Piaggio Ape City Plus BSIV": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
@@ -61864,14 +61849,14 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 170000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 180000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -61879,8 +61864,8 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Xtra LDX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Xtra LDX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -61888,22 +61873,22 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Auto DX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto DX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 175000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 185000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
@@ -61911,8 +61896,8 @@ class VehicleData {
               "exShowroom": 160000
             }
           },
-          "Piaggio Ape Auto HT Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto HT Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 597,
               "fuelType": "Diesel",
@@ -61920,8 +61905,8 @@ class VehicleData {
               "exShowroom": 190000
             }
           },
-          "Piaggio Ape E-City (Electric Rickshaw Launch)":{
-            "Electric":{
+          "Piaggio Ape E-City (Electric Rickshaw Launch)": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -61929,8 +61914,8 @@ class VehicleData {
               "exShowroom": 200000
             }
           },
-          "Piaggio Ape E-Xtra FX":{
-            "Electric":{
+          "Piaggio Ape E-Xtra FX": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -61939,7 +61924,7 @@ class VehicleData {
             }
           },
           "Piaggio Ape E-City FX": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -61947,8 +61932,8 @@ class VehicleData {
               "exShowroom": 280000
             }
           },
-          "Piaggio Ape E-City FX Max":{
-            "Electric":{
+          "Piaggio Ape E-City FX Max": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -61956,8 +61941,8 @@ class VehicleData {
               "exShowroom": 290000
             }
           },
-          "Piaggio Ape Auto HT DX":{
-            "Diesel":{
+          "Piaggio Ape Auto HT DX": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 597,
               "fuelType": "Diesel",
@@ -61971,7 +61956,7 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 230000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
@@ -61980,23 +61965,23 @@ class VehicleData {
             }
           },
         },
-        "2023":{
-          "Piaggio Ape City":{
-            "Diesel":{
+        "2023": {
+          "Piaggio Ape City": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 140000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 150000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -62004,8 +61989,8 @@ class VehicleData {
               "exShowroom": 125000
             }
           },
-          "Piaggio Ape City Compact RE":{
-            "Diesel":{
+          "Piaggio Ape City Compact RE": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "Diesel",
@@ -62013,8 +61998,8 @@ class VehicleData {
               "exShowroom": 135000
             }
           },
-          "Piaggio Ape City Diesel BSIII":{
-            "Diesel":{
+          "Piaggio Ape City Diesel BSIII": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -62022,7 +62007,7 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape City Plus BSIV":{
+          "Piaggio Ape City Plus BSIV": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
@@ -62030,14 +62015,14 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 170000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 180000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -62045,8 +62030,8 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Xtra LDX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Xtra LDX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -62054,22 +62039,22 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Auto DX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto DX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 175000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 185000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
@@ -62077,8 +62062,8 @@ class VehicleData {
               "exShowroom": 160000
             }
           },
-          "Piaggio Ape Auto HT Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto HT Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 597,
               "fuelType": "Diesel",
@@ -62086,8 +62071,8 @@ class VehicleData {
               "exShowroom": 190000
             }
           },
-          "Piaggio Ape E-City (Electric Rickshaw Launch)":{
-            "Electric":{
+          "Piaggio Ape E-City (Electric Rickshaw Launch)": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62095,8 +62080,8 @@ class VehicleData {
               "exShowroom": 200000
             }
           },
-          "Piaggio Ape E-Xtra FX":{
-            "Electric":{
+          "Piaggio Ape E-Xtra FX": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62105,7 +62090,7 @@ class VehicleData {
             }
           },
           "Piaggio Ape E-City FX": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62113,8 +62098,8 @@ class VehicleData {
               "exShowroom": 280000
             }
           },
-          "Piaggio Ape E-City FX Max":{
-            "Electric":{
+          "Piaggio Ape E-City FX Max": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62122,8 +62107,8 @@ class VehicleData {
               "exShowroom": 290000
             }
           },
-          "Piaggio Ape Auto HT DX":{
-            "Diesel":{
+          "Piaggio Ape Auto HT DX": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 597,
               "fuelType": "Diesel",
@@ -62137,7 +62122,7 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 230000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
@@ -62145,8 +62130,8 @@ class VehicleData {
               "exShowroom": 210000
             }
           },
-          "Piaggio Ape E-City FX Max+":{
-            "Electric":{
+          "Piaggio Ape E-City FX Max+": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62154,8 +62139,8 @@ class VehicleData {
               "exShowroom": 310000
             }
           },
-          "Piaggio Ape E-Xtra FX Max+":{
-            "Electric":{
+          "Piaggio Ape E-Xtra FX Max+": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62163,8 +62148,8 @@ class VehicleData {
               "exShowroom": 340000
             }
           },
-          "Piaggio Ape Auto Plus (CNG Max)":{
-            "CNG":{
+          "Piaggio Ape Auto Plus (CNG Max)": {
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
@@ -62173,23 +62158,23 @@ class VehicleData {
             }
           },
         },
-        "2024":{
-          "Piaggio Ape City":{
-            "Diesel":{
+        "2024": {
+          "Piaggio Ape City": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 140000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 150000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -62197,8 +62182,8 @@ class VehicleData {
               "exShowroom": 125000
             }
           },
-          "Piaggio Ape City Compact RE":{
-            "Diesel":{
+          "Piaggio Ape City Compact RE": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "Diesel",
@@ -62206,8 +62191,8 @@ class VehicleData {
               "exShowroom": 135000
             }
           },
-          "Piaggio Ape City Diesel BSIII":{
-            "Diesel":{
+          "Piaggio Ape City Diesel BSIII": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -62215,7 +62200,7 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape City Plus BSIV":{
+          "Piaggio Ape City Plus BSIV": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
@@ -62223,14 +62208,14 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 170000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 180000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -62238,8 +62223,8 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Xtra LDX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Xtra LDX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -62247,22 +62232,22 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Auto DX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto DX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 175000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 185000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
@@ -62270,8 +62255,8 @@ class VehicleData {
               "exShowroom": 160000
             }
           },
-          "Piaggio Ape Auto HT Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto HT Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 597,
               "fuelType": "Diesel",
@@ -62279,8 +62264,8 @@ class VehicleData {
               "exShowroom": 190000
             }
           },
-          "Piaggio Ape E-City (Electric Rickshaw Launch)":{
-            "Electric":{
+          "Piaggio Ape E-City (Electric Rickshaw Launch)": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62288,8 +62273,8 @@ class VehicleData {
               "exShowroom": 200000
             }
           },
-          "Piaggio Ape E-Xtra FX":{
-            "Electric":{
+          "Piaggio Ape E-Xtra FX": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62298,7 +62283,7 @@ class VehicleData {
             }
           },
           "Piaggio Ape E-City FX": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62306,8 +62291,8 @@ class VehicleData {
               "exShowroom": 280000
             }
           },
-          "Piaggio Ape E-City FX Max":{
-            "Electric":{
+          "Piaggio Ape E-City FX Max": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62315,8 +62300,8 @@ class VehicleData {
               "exShowroom": 290000
             }
           },
-          "Piaggio Ape Auto HT DX":{
-            "Diesel":{
+          "Piaggio Ape Auto HT DX": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 597,
               "fuelType": "Diesel",
@@ -62330,7 +62315,7 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 230000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
@@ -62338,8 +62323,8 @@ class VehicleData {
               "exShowroom": 210000
             }
           },
-          "Piaggio Ape E-City FX Max+":{
-            "Electric":{
+          "Piaggio Ape E-City FX Max+": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62347,8 +62332,8 @@ class VehicleData {
               "exShowroom": 310000
             }
           },
-          "Piaggio Ape E-Xtra FX Max+":{
-            "Electric":{
+          "Piaggio Ape E-Xtra FX Max+": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62356,8 +62341,8 @@ class VehicleData {
               "exShowroom": 340000
             }
           },
-          "Piaggio Ape Auto Plus (CNG Max)":{
-            "CNG":{
+          "Piaggio Ape Auto Plus (CNG Max)": {
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
@@ -62366,23 +62351,23 @@ class VehicleData {
             }
           },
         },
-        "2025":{
-          "Piaggio Ape City":{
-            "Diesel":{
+        "2025": {
+          "Piaggio Ape City": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 140000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 150000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -62390,8 +62375,8 @@ class VehicleData {
               "exShowroom": 125000
             }
           },
-          "Piaggio Ape City Compact RE":{
-            "Diesel":{
+          "Piaggio Ape City Compact RE": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "Diesel",
@@ -62399,8 +62384,8 @@ class VehicleData {
               "exShowroom": 135000
             }
           },
-          "Piaggio Ape City Diesel BSIII":{
-            "Diesel":{
+          "Piaggio Ape City Diesel BSIII": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -62408,7 +62393,7 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape City Plus BSIV":{
+          "Piaggio Ape City Plus BSIV": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
@@ -62416,14 +62401,14 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 170000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 180000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 200,
               "fuelType": "Petrol",
@@ -62431,8 +62416,8 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Xtra LDX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Xtra LDX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
@@ -62440,22 +62425,22 @@ class VehicleData {
               "exShowroom": 150000
             }
           },
-          "Piaggio Ape Auto DX Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto DX Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 435,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 175000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
               "seating": 3,
               "exShowroom": 185000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
@@ -62463,8 +62448,8 @@ class VehicleData {
               "exShowroom": 160000
             }
           },
-          "Piaggio Ape Auto HT Passenger":{
-            "Diesel":{
+          "Piaggio Ape Auto HT Passenger": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 597,
               "fuelType": "Diesel",
@@ -62472,8 +62457,8 @@ class VehicleData {
               "exShowroom": 190000
             }
           },
-          "Piaggio Ape E-City (Electric Rickshaw Launch)":{
-            "Electric":{
+          "Piaggio Ape E-City (Electric Rickshaw Launch)": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62481,8 +62466,8 @@ class VehicleData {
               "exShowroom": 200000
             }
           },
-          "Piaggio Ape E-Xtra FX":{
-            "Electric":{
+          "Piaggio Ape E-Xtra FX": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62491,7 +62476,7 @@ class VehicleData {
             }
           },
           "Piaggio Ape E-City FX": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62499,8 +62484,8 @@ class VehicleData {
               "exShowroom": 280000
             }
           },
-          "Piaggio Ape E-City FX Max":{
-            "Electric":{
+          "Piaggio Ape E-City FX Max": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62508,8 +62493,8 @@ class VehicleData {
               "exShowroom": 290000
             }
           },
-          "Piaggio Ape Auto HT DX":{
-            "Diesel":{
+          "Piaggio Ape Auto HT DX": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 597,
               "fuelType": "Diesel",
@@ -62523,7 +62508,7 @@ class VehicleData {
               "seating": 3,
               "exShowroom": 230000
             },
-            "Petrol":{
+            "Petrol": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
@@ -62531,8 +62516,8 @@ class VehicleData {
               "exShowroom": 210000
             }
           },
-          "Piaggio Ape E-City FX Max+":{
-            "Electric":{
+          "Piaggio Ape E-City FX Max+": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62540,8 +62525,8 @@ class VehicleData {
               "exShowroom": 310000
             }
           },
-          "Piaggio Ape E-Xtra FX Max+":{
-            "Electric":{
+          "Piaggio Ape E-Xtra FX Max+": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62549,8 +62534,8 @@ class VehicleData {
               "exShowroom": 340000
             }
           },
-          "Piaggio Ape Auto Plus (CNG Max)":{
-            "CNG":{
+          "Piaggio Ape Auto Plus (CNG Max)": {
+            "CNG": {
               "bodyType": "PASSENGER",
               "cc": 395,
               "fuelType": "CNG",
@@ -62560,10 +62545,10 @@ class VehicleData {
           },
         },
       },
-      "Eicher Motors (VECV)":{
-        "2015":{
+      "Eicher Motors (VECV)": {
+        "2015": {
           "Eicher Skyline School Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3298,
               "fuelType": "Diesel",
@@ -62572,7 +62557,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Staff Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62581,9 +62566,9 @@ class VehicleData {
             }
           },
         },
-        "2016":{
+        "2016": {
           "Eicher Skyline School Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3298,
               "fuelType": "Diesel",
@@ -62592,7 +62577,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Staff Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62610,9 +62595,9 @@ class VehicleData {
             }
           },
         },
-        "2017":{
+        "2017": {
           "Eicher Skyline School Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3298,
               "fuelType": "Diesel",
@@ -62621,7 +62606,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Staff Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62638,8 +62623,8 @@ class VehicleData {
               "exShowroom": 1200000
             }
           },
-          "Eicher Skyline Pro Intercity Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro Intercity Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5000,
               "fuelType": "Diesel",
@@ -62647,8 +62632,8 @@ class VehicleData {
               "exShowroom": 2300000
             }
           },
-          "Eicher Skyline Pro School Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro School Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62657,9 +62642,9 @@ class VehicleData {
             }
           },
         },
-        "2018":{
+        "2018": {
           "Eicher Skyline School Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3298,
               "fuelType": "Diesel",
@@ -62668,7 +62653,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Staff Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62685,8 +62670,8 @@ class VehicleData {
               "exShowroom": 1200000
             }
           },
-          "Eicher Skyline Pro Intercity Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro Intercity Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5000,
               "fuelType": "Diesel",
@@ -62694,8 +62679,8 @@ class VehicleData {
               "exShowroom": 2300000
             }
           },
-          "Eicher Skyline Pro School Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro School Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62704,9 +62689,9 @@ class VehicleData {
             }
           },
         },
-        "2019":{
+        "2019": {
           "Eicher Skyline School Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3298,
               "fuelType": "Diesel",
@@ -62715,7 +62700,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Staff Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62732,8 +62717,8 @@ class VehicleData {
               "exShowroom": 1200000
             }
           },
-          "Eicher Skyline Pro Intercity Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro Intercity Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5000,
               "fuelType": "Diesel",
@@ -62741,8 +62726,8 @@ class VehicleData {
               "exShowroom": 2300000
             }
           },
-          "Eicher Skyline Pro School Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro School Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62751,9 +62736,9 @@ class VehicleData {
             }
           },
         },
-        "2020":{
+        "2020": {
           "Eicher Skyline School Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3298,
               "fuelType": "Diesel",
@@ -62762,7 +62747,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Staff Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62779,8 +62764,8 @@ class VehicleData {
               "exShowroom": 1200000
             }
           },
-          "Eicher Skyline Pro Intercity Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro Intercity Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5000,
               "fuelType": "Diesel",
@@ -62788,8 +62773,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "Eicher Skyline Pro School Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro School Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62798,9 +62783,9 @@ class VehicleData {
             }
           },
         },
-        "2021":{
+        "2021": {
           "Eicher Skyline School Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3298,
               "fuelType": "Diesel",
@@ -62809,7 +62794,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Staff Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62826,8 +62811,8 @@ class VehicleData {
               "exShowroom": 1200000
             }
           },
-          "Eicher Skyline Pro Intercity Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro Intercity Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5000,
               "fuelType": "Diesel",
@@ -62835,8 +62820,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "Eicher Skyline Pro School Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro School Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62845,9 +62830,9 @@ class VehicleData {
             }
           },
         },
-        "2022":{
+        "2022": {
           "Eicher Skyline School Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3298,
               "fuelType": "Diesel",
@@ -62856,7 +62841,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Staff Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62873,8 +62858,8 @@ class VehicleData {
               "exShowroom": 1200000
             }
           },
-          "Eicher Skyline Pro Intercity Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro Intercity Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5000,
               "fuelType": "Diesel",
@@ -62882,8 +62867,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "Eicher Skyline Pro School Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro School Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62891,17 +62876,17 @@ class VehicleData {
               "exShowroom": 1900000
             }
           },
-          "Eicher Skyline 20.15 Pro Bus":{
-            "Diesel":{
+          "Eicher Skyline 20.15 Pro Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
               "seating": 60,
               "exShowroom": 2800000
-            } 
+            }
           },
-          "Eicher Skyline Pro 3011 L School Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro 3011 L School Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -62909,8 +62894,8 @@ class VehicleData {
               "exShowroom": 2100000
             }
           },
-          "Eicher Skyline Staff Bus 2090 L":{
-            "Diesel":{
+          "Eicher Skyline Staff Bus 2090 L": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -62918,8 +62903,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "Eicher Skyline Pro Electric Bus":{
-            "Electric":{
+          "Eicher Skyline Pro Electric Bus": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -62928,9 +62913,9 @@ class VehicleData {
             }
           },
         },
-        "2023":{
+        "2023": {
           "Eicher Skyline School Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3298,
               "fuelType": "Diesel",
@@ -62939,7 +62924,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Staff Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62956,8 +62941,8 @@ class VehicleData {
               "exShowroom": 1200000
             }
           },
-          "Eicher Skyline Pro Intercity Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro Intercity Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5000,
               "fuelType": "Diesel",
@@ -62965,8 +62950,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "Eicher Skyline Pro School Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro School Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -62974,146 +62959,26 @@ class VehicleData {
               "exShowroom": 1900000
             }
           },
-          "Eicher Skyline 20.15 Pro Bus":{
-            "Diesel":{
+          "Eicher Skyline 20.15 Pro Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
               "seating": 60,
               "exShowroom": 2800000
-            } 
-          },
-          "Eicher Skyline Pro 3011 L School Bus":{
-            "Diesel":{
-              "bodyType": "PASSENGER",
-              "cc": 2960,
-              "fuelType": "Diesel",
-              "seating": 50,
-              "exShowroom": 2100000
             }
           },
-          "Eicher Skyline Staff Bus 2090 L":{
-            "Diesel":{
-              "bodyType": "PASSENGER",
-              "cc": 2960,
-              "fuelType": "Diesel",
-              "seating": 40,
-              "exShowroom": 1750000
-            }
-          },
-          "Eicher Skyline Pro Electric Bus":{
-            "Electric":{
-              "bodyType": "PASSENGER",
-              "cc": 0,
-              "fuelType": "Electric",
-              "seating": 32,
-              "exShowroom": 12000000
-            }
-          },
-          "Eicher Skyline Pro 3012 L Intercity Bus": {
-            "Diesel":{
-              "bodyType": "PASSENGER",
-              "cc": 3760,
-              "fuelType": "Diesel",
-              "seating": 55,
-              "exShowroom": 2600000
-            }
-          },
-          "Eicher Skyline Staff Bus 2090 M":{
-            "Diesel":{
-              "bodyType": "PASSENGER",
-              "cc": 2960,
-              "fuelType": "Diesel",
-              "seating": 41,
-              "exShowroom": 1850000
-            }
-          },
-          "Eicher Skyline School Bus 2090 L": {
-            "Diesel":{
-              "bodyType": "PASSENGER",
-              "cc": 2960,
-              "fuelType": "Diesel",
-              "seating": 45,
-              "exShowroom": 1950000
-            }
-          },
-          "Eicher Skyline Pro Electric 9m Bus": {
-            "Electric":{
-              "bodyType": "PASSENGER",
-              "cc": 0,
-              "fuelType": "Electric",
-              "seating": 32,
-              "exShowroom": 12500000
-            }
-          },
-
-        },
-        "2024":{
-          "Eicher Skyline School Bus": {
-            "Diesel":{
-              "bodyType": "PASSENGER",
-              "cc": 3298,
-              "fuelType": "Diesel",
-              "seating": 50,
-              "exShowroom": 1600000
-            }
-          },
-          "Eicher Skyline Staff Bus": {
-            "Diesel":{
-              "bodyType": "PASSENGER",
-              "cc": 3770,
-              "fuelType": "Diesel",
-              "seating": 45,
-              "exShowroom": 1500000
-            }
-          },
-          "Eicher Starline School Bus": {
+          "Eicher Skyline Pro 3011 L School Bus": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
-              "seating": 35,
-              "exShowroom": 1200000
-            }
-          },
-          "Eicher Skyline Pro Intercity Bus":{
-            "Diesel":{
-              "bodyType": "PASSENGER",
-              "cc": 5000,
-              "fuelType": "Diesel",
-              "seating": 50,
-              "exShowroom": 2500000
-            }
-          },
-          "Eicher Skyline Pro School Bus":{
-            "Diesel":{
-              "bodyType": "PASSENGER",
-              "cc": 3770,
-              "fuelType": "Diesel",
-              "seating": 55,
-              "exShowroom": 1900000
-            }
-          },
-          "Eicher Skyline 20.15 Pro Bus":{
-            "Diesel":{
-              "bodyType": "PASSENGER",
-              "cc": 3770,
-              "fuelType": "Diesel",
-              "seating": 60,
-              "exShowroom": 2800000
-            } 
-          },
-          "Eicher Skyline Pro 3011 L School Bus":{
-            "Diesel":{
-              "bodyType": "PASSENGER",
-              "cc": 2960,
-              "fuelType": "Diesel",
               "seating": 50,
               "exShowroom": 2100000
             }
           },
-          "Eicher Skyline Staff Bus 2090 L":{
-            "Diesel":{
+          "Eicher Skyline Staff Bus 2090 L": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -63121,8 +62986,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "Eicher Skyline Pro Electric Bus":{
-            "Electric":{
+          "Eicher Skyline Pro Electric Bus": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -63131,7 +62996,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Pro 3012 L Intercity Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3760,
               "fuelType": "Diesel",
@@ -63139,8 +63004,8 @@ class VehicleData {
               "exShowroom": 2600000
             }
           },
-          "Eicher Skyline Staff Bus 2090 M":{
-            "Diesel":{
+          "Eicher Skyline Staff Bus 2090 M": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -63149,7 +63014,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline School Bus 2090 L": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -63158,7 +63023,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Pro Electric 9m Bus": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -63166,7 +63031,126 @@ class VehicleData {
               "exShowroom": 12500000
             }
           },
-          "Eicher Skyline Pro 3012 L BS6 Phase II":{
+        },
+        "2024": {
+          "Eicher Skyline School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3298,
+              "fuelType": "Diesel",
+              "seating": 50,
+              "exShowroom": 1600000
+            }
+          },
+          "Eicher Skyline Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3770,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 1500000
+            }
+          },
+          "Eicher Starline School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 2960,
+              "fuelType": "Diesel",
+              "seating": 35,
+              "exShowroom": 1200000
+            }
+          },
+          "Eicher Skyline Pro Intercity Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 5000,
+              "fuelType": "Diesel",
+              "seating": 50,
+              "exShowroom": 2500000
+            }
+          },
+          "Eicher Skyline Pro School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3770,
+              "fuelType": "Diesel",
+              "seating": 55,
+              "exShowroom": 1900000
+            }
+          },
+          "Eicher Skyline 20.15 Pro Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3770,
+              "fuelType": "Diesel",
+              "seating": 60,
+              "exShowroom": 2800000
+            }
+          },
+          "Eicher Skyline Pro 3011 L School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 2960,
+              "fuelType": "Diesel",
+              "seating": 50,
+              "exShowroom": 2100000
+            }
+          },
+          "Eicher Skyline Staff Bus 2090 L": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 2960,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 1750000
+            }
+          },
+          "Eicher Skyline Pro Electric Bus": {
+            "Electric": {
+              "bodyType": "PASSENGER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 32,
+              "exShowroom": 12000000
+            }
+          },
+          "Eicher Skyline Pro 3012 L Intercity Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3760,
+              "fuelType": "Diesel",
+              "seating": 55,
+              "exShowroom": 2600000
+            }
+          },
+          "Eicher Skyline Staff Bus 2090 M": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 2960,
+              "fuelType": "Diesel",
+              "seating": 41,
+              "exShowroom": 1850000
+            }
+          },
+          "Eicher Skyline School Bus 2090 L": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 2960,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 1950000
+            }
+          },
+          "Eicher Skyline Pro Electric 9m Bus": {
+            "Electric": {
+              "bodyType": "PASSENGER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 32,
+              "exShowroom": 12500000
+            }
+          },
+          "Eicher Skyline Pro 3012 L BS6 Phase II": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3760,
@@ -63175,8 +63159,8 @@ class VehicleData {
               "exShowroom": 2700000
             }
           },
-          "Eicher Skyline School Bus 2090 M BS6 Phase II":{
-            "Diesel":{
+          "Eicher Skyline School Bus 2090 M BS6 Phase II": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -63184,8 +63168,8 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Eicher Skyline Staff Bus 2090 L BS6 Phase II":{
-            "Diesel":{
+          "Eicher Skyline Staff Bus 2090 L BS6 Phase II": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -63194,7 +63178,7 @@ class VehicleData {
             }
           },
           "Eicher Electric Skyline Pro E9 (2024 Launch)": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -63203,9 +63187,9 @@ class VehicleData {
             }
           }
         },
-        "2025":{
+        "2025": {
           "Eicher Skyline School Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3298,
               "fuelType": "Diesel",
@@ -63214,7 +63198,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Staff Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -63231,8 +63215,8 @@ class VehicleData {
               "exShowroom": 1200000
             }
           },
-          "Eicher Skyline Pro Intercity Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro Intercity Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 5000,
               "fuelType": "Diesel",
@@ -63240,8 +63224,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "Eicher Skyline Pro School Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro School Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
@@ -63249,17 +63233,17 @@ class VehicleData {
               "exShowroom": 1900000
             }
           },
-          "Eicher Skyline 20.15 Pro Bus":{
-            "Diesel":{
+          "Eicher Skyline 20.15 Pro Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3770,
               "fuelType": "Diesel",
               "seating": 60,
               "exShowroom": 2800000
-            } 
+            }
           },
-          "Eicher Skyline Pro 3011 L School Bus":{
-            "Diesel":{
+          "Eicher Skyline Pro 3011 L School Bus": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -63267,8 +63251,8 @@ class VehicleData {
               "exShowroom": 2100000
             }
           },
-          "Eicher Skyline Staff Bus 2090 L":{
-            "Diesel":{
+          "Eicher Skyline Staff Bus 2090 L": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -63276,8 +63260,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "Eicher Skyline Pro Electric Bus":{
-            "Electric":{
+          "Eicher Skyline Pro Electric Bus": {
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -63286,7 +63270,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Pro 3012 L Intercity Bus": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3760,
               "fuelType": "Diesel",
@@ -63294,8 +63278,8 @@ class VehicleData {
               "exShowroom": 2600000
             }
           },
-          "Eicher Skyline Staff Bus 2090 M":{
-            "Diesel":{
+          "Eicher Skyline Staff Bus 2090 M": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -63304,7 +63288,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline School Bus 2090 L": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -63313,7 +63297,7 @@ class VehicleData {
             }
           },
           "Eicher Skyline Pro Electric 9m Bus": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -63321,7 +63305,7 @@ class VehicleData {
               "exShowroom": 12500000
             }
           },
-          "Eicher Skyline Pro 3012 L BS6 Phase II":{
+          "Eicher Skyline Pro 3012 L BS6 Phase II": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3760,
@@ -63330,8 +63314,8 @@ class VehicleData {
               "exShowroom": 2700000
             }
           },
-          "Eicher Skyline School Bus 2090 M BS6 Phase II":{
-            "Diesel":{
+          "Eicher Skyline School Bus 2090 M BS6 Phase II": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -63339,8 +63323,8 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Eicher Skyline Staff Bus 2090 L BS6 Phase II":{
-            "Diesel":{
+          "Eicher Skyline Staff Bus 2090 L BS6 Phase II": {
+            "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 2960,
               "fuelType": "Diesel",
@@ -63349,7 +63333,7 @@ class VehicleData {
             }
           },
           "Eicher Electric Skyline Pro E9 (2024 Launch)": {
-            "Electric":{
+            "Electric": {
               "bodyType": "PASSENGER",
               "cc": 0,
               "fuelType": "Electric",
@@ -63359,10 +63343,10 @@ class VehicleData {
           }
         },
       },
-      "Volvo":{
-        "2015":{
-          "Volvo Hybrid City Bus (pilot announced)":{
-            "Hybrid":{
+      "Volvo": {
+        "2015": {
+          "Volvo Hybrid City Bus (pilot announced)": {
+            "Hybrid": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 5000,
               "fuelType": "Hybrid",
@@ -63371,9 +63355,9 @@ class VehicleData {
             }
           },
         },
-        "2016":{
-          "Volvo Hybrid City Bus (pilot announced)":{
-            "Hybrid":{
+        "2016": {
+          "Volvo Hybrid City Bus (pilot announced)": {
+            "Hybrid": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 5000,
               "fuelType": "Hybrid",
@@ -63382,9 +63366,9 @@ class VehicleData {
             }
           },
         },
-        "2017":{
-          "Volvo Hybrid City Bus (pilot announced)":{
-            "Hybrid":{
+        "2017": {
+          "Volvo Hybrid City Bus (pilot announced)": {
+            "Hybrid": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 5000,
               "fuelType": "Hybrid",
@@ -63392,8 +63376,8 @@ class VehicleData {
               "exShowroom": 23000000
             }
           },
-          "Volvo Next-Gen City Bus":{
-            "Diesel":{
+          "Volvo Next-Gen City Bus": {
+            "Diesel": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63402,9 +63386,9 @@ class VehicleData {
             }
           },
         },
-        "2018":{
-          "Volvo Hybrid City Bus (pilot announced)":{
-            "Hybrid":{
+        "2018": {
+          "Volvo Hybrid City Bus (pilot announced)": {
+            "Hybrid": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 5000,
               "fuelType": "Hybrid",
@@ -63412,8 +63396,8 @@ class VehicleData {
               "exShowroom": 23000000
             }
           },
-          "Volvo Next-Gen City Bus":{
-            "Diesel":{
+          "Volvo Next-Gen City Bus": {
+            "Diesel": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63421,8 +63405,8 @@ class VehicleData {
               "exShowroom": 22000000
             }
           },
-          "Volvo 9400 12m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9400 12m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63431,9 +63415,9 @@ class VehicleData {
             }
           },
         },
-        "2019":{
-          "Volvo Hybrid City Bus (pilot announced)":{
-            "Hybrid":{
+        "2019": {
+          "Volvo Hybrid City Bus (pilot announced)": {
+            "Hybrid": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 5000,
               "fuelType": "Hybrid",
@@ -63441,8 +63425,8 @@ class VehicleData {
               "exShowroom": 23000000
             }
           },
-          "Volvo Next-Gen City Bus":{
-            "Diesel":{
+          "Volvo Next-Gen City Bus": {
+            "Diesel": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63450,8 +63434,8 @@ class VehicleData {
               "exShowroom": 22000000
             }
           },
-          "Volvo 9400 12m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9400 12m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63460,9 +63444,9 @@ class VehicleData {
             }
           },
         },
-        "2020":{
-          "Volvo Hybrid City Bus (pilot announced)":{
-            "Hybrid":{
+        "2020": {
+          "Volvo Hybrid City Bus (pilot announced)": {
+            "Hybrid": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 5000,
               "fuelType": "Hybrid",
@@ -63470,8 +63454,8 @@ class VehicleData {
               "exShowroom": 23000000
             }
           },
-          "Volvo Next-Gen City Bus":{
-            "Diesel":{
+          "Volvo Next-Gen City Bus": {
+            "Diesel": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63479,8 +63463,8 @@ class VehicleData {
               "exShowroom": 22000000
             }
           },
-          "Volvo 9400 12m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9400 12m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63489,9 +63473,9 @@ class VehicleData {
             }
           },
         },
-        "2021":{
-          "Volvo Hybrid City Bus (pilot announced)":{
-            "Hybrid":{
+        "2021": {
+          "Volvo Hybrid City Bus (pilot announced)": {
+            "Hybrid": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 5000,
               "fuelType": "Hybrid",
@@ -63499,8 +63483,8 @@ class VehicleData {
               "exShowroom": 23000000
             }
           },
-          "Volvo Next-Gen City Bus":{
-            "Diesel":{
+          "Volvo Next-Gen City Bus": {
+            "Diesel": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63508,8 +63492,8 @@ class VehicleData {
               "exShowroom": 22000000
             }
           },
-          "Volvo 9400 12m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9400 12m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63517,7 +63501,7 @@ class VehicleData {
               "exShowroom": 28000000
             }
           },
-          "Volvo 9400 B8R 13.5m 4x2 Coach":{
+          "Volvo 9400 B8R 13.5m 4x2 Coach": {
             "Diesel": {
               "bodyType": "INTERCITY COACH",
               "cc": 8200,
@@ -63527,9 +63511,9 @@ class VehicleData {
             }
           },
         },
-        "2022":{
-          "Volvo Hybrid City Bus (pilot announced)":{
-            "Hybrid":{
+        "2022": {
+          "Volvo Hybrid City Bus (pilot announced)": {
+            "Hybrid": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 5000,
               "fuelType": "Hybrid",
@@ -63537,8 +63521,8 @@ class VehicleData {
               "exShowroom": 23000000
             }
           },
-          "Volvo Next-Gen City Bus":{
-            "Diesel":{
+          "Volvo Next-Gen City Bus": {
+            "Diesel": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63546,8 +63530,8 @@ class VehicleData {
               "exShowroom": 22000000
             }
           },
-          "Volvo 9400 12m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9400 12m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63555,7 +63539,7 @@ class VehicleData {
               "exShowroom": 28000000
             }
           },
-          "Volvo 9400 B8R 13.5m 4x2 Coach":{
+          "Volvo 9400 B8R 13.5m 4x2 Coach": {
             "Diesel": {
               "bodyType": "INTERCITY COACH",
               "cc": 8200,
@@ -63564,8 +63548,8 @@ class VehicleData {
               "exShowroom": 30000000
             }
           },
-          "Volvo 9600 15m Seater Coach":{
-            "Diesel":{
+          "Volvo 9600 15m Seater Coach": {
+            "Diesel": {
               "bodyType": "INTERCITY COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63573,19 +63557,19 @@ class VehicleData {
               "exShowroom": 35000000
             }
           },
-          "Volvo 9600 15m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9600 15m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 35000000
             }
-          }, 
+          },
         },
-        "2023":{
-          "Volvo Hybrid City Bus (pilot announced)":{
-            "Hybrid":{
+        "2023": {
+          "Volvo Hybrid City Bus (pilot announced)": {
+            "Hybrid": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 5000,
               "fuelType": "Hybrid",
@@ -63593,8 +63577,8 @@ class VehicleData {
               "exShowroom": 23000000
             }
           },
-          "Volvo Next-Gen City Bus":{
-            "Diesel":{
+          "Volvo Next-Gen City Bus": {
+            "Diesel": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63602,8 +63586,8 @@ class VehicleData {
               "exShowroom": 22000000
             }
           },
-          "Volvo 9400 12m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9400 12m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63611,7 +63595,7 @@ class VehicleData {
               "exShowroom": 28000000
             }
           },
-          "Volvo 9400 B8R 13.5m 4x2 Coach":{
+          "Volvo 9400 B8R 13.5m 4x2 Coach": {
             "Diesel": {
               "bodyType": "INTERCITY COACH",
               "cc": 8200,
@@ -63620,8 +63604,8 @@ class VehicleData {
               "exShowroom": 30000000
             }
           },
-          "Volvo 9600 15m Seater Coach":{
-            "Diesel":{
+          "Volvo 9600 15m Seater Coach": {
+            "Diesel": {
               "bodyType": "INTERCITY COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63629,17 +63613,17 @@ class VehicleData {
               "exShowroom": 35000000
             }
           },
-          "Volvo 9600 15m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9600 15m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 35000000
             }
-          }, 
-          "Volvo 13.5m Electric Intercity Coach":{
-            "Electric":{
+          },
+          "Volvo 13.5m Electric Intercity Coach": {
+            "Electric": {
               "bodyType": "INTERCITY COACH",
               "cc": 0,
               "fuelType": "Electric",
@@ -63648,9 +63632,9 @@ class VehicleData {
             }
           },
         },
-        "2024":{
-          "Volvo Hybrid City Bus (pilot announced)":{
-            "Hybrid":{
+        "2024": {
+          "Volvo Hybrid City Bus (pilot announced)": {
+            "Hybrid": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 5000,
               "fuelType": "Hybrid",
@@ -63658,8 +63642,8 @@ class VehicleData {
               "exShowroom": 23000000
             }
           },
-          "Volvo Next-Gen City Bus":{
-            "Diesel":{
+          "Volvo Next-Gen City Bus": {
+            "Diesel": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63667,8 +63651,8 @@ class VehicleData {
               "exShowroom": 22000000
             }
           },
-          "Volvo 9400 12m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9400 12m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63676,7 +63660,7 @@ class VehicleData {
               "exShowroom": 28000000
             }
           },
-          "Volvo 9400 B8R 13.5m 4x2 Coach":{
+          "Volvo 9400 B8R 13.5m 4x2 Coach": {
             "Diesel": {
               "bodyType": "INTERCITY COACH",
               "cc": 8200,
@@ -63685,8 +63669,8 @@ class VehicleData {
               "exShowroom": 30000000
             }
           },
-          "Volvo 9600 15m Seater Coach":{
-            "Diesel":{
+          "Volvo 9600 15m Seater Coach": {
+            "Diesel": {
               "bodyType": "INTERCITY COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63694,17 +63678,17 @@ class VehicleData {
               "exShowroom": 35000000
             }
           },
-          "Volvo 9600 15m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9600 15m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 35000000
             }
-          }, 
-          "Volvo 13.5m Electric Intercity Coach":{
-            "Electric":{
+          },
+          "Volvo 13.5m Electric Intercity Coach": {
+            "Electric": {
               "bodyType": "INTERCITY COACH",
               "cc": 0,
               "fuelType": "Electric",
@@ -63712,8 +63696,8 @@ class VehicleData {
               "exShowroom": 45000000
             }
           },
-          "Volvo 9600 Upgraded Luxury Coach":{
-            "Diesel":{
+          "Volvo 9600 Upgraded Luxury Coach": {
+            "Diesel": {
               "bodyType": "INTERCITY COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63722,9 +63706,9 @@ class VehicleData {
             }
           }
         },
-        "2025":{
-          "Volvo Hybrid City Bus (pilot announced)":{
-            "Hybrid":{
+        "2025": {
+          "Volvo Hybrid City Bus (pilot announced)": {
+            "Hybrid": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 5000,
               "fuelType": "Hybrid",
@@ -63732,8 +63716,8 @@ class VehicleData {
               "exShowroom": 23000000
             }
           },
-          "Volvo Next-Gen City Bus":{
-            "Diesel":{
+          "Volvo Next-Gen City Bus": {
+            "Diesel": {
               "bodyType": "LOW-FLOOR CITY BUS",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63741,8 +63725,8 @@ class VehicleData {
               "exShowroom": 22000000
             }
           },
-          "Volvo 9400 12m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9400 12m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63750,7 +63734,7 @@ class VehicleData {
               "exShowroom": 28000000
             }
           },
-          "Volvo 9400 B8R 13.5m 4x2 Coach":{
+          "Volvo 9400 B8R 13.5m 4x2 Coach": {
             "Diesel": {
               "bodyType": "INTERCITY COACH",
               "cc": 8200,
@@ -63759,8 +63743,8 @@ class VehicleData {
               "exShowroom": 30000000
             }
           },
-          "Volvo 9600 15m Seater Coach":{
-            "Diesel":{
+          "Volvo 9600 15m Seater Coach": {
+            "Diesel": {
               "bodyType": "INTERCITY COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63768,17 +63752,17 @@ class VehicleData {
               "exShowroom": 35000000
             }
           },
-          "Volvo 9600 15m Sleeper Coach":{
-            "Diesel":{
+          "Volvo 9600 15m Sleeper Coach": {
+            "Diesel": {
               "bodyType": "SLEEPER COACH",
               "cc": 8000,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 35000000
             }
-          }, 
-          "Volvo 13.5m Electric Intercity Coach":{
-            "Electric":{
+          },
+          "Volvo 13.5m Electric Intercity Coach": {
+            "Electric": {
               "bodyType": "INTERCITY COACH",
               "cc": 0,
               "fuelType": "Electric",
@@ -63786,8 +63770,8 @@ class VehicleData {
               "exShowroom": 45000000
             }
           },
-          "Volvo 9600 Upgraded Luxury Coach":{
-            "Diesel":{
+          "Volvo 9600 Upgraded Luxury Coach": {
+            "Diesel": {
               "bodyType": "INTERCITY COACH",
               "cc": 8000,
               "fuelType": "Diesel",
@@ -63797,10 +63781,10 @@ class VehicleData {
           }
         },
       },
-      "Force Motors":{
-        "2015":{
-          "Force Traveller 3050 WB Minibus":{
-            "Diesel":{
+      "Force Motors": {
+        "2015": {
+          "Force Traveller 3050 WB Minibus": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63808,8 +63792,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Force Traveller CNG School Bus":{
-            "CNG":{
+          "Force Traveller CNG School Bus": {
+            "CNG": {
               "bodyType": "SCHOOL BUS",
               "cc": 2600,
               "fuelType": "CNG",
@@ -63818,9 +63802,9 @@ class VehicleData {
             }
           }
         },
-        "2016":{
-          "Force Traveller 3050 WB Minibus":{
-            "Diesel":{
+        "2016": {
+          "Force Traveller 3050 WB Minibus": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63828,8 +63812,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Force Traveller CNG School Bus":{
-            "CNG":{
+          "Force Traveller CNG School Bus": {
+            "CNG": {
               "bodyType": "SCHOOL BUS",
               "cc": 2600,
               "fuelType": "CNG",
@@ -63838,9 +63822,9 @@ class VehicleData {
             }
           },
         },
-        "2017":{
-          "Force Traveller 3050 WB Minibus":{
-            "Diesel":{
+        "2017": {
+          "Force Traveller 3050 WB Minibus": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63848,8 +63832,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Force Traveller CNG School Bus":{
-            "CNG":{
+          "Force Traveller CNG School Bus": {
+            "CNG": {
               "bodyType": "SCHOOL BUS",
               "cc": 2600,
               "fuelType": "CNG",
@@ -63857,8 +63841,8 @@ class VehicleData {
               "exShowroom": 850000
             }
           },
-          "Force Traveller 3700 Super":{
-            "Diesel":{
+          "Force Traveller 3700 Super": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63867,9 +63851,9 @@ class VehicleData {
             }
           }
         },
-        "2018":{
-          "Force Traveller 3050 WB Minibus":{
-            "Diesel":{
+        "2018": {
+          "Force Traveller 3050 WB Minibus": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63877,8 +63861,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Force Traveller CNG School Bus":{
-            "CNG":{
+          "Force Traveller CNG School Bus": {
+            "CNG": {
               "bodyType": "SCHOOL BUS",
               "cc": 2600,
               "fuelType": "CNG",
@@ -63886,8 +63870,8 @@ class VehicleData {
               "exShowroom": 850000
             }
           },
-          "Force Traveller 3700 Super":{
-            "Diesel":{
+          "Force Traveller 3700 Super": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63895,8 +63879,8 @@ class VehicleData {
               "exShowroom": 1220000
             }
           },
-          "Force Traveller 3700 School 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63905,9 +63889,9 @@ class VehicleData {
             }
           },
         },
-        "2019":{
-          "Force Traveller 3050 WB Minibus":{
-            "Diesel":{
+        "2019": {
+          "Force Traveller 3050 WB Minibus": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63915,8 +63899,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Force Traveller CNG School Bus":{
-            "CNG":{
+          "Force Traveller CNG School Bus": {
+            "CNG": {
               "bodyType": "SCHOOL BUS",
               "cc": 2600,
               "fuelType": "CNG",
@@ -63924,8 +63908,8 @@ class VehicleData {
               "exShowroom": 850000
             }
           },
-          "Force Traveller 3700 Super":{
-            "Diesel":{
+          "Force Traveller 3700 Super": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63933,8 +63917,8 @@ class VehicleData {
               "exShowroom": 1220000
             }
           },
-          "Force Traveller 3700 School 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63942,8 +63926,8 @@ class VehicleData {
               "exShowroom": 1550000
             }
           },
-          "Force Traveller 3700 School Bus 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School Bus 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 3600,
               "fuelType": "Diesel",
@@ -63952,9 +63936,9 @@ class VehicleData {
             }
           }
         },
-        "2021":{
-          "Force Traveller 3050 WB Minibus":{
-            "Diesel":{
+        "2021": {
+          "Force Traveller 3050 WB Minibus": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63962,8 +63946,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Force Traveller CNG School Bus":{
-            "CNG":{
+          "Force Traveller CNG School Bus": {
+            "CNG": {
               "bodyType": "SCHOOL BUS",
               "cc": 2600,
               "fuelType": "CNG",
@@ -63971,8 +63955,8 @@ class VehicleData {
               "exShowroom": 850000
             }
           },
-          "Force Traveller 3700 Super":{
-            "Diesel":{
+          "Force Traveller 3700 Super": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63980,8 +63964,8 @@ class VehicleData {
               "exShowroom": 1220000
             }
           },
-          "Force Traveller 3700 School 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -63989,8 +63973,8 @@ class VehicleData {
               "exShowroom": 1550000
             }
           },
-          "Force Traveller 3700 School Bus 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School Bus 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 3600,
               "fuelType": "Diesel",
@@ -63999,9 +63983,9 @@ class VehicleData {
             }
           }
         },
-        "2022":{
-          "Force Traveller 3050 WB Minibus":{
-            "Diesel":{
+        "2022": {
+          "Force Traveller 3050 WB Minibus": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64009,8 +63993,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Force Traveller CNG School Bus":{
-            "CNG":{
+          "Force Traveller CNG School Bus": {
+            "CNG": {
               "bodyType": "SCHOOL BUS",
               "cc": 2600,
               "fuelType": "CNG",
@@ -64018,8 +64002,8 @@ class VehicleData {
               "exShowroom": 850000
             }
           },
-          "Force Traveller 3700 Super":{
-            "Diesel":{
+          "Force Traveller 3700 Super": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64027,8 +64011,8 @@ class VehicleData {
               "exShowroom": 1220000
             }
           },
-          "Force Traveller 3700 School 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64036,8 +64020,8 @@ class VehicleData {
               "exShowroom": 1550000
             }
           },
-          "Force Traveller 3700 School Bus 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School Bus 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 3600,
               "fuelType": "Diesel",
@@ -64045,8 +64029,8 @@ class VehicleData {
               "exShowroom": 1600000
             }
           },
-          "Force Traveller 4020 20-Seater (Diesel)":{
-            "Diesel":{
+          "Force Traveller 4020 20-Seater (Diesel)": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64054,8 +64038,8 @@ class VehicleData {
               "exShowroom": 2090000
             }
           },
-          "Force Traveller 4020 20-Seater (CNG)":{
-            "CNG":{
+          "Force Traveller 4020 20-Seater (CNG)": {
+            "CNG": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "CNG",
@@ -64064,9 +64048,9 @@ class VehicleData {
             }
           },
         },
-        "2023":{
-          "Force Traveller 3050 WB Minibus":{
-            "Diesel":{
+        "2023": {
+          "Force Traveller 3050 WB Minibus": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64074,8 +64058,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Force Traveller CNG School Bus":{
-            "CNG":{
+          "Force Traveller CNG School Bus": {
+            "CNG": {
               "bodyType": "SCHOOL BUS",
               "cc": 2600,
               "fuelType": "CNG",
@@ -64083,8 +64067,8 @@ class VehicleData {
               "exShowroom": 850000
             }
           },
-          "Force Traveller 3700 Super":{
-            "Diesel":{
+          "Force Traveller 3700 Super": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64092,8 +64076,8 @@ class VehicleData {
               "exShowroom": 1220000
             }
           },
-          "Force Traveller 3700 School 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64101,8 +64085,8 @@ class VehicleData {
               "exShowroom": 1550000
             }
           },
-          "Force Traveller 3700 School Bus 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School Bus 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 3600,
               "fuelType": "Diesel",
@@ -64110,8 +64094,8 @@ class VehicleData {
               "exShowroom": 1600000
             }
           },
-          "Force Traveller 4020 20-Seater (Diesel)":{
-            "Diesel":{
+          "Force Traveller 4020 20-Seater (Diesel)": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64119,8 +64103,8 @@ class VehicleData {
               "exShowroom": 2090000
             }
           },
-          "Force Traveller 4020 20-Seater (CNG)":{
-            "CNG":{
+          "Force Traveller 4020 20-Seater (CNG)": {
+            "CNG": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "CNG",
@@ -64128,8 +64112,8 @@ class VehicleData {
               "exShowroom": 2256000
             }
           },
-          "Force Traveller 4020 22-Seater (Diesel)":{
-            "Diesel":{
+          "Force Traveller 4020 22-Seater (Diesel)": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64137,8 +64121,8 @@ class VehicleData {
               "exShowroom": 1730000
             }
           },
-          "Force Traveller Mono Bus 24-Seater (Diesel)":{
-            "Diesel":{
+          "Force Traveller Mono Bus 24-Seater (Diesel)": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64147,9 +64131,9 @@ class VehicleData {
             }
           }
         },
-        "2024":{
-          "Force Traveller 3050 WB Minibus":{
-            "Diesel":{
+        "2024": {
+          "Force Traveller 3050 WB Minibus": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64157,8 +64141,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Force Traveller CNG School Bus":{
-            "CNG":{
+          "Force Traveller CNG School Bus": {
+            "CNG": {
               "bodyType": "SCHOOL BUS",
               "cc": 2600,
               "fuelType": "CNG",
@@ -64166,8 +64150,8 @@ class VehicleData {
               "exShowroom": 850000
             }
           },
-          "Force Traveller 3700 Super":{
-            "Diesel":{
+          "Force Traveller 3700 Super": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64175,8 +64159,8 @@ class VehicleData {
               "exShowroom": 1220000
             }
           },
-          "Force Traveller 3700 School 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64184,8 +64168,8 @@ class VehicleData {
               "exShowroom": 1550000
             }
           },
-          "Force Traveller 3700 School Bus 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School Bus 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 3600,
               "fuelType": "Diesel",
@@ -64193,8 +64177,8 @@ class VehicleData {
               "exShowroom": 1600000
             }
           },
-          "Force Traveller 4020 20-Seater (Diesel)":{
-            "Diesel":{
+          "Force Traveller 4020 20-Seater (Diesel)": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64202,8 +64186,8 @@ class VehicleData {
               "exShowroom": 2090000
             }
           },
-          "Force Traveller 4020 20-Seater (CNG)":{
-            "CNG":{
+          "Force Traveller 4020 20-Seater (CNG)": {
+            "CNG": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "CNG",
@@ -64211,8 +64195,8 @@ class VehicleData {
               "exShowroom": 2256000
             }
           },
-          "Force Traveller 4020 22-Seater (Diesel)":{
-            "Diesel":{
+          "Force Traveller 4020 22-Seater (Diesel)": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64220,8 +64204,8 @@ class VehicleData {
               "exShowroom": 1730000
             }
           },
-          "Force Traveller Mono Bus 24-Seater (Diesel)":{
-            "Diesel":{
+          "Force Traveller Mono Bus 24-Seater (Diesel)": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64230,9 +64214,9 @@ class VehicleData {
             }
           }
         },
-        "2025":{
-          "Force Traveller 3050 WB Minibus":{
-            "Diesel":{
+        "2025": {
+          "Force Traveller 3050 WB Minibus": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64240,8 +64224,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Force Traveller CNG School Bus":{
-            "CNG":{
+          "Force Traveller CNG School Bus": {
+            "CNG": {
               "bodyType": "SCHOOL BUS",
               "cc": 2600,
               "fuelType": "CNG",
@@ -64249,8 +64233,8 @@ class VehicleData {
               "exShowroom": 850000
             }
           },
-          "Force Traveller 3700 Super":{
-            "Diesel":{
+          "Force Traveller 3700 Super": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64258,8 +64242,8 @@ class VehicleData {
               "exShowroom": 1220000
             }
           },
-          "Force Traveller 3700 School 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64267,8 +64251,8 @@ class VehicleData {
               "exShowroom": 1550000
             }
           },
-          "Force Traveller 3700 School Bus 17 Seater":{
-            "Diesel":{
+          "Force Traveller 3700 School Bus 17 Seater": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 3600,
               "fuelType": "Diesel",
@@ -64276,8 +64260,8 @@ class VehicleData {
               "exShowroom": 1600000
             }
           },
-          "Force Traveller 4020 20-Seater (Diesel)":{
-            "Diesel":{
+          "Force Traveller 4020 20-Seater (Diesel)": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64285,8 +64269,8 @@ class VehicleData {
               "exShowroom": 2090000
             }
           },
-          "Force Traveller 4020 20-Seater (CNG)":{
-            "CNG":{
+          "Force Traveller 4020 20-Seater (CNG)": {
+            "CNG": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "CNG",
@@ -64294,8 +64278,8 @@ class VehicleData {
               "exShowroom": 2256000
             }
           },
-          "Force Traveller 4020 22-Seater (Diesel)":{
-            "Diesel":{
+          "Force Traveller 4020 22-Seater (Diesel)": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64303,8 +64287,8 @@ class VehicleData {
               "exShowroom": 1730000
             }
           },
-          "Force Traveller Mono Bus 24-Seater (Diesel)":{
-            "Diesel":{
+          "Force Traveller Mono Bus 24-Seater (Diesel)": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64312,8 +64296,8 @@ class VehicleData {
               "exShowroom": 2849000
             }
           },
-          "Force Traveller 26 Seater (BS6 Phase 2)":{
-            "Diesel":{
+          "Force Traveller 26 Seater (BS6 Phase 2)": {
+            "Diesel": {
               "bodyType": "MINIBUS",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -64321,8 +64305,8 @@ class VehicleData {
               "exShowroom": 1400000
             }
           },
-          "Electric Force Traveller 13 Seater":{
-            "Electric":{
+          "Electric Force Traveller 13 Seater": {
+            "Electric": {
               "bodyType": "VAN",
               "cc": 0,
               "fuelType": "Electric",
@@ -64332,9 +64316,9 @@ class VehicleData {
           }
         },
       },
-      "BharatBenz (Daimler India)":{
-        "2015":{
-          "BharatBenz 917 Tourist Bus":{
+      "BharatBenz (Daimler India)": {
+        "2015": {
+          "BharatBenz 917 Tourist Bus": {
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 3900,
@@ -64343,1375 +64327,1374 @@ class VehicleData {
               "exShowroom": 2100000
             }
           },
-    "BharatBenz 1623 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 3600000
-      }
-    }
-  },
-  "2016":{
-    "BharatBenz 917 Tourist Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2100000
-      }
-    },
-    "BharatBenz 1623 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 3600000
-      }
-    },
-    "BharatBenz 917 Tourist Bus (BS-IV)":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 41,
-        "exShowroom": 2200000
-      }
-    },
-    "BharatBenz 1624 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1222 Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 4800,
-        "fuelType": "Diesel",
-        "seating": 54,
-        "exShowroom": 2600000
-      }
-    },
-  },
-  "2017":{
-    "BharatBenz 917 Tourist Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2100000
-      }
-    },
-    "BharatBenz 1623 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 3600000
-      }
-    },
-    "BharatBenz 917 Tourist Bus (BS-IV)":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 41,
-        "exShowroom": 2200000
-      }
-    },
-    "BharatBenz 1624 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1222 Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 4800,
-        "fuelType": "Diesel",
-        "seating": 54,
-        "exShowroom": 2600000
-      }
-    },
-    "BharatBenz 914 Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2300000
-      }
-    },
-    "BharatBenz 1623 Luxury Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3800000
-      }
-    },
-  },
-  "2018":{
-    "BharatBenz 917 Tourist Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2100000
-      }
-    },
-    "BharatBenz 1623 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 3600000
-      }
-    },
-    "BharatBenz 917 Tourist Bus (BS-IV)":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 41,
-        "exShowroom": 2200000
-      }
-    },
-    "BharatBenz 1624 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1222 Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 4800,
-        "fuelType": "Diesel",
-        "seating": 54,
-        "exShowroom": 2600000
-      }
-    },
-    "BharatBenz 914 Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2300000
-      }
-    },
-    "BharatBenz 1623 Luxury Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3800000
-      }
-    },
-    "BharatBenz 1624 Intercity Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4000000
-      }
-    },
-    "BharatBenz 2417 Staff Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 56,
-        "exShowroom": 4300000
-      }
-    },
-  },
-  "2019":{
-    "BharatBenz 917 Tourist Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2100000
-      }
-    },
-    "BharatBenz 1623 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 3600000
-      }
-    },
-    "BharatBenz 917 Tourist Bus (BS-IV)":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 41,
-        "exShowroom": 2200000
-      }
-    },
-    "BharatBenz 1624 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1222 Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 4800,
-        "fuelType": "Diesel",
-        "seating": 54,
-        "exShowroom": 2600000
-      }
-    },
-    "BharatBenz 914 Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2300000
-      }
-    },
-    "BharatBenz 1623 Luxury Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3800000
-      }
-    },
-    "BharatBenz 1624 Intercity Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4000000
-      }
-    },
-    "BharatBenz 2417 Staff Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 56,
-        "exShowroom": 4300000
-      }
-    },
-    // "BharatBenz 1623 Sleeper Coach":{
-    //   "Diesel":{
-    //     "bodyType": "PASSENGER",
-    //     "cc": 6372,
-    //     "fuelType": "Diesel",
-    //     "seating": 40,
-    //     "exShowroom": 5200000
-    //   }
-    // },
-    "BharatBenz 1624 Luxury Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4600000
-      }
-    },
-  },
-  "2020":{
-    "BharatBenz 917 Tourist Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2100000
-      }
-    },
-    "BharatBenz 1623 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 3600000
-      }
-    },
-    "BharatBenz 917 Tourist Bus (BS-IV)":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 41,
-        "exShowroom": 2200000
-      }
-    },
-    "BharatBenz 1624 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1222 Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 4800,
-        "fuelType": "Diesel",
-        "seating": 54,
-        "exShowroom": 2600000
-      }
-    },
-    "BharatBenz 914 Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2300000
-      }
-    },
-    "BharatBenz 1623 Luxury Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3800000
-      }
-    },
-    "BharatBenz 1624 Intercity Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4000000
-      }
-    },
-    "BharatBenz 2417 Staff Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 56,
-        "exShowroom": 4300000
-      }
-    },
-    // "BharatBenz 1623 Sleeper Coach":{
-    //   "Diesel":{
-    //     "bodyType": "PASSENGER",
-    //     "cc": 6372,
-    //     "fuelType": "Diesel",
-    //     "seating": 40,
-    //     "exShowroom": 5200000
-    //   }
-    // },
-    "BharatBenz 1624 Luxury Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4600000
-      }
-    },
-    "BharatBenz 1624 School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 65,
-        "exShowroom": 2800000
-      }
-    },
-    "BharatBenz 1623 Tourist Coach":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 5000000
-      }
-    },
-
-  },
-  "2021":{
-    "BharatBenz 917 Tourist Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2100000
-      }
-    },
-    "BharatBenz 1623 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 3600000
-      }
-    },
-    "BharatBenz 917 Tourist Bus (BS-IV)":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 41,
-        "exShowroom": 2200000
-      }
-    },
-    "BharatBenz 1624 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1222 Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 4800,
-        "fuelType": "Diesel",
-        "seating": 54,
-        "exShowroom": 2600000
-      }
-    },
-    "BharatBenz 914 Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2300000
-      }
-    },
-    "BharatBenz 1623 Luxury Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3800000
-      }
-    },
-    "BharatBenz 1624 Intercity Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4000000
-      }
-    },
-    "BharatBenz 2417 Staff Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 56,
-        "exShowroom": 4300000
-      }
-    },
-    // "BharatBenz 1623 Sleeper Coach":{
-    //   "Diesel":{
-    //     "bodyType": "PASSENGER",
-    //     "cc": 6372,
-    //     "fuelType": "Diesel",
-    //     "seating": 40,
-    //     "exShowroom": 5200000
-    //   }
-    // },
-    "BharatBenz 1624 Luxury Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4600000
-      }
-    },
-    "BharatBenz 1624 School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 65,
-        "exShowroom": 2800000
-      }
-    },
-    "BharatBenz 1623 Tourist Coach":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 5000000
-      }
-    },
-    "BharatBenz 1017 School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2400000
-      }
-    },
-    "BharatBenz 1623 Staff & School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 55,
-        "exShowroom": 4200000
-      }
-    },
-  },
-  "2022":{
-    "BharatBenz 917 Tourist Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2100000
-      }
-    },
-    "BharatBenz 1623 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 3600000
-      }
-    },
-    "BharatBenz 917 Tourist Bus (BS-IV)":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 41,
-        "exShowroom": 2200000
-      }
-    },
-    "BharatBenz 1624 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1222 Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 4800,
-        "fuelType": "Diesel",
-        "seating": 54,
-        "exShowroom": 2600000
-      }
-    },
-    "BharatBenz 914 Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2300000
-      }
-    },
-    "BharatBenz 1623 Luxury Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3800000
-      }
-    },
-    "BharatBenz 1624 Intercity Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4000000
-      }
-    },
-    "BharatBenz 2417 Staff Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 56,
-        "exShowroom": 4300000
-      }
-    },
-    // "BharatBenz 1623 Sleeper Coach":{
-    //   "Diesel":{
-    //     "bodyType": "PASSENGER",
-    //     "cc": 6372,
-    //     "fuelType": "Diesel",
-    //     "seating": 40,
-    //     "exShowroom": 5200000
-    //   }
-    // },
-    "BharatBenz 1624 Luxury Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4600000
-      }
-    },
-    "BharatBenz 1624 School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 65,
-        "exShowroom": 2800000
-      }
-    },
-    "BharatBenz 1623 Tourist Coach":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 5000000
-      }
-    },
-    "BharatBenz 1017 School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2400000
-      }
-    },
-    "BharatBenz 1623 Staff & School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 55,
-        "exShowroom": 4200000
-      }
-    },
-    "BharatBenz 1015R School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2500000
-      }
-    },
-    "BharatBenz 1217C Tourist Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 50,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1926 Sleeper Coach": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 5500000
-      }
-    },
-  },
-  "2023":{
-    "BharatBenz 917 Tourist Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2100000
-      }
-    },
-    "BharatBenz 1623 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 3600000
-      }
-    },
-    "BharatBenz 917 Tourist Bus (BS-IV)":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 41,
-        "exShowroom": 2200000
-      }
-    },
-    "BharatBenz 1624 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1222 Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 4800,
-        "fuelType": "Diesel",
-        "seating": 54,
-        "exShowroom": 2600000
-      }
-    },
-    "BharatBenz 914 Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2300000
-      }
-    },
-    "BharatBenz 1623 Luxury Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3800000
-      }
-    },
-    "BharatBenz 1624 Intercity Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4000000
-      }
-    },
-    "BharatBenz 2417 Staff Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 56,
-        "exShowroom": 4300000
-      }
-    },
-    // "BharatBenz 1623 Sleeper Coach":{
-    //   "Diesel":{
-    //     "bodyType": "PASSENGER",
-    //     "cc": 6372,
-    //     "fuelType": "Diesel",
-    //     "seating": 40,
-    //     "exShowroom": 5200000
-    //   }
-    // },
-    "BharatBenz 1624 Luxury Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4600000
-      }
-    },
-    "BharatBenz 1624 School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 65,
-        "exShowroom": 2800000
-      }
-    },
-    "BharatBenz 1623 Tourist Coach":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 5000000
-      }
-    },
-    "BharatBenz 1017 School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2400000
-      }
-    },
-    "BharatBenz 1623 Staff & School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 55,
-        "exShowroom": 4200000
-      }
-    },
-    "BharatBenz 1015R School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2500000
-      }
-    },
-    "BharatBenz 1217C Tourist Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 50,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1926 Sleeper Coach": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 5500000
-      }
-    },
-    "BharatBenz 1017 Tourist Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 2700000
-      }
-    },
-    "BharatBenz 1219 Intercity Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 50,
-        "exShowroom": 3900000
-      }
-    },
-    "BharatBenz 1826 Luxury AC Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 52,
-        "exShowroom": 6000000
-      }
-    },
-  },
-  "2024":{
-    "BharatBenz 917 Tourist Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2100000
-      }
-    },
-    "BharatBenz 1623 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 3600000
-      }
-    },
-    "BharatBenz 917 Tourist Bus (BS-IV)":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 41,
-        "exShowroom": 2200000
-      }
-    },
-    "BharatBenz 1624 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1222 Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 4800,
-        "fuelType": "Diesel",
-        "seating": 54,
-        "exShowroom": 2600000
-      }
-    },
-    "BharatBenz 914 Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2300000
-      }
-    },
-    "BharatBenz 1623 Luxury Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3800000
-      }
-    },
-    "BharatBenz 1624 Intercity Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4000000
-      }
-    },
-    "BharatBenz 2417 Staff Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 56,
-        "exShowroom": 4300000
-      }
-    },
-    // "BharatBenz 1623 Sleeper Coach":{
-    //   "Diesel":{
-    //     "bodyType": "PASSENGER",
-    //     "cc": 6372,
-    //     "fuelType": "Diesel",
-    //     "seating": 40,
-    //     "exShowroom": 5200000
-    //   }
-    // },
-    "BharatBenz 1624 Luxury Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4600000
-      }
-    },
-    "BharatBenz 1624 School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 65,
-        "exShowroom": 2800000
-      }
-    },
-    "BharatBenz 1623 Tourist Coach":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 5000000
-      }
-    },
-    "BharatBenz 1017 School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2400000
-      }
-    },
-    "BharatBenz 1623 Staff & School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 55,
-        "exShowroom": 4200000
-      }
-    },
-    "BharatBenz 1015R School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2500000
-      }
-    },
-    "BharatBenz 1217C Tourist Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 50,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1926 Sleeper Coach": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 5500000
-      }
-    },
-    "BharatBenz 1017 Tourist Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 2700000
-      }
-    },
-    "BharatBenz 1219 Intercity Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 50,
-        "exShowroom": 3900000
-      }
-    },
-    "BharatBenz 1826 Luxury AC Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 52,
-        "exShowroom": 6000000
-      }
-    },
-    "BharatBenz 1017 City Bus EV":{
-      "Electric":{
-        "bodyType": "PASSENGER",
-        "cc": 0,
-        "fuelType": "Electric",
-        "seating": 40,
-        "exShowroom": 4500000
-      }
-    },
-    "BharatBenz 1219 Hybrid Intercity Bus":{
-      "Hybrid":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Hybrid (Diesel + Electric)",
-        "seating": 48,
-        "exShowroom": 5200000
-      }
-    },
-    "BharatBenz 1826 Ultra Luxury Sleeper":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 38,
-        "exShowroom": 7500000
-      }
-    },
-  },
-  "2025":{
-    "BharatBenz 917 Tourist Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2100000
-      }
-    },
-    "BharatBenz 1623 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 3600000
-      }
-    },
-    "BharatBenz 917 Tourist Bus (BS-IV)":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 41,
-        "exShowroom": 2200000
-      }
-    },
-    "BharatBenz 1624 Sleeper Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1222 Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 4800,
-        "fuelType": "Diesel",
-        "seating": 54,
-        "exShowroom": 2600000
-      }
-    },
-    "BharatBenz 914 Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2300000
-      }
-    },
-    "BharatBenz 1623 Luxury Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 3800000
-      }
-    },
-    "BharatBenz 1624 Intercity Coach":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4000000
-      }
-    },
-    "BharatBenz 2417 Staff Bus": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 56,
-        "exShowroom": 4300000
-      }
-    },
-    // "BharatBenz 1623 Sleeper Coach":{
-    //   "Diesel":{
-    //     "bodyType": "PASSENGER",
-    //     "cc": 6372,
-    //     "fuelType": "Diesel",
-    //     "seating": 40,
-    //     "exShowroom": 5200000
-    //   }
-    // },
-    "BharatBenz 1624 Luxury Staff Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 4600000
-      }
-    },
-    "BharatBenz 1624 School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 65,
-        "exShowroom": 2800000
-      }
-    },
-    "BharatBenz 1623 Tourist Coach":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 49,
-        "exShowroom": 5000000
-      }
-    },
-    "BharatBenz 1017 School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2400000
-      }
-    },
-    "BharatBenz 1623 Staff & School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 55,
-        "exShowroom": 4200000
-      }
-    },
-    "BharatBenz 1015R School Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 2500000
-      }
-    },
-    "BharatBenz 1217C Tourist Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 50,
-        "exShowroom": 3700000
-      }
-    },
-    "BharatBenz 1926 Sleeper Coach": {
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 40,
-        "exShowroom": 5500000
-      }
-    },
-    "BharatBenz 1017 Tourist Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 3900,
-        "fuelType": "Diesel",
-        "seating": 45,
-        "exShowroom": 2700000
-      }
-    },
-    "BharatBenz 1219 Intercity Bus":{
-      "Diesel": {
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Diesel",
-        "seating": 50,
-        "exShowroom": 3900000
-      }
-    },
-    "BharatBenz 1826 Luxury AC Bus":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 52,
-        "exShowroom": 6000000
-      }
-    },
-    "BharatBenz 1017 City Bus EV":{
-      "Electric":{
-        "bodyType": "PASSENGER",
-        "cc": 0,
-        "fuelType": "Electric",
-        "seating": 40,
-        "exShowroom": 4500000
-      }
-    },
-    "BharatBenz 1219 Hybrid Intercity Bus":{
-      "Hybrid":{
-        "bodyType": "PASSENGER",
-        "cc": 6372,
-        "fuelType": "Hybrid (Diesel + Electric)",
-        "seating": 48,
-        "exShowroom": 5200000
-      }
-    },
-    "BharatBenz 1826 Ultra Luxury Sleeper":{
-      "Diesel":{
-        "bodyType": "PASSENGER",
-        "cc": 7200,
-        "fuelType": "Diesel",
-        "seating": 38,
-        "exShowroom": 7500000
-      }
-    },
-  },
-},
+          "BharatBenz 1623 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 3600000
+            }
+          }
+        },
+        "2016": {
+          "BharatBenz 917 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2100000
+            }
+          },
+          "BharatBenz 1623 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 3600000
+            }
+          },
+          "BharatBenz 917 Tourist Bus (BS-IV)": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 41,
+              "exShowroom": 2200000
+            }
+          },
+          "BharatBenz 1624 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1222 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 4800,
+              "fuelType": "Diesel",
+              "seating": 54,
+              "exShowroom": 2600000
+            }
+          },
+        },
+        "2017": {
+          "BharatBenz 917 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2100000
+            }
+          },
+          "BharatBenz 1623 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 3600000
+            }
+          },
+          "BharatBenz 917 Tourist Bus (BS-IV)": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 41,
+              "exShowroom": 2200000
+            }
+          },
+          "BharatBenz 1624 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1222 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 4800,
+              "fuelType": "Diesel",
+              "seating": 54,
+              "exShowroom": 2600000
+            }
+          },
+          "BharatBenz 914 Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2300000
+            }
+          },
+          "BharatBenz 1623 Luxury Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3800000
+            }
+          },
+        },
+        "2018": {
+          "BharatBenz 917 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2100000
+            }
+          },
+          "BharatBenz 1623 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 3600000
+            }
+          },
+          "BharatBenz 917 Tourist Bus (BS-IV)": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 41,
+              "exShowroom": 2200000
+            }
+          },
+          "BharatBenz 1624 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1222 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 4800,
+              "fuelType": "Diesel",
+              "seating": 54,
+              "exShowroom": 2600000
+            }
+          },
+          "BharatBenz 914 Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2300000
+            }
+          },
+          "BharatBenz 1623 Luxury Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3800000
+            }
+          },
+          "BharatBenz 1624 Intercity Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4000000
+            }
+          },
+          "BharatBenz 2417 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 56,
+              "exShowroom": 4300000
+            }
+          },
+        },
+        "2019": {
+          "BharatBenz 917 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2100000
+            }
+          },
+          "BharatBenz 1623 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 3600000
+            }
+          },
+          "BharatBenz 917 Tourist Bus (BS-IV)": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 41,
+              "exShowroom": 2200000
+            }
+          },
+          "BharatBenz 1624 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1222 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 4800,
+              "fuelType": "Diesel",
+              "seating": 54,
+              "exShowroom": 2600000
+            }
+          },
+          "BharatBenz 914 Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2300000
+            }
+          },
+          "BharatBenz 1623 Luxury Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3800000
+            }
+          },
+          "BharatBenz 1624 Intercity Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4000000
+            }
+          },
+          "BharatBenz 2417 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 56,
+              "exShowroom": 4300000
+            }
+          },
+          // "BharatBenz 1623 Sleeper Coach":{
+          //   "Diesel":{
+          //     "bodyType": "PASSENGER",
+          //     "cc": 6372,
+          //     "fuelType": "Diesel",
+          //     "seating": 40,
+          //     "exShowroom": 5200000
+          //   }
+          // },
+          "BharatBenz 1624 Luxury Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4600000
+            }
+          },
+        },
+        "2020": {
+          "BharatBenz 917 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2100000
+            }
+          },
+          "BharatBenz 1623 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 3600000
+            }
+          },
+          "BharatBenz 917 Tourist Bus (BS-IV)": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 41,
+              "exShowroom": 2200000
+            }
+          },
+          "BharatBenz 1624 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1222 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 4800,
+              "fuelType": "Diesel",
+              "seating": 54,
+              "exShowroom": 2600000
+            }
+          },
+          "BharatBenz 914 Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2300000
+            }
+          },
+          "BharatBenz 1623 Luxury Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3800000
+            }
+          },
+          "BharatBenz 1624 Intercity Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4000000
+            }
+          },
+          "BharatBenz 2417 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 56,
+              "exShowroom": 4300000
+            }
+          },
+          // "BharatBenz 1623 Sleeper Coach":{
+          //   "Diesel":{
+          //     "bodyType": "PASSENGER",
+          //     "cc": 6372,
+          //     "fuelType": "Diesel",
+          //     "seating": 40,
+          //     "exShowroom": 5200000
+          //   }
+          // },
+          "BharatBenz 1624 Luxury Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4600000
+            }
+          },
+          "BharatBenz 1624 School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 65,
+              "exShowroom": 2800000
+            }
+          },
+          "BharatBenz 1623 Tourist Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 5000000
+            }
+          },
+        },
+        "2021": {
+          "BharatBenz 917 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2100000
+            }
+          },
+          "BharatBenz 1623 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 3600000
+            }
+          },
+          "BharatBenz 917 Tourist Bus (BS-IV)": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 41,
+              "exShowroom": 2200000
+            }
+          },
+          "BharatBenz 1624 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1222 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 4800,
+              "fuelType": "Diesel",
+              "seating": 54,
+              "exShowroom": 2600000
+            }
+          },
+          "BharatBenz 914 Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2300000
+            }
+          },
+          "BharatBenz 1623 Luxury Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3800000
+            }
+          },
+          "BharatBenz 1624 Intercity Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4000000
+            }
+          },
+          "BharatBenz 2417 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 56,
+              "exShowroom": 4300000
+            }
+          },
+          // "BharatBenz 1623 Sleeper Coach":{
+          //   "Diesel":{
+          //     "bodyType": "PASSENGER",
+          //     "cc": 6372,
+          //     "fuelType": "Diesel",
+          //     "seating": 40,
+          //     "exShowroom": 5200000
+          //   }
+          // },
+          "BharatBenz 1624 Luxury Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4600000
+            }
+          },
+          "BharatBenz 1624 School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 65,
+              "exShowroom": 2800000
+            }
+          },
+          "BharatBenz 1623 Tourist Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 5000000
+            }
+          },
+          "BharatBenz 1017 School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2400000
+            }
+          },
+          "BharatBenz 1623 Staff & School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 55,
+              "exShowroom": 4200000
+            }
+          },
+        },
+        "2022": {
+          "BharatBenz 917 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2100000
+            }
+          },
+          "BharatBenz 1623 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 3600000
+            }
+          },
+          "BharatBenz 917 Tourist Bus (BS-IV)": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 41,
+              "exShowroom": 2200000
+            }
+          },
+          "BharatBenz 1624 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1222 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 4800,
+              "fuelType": "Diesel",
+              "seating": 54,
+              "exShowroom": 2600000
+            }
+          },
+          "BharatBenz 914 Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2300000
+            }
+          },
+          "BharatBenz 1623 Luxury Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3800000
+            }
+          },
+          "BharatBenz 1624 Intercity Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4000000
+            }
+          },
+          "BharatBenz 2417 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 56,
+              "exShowroom": 4300000
+            }
+          },
+          // "BharatBenz 1623 Sleeper Coach":{
+          //   "Diesel":{
+          //     "bodyType": "PASSENGER",
+          //     "cc": 6372,
+          //     "fuelType": "Diesel",
+          //     "seating": 40,
+          //     "exShowroom": 5200000
+          //   }
+          // },
+          "BharatBenz 1624 Luxury Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4600000
+            }
+          },
+          "BharatBenz 1624 School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 65,
+              "exShowroom": 2800000
+            }
+          },
+          "BharatBenz 1623 Tourist Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 5000000
+            }
+          },
+          "BharatBenz 1017 School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2400000
+            }
+          },
+          "BharatBenz 1623 Staff & School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 55,
+              "exShowroom": 4200000
+            }
+          },
+          "BharatBenz 1015R School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2500000
+            }
+          },
+          "BharatBenz 1217C Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 50,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1926 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 5500000
+            }
+          },
+        },
+        "2023": {
+          "BharatBenz 917 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2100000
+            }
+          },
+          "BharatBenz 1623 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 3600000
+            }
+          },
+          "BharatBenz 917 Tourist Bus (BS-IV)": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 41,
+              "exShowroom": 2200000
+            }
+          },
+          "BharatBenz 1624 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1222 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 4800,
+              "fuelType": "Diesel",
+              "seating": 54,
+              "exShowroom": 2600000
+            }
+          },
+          "BharatBenz 914 Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2300000
+            }
+          },
+          "BharatBenz 1623 Luxury Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3800000
+            }
+          },
+          "BharatBenz 1624 Intercity Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4000000
+            }
+          },
+          "BharatBenz 2417 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 56,
+              "exShowroom": 4300000
+            }
+          },
+          // "BharatBenz 1623 Sleeper Coach":{
+          //   "Diesel":{
+          //     "bodyType": "PASSENGER",
+          //     "cc": 6372,
+          //     "fuelType": "Diesel",
+          //     "seating": 40,
+          //     "exShowroom": 5200000
+          //   }
+          // },
+          "BharatBenz 1624 Luxury Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4600000
+            }
+          },
+          "BharatBenz 1624 School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 65,
+              "exShowroom": 2800000
+            }
+          },
+          "BharatBenz 1623 Tourist Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 5000000
+            }
+          },
+          "BharatBenz 1017 School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2400000
+            }
+          },
+          "BharatBenz 1623 Staff & School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 55,
+              "exShowroom": 4200000
+            }
+          },
+          "BharatBenz 1015R School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2500000
+            }
+          },
+          "BharatBenz 1217C Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 50,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1926 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 5500000
+            }
+          },
+          "BharatBenz 1017 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 2700000
+            }
+          },
+          "BharatBenz 1219 Intercity Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 50,
+              "exShowroom": 3900000
+            }
+          },
+          "BharatBenz 1826 Luxury AC Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 52,
+              "exShowroom": 6000000
+            }
+          },
+        },
+        "2024": {
+          "BharatBenz 917 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2100000
+            }
+          },
+          "BharatBenz 1623 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 3600000
+            }
+          },
+          "BharatBenz 917 Tourist Bus (BS-IV)": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 41,
+              "exShowroom": 2200000
+            }
+          },
+          "BharatBenz 1624 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1222 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 4800,
+              "fuelType": "Diesel",
+              "seating": 54,
+              "exShowroom": 2600000
+            }
+          },
+          "BharatBenz 914 Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2300000
+            }
+          },
+          "BharatBenz 1623 Luxury Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3800000
+            }
+          },
+          "BharatBenz 1624 Intercity Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4000000
+            }
+          },
+          "BharatBenz 2417 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 56,
+              "exShowroom": 4300000
+            }
+          },
+          // "BharatBenz 1623 Sleeper Coach":{
+          //   "Diesel":{
+          //     "bodyType": "PASSENGER",
+          //     "cc": 6372,
+          //     "fuelType": "Diesel",
+          //     "seating": 40,
+          //     "exShowroom": 5200000
+          //   }
+          // },
+          "BharatBenz 1624 Luxury Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4600000
+            }
+          },
+          "BharatBenz 1624 School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 65,
+              "exShowroom": 2800000
+            }
+          },
+          "BharatBenz 1623 Tourist Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 5000000
+            }
+          },
+          "BharatBenz 1017 School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2400000
+            }
+          },
+          "BharatBenz 1623 Staff & School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 55,
+              "exShowroom": 4200000
+            }
+          },
+          "BharatBenz 1015R School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2500000
+            }
+          },
+          "BharatBenz 1217C Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 50,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1926 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 5500000
+            }
+          },
+          "BharatBenz 1017 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 2700000
+            }
+          },
+          "BharatBenz 1219 Intercity Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 50,
+              "exShowroom": 3900000
+            }
+          },
+          "BharatBenz 1826 Luxury AC Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 52,
+              "exShowroom": 6000000
+            }
+          },
+          "BharatBenz 1017 City Bus EV": {
+            "Electric": {
+              "bodyType": "PASSENGER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 40,
+              "exShowroom": 4500000
+            }
+          },
+          "BharatBenz 1219 Hybrid Intercity Bus": {
+            "Hybrid": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Hybrid (Diesel + Electric)",
+              "seating": 48,
+              "exShowroom": 5200000
+            }
+          },
+          "BharatBenz 1826 Ultra Luxury Sleeper": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 38,
+              "exShowroom": 7500000
+            }
+          },
+        },
+        "2025": {
+          "BharatBenz 917 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2100000
+            }
+          },
+          "BharatBenz 1623 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 3600000
+            }
+          },
+          "BharatBenz 917 Tourist Bus (BS-IV)": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 41,
+              "exShowroom": 2200000
+            }
+          },
+          "BharatBenz 1624 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1222 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 4800,
+              "fuelType": "Diesel",
+              "seating": 54,
+              "exShowroom": 2600000
+            }
+          },
+          "BharatBenz 914 Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2300000
+            }
+          },
+          "BharatBenz 1623 Luxury Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 3800000
+            }
+          },
+          "BharatBenz 1624 Intercity Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4000000
+            }
+          },
+          "BharatBenz 2417 Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 56,
+              "exShowroom": 4300000
+            }
+          },
+          // "BharatBenz 1623 Sleeper Coach":{
+          //   "Diesel":{
+          //     "bodyType": "PASSENGER",
+          //     "cc": 6372,
+          //     "fuelType": "Diesel",
+          //     "seating": 40,
+          //     "exShowroom": 5200000
+          //   }
+          // },
+          "BharatBenz 1624 Luxury Staff Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 4600000
+            }
+          },
+          "BharatBenz 1624 School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 65,
+              "exShowroom": 2800000
+            }
+          },
+          "BharatBenz 1623 Tourist Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 49,
+              "exShowroom": 5000000
+            }
+          },
+          "BharatBenz 1017 School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2400000
+            }
+          },
+          "BharatBenz 1623 Staff & School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 55,
+              "exShowroom": 4200000
+            }
+          },
+          "BharatBenz 1015R School Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 2500000
+            }
+          },
+          "BharatBenz 1217C Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 50,
+              "exShowroom": 3700000
+            }
+          },
+          "BharatBenz 1926 Sleeper Coach": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 40,
+              "exShowroom": 5500000
+            }
+          },
+          "BharatBenz 1017 Tourist Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 3900,
+              "fuelType": "Diesel",
+              "seating": 45,
+              "exShowroom": 2700000
+            }
+          },
+          "BharatBenz 1219 Intercity Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Diesel",
+              "seating": 50,
+              "exShowroom": 3900000
+            }
+          },
+          "BharatBenz 1826 Luxury AC Bus": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 52,
+              "exShowroom": 6000000
+            }
+          },
+          "BharatBenz 1017 City Bus EV": {
+            "Electric": {
+              "bodyType": "PASSENGER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 40,
+              "exShowroom": 4500000
+            }
+          },
+          "BharatBenz 1219 Hybrid Intercity Bus": {
+            "Hybrid": {
+              "bodyType": "PASSENGER",
+              "cc": 6372,
+              "fuelType": "Hybrid (Diesel + Electric)",
+              "seating": 48,
+              "exShowroom": 5200000
+            }
+          },
+          "BharatBenz 1826 Ultra Luxury Sleeper": {
+            "Diesel": {
+              "bodyType": "PASSENGER",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 38,
+              "exShowroom": 7500000
+            }
+          },
+        },
+      },
     },
 
     "Miscellaneous Vehicle": {
-      "TATA":{
-        "2015":{
-          "Ace Gold":{
-            "Diesel Variant":{
+      "TATA": {
+        "2015": {
+          "Ace Gold": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 450000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "CNG",
@@ -65720,7 +65703,7 @@ class VehicleData {
             }
           },
           "Ace Mega": {
-            "Diesel Variant":{
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -65728,8 +65711,8 @@ class VehicleData {
               "exShowroom": 480000
             }
           },
-          "Super Ace Mint":{
-            "Diesel Variant":{
+          "Super Ace Mint": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 1396,
               "fuelType": "Diesel",
@@ -65737,8 +65720,8 @@ class VehicleData {
               "exShowroom": 650000
             }
           },
-          "407 EX Pick-up":{
-            "Diesel Variant":{
+          "407 EX Pick-up": {
+            "Diesel Variant": {
               "bodyType": "Light Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -65746,8 +65729,8 @@ class VehicleData {
               "exShowroom": 870000
             }
           },
-          "Xenon Yodha":{
-            "Diesel Variant":{
+          "Xenon Yodha": {
+            "Diesel Variant": {
               "bodyType": "Pick-up Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -65755,22 +65738,22 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "Winger Ambulance":{
-            "3200 / BS-III High Roof AC":{
+          "Winger Ambulance": {
+            "3200 / BS-III High Roof AC": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "3200 / BS-III High Roof (Non-AC)":{
+            "3200 / BS-III High Roof (Non-AC)": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "DICOR BS-IV (launched Jan 2015)":{
+            "DICOR BS-IV (launched Jan 2015)": {
               "bodyType": "AMBULANCE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -65778,311 +65761,7 @@ class VehicleData {
               "exShowroom": 1657000
             }
           },
-          "Magic Express Ambulance (Type B)":{
-            "Standard": {
-              "bodyType": "AMBULANCE",
-            "cc": 798,
-            "fuelType": "Diesel",
-            "seating": 4,
-            "exShowroom": 826000
-            }
-          },
-          "Trailer / Tractor-Trailer": {
-            "Prima 4625.S Tractor-Trailer":{
-              "bodyType": "TRAILER",
-              "cc": 6692,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3273000
-            }
-          },
-          "Hearse":{
-            "Generic Hearse Conversion":{
-              "bodyType": "HEARSE",
-              "cc": 2179,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1800000
-            }
-          },
-          "Pedestrian-Controlled Agricultural Tractor":{
-            "Generic Unit":{
-              "bodyType": "TRACTOR",
-              "cc": 2179,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 219000
-            }
-          },
-          "Trailer": {
-            "Prima 4625.S (4x2 tractor head)":{
-              "Standard":{
-                "bodyType": "TRACTOR_HEAD",
-                "fuelType": "Diesel",
-                "cc": 6692,
-                "seating": 2,
-                "exShowroom": 3273000
-              }
-            },
-          "Prima LX 4923.S (6x4 tractor head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2920000
-            }
-          },
-          "LPS 4018 (4x2 tractor head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 5883,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1990000
-            }
-          }
-          } 
-
-        },
-        "2016":{
-           "Ace Gold":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 702,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 450000
-            },
-            "CNG Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 702,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 465000
-            }
-          },
-          "Ace Mega": {
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 798,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 480000
-            }
-          },
-          "Super Ace Mint":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 1396,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 650000
-            }
-          },
-          "407 EX Pick-up":{
-            "Diesel Variant":{
-              "bodyType": "Light Truck",
-              "cc": 2956,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 870000
-            }
-          },
-          "Xenon Yodha":{
-            "Diesel Variant":{
-              "bodyType": "Pick-up Truck",
-              "cc": 2956,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 950000
-            }
-          },
-          "Winger Ambulance":{
-            "3200 / BS-III High Roof AC":{
-              "bodyType": "AMBULANCE",
-              "cc": 1948,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 1479000
-            },
-            "3200 / BS-III High Roof (Non-AC)":{
-              "bodyType": "AMBULANCE",
-              "cc": 1948,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 1479000
-            },
-            "DICOR BS-IV (launched Jan 2015)":{
-              "bodyType": "AMBULANCE",
-              "cc": 2179,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 1657000
-            }
-          },
-          "Magic Express Ambulance (Type B)":{
-            "Standard": {
-              "bodyType": "AMBULANCE",
-            "cc": 798,
-            "fuelType": "Diesel",
-            "seating": 4,
-            "exShowroom": 826000
-            }
-          },
-          "Trailer / Tractor-Trailer": {
-            "Prima 4625.S Tractor-Trailer":{
-              "bodyType": "TRAILER",
-              "cc": 6692,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3273000
-            }
-          },
-          "Hearse":{
-            "Generic Hearse Conversion":{
-              "bodyType": "HEARSE",
-              "cc": 2179,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1800000
-            }
-          },
-          "Pedestrian-Controlled Agricultural Tractor":{
-            "Generic Unit":{
-              "bodyType": "TRACTOR",
-              "cc": 2179,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 219000
-            }
-          },
-          "Trailer": {
-            "Prima 4625.S (4x2 tractor head)":{
-              "Standard":{
-                "bodyType": "TRACTOR_HEAD",
-                "fuelType": "Diesel",
-                "cc": 6692,
-                "seating": 2,
-                "exShowroom": 3273000
-              }
-            },
-          "Prima LX 4923.S (6x4 tractor head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2920000
-            }
-          },
-          "LPS 4018 (4x2 tractor head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 5883,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1990000
-            }
-          }
-          },
-          "Ace Mega XL":{
-            "Diesel Variant":{ 
-              "bodyType": "Mini Truck",
-              "cc": 798,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 492000
-            }
-          },
-          "Signa 4018.S (Tractor-Head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 5635,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3312000
-            }
-          }  
-
-        },
-        "2017":{
-          "Ace Gold":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 702,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 450000
-            },
-            "CNG Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 702,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 465000
-            }
-          },
-          "Ace Mega": {
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 798,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 480000
-            }
-          },
-          "Super Ace Mint":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 1396,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 650000
-            }
-          },
-          "407 EX Pick-up":{
-            "Diesel Variant":{
-              "bodyType": "Light Truck",
-              "cc": 2956,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 870000
-            }
-          },
-          "Xenon Yodha":{
-            "Diesel Variant":{
-              "bodyType": "Pick-up Truck",
-              "cc": 2956,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 950000
-            }
-          },
-          "Winger Ambulance":{
-            "3200 / BS-III High Roof AC":{
-              "bodyType": "AMBULANCE",
-              "cc": 1948,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 1479000
-            },
-            "3200 / BS-III High Roof (Non-AC)":{
-              "bodyType": "AMBULANCE",
-              "cc": 1948,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 1479000
-            },
-            "DICOR BS-IV (launched Jan 2015)":{
-              "bodyType": "AMBULANCE",
-              "cc": 2179,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 1657000
-            }
-          },
-          "Magic Express Ambulance (Type B)":{
+          "Magic Express Ambulance (Type B)": {
             "Standard": {
               "bodyType": "AMBULANCE",
               "cc": 798,
@@ -66092,7 +65771,7 @@ class VehicleData {
             }
           },
           "Trailer / Tractor-Trailer": {
-            "Prima 4625.S Tractor-Trailer":{
+            "Prima 4625.S Tractor-Trailer": {
               "bodyType": "TRAILER",
               "cc": 6692,
               "fuelType": "Diesel",
@@ -66100,8 +65779,8 @@ class VehicleData {
               "exShowroom": 3273000
             }
           },
-          "Hearse":{
-            "Generic Hearse Conversion":{
+          "Hearse": {
+            "Generic Hearse Conversion": {
               "bodyType": "HEARSE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -66109,8 +65788,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Pedestrian-Controlled Agricultural Tractor":{
-            "Generic Unit":{
+          "Pedestrian-Controlled Agricultural Tractor": {
+            "Generic Unit": {
               "bodyType": "TRACTOR",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -66119,7 +65798,8 @@ class VehicleData {
             }
           },
           "Trailer": {
-            "Prima 4625.S (4x2 tractor head)":{
+            "Prima 4625.S (4x2 tractor head)": {
+              "Standard": {
                 "bodyType": "TRACTOR_HEAD",
                 "fuelType": "Diesel",
                 "cc": 6692,
@@ -66127,73 +65807,36 @@ class VehicleData {
                 "exShowroom": 3273000
               }
             },
-          "Prima LX 4923.S (6x4 tractor head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2920000
+            "Prima LX 4923.S (6x4 tractor head)": {
+              "Standard": {
+                "bodyType": "TRACTOR_HEAD",
+                "cc": 6700,
+                "fuelType": "Diesel",
+                "seating": 2,
+                "exShowroom": 2920000
+              }
+            },
+            "LPS 4018 (4x2 tractor head)": {
+              "Standard": {
+                "bodyType": "TRACTOR_HEAD",
+                "cc": 5883,
+                "fuelType": "Diesel",
+                "seating": 2,
+                "exShowroom": 1990000
+              }
             }
-          },
-          "LPS 4018 (4x2 tractor head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 5883,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1990000
-            } 
-          
-          },
-          "Ace Mega XL":{
-            "Diesel Variant":{ 
-              "bodyType": "Mini Truck",
-              "cc": 798,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 492000
-            }
-          },
-          "Signa 4018.S (Tractor-Head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 5635,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3312000
-            }
-          },
-          "Ace XL":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "payload": 710,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 423000
-            }
-          },
-          "Ace Zip XL":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "seating": 2,
-              "payload": 600,
-              "fuelType": "Diesel",
-              "exShowroom": 308000
-            }
-          },
-          
-        },  
-        "2018":{
-          "Ace Gold":{
-            "Diesel Variant":{
+          }
+        },
+        "2016": {
+          "Ace Gold": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 450000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "CNG",
@@ -66202,7 +65845,7 @@ class VehicleData {
             }
           },
           "Ace Mega": {
-            "Diesel Variant":{
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -66210,8 +65853,8 @@ class VehicleData {
               "exShowroom": 480000
             }
           },
-          "Super Ace Mint":{
-            "Diesel Variant":{
+          "Super Ace Mint": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 1396,
               "fuelType": "Diesel",
@@ -66219,8 +65862,8 @@ class VehicleData {
               "exShowroom": 650000
             }
           },
-          "407 EX Pick-up":{
-            "Diesel Variant":{
+          "407 EX Pick-up": {
+            "Diesel Variant": {
               "bodyType": "Light Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -66228,8 +65871,8 @@ class VehicleData {
               "exShowroom": 870000
             }
           },
-          "Xenon Yodha":{
-            "Diesel Variant":{
+          "Xenon Yodha": {
+            "Diesel Variant": {
               "bodyType": "Pick-up Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -66237,22 +65880,22 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "Winger Ambulance":{
-            "3200 / BS-III High Roof AC":{
+          "Winger Ambulance": {
+            "3200 / BS-III High Roof AC": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "3200 / BS-III High Roof (Non-AC)":{
+            "3200 / BS-III High Roof (Non-AC)": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "DICOR BS-IV (launched Jan 2015)":{
+            "DICOR BS-IV (launched Jan 2015)": {
               "bodyType": "AMBULANCE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -66260,7 +65903,7 @@ class VehicleData {
               "exShowroom": 1657000
             }
           },
-          "Magic Express Ambulance (Type B)":{
+          "Magic Express Ambulance (Type B)": {
             "Standard": {
               "bodyType": "AMBULANCE",
               "cc": 798,
@@ -66270,7 +65913,7 @@ class VehicleData {
             }
           },
           "Trailer / Tractor-Trailer": {
-            "Prima 4625.S Tractor-Trailer":{
+            "Prima 4625.S Tractor-Trailer": {
               "bodyType": "TRAILER",
               "cc": 6692,
               "fuelType": "Diesel",
@@ -66278,8 +65921,8 @@ class VehicleData {
               "exShowroom": 3273000
             }
           },
-          "Hearse":{
-            "Generic Hearse Conversion":{
+          "Hearse": {
+            "Generic Hearse Conversion": {
               "bodyType": "HEARSE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -66287,8 +65930,168 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Pedestrian-Controlled Agricultural Tractor":{
-            "Generic Unit":{
+          "Pedestrian-Controlled Agricultural Tractor": {
+            "Generic Unit": {
+              "bodyType": "TRACTOR",
+              "cc": 2179,
+              "fuelType": "Diesel",
+              "seating": 1,
+              "exShowroom": 219000
+            }
+          },
+          "Trailer": {
+            "Prima 4625.S (4x2 tractor head)": {
+              "Standard": {
+                "bodyType": "TRACTOR_HEAD",
+                "fuelType": "Diesel",
+                "cc": 6692,
+                "seating": 2,
+                "exShowroom": 3273000
+              }
+            },
+            "Prima LX 4923.S (6x4 tractor head)": {
+              "Standard": {
+                "bodyType": "TRACTOR_HEAD",
+                "cc": 6700,
+                "fuelType": "Diesel",
+                "seating": 2,
+                "exShowroom": 2920000
+              }
+            },
+            "LPS 4018 (4x2 tractor head)": {
+              "Standard": {
+                "bodyType": "TRACTOR_HEAD",
+                "cc": 5883,
+                "fuelType": "Diesel",
+                "seating": 2,
+                "exShowroom": 1990000
+              }
+            }
+          },
+          "Ace Mega XL": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 492000
+            }
+          },
+          "Signa 4018.S (Tractor-Head)": {
+            "Standard": {
+              "bodyType": "TRACTOR_HEAD",
+              "cc": 5635,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3312000
+            }
+          }
+        },
+        "2017": {
+          "Ace Gold": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 702,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 450000
+            },
+            "CNG Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 702,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 465000
+            }
+          },
+          "Ace Mega": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 480000
+            }
+          },
+          "Super Ace Mint": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 1396,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 650000
+            }
+          },
+          "407 EX Pick-up": {
+            "Diesel Variant": {
+              "bodyType": "Light Truck",
+              "cc": 2956,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 870000
+            }
+          },
+          "Xenon Yodha": {
+            "Diesel Variant": {
+              "bodyType": "Pick-up Truck",
+              "cc": 2956,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 950000
+            }
+          },
+          "Winger Ambulance": {
+            "3200 / BS-III High Roof AC": {
+              "bodyType": "AMBULANCE",
+              "cc": 1948,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 1479000
+            },
+            "3200 / BS-III High Roof (Non-AC)": {
+              "bodyType": "AMBULANCE",
+              "cc": 1948,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 1479000
+            },
+            "DICOR BS-IV (launched Jan 2015)": {
+              "bodyType": "AMBULANCE",
+              "cc": 2179,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 1657000
+            }
+          },
+          "Magic Express Ambulance (Type B)": {
+            "Standard": {
+              "bodyType": "AMBULANCE",
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 826000
+            }
+          },
+          "Trailer / Tractor-Trailer": {
+            "Prima 4625.S Tractor-Trailer": {
+              "bodyType": "TRAILER",
+              "cc": 6692,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3273000
+            }
+          },
+          "Hearse": {
+            "Generic Hearse Conversion": {
+              "bodyType": "HEARSE",
+              "cc": 2179,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 1800000
+            }
+          },
+          "Pedestrian-Controlled Agricultural Tractor": {
+            "Generic Unit": {
               "bodyType": "TRACTOR",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -66303,29 +66106,28 @@ class VehicleData {
               "cc": 6692,
               "seating": 2,
               "exShowroom": 3273000
-              }
-            },
-          "Prima LX 4923.S (6x4 tractor head)":{
-            "Standard":{
+            }
+          },
+          "Prima LX 4923.S (6x4 tractor head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
-              "cc": 6700, 
+              "cc": 6700,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 2920000
             }
           },
-          "LPS 4018 (4x2 tractor head)":{
-            "Standard":{
+          "LPS 4018 (4x2 tractor head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1990000
             }
-          
           },
-          "Ace Mega XL":{
-            "Diesel Variant":{ 
+          "Ace Mega XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -66333,8 +66135,8 @@ class VehicleData {
               "exShowroom": 492000
             }
           },
-          "Signa 4018.S (Tractor-Head)":{
-            "Standard":{
+          "Signa 4018.S (Tractor-Head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5635,
               "fuelType": "Diesel",
@@ -66342,8 +66144,8 @@ class VehicleData {
               "exShowroom": 3312000
             }
           },
-          "Ace XL":{
-            "Diesel Variant":{
+          "Ace XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "payload": 710,
               "fuelType": "Diesel",
@@ -66351,8 +66153,8 @@ class VehicleData {
               "exShowroom": 423000
             }
           },
-          "Ace Zip XL":{
-            "Diesel Variant":{
+          "Ace Zip XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "seating": 2,
               "payload": 600,
@@ -66360,45 +66162,17 @@ class VehicleData {
               "exShowroom": 308000
             }
           },
-          "Ultra 1014":{
-            "NG 3L DICR (BS-IV)":{
-              "bodyType": "ILCV Truck",
-              "cc": 3000,
-              "fuelType": "Diesel",
-              "seating": 3,
-              "exShowroom": 1394000
-            } 
-
-          },
-          "Ultra 1412":{
-            "497 DICR (BS-IV)":{
-              "bodyType": "ILCV Truck",
-              "cc": 3783,
-              "fuelType": "Diesel",
-              "seating": 3,
-              "exShowroom": 1792000
-            }
-          },
-          "Ultra 1518 T 5L":{
-            "NG 5L DICR (BS-IV)":{
-              "bodyType": "ILCV Truck",
-              "cc": 5005,
-              "fuelType": "Diesel",
-              "seating": 3,
-              "exShowroom": 1930000
-            }
-          }, 
-        },    
-        "2019":{
-          "Ace Gold":{
-            "Diesel Variant":{
+        },
+        "2018": {
+          "Ace Gold": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 450000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "CNG",
@@ -66407,7 +66181,7 @@ class VehicleData {
             }
           },
           "Ace Mega": {
-            "Diesel Variant":{
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -66415,8 +66189,8 @@ class VehicleData {
               "exShowroom": 480000
             }
           },
-          "Super Ace Mint":{
-            "Diesel Variant":{
+          "Super Ace Mint": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 1396,
               "fuelType": "Diesel",
@@ -66424,8 +66198,8 @@ class VehicleData {
               "exShowroom": 650000
             }
           },
-          "407 EX Pick-up":{
-            "Diesel Variant":{
+          "407 EX Pick-up": {
+            "Diesel Variant": {
               "bodyType": "Light Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -66433,8 +66207,8 @@ class VehicleData {
               "exShowroom": 870000
             }
           },
-          "Xenon Yodha":{
-            "Diesel Variant":{
+          "Xenon Yodha": {
+            "Diesel Variant": {
               "bodyType": "Pick-up Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -66442,22 +66216,22 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "Winger Ambulance":{
-            "3200 / BS-III High Roof AC":{
+          "Winger Ambulance": {
+            "3200 / BS-III High Roof AC": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "3200 / BS-III High Roof (Non-AC)":{
+            "3200 / BS-III High Roof (Non-AC)": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "DICOR BS-IV (launched Jan 2015)":{
+            "DICOR BS-IV (launched Jan 2015)": {
               "bodyType": "AMBULANCE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -66465,7 +66239,7 @@ class VehicleData {
               "exShowroom": 1657000
             }
           },
-          "Magic Express Ambulance (Type B)":{
+          "Magic Express Ambulance (Type B)": {
             "Standard": {
               "bodyType": "AMBULANCE",
               "cc": 798,
@@ -66475,7 +66249,7 @@ class VehicleData {
             }
           },
           "Trailer / Tractor-Trailer": {
-            "Prima 4625.S Tractor-Trailer":{
+            "Prima 4625.S Tractor-Trailer": {
               "bodyType": "TRAILER",
               "cc": 6692,
               "fuelType": "Diesel",
@@ -66483,8 +66257,8 @@ class VehicleData {
               "exShowroom": 3273000
             }
           },
-          "Hearse":{
-            "Generic Hearse Conversion":{
+          "Hearse": {
+            "Generic Hearse Conversion": {
               "bodyType": "HEARSE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -66492,8 +66266,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Pedestrian-Controlled Agricultural Tractor":{
-            "Generic Unit":{
+          "Pedestrian-Controlled Agricultural Tractor": {
+            "Generic Unit": {
               "bodyType": "TRACTOR",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -66502,252 +66276,16 @@ class VehicleData {
             }
           },
           "Trailer": {
-            "Prima 4625.S (4x2 tractor head)":{
-                "bodyType": "TRACTOR_HEAD",
-                "fuelType": "Diesel",
-                "cc": 6692,
-                "seating": 2,
-                "exShowroom": 3273000
-              }
-            },
-          "Prima LX 4923.S (6x4 tractor head)":{
-            "Standard":{
+            "Prima 4625.S (4x2 tractor head)": {
               "bodyType": "TRACTOR_HEAD",
-              "cc": 6700,
               "fuelType": "Diesel",
+              "cc": 6692,
               "seating": 2,
-              "exShowroom": 2920000
+              "exShowroom": 3273000
             }
           },
-          "LPS 4018 (4x2 tractor head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 5883,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1990000
-            }
-          
-          },
-          "Ace Mega XL":{
-            "Diesel Variant":{ 
-              "bodyType": "Mini Truck",
-              "cc": 798,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 492000
-            }
-          },
-          "Signa 4018.S (Tractor-Head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 5635,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3312000
-            }
-          },
-          "Ace XL":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "payload": 710,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 423000
-            }
-          },
-          "Ace Zip XL":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "seating": 2,
-              "payload": 600,
-              "fuelType": "Diesel",
-              "exShowroom": 308000
-            }
-          },
-          "Ultra 1014":{
-            "NG 3L DICR (BS-IV)":{
-              "bodyType": "ILCV Truck",
-              "cc": 3000,
-              "fuelType": "Diesel",
-              "seating": 3,
-              "exShowroom": 1394000
-            } 
-
-          },
-          "Ultra 1412":{
-            "497 DICR (BS-IV)":{
-              "bodyType": "ILCV Truck",
-              "cc": 3783,
-              "fuelType": "Diesel",
-              "seating": 3,
-              "exShowroom": 1792000
-            }
-          },
-          "Ultra 1518 T 5L":{
-            "NG 5L DICR (BS-IV)":{
-              "bodyType": "ILCV Truck",
-              "cc": 5005,
-              "fuelType": "Diesel",
-              "seating": 3,
-              "exShowroom": 1930000
-            }
-          },
-          "Super Ace Mint Insulated Container":{
-            "Diesel BS-IV":{
-              "bodyType": "Insulated Container",
-              "platform": "Super Ace Mint",
-              "cc": 1396,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 509000
-
-            }
-          },
-          "1412 LPT 4830/Containers":{
-            "Diesel BS-IV":{
-              "bodyType": "Container Body (22 ft)",
-              "platform": "LPT 1412",
-              "cc": 3300,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2181000
-            }
-          },
-          "SFC 407/33 10-ft Container":{
-            "Diesel BS-IV":{
-              "bodyType": "Container Body (10 ft)",
-              "platform": "SFC 407/33",
-              "cc": 2956,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 900000
-            }
-          },
-        },
-        "2020":{
-          "Ace Gold":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 702,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 450000
-            },
-            "CNG Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 702,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 465000
-            }
-          },
-          "Ace Mega": {
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 798,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 480000
-            }
-          },
-          "Super Ace Mint":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 1396,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 650000
-            }
-          },
-          "407 EX Pick-up":{
-            "Diesel Variant":{
-              "bodyType": "Light Truck",
-              "cc": 2956,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 870000
-            }
-          },
-          "Xenon Yodha":{
-            "Diesel Variant":{
-              "bodyType": "Pick-up Truck",
-              "cc": 2956,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 950000
-            }
-          },
-          "Winger Ambulance":{
-            "3200 / BS-III High Roof AC":{
-              "bodyType": "AMBULANCE",
-              "cc": 1948,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 1479000
-            },
-            "3200 / BS-III High Roof (Non-AC)":{
-              "bodyType": "AMBULANCE",
-              "cc": 1948,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 1479000
-            },
-            "DICOR BS-IV (launched Jan 2015)":{
-              "bodyType": "AMBULANCE",
-              "cc": 2179,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 1657000
-            }
-          },
-          "Magic Express Ambulance (Type B)":{
+          "Prima LX 4923.S (6x4 tractor head)": {
             "Standard": {
-              "bodyType": "AMBULANCE",
-            "cc": 798,
-            "fuelType": "Diesel",
-            "seating": 4,
-            "exShowroom": 826000
-            }
-          },
-          "Trailer / Tractor-Trailer": {
-            "Prima 4625.S Tractor-Trailer":{
-              "bodyType": "TRAILER",
-              "cc": 6692,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3273000
-            }
-          },
-          "Hearse":{
-            "Generic Hearse Conversion":{
-              "bodyType": "HEARSE",
-              "cc": 2179,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1800000
-            }
-          },
-          "Pedestrian-Controlled Agricultural Tractor":{
-            "Generic Unit":{
-              "bodyType": "TRACTOR",
-              "cc": 2179,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 219000
-            }
-          },
-          "Trailer": {
-            "Prima 4625.S (4x2 tractor head)":{
-                "bodyType": "TRACTOR_HEAD",
-                "fuelType": "Diesel",
-                "cc": 6692,
-                "seating": 2,
-                "exShowroom": 3273000
-              }
-            },
-          "Prima LX 4923.S (6x4 tractor head)":{
-            "Standard":{
               "bodyType": "TRACTOR_HEAD",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -66755,18 +66293,17 @@ class VehicleData {
               "exShowroom": 2920000
             }
           },
-          "LPS 4018 (4x2 tractor head)":{
-            "Standard":{
+          "LPS 4018 (4x2 tractor head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1990000
             }
-          
           },
-          "Ace Mega XL":{
-            "Diesel Variant":{ 
+          "Ace Mega XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -66774,8 +66311,8 @@ class VehicleData {
               "exShowroom": 492000
             }
           },
-          "Signa 4018.S (Tractor-Head)":{
-            "Standard":{
+          "Signa 4018.S (Tractor-Head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5635,
               "fuelType": "Diesel",
@@ -66783,8 +66320,8 @@ class VehicleData {
               "exShowroom": 3312000
             }
           },
-          "Ace XL":{
-            "Diesel Variant":{
+          "Ace XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "payload": 710,
               "fuelType": "Diesel",
@@ -66792,8 +66329,8 @@ class VehicleData {
               "exShowroom": 423000
             }
           },
-          "Ace Zip XL":{
-            "Diesel Variant":{
+          "Ace Zip XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "seating": 2,
               "payload": 600,
@@ -66801,18 +66338,17 @@ class VehicleData {
               "exShowroom": 308000
             }
           },
-          "Ultra 1014":{
-            "NG 3L DICR (BS-IV)":{
+          "Ultra 1014": {
+            "NG 3L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3000,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 1394000
-            } 
-
+            }
           },
-          "Ultra 1412":{
-            "497 DICR (BS-IV)":{
+          "Ultra 1412": {
+            "497 DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3783,
               "fuelType": "Diesel",
@@ -66820,8 +66356,8 @@ class VehicleData {
               "exShowroom": 1792000
             }
           },
-          "Ultra 1518 T 5L":{
-            "NG 5L DICR (BS-IV)":{
+          "Ultra 1518 T 5L": {
+            "NG 5L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 5005,
               "fuelType": "Diesel",
@@ -66829,67 +66365,17 @@ class VehicleData {
               "exShowroom": 1930000
             }
           },
-          "Super Ace Mint Insulated Container":{
-            "Diesel BS-IV":{
-              "bodyType": "Insulated Container",
-              "platform": "Super Ace Mint",
-              "cc": 1396,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 509000
-
-            }
-          },
-          "1412 LPT 4830/Containers":{
-            "Diesel BS-IV":{
-              "bodyType": "Container Body (22 ft)",
-              "platform": "LPT 1412",
-              "cc": 3300,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2181000
-            }
-          },
-          "SFC 407/33 10-ft Container":{
-            "Diesel BS-IV":{
-              "bodyType": "Container Body (10 ft)",
-              "platform": "SFC 407/33",
-              "cc": 2956,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 900000
-            }
-          },
-          "Tata Winger (BS-VI Facelift)":{
-            "Diesel BS-VI":{
-              "bodyType": "Van / Multi-purpose Vehicle",
-              "cc": 2198,
-              "fuelType": "Diesel",
-              "seating": 12,
-              "exShowroom": 1100000
-            }
-          },
-          "Ultra T.7":{
-            "4SPCR Diesel (BS-VI)":{
-              "bodyType": "ILCV Truck (Urban Platform)",
-              "cc": 4000,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1500000
-            }
-          },
-
         },
-        "2021":{
-          "Ace Gold":{
-            "Diesel Variant":{
+        "2019": {
+          "Ace Gold": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 450000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "CNG",
@@ -66898,7 +66384,7 @@ class VehicleData {
             }
           },
           "Ace Mega": {
-            "Diesel Variant":{
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -66906,8 +66392,8 @@ class VehicleData {
               "exShowroom": 480000
             }
           },
-          "Super Ace Mint":{
-            "Diesel Variant":{
+          "Super Ace Mint": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 1396,
               "fuelType": "Diesel",
@@ -66915,8 +66401,8 @@ class VehicleData {
               "exShowroom": 650000
             }
           },
-          "407 EX Pick-up":{
-            "Diesel Variant":{
+          "407 EX Pick-up": {
+            "Diesel Variant": {
               "bodyType": "Light Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -66924,8 +66410,8 @@ class VehicleData {
               "exShowroom": 870000
             }
           },
-          "Xenon Yodha":{
-            "Diesel Variant":{
+          "Xenon Yodha": {
+            "Diesel Variant": {
               "bodyType": "Pick-up Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -66933,22 +66419,22 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "Winger Ambulance":{
-            "3200 / BS-III High Roof AC":{
+          "Winger Ambulance": {
+            "3200 / BS-III High Roof AC": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "3200 / BS-III High Roof (Non-AC)":{
+            "3200 / BS-III High Roof (Non-AC)": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "DICOR BS-IV (launched Jan 2015)":{
+            "DICOR BS-IV (launched Jan 2015)": {
               "bodyType": "AMBULANCE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -66956,7 +66442,7 @@ class VehicleData {
               "exShowroom": 1657000
             }
           },
-          "Magic Express Ambulance (Type B)":{
+          "Magic Express Ambulance (Type B)": {
             "Standard": {
               "bodyType": "AMBULANCE",
               "cc": 798,
@@ -66966,7 +66452,7 @@ class VehicleData {
             }
           },
           "Trailer / Tractor-Trailer": {
-            "Prima 4625.S Tractor-Trailer":{
+            "Prima 4625.S Tractor-Trailer": {
               "bodyType": "TRAILER",
               "cc": 6692,
               "fuelType": "Diesel",
@@ -66974,8 +66460,8 @@ class VehicleData {
               "exShowroom": 3273000
             }
           },
-          "Hearse":{
-            "Generic Hearse Conversion":{
+          "Hearse": {
+            "Generic Hearse Conversion": {
               "bodyType": "HEARSE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -66983,8 +66469,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Pedestrian-Controlled Agricultural Tractor":{
-            "Generic Unit":{
+          "Pedestrian-Controlled Agricultural Tractor": {
+            "Generic Unit": {
               "bodyType": "TRACTOR",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -66993,7 +66479,7 @@ class VehicleData {
             }
           },
           "Trailer": {
-            "Prima 4625.S (4x2 tractor head)":{
+            "Prima 4625.S (4x2 tractor head)": {
               "bodyType": "TRACTOR_HEAD",
               "fuelType": "Diesel",
               "cc": 6692,
@@ -67001,8 +66487,8 @@ class VehicleData {
               "exShowroom": 3273000
             }
           },
-          "Prima LX 4923.S (6x4 tractor head)":{
-            "Standard":{
+          "Prima LX 4923.S (6x4 tractor head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -67010,8 +66496,8 @@ class VehicleData {
               "exShowroom": 2920000
             }
           },
-          "LPS 4018 (4x2 tractor head)":{
-            "Standard":{
+          "LPS 4018 (4x2 tractor head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5883,
               "fuelType": "Diesel",
@@ -67019,8 +66505,8 @@ class VehicleData {
               "exShowroom": 1990000
             }
           },
-          "Ace Mega XL":{
-            "Diesel Variant":{ 
+          "Ace Mega XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -67028,8 +66514,8 @@ class VehicleData {
               "exShowroom": 492000
             }
           },
-          "Signa 4018.S (Tractor-Head)":{
-            "Standard":{
+          "Signa 4018.S (Tractor-Head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5635,
               "fuelType": "Diesel",
@@ -67037,8 +66523,8 @@ class VehicleData {
               "exShowroom": 3312000
             }
           },
-          "Ace XL":{
-            "Diesel Variant":{
+          "Ace XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "payload": 710,
               "fuelType": "Diesel",
@@ -67046,8 +66532,8 @@ class VehicleData {
               "exShowroom": 423000
             }
           },
-          "Ace Zip XL":{
-            "Diesel Variant":{
+          "Ace Zip XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "seating": 2,
               "payload": 600,
@@ -67055,18 +66541,17 @@ class VehicleData {
               "exShowroom": 308000
             }
           },
-          "Ultra 1014":{
-            "NG 3L DICR (BS-IV)":{
+          "Ultra 1014": {
+            "NG 3L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3000,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 1394000
-            } 
-
+            }
           },
-          "Ultra 1412":{
-            "497 DICR (BS-IV)":{
+          "Ultra 1412": {
+            "497 DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3783,
               "fuelType": "Diesel",
@@ -67074,8 +66559,8 @@ class VehicleData {
               "exShowroom": 1792000
             }
           },
-          "Ultra 1518 T 5L":{
-            "NG 5L DICR (BS-IV)":{
+          "Ultra 1518 T 5L": {
+            "NG 5L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 5005,
               "fuelType": "Diesel",
@@ -67083,19 +66568,18 @@ class VehicleData {
               "exShowroom": 1930000
             }
           },
-          "Super Ace Mint Insulated Container":{
-            "Diesel BS-IV":{
+          "Super Ace Mint Insulated Container": {
+            "Diesel BS-IV": {
               "bodyType": "Insulated Container",
               "platform": "Super Ace Mint",
               "cc": 1396,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 509000
-
             }
           },
-          "1412 LPT 4830/Containers":{
-            "Diesel BS-IV":{
+          "1412 LPT 4830/Containers": {
+            "Diesel BS-IV": {
               "bodyType": "Container Body (22 ft)",
               "platform": "LPT 1412",
               "cc": 3300,
@@ -67104,8 +66588,8 @@ class VehicleData {
               "exShowroom": 2181000
             }
           },
-          "SFC 407/33 10-ft Container":{
-            "Diesel BS-IV":{
+          "SFC 407/33 10-ft Container": {
+            "Diesel BS-IV": {
               "bodyType": "Container Body (10 ft)",
               "platform": "SFC 407/33",
               "cc": 2956,
@@ -67114,8 +66598,241 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Tata Winger (BS-VI Facelift)":{
-            "Diesel BS-VI":{
+        },
+        "2020": {
+          "Ace Gold": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 702,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 450000
+            },
+            "CNG Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 702,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 465000
+            }
+          },
+          "Ace Mega": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 480000
+            }
+          },
+          "Super Ace Mint": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 1396,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 650000
+            }
+          },
+          "407 EX Pick-up": {
+            "Diesel Variant": {
+              "bodyType": "Light Truck",
+              "cc": 2956,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 870000
+            }
+          },
+          "Xenon Yodha": {
+            "Diesel Variant": {
+              "bodyType": "Pick-up Truck",
+              "cc": 2956,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 950000
+            }
+          },
+          "Winger Ambulance": {
+            "3200 / BS-III High Roof AC": {
+              "bodyType": "AMBULANCE",
+              "cc": 1948,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 1479000
+            },
+            "3200 / BS-III High Roof (Non-AC)": {
+              "bodyType": "AMBULANCE",
+              "cc": 1948,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 1479000
+            },
+            "DICOR BS-IV (launched Jan 2015)": {
+              "bodyType": "AMBULANCE",
+              "cc": 2179,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 1657000
+            }
+          },
+          "Magic Express Ambulance (Type B)": {
+            "Standard": {
+              "bodyType": "AMBULANCE",
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 826000
+            }
+          },
+          "Trailer / Tractor-Trailer": {
+            "Prima 4625.S Tractor-Trailer": {
+              "bodyType": "TRAILER",
+              "cc": 6692,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3273000
+            }
+          },
+          "Hearse": {
+            "Generic Hearse Conversion": {
+              "bodyType": "HEARSE",
+              "cc": 2179,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 1800000
+            }
+          },
+          "Pedestrian-Controlled Agricultural Tractor": {
+            "Generic Unit": {
+              "bodyType": "TRACTOR",
+              "cc": 2179,
+              "fuelType": "Diesel",
+              "seating": 1,
+              "exShowroom": 219000
+            }
+          },
+          "Trailer": {
+            "Prima 4625.S (4x2 tractor head)": {
+              "bodyType": "TRACTOR_HEAD",
+              "fuelType": "Diesel",
+              "cc": 6692,
+              "seating": 2,
+              "exShowroom": 3273000
+            }
+          },
+          "Prima LX 4923.S (6x4 tractor head)": {
+            "Standard": {
+              "bodyType": "TRACTOR_HEAD",
+              "cc": 6700,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2920000
+            }
+          },
+          "LPS 4018 (4x2 tractor head)": {
+            "Standard": {
+              "bodyType": "TRACTOR_HEAD",
+              "cc": 5883,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 1990000
+            }
+          },
+          "Ace Mega XL": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 492000
+            }
+          },
+          "Signa 4018.S (Tractor-Head)": {
+            "Standard": {
+              "bodyType": "TRACTOR_HEAD",
+              "cc": 5635,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3312000
+            }
+          },
+          "Ace XL": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "payload": 710,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 423000
+            }
+          },
+          "Ace Zip XL": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "seating": 2,
+              "payload": 600,
+              "fuelType": "Diesel",
+              "exShowroom": 308000
+            }
+          },
+          "Ultra 1014": {
+            "NG 3L DICR (BS-IV)": {
+              "bodyType": "ILCV Truck",
+              "cc": 3000,
+              "fuelType": "Diesel",
+              "seating": 3,
+              "exShowroom": 1394000
+            }
+          },
+          "Ultra 1412": {
+            "497 DICR (BS-IV)": {
+              "bodyType": "ILCV Truck",
+              "cc": 3783,
+              "fuelType": "Diesel",
+              "seating": 3,
+              "exShowroom": 1792000
+            }
+          },
+          "Ultra 1518 T 5L": {
+            "NG 5L DICR (BS-IV)": {
+              "bodyType": "ILCV Truck",
+              "cc": 5005,
+              "fuelType": "Diesel",
+              "seating": 3,
+              "exShowroom": 1930000
+            }
+          },
+          "Super Ace Mint Insulated Container": {
+            "Diesel BS-IV": {
+              "bodyType": "Insulated Container",
+              "platform": "Super Ace Mint",
+              "cc": 1396,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 509000
+            }
+          },
+          "1412 LPT 4830/Containers": {
+            "Diesel BS-IV": {
+              "bodyType": "Container Body (22 ft)",
+              "platform": "LPT 1412",
+              "cc": 3300,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2181000
+            }
+          },
+          "SFC 407/33 10-ft Container": {
+            "Diesel BS-IV": {
+              "bodyType": "Container Body (10 ft)",
+              "platform": "SFC 407/33",
+              "cc": 2956,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 900000
+            }
+          },
+          "Tata Winger (BS-VI Facelift)": {
+            "Diesel BS-VI": {
               "bodyType": "Van / Multi-purpose Vehicle",
               "cc": 2198,
               "fuelType": "Diesel",
@@ -67123,8 +66840,8 @@ class VehicleData {
               "exShowroom": 1100000
             }
           },
-          "Ultra T.7":{
-            "4SPCR Diesel (BS-VI)":{
+          "Ultra T.7": {
+            "4SPCR Diesel (BS-VI)": {
               "bodyType": "ILCV Truck (Urban Platform)",
               "cc": 4000,
               "fuelType": "Diesel",
@@ -67132,8 +66849,259 @@ class VehicleData {
               "exShowroom": 1500000
             }
           },
-          "Ace Mini Truck":{
-            "Petrol BS-VI Variant":{
+        },
+        "2021": {
+          "Ace Gold": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 702,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 450000
+            },
+            "CNG Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 702,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 465000
+            }
+          },
+          "Ace Mega": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 480000
+            }
+          },
+          "Super Ace Mint": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 1396,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 650000
+            }
+          },
+          "407 EX Pick-up": {
+            "Diesel Variant": {
+              "bodyType": "Light Truck",
+              "cc": 2956,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 870000
+            }
+          },
+          "Xenon Yodha": {
+            "Diesel Variant": {
+              "bodyType": "Pick-up Truck",
+              "cc": 2956,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 950000
+            }
+          },
+          "Winger Ambulance": {
+            "3200 / BS-III High Roof AC": {
+              "bodyType": "AMBULANCE",
+              "cc": 1948,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 1479000
+            },
+            "3200 / BS-III High Roof (Non-AC)": {
+              "bodyType": "AMBULANCE",
+              "cc": 1948,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 1479000
+            },
+            "DICOR BS-IV (launched Jan 2015)": {
+              "bodyType": "AMBULANCE",
+              "cc": 2179,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 1657000
+            }
+          },
+          "Magic Express Ambulance (Type B)": {
+            "Standard": {
+              "bodyType": "AMBULANCE",
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 826000
+            }
+          },
+          "Trailer / Tractor-Trailer": {
+            "Prima 4625.S Tractor-Trailer": {
+              "bodyType": "TRAILER",
+              "cc": 6692,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3273000
+            }
+          },
+          "Hearse": {
+            "Generic Hearse Conversion": {
+              "bodyType": "HEARSE",
+              "cc": 2179,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 1800000
+            }
+          },
+          "Pedestrian-Controlled Agricultural Tractor": {
+            "Generic Unit": {
+              "bodyType": "TRACTOR",
+              "cc": 2179,
+              "fuelType": "Diesel",
+              "seating": 1,
+              "exShowroom": 219000
+            }
+          },
+          "Trailer": {
+            "Prima 4625.S (4x2 tractor head)": {
+              "bodyType": "TRACTOR_HEAD",
+              "fuelType": "Diesel",
+              "cc": 6692,
+              "seating": 2,
+              "exShowroom": 3273000
+            }
+          },
+          "Prima LX 4923.S (6x4 tractor head)": {
+            "Standard": {
+              "bodyType": "TRACTOR_HEAD",
+              "cc": 6700,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2920000
+            }
+          },
+          "LPS 4018 (4x2 tractor head)": {
+            "Standard": {
+              "bodyType": "TRACTOR_HEAD",
+              "cc": 5883,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 1990000
+            }
+          },
+          "Ace Mega XL": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 492000
+            }
+          },
+          "Signa 4018.S (Tractor-Head)": {
+            "Standard": {
+              "bodyType": "TRACTOR_HEAD",
+              "cc": 5635,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3312000
+            }
+          },
+          "Ace XL": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "payload": 710,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 423000
+            }
+          },
+          "Ace Zip XL": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "seating": 2,
+              "payload": 600,
+              "fuelType": "Diesel",
+              "exShowroom": 308000
+            }
+          },
+          "Ultra 1014": {
+            "NG 3L DICR (BS-IV)": {
+              "bodyType": "ILCV Truck",
+              "cc": 3000,
+              "fuelType": "Diesel",
+              "seating": 3,
+              "exShowroom": 1394000
+            }
+          },
+          "Ultra 1412": {
+            "497 DICR (BS-IV)": {
+              "bodyType": "ILCV Truck",
+              "cc": 3783,
+              "fuelType": "Diesel",
+              "seating": 3,
+              "exShowroom": 1792000
+            }
+          },
+          "Ultra 1518 T 5L": {
+            "NG 5L DICR (BS-IV)": {
+              "bodyType": "ILCV Truck",
+              "cc": 5005,
+              "fuelType": "Diesel",
+              "seating": 3,
+              "exShowroom": 1930000
+            }
+          },
+          "Super Ace Mint Insulated Container": {
+            "Diesel BS-IV": {
+              "bodyType": "Insulated Container",
+              "platform": "Super Ace Mint",
+              "cc": 1396,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 509000
+            }
+          },
+          "1412 LPT 4830/Containers": {
+            "Diesel BS-IV": {
+              "bodyType": "Container Body (22 ft)",
+              "platform": "LPT 1412",
+              "cc": 3300,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 2181000
+            }
+          },
+          "SFC 407/33 10-ft Container": {
+            "Diesel BS-IV": {
+              "bodyType": "Container Body (10 ft)",
+              "platform": "SFC 407/33",
+              "cc": 2956,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 900000
+            }
+          },
+          "Tata Winger (BS-VI Facelift)": {
+            "Diesel BS-VI": {
+              "bodyType": "Van / Multi-purpose Vehicle",
+              "cc": 2198,
+              "fuelType": "Diesel",
+              "seating": 12,
+              "exShowroom": 1100000
+            }
+          },
+          "Ultra T.7": {
+            "4SPCR Diesel (BS-VI)": {
+              "bodyType": "ILCV Truck (Urban Platform)",
+              "cc": 4000,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 1500000
+            }
+          },
+          "Ace Mini Truck": {
+            "Petrol BS-VI Variant": {
               "bodyType": "Mini Truck",
               "cc": 694,
               "fuelType": "Petrol",
@@ -67141,8 +67109,8 @@ class VehicleData {
               "exShowroom": 399000
             }
           },
-          "Winger Cargo":{
-            "Diesel BS-VI LCV":{
+          "Winger Cargo": {
+            "Diesel BS-VI LCV": {
               "bodyType": "Cargo Van / Multi-purpose Vehicle",
               "cc": 2198,
               "fuelType": "Diesel",
@@ -67151,16 +67119,16 @@ class VehicleData {
             }
           },
         },
-        "2022":{
-           "Ace Gold":{
-            "Diesel Variant":{
+        "2022": {
+          "Ace Gold": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 450000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "CNG",
@@ -67169,7 +67137,7 @@ class VehicleData {
             }
           },
           "Ace Mega": {
-            "Diesel Variant":{
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -67177,8 +67145,8 @@ class VehicleData {
               "exShowroom": 480000
             }
           },
-          "Super Ace Mint":{
-            "Diesel Variant":{
+          "Super Ace Mint": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 1396,
               "fuelType": "Diesel",
@@ -67186,8 +67154,8 @@ class VehicleData {
               "exShowroom": 650000
             }
           },
-          "407 EX Pick-up":{
-            "Diesel Variant":{
+          "407 EX Pick-up": {
+            "Diesel Variant": {
               "bodyType": "Light Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -67195,8 +67163,8 @@ class VehicleData {
               "exShowroom": 870000
             }
           },
-          "Xenon Yodha":{
-            "Diesel Variant":{
+          "Xenon Yodha": {
+            "Diesel Variant": {
               "bodyType": "Pick-up Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -67204,22 +67172,22 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "Winger Ambulance":{
-            "3200 / BS-III High Roof AC":{
+          "Winger Ambulance": {
+            "3200 / BS-III High Roof AC": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "3200 / BS-III High Roof (Non-AC)":{
+            "3200 / BS-III High Roof (Non-AC)": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "DICOR BS-IV (launched Jan 2015)":{
+            "DICOR BS-IV (launched Jan 2015)": {
               "bodyType": "AMBULANCE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -67227,7 +67195,7 @@ class VehicleData {
               "exShowroom": 1657000
             }
           },
-          "Magic Express Ambulance (Type B)":{
+          "Magic Express Ambulance (Type B)": {
             "Standard": {
               "bodyType": "AMBULANCE",
               "cc": 798,
@@ -67237,7 +67205,7 @@ class VehicleData {
             }
           },
           "Trailer / Tractor-Trailer": {
-            "Prima 4625.S Tractor-Trailer":{
+            "Prima 4625.S Tractor-Trailer": {
               "bodyType": "TRAILER",
               "cc": 6692,
               "fuelType": "Diesel",
@@ -67245,8 +67213,8 @@ class VehicleData {
               "exShowroom": 3273000
             }
           },
-          "Hearse":{
-            "Generic Hearse Conversion":{
+          "Hearse": {
+            "Generic Hearse Conversion": {
               "bodyType": "HEARSE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -67254,8 +67222,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Pedestrian-Controlled Agricultural Tractor":{
-            "Generic Unit":{
+          "Pedestrian-Controlled Agricultural Tractor": {
+            "Generic Unit": {
               "bodyType": "TRACTOR",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -67264,16 +67232,16 @@ class VehicleData {
             }
           },
           "Trailer": {
-            "Prima 4625.S (4x2 tractor head)":{
-                "bodyType": "TRACTOR_HEAD",
-                "fuelType": "Diesel",
-                "cc": 6692,
-                "seating": 2,
-                "exShowroom": 3273000
-              }
-            },
-          "Prima LX 4923.S (6x4 tractor head)":{
-            "Standard":{
+            "Prima 4625.S (4x2 tractor head)": {
+              "bodyType": "TRACTOR_HEAD",
+              "fuelType": "Diesel",
+              "cc": 6692,
+              "seating": 2,
+              "exShowroom": 3273000
+            }
+          },
+          "Prima LX 4923.S (6x4 tractor head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -67281,18 +67249,17 @@ class VehicleData {
               "exShowroom": 2920000
             }
           },
-          "LPS 4018 (4x2 tractor head)":{
-            "Standard":{
+          "LPS 4018 (4x2 tractor head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1990000
             }
-          
           },
-          "Ace Mega XL":{
-            "Diesel Variant":{ 
+          "Ace Mega XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -67300,8 +67267,8 @@ class VehicleData {
               "exShowroom": 492000
             }
           },
-          "Signa 4018.S (Tractor-Head)":{
-            "Standard":{
+          "Signa 4018.S (Tractor-Head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5635,
               "fuelType": "Diesel",
@@ -67309,8 +67276,8 @@ class VehicleData {
               "exShowroom": 3312000
             }
           },
-          "Ace XL":{
-            "Diesel Variant":{
+          "Ace XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "payload": 710,
               "fuelType": "Diesel",
@@ -67318,8 +67285,8 @@ class VehicleData {
               "exShowroom": 423000
             }
           },
-          "Ace Zip XL":{
-            "Diesel Variant":{
+          "Ace Zip XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "seating": 2,
               "payload": 600,
@@ -67327,18 +67294,17 @@ class VehicleData {
               "exShowroom": 308000
             }
           },
-          "Ultra 1014":{
-            "NG 3L DICR (BS-IV)":{
+          "Ultra 1014": {
+            "NG 3L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3000,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 1394000
-            } 
-
+            }
           },
-          "Ultra 1412":{
-            "497 DICR (BS-IV)":{
+          "Ultra 1412": {
+            "497 DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3783,
               "fuelType": "Diesel",
@@ -67346,8 +67312,8 @@ class VehicleData {
               "exShowroom": 1792000
             }
           },
-          "Ultra 1518 T 5L":{
-            "NG 5L DICR (BS-IV)":{
+          "Ultra 1518 T 5L": {
+            "NG 5L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 5005,
               "fuelType": "Diesel",
@@ -67355,19 +67321,18 @@ class VehicleData {
               "exShowroom": 1930000
             }
           },
-          "Super Ace Mint Insulated Container":{
-            "Diesel BS-IV":{
+          "Super Ace Mint Insulated Container": {
+            "Diesel BS-IV": {
               "bodyType": "Insulated Container",
               "platform": "Super Ace Mint",
               "cc": 1396,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 509000
-
             }
           },
-          "1412 LPT 4830/Containers":{
-            "Diesel BS-IV":{
+          "1412 LPT 4830/Containers": {
+            "Diesel BS-IV": {
               "bodyType": "Container Body (22 ft)",
               "platform": "LPT 1412",
               "cc": 3300,
@@ -67376,8 +67341,8 @@ class VehicleData {
               "exShowroom": 2181000
             }
           },
-          "SFC 407/33 10-ft Container":{
-            "Diesel BS-IV":{
+          "SFC 407/33 10-ft Container": {
+            "Diesel BS-IV": {
               "bodyType": "Container Body (10 ft)",
               "platform": "SFC 407/33",
               "cc": 2956,
@@ -67386,8 +67351,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Tata Winger (BS-VI Facelift)":{
-            "Diesel BS-VI":{
+          "Tata Winger (BS-VI Facelift)": {
+            "Diesel BS-VI": {
               "bodyType": "Van / Multi-purpose Vehicle",
               "cc": 2198,
               "fuelType": "Diesel",
@@ -67395,8 +67360,8 @@ class VehicleData {
               "exShowroom": 1100000
             }
           },
-          "Ultra T.7":{
-            "4SPCR Diesel (BS-VI)":{
+          "Ultra T.7": {
+            "4SPCR Diesel (BS-VI)": {
               "bodyType": "ILCV Truck (Urban Platform)",
               "cc": 4000,
               "fuelType": "Diesel",
@@ -67404,8 +67369,8 @@ class VehicleData {
               "exShowroom": 1500000
             }
           },
-          "Ace Mini Truck":{
-            "Petrol BS-VI Variant":{
+          "Ace Mini Truck": {
+            "Petrol BS-VI Variant": {
               "bodyType": "Mini Truck",
               "cc": 694,
               "fuelType": "Petrol",
@@ -67413,8 +67378,8 @@ class VehicleData {
               "exShowroom": 399000
             }
           },
-          "Winger Cargo":{
-            "Diesel BS-VI LCV":{
+          "Winger Cargo": {
+            "Diesel BS-VI LCV": {
               "bodyType": "Cargo Van / Multi-purpose Vehicle",
               "cc": 2198,
               "fuelType": "Diesel",
@@ -67422,8 +67387,8 @@ class VehicleData {
               "exShowroom": 1150000
             }
           },
-          "Ace EV":{
-            "Electric (BS-VI Equivalent)":{
+          "Ace EV": {
+            "Electric (BS-VI Equivalent)": {
               "bodyType": "Mini Truck / e-Cargo",
               "cc": 0,
               "fuelType": "Electric",
@@ -67431,8 +67396,8 @@ class VehicleData {
               "exShowroom": 999000
             }
           },
-          "Yodha 2.0":{
-            "Diesel (BS-VI Facelift Pickup)":{
+          "Yodha 2.0": {
+            "Diesel (BS-VI Facelift Pickup)": {
               "bodyType": "Pick-up Truck",
               "cc": 2200,
               "fuelType": "Diesel",
@@ -67440,17 +67405,17 @@ class VehicleData {
               "exShowroom": 867000
             }
           },
-          "Intra V20 Bi-Fuel":{
-            "CNG + Petrol (BS-VI)":{
+          "Intra V20 Bi-Fuel": {
+            "CNG + Petrol (BS-VI)": {
               "bodyType": "Bi-Fuel Pick-up",
               "cc": 1199,
               "fuelType": "CNG + Petrol",
               "seating": 2,
-              "exShowroom":  815000
+              "exShowroom": 815000
             }
           },
-          "Intra V50":{
-            "Diesel (BS-VI High-Deck Pickup)":{
+          "Intra V50": {
+            "Diesel (BS-VI High-Deck Pickup)": {
               "bodyType": "Pick-up Truck",
               "cc": 1496,
               "fuelType": "Diesel",
@@ -67459,16 +67424,16 @@ class VehicleData {
             }
           },
         },
-        "2023":{
-           "Ace Gold":{
-            "Diesel Variant":{
+        "2023": {
+          "Ace Gold": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 450000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "CNG",
@@ -67477,7 +67442,7 @@ class VehicleData {
             }
           },
           "Ace Mega": {
-            "Diesel Variant":{
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -67485,8 +67450,8 @@ class VehicleData {
               "exShowroom": 480000
             }
           },
-          "Super Ace Mint":{
-            "Diesel Variant":{
+          "Super Ace Mint": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 1396,
               "fuelType": "Diesel",
@@ -67494,8 +67459,8 @@ class VehicleData {
               "exShowroom": 650000
             }
           },
-          "407 EX Pick-up":{
-            "Diesel Variant":{
+          "407 EX Pick-up": {
+            "Diesel Variant": {
               "bodyType": "Light Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -67503,8 +67468,8 @@ class VehicleData {
               "exShowroom": 870000
             }
           },
-          "Xenon Yodha":{
-            "Diesel Variant":{
+          "Xenon Yodha": {
+            "Diesel Variant": {
               "bodyType": "Pick-up Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -67512,22 +67477,22 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "Winger Ambulance":{
-            "3200 / BS-III High Roof AC":{
+          "Winger Ambulance": {
+            "3200 / BS-III High Roof AC": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "3200 / BS-III High Roof (Non-AC)":{
+            "3200 / BS-III High Roof (Non-AC)": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "DICOR BS-IV (launched Jan 2015)":{
+            "DICOR BS-IV (launched Jan 2015)": {
               "bodyType": "AMBULANCE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -67535,17 +67500,17 @@ class VehicleData {
               "exShowroom": 1657000
             }
           },
-          "Magic Express Ambulance (Type B)":{
+          "Magic Express Ambulance (Type B)": {
             "Standard": {
               "bodyType": "AMBULANCE",
-            "cc": 798,
-            "fuelType": "Diesel",
-            "seating": 4,
-            "exShowroom": 826000
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 826000
             }
           },
           "Trailer / Tractor-Trailer": {
-            "Prima 4625.S Tractor-Trailer":{
+            "Prima 4625.S Tractor-Trailer": {
               "bodyType": "TRAILER",
               "cc": 6692,
               "fuelType": "Diesel",
@@ -67553,8 +67518,8 @@ class VehicleData {
               "exShowroom": 3273000
             }
           },
-          "Hearse":{
-            "Generic Hearse Conversion":{
+          "Hearse": {
+            "Generic Hearse Conversion": {
               "bodyType": "HEARSE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -67562,8 +67527,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Pedestrian-Controlled Agricultural Tractor":{
-            "Generic Unit":{
+          "Pedestrian-Controlled Agricultural Tractor": {
+            "Generic Unit": {
               "bodyType": "TRACTOR",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -67572,8 +67537,8 @@ class VehicleData {
             }
           },
           "Trailer": {
-            "Prima 4625.S (4x2 tractor head)":{
-              "Standard":{
+            "Prima 4625.S (4x2 tractor head)": {
+              "Standard": {
                 "bodyType": "TRACTOR_HEAD",
                 "fuelType": "Diesel",
                 "cc": 6692,
@@ -67581,27 +67546,27 @@ class VehicleData {
                 "exShowroom": 3273000
               }
             },
-          "Prima LX 4923.S (6x4 tractor head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2920000
+            "Prima LX 4923.S (6x4 tractor head)": {
+              "Standard": {
+                "bodyType": "TRACTOR_HEAD",
+                "cc": 6700,
+                "fuelType": "Diesel",
+                "seating": 2,
+                "exShowroom": 2920000
+              }
+            },
+            "LPS 4018 (4x2 tractor head)": {
+              "Standard": {
+                "bodyType": "TRACTOR_HEAD",
+                "cc": 5883,
+                "fuelType": "Diesel",
+                "seating": 2,
+                "exShowroom": 1990000
+              }
             }
           },
-          "LPS 4018 (4x2 tractor head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 5883,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1990000
-            }
-          }
-          },
-          "Ace Mega XL":{
-            "Diesel Variant":{ 
+          "Ace Mega XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -67609,8 +67574,8 @@ class VehicleData {
               "exShowroom": 492000
             }
           },
-          "Signa 4018.S (Tractor-Head)":{
-            "Standard":{
+          "Signa 4018.S (Tractor-Head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5635,
               "fuelType": "Diesel",
@@ -67618,8 +67583,8 @@ class VehicleData {
               "exShowroom": 3312000
             }
           },
-          "Ace XL":{
-            "Diesel Variant":{
+          "Ace XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "payload": 710,
               "fuelType": "Diesel",
@@ -67627,8 +67592,8 @@ class VehicleData {
               "exShowroom": 423000
             }
           },
-          "Ace Zip XL":{
-            "Diesel Variant":{
+          "Ace Zip XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "seating": 2,
               "payload": 600,
@@ -67636,18 +67601,17 @@ class VehicleData {
               "exShowroom": 308000
             }
           },
-          "Ultra 1014":{
-            "NG 3L DICR (BS-IV)":{
+          "Ultra 1014": {
+            "NG 3L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3000,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 1394000
-            } 
-
+            }
           },
-          "Ultra 1412":{
-            "497 DICR (BS-IV)":{
+          "Ultra 1412": {
+            "497 DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3783,
               "fuelType": "Diesel",
@@ -67655,8 +67619,8 @@ class VehicleData {
               "exShowroom": 1792000
             }
           },
-          "Ultra 1518 T 5L":{
-            "NG 5L DICR (BS-IV)":{
+          "Ultra 1518 T 5L": {
+            "NG 5L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 5005,
               "fuelType": "Diesel",
@@ -67664,19 +67628,18 @@ class VehicleData {
               "exShowroom": 1930000
             }
           },
-          "Super Ace Mint Insulated Container":{
-            "Diesel BS-IV":{
+          "Super Ace Mint Insulated Container": {
+            "Diesel BS-IV": {
               "bodyType": "Insulated Container",
               "platform": "Super Ace Mint",
               "cc": 1396,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 509000
-
             }
           },
-          "1412 LPT 4830/Containers":{
-            "Diesel BS-IV":{
+          "1412 LPT 4830/Containers": {
+            "Diesel BS-IV": {
               "bodyType": "Container Body (22 ft)",
               "platform": "LPT 1412",
               "cc": 3300,
@@ -67685,8 +67648,8 @@ class VehicleData {
               "exShowroom": 2181000
             }
           },
-          "SFC 407/33 10-ft Container":{
-            "Diesel BS-IV":{
+          "SFC 407/33 10-ft Container": {
+            "Diesel BS-IV": {
               "bodyType": "Container Body (10 ft)",
               "platform": "SFC 407/33",
               "cc": 2956,
@@ -67695,8 +67658,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Tata Winger (BS-VI Facelift)":{
-            "Diesel BS-VI":{
+          "Tata Winger (BS-VI Facelift)": {
+            "Diesel BS-VI": {
               "bodyType": "Van / Multi-purpose Vehicle",
               "cc": 2198,
               "fuelType": "Diesel",
@@ -67704,8 +67667,8 @@ class VehicleData {
               "exShowroom": 1100000
             }
           },
-          "Ultra T.7":{
-            "4SPCR Diesel (BS-VI)":{
+          "Ultra T.7": {
+            "4SPCR Diesel (BS-VI)": {
               "bodyType": "ILCV Truck (Urban Platform)",
               "cc": 4000,
               "fuelType": "Diesel",
@@ -67713,8 +67676,8 @@ class VehicleData {
               "exShowroom": 1500000
             }
           },
-          "Ace Mini Truck":{
-            "Petrol BS-VI Variant":{
+          "Ace Mini Truck": {
+            "Petrol BS-VI Variant": {
               "bodyType": "Mini Truck",
               "cc": 694,
               "fuelType": "Petrol",
@@ -67722,8 +67685,8 @@ class VehicleData {
               "exShowroom": 399000
             }
           },
-          "Winger Cargo":{
-            "Diesel BS-VI LCV":{
+          "Winger Cargo": {
+            "Diesel BS-VI LCV": {
               "bodyType": "Cargo Van / Multi-purpose Vehicle",
               "cc": 2198,
               "fuelType": "Diesel",
@@ -67731,8 +67694,8 @@ class VehicleData {
               "exShowroom": 1150000
             }
           },
-          "Ace EV":{
-            "Electric (BS-VI Equivalent)":{
+          "Ace EV": {
+            "Electric (BS-VI Equivalent)": {
               "bodyType": "Mini Truck / e-Cargo",
               "cc": 0,
               "fuelType": "Electric",
@@ -67740,8 +67703,8 @@ class VehicleData {
               "exShowroom": 999000
             }
           },
-          "Yodha 2.0":{
-            "Diesel (BS-VI Facelift Pickup)":{
+          "Yodha 2.0": {
+            "Diesel (BS-VI Facelift Pickup)": {
               "bodyType": "Pick-up Truck",
               "cc": 2200,
               "fuelType": "Diesel",
@@ -67749,17 +67712,17 @@ class VehicleData {
               "exShowroom": 867000
             }
           },
-          "Intra V20 Bi-Fuel":{
-            "CNG + Petrol (BS-VI)":{
+          "Intra V20 Bi-Fuel": {
+            "CNG + Petrol (BS-VI)": {
               "bodyType": "Bi-Fuel Pick-up",
               "cc": 1199,
               "fuelType": "CNG + Petrol",
               "seating": 2,
-              "exShowroom":  815000
+              "exShowroom": 815000
             }
           },
-          "Intra V50":{
-            "Diesel (BS-VI High-Deck Pickup)":{
+          "Intra V50": {
+            "Diesel (BS-VI High-Deck Pickup)": {
               "bodyType": "Pick-up Truck",
               "cc": 1496,
               "fuelType": "Diesel",
@@ -67767,8 +67730,8 @@ class VehicleData {
               "exShowroom": 890000
             }
           },
-          "Magic EV":{
-            "Electric (Concept Launch – soon available)":{
+          "Magic EV": {
+            "Electric (Concept Launch – soon available)": {
               "bodyType": "Last-Mile Passenger Van",
               "cc": 0,
               "fuelType": "Electric",
@@ -67776,8 +67739,8 @@ class VehicleData {
               "exShowroom": 1100000
             }
           },
-          "Ultra E.9":{
-            "Electric (Urban ILCV Concept)":{
+          "Ultra E.9": {
+            "Electric (Urban ILCV Concept)": {
               "bodyType": "Urban Cargo Truck",
               "cc": 0,
               "fuelType": "Electric",
@@ -67786,16 +67749,16 @@ class VehicleData {
             }
           },
         },
-        "2024":{
-           "Ace Gold":{
-            "Diesel Variant":{
+        "2024": {
+          "Ace Gold": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 450000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "CNG",
@@ -67804,7 +67767,7 @@ class VehicleData {
             }
           },
           "Ace Mega": {
-            "Diesel Variant":{
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -67812,8 +67775,8 @@ class VehicleData {
               "exShowroom": 480000
             }
           },
-          "Super Ace Mint":{
-            "Diesel Variant":{
+          "Super Ace Mint": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 1396,
               "fuelType": "Diesel",
@@ -67821,8 +67784,8 @@ class VehicleData {
               "exShowroom": 650000
             }
           },
-          "407 EX Pick-up":{
-            "Diesel Variant":{
+          "407 EX Pick-up": {
+            "Diesel Variant": {
               "bodyType": "Light Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -67830,8 +67793,8 @@ class VehicleData {
               "exShowroom": 870000
             }
           },
-          "Xenon Yodha":{
-            "Diesel Variant":{
+          "Xenon Yodha": {
+            "Diesel Variant": {
               "bodyType": "Pick-up Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -67839,22 +67802,22 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "Winger Ambulance":{
-            "3200 / BS-III High Roof AC":{
+          "Winger Ambulance": {
+            "3200 / BS-III High Roof AC": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "3200 / BS-III High Roof (Non-AC)":{
+            "3200 / BS-III High Roof (Non-AC)": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "DICOR BS-IV (launched Jan 2015)":{
+            "DICOR BS-IV (launched Jan 2015)": {
               "bodyType": "AMBULANCE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -67862,17 +67825,17 @@ class VehicleData {
               "exShowroom": 1657000
             }
           },
-          "Magic Express Ambulance (Type B)":{
+          "Magic Express Ambulance (Type B)": {
             "Standard": {
               "bodyType": "AMBULANCE",
-            "cc": 798,
-            "fuelType": "Diesel",
-            "seating": 4,
-            "exShowroom": 826000
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 826000
             }
           },
           "Trailer / Tractor-Trailer": {
-            "Prima 4625.S Tractor-Trailer":{
+            "Prima 4625.S Tractor-Trailer": {
               "bodyType": "TRAILER",
               "cc": 6692,
               "fuelType": "Diesel",
@@ -67880,8 +67843,8 @@ class VehicleData {
               "exShowroom": 3273000
             }
           },
-          "Hearse":{
-            "Generic Hearse Conversion":{
+          "Hearse": {
+            "Generic Hearse Conversion": {
               "bodyType": "HEARSE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -67889,8 +67852,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Pedestrian-Controlled Agricultural Tractor":{
-            "Generic Unit":{
+          "Pedestrian-Controlled Agricultural Tractor": {
+            "Generic Unit": {
               "bodyType": "TRACTOR",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -67899,16 +67862,16 @@ class VehicleData {
             }
           },
           "Trailer": {
-            "Prima 4625.S (4x2 tractor head)":{
-                "bodyType": "TRACTOR_HEAD",
-                "fuelType": "Diesel",
-                "cc": 6692,
-                "seating": 2,
-                "exShowroom": 3273000
-              }
-            },
-          "Prima LX 4923.S (6x4 tractor head)":{
-            "Standard":{
+            "Prima 4625.S (4x2 tractor head)": {
+              "bodyType": "TRACTOR_HEAD",
+              "fuelType": "Diesel",
+              "cc": 6692,
+              "seating": 2,
+              "exShowroom": 3273000
+            }
+          },
+          "Prima LX 4923.S (6x4 tractor head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -67916,18 +67879,17 @@ class VehicleData {
               "exShowroom": 2920000
             }
           },
-          "LPS 4018 (4x2 tractor head)":{
-            "Standard":{
+          "LPS 4018 (4x2 tractor head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1990000
             }
-          
           },
-          "Ace Mega XL":{
-            "Diesel Variant":{ 
+          "Ace Mega XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -67935,8 +67897,8 @@ class VehicleData {
               "exShowroom": 492000
             }
           },
-          "Signa 4018.S (Tractor-Head)":{
-            "Standard":{
+          "Signa 4018.S (Tractor-Head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5635,
               "fuelType": "Diesel",
@@ -67944,8 +67906,8 @@ class VehicleData {
               "exShowroom": 3312000
             }
           },
-          "Ace XL":{
-            "Diesel Variant":{
+          "Ace XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "payload": 710,
               "fuelType": "Diesel",
@@ -67953,8 +67915,8 @@ class VehicleData {
               "exShowroom": 423000
             }
           },
-          "Ace Zip XL":{
-            "Diesel Variant":{
+          "Ace Zip XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "seating": 2,
               "payload": 600,
@@ -67962,18 +67924,17 @@ class VehicleData {
               "exShowroom": 308000
             }
           },
-          "Ultra 1014":{
-            "NG 3L DICR (BS-IV)":{
+          "Ultra 1014": {
+            "NG 3L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3000,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 1394000
-            } 
-
+            }
           },
-          "Ultra 1412":{
-            "497 DICR (BS-IV)":{
+          "Ultra 1412": {
+            "497 DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3783,
               "fuelType": "Diesel",
@@ -67981,8 +67942,8 @@ class VehicleData {
               "exShowroom": 1792000
             }
           },
-          "Ultra 1518 T 5L":{
-            "NG 5L DICR (BS-IV)":{
+          "Ultra 1518 T 5L": {
+            "NG 5L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 5005,
               "fuelType": "Diesel",
@@ -67990,19 +67951,18 @@ class VehicleData {
               "exShowroom": 1930000
             }
           },
-          "Super Ace Mint Insulated Container":{
-            "Diesel BS-IV":{
+          "Super Ace Mint Insulated Container": {
+            "Diesel BS-IV": {
               "bodyType": "Insulated Container",
               "platform": "Super Ace Mint",
               "cc": 1396,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 509000
-
             }
           },
-          "1412 LPT 4830/Containers":{
-            "Diesel BS-IV":{
+          "1412 LPT 4830/Containers": {
+            "Diesel BS-IV": {
               "bodyType": "Container Body (22 ft)",
               "platform": "LPT 1412",
               "cc": 3300,
@@ -68011,8 +67971,8 @@ class VehicleData {
               "exShowroom": 2181000
             }
           },
-          "SFC 407/33 10-ft Container":{
-            "Diesel BS-IV":{
+          "SFC 407/33 10-ft Container": {
+            "Diesel BS-IV": {
               "bodyType": "Container Body (10 ft)",
               "platform": "SFC 407/33",
               "cc": 2956,
@@ -68021,8 +67981,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Tata Winger (BS-VI Facelift)":{
-            "Diesel BS-VI":{
+          "Tata Winger (BS-VI Facelift)": {
+            "Diesel BS-VI": {
               "bodyType": "Van / Multi-purpose Vehicle",
               "cc": 2198,
               "fuelType": "Diesel",
@@ -68030,8 +67990,8 @@ class VehicleData {
               "exShowroom": 1100000
             }
           },
-          "Ultra T.7":{
-            "4SPCR Diesel (BS-VI)":{
+          "Ultra T.7": {
+            "4SPCR Diesel (BS-VI)": {
               "bodyType": "ILCV Truck (Urban Platform)",
               "cc": 4000,
               "fuelType": "Diesel",
@@ -68039,8 +67999,8 @@ class VehicleData {
               "exShowroom": 1500000
             }
           },
-          "Ace Mini Truck":{
-            "Petrol BS-VI Variant":{
+          "Ace Mini Truck": {
+            "Petrol BS-VI Variant": {
               "bodyType": "Mini Truck",
               "cc": 694,
               "fuelType": "Petrol",
@@ -68048,8 +68008,8 @@ class VehicleData {
               "exShowroom": 399000
             }
           },
-          "Winger Cargo":{
-            "Diesel BS-VI LCV":{
+          "Winger Cargo": {
+            "Diesel BS-VI LCV": {
               "bodyType": "Cargo Van / Multi-purpose Vehicle",
               "cc": 2198,
               "fuelType": "Diesel",
@@ -68057,8 +68017,8 @@ class VehicleData {
               "exShowroom": 1150000
             }
           },
-          "Ace EV":{
-            "Electric (BS-VI Equivalent)":{
+          "Ace EV": {
+            "Electric (BS-VI Equivalent)": {
               "bodyType": "Mini Truck / e-Cargo",
               "cc": 0,
               "fuelType": "Electric",
@@ -68066,8 +68026,8 @@ class VehicleData {
               "exShowroom": 999000
             }
           },
-          "Yodha 2.0":{
-            "Diesel (BS-VI Facelift Pickup)":{
+          "Yodha 2.0": {
+            "Diesel (BS-VI Facelift Pickup)": {
               "bodyType": "Pick-up Truck",
               "cc": 2200,
               "fuelType": "Diesel",
@@ -68075,17 +68035,17 @@ class VehicleData {
               "exShowroom": 867000
             }
           },
-          "Intra V20 Bi-Fuel":{
-            "CNG + Petrol (BS-VI)":{
+          "Intra V20 Bi-Fuel": {
+            "CNG + Petrol (BS-VI)": {
               "bodyType": "Bi-Fuel Pick-up",
               "cc": 1199,
               "fuelType": "CNG + Petrol",
               "seating": 2,
-              "exShowroom":  815000
+              "exShowroom": 815000
             }
           },
-          "Intra V50":{
-            "Diesel (BS-VI High-Deck Pickup)":{
+          "Intra V50": {
+            "Diesel (BS-VI High-Deck Pickup)": {
               "bodyType": "Pick-up Truck",
               "cc": 1496,
               "fuelType": "Diesel",
@@ -68093,8 +68053,8 @@ class VehicleData {
               "exShowroom": 890000
             }
           },
-          "Magic EV":{
-            "Electric (Concept Launch – soon available)":{
+          "Magic EV": {
+            "Electric (Concept Launch – soon available)": {
               "bodyType": "Last-Mile Passenger Van",
               "cc": 0,
               "fuelType": "Electric",
@@ -68102,8 +68062,8 @@ class VehicleData {
               "exShowroom": 1100000
             }
           },
-          "Ultra E.9":{
-            "Electric (Urban ILCV Concept)":{
+          "Ultra E.9": {
+            "Electric (Urban ILCV Concept)": {
               "bodyType": "Urban Cargo Truck",
               "cc": 0,
               "fuelType": "Electric",
@@ -68111,8 +68071,8 @@ class VehicleData {
               "exShowroom": 1500000
             }
           },
-          "Ace EV 1000":{
-            "Electric (27 kW EVOGEN, 1 t payload)":{
+          "Ace EV 1000": {
+            "Electric (27 kW EVOGEN, 1 t payload)": {
               "bodyType": "Mini Truck / e-Cargo",
               "cc": 0,
               "fuelType": "Electric",
@@ -68120,18 +68080,17 @@ class VehicleData {
               "exShowroom": 1142000
             }
           },
-
         },
-        "2025":{
-           "Ace Gold":{
-            "Diesel Variant":{
+        "2025": {
+          "Ace Gold": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 450000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 702,
               "fuelType": "CNG",
@@ -68140,7 +68099,7 @@ class VehicleData {
             }
           },
           "Ace Mega": {
-            "Diesel Variant":{
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -68148,8 +68107,8 @@ class VehicleData {
               "exShowroom": 480000
             }
           },
-          "Super Ace Mint":{
-            "Diesel Variant":{
+          "Super Ace Mint": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 1396,
               "fuelType": "Diesel",
@@ -68157,8 +68116,8 @@ class VehicleData {
               "exShowroom": 650000
             }
           },
-          "407 EX Pick-up":{
-            "Diesel Variant":{
+          "407 EX Pick-up": {
+            "Diesel Variant": {
               "bodyType": "Light Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -68166,8 +68125,8 @@ class VehicleData {
               "exShowroom": 870000
             }
           },
-          "Xenon Yodha":{
-            "Diesel Variant":{
+          "Xenon Yodha": {
+            "Diesel Variant": {
               "bodyType": "Pick-up Truck",
               "cc": 2956,
               "fuelType": "Diesel",
@@ -68175,22 +68134,22 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "Winger Ambulance":{
-            "3200 / BS-III High Roof AC":{
+          "Winger Ambulance": {
+            "3200 / BS-III High Roof AC": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "3200 / BS-III High Roof (Non-AC)":{
+            "3200 / BS-III High Roof (Non-AC)": {
               "bodyType": "AMBULANCE",
               "cc": 1948,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 1479000
             },
-            "DICOR BS-IV (launched Jan 2015)":{
+            "DICOR BS-IV (launched Jan 2015)": {
               "bodyType": "AMBULANCE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -68198,17 +68157,17 @@ class VehicleData {
               "exShowroom": 1657000
             }
           },
-          "Magic Express Ambulance (Type B)":{
+          "Magic Express Ambulance (Type B)": {
             "Standard": {
               "bodyType": "AMBULANCE",
-            "cc": 798,
-            "fuelType": "Diesel",
-            "seating": 4,
-            "exShowroom": 826000
+              "cc": 798,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 826000
             }
           },
           "Trailer / Tractor-Trailer": {
-            "Prima 4625.S Tractor-Trailer":{
+            "Prima 4625.S Tractor-Trailer": {
               "bodyType": "TRAILER",
               "cc": 6692,
               "fuelType": "Diesel",
@@ -68216,8 +68175,8 @@ class VehicleData {
               "exShowroom": 3273000
             }
           },
-          "Hearse":{
-            "Generic Hearse Conversion":{
+          "Hearse": {
+            "Generic Hearse Conversion": {
               "bodyType": "HEARSE",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -68225,8 +68184,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "Pedestrian-Controlled Agricultural Tractor":{
-            "Generic Unit":{
+          "Pedestrian-Controlled Agricultural Tractor": {
+            "Generic Unit": {
               "bodyType": "TRACTOR",
               "cc": 2179,
               "fuelType": "Diesel",
@@ -68235,8 +68194,8 @@ class VehicleData {
             }
           },
           "Trailer": {
-            "Prima 4625.S (4x2 tractor head)":{
-              "Standard":{
+            "Prima 4625.S (4x2 tractor head)": {
+              "Standard": {
                 "bodyType": "TRACTOR_HEAD",
                 "fuelType": "Diesel",
                 "cc": 6692,
@@ -68244,27 +68203,27 @@ class VehicleData {
                 "exShowroom": 3273000
               }
             },
-          "Prima LX 4923.S (6x4 tractor head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 2920000
+            "Prima LX 4923.S (6x4 tractor head)": {
+              "Standard": {
+                "bodyType": "TRACTOR_HEAD",
+                "cc": 6700,
+                "fuelType": "Diesel",
+                "seating": 2,
+                "exShowroom": 2920000
+              }
+            },
+            "LPS 4018 (4x2 tractor head)": {
+              "Standard": {
+                "bodyType": "TRACTOR_HEAD",
+                "cc": 5883,
+                "fuelType": "Diesel",
+                "seating": 2,
+                "exShowroom": 1990000
+              }
             }
           },
-          "LPS 4018 (4x2 tractor head)":{
-            "Standard":{
-              "bodyType": "TRACTOR_HEAD",
-              "cc": 5883,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1990000
-            }
-          }
-          },
-          "Ace Mega XL":{
-            "Diesel Variant":{ 
+          "Ace Mega XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 798,
               "fuelType": "Diesel",
@@ -68272,8 +68231,8 @@ class VehicleData {
               "exShowroom": 492000
             }
           },
-          "Signa 4018.S (Tractor-Head)":{
-            "Standard":{
+          "Signa 4018.S (Tractor-Head)": {
+            "Standard": {
               "bodyType": "TRACTOR_HEAD",
               "cc": 5635,
               "fuelType": "Diesel",
@@ -68281,8 +68240,8 @@ class VehicleData {
               "exShowroom": 3312000
             }
           },
-          "Ace XL":{
-            "Diesel Variant":{
+          "Ace XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "payload": 710,
               "fuelType": "Diesel",
@@ -68290,8 +68249,8 @@ class VehicleData {
               "exShowroom": 423000
             }
           },
-          "Ace Zip XL":{
-            "Diesel Variant":{
+          "Ace Zip XL": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "seating": 2,
               "payload": 600,
@@ -68299,18 +68258,17 @@ class VehicleData {
               "exShowroom": 308000
             }
           },
-          "Ultra 1014":{
-            "NG 3L DICR (BS-IV)":{
+          "Ultra 1014": {
+            "NG 3L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3000,
               "fuelType": "Diesel",
               "seating": 3,
               "exShowroom": 1394000
-            } 
-
+            }
           },
-          "Ultra 1412":{
-            "497 DICR (BS-IV)":{
+          "Ultra 1412": {
+            "497 DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 3783,
               "fuelType": "Diesel",
@@ -68318,8 +68276,8 @@ class VehicleData {
               "exShowroom": 1792000
             }
           },
-          "Ultra 1518 T 5L":{
-            "NG 5L DICR (BS-IV)":{
+          "Ultra 1518 T 5L": {
+            "NG 5L DICR (BS-IV)": {
               "bodyType": "ILCV Truck",
               "cc": 5005,
               "fuelType": "Diesel",
@@ -68327,19 +68285,18 @@ class VehicleData {
               "exShowroom": 1930000
             }
           },
-          "Super Ace Mint Insulated Container":{
-            "Diesel BS-IV":{
+          "Super Ace Mint Insulated Container": {
+            "Diesel BS-IV": {
               "bodyType": "Insulated Container",
               "platform": "Super Ace Mint",
               "cc": 1396,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 509000
-
             }
           },
-          "1412 LPT 4830/Containers":{
-            "Diesel BS-IV":{
+          "1412 LPT 4830/Containers": {
+            "Diesel BS-IV": {
               "bodyType": "Container Body (22 ft)",
               "platform": "LPT 1412",
               "cc": 3300,
@@ -68348,8 +68305,8 @@ class VehicleData {
               "exShowroom": 2181000
             }
           },
-          "SFC 407/33 10-ft Container":{
-            "Diesel BS-IV":{
+          "SFC 407/33 10-ft Container": {
+            "Diesel BS-IV": {
               "bodyType": "Container Body (10 ft)",
               "platform": "SFC 407/33",
               "cc": 2956,
@@ -68358,8 +68315,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Tata Winger (BS-VI Facelift)":{
-            "Diesel BS-VI":{
+          "Tata Winger (BS-VI Facelift)": {
+            "Diesel BS-VI": {
               "bodyType": "Van / Multi-purpose Vehicle",
               "cc": 2198,
               "fuelType": "Diesel",
@@ -68367,8 +68324,8 @@ class VehicleData {
               "exShowroom": 1100000
             }
           },
-          "Ultra T.7":{
-            "4SPCR Diesel (BS-VI)":{
+          "Ultra T.7": {
+            "4SPCR Diesel (BS-VI)": {
               "bodyType": "ILCV Truck (Urban Platform)",
               "cc": 4000,
               "fuelType": "Diesel",
@@ -68376,8 +68333,8 @@ class VehicleData {
               "exShowroom": 1500000
             }
           },
-          "Ace Mini Truck":{
-            "Petrol BS-VI Variant":{
+          "Ace Mini Truck": {
+            "Petrol BS-VI Variant": {
               "bodyType": "Mini Truck",
               "cc": 694,
               "fuelType": "Petrol",
@@ -68385,8 +68342,8 @@ class VehicleData {
               "exShowroom": 399000
             }
           },
-          "Winger Cargo":{
-            "Diesel BS-VI LCV":{
+          "Winger Cargo": {
+            "Diesel BS-VI LCV": {
               "bodyType": "Cargo Van / Multi-purpose Vehicle",
               "cc": 2198,
               "fuelType": "Diesel",
@@ -68394,8 +68351,8 @@ class VehicleData {
               "exShowroom": 1150000
             }
           },
-          "Ace EV":{
-            "Electric (BS-VI Equivalent)":{
+          "Ace EV": {
+            "Electric (BS-VI Equivalent)": {
               "bodyType": "Mini Truck / e-Cargo",
               "cc": 0,
               "fuelType": "Electric",
@@ -68403,8 +68360,8 @@ class VehicleData {
               "exShowroom": 999000
             }
           },
-          "Yodha 2.0":{
-            "Diesel (BS-VI Facelift Pickup)":{
+          "Yodha 2.0": {
+            "Diesel (BS-VI Facelift Pickup)": {
               "bodyType": "Pick-up Truck",
               "cc": 2200,
               "fuelType": "Diesel",
@@ -68412,17 +68369,17 @@ class VehicleData {
               "exShowroom": 867000
             }
           },
-          "Intra V20 Bi-Fuel":{
-            "CNG + Petrol (BS-VI)":{
+          "Intra V20 Bi-Fuel": {
+            "CNG + Petrol (BS-VI)": {
               "bodyType": "Bi-Fuel Pick-up",
               "cc": 1199,
               "fuelType": "CNG + Petrol",
               "seating": 2,
-              "exShowroom":  815000
+              "exShowroom": 815000
             }
           },
-          "Intra V50":{
-            "Diesel (BS-VI High-Deck Pickup)":{
+          "Intra V50": {
+            "Diesel (BS-VI High-Deck Pickup)": {
               "bodyType": "Pick-up Truck",
               "cc": 1496,
               "fuelType": "Diesel",
@@ -68430,8 +68387,8 @@ class VehicleData {
               "exShowroom": 890000
             }
           },
-          "Magic EV":{
-            "Electric (Concept Launch – soon available)":{
+          "Magic EV": {
+            "Electric (Concept Launch – soon available)": {
               "bodyType": "Last-Mile Passenger Van",
               "cc": 0,
               "fuelType": "Electric",
@@ -68439,8 +68396,8 @@ class VehicleData {
               "exShowroom": 1100000
             }
           },
-          "Ultra E.9":{
-            "Electric (Urban ILCV Concept)":{
+          "Ultra E.9": {
+            "Electric (Urban ILCV Concept)": {
               "bodyType": "Urban Cargo Truck",
               "cc": 0,
               "fuelType": "Electric",
@@ -68448,8 +68405,8 @@ class VehicleData {
               "exShowroom": 1500000
             }
           },
-          "Ace EV 1000":{
-            "Electric (27 kW EVOGEN, 1 t payload)":{
+          "Ace EV 1000": {
+            "Electric (27 kW EVOGEN, 1 t payload)": {
               "bodyType": "Mini Truck / e-Cargo",
               "cc": 0,
               "fuelType": "Electric",
@@ -68457,22 +68414,22 @@ class VehicleData {
               "exShowroom": 1142000
             }
           },
-          "Ace Pro":{
-            "Electric":{
+          "Ace Pro": {
+            "Electric": {
               "bodyType": "Mini Truck / e-Cargo",
               "cc": 0,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 550000
             },
-            "Bi-Fuel (Petrol + CNG)":{
+            "Bi-Fuel (Petrol + CNG)": {
               "bodyType": "Mini Truck",
               "cc": 694,
               "fuelType": "Petrol + CNG",
               "seating": 2,
               "exShowroom": 450000
             },
-            "Petrol Variant":{
+            "Petrol Variant": {
               "bodyType": "Mini Truck",
               "cc": 694,
               "fuelType": "Petrol",
@@ -68480,8 +68437,8 @@ class VehicleData {
               "exShowroom": 420000
             },
           },
-          "Intra EV Pickup":{
-            "Electric (BS-VI City Pickup)":{
+          "Intra EV Pickup": {
+            "Electric (BS-VI City Pickup)": {
               "bodyType": "Electric Pick-up",
               "cc": 0,
               "fuelType": "Electric",
@@ -68489,20 +68446,19 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          
         },
       },
-      "Mahindra":{
-        "2015":{
-          "Jeeto":{
-            "S-Series Mini Truck (Diesel, BS-III)":{
+      "Mahindra": {
+        "2015": {
+          "Jeeto": {
+            "S-Series Mini Truck (Diesel, BS-III)": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 235000
             },
-            "S6-11":{
+            "S6-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -68516,35 +68472,35 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 252000
             },
-            "S10-11":{
+            "S10-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-16":{
+            "S10-16": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 292000
             },
-            "S6-11 CNG":{
+            "S6-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 252000
             },
-            "S6-16 CNG":{
+            "S6-16 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-11 CNG":{
+            "S10-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
@@ -68558,17 +68514,16 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 312000
             }
-
           },
-          "Supro Van":{
-            "LX (Diesel, BS-III MPV)":{
+          "Supro Van": {
+            "LX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 438000
             },
-            "ZX (Diesel, BS-III MPV)":{
+            "ZX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
@@ -68576,8 +68531,8 @@ class VehicleData {
               "exShowroom": 493000
             }
           },
-          "Supro Maxitruck":{
-            "T2 (Diesel, 1 ton payload)":{
+          "Supro Maxitruck": {
+            "T2 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
@@ -68590,28 +68545,26 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
-
             },
-            "T6 (Diesel, 1 ton payload)":{
+            "T6 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck (High Spec)",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
             }
-
           }
         },
-        "2016":{
-          "Jeeto":{
-            "S-Series Mini Truck (Diesel, BS-III)":{
+        "2016": {
+          "Jeeto": {
+            "S-Series Mini Truck (Diesel, BS-III)": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 235000
             },
-            "S6-11":{
+            "S6-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -68625,35 +68578,35 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 252000
             },
-            "S10-11":{
+            "S10-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-16":{
+            "S10-16": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 292000
             },
-            "S6-11 CNG":{
+            "S6-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 252000
             },
-            "S6-16 CNG":{
+            "S6-16 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-11 CNG":{
+            "S10-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
@@ -68667,7 +68620,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 312000
             },
-            "X7-16 Diesel":{
+            "X7-16 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
@@ -68681,38 +68634,37 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 565000
             },
-            "X7-16 Petrol":{
+            "X7-16 Petrol": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 525000
             }
-
           },
-          "Supro Van":{
-            "LX (Diesel, BS-III MPV)":{
+          "Supro Van": {
+            "LX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 438000
             },
-            "ZX (Diesel, BS-III MPV)":{
+            "ZX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 493000
             },
-            "LX Diesel":{
+            "LX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 532000
             },
-            "ZX Diesel":{
+            "ZX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
@@ -68720,8 +68672,8 @@ class VehicleData {
               "exShowroom": 582000
             }
           },
-          "Supro Maxitruck":{
-            "T2 (Diesel, 1 ton payload)":{
+          "Supro Maxitruck": {
+            "T2 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
@@ -68734,22 +68686,20 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
-
             },
-            "T6 (Diesel, 1 ton payload)":{
+            "T6 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck (High Spec)",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
             },
-            "T2 Diesel":{
+            "T2 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 625000
-
             },
             "T4 Diesel": {
               "bodyType": "Mini Truck",
@@ -68758,26 +68708,25 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 675000
             },
-            "T6 Diesel":{
+            "T6 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 725000
             }
-
           },
         },
-        "2017":{
-          "Jeeto":{
-            "S-Series Mini Truck (Diesel, BS-III)":{
+        "2017": {
+          "Jeeto": {
+            "S-Series Mini Truck (Diesel, BS-III)": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 235000
             },
-            "S6-11":{
+            "S6-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -68791,35 +68740,35 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 252000
             },
-            "S10-11":{
+            "S10-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-16":{
+            "S10-16": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 292000
             },
-            "S6-11 CNG":{
+            "S6-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 252000
             },
-            "S6-16 CNG":{
+            "S6-16 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-11 CNG":{
+            "S10-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
@@ -68833,7 +68782,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 312000
             },
-            "X7-16 Diesel":{
+            "X7-16 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
@@ -68847,38 +68796,37 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 565000
             },
-            "X7-16 Petrol":{
+            "X7-16 Petrol": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 525000
             },
-
           },
-          "Supro Van":{
-            "LX (Diesel, BS-III MPV)":{
+          "Supro Van": {
+            "LX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 438000
             },
-            "ZX (Diesel, BS-III MPV)":{
+            "ZX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 493000
             },
-            "LX Diesel":{
+            "LX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 532000
             },
-            "ZX Diesel":{
+            "ZX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
@@ -68886,8 +68834,8 @@ class VehicleData {
               "exShowroom": 582000
             }
           },
-          "Supro Maxitruck":{
-            "T2 (Diesel, 1 ton payload)":{
+          "Supro Maxitruck": {
+            "T2 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
@@ -68900,22 +68848,20 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
-
             },
-            "T6 (Diesel, 1 ton payload)":{
+            "T6 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck (High Spec)",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
             },
-            "T2 Diesel":{
+            "T2 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 625000
-
             },
             "T4 Diesel": {
               "bodyType": "Mini Truck",
@@ -68924,14 +68870,13 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 675000
             },
-            "T6 Diesel":{
+            "T6 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 725000
             }
-
           },
           "Jeeto Minivan": {
             "Hardtop Diesel": {
@@ -68941,21 +68886,21 @@ class VehicleData {
               "seating": 4,
               "exShowroom": 345000
             },
-            "Hardtop CNG":{
+            "Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 4,
               "exShowroom": 365000
             },
-            "Semi-Hardtop Diesel":{
+            "Semi-Hardtop Diesel": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 325000
             },
-            "Semi-Hardtop CNG":{
+            "Semi-Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
@@ -68964,16 +68909,16 @@ class VehicleData {
             }
           }
         },
-        "2018":{
-          "Jeeto":{
-            "S-Series Mini Truck (Diesel, BS-III)":{
+        "2018": {
+          "Jeeto": {
+            "S-Series Mini Truck (Diesel, BS-III)": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 235000
             },
-            "S6-11":{
+            "S6-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -68987,35 +68932,35 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 252000
             },
-            "S10-11":{
+            "S10-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-16":{
+            "S10-16": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 292000
             },
-            "S6-11 CNG":{
+            "S6-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 252000
             },
-            "S6-16 CNG":{
+            "S6-16 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-11 CNG":{
+            "S10-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
@@ -69029,7 +68974,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 312000
             },
-            "X7-16 Diesel":{
+            "X7-16 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
@@ -69043,38 +68988,37 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 565000
             },
-            "X7-16 Petrol":{
+            "X7-16 Petrol": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 525000
             },
-
           },
-          "Supro Van":{
-            "LX (Diesel, BS-III MPV)":{
+          "Supro Van": {
+            "LX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 438000
             },
-            "ZX (Diesel, BS-III MPV)":{
+            "ZX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 493000
             },
-            "LX Diesel":{
+            "LX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 532000
             },
-            "ZX Diesel":{
+            "ZX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
@@ -69082,8 +69026,8 @@ class VehicleData {
               "exShowroom": 582000
             }
           },
-          "Supro Maxitruck":{
-            "T2 (Diesel, 1 ton payload)":{
+          "Supro Maxitruck": {
+            "T2 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
@@ -69096,22 +69040,20 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
-
             },
-            "T6 (Diesel, 1 ton payload)":{
+            "T6 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck (High Spec)",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
             },
-            "T2 Diesel":{
+            "T2 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 625000
-
             },
             "T4 Diesel": {
               "bodyType": "Mini Truck",
@@ -69120,14 +69062,13 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 675000
             },
-            "T6 Diesel":{
+            "T6 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 725000
             }
-
           },
           "Jeeto Minivan": {
             "Hardtop Diesel": {
@@ -69137,21 +69078,21 @@ class VehicleData {
               "seating": 4,
               "exShowroom": 345000
             },
-            "Hardtop CNG":{
+            "Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 4,
               "exShowroom": 365000
             },
-            "Semi-Hardtop Diesel":{
+            "Semi-Hardtop Diesel": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 325000
             },
-            "Semi-Hardtop CNG":{
+            "Semi-Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
@@ -69159,18 +69100,17 @@ class VehicleData {
               "exShowroom": 345000
             }
           },
-
         },
-        "2019":{
-          "Jeeto":{
-            "S-Series Mini Truck (Diesel, BS-III)":{
+        "2019": {
+          "Jeeto": {
+            "S-Series Mini Truck (Diesel, BS-III)": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 235000
             },
-            "S6-11":{
+            "S6-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -69184,35 +69124,35 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 252000
             },
-            "S10-11":{
+            "S10-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-16":{
+            "S10-16": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 292000
             },
-            "S6-11 CNG":{
+            "S6-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 252000
             },
-            "S6-16 CNG":{
+            "S6-16 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-11 CNG":{
+            "S10-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
@@ -69226,7 +69166,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 312000
             },
-            "X7-16 Diesel":{
+            "X7-16 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
@@ -69240,38 +69180,37 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 565000
             },
-            "X7-16 Petrol":{
+            "X7-16 Petrol": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 525000
             },
-
           },
-          "Supro Van":{
-            "LX (Diesel, BS-III MPV)":{
+          "Supro Van": {
+            "LX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 438000
             },
-            "ZX (Diesel, BS-III MPV)":{
+            "ZX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 493000
             },
-            "LX Diesel":{
+            "LX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 532000
             },
-            "ZX Diesel":{
+            "ZX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
@@ -69279,8 +69218,8 @@ class VehicleData {
               "exShowroom": 582000
             }
           },
-          "Supro Maxitruck":{
-            "T2 (Diesel, 1 ton payload)":{
+          "Supro Maxitruck": {
+            "T2 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
@@ -69293,22 +69232,20 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
-
             },
-            "T6 (Diesel, 1 ton payload)":{
+            "T6 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck (High Spec)",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
             },
-            "T2 Diesel":{
+            "T2 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 625000
-
             },
             "T4 Diesel": {
               "bodyType": "Mini Truck",
@@ -69317,14 +69254,13 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 675000
             },
-            "T6 Diesel":{
+            "T6 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 725000
             }
-
           },
           "Jeeto Minivan": {
             "Hardtop Diesel": {
@@ -69334,21 +69270,21 @@ class VehicleData {
               "seating": 4,
               "exShowroom": 345000
             },
-            "Hardtop CNG":{
+            "Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 4,
               "exShowroom": 365000
             },
-            "Semi-Hardtop Diesel":{
+            "Semi-Hardtop Diesel": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 325000
             },
-            "Semi-Hardtop CNG":{
+            "Semi-Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
@@ -69356,42 +69292,40 @@ class VehicleData {
               "exShowroom": 345000
             }
           },
-          "Jeeto Plus":{
-            "Diesel Variant":{
+          "Jeeto Plus": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 346000
             },
-            "Petrol Variant":{
+            "Petrol Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 346000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 365000
             }
-
           }
-          
         },
-        "2020":{
-          "Jeeto":{
-            "S-Series Mini Truck (Diesel, BS-III)":{
+        "2020": {
+          "Jeeto": {
+            "S-Series Mini Truck (Diesel, BS-III)": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 235000
             },
-            "S6-11":{
+            "S6-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -69405,35 +69339,35 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 252000
             },
-            "S10-11":{
+            "S10-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-16":{
+            "S10-16": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 292000
             },
-            "S6-11 CNG":{
+            "S6-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 252000
             },
-            "S6-16 CNG":{
+            "S6-16 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-11 CNG":{
+            "S10-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
@@ -69447,7 +69381,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 312000
             },
-            "X7-16 Diesel":{
+            "X7-16 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
@@ -69461,38 +69395,37 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 565000
             },
-            "X7-16 Petrol":{
+            "X7-16 Petrol": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 525000
             },
-
           },
-          "Supro Van":{
-            "LX (Diesel, BS-III MPV)":{
+          "Supro Van": {
+            "LX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 438000
             },
-            "ZX (Diesel, BS-III MPV)":{
+            "ZX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 493000
             },
-            "LX Diesel":{
+            "LX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 532000
             },
-            "ZX Diesel":{
+            "ZX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
@@ -69500,8 +69433,8 @@ class VehicleData {
               "exShowroom": 582000
             }
           },
-          "Supro Maxitruck":{
-            "T2 (Diesel, 1 ton payload)":{
+          "Supro Maxitruck": {
+            "T2 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
@@ -69514,22 +69447,20 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
-
             },
-            "T6 (Diesel, 1 ton payload)":{
+            "T6 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck (High Spec)",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
             },
-            "T2 Diesel":{
+            "T2 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 625000
-
             },
             "T4 Diesel": {
               "bodyType": "Mini Truck",
@@ -69538,14 +69469,13 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 675000
             },
-            "T6 Diesel":{
+            "T6 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 725000
             }
-
           },
           "Jeeto Minivan": {
             "Hardtop Diesel": {
@@ -69555,21 +69485,21 @@ class VehicleData {
               "seating": 4,
               "exShowroom": 345000
             },
-            "Hardtop CNG":{
+            "Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 4,
               "exShowroom": 365000
             },
-            "Semi-Hardtop Diesel":{
+            "Semi-Hardtop Diesel": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 325000
             },
-            "Semi-Hardtop CNG":{
+            "Semi-Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
@@ -69577,41 +69507,39 @@ class VehicleData {
               "exShowroom": 345000
             }
           },
-          "Jeeto Plus":{
-            "Diesel Variant":{
+          "Jeeto Plus": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 346000
             },
-            "Petrol Variant":{
+            "Petrol Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 346000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 365000
             }
-
           },
-          "BlazoX 40 Tractor Trailer":{
-            "Tractor Trailer":{
+          "BlazoX 40 Tractor Trailer": {
+            "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 3200000
-
             }
           },
-          "BlazoX 46 Tractor Trailer":{
+          "BlazoX 46 Tractor Trailer": {
             "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
@@ -69622,15 +69550,15 @@ class VehicleData {
           },
           "BlazoX 55 Trailer": {
             "Trailer": {
-                "bodyType": "Trailer",
-                "cc": 7200,
-                "fuelType": "Diesel",
-                "seating": 2,
-                "exShowroom": 3600000
+              "bodyType": "Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3600000
             }
           },
-          "Bolero Ambulance":{
-            "Ambulance":{
+          "Bolero Ambulance": {
+            "Ambulance": {
               "bodyType": "Ambulance",
               "cc": 2523,
               "fuelType": "Diesel",
@@ -69638,7 +69566,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Bolero Hearse":{
+          "Bolero Hearse": {
             "Hearse": {
               "bodyType": "Hearse",
               "cc": 2523,
@@ -69647,19 +69575,17 @@ class VehicleData {
               "exShowroom": 900000
             }
           }
-          
-          
         },
-        "2021":{
-          "Jeeto":{
-            "S-Series Mini Truck (Diesel, BS-III)":{
+        "2021": {
+          "Jeeto": {
+            "S-Series Mini Truck (Diesel, BS-III)": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 235000
             },
-            "S6-11":{
+            "S6-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -69673,35 +69599,35 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 252000
             },
-            "S10-11":{
+            "S10-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-16":{
+            "S10-16": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 292000
             },
-            "S6-11 CNG":{
+            "S6-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 252000
             },
-            "S6-16 CNG":{
+            "S6-16 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-11 CNG":{
+            "S10-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
@@ -69715,7 +69641,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 312000
             },
-            "X7-16 Diesel":{
+            "X7-16 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
@@ -69729,38 +69655,37 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 565000
             },
-            "X7-16 Petrol":{
+            "X7-16 Petrol": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 525000
             },
-
           },
-          "Supro Van":{
-            "LX (Diesel, BS-III MPV)":{
+          "Supro Van": {
+            "LX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 438000
             },
-            "ZX (Diesel, BS-III MPV)":{
+            "ZX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 493000
             },
-            "LX Diesel":{
+            "LX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 532000
             },
-            "ZX Diesel":{
+            "ZX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
@@ -69768,8 +69693,8 @@ class VehicleData {
               "exShowroom": 582000
             }
           },
-          "Supro Maxitruck":{
-            "T2 (Diesel, 1 ton payload)":{
+          "Supro Maxitruck": {
+            "T2 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
@@ -69782,22 +69707,20 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
-
             },
-            "T6 (Diesel, 1 ton payload)":{
+            "T6 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck (High Spec)",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
             },
-            "T2 Diesel":{
+            "T2 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 625000
-
             },
             "T4 Diesel": {
               "bodyType": "Mini Truck",
@@ -69806,14 +69729,13 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 675000
             },
-            "T6 Diesel":{
+            "T6 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 725000
             }
-
           },
           "Jeeto Minivan": {
             "Hardtop Diesel": {
@@ -69823,21 +69745,21 @@ class VehicleData {
               "seating": 4,
               "exShowroom": 345000
             },
-            "Hardtop CNG":{
+            "Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 4,
               "exShowroom": 365000
             },
-            "Semi-Hardtop Diesel":{
+            "Semi-Hardtop Diesel": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 325000
             },
-            "Semi-Hardtop CNG":{
+            "Semi-Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
@@ -69845,41 +69767,39 @@ class VehicleData {
               "exShowroom": 345000
             }
           },
-          "Jeeto Plus":{
-            "Diesel Variant":{
+          "Jeeto Plus": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 346000
             },
-            "Petrol Variant":{
+            "Petrol Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 346000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 365000
             }
-
           },
-          "BlazoX 40 Tractor Trailer":{
-            "Tractor Trailer":{
+          "BlazoX 40 Tractor Trailer": {
+            "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 3200000
-
             }
           },
-          "BlazoX 46 Tractor Trailer":{
+          "BlazoX 46 Tractor Trailer": {
             "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
@@ -69890,22 +69810,22 @@ class VehicleData {
           },
           "BlazoX 55 Trailer": {
             "Trailer": {
-                "bodyType": "Trailer",
-                "cc": 7200,
-                "fuelType": "Diesel",
-                "seating": 2,
-                "exShowroom": 3600000
+              "bodyType": "Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3600000
             }
           },
-          "Bolero Ambulance":{
-            "Ambulance":{
+          "Bolero Ambulance": {
+            "Ambulance": {
               "bodyType": "Ambulance",
               "cc": 2523,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 875000
             },
-            "BS6":{
+            "BS6": {
               "bodyType": "Ambulance",
               "cc": 2523,
               "fuelType": "Diesel",
@@ -69913,7 +69833,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Bolero Hearse":{
+          "Bolero Hearse": {
             "Hearse": {
               "bodyType": "Hearse",
               "cc": 2523,
@@ -69921,7 +69841,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 900000
             },
-            "BS6":{
+            "BS6": {
               "bodyType": "Hearse",
               "cc": 2523,
               "fuelType": "Diesel",
@@ -69929,8 +69849,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Blazo X 40 Tractor Trailer":{
-            "Tractor Trailer":{
+          "Blazo X 40 Tractor Trailer": {
+            "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -69938,7 +69858,7 @@ class VehicleData {
               "exShowroom": 3200000
             }
           },
-          "Blazo X 46 Tractor Trailer":{
+          "Blazo X 46 Tractor Trailer": {
             "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
@@ -69957,7 +69877,7 @@ class VehicleData {
             }
           },
           "Jeeto S-Series Mini Truck (Diesel)": {
-            "Mini Truck":{
+            "Mini Truck": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -69966,7 +69886,7 @@ class VehicleData {
             }
           },
           "Jeeto S-Series Mini Truck (CNG)": {
-            "Mini Truck":{
+            "Mini Truck": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "CNG",
@@ -69974,8 +69894,8 @@ class VehicleData {
               "exShowroom": 365000
             }
           },
-          "Jeeto L-Series":{
-            "Diesel":{
+          "Jeeto L-Series": {
+            "Diesel": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -69990,15 +69910,15 @@ class VehicleData {
               "exShowroom": 290000
             }
           },
-          "Jeeto X-Series":{
-            "Diesel":{
+          "Jeeto X-Series": {
+            "Diesel": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 280000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "CNG",
@@ -70006,21 +69926,17 @@ class VehicleData {
               "exShowroom": 300000
             }
           },
-          
-
-          
-          
         },
-        "2022":{
-          "Jeeto":{
-            "S-Series Mini Truck (Diesel, BS-III)":{
+        "2022": {
+          "Jeeto": {
+            "S-Series Mini Truck (Diesel, BS-III)": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 235000
             },
-            "S6-11":{
+            "S6-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -70034,35 +69950,35 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 252000
             },
-            "S10-11":{
+            "S10-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-16":{
+            "S10-16": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 292000
             },
-            "S6-11 CNG":{
+            "S6-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 252000
             },
-            "S6-16 CNG":{
+            "S6-16 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-11 CNG":{
+            "S10-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
@@ -70076,7 +69992,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 312000
             },
-            "X7-16 Diesel":{
+            "X7-16 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
@@ -70090,38 +70006,37 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 565000
             },
-            "X7-16 Petrol":{
+            "X7-16 Petrol": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 525000
             },
-
           },
-          "Supro Van":{
-            "LX (Diesel, BS-III MPV)":{
+          "Supro Van": {
+            "LX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 438000
             },
-            "ZX (Diesel, BS-III MPV)":{
+            "ZX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 493000
             },
-            "LX Diesel":{
+            "LX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 532000
             },
-            "ZX Diesel":{
+            "ZX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
@@ -70129,8 +70044,8 @@ class VehicleData {
               "exShowroom": 582000
             }
           },
-          "Supro Maxitruck":{
-            "T2 (Diesel, 1 ton payload)":{
+          "Supro Maxitruck": {
+            "T2 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
@@ -70143,22 +70058,20 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
-
             },
-            "T6 (Diesel, 1 ton payload)":{
+            "T6 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck (High Spec)",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
             },
-            "T2 Diesel":{
+            "T2 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 625000
-
             },
             "T4 Diesel": {
               "bodyType": "Mini Truck",
@@ -70167,14 +70080,13 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 675000
             },
-            "T6 Diesel":{
+            "T6 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 725000
             }
-
           },
           "Jeeto Minivan": {
             "Hardtop Diesel": {
@@ -70184,21 +70096,21 @@ class VehicleData {
               "seating": 4,
               "exShowroom": 345000
             },
-            "Hardtop CNG":{
+            "Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 4,
               "exShowroom": 365000
             },
-            "Semi-Hardtop Diesel":{
+            "Semi-Hardtop Diesel": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 325000
             },
-            "Semi-Hardtop CNG":{
+            "Semi-Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
@@ -70206,41 +70118,39 @@ class VehicleData {
               "exShowroom": 345000
             }
           },
-          "Jeeto Plus":{
-            "Diesel Variant":{
+          "Jeeto Plus": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 346000
             },
-            "Petrol Variant":{
+            "Petrol Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 346000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 365000
             }
-
           },
-          "BlazoX 40 Tractor Trailer":{
-            "Tractor Trailer":{
+          "BlazoX 40 Tractor Trailer": {
+            "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 3200000
-
             }
           },
-          "BlazoX 46 Tractor Trailer":{
+          "BlazoX 46 Tractor Trailer": {
             "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
@@ -70251,22 +70161,22 @@ class VehicleData {
           },
           "BlazoX 55 Trailer": {
             "Trailer": {
-                "bodyType": "Trailer",
-                "cc": 7200,
-                "fuelType": "Diesel",
-                "seating": 2,
-                "exShowroom": 3600000
+              "bodyType": "Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3600000
             }
           },
-          "Bolero Ambulance":{
-            "Ambulance":{
+          "Bolero Ambulance": {
+            "Ambulance": {
               "bodyType": "Ambulance",
               "cc": 2523,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 875000
             },
-            "BS6":{
+            "BS6": {
               "bodyType": "Ambulance",
               "cc": 2523,
               "fuelType": "Diesel",
@@ -70274,7 +70184,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Bolero Hearse":{
+          "Bolero Hearse": {
             "Hearse": {
               "bodyType": "Hearse",
               "cc": 2523,
@@ -70282,7 +70192,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 900000
             },
-            "BS6":{
+            "BS6": {
               "bodyType": "Hearse",
               "cc": 2523,
               "fuelType": "Diesel",
@@ -70290,8 +70200,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Blazo X 40 Tractor Trailer":{
-            "Tractor Trailer":{
+          "Blazo X 40 Tractor Trailer": {
+            "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -70299,7 +70209,7 @@ class VehicleData {
               "exShowroom": 3200000
             }
           },
-          "Blazo X 46 Tractor Trailer":{
+          "Blazo X 46 Tractor Trailer": {
             "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
@@ -70318,7 +70228,7 @@ class VehicleData {
             }
           },
           "Jeeto S-Series Mini Truck (Diesel)": {
-            "Mini Truck":{
+            "Mini Truck": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -70327,7 +70237,7 @@ class VehicleData {
             }
           },
           "Jeeto S-Series Mini Truck (CNG)": {
-            "Mini Truck":{
+            "Mini Truck": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "CNG",
@@ -70335,8 +70245,8 @@ class VehicleData {
               "exShowroom": 365000
             }
           },
-          "Jeeto L-Series":{
-            "Diesel":{
+          "Jeeto L-Series": {
+            "Diesel": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -70351,15 +70261,15 @@ class VehicleData {
               "exShowroom": 290000
             }
           },
-          "Jeeto X-Series":{
-            "Diesel":{
+          "Jeeto X-Series": {
+            "Diesel": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 280000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "CNG",
@@ -70367,7 +70277,7 @@ class VehicleData {
               "exShowroom": 300000
             }
           },
-          "Jeeto Plus CNG CharSau Minivan":{
+          "Jeeto Plus CNG CharSau Minivan": {
             "CNG": {
               "bodyType": "Mini Van",
               "cc": 625,
@@ -70376,8 +70286,8 @@ class VehicleData {
               "exShowroom": 526000
             }
           },
-          "Jeeto S6-11":{
-            "Diesel":{
+          "Jeeto S6-11": {
+            "Diesel": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -70385,18 +70295,17 @@ class VehicleData {
               "exShowroom": 246000
             }
           },
-          "Jeeto L6-16":{
-            "Diesel":{
+          "Jeeto L6-16": {
+            "Diesel": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 310000
             }
-
           },
-          "Jeeto X7-16":{
-            "CNG":{
+          "Jeeto X7-16": {
+            "CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
@@ -70404,21 +70313,17 @@ class VehicleData {
               "exShowroom": 365000
             }
           },
-          
-
-          
-          
         },
-        "2023":{
-          "Jeeto":{
-            "S-Series Mini Truck (Diesel, BS-III)":{
+        "2023": {
+          "Jeeto": {
+            "S-Series Mini Truck (Diesel, BS-III)": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 235000
             },
-            "S6-11":{
+            "S6-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -70432,35 +70337,35 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 252000
             },
-            "S10-11":{
+            "S10-11": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-16":{
+            "S10-16": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 292000
             },
-            "S6-11 CNG":{
+            "S6-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 252000
             },
-            "S6-16 CNG":{
+            "S6-16 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 272000
             },
-            "S10-11 CNG":{
+            "S10-11 CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
@@ -70474,7 +70379,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 312000
             },
-            "X7-16 Diesel":{
+            "X7-16 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
@@ -70488,38 +70393,37 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 565000
             },
-            "X7-16 Petrol":{
+            "X7-16 Petrol": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 525000
             },
-
           },
-          "Supro Van":{
-            "LX (Diesel, BS-III MPV)":{
+          "Supro Van": {
+            "LX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 438000
             },
-            "ZX (Diesel, BS-III MPV)":{
+            "ZX (Diesel, BS-III MPV)": {
               "bodyType": "People Carrier / Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 493000
             },
-            "LX Diesel":{
+            "LX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 8,
               "exShowroom": 532000
             },
-            "ZX Diesel":{
+            "ZX Diesel": {
               "bodyType": "Passenger Van",
               "cc": 909,
               "fuelType": "Diesel",
@@ -70527,8 +70431,8 @@ class VehicleData {
               "exShowroom": 582000
             }
           },
-          "Supro Maxitruck":{
-            "T2 (Diesel, 1 ton payload)":{
+          "Supro Maxitruck": {
+            "T2 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
@@ -70541,22 +70445,20 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
-
             },
-            "T6 (Diesel, 1 ton payload)":{
+            "T6 (Diesel, 1 ton payload)": {
               "bodyType": "Mini Truck (High Spec)",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 475000
             },
-            "T2 Diesel":{
+            "T2 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 625000
-
             },
             "T4 Diesel": {
               "bodyType": "Mini Truck",
@@ -70565,14 +70467,13 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 675000
             },
-            "T6 Diesel":{
+            "T6 Diesel": {
               "bodyType": "Mini Truck",
               "cc": 909,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 725000
             }
-
           },
           "Jeeto Minivan": {
             "Hardtop Diesel": {
@@ -70582,21 +70483,21 @@ class VehicleData {
               "seating": 4,
               "exShowroom": 345000
             },
-            "Hardtop CNG":{
+            "Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
               "seating": 4,
               "exShowroom": 365000
             },
-            "Semi-Hardtop Diesel":{
+            "Semi-Hardtop Diesel": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 4,
               "exShowroom": 325000
             },
-            "Semi-Hardtop CNG":{
+            "Semi-Hardtop CNG": {
               "bodyType": "Passenger Van",
               "cc": 625,
               "fuelType": "CNG",
@@ -70604,41 +70505,39 @@ class VehicleData {
               "exShowroom": 345000
             }
           },
-          "Jeeto Plus":{
-            "Diesel Variant":{
+          "Jeeto Plus": {
+            "Diesel Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 346000
             },
-            "Petrol Variant":{
+            "Petrol Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 346000
             },
-            "CNG Variant":{
+            "CNG Variant": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 365000
             }
-
           },
-          "BlazoX 40 Tractor Trailer":{
-            "Tractor Trailer":{
+          "BlazoX 40 Tractor Trailer": {
+            "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 3200000
-
             }
           },
-          "BlazoX 46 Tractor Trailer":{
+          "BlazoX 46 Tractor Trailer": {
             "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
@@ -70649,22 +70548,22 @@ class VehicleData {
           },
           "BlazoX 55 Trailer": {
             "Trailer": {
-                "bodyType": "Trailer",
-                "cc": 7200,
-                "fuelType": "Diesel",
-                "seating": 2,
-                "exShowroom": 3600000
+              "bodyType": "Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3600000
             }
           },
-          "Bolero Ambulance":{
-            "Ambulance":{
+          "Bolero Ambulance": {
+            "Ambulance": {
               "bodyType": "Ambulance",
               "cc": 2523,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 875000
             },
-            "BS6":{
+            "BS6": {
               "bodyType": "Ambulance",
               "cc": 2523,
               "fuelType": "Diesel",
@@ -70672,7 +70571,7 @@ class VehicleData {
               "exShowroom": 875000
             }
           },
-          "Bolero Hearse":{
+          "Bolero Hearse": {
             "Hearse": {
               "bodyType": "Hearse",
               "cc": 2523,
@@ -70680,7 +70579,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 900000
             },
-            "BS6":{
+            "BS6": {
               "bodyType": "Hearse",
               "cc": 2523,
               "fuelType": "Diesel",
@@ -70688,8 +70587,8 @@ class VehicleData {
               "exShowroom": 900000
             }
           },
-          "Blazo X 40 Tractor Trailer":{
-            "Tractor Trailer":{
+          "Blazo X 40 Tractor Trailer": {
+            "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -70697,7 +70596,7 @@ class VehicleData {
               "exShowroom": 3200000
             }
           },
-          "Blazo X 46 Tractor Trailer":{
+          "Blazo X 46 Tractor Trailer": {
             "Tractor Trailer": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
@@ -70716,7 +70615,7 @@ class VehicleData {
             }
           },
           "Jeeto S-Series Mini Truck (Diesel)": {
-            "Mini Truck":{
+            "Mini Truck": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -70725,7 +70624,7 @@ class VehicleData {
             }
           },
           "Jeeto S-Series Mini Truck (CNG)": {
-            "Mini Truck":{
+            "Mini Truck": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "CNG",
@@ -70733,8 +70632,8 @@ class VehicleData {
               "exShowroom": 365000
             }
           },
-          "Jeeto L-Series":{
-            "Diesel":{
+          "Jeeto L-Series": {
+            "Diesel": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -70749,15 +70648,15 @@ class VehicleData {
               "exShowroom": 290000
             }
           },
-          "Jeeto X-Series":{
-            "Diesel":{
+          "Jeeto X-Series": {
+            "Diesel": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 280000
             },
-            "CNG":{
+            "CNG": {
               "bodyType": "Mini Truck",
               "cc": 670,
               "fuelType": "CNG",
@@ -70765,7 +70664,7 @@ class VehicleData {
               "exShowroom": 300000
             }
           },
-          "Jeeto Plus CNG CharSau Minivan":{
+          "Jeeto Plus CNG CharSau Minivan": {
             "CNG": {
               "bodyType": "Mini Van",
               "cc": 625,
@@ -70774,8 +70673,8 @@ class VehicleData {
               "exShowroom": 526000
             }
           },
-          "Jeeto S6-11":{
-            "Diesel":{
+          "Jeeto S6-11": {
+            "Diesel": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
@@ -70783,18 +70682,17 @@ class VehicleData {
               "exShowroom": 246000
             }
           },
-          "Jeeto L6-16":{
-            "Diesel":{
+          "Jeeto L6-16": {
+            "Diesel": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 310000
             }
-
           },
-          "Jeeto X7-16":{
-            "CNG":{
+          "Jeeto X7-16": {
+            "CNG": {
               "bodyType": "Mini Truck",
               "cc": 625,
               "fuelType": "CNG",
@@ -70802,8 +70700,8 @@ class VehicleData {
               "exShowroom": 365000
             }
           },
-          "Blazo X 55 Tractor Trailer":{
-            "Diesel":{
+          "Blazo X 55 Tractor Trailer": {
+            "Diesel": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -70811,8 +70709,8 @@ class VehicleData {
               "exShowroom": 4144000
             }
           },
-          "Bolero Neo+ Ambulance":{
-            "Diesel":{
+          "Bolero Neo+ Ambulance": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 2200,
               "fuelType": "Diesel",
@@ -70820,841 +70718,822 @@ class VehicleData {
               "exShowroom": 1399000
             }
           }
-        },  
-        "2024":{
-          "Jeeto":{
-            "S-Series Mini Truck (Diesel, BS-III)":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 235000
-            },
-            "S6-11":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 232000
-            },
-            "S6-16": {
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 252000
-            },
-            "S10-11":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 272000
-            },
-            "S10-16":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 292000
-            },
-            "S6-11 CNG":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 252000
-            },
-            "S6-16 CNG":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 272000
-            },
-            "S10-11 CNG":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 292000
-            },
-            "S10-16 CNG": {
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 312000
-            },
-            "X7-16 Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 545000
-            },
-            "X7-16 CNG": {
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 565000
-            },
-            "X7-16 Petrol":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 525000
-            },
-
-          },
-          "Supro Van":{
-            "LX (Diesel, BS-III MPV)":{
-              "bodyType": "People Carrier / Van",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 8,
-              "exShowroom": 438000
-            },
-            "ZX (Diesel, BS-III MPV)":{
-              "bodyType": "People Carrier / Van",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 493000
-            },
-            "LX Diesel":{
-              "bodyType": "Passenger Van",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 8,
-              "exShowroom": 532000
-            },
-            "ZX Diesel":{
-              "bodyType": "Passenger Van",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 8,
-              "exShowroom": 582000
-            }
-          },
-          "Supro Maxitruck":{
-            "T2 (Diesel, 1 ton payload)":{
-              "bodyType": "Mini Truck",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 425000
-            },
-            "T4": {
-              "bodyType": "Mini Truck",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 475000
-
-            },
-            "T6 (Diesel, 1 ton payload)":{
-              "bodyType": "Mini Truck (High Spec)",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 475000
-            },
-            "T2 Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 625000
-
-            },
-            "T4 Diesel": {
-              "bodyType": "Mini Truck",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 675000
-            },
-            "T6 Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 725000
-            }
-
-          },
-          "Jeeto Minivan": {
-            "Hardtop Diesel": {
-              "bodyType": "Passenger Van",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 345000
-            },
-            "Hardtop CNG":{
-              "bodyType": "Passenger Van",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 4,
-              "exShowroom": 365000
-            },
-            "Semi-Hardtop Diesel":{
-              "bodyType": "Passenger Van",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 325000
-            },
-            "Semi-Hardtop CNG":{
-              "bodyType": "Passenger Van",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 4,
-              "exShowroom": 345000
-            }
-          },
-          "Jeeto Plus":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 346000
-            },
-            "Petrol Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 346000
-            },
-            "CNG Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 365000
-            }
-
-          },
-          "BlazoX 40 Tractor Trailer":{
-            "Tractor Trailer":{
-              "bodyType": "Tractor Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3200000
-
-            }
-          },
-          "BlazoX 46 Tractor Trailer":{
-            "Tractor Trailer": {
-              "bodyType": "Tractor Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3400000
-            }
-          },
-          "BlazoX 55 Trailer": {
-            "Trailer": {
-                "bodyType": "Trailer",
-                "cc": 7200,
-                "fuelType": "Diesel",
-                "seating": 2,
-                "exShowroom": 3600000
-            }
-          },
-          "Bolero Ambulance":{
-            "Ambulance":{
-              "bodyType": "Ambulance",
-              "cc": 2523,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 875000
-            },
-            "BS6":{
-              "bodyType": "Ambulance",
-              "cc": 2523,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 875000
-            }
-          },
-          "Bolero Hearse":{
-            "Hearse": {
-              "bodyType": "Hearse",
-              "cc": 2523,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 900000
-            },
-            "BS6":{
-              "bodyType": "Hearse",
-              "cc": 2523,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 900000
-            }
-          },
-          "Blazo X 40 Tractor Trailer":{
-            "Tractor Trailer":{
-              "bodyType": "Tractor Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3200000
-            }
-          },
-          "Blazo X 46 Tractor Trailer":{
-            "Tractor Trailer": {
-              "bodyType": "Tractor Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3400000
-            }
-          },
-          "Blazo X 55 Trailer": {
-            "Trailer": {
-              "bodyType": "Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3600000
-            }
-          },
-          "Jeeto S-Series Mini Truck (Diesel)": {
-            "Mini Truck":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 295000
-            }
-          },
-          "Jeeto S-Series Mini Truck (CNG)": {
-            "Mini Truck":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 365000
-            }
-          },
-          "Jeeto L-Series":{
-            "Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 270000
-            },
-            "CNG": {
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 290000
-            }
-          },
-          "Jeeto X-Series":{
-            "Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 280000
-            },
-            "CNG":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 300000
-            }
-          },
-          "Jeeto Plus CNG CharSau Minivan":{
-            "CNG": {
-              "bodyType": "Mini Van",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 526000
-            }
-          },
-          "Jeeto S6-11":{
-            "Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 246000
-            }
-          },
-          "Jeeto L6-16":{
-            "Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 310000
-            }
-
-          },
-          "Jeeto X7-16":{
-            "CNG":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 365000
-            }
-          },
-          "Blazo X 55 Tractor Trailer":{
-            "Diesel":{
-              "bodyType": "Tractor Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 4144000
-            }
-          },
-          "Bolero Neo+ Ambulance":{
-            "Diesel":{
-              "bodyType": "Ambulance",
-              "cc": 2200,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 1399000
-            }
-          },
-          
-        },   
-        "2025":{
-          "Jeeto":{
-            "S-Series Mini Truck (Diesel, BS-III)":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 235000
-            },
-            "S6-11":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 232000
-            },
-            "S6-16": {
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 252000
-            },
-            "S10-11":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 272000
-            },
-            "S10-16":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 292000
-            },
-            "S6-11 CNG":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 252000
-            },
-            "S6-16 CNG":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 272000
-            },
-            "S10-11 CNG":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 292000
-            },
-            "S10-16 CNG": {
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 312000
-            },
-            "X7-16 Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 545000
-            },
-            "X7-16 CNG": {
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 565000
-            },
-            "X7-16 Petrol":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 525000
-            },
-
-          },
-          "Supro Van":{
-            "LX (Diesel, BS-III MPV)":{
-              "bodyType": "People Carrier / Van",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 8,
-              "exShowroom": 438000
-            },
-            "ZX (Diesel, BS-III MPV)":{
-              "bodyType": "People Carrier / Van",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 493000
-            },
-            "LX Diesel":{
-              "bodyType": "Passenger Van",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 8,
-              "exShowroom": 532000
-            },
-            "ZX Diesel":{
-              "bodyType": "Passenger Van",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 8,
-              "exShowroom": 582000
-            }
-          },
-          "Supro Maxitruck":{
-            "T2 (Diesel, 1 ton payload)":{
-              "bodyType": "Mini Truck",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 425000
-            },
-            "T4": {
-              "bodyType": "Mini Truck",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 475000
-
-            },
-            "T6 (Diesel, 1 ton payload)":{
-              "bodyType": "Mini Truck (High Spec)",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 475000
-            },
-            "T2 Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 625000
-
-            },
-            "T4 Diesel": {
-              "bodyType": "Mini Truck",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 675000
-            },
-            "T6 Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 909,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 725000
-            }
-
-          },
-          "Jeeto Minivan": {
-            "Hardtop Diesel": {
-              "bodyType": "Passenger Van",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 345000
-            },
-            "Hardtop CNG":{
-              "bodyType": "Passenger Van",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 4,
-              "exShowroom": 365000
-            },
-            "Semi-Hardtop Diesel":{
-              "bodyType": "Passenger Van",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 4,
-              "exShowroom": 325000
-            },
-            "Semi-Hardtop CNG":{
-              "bodyType": "Passenger Van",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 4,
-              "exShowroom": 345000
-            }
-          },
-          "Jeeto Plus":{
-            "Diesel Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 346000
-            },
-            "Petrol Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 346000
-            },
-            "CNG Variant":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 365000
-            }
-
-          },
-          "BlazoX 40 Tractor Trailer":{
-            "Tractor Trailer":{
-              "bodyType": "Tractor Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3200000
-
-            }
-          },
-          "BlazoX 46 Tractor Trailer":{
-            "Tractor Trailer": {
-              "bodyType": "Tractor Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3400000
-            }
-          },
-          "BlazoX 55 Trailer": {
-            "Trailer": {
-                "bodyType": "Trailer",
-                "cc": 7200,
-                "fuelType": "Diesel",
-                "seating": 2,
-                "exShowroom": 3600000
-            }
-          },
-          "Bolero Ambulance":{
-            "Ambulance":{
-              "bodyType": "Ambulance",
-              "cc": 2523,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 875000
-            },
-            "BS6":{
-              "bodyType": "Ambulance",
-              "cc": 2523,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 875000
-            }
-          },
-          "Bolero Hearse":{
-            "Hearse": {
-              "bodyType": "Hearse",
-              "cc": 2523,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 900000
-            },
-            "BS6":{
-              "bodyType": "Hearse",
-              "cc": 2523,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 900000
-            }
-          },
-          "Blazo X 40 Tractor Trailer":{
-            "Tractor Trailer":{
-              "bodyType": "Tractor Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3200000
-            }
-          },
-          "Blazo X 46 Tractor Trailer":{
-            "Tractor Trailer": {
-              "bodyType": "Tractor Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3400000
-            }
-          },
-          "Blazo X 55 Trailer": {
-            "Trailer": {
-              "bodyType": "Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 3600000
-            }
-          },
-          "Jeeto S-Series Mini Truck (Diesel)": {
-            "Mini Truck":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 295000
-            }
-          },
-          "Jeeto S-Series Mini Truck (CNG)": {
-            "Mini Truck":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 365000
-            }
-          },
-          "Jeeto L-Series":{
-            "Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 270000
-            },
-            "CNG": {
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 290000
-            }
-          },
-          "Jeeto X-Series":{
-            "Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 280000
-            },
-            "CNG":{
-              "bodyType": "Mini Truck",
-              "cc": 670,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 300000
-            }
-          },
-          "Jeeto Plus CNG CharSau Minivan":{
-            "CNG": {
-              "bodyType": "Mini Van",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 526000
-            }
-          },
-          "Jeeto S6-11":{
-            "Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 246000
-            }
-          },
-          "Jeeto L6-16":{
-            "Diesel":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 310000
-            }
-
-          },
-          "Jeeto X7-16":{
-            "CNG":{
-              "bodyType": "Mini Truck",
-              "cc": 625,
-              "fuelType": "CNG",
-              "seating": 2,
-              "exShowroom": 365000
-            }
-          },
-          "Blazo X 55 Tractor Trailer":{
-            "Diesel":{
-              "bodyType": "Tractor Trailer",
-              "cc": 7200,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 4144000
-            }
-          },
-          "Bolero Neo+ Ambulance":{
-            "Diesel":{
-              "bodyType": "Ambulance",
-              "cc": 2200,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 1399000
-            }
-          },
-          
         },
-          
-          
-        
+        "2024": {
+          "Jeeto": {
+            "S-Series Mini Truck (Diesel, BS-III)": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 235000
+            },
+            "S6-11": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 232000
+            },
+            "S6-16": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 252000
+            },
+            "S10-11": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 272000
+            },
+            "S10-16": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 292000
+            },
+            "S6-11 CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 252000
+            },
+            "S6-16 CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 272000
+            },
+            "S10-11 CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 292000
+            },
+            "S10-16 CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 312000
+            },
+            "X7-16 Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 545000
+            },
+            "X7-16 CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 565000
+            },
+            "X7-16 Petrol": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 525000
+            },
+          },
+          "Supro Van": {
+            "LX (Diesel, BS-III MPV)": {
+              "bodyType": "People Carrier / Van",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 8,
+              "exShowroom": 438000
+            },
+            "ZX (Diesel, BS-III MPV)": {
+              "bodyType": "People Carrier / Van",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 493000
+            },
+            "LX Diesel": {
+              "bodyType": "Passenger Van",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 8,
+              "exShowroom": 532000
+            },
+            "ZX Diesel": {
+              "bodyType": "Passenger Van",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 8,
+              "exShowroom": 582000
+            }
+          },
+          "Supro Maxitruck": {
+            "T2 (Diesel, 1 ton payload)": {
+              "bodyType": "Mini Truck",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 425000
+            },
+            "T4": {
+              "bodyType": "Mini Truck",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 475000
+            },
+            "T6 (Diesel, 1 ton payload)": {
+              "bodyType": "Mini Truck (High Spec)",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 475000
+            },
+            "T2 Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 625000
+            },
+            "T4 Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 675000
+            },
+            "T6 Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 725000
+            }
+          },
+          "Jeeto Minivan": {
+            "Hardtop Diesel": {
+              "bodyType": "Passenger Van",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 345000
+            },
+            "Hardtop CNG": {
+              "bodyType": "Passenger Van",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 4,
+              "exShowroom": 365000
+            },
+            "Semi-Hardtop Diesel": {
+              "bodyType": "Passenger Van",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 325000
+            },
+            "Semi-Hardtop CNG": {
+              "bodyType": "Passenger Van",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 4,
+              "exShowroom": 345000
+            }
+          },
+          "Jeeto Plus": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 346000
+            },
+            "Petrol Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 346000
+            },
+            "CNG Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 365000
+            }
+          },
+          "BlazoX 40 Tractor Trailer": {
+            "Tractor Trailer": {
+              "bodyType": "Tractor Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3200000
+            }
+          },
+          "BlazoX 46 Tractor Trailer": {
+            "Tractor Trailer": {
+              "bodyType": "Tractor Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3400000
+            }
+          },
+          "BlazoX 55 Trailer": {
+            "Trailer": {
+              "bodyType": "Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3600000
+            }
+          },
+          "Bolero Ambulance": {
+            "Ambulance": {
+              "bodyType": "Ambulance",
+              "cc": 2523,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 875000
+            },
+            "BS6": {
+              "bodyType": "Ambulance",
+              "cc": 2523,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 875000
+            }
+          },
+          "Bolero Hearse": {
+            "Hearse": {
+              "bodyType": "Hearse",
+              "cc": 2523,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 900000
+            },
+            "BS6": {
+              "bodyType": "Hearse",
+              "cc": 2523,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 900000
+            }
+          },
+          "Blazo X 40 Tractor Trailer": {
+            "Tractor Trailer": {
+              "bodyType": "Tractor Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3200000
+            }
+          },
+          "Blazo X 46 Tractor Trailer": {
+            "Tractor Trailer": {
+              "bodyType": "Tractor Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3400000
+            }
+          },
+          "Blazo X 55 Trailer": {
+            "Trailer": {
+              "bodyType": "Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3600000
+            }
+          },
+          "Jeeto S-Series Mini Truck (Diesel)": {
+            "Mini Truck": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 295000
+            }
+          },
+          "Jeeto S-Series Mini Truck (CNG)": {
+            "Mini Truck": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 365000
+            }
+          },
+          "Jeeto L-Series": {
+            "Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 270000
+            },
+            "CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 290000
+            }
+          },
+          "Jeeto X-Series": {
+            "Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 280000
+            },
+            "CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 300000
+            }
+          },
+          "Jeeto Plus CNG CharSau Minivan": {
+            "CNG": {
+              "bodyType": "Mini Van",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 526000
+            }
+          },
+          "Jeeto S6-11": {
+            "Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 246000
+            }
+          },
+          "Jeeto L6-16": {
+            "Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 310000
+            }
+          },
+          "Jeeto X7-16": {
+            "CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 365000
+            }
+          },
+          "Blazo X 55 Tractor Trailer": {
+            "Diesel": {
+              "bodyType": "Tractor Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 4144000
+            }
+          },
+          "Bolero Neo+ Ambulance": {
+            "Diesel": {
+              "bodyType": "Ambulance",
+              "cc": 2200,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 1399000
+            }
+          },
+        },
+        "2025": {
+          "Jeeto": {
+            "S-Series Mini Truck (Diesel, BS-III)": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 235000
+            },
+            "S6-11": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 232000
+            },
+            "S6-16": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 252000
+            },
+            "S10-11": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 272000
+            },
+            "S10-16": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 292000
+            },
+            "S6-11 CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 252000
+            },
+            "S6-16 CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 272000
+            },
+            "S10-11 CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 292000
+            },
+            "S10-16 CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 312000
+            },
+            "X7-16 Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 545000
+            },
+            "X7-16 CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 565000
+            },
+            "X7-16 Petrol": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 525000
+            },
+          },
+          "Supro Van": {
+            "LX (Diesel, BS-III MPV)": {
+              "bodyType": "People Carrier / Van",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 8,
+              "exShowroom": 438000
+            },
+            "ZX (Diesel, BS-III MPV)": {
+              "bodyType": "People Carrier / Van",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 493000
+            },
+            "LX Diesel": {
+              "bodyType": "Passenger Van",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 8,
+              "exShowroom": 532000
+            },
+            "ZX Diesel": {
+              "bodyType": "Passenger Van",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 8,
+              "exShowroom": 582000
+            }
+          },
+          "Supro Maxitruck": {
+            "T2 (Diesel, 1 ton payload)": {
+              "bodyType": "Mini Truck",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 425000
+            },
+            "T4": {
+              "bodyType": "Mini Truck",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 475000
+            },
+            "T6 (Diesel, 1 ton payload)": {
+              "bodyType": "Mini Truck (High Spec)",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 475000
+            },
+            "T2 Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 625000
+            },
+            "T4 Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 675000
+            },
+            "T6 Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 909,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 725000
+            }
+          },
+          "Jeeto Minivan": {
+            "Hardtop Diesel": {
+              "bodyType": "Passenger Van",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 345000
+            },
+            "Hardtop CNG": {
+              "bodyType": "Passenger Van",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 4,
+              "exShowroom": 365000
+            },
+            "Semi-Hardtop Diesel": {
+              "bodyType": "Passenger Van",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 4,
+              "exShowroom": 325000
+            },
+            "Semi-Hardtop CNG": {
+              "bodyType": "Passenger Van",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 4,
+              "exShowroom": 345000
+            }
+          },
+          "Jeeto Plus": {
+            "Diesel Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 346000
+            },
+            "Petrol Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 346000
+            },
+            "CNG Variant": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 365000
+            }
+          },
+          "BlazoX 40 Tractor Trailer": {
+            "Tractor Trailer": {
+              "bodyType": "Tractor Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3200000
+            }
+          },
+          "BlazoX 46 Tractor Trailer": {
+            "Tractor Trailer": {
+              "bodyType": "Tractor Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3400000
+            }
+          },
+          "BlazoX 55 Trailer": {
+            "Trailer": {
+              "bodyType": "Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3600000
+            }
+          },
+          "Bolero Ambulance": {
+            "Ambulance": {
+              "bodyType": "Ambulance",
+              "cc": 2523,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 875000
+            },
+            "BS6": {
+              "bodyType": "Ambulance",
+              "cc": 2523,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 875000
+            }
+          },
+          "Bolero Hearse": {
+            "Hearse": {
+              "bodyType": "Hearse",
+              "cc": 2523,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 900000
+            },
+            "BS6": {
+              "bodyType": "Hearse",
+              "cc": 2523,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 900000
+            }
+          },
+          "Blazo X 40 Tractor Trailer": {
+            "Tractor Trailer": {
+              "bodyType": "Tractor Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3200000
+            }
+          },
+          "Blazo X 46 Tractor Trailer": {
+            "Tractor Trailer": {
+              "bodyType": "Tractor Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3400000
+            }
+          },
+          "Blazo X 55 Trailer": {
+            "Trailer": {
+              "bodyType": "Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 3600000
+            }
+          },
+          "Jeeto S-Series Mini Truck (Diesel)": {
+            "Mini Truck": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 295000
+            }
+          },
+          "Jeeto S-Series Mini Truck (CNG)": {
+            "Mini Truck": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 365000
+            }
+          },
+          "Jeeto L-Series": {
+            "Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 270000
+            },
+            "CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 290000
+            }
+          },
+          "Jeeto X-Series": {
+            "Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 280000
+            },
+            "CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 670,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 300000
+            }
+          },
+          "Jeeto Plus CNG CharSau Minivan": {
+            "CNG": {
+              "bodyType": "Mini Van",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 526000
+            }
+          },
+          "Jeeto S6-11": {
+            "Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 246000
+            }
+          },
+          "Jeeto L6-16": {
+            "Diesel": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 310000
+            }
+          },
+          "Jeeto X7-16": {
+            "CNG": {
+              "bodyType": "Mini Truck",
+              "cc": 625,
+              "fuelType": "CNG",
+              "seating": 2,
+              "exShowroom": 365000
+            }
+          },
+          "Blazo X 55 Tractor Trailer": {
+            "Diesel": {
+              "bodyType": "Tractor Trailer",
+              "cc": 7200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 4144000
+            }
+          },
+          "Bolero Neo+ Ambulance": {
+            "Diesel": {
+              "bodyType": "Ambulance",
+              "cc": 2200,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 1399000
+            }
+          },
+        },
       },
-      "Ashok Leyland":{
-        "2015":{
-          "STiLE MPV":{
-            "Diesel":{
+      "Ashok Leyland": {
+        "2015": {
+          "STiLE MPV": {
+            "Diesel": {
               "bodyType": "MPV (Commercial Minivan)",
               "cc": 1500,
               "fuelType": "Diesel",
@@ -71662,8 +71541,8 @@ class VehicleData {
               "exShowroom": 749000
             }
           },
-          "STiLE MPV (LX variant)":{
-            "Diesel":{
+          "STiLE MPV (LX variant)": {
+            "Diesel": {
               "bodyType": "MPV",
               "cc": "Approx 1461",
               "fuelType": "Diesel",
@@ -71671,8 +71550,8 @@ class VehicleData {
               "exShowroom": 929000
             }
           },
-          "Dost RUV – Ambulance Variant":{
-            "Diesel":{
+          "Dost RUV – Ambulance Variant": {
+            "Diesel": {
               "bodyType": "Light Commercial Ambulance",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71680,8 +71559,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Refrigerated Van":{
-            "Diesel":{
+          "Dost RUV – Refrigerated Van": {
+            "Diesel": {
               "bodyType": "Refrigerated Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71689,8 +71568,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Service Van":{
-            "Diesel":{
+          "Dost RUV – Service Van": {
+            "Diesel": {
               "bodyType": "Service Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71699,9 +71578,9 @@ class VehicleData {
             }
           }
         },
-        "2016":{
-          "STiLE MPV":{
-            "Diesel":{
+        "2016": {
+          "STiLE MPV": {
+            "Diesel": {
               "bodyType": "MPV (Commercial Minivan)",
               "cc": 1500,
               "fuelType": "Diesel",
@@ -71709,8 +71588,8 @@ class VehicleData {
               "exShowroom": 749000
             }
           },
-          "STiLE MPV (LX variant)":{
-            "Diesel":{
+          "STiLE MPV (LX variant)": {
+            "Diesel": {
               "bodyType": "MPV",
               "cc": "Approx 1461",
               "fuelType": "Diesel",
@@ -71718,8 +71597,8 @@ class VehicleData {
               "exShowroom": 929000
             }
           },
-          "Dost RUV – Ambulance Variant":{
-            "Diesel":{
+          "Dost RUV – Ambulance Variant": {
+            "Diesel": {
               "bodyType": "Light Commercial Ambulance",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71727,8 +71606,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Refrigerated Van":{
-            "Diesel":{
+          "Dost RUV – Refrigerated Van": {
+            "Diesel": {
               "bodyType": "Refrigerated Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71736,8 +71615,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Service Van":{
-            "Diesel":{
+          "Dost RUV – Service Van": {
+            "Diesel": {
               "bodyType": "Service Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71745,8 +71624,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Ambulance 4×4":{
-            "Diesel":{
+          "Ambulance 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Ambulance",
               "cc": "H6 IL engine (displacement not specified)",
               "fuelType": "Diesel",
@@ -71754,8 +71633,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Field Artillery Tractor (FAT) 6×6":{
-            "Diesel":{
+          "Field Artillery Tractor (FAT) 6×6": {
+            "Diesel": {
               "bodyType": "6×6 Artillery Tractor",
               "cc": "8.1 L Neptune I6 turbo-diesel (~8100 cc)",
               "fuelType": "Diesel",
@@ -71763,8 +71642,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Rhino 4×4":{
-            "Diesel":{
+          "Rhino 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Logistics Vehicle",
               "cc": "Not specified",
               "fuelType": "Diesel",
@@ -71773,9 +71652,9 @@ class VehicleData {
             }
           },
         },
-        "2017":{
-          "STiLE MPV":{
-            "Diesel":{
+        "2017": {
+          "STiLE MPV": {
+            "Diesel": {
               "bodyType": "MPV (Commercial Minivan)",
               "cc": 1500,
               "fuelType": "Diesel",
@@ -71783,8 +71662,8 @@ class VehicleData {
               "exShowroom": 749000
             }
           },
-          "STiLE MPV (LX variant)":{
-            "Diesel":{
+          "STiLE MPV (LX variant)": {
+            "Diesel": {
               "bodyType": "MPV",
               "cc": "Approx 1461",
               "fuelType": "Diesel",
@@ -71792,8 +71671,8 @@ class VehicleData {
               "exShowroom": 929000
             }
           },
-          "Dost RUV – Ambulance Variant":{
-            "Diesel":{
+          "Dost RUV – Ambulance Variant": {
+            "Diesel": {
               "bodyType": "Light Commercial Ambulance",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71801,8 +71680,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Refrigerated Van":{
-            "Diesel":{
+          "Dost RUV – Refrigerated Van": {
+            "Diesel": {
               "bodyType": "Refrigerated Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71810,8 +71689,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Service Van":{
-            "Diesel":{
+          "Dost RUV – Service Van": {
+            "Diesel": {
               "bodyType": "Service Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71819,8 +71698,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Ambulance 4×4":{
-            "Diesel":{
+          "Ambulance 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Ambulance",
               "cc": "H6 IL engine (displacement not specified)",
               "fuelType": "Diesel",
@@ -71828,8 +71707,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Field Artillery Tractor (FAT) 6×6":{
-            "Diesel":{
+          "Field Artillery Tractor (FAT) 6×6": {
+            "Diesel": {
               "bodyType": "6×6 Artillery Tractor",
               "cc": "8.1 L Neptune I6 turbo-diesel (~8100 cc)",
               "fuelType": "Diesel",
@@ -71837,8 +71716,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Rhino 4×4":{
-            "Diesel":{
+          "Rhino 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Logistics Vehicle",
               "cc": "Not specified",
               "fuelType": "Diesel",
@@ -71846,11 +71725,10 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-
         },
-        "2018":{
-          "STiLE MPV":{
-            "Diesel":{
+        "2018": {
+          "STiLE MPV": {
+            "Diesel": {
               "bodyType": "MPV (Commercial Minivan)",
               "cc": 1500,
               "fuelType": "Diesel",
@@ -71858,8 +71736,8 @@ class VehicleData {
               "exShowroom": 749000
             }
           },
-          "STiLE MPV (LX variant)":{
-            "Diesel":{
+          "STiLE MPV (LX variant)": {
+            "Diesel": {
               "bodyType": "MPV",
               "cc": "Approx 1461",
               "fuelType": "Diesel",
@@ -71867,8 +71745,8 @@ class VehicleData {
               "exShowroom": 929000
             }
           },
-          "Dost RUV – Ambulance Variant":{
-            "Diesel":{
+          "Dost RUV – Ambulance Variant": {
+            "Diesel": {
               "bodyType": "Light Commercial Ambulance",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71876,8 +71754,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Refrigerated Van":{
-            "Diesel":{
+          "Dost RUV – Refrigerated Van": {
+            "Diesel": {
               "bodyType": "Refrigerated Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71885,8 +71763,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Service Van":{
-            "Diesel":{
+          "Dost RUV – Service Van": {
+            "Diesel": {
               "bodyType": "Service Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71894,8 +71772,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Ambulance 4×4":{
-            "Diesel":{
+          "Ambulance 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Ambulance",
               "cc": "H6 IL engine (displacement not specified)",
               "fuelType": "Diesel",
@@ -71903,8 +71781,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Field Artillery Tractor (FAT) 6×6":{
-            "Diesel":{
+          "Field Artillery Tractor (FAT) 6×6": {
+            "Diesel": {
               "bodyType": "6×6 Artillery Tractor",
               "cc": "8.1 L Neptune I6 turbo-diesel (~8100 cc)",
               "fuelType": "Diesel",
@@ -71912,8 +71790,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Rhino 4×4":{
-            "Diesel":{
+          "Rhino 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Logistics Vehicle",
               "cc": "Not specified",
               "fuelType": "Diesel",
@@ -71921,8 +71799,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Light Specialist Vehicle (LSV) 4×4":{
-            "Diesel":{
+          "Light Specialist Vehicle (LSV) 4×4": {
+            "Diesel": {
               "bodyType": "Armoured 4×4 Specialist Vehicle",
               "cc": "H6 diesel (~108 hp)",
               "fuelType": "Diesel",
@@ -71930,8 +71808,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "High Mobility 10×10 Vehicle (Smerch Carrier)":{
-            "Diesel":{
+          "High Mobility 10×10 Vehicle (Smerch Carrier)": {
+            "Diesel": {
               "bodyType": "10×10 Heavy Artillery Carrier",
               "cc": "Not specified (360 hp)",
               "fuelType": "Diesel",
@@ -71940,9 +71818,9 @@ class VehicleData {
             }
           },
         },
-        "2019":{
-          "STiLE MPV":{
-            "Diesel":{
+        "2019": {
+          "STiLE MPV": {
+            "Diesel": {
               "bodyType": "MPV (Commercial Minivan)",
               "cc": 1500,
               "fuelType": "Diesel",
@@ -71950,8 +71828,8 @@ class VehicleData {
               "exShowroom": 749000
             }
           },
-          "STiLE MPV (LX variant)":{
-            "Diesel":{
+          "STiLE MPV (LX variant)": {
+            "Diesel": {
               "bodyType": "MPV",
               "cc": "Approx 1461",
               "fuelType": "Diesel",
@@ -71959,8 +71837,8 @@ class VehicleData {
               "exShowroom": 929000
             }
           },
-          "Dost RUV – Ambulance Variant":{
-            "Diesel":{
+          "Dost RUV – Ambulance Variant": {
+            "Diesel": {
               "bodyType": "Light Commercial Ambulance",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71968,8 +71846,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Refrigerated Van":{
-            "Diesel":{
+          "Dost RUV – Refrigerated Van": {
+            "Diesel": {
               "bodyType": "Refrigerated Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71977,8 +71855,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Service Van":{
-            "Diesel":{
+          "Dost RUV – Service Van": {
+            "Diesel": {
               "bodyType": "Service Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -71986,8 +71864,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Ambulance 4×4":{
-            "Diesel":{
+          "Ambulance 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Ambulance",
               "cc": "H6 IL engine (displacement not specified)",
               "fuelType": "Diesel",
@@ -71995,8 +71873,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Field Artillery Tractor (FAT) 6×6":{
-            "Diesel":{
+          "Field Artillery Tractor (FAT) 6×6": {
+            "Diesel": {
               "bodyType": "6×6 Artillery Tractor",
               "cc": "8.1 L Neptune I6 turbo-diesel (~8100 cc)",
               "fuelType": "Diesel",
@@ -72004,8 +71882,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Rhino 4×4":{
-            "Diesel":{
+          "Rhino 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Logistics Vehicle",
               "cc": "Not specified",
               "fuelType": "Diesel",
@@ -72013,8 +71891,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Light Specialist Vehicle (LSV) 4×4":{
-            "Diesel":{
+          "Light Specialist Vehicle (LSV) 4×4": {
+            "Diesel": {
               "bodyType": "Armoured 4×4 Specialist Vehicle",
               "cc": "H6 diesel (~108 hp)",
               "fuelType": "Diesel",
@@ -72022,8 +71900,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "High Mobility 10×10 Vehicle (Smerch Carrier)":{
-            "Diesel":{
+          "High Mobility 10×10 Vehicle (Smerch Carrier)": {
+            "Diesel": {
               "bodyType": "10×10 Heavy Artillery Carrier",
               "cc": "Not specified (360 hp)",
               "fuelType": "Diesel",
@@ -72032,9 +71910,9 @@ class VehicleData {
             }
           },
         },
-        "2020":{
-          "STiLE MPV":{
-            "Diesel":{
+        "2020": {
+          "STiLE MPV": {
+            "Diesel": {
               "bodyType": "MPV (Commercial Minivan)",
               "cc": 1500,
               "fuelType": "Diesel",
@@ -72042,8 +71920,8 @@ class VehicleData {
               "exShowroom": 749000
             }
           },
-          "STiLE MPV (LX variant)":{
-            "Diesel":{
+          "STiLE MPV (LX variant)": {
+            "Diesel": {
               "bodyType": "MPV",
               "cc": "Approx 1461",
               "fuelType": "Diesel",
@@ -72051,8 +71929,8 @@ class VehicleData {
               "exShowroom": 929000
             }
           },
-          "Dost RUV – Ambulance Variant":{
-            "Diesel":{
+          "Dost RUV – Ambulance Variant": {
+            "Diesel": {
               "bodyType": "Light Commercial Ambulance",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72060,8 +71938,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Refrigerated Van":{
-            "Diesel":{
+          "Dost RUV – Refrigerated Van": {
+            "Diesel": {
               "bodyType": "Refrigerated Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72069,8 +71947,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Service Van":{
-            "Diesel":{
+          "Dost RUV – Service Van": {
+            "Diesel": {
               "bodyType": "Service Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72078,8 +71956,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Ambulance 4×4":{
-            "Diesel":{
+          "Ambulance 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Ambulance",
               "cc": "H6 IL engine (displacement not specified)",
               "fuelType": "Diesel",
@@ -72087,8 +71965,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Field Artillery Tractor (FAT) 6×6":{
-            "Diesel":{
+          "Field Artillery Tractor (FAT) 6×6": {
+            "Diesel": {
               "bodyType": "6×6 Artillery Tractor",
               "cc": "8.1 L Neptune I6 turbo-diesel (~8100 cc)",
               "fuelType": "Diesel",
@@ -72096,8 +71974,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Rhino 4×4":{
-            "Diesel":{
+          "Rhino 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Logistics Vehicle",
               "cc": "Not specified",
               "fuelType": "Diesel",
@@ -72105,8 +71983,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Light Specialist Vehicle (LSV) 4×4":{
-            "Diesel":{
+          "Light Specialist Vehicle (LSV) 4×4": {
+            "Diesel": {
               "bodyType": "Armoured 4×4 Specialist Vehicle",
               "cc": "H6 diesel (~108 hp)",
               "fuelType": "Diesel",
@@ -72114,8 +71992,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "High Mobility 10×10 Vehicle (Smerch Carrier)":{
-            "Diesel":{
+          "High Mobility 10×10 Vehicle (Smerch Carrier)": {
+            "Diesel": {
               "bodyType": "10×10 Heavy Artillery Carrier",
               "cc": "Not specified (360 hp)",
               "fuelType": "Diesel",
@@ -72124,9 +72002,9 @@ class VehicleData {
             }
           },
         },
-        "2021":{
-          "STiLE MPV":{
-            "Diesel":{
+        "2021": {
+          "STiLE MPV": {
+            "Diesel": {
               "bodyType": "MPV (Commercial Minivan)",
               "cc": 1500,
               "fuelType": "Diesel",
@@ -72134,8 +72012,8 @@ class VehicleData {
               "exShowroom": 749000
             }
           },
-          "STiLE MPV (LX variant)":{
-            "Diesel":{
+          "STiLE MPV (LX variant)": {
+            "Diesel": {
               "bodyType": "MPV",
               "cc": "Approx 1461",
               "fuelType": "Diesel",
@@ -72143,8 +72021,8 @@ class VehicleData {
               "exShowroom": 929000
             }
           },
-          "Dost RUV – Ambulance Variant":{
-            "Diesel":{
+          "Dost RUV – Ambulance Variant": {
+            "Diesel": {
               "bodyType": "Light Commercial Ambulance",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72152,8 +72030,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Refrigerated Van":{
-            "Diesel":{
+          "Dost RUV – Refrigerated Van": {
+            "Diesel": {
               "bodyType": "Refrigerated Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72161,8 +72039,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Service Van":{
-            "Diesel":{
+          "Dost RUV – Service Van": {
+            "Diesel": {
               "bodyType": "Service Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72170,8 +72048,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Ambulance 4×4":{
-            "Diesel":{
+          "Ambulance 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Ambulance",
               "cc": "H6 IL engine (displacement not specified)",
               "fuelType": "Diesel",
@@ -72179,8 +72057,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Field Artillery Tractor (FAT) 6×6":{
-            "Diesel":{
+          "Field Artillery Tractor (FAT) 6×6": {
+            "Diesel": {
               "bodyType": "6×6 Artillery Tractor",
               "cc": "8.1 L Neptune I6 turbo-diesel (~8100 cc)",
               "fuelType": "Diesel",
@@ -72188,8 +72066,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Rhino 4×4":{
-            "Diesel":{
+          "Rhino 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Logistics Vehicle",
               "cc": "Not specified",
               "fuelType": "Diesel",
@@ -72197,8 +72075,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Light Specialist Vehicle (LSV) 4×4":{
-            "Diesel":{
+          "Light Specialist Vehicle (LSV) 4×4": {
+            "Diesel": {
               "bodyType": "Armoured 4×4 Specialist Vehicle",
               "cc": "H6 diesel (~108 hp)",
               "fuelType": "Diesel",
@@ -72206,8 +72084,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "High Mobility 10×10 Vehicle (Smerch Carrier)":{
-            "Diesel":{
+          "High Mobility 10×10 Vehicle (Smerch Carrier)": {
+            "Diesel": {
               "bodyType": "10×10 Heavy Artillery Carrier",
               "cc": "Not specified (360 hp)",
               "fuelType": "Diesel",
@@ -72216,9 +72094,9 @@ class VehicleData {
             }
           },
         },
-        "2022":{
-          "STiLE MPV":{
-            "Diesel":{
+        "2022": {
+          "STiLE MPV": {
+            "Diesel": {
               "bodyType": "MPV (Commercial Minivan)",
               "cc": 1500,
               "fuelType": "Diesel",
@@ -72226,8 +72104,8 @@ class VehicleData {
               "exShowroom": 749000
             }
           },
-          "STiLE MPV (LX variant)":{
-            "Diesel":{
+          "STiLE MPV (LX variant)": {
+            "Diesel": {
               "bodyType": "MPV",
               "cc": "Approx 1461",
               "fuelType": "Diesel",
@@ -72235,8 +72113,8 @@ class VehicleData {
               "exShowroom": 929000
             }
           },
-          "Dost RUV – Ambulance Variant":{
-            "Diesel":{
+          "Dost RUV – Ambulance Variant": {
+            "Diesel": {
               "bodyType": "Light Commercial Ambulance",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72244,8 +72122,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Refrigerated Van":{
-            "Diesel":{
+          "Dost RUV – Refrigerated Van": {
+            "Diesel": {
               "bodyType": "Refrigerated Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72253,8 +72131,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Service Van":{
-            "Diesel":{
+          "Dost RUV – Service Van": {
+            "Diesel": {
               "bodyType": "Service Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72262,8 +72140,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Ambulance 4×4":{
-            "Diesel":{
+          "Ambulance 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Ambulance",
               "cc": "H6 IL engine (displacement not specified)",
               "fuelType": "Diesel",
@@ -72271,8 +72149,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Field Artillery Tractor (FAT) 6×6":{
-            "Diesel":{
+          "Field Artillery Tractor (FAT) 6×6": {
+            "Diesel": {
               "bodyType": "6×6 Artillery Tractor",
               "cc": "8.1 L Neptune I6 turbo-diesel (~8100 cc)",
               "fuelType": "Diesel",
@@ -72280,8 +72158,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Rhino 4×4":{
-            "Diesel":{
+          "Rhino 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Logistics Vehicle",
               "cc": "Not specified",
               "fuelType": "Diesel",
@@ -72289,8 +72167,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Light Specialist Vehicle (LSV) 4×4":{
-            "Diesel":{
+          "Light Specialist Vehicle (LSV) 4×4": {
+            "Diesel": {
               "bodyType": "Armoured 4×4 Specialist Vehicle",
               "cc": "H6 diesel (~108 hp)",
               "fuelType": "Diesel",
@@ -72298,8 +72176,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "High Mobility 10×10 Vehicle (Smerch Carrier)":{
-            "Diesel":{
+          "High Mobility 10×10 Vehicle (Smerch Carrier)": {
+            "Diesel": {
               "bodyType": "10×10 Heavy Artillery Carrier",
               "cc": "Not specified (360 hp)",
               "fuelType": "Diesel",
@@ -72307,16 +72185,16 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Jeet 4×4":{
-            "Diesel":{
+          "Jeet 4×4": {
+            "Diesel": {
               "bodyType": "Light General Service Vehicle (4×4)",
               "fuelType": "Diesel",
               "seating": "Not specified",
               "exShowroom": "Data not available"
             }
           },
-          "LBPV 4×4":{
-            "Diesel":{
+          "LBPV 4×4": {
+            "Diesel": {
               "bodyType": "Light Bullet Proof Vehicle (4×4)",
               "fuelType": "Diesel",
               "seating": "Not specified",
@@ -72324,9 +72202,9 @@ class VehicleData {
             }
           }
         },
-        "2023":{
-          "STiLE MPV":{
-            "Diesel":{
+        "2023": {
+          "STiLE MPV": {
+            "Diesel": {
               "bodyType": "MPV (Commercial Minivan)",
               "cc": 1500,
               "fuelType": "Diesel",
@@ -72334,8 +72212,8 @@ class VehicleData {
               "exShowroom": 749000
             }
           },
-          "STiLE MPV (LX variant)":{
-            "Diesel":{
+          "STiLE MPV (LX variant)": {
+            "Diesel": {
               "bodyType": "MPV",
               "cc": "Approx 1461",
               "fuelType": "Diesel",
@@ -72343,8 +72221,8 @@ class VehicleData {
               "exShowroom": 929000
             }
           },
-          "Dost RUV – Ambulance Variant":{
-            "Diesel":{
+          "Dost RUV – Ambulance Variant": {
+            "Diesel": {
               "bodyType": "Light Commercial Ambulance",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72352,8 +72230,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Refrigerated Van":{
-            "Diesel":{
+          "Dost RUV – Refrigerated Van": {
+            "Diesel": {
               "bodyType": "Refrigerated Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72361,8 +72239,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Service Van":{
-            "Diesel":{
+          "Dost RUV – Service Van": {
+            "Diesel": {
               "bodyType": "Service Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72370,8 +72248,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Ambulance 4×4":{
-            "Diesel":{
+          "Ambulance 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Ambulance",
               "cc": "H6 IL engine (displacement not specified)",
               "fuelType": "Diesel",
@@ -72379,8 +72257,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Field Artillery Tractor (FAT) 6×6":{
-            "Diesel":{
+          "Field Artillery Tractor (FAT) 6×6": {
+            "Diesel": {
               "bodyType": "6×6 Artillery Tractor",
               "cc": "8.1 L Neptune I6 turbo-diesel (~8100 cc)",
               "fuelType": "Diesel",
@@ -72388,8 +72266,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Rhino 4×4":{
-            "Diesel":{
+          "Rhino 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Logistics Vehicle",
               "cc": "Not specified",
               "fuelType": "Diesel",
@@ -72397,8 +72275,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Light Specialist Vehicle (LSV) 4×4":{
-            "Diesel":{
+          "Light Specialist Vehicle (LSV) 4×4": {
+            "Diesel": {
               "bodyType": "Armoured 4×4 Specialist Vehicle",
               "cc": "H6 diesel (~108 hp)",
               "fuelType": "Diesel",
@@ -72406,8 +72284,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "High Mobility 10×10 Vehicle (Smerch Carrier)":{
-            "Diesel":{
+          "High Mobility 10×10 Vehicle (Smerch Carrier)": {
+            "Diesel": {
               "bodyType": "10×10 Heavy Artillery Carrier",
               "cc": "Not specified (360 hp)",
               "fuelType": "Diesel",
@@ -72415,33 +72293,34 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Jeet 4×4":{
-            "Diesel":{
+          "Jeet 4×4": {
+            "Diesel": {
               "bodyType": "Light General Service Vehicle (4×4)",
               "fuelType": "Diesel",
               "seating": "Not specified",
               "exShowroom": "Data not available"
             }
           },
-          "LBPV 4×4":{
-            "Diesel":{
+          "LBPV 4×4": {
+            "Diesel": {
               "bodyType": "Light Bullet Proof Vehicle (4×4)",
               "fuelType": "Diesel",
               "seating": "Not specified",
               "exShowroom": "Data not available"
             }
           },
-          "MiTR Advanced Life Support Ambulance":{
-            "Diesel":{
+          "MiTR Advanced Life Support Ambulance": {
+            "Diesel": {
               "bodyType": "Advanced Life Support Ambulance",
-              "cc": "Based on existing Ashok Leyland LCV platform (exact cc N/A)",
+              "cc":
+                  "Based on existing Ashok Leyland LCV platform (exact cc N/A)",
               "fuelType": "Diesel",
               "seating": "Not specified",
               "exShowroom": 1250000
             }
           },
-          "FAT 4×4":{
-            "Diesel":{
+          "FAT 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Artillery Tractor",
               "cc": "8.1 L (~8100 cc)",
               "fuelType": "Diesel",
@@ -72450,7 +72329,7 @@ class VehicleData {
             }
           },
           "GTV 6×6": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "6×6 Gun Towing Vehicle",
               "cc": "8.1 L (~8100 cc)",
               "fuelType": "Diesel",
@@ -72459,9 +72338,9 @@ class VehicleData {
             }
           }
         },
-        "2024":{
-          "STiLE MPV":{
-            "Diesel":{
+        "2024": {
+          "STiLE MPV": {
+            "Diesel": {
               "bodyType": "MPV (Commercial Minivan)",
               "cc": 1500,
               "fuelType": "Diesel",
@@ -72469,8 +72348,8 @@ class VehicleData {
               "exShowroom": 749000
             }
           },
-          "STiLE MPV (LX variant)":{
-            "Diesel":{
+          "STiLE MPV (LX variant)": {
+            "Diesel": {
               "bodyType": "MPV",
               "cc": "Approx 1461",
               "fuelType": "Diesel",
@@ -72478,8 +72357,8 @@ class VehicleData {
               "exShowroom": 929000
             }
           },
-          "Dost RUV – Ambulance Variant":{
-            "Diesel":{
+          "Dost RUV – Ambulance Variant": {
+            "Diesel": {
               "bodyType": "Light Commercial Ambulance",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72487,8 +72366,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Refrigerated Van":{
-            "Diesel":{
+          "Dost RUV – Refrigerated Van": {
+            "Diesel": {
               "bodyType": "Refrigerated Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72496,8 +72375,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Service Van":{
-            "Diesel":{
+          "Dost RUV – Service Van": {
+            "Diesel": {
               "bodyType": "Service Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72505,8 +72384,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Ambulance 4×4":{
-            "Diesel":{
+          "Ambulance 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Ambulance",
               "cc": "H6 IL engine (displacement not specified)",
               "fuelType": "Diesel",
@@ -72514,8 +72393,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Field Artillery Tractor (FAT) 6×6":{
-            "Diesel":{
+          "Field Artillery Tractor (FAT) 6×6": {
+            "Diesel": {
               "bodyType": "6×6 Artillery Tractor",
               "cc": "8.1 L Neptune I6 turbo-diesel (~8100 cc)",
               "fuelType": "Diesel",
@@ -72523,8 +72402,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Rhino 4×4":{
-            "Diesel":{
+          "Rhino 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Logistics Vehicle",
               "cc": "Not specified",
               "fuelType": "Diesel",
@@ -72532,8 +72411,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Light Specialist Vehicle (LSV) 4×4":{
-            "Diesel":{
+          "Light Specialist Vehicle (LSV) 4×4": {
+            "Diesel": {
               "bodyType": "Armoured 4×4 Specialist Vehicle",
               "cc": "H6 diesel (~108 hp)",
               "fuelType": "Diesel",
@@ -72541,8 +72420,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "High Mobility 10×10 Vehicle (Smerch Carrier)":{
-            "Diesel":{
+          "High Mobility 10×10 Vehicle (Smerch Carrier)": {
+            "Diesel": {
               "bodyType": "10×10 Heavy Artillery Carrier",
               "cc": "Not specified (360 hp)",
               "fuelType": "Diesel",
@@ -72550,33 +72429,34 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Jeet 4×4":{
-            "Diesel":{
+          "Jeet 4×4": {
+            "Diesel": {
               "bodyType": "Light General Service Vehicle (4×4)",
               "fuelType": "Diesel",
               "seating": "Not specified",
               "exShowroom": "Data not available"
             }
           },
-          "LBPV 4×4":{
-            "Diesel":{
+          "LBPV 4×4": {
+            "Diesel": {
               "bodyType": "Light Bullet Proof Vehicle (4×4)",
               "fuelType": "Diesel",
               "seating": "Not specified",
               "exShowroom": "Data not available"
             }
           },
-          "MiTR Advanced Life Support Ambulance":{
-            "Diesel":{
+          "MiTR Advanced Life Support Ambulance": {
+            "Diesel": {
               "bodyType": "Advanced Life Support Ambulance",
-              "cc": "Based on existing Ashok Leyland LCV platform (exact cc N/A)",
+              "cc":
+                  "Based on existing Ashok Leyland LCV platform (exact cc N/A)",
               "fuelType": "Diesel",
               "seating": "Not specified",
               "exShowroom": 1250000
             }
           },
-          "FAT 4×4":{
-            "Diesel":{
+          "FAT 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Artillery Tractor",
               "cc": "8.1 L (~8100 cc)",
               "fuelType": "Diesel",
@@ -72585,7 +72465,7 @@ class VehicleData {
             }
           },
           "GTV 6×6": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "6×6 Gun Towing Vehicle",
               "cc": "8.1 L (~8100 cc)",
               "fuelType": "Diesel",
@@ -72593,8 +72473,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "IeV4 Electric LCV":{
-            "Electric":{
+          "IeV4 Electric LCV": {
+            "Electric": {
               "bodyType": "Light Commercial Vehicle (Electric)",
               "cc": "Electric (no cc)",
               "fuelType": "Electric",
@@ -72603,9 +72483,9 @@ class VehicleData {
             }
           }
         },
-        "2025":{
-          "STiLE MPV":{
-            "Diesel":{
+        "2025": {
+          "STiLE MPV": {
+            "Diesel": {
               "bodyType": "MPV (Commercial Minivan)",
               "cc": 1500,
               "fuelType": "Diesel",
@@ -72613,8 +72493,8 @@ class VehicleData {
               "exShowroom": 749000
             }
           },
-          "STiLE MPV (LX variant)":{
-            "Diesel":{
+          "STiLE MPV (LX variant)": {
+            "Diesel": {
               "bodyType": "MPV",
               "cc": "Approx 1461",
               "fuelType": "Diesel",
@@ -72622,8 +72502,8 @@ class VehicleData {
               "exShowroom": 929000
             }
           },
-          "Dost RUV – Ambulance Variant":{
-            "Diesel":{
+          "Dost RUV – Ambulance Variant": {
+            "Diesel": {
               "bodyType": "Light Commercial Ambulance",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72631,8 +72511,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Refrigerated Van":{
-            "Diesel":{
+          "Dost RUV – Refrigerated Van": {
+            "Diesel": {
               "bodyType": "Refrigerated Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72640,8 +72520,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Dost RUV – Service Van":{
-            "Diesel":{
+          "Dost RUV – Service Van": {
+            "Diesel": {
               "bodyType": "Service Van",
               "cc": "Approx 1500",
               "fuelType": "Diesel",
@@ -72649,8 +72529,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Ambulance 4×4":{
-            "Diesel":{
+          "Ambulance 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Ambulance",
               "cc": "H6 IL engine (displacement not specified)",
               "fuelType": "Diesel",
@@ -72658,8 +72538,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Field Artillery Tractor (FAT) 6×6":{
-            "Diesel":{
+          "Field Artillery Tractor (FAT) 6×6": {
+            "Diesel": {
               "bodyType": "6×6 Artillery Tractor",
               "cc": "8.1 L Neptune I6 turbo-diesel (~8100 cc)",
               "fuelType": "Diesel",
@@ -72667,8 +72547,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Rhino 4×4":{
-            "Diesel":{
+          "Rhino 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Logistics Vehicle",
               "cc": "Not specified",
               "fuelType": "Diesel",
@@ -72676,8 +72556,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Light Specialist Vehicle (LSV) 4×4":{
-            "Diesel":{
+          "Light Specialist Vehicle (LSV) 4×4": {
+            "Diesel": {
               "bodyType": "Armoured 4×4 Specialist Vehicle",
               "cc": "H6 diesel (~108 hp)",
               "fuelType": "Diesel",
@@ -72685,8 +72565,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "High Mobility 10×10 Vehicle (Smerch Carrier)":{
-            "Diesel":{
+          "High Mobility 10×10 Vehicle (Smerch Carrier)": {
+            "Diesel": {
               "bodyType": "10×10 Heavy Artillery Carrier",
               "cc": "Not specified (360 hp)",
               "fuelType": "Diesel",
@@ -72694,33 +72574,34 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Jeet 4×4":{
-            "Diesel":{
+          "Jeet 4×4": {
+            "Diesel": {
               "bodyType": "Light General Service Vehicle (4×4)",
               "fuelType": "Diesel",
               "seating": "Not specified",
               "exShowroom": "Data not available"
             }
           },
-          "LBPV 4×4":{
-            "Diesel":{
+          "LBPV 4×4": {
+            "Diesel": {
               "bodyType": "Light Bullet Proof Vehicle (4×4)",
               "fuelType": "Diesel",
               "seating": "Not specified",
               "exShowroom": "Data not available"
             }
           },
-          "MiTR Advanced Life Support Ambulance":{
-            "Diesel":{
+          "MiTR Advanced Life Support Ambulance": {
+            "Diesel": {
               "bodyType": "Advanced Life Support Ambulance",
-              "cc": "Based on existing Ashok Leyland LCV platform (exact cc N/A)",
+              "cc":
+                  "Based on existing Ashok Leyland LCV platform (exact cc N/A)",
               "fuelType": "Diesel",
               "seating": "Not specified",
               "exShowroom": 1250000
             }
           },
-          "FAT 4×4":{
-            "Diesel":{
+          "FAT 4×4": {
+            "Diesel": {
               "bodyType": "4×4 Artillery Tractor",
               "cc": "8.1 L (~8100 cc)",
               "fuelType": "Diesel",
@@ -72729,7 +72610,7 @@ class VehicleData {
             }
           },
           "GTV 6×6": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "6×6 Gun Towing Vehicle",
               "cc": "8.1 L (~8100 cc)",
               "fuelType": "Diesel",
@@ -72737,8 +72618,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "IeV4 Electric LCV":{
-            "Electric":{
+          "IeV4 Electric LCV": {
+            "Electric": {
               "bodyType": "Light Commercial Vehicle (Electric)",
               "cc": "Electric (no cc)",
               "fuelType": "Electric",
@@ -72746,8 +72627,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Saathi":{
-            "Diesel":{
+          "Saathi": {
+            "Diesel": {
               "bodyType": "Small Commercial Vehicle",
               "cc": "1.5L",
               "fuelType": "Diesel",
@@ -72755,23 +72636,21 @@ class VehicleData {
               "exShowroom": 649999
             }
           },
-          "eTIRAN":{
-            "Electric":{
+          "eTIRAN": {
+            "Electric": {
               "bodyType": "Electric Port Terminal Tractor",
               "cc": "Electric",
               "fuelType": "Electric",
               "seating": 1,
               "exShowroom": "Data not available"
-
             }
           },
-
         },
       },
-      "Force Motors":{
-        "2015":{
-          "Force Trax Ambulance":{
-            "Diesel":{
+      "Force Motors": {
+        "2015": {
+          "Force Trax Ambulance": {
+            "Diesel": {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72779,8 +72658,8 @@ class VehicleData {
               "exShowroom": 1360000
             }
           },
-          "Force Traveller Delivery Van":{
-            "Diesel":{
+          "Force Traveller Delivery Van": {
+            "Diesel": {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
@@ -72788,8 +72667,8 @@ class VehicleData {
               "exShowroom": 1087000
             }
           },
-          "Force Traveller Ambulance":{
-            "Diesel":{
+          "Force Traveller Ambulance": {
+            "Diesel": {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72798,7 +72677,7 @@ class VehicleData {
             }
           },
           "Force Trax Police Van": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72807,9 +72686,9 @@ class VehicleData {
             }
           }
         },
-        "2016":{
-          "Force Trax Ambulance":{
-            "Diesel":{
+        "2016": {
+          "Force Trax Ambulance": {
+            "Diesel": {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72817,8 +72696,8 @@ class VehicleData {
               "exShowroom": 1360000
             }
           },
-          "Force Traveller Delivery Van":{
-            "Diesel":{
+          "Force Traveller Delivery Van": {
+            "Diesel": {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
@@ -72826,8 +72705,8 @@ class VehicleData {
               "exShowroom": 1087000
             }
           },
-          "Force Traveller Ambulance":{
-            "Diesel":{
+          "Force Traveller Ambulance": {
+            "Diesel": {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72836,7 +72715,7 @@ class VehicleData {
             }
           },
           "Force Trax Police Van": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72844,8 +72723,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Force Trax Jungle Safari":{
-            "Diesel":{
+          "Force Trax Jungle Safari": {
+            "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -72853,18 +72732,17 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Force Trax Cash Van":{
+          "Force Trax Cash Van": {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
             "seating": "Varies by configuration",
             "exShowroom": 1075000
           },
-          
         },
-        "2017":{
-          "Force Trax Ambulance":{
-            "Diesel":{
+        "2017": {
+          "Force Trax Ambulance": {
+            "Diesel": {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72872,8 +72750,8 @@ class VehicleData {
               "exShowroom": 1360000
             }
           },
-          "Force Traveller Delivery Van":{
-            "Diesel":{
+          "Force Traveller Delivery Van": {
+            "Diesel": {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
@@ -72881,8 +72759,8 @@ class VehicleData {
               "exShowroom": 1087000
             }
           },
-          "Force Traveller Ambulance":{
-            "Diesel":{
+          "Force Traveller Ambulance": {
+            "Diesel": {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72891,7 +72769,7 @@ class VehicleData {
             }
           },
           "Force Trax Police Van": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72899,8 +72777,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Force Trax Jungle Safari":{
-            "Diesel":{
+          "Force Trax Jungle Safari": {
+            "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -72908,15 +72786,15 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Force Trax Cash Van":{
+          "Force Trax Cash Van": {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
             "seating": "Varies by configuration",
             "exShowroom": 1075000
           },
-          "Force Trax Cruiser Deluxe":{
-            "Diesel":{
+          "Force Trax Cruiser Deluxe": {
+            "Diesel": {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -72925,7 +72803,7 @@ class VehicleData {
             }
           },
           "Force Gurkha Xpedition (Facelift)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -72933,8 +72811,8 @@ class VehicleData {
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle":{
-            "Diesel":{
+          "Force Traveller First Responder Vehicle": {
+            "Diesel": {
               "bodyType": "Emergency Response Vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -72943,9 +72821,9 @@ class VehicleData {
             }
           },
         },
-        "2018":{
-          "Force Trax Ambulance":{
-            "Diesel":{
+        "2018": {
+          "Force Trax Ambulance": {
+            "Diesel": {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72953,8 +72831,8 @@ class VehicleData {
               "exShowroom": 1360000
             }
           },
-          "Force Traveller Delivery Van":{
-            "Diesel":{
+          "Force Traveller Delivery Van": {
+            "Diesel": {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
@@ -72962,8 +72840,8 @@ class VehicleData {
               "exShowroom": 1087000
             }
           },
-          "Force Traveller Ambulance":{
-            "Diesel":{
+          "Force Traveller Ambulance": {
+            "Diesel": {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72972,7 +72850,7 @@ class VehicleData {
             }
           },
           "Force Trax Police Van": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -72980,8 +72858,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Force Trax Jungle Safari":{
-            "Diesel":{
+          "Force Trax Jungle Safari": {
+            "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -72989,15 +72867,15 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Force Trax Cash Van":{
+          "Force Trax Cash Van": {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
             "seating": "Varies by configuration",
             "exShowroom": 1075000
           },
-          "Force Trax Cruiser Deluxe":{
-            "Diesel":{
+          "Force Trax Cruiser Deluxe": {
+            "Diesel": {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73006,7 +72884,7 @@ class VehicleData {
             }
           },
           "Force Gurkha Xpedition (Facelift)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73014,8 +72892,8 @@ class VehicleData {
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle":{
-            "Diesel":{
+          "Force Traveller First Responder Vehicle": {
+            "Diesel": {
               "bodyType": "Emergency Response Vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73023,11 +72901,10 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          
         },
-        "2019":{
-          "Force Trax Ambulance":{
-            "Diesel":{
+        "2019": {
+          "Force Trax Ambulance": {
+            "Diesel": {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73035,8 +72912,8 @@ class VehicleData {
               "exShowroom": 1360000
             }
           },
-          "Force Traveller Delivery Van":{
-            "Diesel":{
+          "Force Traveller Delivery Van": {
+            "Diesel": {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
@@ -73044,8 +72921,8 @@ class VehicleData {
               "exShowroom": 1087000
             }
           },
-          "Force Traveller Ambulance":{
-            "Diesel":{
+          "Force Traveller Ambulance": {
+            "Diesel": {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73054,7 +72931,7 @@ class VehicleData {
             }
           },
           "Force Trax Police Van": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73062,8 +72939,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Force Trax Jungle Safari":{
-            "Diesel":{
+          "Force Trax Jungle Safari": {
+            "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73071,15 +72948,15 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Force Trax Cash Van":{
+          "Force Trax Cash Van": {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
             "seating": "Varies by configuration",
             "exShowroom": 1075000
           },
-          "Force Trax Cruiser Deluxe":{
-            "Diesel":{
+          "Force Trax Cruiser Deluxe": {
+            "Diesel": {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73088,7 +72965,7 @@ class VehicleData {
             }
           },
           "Force Gurkha Xpedition (Facelift)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73096,8 +72973,8 @@ class VehicleData {
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle":{
-            "Diesel":{
+          "Force Traveller First Responder Vehicle": {
+            "Diesel": {
               "bodyType": "Emergency Response Vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73105,11 +72982,10 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          
         },
-        "2020":{
-          "Force Trax Ambulance":{
-            "Diesel":{
+        "2020": {
+          "Force Trax Ambulance": {
+            "Diesel": {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73117,8 +72993,8 @@ class VehicleData {
               "exShowroom": 1360000
             }
           },
-          "Force Traveller Delivery Van":{
-            "Diesel":{
+          "Force Traveller Delivery Van": {
+            "Diesel": {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
@@ -73126,8 +73002,8 @@ class VehicleData {
               "exShowroom": 1087000
             }
           },
-          "Force Traveller Ambulance":{
-            "Diesel":{
+          "Force Traveller Ambulance": {
+            "Diesel": {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73136,7 +73012,7 @@ class VehicleData {
             }
           },
           "Force Trax Police Van": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73144,8 +73020,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Force Trax Jungle Safari":{
-            "Diesel":{
+          "Force Trax Jungle Safari": {
+            "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73153,15 +73029,15 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Force Trax Cash Van":{
+          "Force Trax Cash Van": {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
             "seating": "Varies by configuration",
             "exShowroom": 1075000
           },
-          "Force Trax Cruiser Deluxe":{
-            "Diesel":{
+          "Force Trax Cruiser Deluxe": {
+            "Diesel": {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73170,7 +73046,7 @@ class VehicleData {
             }
           },
           "Force Gurkha Xpedition (Facelift)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73178,8 +73054,8 @@ class VehicleData {
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle":{
-            "Diesel":{
+          "Force Traveller First Responder Vehicle": {
+            "Diesel": {
               "bodyType": "Emergency Response Vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73187,11 +73063,10 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          
         },
-        "2021":{
-          "Force Trax Ambulance":{
-            "Diesel":{
+        "2021": {
+          "Force Trax Ambulance": {
+            "Diesel": {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73199,8 +73074,8 @@ class VehicleData {
               "exShowroom": 1360000
             }
           },
-          "Force Traveller Delivery Van":{
-            "Diesel":{
+          "Force Traveller Delivery Van": {
+            "Diesel": {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
@@ -73208,8 +73083,8 @@ class VehicleData {
               "exShowroom": 1087000
             }
           },
-          "Force Traveller Ambulance":{
-            "Diesel":{
+          "Force Traveller Ambulance": {
+            "Diesel": {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73218,7 +73093,7 @@ class VehicleData {
             }
           },
           "Force Trax Police Van": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73226,8 +73101,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Force Trax Jungle Safari":{
-            "Diesel":{
+          "Force Trax Jungle Safari": {
+            "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73235,15 +73110,15 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Force Trax Cash Van":{
+          "Force Trax Cash Van": {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
             "seating": "Varies by configuration",
             "exShowroom": 1075000
           },
-          "Force Trax Cruiser Deluxe":{
-            "Diesel":{
+          "Force Trax Cruiser Deluxe": {
+            "Diesel": {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73252,7 +73127,7 @@ class VehicleData {
             }
           },
           "Force Gurkha Xpedition (Facelift)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73260,8 +73135,8 @@ class VehicleData {
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle":{
-            "Diesel":{
+          "Force Traveller First Responder Vehicle": {
+            "Diesel": {
               "bodyType": "Emergency Response Vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73269,11 +73144,10 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          
         },
-        "2022":{
-          "Force Trax Ambulance":{
-            "Diesel":{
+        "2022": {
+          "Force Trax Ambulance": {
+            "Diesel": {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73281,8 +73155,8 @@ class VehicleData {
               "exShowroom": 1360000
             }
           },
-          "Force Traveller Delivery Van":{
-            "Diesel":{
+          "Force Traveller Delivery Van": {
+            "Diesel": {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
@@ -73290,8 +73164,8 @@ class VehicleData {
               "exShowroom": 1087000
             }
           },
-          "Force Traveller Ambulance":{
-            "Diesel":{
+          "Force Traveller Ambulance": {
+            "Diesel": {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73300,7 +73174,7 @@ class VehicleData {
             }
           },
           "Force Trax Police Van": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73308,8 +73182,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Force Trax Jungle Safari":{
-            "Diesel":{
+          "Force Trax Jungle Safari": {
+            "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73317,15 +73191,15 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Force Trax Cash Van":{
+          "Force Trax Cash Van": {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
             "seating": "Varies by configuration",
             "exShowroom": 1075000
           },
-          "Force Trax Cruiser Deluxe":{
-            "Diesel":{
+          "Force Trax Cruiser Deluxe": {
+            "Diesel": {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73334,7 +73208,7 @@ class VehicleData {
             }
           },
           "Force Gurkha Xpedition (Facelift)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73342,8 +73216,8 @@ class VehicleData {
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle":{
-            "Diesel":{
+          "Force Traveller First Responder Vehicle": {
+            "Diesel": {
               "bodyType": "Emergency Response Vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73351,11 +73225,10 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          
         },
-        "2023":{
-          "Force Trax Ambulance":{
-            "Diesel":{
+        "2023": {
+          "Force Trax Ambulance": {
+            "Diesel": {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73363,8 +73236,8 @@ class VehicleData {
               "exShowroom": 1360000
             }
           },
-          "Force Traveller Delivery Van":{
-            "Diesel":{
+          "Force Traveller Delivery Van": {
+            "Diesel": {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
@@ -73372,8 +73245,8 @@ class VehicleData {
               "exShowroom": 1087000
             }
           },
-          "Force Traveller Ambulance":{
-            "Diesel":{
+          "Force Traveller Ambulance": {
+            "Diesel": {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73382,7 +73255,7 @@ class VehicleData {
             }
           },
           "Force Trax Police Van": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73390,8 +73263,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Force Trax Jungle Safari":{
-            "Diesel":{
+          "Force Trax Jungle Safari": {
+            "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73399,15 +73272,15 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Force Trax Cash Van":{
+          "Force Trax Cash Van": {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
             "seating": "Varies by configuration",
             "exShowroom": 1075000
           },
-          "Force Trax Cruiser Deluxe":{
-            "Diesel":{
+          "Force Trax Cruiser Deluxe": {
+            "Diesel": {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73416,7 +73289,7 @@ class VehicleData {
             }
           },
           "Force Gurkha Xpedition (Facelift)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73424,8 +73297,8 @@ class VehicleData {
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle":{
-            "Diesel":{
+          "Force Traveller First Responder Vehicle": {
+            "Diesel": {
               "bodyType": "Emergency Response Vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73433,11 +73306,10 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          
         },
-        "2024":{
-          "Force Trax Ambulance":{
-            "Diesel":{
+        "2024": {
+          "Force Trax Ambulance": {
+            "Diesel": {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73445,8 +73317,8 @@ class VehicleData {
               "exShowroom": 1360000
             }
           },
-          "Force Traveller Delivery Van":{
-            "Diesel":{
+          "Force Traveller Delivery Van": {
+            "Diesel": {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
@@ -73454,8 +73326,8 @@ class VehicleData {
               "exShowroom": 1087000
             }
           },
-          "Force Traveller Ambulance":{
-            "Diesel":{
+          "Force Traveller Ambulance": {
+            "Diesel": {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73464,7 +73336,7 @@ class VehicleData {
             }
           },
           "Force Trax Police Van": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73472,8 +73344,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Force Trax Jungle Safari":{
-            "Diesel":{
+          "Force Trax Jungle Safari": {
+            "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73481,15 +73353,15 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Force Trax Cash Van":{
+          "Force Trax Cash Van": {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
             "seating": "Varies by configuration",
             "exShowroom": 1075000
           },
-          "Force Trax Cruiser Deluxe":{
-            "Diesel":{
+          "Force Trax Cruiser Deluxe": {
+            "Diesel": {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73498,7 +73370,7 @@ class VehicleData {
             }
           },
           "Force Gurkha Xpedition (Facelift)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73506,8 +73378,8 @@ class VehicleData {
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle":{
-            "Diesel":{
+          "Force Traveller First Responder Vehicle": {
+            "Diesel": {
               "bodyType": "Emergency Response Vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73515,11 +73387,10 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          
         },
-        "2025":{
-          "Force Trax Ambulance":{
-            "Diesel":{
+        "2025": {
+          "Force Trax Ambulance": {
+            "Diesel": {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73527,8 +73398,8 @@ class VehicleData {
               "exShowroom": 1360000
             }
           },
-          "Force Traveller Delivery Van":{
-            "Diesel":{
+          "Force Traveller Delivery Van": {
+            "Diesel": {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
@@ -73536,8 +73407,8 @@ class VehicleData {
               "exShowroom": 1087000
             }
           },
-          "Force Traveller Ambulance":{
-            "Diesel":{
+          "Force Traveller Ambulance": {
+            "Diesel": {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73546,7 +73417,7 @@ class VehicleData {
             }
           },
           "Force Trax Police Van": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
@@ -73554,8 +73425,8 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          "Force Trax Jungle Safari":{
-            "Diesel":{
+          "Force Trax Jungle Safari": {
+            "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73563,15 +73434,15 @@ class VehicleData {
               "exShowroom": 2000000
             }
           },
-          "Force Trax Cash Van":{
+          "Force Trax Cash Van": {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
             "seating": "Varies by configuration",
             "exShowroom": 1075000
           },
-          "Force Trax Cruiser Deluxe":{
-            "Diesel":{
+          "Force Trax Cruiser Deluxe": {
+            "Diesel": {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73580,7 +73451,7 @@ class VehicleData {
             }
           },
           "Force Gurkha Xpedition (Facelift)": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73588,8 +73459,8 @@ class VehicleData {
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle":{
-            "Diesel":{
+          "Force Traveller First Responder Vehicle": {
+            "Diesel": {
               "bodyType": "Emergency Response Vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
@@ -73597,13 +73468,12 @@ class VehicleData {
               "exShowroom": "Data not available"
             }
           },
-          
         },
       },
-      "Eicher Motors (VECV)":{
-        "2015":{
-          "Eicher Polaris Multix":{
-            "Diesel":{
+      "Eicher Motors (VECV)": {
+        "2015": {
+          "Eicher Polaris Multix": {
+            "Diesel": {
               "bodyType": "4-door Utility Vehicle",
               "cc": 511,
               "fuelType": "Diesel",
@@ -73612,9 +73482,9 @@ class VehicleData {
             }
           },
         },
-        "2016":{
-          "Eicher Polaris Multix":{
-            "Diesel":{
+        "2016": {
+          "Eicher Polaris Multix": {
+            "Diesel": {
               "bodyType": "4-door Utility Vehicle",
               "cc": 511,
               "fuelType": "Diesel",
@@ -73623,9 +73493,9 @@ class VehicleData {
             }
           },
         },
-        "2017":{
-          "Eicher Polaris Multix":{
-            "Diesel":{
+        "2017": {
+          "Eicher Polaris Multix": {
+            "Diesel": {
               "bodyType": "4-door Utility Vehicle",
               "cc": 511,
               "fuelType": "Diesel",
@@ -73634,9 +73504,9 @@ class VehicleData {
             }
           },
         },
-        "2018":{
-          "Eicher Polaris Multix":{
-            "Diesel":{
+        "2018": {
+          "Eicher Polaris Multix": {
+            "Diesel": {
               "bodyType": "4-door Utility Vehicle",
               "cc": 511,
               "fuelType": "Diesel",
@@ -73645,9 +73515,9 @@ class VehicleData {
             }
           },
         },
-        "2019":{
-          "Eicher Polaris Multix":{
-            "Diesel":{
+        "2019": {
+          "Eicher Polaris Multix": {
+            "Diesel": {
               "bodyType": "4-door Utility Vehicle",
               "cc": 511,
               "fuelType": "Diesel",
@@ -73656,9 +73526,9 @@ class VehicleData {
             }
           },
         },
-        "2020":{
-          "Eicher Polaris Multix":{
-            "Diesel":{
+        "2020": {
+          "Eicher Polaris Multix": {
+            "Diesel": {
               "bodyType": "4-door Utility Vehicle",
               "cc": 511,
               "fuelType": "Diesel",
@@ -73667,9 +73537,9 @@ class VehicleData {
             }
           },
         },
-        "2021":{
-          "Eicher Polaris Multix":{
-            "Diesel":{
+        "2021": {
+          "Eicher Polaris Multix": {
+            "Diesel": {
               "bodyType": "4-door Utility Vehicle",
               "cc": 511,
               "fuelType": "Diesel",
@@ -73678,9 +73548,9 @@ class VehicleData {
             }
           },
         },
-        "2022":{
-          "Eicher Polaris Multix":{
-            "Diesel":{
+        "2022": {
+          "Eicher Polaris Multix": {
+            "Diesel": {
               "bodyType": "4-door Utility Vehicle",
               "cc": 511,
               "fuelType": "Diesel",
@@ -73689,9 +73559,9 @@ class VehicleData {
             }
           },
         },
-        "2023":{
-          "Eicher Polaris Multix":{
-            "Diesel":{
+        "2023": {
+          "Eicher Polaris Multix": {
+            "Diesel": {
               "bodyType": "4-door Utility Vehicle",
               "cc": 511,
               "fuelType": "Diesel",
@@ -73700,9 +73570,9 @@ class VehicleData {
             }
           },
         },
-        "2024":{
-          "Eicher Polaris Multix":{
-            "Diesel":{
+        "2024": {
+          "Eicher Polaris Multix": {
+            "Diesel": {
               "bodyType": "4-door Utility Vehicle",
               "cc": 511,
               "fuelType": "Diesel",
@@ -73711,9 +73581,9 @@ class VehicleData {
             }
           },
         },
-        "2025":{
-          "Eicher Polaris Multix":{
-            "Diesel":{
+        "2025": {
+          "Eicher Polaris Multix": {
+            "Diesel": {
               "bodyType": "4-door Utility Vehicle",
               "cc": 511,
               "fuelType": "Diesel",
@@ -73723,10 +73593,10 @@ class VehicleData {
           },
         },
       },
-      "BharatBenz (Daimler India)":{
-        "2015":{
-          "BharatBenz 3143":{
-            "Diesel":{
+      "BharatBenz (Daimler India)": {
+        "2015": {
+          "BharatBenz 3143": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -73734,8 +73604,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz Heavy Duty Tractor":{
-            "Diesel":{
+          "BharatBenz Heavy Duty Tractor": {
+            "Diesel": {
               "bodyType": "Heavy Duty Tractor",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -73744,9 +73614,9 @@ class VehicleData {
             }
           },
         },
-        "2016":{
-          "BharatBenz 3143":{
-            "Diesel":{
+        "2016": {
+          "BharatBenz 3143": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -73754,8 +73624,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz Heavy Duty Tractor":{
-            "Diesel":{
+          "BharatBenz Heavy Duty Tractor": {
+            "Diesel": {
               "bodyType": "Heavy Duty Tractor",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -73763,8 +73633,8 @@ class VehicleData {
               "exShowroom": 5000000
             }
           },
-          "BharatBenz MD IN-POWER Series":{
-            "914R":{
+          "BharatBenz MD IN-POWER Series": {
+            "914R": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -73793,8 +73663,8 @@ class VehicleData {
               "exShowroom": 1850000
             }
           },
-          "BharatBenz 3723R":{
-            "Diesel":{
+          "BharatBenz 3723R": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -73802,8 +73672,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz 1617R":{
-            "Diesel":{
+          "BharatBenz 1617R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -73811,11 +73681,10 @@ class VehicleData {
               "exShowroom": 2855000
             }
           },
-
         },
-        "2017":{
-          "BharatBenz 3143":{
-            "Diesel":{
+        "2017": {
+          "BharatBenz 3143": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -73823,8 +73692,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz Heavy Duty Tractor":{
-            "Diesel":{
+          "BharatBenz Heavy Duty Tractor": {
+            "Diesel": {
               "bodyType": "Heavy Duty Tractor",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -73832,8 +73701,8 @@ class VehicleData {
               "exShowroom": 5000000
             }
           },
-          "BharatBenz MD IN-POWER Series":{
-            "914R":{
+          "BharatBenz MD IN-POWER Series": {
+            "914R": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -73862,8 +73731,8 @@ class VehicleData {
               "exShowroom": 1850000
             }
           },
-          "BharatBenz 3723R":{
-            "Diesel":{
+          "BharatBenz 3723R": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -73871,8 +73740,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz 1617R":{
-            "Diesel":{
+          "BharatBenz 1617R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -73880,8 +73749,8 @@ class VehicleData {
               "exShowroom": 2855000
             }
           },
-          "BharatBenz 2523C":{
-            "Diesel":{
+          "BharatBenz 2523C": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -73889,8 +73758,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "BharatBenz 1017":{
-            "Diesel":{
+          "BharatBenz 1017": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -73898,12 +73767,10 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-
-          
         },
-        "2018":{
-          "BharatBenz 3143":{
-            "Diesel":{
+        "2018": {
+          "BharatBenz 3143": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -73911,8 +73778,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz Heavy Duty Tractor":{
-            "Diesel":{
+          "BharatBenz Heavy Duty Tractor": {
+            "Diesel": {
               "bodyType": "Heavy Duty Tractor",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -73920,8 +73787,8 @@ class VehicleData {
               "exShowroom": 5000000
             }
           },
-          "BharatBenz MD IN-POWER Series":{
-            "914R":{
+          "BharatBenz MD IN-POWER Series": {
+            "914R": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -73950,8 +73817,8 @@ class VehicleData {
               "exShowroom": 1850000
             }
           },
-          "BharatBenz 3723R":{
-            "Diesel":{
+          "BharatBenz 3723R": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -73959,8 +73826,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz 1617R":{
-            "Diesel":{
+          "BharatBenz 1617R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -73968,8 +73835,8 @@ class VehicleData {
               "exShowroom": 2855000
             }
           },
-          "BharatBenz 2523C":{
-            "Diesel":{
+          "BharatBenz 2523C": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -73977,8 +73844,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "BharatBenz 1017":{
-            "Diesel":{
+          "BharatBenz 1017": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -73986,8 +73853,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 4928T":{
-            "Diesel":{
+          "BharatBenz 4928T": {
+            "Diesel": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -73995,8 +73862,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1214R":{
-            "Diesel":{
+          "BharatBenz 1214R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74004,12 +73871,10 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-
-          
         },
-        "2019":{
-          "BharatBenz 3143":{
-            "Diesel":{
+        "2019": {
+          "BharatBenz 3143": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74017,8 +73882,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz Heavy Duty Tractor":{
-            "Diesel":{
+          "BharatBenz Heavy Duty Tractor": {
+            "Diesel": {
               "bodyType": "Heavy Duty Tractor",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74026,8 +73891,8 @@ class VehicleData {
               "exShowroom": 5000000
             }
           },
-          "BharatBenz MD IN-POWER Series":{
-            "914R":{
+          "BharatBenz MD IN-POWER Series": {
+            "914R": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74056,8 +73921,8 @@ class VehicleData {
               "exShowroom": 1850000
             }
           },
-          "BharatBenz 3723R":{
-            "Diesel":{
+          "BharatBenz 3723R": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74065,8 +73930,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz 1617R":{
-            "Diesel":{
+          "BharatBenz 1617R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74074,8 +73939,8 @@ class VehicleData {
               "exShowroom": 2855000
             }
           },
-          "BharatBenz 2523C":{
-            "Diesel":{
+          "BharatBenz 2523C": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74083,8 +73948,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "BharatBenz 1017":{
-            "Diesel":{
+          "BharatBenz 1017": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74092,8 +73957,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 4928T":{
-            "Diesel":{
+          "BharatBenz 4928T": {
+            "Diesel": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74101,8 +73966,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1214R":{
-            "Diesel":{
+          "BharatBenz 1214R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74110,8 +73975,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 1017R":{
-            "Diesel":{
+          "BharatBenz 1017R": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74119,11 +73984,10 @@ class VehicleData {
               "exShowroom": 1800000
             }
           }
-          
         },
-        "2020":{
-          "BharatBenz 3143":{
-            "Diesel":{
+        "2020": {
+          "BharatBenz 3143": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74131,8 +73995,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz Heavy Duty Tractor":{
-            "Diesel":{
+          "BharatBenz Heavy Duty Tractor": {
+            "Diesel": {
               "bodyType": "Heavy Duty Tractor",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74140,8 +74004,8 @@ class VehicleData {
               "exShowroom": 5000000
             }
           },
-          "BharatBenz MD IN-POWER Series":{
-            "914R":{
+          "BharatBenz MD IN-POWER Series": {
+            "914R": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74170,8 +74034,8 @@ class VehicleData {
               "exShowroom": 1850000
             }
           },
-          "BharatBenz 3723R":{
-            "Diesel":{
+          "BharatBenz 3723R": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74179,8 +74043,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz 1617R":{
-            "Diesel":{
+          "BharatBenz 1617R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74188,8 +74052,8 @@ class VehicleData {
               "exShowroom": 2855000
             }
           },
-          "BharatBenz 2523C":{
-            "Diesel":{
+          "BharatBenz 2523C": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74197,8 +74061,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "BharatBenz 1017":{
-            "Diesel":{
+          "BharatBenz 1017": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74206,8 +74070,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 4928T":{
-            "Diesel":{
+          "BharatBenz 4928T": {
+            "Diesel": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74215,8 +74079,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1214R":{
-            "Diesel":{
+          "BharatBenz 1214R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74224,8 +74088,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 1017R":{
-            "Diesel":{
+          "BharatBenz 1017R": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74233,8 +74097,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "BharatBenz 2823R":{
-            "Diesel":{
+          "BharatBenz 2823R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74242,11 +74106,10 @@ class VehicleData {
               "exShowroom": 2832000
             }
           }
-          
         },
-        "2021":{
-          "BharatBenz 3143":{
-            "Diesel":{
+        "2021": {
+          "BharatBenz 3143": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74254,8 +74117,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz Heavy Duty Tractor":{
-            "Diesel":{
+          "BharatBenz Heavy Duty Tractor": {
+            "Diesel": {
               "bodyType": "Heavy Duty Tractor",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74263,8 +74126,8 @@ class VehicleData {
               "exShowroom": 5000000
             }
           },
-          "BharatBenz MD IN-POWER Series":{
-            "914R":{
+          "BharatBenz MD IN-POWER Series": {
+            "914R": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74293,8 +74156,8 @@ class VehicleData {
               "exShowroom": 1850000
             }
           },
-          "BharatBenz 3723R":{
-            "Diesel":{
+          "BharatBenz 3723R": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74302,8 +74165,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz 1617R":{
-            "Diesel":{
+          "BharatBenz 1617R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74311,8 +74174,8 @@ class VehicleData {
               "exShowroom": 2855000
             }
           },
-          "BharatBenz 2523C":{
-            "Diesel":{
+          "BharatBenz 2523C": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74320,8 +74183,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "BharatBenz 1017":{
-            "Diesel":{
+          "BharatBenz 1017": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74329,8 +74192,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 4928T":{
-            "Diesel":{
+          "BharatBenz 4928T": {
+            "Diesel": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74338,8 +74201,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1214R":{
-            "Diesel":{
+          "BharatBenz 1214R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74347,8 +74210,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 1017R":{
-            "Diesel":{
+          "BharatBenz 1017R": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74356,8 +74219,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "BharatBenz 2823R":{
-            "Diesel":{
+          "BharatBenz 2823R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74365,8 +74228,8 @@ class VehicleData {
               "exShowroom": 2832000
             }
           },
-          "BharatBenz 4228R Tanker":{
-            "Diesel":{
+          "BharatBenz 4228R Tanker": {
+            "Diesel": {
               "bodyType": "Tanker Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74374,8 +74237,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1015R+":{
-            "Diesel":{
+          "BharatBenz 1015R+": {
+            "Diesel": {
               "bodyType": "Rigid Truck",
               "cc": 4000,
               "fuelType": "Diesel",
@@ -74383,8 +74246,8 @@ class VehicleData {
               "exShowroom": 1450000
             }
           },
-          "BharatBenz 42T M-Cab":{
-            "Diesel":{
+          "BharatBenz 42T M-Cab": {
+            "Diesel": {
               "bodyType": "Multi-Axle Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74392,8 +74255,8 @@ class VehicleData {
               "exShowroom": 4200000
             }
           },
-          "BharatBenz 2868 Construction Vehicle":{
-            "Diesel":{
+          "BharatBenz 2868 Construction Vehicle": {
+            "Diesel": {
               "bodyType": "Construction Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74401,8 +74264,8 @@ class VehicleData {
               "exShowroom": 3850000
             }
           },
-          "BharatBenz BSafe Express":{
-            "Diesel":{
+          "BharatBenz BSafe Express": {
+            "Diesel": {
               "bodyType": "Reefer Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74410,12 +74273,10 @@ class VehicleData {
               "exShowroom": 3600000
             }
           },
-
-          
         },
-        "2022":{
-          "BharatBenz 3143":{
-            "Diesel":{
+        "2022": {
+          "BharatBenz 3143": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74423,8 +74284,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz Heavy Duty Tractor":{
-            "Diesel":{
+          "BharatBenz Heavy Duty Tractor": {
+            "Diesel": {
               "bodyType": "Heavy Duty Tractor",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74432,8 +74293,8 @@ class VehicleData {
               "exShowroom": 5000000
             }
           },
-          "BharatBenz MD IN-POWER Series":{
-            "914R":{
+          "BharatBenz MD IN-POWER Series": {
+            "914R": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74462,8 +74323,8 @@ class VehicleData {
               "exShowroom": 1850000
             }
           },
-          "BharatBenz 3723R":{
-            "Diesel":{
+          "BharatBenz 3723R": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74471,8 +74332,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz 1617R":{
-            "Diesel":{
+          "BharatBenz 1617R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74480,8 +74341,8 @@ class VehicleData {
               "exShowroom": 2855000
             }
           },
-          "BharatBenz 2523C":{
-            "Diesel":{
+          "BharatBenz 2523C": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74489,8 +74350,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "BharatBenz 1017":{
-            "Diesel":{
+          "BharatBenz 1017": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74498,8 +74359,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 4928T":{
-            "Diesel":{
+          "BharatBenz 4928T": {
+            "Diesel": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74507,8 +74368,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1214R":{
-            "Diesel":{
+          "BharatBenz 1214R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74516,8 +74377,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 1017R":{
-            "Diesel":{
+          "BharatBenz 1017R": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74525,8 +74386,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "BharatBenz 2823R":{
-            "Diesel":{
+          "BharatBenz 2823R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74534,8 +74395,8 @@ class VehicleData {
               "exShowroom": 2832000
             }
           },
-          "BharatBenz 4228R Tanker":{
-            "Diesel":{
+          "BharatBenz 4228R Tanker": {
+            "Diesel": {
               "bodyType": "Tanker Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74543,8 +74404,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1015R+":{
-            "Diesel":{
+          "BharatBenz 1015R+": {
+            "Diesel": {
               "bodyType": "Rigid Truck",
               "cc": 4000,
               "fuelType": "Diesel",
@@ -74552,8 +74413,8 @@ class VehicleData {
               "exShowroom": 1450000
             }
           },
-          "BharatBenz 42T M-Cab":{
-            "Diesel":{
+          "BharatBenz 42T M-Cab": {
+            "Diesel": {
               "bodyType": "Multi-Axle Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74561,8 +74422,8 @@ class VehicleData {
               "exShowroom": 4200000
             }
           },
-          "BharatBenz 2868 Construction Vehicle":{
-            "Diesel":{
+          "BharatBenz 2868 Construction Vehicle": {
+            "Diesel": {
               "bodyType": "Construction Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74570,8 +74431,8 @@ class VehicleData {
               "exShowroom": 3850000
             }
           },
-          "BharatBenz BSafe Express":{
-            "Diesel":{
+          "BharatBenz BSafe Express": {
+            "Diesel": {
               "bodyType": "Reefer Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74579,12 +74440,10 @@ class VehicleData {
               "exShowroom": 3600000
             }
           },
-          
-          
         },
-        "2023":{
-          "BharatBenz 3143":{
-            "Diesel":{
+        "2023": {
+          "BharatBenz 3143": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74592,8 +74451,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz Heavy Duty Tractor":{
-            "Diesel":{
+          "BharatBenz Heavy Duty Tractor": {
+            "Diesel": {
               "bodyType": "Heavy Duty Tractor",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74601,8 +74460,8 @@ class VehicleData {
               "exShowroom": 5000000
             }
           },
-          "BharatBenz MD IN-POWER Series":{
-            "914R":{
+          "BharatBenz MD IN-POWER Series": {
+            "914R": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74631,8 +74490,8 @@ class VehicleData {
               "exShowroom": 1850000
             }
           },
-          "BharatBenz 3723R":{
-            "Diesel":{
+          "BharatBenz 3723R": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74640,8 +74499,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz 1617R":{
-            "Diesel":{
+          "BharatBenz 1617R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74649,8 +74508,8 @@ class VehicleData {
               "exShowroom": 2855000
             }
           },
-          "BharatBenz 2523C":{
-            "Diesel":{
+          "BharatBenz 2523C": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74658,8 +74517,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "BharatBenz 1017":{
-            "Diesel":{
+          "BharatBenz 1017": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74667,8 +74526,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 4928T":{
-            "Diesel":{
+          "BharatBenz 4928T": {
+            "Diesel": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74676,8 +74535,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1214R":{
-            "Diesel":{
+          "BharatBenz 1214R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74685,8 +74544,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 1017R":{
-            "Diesel":{
+          "BharatBenz 1017R": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74694,8 +74553,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "BharatBenz 2823R":{
-            "Diesel":{
+          "BharatBenz 2823R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74703,8 +74562,8 @@ class VehicleData {
               "exShowroom": 2832000
             }
           },
-          "BharatBenz 4228R Tanker":{
-            "Diesel":{
+          "BharatBenz 4228R Tanker": {
+            "Diesel": {
               "bodyType": "Tanker Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74712,8 +74571,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1015R+":{
-            "Diesel":{
+          "BharatBenz 1015R+": {
+            "Diesel": {
               "bodyType": "Rigid Truck",
               "cc": 4000,
               "fuelType": "Diesel",
@@ -74721,8 +74580,8 @@ class VehicleData {
               "exShowroom": 1450000
             }
           },
-          "BharatBenz 42T M-Cab":{
-            "Diesel":{
+          "BharatBenz 42T M-Cab": {
+            "Diesel": {
               "bodyType": "Multi-Axle Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74730,8 +74589,8 @@ class VehicleData {
               "exShowroom": 4200000
             }
           },
-          "BharatBenz 2868 Construction Vehicle":{
-            "Diesel":{
+          "BharatBenz 2868 Construction Vehicle": {
+            "Diesel": {
               "bodyType": "Construction Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74739,8 +74598,8 @@ class VehicleData {
               "exShowroom": 3850000
             }
           },
-          "BharatBenz BSafe Express":{
-            "Diesel":{
+          "BharatBenz BSafe Express": {
+            "Diesel": {
               "bodyType": "Reefer Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74748,8 +74607,8 @@ class VehicleData {
               "exShowroom": 3600000
             }
           },
-          "BharatBenz 3532CM":{
-            "Diesel":{
+          "BharatBenz 3532CM": {
+            "Diesel": {
               "bodyType": "Mining Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74757,8 +74616,8 @@ class VehicleData {
               "exShowroom": 4200000
             }
           },
-          "BharatBenz 2832CM":{
-            "Diesel":{
+          "BharatBenz 2832CM": {
+            "Diesel": {
               "bodyType": "Mining Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74766,8 +74625,8 @@ class VehicleData {
               "exShowroom": 3850000
             }
           },
-          "BharatBenz 5532 Tip Trailer":{
-            "Diesel":{
+          "BharatBenz 5532 Tip Trailer": {
+            "Diesel": {
               "bodyType": "Tip Trailer",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74775,8 +74634,8 @@ class VehicleData {
               "exShowroom": 5600000
             }
           },
-          "BharatBenz 4828RT":{
-            "Diesel":{
+          "BharatBenz 4828RT": {
+            "Diesel": {
               "bodyType": "Rigid Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74784,11 +74643,10 @@ class VehicleData {
               "exShowroom": 4900000
             }
           },
-          
         },
-        "2024":{
-          "BharatBenz 3143":{
-            "Diesel":{
+        "2024": {
+          "BharatBenz 3143": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74796,8 +74654,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz Heavy Duty Tractor":{
-            "Diesel":{
+          "BharatBenz Heavy Duty Tractor": {
+            "Diesel": {
               "bodyType": "Heavy Duty Tractor",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74805,8 +74663,8 @@ class VehicleData {
               "exShowroom": 5000000
             }
           },
-          "BharatBenz MD IN-POWER Series":{
-            "914R":{
+          "BharatBenz MD IN-POWER Series": {
+            "914R": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74835,8 +74693,8 @@ class VehicleData {
               "exShowroom": 1850000
             }
           },
-          "BharatBenz 3723R":{
-            "Diesel":{
+          "BharatBenz 3723R": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -74844,8 +74702,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz 1617R":{
-            "Diesel":{
+          "BharatBenz 1617R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74853,8 +74711,8 @@ class VehicleData {
               "exShowroom": 2855000
             }
           },
-          "BharatBenz 2523C":{
-            "Diesel":{
+          "BharatBenz 2523C": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74862,8 +74720,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "BharatBenz 1017":{
-            "Diesel":{
+          "BharatBenz 1017": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74871,8 +74729,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 4928T":{
-            "Diesel":{
+          "BharatBenz 4928T": {
+            "Diesel": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74880,8 +74738,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1214R":{
-            "Diesel":{
+          "BharatBenz 1214R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -74889,8 +74747,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 1017R":{
-            "Diesel":{
+          "BharatBenz 1017R": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -74898,8 +74756,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "BharatBenz 2823R":{
-            "Diesel":{
+          "BharatBenz 2823R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -74907,8 +74765,8 @@ class VehicleData {
               "exShowroom": 2832000
             }
           },
-          "BharatBenz 4228R Tanker":{
-            "Diesel":{
+          "BharatBenz 4228R Tanker": {
+            "Diesel": {
               "bodyType": "Tanker Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74916,8 +74774,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1015R+":{
-            "Diesel":{
+          "BharatBenz 1015R+": {
+            "Diesel": {
               "bodyType": "Rigid Truck",
               "cc": 4000,
               "fuelType": "Diesel",
@@ -74925,8 +74783,8 @@ class VehicleData {
               "exShowroom": 1450000
             }
           },
-          "BharatBenz 42T M-Cab":{
-            "Diesel":{
+          "BharatBenz 42T M-Cab": {
+            "Diesel": {
               "bodyType": "Multi-Axle Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74934,8 +74792,8 @@ class VehicleData {
               "exShowroom": 4200000
             }
           },
-          "BharatBenz 2868 Construction Vehicle":{
-            "Diesel":{
+          "BharatBenz 2868 Construction Vehicle": {
+            "Diesel": {
               "bodyType": "Construction Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74943,8 +74801,8 @@ class VehicleData {
               "exShowroom": 3850000
             }
           },
-          "BharatBenz BSafe Express":{
-            "Diesel":{
+          "BharatBenz BSafe Express": {
+            "Diesel": {
               "bodyType": "Reefer Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74952,8 +74810,8 @@ class VehicleData {
               "exShowroom": 3600000
             }
           },
-          "BharatBenz 3532CM":{
-            "Diesel":{
+          "BharatBenz 3532CM": {
+            "Diesel": {
               "bodyType": "Mining Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74961,8 +74819,8 @@ class VehicleData {
               "exShowroom": 4200000
             }
           },
-          "BharatBenz 2832CM":{
-            "Diesel":{
+          "BharatBenz 2832CM": {
+            "Diesel": {
               "bodyType": "Mining Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74970,8 +74828,8 @@ class VehicleData {
               "exShowroom": 3850000
             }
           },
-          "BharatBenz 5532 Tip Trailer":{
-            "Diesel":{
+          "BharatBenz 5532 Tip Trailer": {
+            "Diesel": {
               "bodyType": "Tip Trailer",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74979,8 +74837,8 @@ class VehicleData {
               "exShowroom": 5600000
             }
           },
-          "BharatBenz 4828RT":{
-            "Diesel":{
+          "BharatBenz 4828RT": {
+            "Diesel": {
               "bodyType": "Rigid Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74988,8 +74846,8 @@ class VehicleData {
               "exShowroom": 4900000
             }
           },
-          "BharatBenz 2828C HX":{
-            "Diesel":{
+          "BharatBenz 2828C HX": {
+            "Diesel": {
               "bodyType": "Construction Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -74997,8 +74855,8 @@ class VehicleData {
               "exShowroom": 4900000
             }
           },
-          "BharatBenz 3532C HX":{
-            "Diesel":{
+          "BharatBenz 3532C HX": {
+            "Diesel": {
               "bodyType": "Mining Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75006,8 +74864,8 @@ class VehicleData {
               "exShowroom": 5250000
             }
           },
-          "BharatBenz 3532CM Torqshift":{
-            "Diesel":{
+          "BharatBenz 3532CM Torqshift": {
+            "Diesel": {
               "bodyType": "Mining Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75015,8 +74873,8 @@ class VehicleData {
               "exShowroom": 5300000
             }
           },
-          "BharatBenz 4828RT HX":{
-            "Diesel":{
+          "BharatBenz 4828RT HX": {
+            "Diesel": {
               "bodyType": "Rigid Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75025,9 +74883,9 @@ class VehicleData {
             }
           },
         },
-        "2025":{
-          "BharatBenz 3143":{
-            "Diesel":{
+        "2025": {
+          "BharatBenz 3143": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -75035,8 +74893,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz Heavy Duty Tractor":{
-            "Diesel":{
+          "BharatBenz Heavy Duty Tractor": {
+            "Diesel": {
               "bodyType": "Heavy Duty Tractor",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -75044,8 +74902,8 @@ class VehicleData {
               "exShowroom": 5000000
             }
           },
-          "BharatBenz MD IN-POWER Series":{
-            "914R":{
+          "BharatBenz MD IN-POWER Series": {
+            "914R": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -75074,8 +74932,8 @@ class VehicleData {
               "exShowroom": 1850000
             }
           },
-          "BharatBenz 3723R":{
-            "Diesel":{
+          "BharatBenz 3723R": {
+            "Diesel": {
               "bodyType": "Rock/Coal Carrier",
               "cc": 12000,
               "fuelType": "Diesel",
@@ -75083,8 +74941,8 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          "BharatBenz 1617R":{
-            "Diesel":{
+          "BharatBenz 1617R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -75092,8 +74950,8 @@ class VehicleData {
               "exShowroom": 2855000
             }
           },
-          "BharatBenz 2523C":{
-            "Diesel":{
+          "BharatBenz 2523C": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -75101,8 +74959,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "BharatBenz 1017":{
-            "Diesel":{
+          "BharatBenz 1017": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -75110,8 +74968,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 4928T":{
-            "Diesel":{
+          "BharatBenz 4928T": {
+            "Diesel": {
               "bodyType": "Tractor Trailer",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -75119,8 +74977,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1214R":{
-            "Diesel":{
+          "BharatBenz 1214R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 3900,
               "fuelType": "Diesel",
@@ -75128,8 +74986,8 @@ class VehicleData {
               "exShowroom": 1750000
             }
           },
-          "BharatBenz 1017R":{
-            "Diesel":{
+          "BharatBenz 1017R": {
+            "Diesel": {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
@@ -75137,8 +74995,8 @@ class VehicleData {
               "exShowroom": 1800000
             }
           },
-          "BharatBenz 2823R":{
-            "Diesel":{
+          "BharatBenz 2823R": {
+            "Diesel": {
               "bodyType": "Cargo Truck",
               "cc": 7200,
               "fuelType": "Diesel",
@@ -75146,8 +75004,8 @@ class VehicleData {
               "exShowroom": 2832000
             }
           },
-          "BharatBenz 4228R Tanker":{
-            "Diesel":{
+          "BharatBenz 4228R Tanker": {
+            "Diesel": {
               "bodyType": "Tanker Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75155,8 +75013,8 @@ class VehicleData {
               "exShowroom": 3500000
             }
           },
-          "BharatBenz 1015R+":{
-            "Diesel":{
+          "BharatBenz 1015R+": {
+            "Diesel": {
               "bodyType": "Rigid Truck",
               "cc": 4000,
               "fuelType": "Diesel",
@@ -75164,8 +75022,8 @@ class VehicleData {
               "exShowroom": 1450000
             }
           },
-          "BharatBenz 42T M-Cab":{
-            "Diesel":{
+          "BharatBenz 42T M-Cab": {
+            "Diesel": {
               "bodyType": "Multi-Axle Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75173,8 +75031,8 @@ class VehicleData {
               "exShowroom": 4200000
             }
           },
-          "BharatBenz 2868 Construction Vehicle":{
-            "Diesel":{
+          "BharatBenz 2868 Construction Vehicle": {
+            "Diesel": {
               "bodyType": "Construction Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75182,8 +75040,8 @@ class VehicleData {
               "exShowroom": 3850000
             }
           },
-          "BharatBenz BSafe Express":{
-            "Diesel":{
+          "BharatBenz BSafe Express": {
+            "Diesel": {
               "bodyType": "Reefer Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75191,8 +75049,8 @@ class VehicleData {
               "exShowroom": 3600000
             }
           },
-          "BharatBenz 3532CM":{
-            "Diesel":{
+          "BharatBenz 3532CM": {
+            "Diesel": {
               "bodyType": "Mining Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75200,8 +75058,8 @@ class VehicleData {
               "exShowroom": 4200000
             }
           },
-          "BharatBenz 2832CM":{
-            "Diesel":{
+          "BharatBenz 2832CM": {
+            "Diesel": {
               "bodyType": "Mining Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75209,8 +75067,8 @@ class VehicleData {
               "exShowroom": 3850000
             }
           },
-          "BharatBenz 5532 Tip Trailer":{
-            "Diesel":{
+          "BharatBenz 5532 Tip Trailer": {
+            "Diesel": {
               "bodyType": "Tip Trailer",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75218,8 +75076,8 @@ class VehicleData {
               "exShowroom": 5600000
             }
           },
-          "BharatBenz 4828RT":{
-            "Diesel":{
+          "BharatBenz 4828RT": {
+            "Diesel": {
               "bodyType": "Rigid Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75227,8 +75085,8 @@ class VehicleData {
               "exShowroom": 4900000
             }
           },
-          "BharatBenz 2828C HX":{
-            "Diesel":{
+          "BharatBenz 2828C HX": {
+            "Diesel": {
               "bodyType": "Construction Truck",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75236,8 +75094,8 @@ class VehicleData {
               "exShowroom": 5000000
             }
           },
-          "BharatBenz 3532C HX":{
-            "Diesel":{
+          "BharatBenz 3532C HX": {
+            "Diesel": {
               "bodyType": "Mining Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75245,8 +75103,8 @@ class VehicleData {
               "exShowroom": 5400000
             }
           },
-          "BharatBenz 3532CM Torqshift":{
-            "Diesel":{
+          "BharatBenz 3532CM Torqshift": {
+            "Diesel": {
               "bodyType": "Mining Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75254,8 +75112,8 @@ class VehicleData {
               "exShowroom": 5250000
             }
           },
-          "BharatBenz 4828RT HX":{
-            "Diesel":{
+          "BharatBenz 4828RT HX": {
+            "Diesel": {
               "bodyType": "Rigid Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75263,8 +75121,8 @@ class VehicleData {
               "exShowroom": 4950000
             }
           },
-          "BharatBenz 2832CM Torqshift":{
-            "Diesel":{
+          "BharatBenz 2832CM Torqshift": {
+            "Diesel": {
               "bodyType": "Mining Tipper",
               "cc": 6700,
               "fuelType": "Diesel",
@@ -75272,19 +75130,21 @@ class VehicleData {
               "exShowroom": 3950000
             }
           },
-          "BharatBenz 2828C RMC":{
-            "Diesel":{"bodyType": "RMC Truck",
-            "cc": 6700,
-            "fuelType": "Diesel",
-            "seating": 2,
-            "exShowroom": 4850000}
+          "BharatBenz 2828C RMC": {
+            "Diesel": {
+              "bodyType": "RMC Truck",
+              "cc": 6700,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 4850000
+            }
           }
         },
       },
-      "SML Isuzu":{
-        "2015":{
-          "SML Isuzu Samrat GS 2815/CAB":{
-            "Diesel":{
+      "SML Isuzu": {
+        "2015": {
+          "SML Isuzu Samrat GS 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75292,8 +75152,8 @@ class VehicleData {
               "exShowroom": 1200000
             }
           },
-          "SML Isuzu Super ZT54AB TC 2815/Box/UBT":{
-            "Diesel":{
+          "SML Isuzu Super ZT54AB TC 2815/Box/UBT": {
+            "Diesel": {
               "bodyType": "Box Body",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75302,9 +75162,9 @@ class VehicleData {
             }
           }
         },
-        "2016":{
-          "SML Isuzu Samrat GS 2815/CAB":{
-            "Diesel":{
+        "2016": {
+          "SML Isuzu Samrat GS 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75312,8 +75172,8 @@ class VehicleData {
               "exShowroom": 1200000
             }
           },
-          "SML Isuzu Super ZT54AB TC 2815/Box/UBT":{
-            "Diesel":{
+          "SML Isuzu Super ZT54AB TC 2815/Box/UBT": {
+            "Diesel": {
               "bodyType": "Box Body",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75321,8 +75181,8 @@ class VehicleData {
               "exShowroom": 2200000
             }
           },
-          "SML Isuzu Ambulance BS-III":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-III": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75330,8 +75190,8 @@ class VehicleData {
               "exShowroom": 1090000
             }
           },
-          "SML Isuzu Ambulance BS-IV":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-IV": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75340,7 +75200,7 @@ class VehicleData {
             }
           },
           "SML Isuzu Cardiac AC Ambulance BS-IV": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75348,8 +75208,8 @@ class VehicleData {
               "exShowroom": 1420000
             }
           },
-          "SML Isuzu 5252 XM Waste-Handling Tipper":{
-            "Diesel":{
+          "SML Isuzu 5252 XM Waste-Handling Tipper": {
+            "Diesel": {
               "bodyType": "Tipper Truck",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75357,11 +75217,10 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-
         },
-        "2017":{
-          "SML Isuzu Samrat GS 2815/CAB":{
-            "Diesel":{
+        "2017": {
+          "SML Isuzu Samrat GS 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75369,8 +75228,8 @@ class VehicleData {
               "exShowroom": 1200000
             }
           },
-          "SML Isuzu Super ZT54AB TC 2815/Box/UBT":{
-            "Diesel":{
+          "SML Isuzu Super ZT54AB TC 2815/Box/UBT": {
+            "Diesel": {
               "bodyType": "Box Body",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75378,8 +75237,8 @@ class VehicleData {
               "exShowroom": 2200000
             }
           },
-          "SML Isuzu Ambulance BS-III":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-III": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75387,8 +75246,8 @@ class VehicleData {
               "exShowroom": 1090000
             }
           },
-          "SML Isuzu Ambulance BS-IV":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-IV": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75397,7 +75256,7 @@ class VehicleData {
             }
           },
           "SML Isuzu Cardiac AC Ambulance BS-IV": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75405,8 +75264,8 @@ class VehicleData {
               "exShowroom": 1420000
             }
           },
-          "SML Isuzu 5252 XM Waste-Handling Tipper":{
-            "Diesel":{
+          "SML Isuzu 5252 XM Waste-Handling Tipper": {
+            "Diesel": {
               "bodyType": "Tipper Truck",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75414,8 +75273,8 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "SML Isuzu Max Truck 2815/Tipper":{
-            "Diesel":{
+          "SML Isuzu Max Truck 2815/Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75423,8 +75282,8 @@ class VehicleData {
               "exShowroom": 2400000
             }
           },
-          "SML Isuzu Ultra 3515/Trailer":{
-            "Diesel":{
+          "SML Isuzu Ultra 3515/Trailer": {
+            "Diesel": {
               "bodyType": "Trailer",
               "cc": 5140,
               "fuelType": "Diesel",
@@ -75433,9 +75292,9 @@ class VehicleData {
             }
           }
         },
-        "2018":{
-          "SML Isuzu Samrat GS 2815/CAB":{
-            "Diesel":{
+        "2018": {
+          "SML Isuzu Samrat GS 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75443,8 +75302,8 @@ class VehicleData {
               "exShowroom": 1280000
             }
           },
-          "SML Isuzu Super ZT54AB TC 2815/Box/UBT":{
-            "Diesel":{
+          "SML Isuzu Super ZT54AB TC 2815/Box/UBT": {
+            "Diesel": {
               "bodyType": "Box Body",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75452,8 +75311,8 @@ class VehicleData {
               "exShowroom": 2350000
             }
           },
-          "SML Isuzu Ambulance BS-III":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-III": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75461,8 +75320,8 @@ class VehicleData {
               "exShowroom": 1090000
             }
           },
-          "SML Isuzu Ambulance BS-IV":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-IV": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75471,7 +75330,7 @@ class VehicleData {
             }
           },
           "SML Isuzu Cardiac AC Ambulance BS-IV": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75479,8 +75338,8 @@ class VehicleData {
               "exShowroom": 1420000
             }
           },
-          "SML Isuzu 5252 XM Waste-Handling Tipper":{
-            "Diesel":{
+          "SML Isuzu 5252 XM Waste-Handling Tipper": {
+            "Diesel": {
               "bodyType": "Tipper Truck",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75488,8 +75347,8 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "SML Isuzu Max Truck 2815/Tipper":{
-            "Diesel":{
+          "SML Isuzu Max Truck 2815/Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75497,8 +75356,8 @@ class VehicleData {
               "exShowroom": 2450000
             }
           },
-          "SML Isuzu Ultra 3515/Trailer":{
-            "Diesel":{
+          "SML Isuzu Ultra 3515/Trailer": {
+            "Diesel": {
               "bodyType": "Trailer",
               "cc": 5140,
               "fuelType": "Diesel",
@@ -75506,11 +75365,10 @@ class VehicleData {
               "exShowroom": 4250000
             }
           },
-          
         },
-        "2019":{
-          "SML Isuzu Samrat GS 2815/CAB":{
-            "Diesel":{
+        "2019": {
+          "SML Isuzu Samrat GS 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75518,8 +75376,8 @@ class VehicleData {
               "exShowroom": 1300000
             }
           },
-          "SML Isuzu Super ZT54AB TC 2815/Box/UBT":{
-            "Diesel":{
+          "SML Isuzu Super ZT54AB TC 2815/Box/UBT": {
+            "Diesel": {
               "bodyType": "Box Body",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75527,8 +75385,8 @@ class VehicleData {
               "exShowroom": 2400000
             }
           },
-          "SML Isuzu Ambulance BS-III":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-III": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75536,8 +75394,8 @@ class VehicleData {
               "exShowroom": 1090000
             }
           },
-          "SML Isuzu Ambulance BS-IV":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-IV": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75546,7 +75404,7 @@ class VehicleData {
             }
           },
           "SML Isuzu Cardiac AC Ambulance BS-IV": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75554,8 +75412,8 @@ class VehicleData {
               "exShowroom": 1420000
             }
           },
-          "SML Isuzu 5252 XM Waste-Handling Tipper":{
-            "Diesel":{
+          "SML Isuzu 5252 XM Waste-Handling Tipper": {
+            "Diesel": {
               "bodyType": "Tipper Truck",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75563,8 +75421,8 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "SML Isuzu Max Truck 2815/Tipper":{
-            "Diesel":{
+          "SML Isuzu Max Truck 2815/Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75572,8 +75430,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "SML Isuzu Ultra 3515/Trailer":{
-            "Diesel":{
+          "SML Isuzu Ultra 3515/Trailer": {
+            "Diesel": {
               "bodyType": "Trailer",
               "cc": 5140,
               "fuelType": "Diesel",
@@ -75581,11 +75439,10 @@ class VehicleData {
               "exShowroom": 4300000
             }
           },
-          
         },
-        "2020":{
-          "SML Isuzu Samrat GS 2815/CAB":{
-            "Diesel":{
+        "2020": {
+          "SML Isuzu Samrat GS 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75593,8 +75450,8 @@ class VehicleData {
               "exShowroom": 1320000
             }
           },
-          "SML Isuzu Super ZT54AB TC 2815/Box/UBT":{
-            "Diesel":{
+          "SML Isuzu Super ZT54AB TC 2815/Box/UBT": {
+            "Diesel": {
               "bodyType": "Box Body",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75602,8 +75459,8 @@ class VehicleData {
               "exShowroom": 2450000
             }
           },
-          "SML Isuzu Ambulance BS-III":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-III": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75611,8 +75468,8 @@ class VehicleData {
               "exShowroom": 1090000
             }
           },
-          "SML Isuzu Ambulance BS-IV":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-IV": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75621,7 +75478,7 @@ class VehicleData {
             }
           },
           "SML Isuzu Cardiac AC Ambulance BS-IV": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75629,8 +75486,8 @@ class VehicleData {
               "exShowroom": 1420000
             }
           },
-          "SML Isuzu 5252 XM Waste-Handling Tipper":{
-            "Diesel":{
+          "SML Isuzu 5252 XM Waste-Handling Tipper": {
+            "Diesel": {
               "bodyType": "Tipper Truck",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75638,8 +75495,8 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "SML Isuzu Max Truck 2815/Tipper":{
-            "Diesel":{
+          "SML Isuzu Max Truck 2815/Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75647,8 +75504,8 @@ class VehicleData {
               "exShowroom": 2550000
             }
           },
-          "SML Isuzu Ultra 3515/Trailer":{
-            "Diesel":{
+          "SML Isuzu Ultra 3515/Trailer": {
+            "Diesel": {
               "bodyType": "Trailer",
               "cc": 5140,
               "fuelType": "Diesel",
@@ -75656,11 +75513,10 @@ class VehicleData {
               "exShowroom": 4350000
             }
           },
-          
         },
-        "2021":{
-          "SML Isuzu Samrat GS 2815/CAB":{
-            "Diesel":{
+        "2021": {
+          "SML Isuzu Samrat GS 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75668,8 +75524,8 @@ class VehicleData {
               "exShowroom": 1350000
             }
           },
-          "SML Isuzu Super ZT54AB TC 2815/Box/UBT":{
-            "Diesel":{
+          "SML Isuzu Super ZT54AB TC 2815/Box/UBT": {
+            "Diesel": {
               "bodyType": "Box Body",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75677,8 +75533,8 @@ class VehicleData {
               "exShowroom": 2500000
             }
           },
-          "SML Isuzu Ambulance BS-III":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-III": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75686,8 +75542,8 @@ class VehicleData {
               "exShowroom": 1090000
             }
           },
-          "SML Isuzu Ambulance BS-IV":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-IV": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75696,7 +75552,7 @@ class VehicleData {
             }
           },
           "SML Isuzu Cardiac AC Ambulance BS-IV": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75704,8 +75560,8 @@ class VehicleData {
               "exShowroom": 1420000
             }
           },
-          "SML Isuzu 5252 XM Waste-Handling Tipper":{
-            "Diesel":{
+          "SML Isuzu 5252 XM Waste-Handling Tipper": {
+            "Diesel": {
               "bodyType": "Tipper Truck",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75713,8 +75569,8 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "SML Isuzu Max Truck 2815/Tipper":{
-            "Diesel":{
+          "SML Isuzu Max Truck 2815/Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75722,8 +75578,8 @@ class VehicleData {
               "exShowroom": 2600000
             }
           },
-          "SML Isuzu Ultra 3515/Trailer":{
-            "Diesel":{
+          "SML Isuzu Ultra 3515/Trailer": {
+            "Diesel": {
               "bodyType": "Trailer",
               "cc": 5140,
               "fuelType": "Diesel",
@@ -75731,11 +75587,10 @@ class VehicleData {
               "exShowroom": 4400000
             }
           },
-          
         },
-        "2022":{
-          "SML Isuzu Samrat GS 2815/CAB":{
-            "Diesel":{
+        "2022": {
+          "SML Isuzu Samrat GS 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75743,8 +75598,8 @@ class VehicleData {
               "exShowroom": 1380000
             }
           },
-          "SML Isuzu Super ZT54AB TC 2815/Box/UBT":{
-            "Diesel":{
+          "SML Isuzu Super ZT54AB TC 2815/Box/UBT": {
+            "Diesel": {
               "bodyType": "Box Body",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75752,8 +75607,8 @@ class VehicleData {
               "exShowroom": 2550000
             }
           },
-          "SML Isuzu Ambulance BS-III":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-III": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75761,8 +75616,8 @@ class VehicleData {
               "exShowroom": 1090000
             }
           },
-          "SML Isuzu Ambulance BS-IV":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-IV": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75771,7 +75626,7 @@ class VehicleData {
             }
           },
           "SML Isuzu Cardiac AC Ambulance BS-IV": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75779,8 +75634,8 @@ class VehicleData {
               "exShowroom": 1420000
             }
           },
-          "SML Isuzu 5252 XM Waste-Handling Tipper":{
-            "Diesel":{
+          "SML Isuzu 5252 XM Waste-Handling Tipper": {
+            "Diesel": {
               "bodyType": "Tipper Truck",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75788,8 +75643,8 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "SML Isuzu Max Truck 2815/Tipper":{
-            "Diesel":{
+          "SML Isuzu Max Truck 2815/Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75797,8 +75652,8 @@ class VehicleData {
               "exShowroom": 2650000
             }
           },
-          "SML Isuzu Ultra 3515/Trailer":{
-            "Diesel":{
+          "SML Isuzu Ultra 3515/Trailer": {
+            "Diesel": {
               "bodyType": "Trailer",
               "cc": 5140,
               "fuelType": "Diesel",
@@ -75806,11 +75661,10 @@ class VehicleData {
               "exShowroom": 4450000
             }
           },
-          
         },
-        "2023":{
-          "SML Isuzu Samrat GS 2815/CAB":{
-            "Diesel":{
+        "2023": {
+          "SML Isuzu Samrat GS 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75818,8 +75672,8 @@ class VehicleData {
               "exShowroom": 1400000
             }
           },
-          "SML Isuzu Super ZT54AB TC 2815/Box/UBT":{
-            "Diesel":{
+          "SML Isuzu Super ZT54AB TC 2815/Box/UBT": {
+            "Diesel": {
               "bodyType": "Box Body",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75827,8 +75681,8 @@ class VehicleData {
               "exShowroom": 2600000
             }
           },
-          "SML Isuzu Ambulance BS-III":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-III": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75836,8 +75690,8 @@ class VehicleData {
               "exShowroom": 1090000
             }
           },
-          "SML Isuzu Ambulance BS-IV":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-IV": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75846,7 +75700,7 @@ class VehicleData {
             }
           },
           "SML Isuzu Cardiac AC Ambulance BS-IV": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75854,8 +75708,8 @@ class VehicleData {
               "exShowroom": 1420000
             }
           },
-          "SML Isuzu 5252 XM Waste-Handling Tipper":{
-            "Diesel":{
+          "SML Isuzu 5252 XM Waste-Handling Tipper": {
+            "Diesel": {
               "bodyType": "Tipper Truck",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75863,8 +75717,8 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "SML Isuzu Max Truck 2815/Tipper":{
-            "Diesel":{
+          "SML Isuzu Max Truck 2815/Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75872,8 +75726,8 @@ class VehicleData {
               "exShowroom": 2700000
             }
           },
-          "SML Isuzu Ultra 3515/Trailer":{
-            "Diesel":{
+          "SML Isuzu Ultra 3515/Trailer": {
+            "Diesel": {
               "bodyType": "Trailer",
               "cc": 5140,
               "fuelType": "Diesel",
@@ -75881,11 +75735,10 @@ class VehicleData {
               "exShowroom": 4500000
             }
           },
-          
         },
-        "2024":{
-          "SML Isuzu Samrat GS 2815/CAB":{
-            "Diesel":{
+        "2024": {
+          "SML Isuzu Samrat GS 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75893,8 +75746,8 @@ class VehicleData {
               "exShowroom": 1450000
             }
           },
-          "SML Isuzu Super ZT54AB TC 2815/Box/UBT":{
-            "Diesel":{
+          "SML Isuzu Super ZT54AB TC 2815/Box/UBT": {
+            "Diesel": {
               "bodyType": "Box Body",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75902,8 +75755,8 @@ class VehicleData {
               "exShowroom": 2650000
             }
           },
-          "SML Isuzu Ambulance BS-III":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-III": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75911,8 +75764,8 @@ class VehicleData {
               "exShowroom": 1090000
             }
           },
-          "SML Isuzu Ambulance BS-IV":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-IV": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75921,7 +75774,7 @@ class VehicleData {
             }
           },
           "SML Isuzu Cardiac AC Ambulance BS-IV": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75929,8 +75782,8 @@ class VehicleData {
               "exShowroom": 1420000
             }
           },
-          "SML Isuzu 5252 XM Waste-Handling Tipper":{
-            "Diesel":{
+          "SML Isuzu 5252 XM Waste-Handling Tipper": {
+            "Diesel": {
               "bodyType": "Tipper Truck",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75938,8 +75791,8 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "SML Isuzu Max Truck 2815/Tipper":{
-            "Diesel":{
+          "SML Isuzu Max Truck 2815/Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75947,8 +75800,8 @@ class VehicleData {
               "exShowroom": 2750000
             }
           },
-          "SML Isuzu Ultra 3515/Trailer":{
-            "Diesel":{
+          "SML Isuzu Ultra 3515/Trailer": {
+            "Diesel": {
               "bodyType": "Trailer",
               "cc": 5140,
               "fuelType": "Diesel",
@@ -75956,8 +75809,8 @@ class VehicleData {
               "exShowroom": 4550000
             }
           },
-           "SML Isuzu Max Pro 3515/Tipper":{
-            "Diesel":{
+          "SML Isuzu Max Pro 3515/Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 5140,
               "fuelType": "Diesel",
@@ -75965,8 +75818,8 @@ class VehicleData {
               "exShowroom": 4600000
             }
           },
-          "SML Isuzu Ultra LX 2815/CAB":{
-            "Diesel":{
+          "SML Isuzu Ultra LX 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75975,9 +75828,9 @@ class VehicleData {
             }
           }
         },
-        "2025":{
-          "SML Isuzu Samrat GS 2815/CAB":{
-            "Diesel":{
+        "2025": {
+          "SML Isuzu Samrat GS 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75985,8 +75838,8 @@ class VehicleData {
               "exShowroom": 1783000
             }
           },
-          "SML Isuzu Super ZT54AB TC 2815/Box/UBT":{
-            "Diesel":{
+          "SML Isuzu Super ZT54AB TC 2815/Box/UBT": {
+            "Diesel": {
               "bodyType": "Box Body",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -75994,8 +75847,8 @@ class VehicleData {
               "exShowroom": 2650000
             }
           },
-          "SML Isuzu Ambulance BS-III":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-III": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -76003,8 +75856,8 @@ class VehicleData {
               "exShowroom": 1090000
             }
           },
-          "SML Isuzu Ambulance BS-IV":{
-            "Diesel":{
+          "SML Isuzu Ambulance BS-IV": {
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -76013,7 +75866,7 @@ class VehicleData {
             }
           },
           "SML Isuzu Cardiac AC Ambulance BS-IV": {
-            "Diesel":{
+            "Diesel": {
               "bodyType": "Ambulance",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -76021,8 +75874,8 @@ class VehicleData {
               "exShowroom": 1420000
             }
           },
-          "SML Isuzu 5252 XM Waste-Handling Tipper":{
-            "Diesel":{
+          "SML Isuzu 5252 XM Waste-Handling Tipper": {
+            "Diesel": {
               "bodyType": "Tipper Truck",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -76030,8 +75883,8 @@ class VehicleData {
               "exShowroom": 950000
             }
           },
-          "SML Isuzu Max Truck 2815/Tipper":{
-            "Diesel":{
+          "SML Isuzu Max Truck 2815/Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -76039,8 +75892,8 @@ class VehicleData {
               "exShowroom": 2750000
             }
           },
-          "SML Isuzu Ultra 3515/Trailer":{
-            "Diesel":{
+          "SML Isuzu Ultra 3515/Trailer": {
+            "Diesel": {
               "bodyType": "Trailer",
               "cc": 5140,
               "fuelType": "Diesel",
@@ -76048,8 +75901,8 @@ class VehicleData {
               "exShowroom": 4550000
             }
           },
-           "SML Isuzu Max Pro 3515/Tipper":{
-            "Diesel":{
+          "SML Isuzu Max Pro 3515/Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 5140,
               "fuelType": "Diesel",
@@ -76057,8 +75910,8 @@ class VehicleData {
               "exShowroom": 4600000
             }
           },
-          "SML Isuzu Ultra LX 2815/CAB":{
-            "Diesel":{
+          "SML Isuzu Ultra LX 2815/CAB": {
+            "Diesel": {
               "bodyType": "Cab Chassis",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -76066,8 +75919,8 @@ class VehicleData {
               "exShowroom": 1480000
             }
           },
-          "SML Isuzu Samrat XT Plus Tipper":{
-            "Diesel":{
+          "SML Isuzu Samrat XT Plus Tipper": {
+            "Diesel": {
               "bodyType": "Tipper",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -76075,8 +75928,8 @@ class VehicleData {
               "exShowroom": 2230000
             }
           },
-          "SML Isuzu AASAI MX Maxi-Cab":{
-            "Diesel":{
+          "SML Isuzu AASAI MX Maxi-Cab": {
+            "Diesel": {
               "bodyType": "Passenger",
               "cc": 3455,
               "fuelType": "Diesel",
@@ -76084,18 +75937,17 @@ class VehicleData {
               "exShowroom": 1650000
             }
           },
-          "SML Isuzu ATS-125 Ambulance":{
-            "Diesel":{
+          "SML Isuzu ATS-125 Ambulance": {
+            "Diesel": {
               "bodyType": "Emergency",
               "cc": 3455,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 2250000
-            } 
+            }
           }
         },
       }
     }
-  
   };
 }

@@ -269,11 +269,15 @@ class _EPCForm1YODState extends State<EPCForm1YOD> {
 
   void _resetForm() {
     _formKey.currentState?.reset();
-    for (var controller in _controllers.values) {
-      controller.clear();
+    for (var entry in _controllers.entries) {
+      if (entry.key != "od" && entry.key != "tp") {
+        entry.value.clear();
+      }
     }
     setState(() {
       _selectedAge = null;
+      _selectedCngLpgKit = null;
+      _selectedDepreciation = null;
       _selectedZone = null;
       _selectedNcb = null;
       // _selectedImt23 = null;
@@ -557,9 +561,9 @@ class _EPCForm1YODState extends State<EPCForm1YOD> {
         ">1500": [3.440, 3.612, 3.698],
       },
       "B": {
-        "<=1000": [3.039, 3.191,3.267 ],
-        "1001-1500": [3.191, 3.351,3.430],
-        ">1500": [3.343, 3.510,3.594],
+        "<=1000": [3.039, 3.191, 3.267],
+        "1001-1500": [3.191, 3.351, 3.430],
+        ">1500": [3.343, 3.510, 3.594],
       },
     };
 
@@ -571,9 +575,9 @@ class _EPCForm1YODState extends State<EPCForm1YOD> {
         ">65": [3.440, 3.612, 3.698],
       },
       "B": {
-        "<=30": [3.039, 3.191,3.267 ],
-        "31-65": [3.191, 3.351,3.430],
-        ">65": [3.343, 3.510,3.594],
+        "<=30": [3.039, 3.191, 3.267],
+        "31-65": [3.191, 3.351, 3.430],
+        ">65": [3.343, 3.510, 3.594],
       },
     };
 

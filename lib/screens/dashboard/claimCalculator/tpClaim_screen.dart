@@ -207,7 +207,7 @@ class _TpclaimScreenState extends State<TpclaimScreen>
           ),
           _Fields(
               height: height,
-              fieldName: "Martial Status",
+              fieldName: "Marital Status",
               fieldList: deathMarriedStatusOption,
               onChanged: (val) {
                 setState(() {
@@ -354,7 +354,7 @@ class _TpclaimScreenState extends State<TpclaimScreen>
           Padding(
               padding: const EdgeInsets.symmetric(vertical: 3),
               child: Text(
-                "Structure Formula Compensation Avaiable",
+                "Structure Formula Compensation Available",
                 style: GoogleFonts.poppins(fontSize: 14, color: Colors.black),
               )),
           Container(
@@ -468,7 +468,7 @@ class _TpclaimScreenState extends State<TpclaimScreen>
             _textFields(
               height: height,
               fieldName:
-                  'Sum of Extra Expense(MedicalExpenses + PainAndSuffering + lossOfAmenities)',
+                  'Sum of Extra Expense (Medical Expenses + Pain and Suffering + Loss of Amenities)',
               controller: extraExpenseController,
               hint: 'Enter Amount (in INR)',
               validator: (val) {

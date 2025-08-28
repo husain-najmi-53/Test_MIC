@@ -492,20 +492,19 @@ class _ThreeWheelerPCVFormScreenState extends State<ThreeWheelerPCVFormScreen> {
 
 double _getOdRate(String zone, String age) {
   if (age == 'Upto 5 Years') {
-    if (zone == 'A') return 4.0;
-    if (zone == 'B') return 3.6; // 0.9x
-    if (zone == 'C') return 3.2; // 0.8x
+    if (zone == 'A') return 1.785;
+    if (zone == 'B') return 1.777; // 0.9x
+    if (zone == 'C') return 1.759; // 0.8x
   } else if (age == '5 to 7 Years') {
-    if (zone == 'A') return 5.0;
-    if (zone == 'B') return 4.5;
-    if (zone == 'C') return 4.0;
+    if (zone == 'A') return 1.830;
+    if (zone == 'B') return 1.821;
+    if (zone == 'C') return 1.803;
   } else if (age == 'Above 7 Years') {
-    if (zone == 'A') return 6.0;
-    if (zone == 'B') return 5.4;
-    if (zone == 'C') return 4.8;
+    if (zone == 'A') return 1.874;
+    if (zone == 'B') return 1.866;
+    if (zone == 'C') return 1.847;
   }
-
-  return 4.0; // fallback
+  return 1.785; // fallback
 }
 
 double _getTpRate({

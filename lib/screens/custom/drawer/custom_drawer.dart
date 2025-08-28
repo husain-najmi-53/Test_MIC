@@ -181,6 +181,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       fontSize: 12,
                       color: isDark ? Colors.white30 : Colors.grey,
                     ),
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   Text(
                     'Developed by : NBK Software Solutions',
@@ -188,6 +191,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       fontSize: 12,
                       color: isDark ? Colors.white30 : Colors.grey,
                     ),
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ],
               ),
@@ -303,6 +309,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
             color: Colors.white.withOpacity(0.8),
             fontSize: 14,
           ),
+          textAlign: TextAlign.center,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
         ),
         const SizedBox(height: 8),
         Text(
@@ -311,6 +320,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
             color: Colors.white.withOpacity(0.6),
             fontSize: 12,
           ),
+          textAlign: TextAlign.center,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
       ],
     );
@@ -367,6 +379,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       color: Colors.white.withOpacity(0.8),
                       fontSize: 13,
                     ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   const SizedBox(height: 8),
                   Container(
@@ -383,6 +397,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                         fontSize: 13,
                         fontWeight: FontWeight.w500,
                       ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ],
@@ -424,12 +440,16 @@ class _CustomDrawerState extends State<CustomDrawer> {
               children: [
                 Icon(icon, color: iconColor),
                 const SizedBox(width: 16),
-                Text(
-                  label,
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: textColor,
-                    fontWeight: FontWeight.w500,
+                Expanded(
+                  child: Text(
+                    label,
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: textColor,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ],

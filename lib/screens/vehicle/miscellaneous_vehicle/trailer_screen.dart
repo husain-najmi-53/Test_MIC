@@ -329,7 +329,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
                 _buildReadOnlyField(
                     'currentIdv', 'Current IDV (₹)'), // Read-only field
                 _buildTextField('yearOfManufacture', 'Year of Manufacture',
-                    'Enter Year Of MAnufacture'),
+                    'Enter Year Of Manufacture'),
                 _buildDropdownField('Zone', _zoneOptions, _selectedZone,
                     (val) => setState(() => _selectedZone = val)),
                 _buildDropdownField(

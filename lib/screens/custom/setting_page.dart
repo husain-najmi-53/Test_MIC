@@ -2,6 +2,8 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:app_settings/app_settings.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -10,24 +12,86 @@ class SettingsPage extends StatefulWidget {
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
-class _SettingsPageState extends State<SettingsPage> {
+class _SettingsPageState extends State<SettingsPage>
+    with WidgetsBindingObserver {
   bool pushNotifications = true;
   bool notificationSound = true;
-  bool notificationVibration = false;
+  bool notificationVibration = true;
 
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     _loadSettings();
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      _syncPermissionState();
+    }
+  }
+
+  Future<void> _syncPermissionState() async {
+    final prefs = await SharedPreferences.getInstance();
+
+    // Check current system permission status
+    PermissionStatus currentStatus = await Permission.notification.status;
+
+    // Determine if notifications should be enabled based on permission
+    bool shouldEnableNotifications = currentStatus.isGranted;
+
+    // Update the toggle state to match system permission
+    if (shouldEnableNotifications != pushNotifications) {
+      setState(() {
+        pushNotifications = shouldEnableNotifications;
+      });
+
+      // Save the updated preference
+      await prefs.setBool("pushNotifications", shouldEnableNotifications);
+
+      // Handle Firebase subscription
+      if (shouldEnableNotifications) {
+        FirebaseMessaging.instance.subscribeToTopic("general");
+      } else {
+        FirebaseMessaging.instance.unsubscribeFromTopic("general");
+      }
+    } else {}
   }
 
   Future<void> _loadSettings() async {
     final prefs = await SharedPreferences.getInstance();
+
+    // Load other settings
+    bool savedNotificationSound = prefs.getBool("notificationSound") ?? true;
+    bool savedNotificationVibration =
+        prefs.getBool("notificationVibration") ?? false;
+
+    // Check actual system permission for push notifications
+    PermissionStatus permissionStatus = await Permission.notification.status;
+    bool actualPushNotifications = permissionStatus.isGranted;
+
     setState(() {
-      pushNotifications = prefs.getBool("pushNotifications") ?? true;
-      notificationSound = prefs.getBool("notificationSound") ?? true;
-      notificationVibration = prefs.getBool("notificationVibration") ?? false;
+      pushNotifications = actualPushNotifications;
+      notificationSound = savedNotificationSound;
+      notificationVibration = savedNotificationVibration;
     });
+
+    // Save the actual push notification state
+    await prefs.setBool("pushNotifications", actualPushNotifications);
+
+    // Handle Firebase subscription based on actual permission
+    if (actualPushNotifications) {
+      FirebaseMessaging.instance.subscribeToTopic("general");
+    } else {
+      FirebaseMessaging.instance.unsubscribeFromTopic("general");
+    }
   }
 
   Future<void> _updateSetting(String key, bool value) async {
@@ -41,7 +105,72 @@ class _SettingsPageState extends State<SettingsPage> {
         FirebaseMessaging.instance.unsubscribeFromTopic("general");
       }
     }
-  }  @override
+  }
+
+  Future<void> _handlePushNotificationToggle(bool requestedValue) async {
+    // Simply open app notification settings - let user handle it there
+    await AppSettings.openAppSettings(type: AppSettingsType.notification);
+    _syncPermissionState(); // Try
+    // After returning to app, permission state will be synced in didChangeAppLifecycleState
+  }
+
+  Future<void> _launchEmail(String email) async {
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: email,
+      query: 'subject=Support Request&body=Hello, I need help with...',
+    );
+    
+    try {
+      if (await canLaunchUrl(emailUri)) {
+        await launchUrl(emailUri);
+      } else {
+        // Fallback to generic email app
+        final Uri fallbackUri = Uri.parse('mailto:$email');
+        if (await canLaunchUrl(fallbackUri)) {
+          await launchUrl(fallbackUri);
+        } else {
+          _showErrorDialog('Email app not found', 'Please install an email app to send emails.');
+        }
+      }
+    } catch (e) {
+      _showErrorDialog('Error', 'Could not open email app. Please try again.');
+    }
+  }
+
+  Future<void> _launchPhone(String phoneNumber) async {
+    final Uri phoneUri = Uri(scheme: 'tel', path: phoneNumber);
+    
+    try {
+      if (await canLaunchUrl(phoneUri)) {
+        await launchUrl(phoneUri);
+      } else {
+        _showErrorDialog('Phone app not found', 'Could not open phone app. Please dial $phoneNumber manually.');
+      }
+    } catch (e) {
+      _showErrorDialog('Error', 'Could not open phone app. Please try again.');
+    }
+  }
+
+  void _showErrorDialog(String title, String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(title),
+          content: Text(message),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -57,7 +186,7 @@ class _SettingsPageState extends State<SettingsPage> {
           _buildSwitchTile(
               "Push Notifications",
               pushNotifications,
-              (v) => setState(() => pushNotifications = v),
+              (value) async => await _handlePushNotificationToggle(value),
               Icons.notifications),
           _buildSwitchTile("Notification Sound", notificationSound,
               (v) => setState(() => notificationSound = v), Icons.volume_up),
@@ -81,7 +210,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   {
                     "q": "How do I contact support?",
                     "a":
-                        "Use the Contact Support option in this menu or email support@myapp.com."
+                        "Use the Contact Support option in this menu or email support@autoinsure.com."
                   },
                   {
                     "q": "How do I update the app?",
@@ -106,22 +235,15 @@ class _SettingsPageState extends State<SettingsPage> {
                 pageType: "faq");
           }),
           _buildListTile("Contact Support", Icons.support_agent, () {
-            _openDummyPage(
-                context,
-                "Contact Support",
-                [
-                  {
-                    "title": "Email",
-                    "value": "support@myapp.com",
-                    "icon": Icons.email
-                  },
-                  {
-                    "title": "Phone",
-                    "value": "+1 234 567 8900",
-                    "icon": Icons.phone
-                  },
-                ],
-                pageType: "support");
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => ContactSupportPage(
+                  onEmailTap: _launchEmail,
+                  onPhoneTap: _launchPhone,
+                ),
+              ),
+            );
           }),
           const SizedBox(height: 20),
           _buildSectionTitle("About"),
@@ -249,12 +371,18 @@ class _SettingsPageState extends State<SettingsPage> {
       trailing: Switch(
         value: value,
         onChanged: (v) async {
+          // Check if this is the push notifications toggle
           if (title == "Push Notifications") {
-            // Handle push notifications specially
-            await _handlePushNotificationToggle(v);
+            await onChanged(v); // This will call _handlePushNotificationToggle
           } else {
-            // For other settings, update immediately
-            setState(() => onChanged(v));
+            // For other toggles, update the state and preferences directly
+            setState(() {
+              if (title == "Notification Sound") {
+                notificationSound = v;
+              } else if (title == "Notification Vibration") {
+                notificationVibration = v;
+              }
+            });
             String key = title == "Notification Sound"
                 ? "notificationSound"
                 : "notificationVibration";
@@ -264,53 +392,6 @@ class _SettingsPageState extends State<SettingsPage> {
         activeColor: Colors.indigo.shade700,
       ),
     );
-  }
-
-  Future<void> _handlePushNotificationToggle(bool value) async {
-    if (value) {
-      // Optimistically update UI first
-      setState(() {
-        pushNotifications = true;
-      });
-      
-      // Trying to enable notifications
-      PermissionStatus status = await Permission.notification.status;
-      
-      if (status.isGranted) {
-        // Permission already granted, just enable
-        await _updateSetting("pushNotifications", true);
-      } else if (status.isDenied) {
-        // Request permission
-        PermissionStatus newStatus = await Permission.notification.request();
-        
-        if (newStatus.isGranted) {
-          // Permission granted, enable notifications
-          await _updateSetting("pushNotifications", true);
-        } else {
-          // Permission denied, revert toggle
-          setState(() {
-            pushNotifications = false;
-          });
-          
-          if (newStatus.isPermanentlyDenied) {
-            // Take user to settings
-            openAppSettings();
-          }
-        }
-      } else if (status.isPermanentlyDenied) {
-        // Permission permanently denied, revert toggle and take to settings
-        setState(() {
-          pushNotifications = false;
-        });
-        openAppSettings();
-      }
-    } else {
-      // Disable notifications - update UI immediately
-      setState(() {
-        pushNotifications = false;
-      });
-      await _updateSetting("pushNotifications", false);
-    }
   }
 }
 
@@ -334,6 +415,144 @@ void _openDummyPage(BuildContext context, String title, dynamic content,
           DummyPage(title: title, content: content, pageType: pageType),
     ),
   );
+}
+
+class ContactSupportPage extends StatelessWidget {
+  final Function(String) onEmailTap;
+  final Function(String) onPhoneTap;
+
+  const ContactSupportPage({
+    super.key,
+    required this.onEmailTap,
+    required this.onPhoneTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Contact Support"),
+        backgroundColor: Colors.indigo.shade700,
+        foregroundColor: Colors.white,
+        centerTitle: true,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            const SizedBox(height: 20),
+            const Text(
+              'Get in touch with our support team',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                color: Colors.black87,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 30),
+            // Email Support Card
+            _buildSupportCard(
+              icon: Icons.email,
+              title: 'Email Support',
+              subtitle: 'support@autoinsure.com',
+              description: 'Send us an email for detailed support',
+              onTap: () => onEmailTap('support@autoinsure.com'),
+              color: Colors.blue,
+            ),
+            const SizedBox(height: 20),
+            // Phone Support Card
+            _buildSupportCard(
+              icon: Icons.phone,
+              title: 'Phone Support',
+              subtitle: '+91 98765 43210',
+              description: 'Call us directly for immediate assistance',
+              onTap: () => onPhoneTap('+91 98765 43210'),
+              color: Colors.green,
+            ),
+            const SizedBox(height: 30),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSupportCard({
+    required IconData icon,
+    required String title,
+    required String subtitle,
+    required String description,
+    required VoidCallback onTap,
+    required Color color,
+  }) {
+    return Card(
+      elevation: 4,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(16),
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: color.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Icon(
+                  icon,
+                  color: color,
+                  size: 30,
+                ),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      title,
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      subtitle,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: color,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      description,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.grey.shade400,
+                size: 16,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class DummyPage extends StatefulWidget {

@@ -1,14 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/material.dart';
 import 'package:motor_insurance_app/notification_services/flutter_local_notification_service.dart';
 import 'package:motor_insurance_app/screens/auth/single_device_check.dart';
 //import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 //import 'package:uuid/uuid.dart';
 
 class AuthService {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  final FirebaseFirestore _db = FirebaseFirestore.instance;
+  static final FirebaseAuth _auth = FirebaseAuth.instance;
+  static final FirebaseFirestore _db = FirebaseFirestore.instance;
   //final FlutterSecureStorage _storage = const FlutterSecureStorage();
 
   /// 🔹 Signup user with Email, Phone & Password
@@ -120,6 +121,37 @@ class AuthService {
   /// 🔹 Sign out
   Future<void> signOut() async {
     await _auth.signOut();
+  }
+
+  /// ✅ Check if current user is valid in both Firebase Auth & Firestore
+  static Future<bool> isUserValid() async {
+    User? user = _auth.currentUser;
+    if (user == null) return false;
+
+    try {
+      // Reload to detect if deleted from Firebase Auth
+      await user.reload();
+      user = _auth.currentUser;
+    } catch (_) {
+      return false;
+    }
+
+    if (user == null) return false;
+
+    // Check Firestore document
+    final doc = await _db.collection('users').doc(user.uid).get();
+    return doc.exists;
+  }
+
+  /// ✅ Force logout if invalid
+  static Future<void> forceLogout(context) async {
+    await _auth.signOut();
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Your account has been deleted. Please Contact Support.")),
+      );
+      Navigator.pushReplacementNamed(context, '/login');
+    }
   }
 
   /// 🔹 Get Current User

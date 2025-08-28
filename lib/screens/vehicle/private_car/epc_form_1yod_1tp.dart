@@ -176,7 +176,6 @@ class _EPCForm1YOD1TPState extends State<EPCForm1YOD1TP> {
         kiloWatt: kwCapacity,
         isElectric: true,
       ); // ODRate
-      
 
       // OD Calculations
       double basicForVehicle = currentIdv * vehicleBasicRate / 100;
@@ -279,13 +278,17 @@ class _EPCForm1YOD1TPState extends State<EPCForm1YOD1TP> {
 
   void _resetForm() {
     _formKey.currentState?.reset();
-    for (var controller in _controllers.values) {
-      controller.clear();
+    for (var entry in _controllers.entries) {
+      if (entry.key != "od" && entry.key != "tp") {
+        entry.value.clear();
+      }
     }
     setState(() {
       _selectedAge = null;
       _selectedZone = null;
       _selectedNcb = null;
+      _selectedDepreciation = null;
+      _selectedCngLpgKit = null;
       // _selectedImt23 = null;
       _selectedLlPaidDriver = null;
       // _selectedRestrictedTppd = null;
@@ -567,7 +570,6 @@ double getOdRate({
   double? kiloWatt, // For Electric Vehicle
   required bool isElectric,
 }) {
-  
   // Petrol/Diesel rate table (CC based)
   Map<String, Map<String, List<double>>> rateTableCC = {
     "A": {
@@ -576,9 +578,9 @@ double getOdRate({
       ">1500": [3.440, 3.612, 3.698],
     },
     "B": {
-      "<=1000": [3.039, 3.191,3.267 ],
-      "1001-1500": [3.191, 3.351,3.430],
-      ">1500": [3.343, 3.510,3.594],
+      "<=1000": [3.039, 3.191, 3.267],
+      "1001-1500": [3.191, 3.351, 3.430],
+      ">1500": [3.343, 3.510, 3.594],
     },
   };
 
@@ -590,9 +592,9 @@ double getOdRate({
       ">65": [3.440, 3.612, 3.698],
     },
     "B": {
-      "<=30": [3.039, 3.191,3.267 ],
-      "31-65": [3.191, 3.351,3.430],
-      ">65": [3.343, 3.510,3.594],
+      "<=30": [3.039, 3.191, 3.267],
+      "31-65": [3.191, 3.351, 3.430],
+      ">65": [3.343, 3.510, 3.594],
     },
   };
 

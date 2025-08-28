@@ -270,13 +270,17 @@ class _PCForm1YODState extends State<PCForm1YOD> {
 
   void _resetForm() {
     _formKey.currentState?.reset();
-    for (var controller in _controllers.values) {
-      controller.clear();
+    for (var entry in _controllers.entries) {
+    if (entry.key != "od" && entry.key != "tp") {
+      entry.value.clear();
     }
+  }
     setState(() {
       _selectedAge = null;
       _selectedZone = null;
       _selectedNcb = null;
+      _selectedCngLpgKit = null;
+      _selectedDepreciation = null;
       // _selectedImt23 = null;
       _selectedLlPaidDriver = null;
       // _selectedRestrictedTppd = null;

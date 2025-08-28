@@ -165,7 +165,7 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
       double netOdPremium = totalBasicPremium - ncbAmount;
 
       // 7. TP Premium based on passenger count using official IRDA rates
-      double tpPremium = _getSchoolBusTpRate(passengerCount: passengerCount);
+      double tpPremium = 12192.0; // Fixed for School Bus 
 
       // 8. Add geographical extension if any
       double geographicalExtn = geographicalExtnAmount;
@@ -537,34 +537,34 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
 // Helper methods for premium calculations (adapted for School Bus)
 double _getOdRate(String zone, String age) {
   if (age == 'Upto5Years') {
-    if (zone == 'A') return 1.278;
-    if (zone == 'B') return 1.310;
-    if (zone == 'C') return 1.342;
+    if (zone == 'A') return 1.680;
+    if (zone == 'B') return 1.672;
+    if (zone == 'C') return 1.656;
   } else if (age == '5to10Years') {
-    if (zone == 'A') return 1.803;
-    if (zone == 'B') return 1.830;
-    if (zone == 'C') return 1.874;
+    if (zone == 'A') return 1.722;
+    if (zone == 'B') return 1.714;
+    if (zone == 'C') return 1.697;
   } else if (age == 'Above10Years') {
     // You can adjust as per rates; keeping slightly higher
-    if (zone == 'A') return 2.0;
-    if (zone == 'B') return 2.05;
-    if (zone == 'C') return 2.10;
+    if (zone == 'A') return 1.764;
+    if (zone == 'B') return 1.756;
+    if (zone == 'C') return 1.739;
   }
-  return 1.0; // fallback
+  return 1.680; // fallback
 }
 
-double _getSchoolBusTpRate({
-  required int passengerCount,
-}) {
-  // Official IRDA rates for TP premium - fixed sums
-  if (passengerCount <= 6) {
-    return 2539.0;
-  } else if (passengerCount > 6 && passengerCount <= 17) {
-    return 6763.0;
-  } else if (passengerCount > 17 && passengerCount <= 26) {
-    return 9697.0;
-  } else if (passengerCount > 26) {
-    return 13725.0;
-  }
-  return 0.0;
-}
+// double _getSchoolBusTpRate({
+//   required int passengerCount,
+// }) {
+//   // Official IRDA rates for TP premium - fixed sums
+//   if (passengerCount <= 6) {
+//     return 2539.0;
+//   } else if (passengerCount > 6 && passengerCount <= 17) {
+//     return 6763.0;
+//   } else if (passengerCount > 17 && passengerCount <= 26) {
+//     return 9697.0;
+//   } else if (passengerCount > 26) {
+//     return 13725.0;
+//   }
+//   return 0.0;
+// }

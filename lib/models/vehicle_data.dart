@@ -753,7 +753,12 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "LL to Paid Driver",
       "LL to Employee Other than Paid Driver",
       "Total Liability Premium (B)"
-    ]
+    ],
+    "[C] Total Premium": [
+          "Total Package Premium[A+B]",
+          "GST @ 18%",
+          "Other CESS"
+        ],
   },
   
   //Private Car categories

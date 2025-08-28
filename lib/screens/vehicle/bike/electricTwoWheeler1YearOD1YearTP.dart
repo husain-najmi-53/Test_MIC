@@ -207,6 +207,7 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
       controller.clear();
     }
     setState(() {
+      _selectedDepreciation = null;
       _selectedAge = null;
       _selectedZone = null;
       _selectedNoClaimBonus = null;

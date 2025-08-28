@@ -209,6 +209,7 @@ class _ElectricTwoWheeler1YODFormScreenState
       controller.clear();
     }
     setState(() {
+      _selectedDepreciation = null;
       _selectedAge = null;
       _selectedZone = null;
       _selectedNoClaimBonus = null;

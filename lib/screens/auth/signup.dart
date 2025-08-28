@@ -116,6 +116,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
         flexibleSpace: Container(
           decoration: BoxDecoration(
@@ -137,8 +139,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 170.0),
               child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 24.0, vertical: 32.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.width < 360 ? 16.0 : 24.0, 
+                    vertical: 32.0),
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 100),
                   child: Column(
@@ -231,28 +234,43 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Image.asset(
-                      'assets/insurance.png',
+                      'assets/icon/app_icon.png',
                       height: 80,
                       width: 80,
                     ),
                     const SizedBox(height: 10),
-                    Text(
-                      'Create Your Account',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w900,
-                        color: Colors.indigo.shade900,
-                      ),
+                    LayoutBuilder(
+                      builder: (context, constraints) {
+                        final isSmallScreen = constraints.maxWidth < 360;
+                        return Text(
+                          'Create Your Account',
+                          style: TextStyle(
+                            fontSize: isSmallScreen ? 20 : 24,
+                            fontWeight: FontWeight.w900,
+                            color: Colors.indigo.shade900,
+                          ),
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        );
+                      },
                     ),
                     const SizedBox(height: 4),
-                    Text(
-                      'Join us and protect your vehicle today!',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.grey.shade800,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.center,
+                    LayoutBuilder(
+                      builder: (context, constraints) {
+                        final isSmallScreen = constraints.maxWidth < 360;
+                        return Text(
+                          'Join us and protect your vehicle today!',
+                          style: TextStyle(
+                            fontSize: isSmallScreen ? 12 : 14,
+                            color: Colors.grey.shade800,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        );
+                      },
                     ),
                     const SizedBox(height: 20),
                   ],
@@ -323,6 +341,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             ),
                           ],
                         ),
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                   ],
@@ -339,11 +360,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(
-                      Icons.code,
-                      color: Colors.indigo.shade300,
-                      size: 16,
-                    ),
+                    // Icon(
+                    //   Icons.code,
+                    //   color: Colors.indigo.shade300,
+                    //   size: 16,
+                    // ),
                     const SizedBox(width: 8),
                     Text(
                       'Developed by: NBK SOFTWARE SOLUTIONS',
@@ -352,6 +373,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         fontWeight: FontWeight.w500,
                         color: Colors.grey.shade600,
                       ),
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
@@ -386,6 +410,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 padding: const EdgeInsets.only(right: 16.0),
                 child: Icon(Icons.phone_android_outlined, color: Colors.indigo.shade700),
               ),
+              // Add content padding to ensure text doesn't go under the button
+              contentPadding: const EdgeInsets.fromLTRB(16, 16, 100, 16),
               filled: true,
               fillColor: Colors.white,
               border: OutlineInputBorder(
@@ -477,6 +503,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   padding: const EdgeInsets.only(right: 16.0),
                   child: Icon(Icons.sms_outlined, color: Colors.indigo.shade700),
                 ),
+                // Add content padding to ensure text doesn't go under the button
+                contentPadding: const EdgeInsets.fromLTRB(16, 16, 90, 16),
                 filled: true,
                 fillColor: Colors.white,
                 border: OutlineInputBorder(
@@ -537,6 +565,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
     return StatefulBuilder(
       builder: (context, setState) {
+        // Make font sizes responsive to screen width
+        final screenWidth = MediaQuery.of(context).size.width;
+        final isSmallScreen = screenWidth < 360;
+        final labelFontSize = isSmallScreen ? 14.0 : 16.0;
+        
         return TextFormField(
           controller: controller,
           obscureText: isObscured,
@@ -548,7 +581,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
           decoration: InputDecoration(
             labelText: label,
             labelStyle: TextStyle(
-                color: Colors.grey.shade800, fontWeight: FontWeight.w500),
+                color: Colors.grey.shade800, 
+                fontWeight: FontWeight.w500,
+                fontSize: labelFontSize),
             prefixIcon: icon != null
                 ? Padding(
                     padding: const EdgeInsets.only(right: 16.0),
@@ -656,7 +691,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
         items: _states.map((state) {
           return DropdownMenuItem(
             value: state,
-            child: Text(state),
+            child: Text(
+              state,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
           );
         }).toList(),
         onChanged: (value) {
@@ -674,8 +713,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Future<void> _sendOtp() async {
     if (_phoneController.text.trim().length != 10) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-            content: Text("Please enter a valid 10-digit mobile number")),
+        SnackBar(
+          content: Text(
+            "Please enter a valid 10-digit mobile number",
+            style: TextStyle(fontSize: 16),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          margin: EdgeInsets.all(16),
+          backgroundColor: Colors.black87,
+        ),
       );
       return;
     }
@@ -689,8 +740,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
         });
       },
       verificationFailed: (FirebaseAuthException e) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text(e.message ?? "Error")));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              e.message ?? "Error",
+              style: TextStyle(fontSize: 16, color: Colors.white),
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+            ),
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            margin: EdgeInsets.all(16),
+            backgroundColor: Colors.red.shade600,
+            duration: Duration(seconds: 5),
+          ),
+        );
       },
       codeSent: (String verificationId, int? resendToken) {
         setState(() {
@@ -716,11 +782,40 @@ class _SignUpScreenState extends State<SignUpScreen> {
         // _isPhoneEditable = false;
       });
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Phone verified ✅")),
+        SnackBar(
+          content: Text(
+            "Phone verified ✅",
+            style: TextStyle(fontSize: 16, color: Colors.white),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          margin: EdgeInsets.all(16),
+          backgroundColor: Colors.green.shade600,
+          duration: Duration(seconds: 3),
+        ),
       );
     } catch (e) {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Invalid OTP")));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            "Invalid OTP",
+            style: TextStyle(fontSize: 16, color: Colors.white),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          margin: EdgeInsets.all(16),
+          backgroundColor: Colors.red.shade600,
+          duration: Duration(seconds: 4),
+        ),
+      );
     }
   }
 
@@ -728,9 +823,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
     if (_formKey.currentState!.validate()) {
       if (_passwordController.text != _confirmPasswordController.text) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Passwords do not match'),
+          SnackBar(
+            content: Text(
+              'Passwords do not match',
+              style: TextStyle(fontSize: 16, color: Colors.white),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
             behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            margin: EdgeInsets.all(16),
+            backgroundColor: Colors.red.shade600,
+            duration: Duration(seconds: 4),
           ),
         );
         return;
@@ -738,8 +844,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
       if (!_isPhoneVerified) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-              content: Text("Please verify your phone via OTP first")),
+          SnackBar(
+            content: Text(
+              "Please verify your phone via OTP first",
+              style: TextStyle(fontSize: 16),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            margin: EdgeInsets.all(16),
+            backgroundColor: Colors.orange.shade600,
+            duration: Duration(seconds: 4),
+          ),
         );
         return;
       }
@@ -763,9 +882,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
         if (message == null) {
           if (mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('✅ Account created successfully'),
+              SnackBar(
+                content: Text(
+                  '✅ Account created successfully',
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
                 behavior: SnackBarBehavior.floating,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                margin: EdgeInsets.all(16),
+                backgroundColor: Colors.green.shade600,
+                duration: Duration(seconds: 4),
               ),
             );
 
@@ -777,14 +907,42 @@ class _SignUpScreenState extends State<SignUpScreen> {
         } else {
           if (mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text(message)),
+              SnackBar(
+                content: Text(
+                  message,
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                behavior: SnackBarBehavior.floating,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                margin: EdgeInsets.all(16),
+                backgroundColor: Colors.red.shade600,
+                duration: Duration(seconds: 5),
+              ),
             );
           }
         }
       } catch (e) {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(e.toString())),
+            SnackBar(
+              content: Text(
+                e.toString(),
+                style: TextStyle(fontSize: 16, color: Colors.white),
+                maxLines: 3,
+                overflow: TextOverflow.ellipsis,
+              ),
+              behavior: SnackBarBehavior.floating,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              margin: EdgeInsets.all(16),
+              backgroundColor: Colors.red.shade600,
+              duration: Duration(seconds: 5),
+            ),
           );
         }
       } finally {

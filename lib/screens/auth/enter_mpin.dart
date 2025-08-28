@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:motor_insurance_app/screens/auth/single_device_check.dart';
 
 class EnterMPINScreen extends StatefulWidget {
   const EnterMPINScreen({Key? key}) : super(key: key);
@@ -14,93 +15,93 @@ class _EnterMPINScreenState extends State<EnterMPINScreen> {
   final List<String> _enteredPin = [];
   //final _storage = const FlutterSecureStorage();
 
- Future<void> _verifyMPIN() async {
-  if (_enteredPin.length != 4) return;
+  Future<void> _verifyMPIN() async {
+    if (_enteredPin.length != 4) return;
 
-  final user = FirebaseAuth.instance.currentUser;
-  if (user == null) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text("Please login first")),
-    );
-    Navigator.pushReplacementNamed(context, '/login');
-    return;
-  }
-
-  final _storage = const FlutterSecureStorage();
-  String? savedMpin = await _storage.read(key: "user_mpin_${user.uid}");
-  //await Future.delayed(const Duration(milliseconds: 500)); // Simulate processing
-
-  if (savedMpin == _enteredPin.join()) {
-    // ✅ Correct MPIN → check subscription
-    final uid = user.uid;
-
-    try {
-      final subDoc = await FirebaseFirestore.instance
-          .collection("subscriptions")
-          .doc(uid)
-          .get();
-
-      final now = DateTime.now().toUtc();
-
-      if (!subDoc.exists) {
-        Navigator.pushReplacementNamed(context, '/subscribe');
-        return;
-      }
-
-      final data = subDoc.data()!;
-
-      // 🔑 Safe expiryDate parsing
-      DateTime expiry;
-      final expiryDate = data["expiryDate"];
-      if (expiryDate is Timestamp) {
-        expiry = expiryDate.toDate();
-      } else if (expiryDate is String) {
-        expiry = DateTime.tryParse(expiryDate) ??
-            now.subtract(const Duration(days: 1));
-      } else {
-        throw "Invalid expiry date format";
-      }
-
-      // 🔑 Safe trialEnd parsing
-      DateTime? trialEnd;
-      if (data["trialEnd"] != null) {
-        final trialEndRaw = data["trialEnd"];
-        if (trialEndRaw is Timestamp) {
-          trialEnd = trialEndRaw.toDate();
-        } else if (trialEndRaw is String) {
-          trialEnd = DateTime.tryParse(trialEndRaw);
-        }
-      }
-
-      if (data["subscriptionStatus"] == "active" && expiry.isAfter(now)) {
-        Navigator.pushReplacementNamed(context, '/home');
-      } else if (data["subscriptionStatus"] == "trial" &&
-          trialEnd != null &&
-          trialEnd.isAfter(now)) {
-        Navigator.pushReplacementNamed(context, '/home');
-      } else {
-        Navigator.pushReplacementNamed(context, '/subscribe');
-      }
-    } catch (e) {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text("Error checking subscription: $e"),
-          backgroundColor: Colors.red.shade400,
+        const SnackBar(content: Text("Please login first")),
+      );
+      Navigator.pushReplacementNamed(context, '/login');
+      return;
+    }
+
+    final _storage = const FlutterSecureStorage();
+    String? savedMpin = await _storage.read(key: "user_mpin_${user.uid}");
+    //await Future.delayed(const Duration(milliseconds: 500)); // Simulate processing
+
+    if (savedMpin == _enteredPin.join()) {
+      // ✅ Correct MPIN → check subscription
+      final uid = user.uid;
+
+      try {
+        final subDoc = await FirebaseFirestore.instance
+            .collection("subscriptions")
+            .doc(uid)
+            .get();
+
+        final now = DateTime.now().toUtc();
+
+        if (!subDoc.exists) {
+          Navigator.pushReplacementNamed(context, '/subscribe');
+          return;
+        }
+
+        final data = subDoc.data()!;
+
+        // 🔑 Safe expiryDate parsing
+        DateTime expiry;
+        final expiryDate = data["expiryDate"];
+        if (expiryDate is Timestamp) {
+          expiry = expiryDate.toDate();
+        } else if (expiryDate is String) {
+          expiry = DateTime.tryParse(expiryDate) ??
+              now.subtract(const Duration(days: 1));
+        } else {
+          throw "Invalid expiry date format";
+        }
+
+        // 🔑 Safe trialEnd parsing
+        DateTime? trialEnd;
+        if (data["trialEnd"] != null) {
+          final trialEndRaw = data["trialEnd"];
+          if (trialEndRaw is Timestamp) {
+            trialEnd = trialEndRaw.toDate();
+          } else if (trialEndRaw is String) {
+            trialEnd = DateTime.tryParse(trialEndRaw);
+          }
+        }
+
+        if (data["subscriptionStatus"] == "active" && expiry.isAfter(now)) {
+          Navigator.pushReplacementNamed(context, '/home');
+        } else if (data["subscriptionStatus"] == "trial" &&
+            trialEnd != null &&
+            trialEnd.isAfter(now)) {
+          Navigator.pushReplacementNamed(context, '/home');
+        } else {
+          Navigator.pushReplacementNamed(context, '/subscribe');
+        }
+      } catch (e) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Error checking subscription: $e"),
+            backgroundColor: Colors.red.shade400,
+          ),
+        );
+      }
+    } else {
+      // ❌ Wrong MPIN
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("Incorrect MPIN"),
+          behavior: SnackBarBehavior.floating,
+          backgroundColor: Colors.red,
         ),
       );
+      setState(() => _enteredPin.clear());
     }
-  } else {
-    // ❌ Wrong MPIN
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text("Incorrect MPIN"),
-        behavior: SnackBarBehavior.floating,
-        backgroundColor: Colors.red,
-      ),
-    );
-    setState(() => _enteredPin.clear());
   }
-}
 
   void _onKeyPressed(String value) {
     if (_enteredPin.length < 4) {

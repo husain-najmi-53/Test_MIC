@@ -20,7 +20,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
     'currentIdv': TextEditingController(),
     'idvAttached': TextEditingController(),
     'depreciation (Attached trailer)': TextEditingController(),
-    'currentIdv (Attached trailer)': TextEditingController(),
+    'currentIdv (Attached Trailer)': TextEditingController(),
     'No_of_trailers(Attached)': TextEditingController(),
     'Year_of_manufacture': TextEditingController(),
     'Discount_on_OD_premium(%)': TextEditingController(),
@@ -147,7 +147,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
 
     double currentIdvAttached =
         idvAttached - ((idvAttached * depreciation) / 100);
-    _controllers['currentIdv (Attached trailer)']!.text =
+    _controllers['currentIdv (Attached Trailer)']!.text =
         currentIdvAttached.toStringAsFixed(2);
   }
 
@@ -159,7 +159,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
           double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
       // double trailerIdv = double.tryParse(_controllers['idv (Attached trailer)']!.text) ?? 0.0;
       double currentIdvAttached = double.tryParse(
-              _controllers['currentIdv (Attached trailer)']!.text) ??
+              _controllers['currentIdv (Attached Trailer)']!.text) ??
           0.0;
       // double DepreciationAttached = double.tryParse(_controllers['Depreciation (Attached trailer)']!.text) ?? 0.0;
       double ageOfVehicle = double.tryParse(_selectedAge ?? '0') ?? 0.0;
@@ -233,7 +233,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       double totalA = netOwnDamage;
 
       // TP Section
-      double trailerTpRate = 1047; //change this when confirmed
+      double trailerTpRate = 7267; //change this when confirmed
       double trailerLiabilityTP =
           noOfTrailersAttached * trailerTpRate; //Trailer Liability Premium (TP)
       double cngLpgKitTP = _selectedCNG == "Yes" ? 4 : 0.0;

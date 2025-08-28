@@ -21,7 +21,6 @@ import 'package:motor_insurance_app/screens/dashboard/claimCalculator/odClaim_sc
 import 'package:motor_insurance_app/screens/dashboard/claimCalculator/tpClaim_screen.dart';
 import 'package:motor_insurance_app/screens/notification_screens/tipsNTricks_screen.dart';
 import 'package:motor_insurance_app/screens/notification_screens/versionUpdate_screen.dart';
-import 'package:motor_insurance_app/screens/vehicle/calculation_form_screen.dart';
 import 'package:motor_insurance_app/screens/dashboard/home_screen.dart';
 import 'package:motor_insurance_app/screens/auth/login_screen.dart';
 import 'package:motor_insurance_app/screens/auth/splash_screen.dart';
@@ -158,11 +157,6 @@ class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
         '/CashlessGarage': (context) => const CashlessgarageList(),
         '/TipsNTricks': (context) =>  TipsNTricksScreen(),
         '/VersionUpdate': (context) =>  VersionUpdateScreen(),
-        '/calculationForm': (context) {
-          final selectedType =
-              ModalRoute.of(context)?.settings.arguments as String? ?? '';
-          return CalculationFormScreen(selectedType: selectedType);
-        },
 
         //Custom Drawer Routes
         '/profile': (context) => const ProfilePage(),

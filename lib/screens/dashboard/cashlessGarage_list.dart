@@ -25,7 +25,7 @@ class _CashlessgarageListState extends State<CashlessgarageList> {
         url: 'https://www.cholainsurance.com/cashless-garages/auto-centre'),
     CashlessGarage(
         logo: 'assets/logos/future_generali.png',
-        name: 'Future Generali India Insurance Company Ltd',
+        name: 'Generali Central Insurance Company Ltd',
         url: 'https://general.futuregenerali.in/garage-locator'),
     CashlessGarage(
         logo: 'assets/logos/digit.png',

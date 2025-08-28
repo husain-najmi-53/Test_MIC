@@ -38,7 +38,7 @@ class _CompanydetailListState extends State<CompanydetailList> {
     //     email: 'mycare@dhflinsurance.com',
     //     website: 'www.dhflinsurance.com'),
     CompanyDetails(
-        name: 'Future Generali India Insurance Company Ltd',
+        name: 'Generali Central Insurance Company Ltd',
         tollno: '1800-220-233',
         email: 'fgcare@futuregenerali.in',
         website: 'www.general.futuregenerali.in'),
@@ -149,7 +149,6 @@ class _CompanydetailListState extends State<CompanydetailList> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      // backgroundColor: Colors.indigo.shade50,
       appBar: AppBar(
         backgroundColor: Colors.indigo.shade700,
         shape: const RoundedRectangleBorder(
@@ -171,33 +170,23 @@ class _CompanydetailListState extends State<CompanydetailList> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 0),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              ListView.separated(
-                  primary: false,
-                  shrinkWrap: true,
-                  itemCount: companyDetailsList.length,
-                  separatorBuilder: (context, index) => SizedBox(
-                        height: height * 0.0,
-                      ),
-                  itemBuilder: (context, index) => _buildCard(
-                      height: height,
-                      width: width,
-                      name: companyDetailsList[index].name,
-                      toll: companyDetailsList[index].tollno,
-                      email: companyDetailsList[index].email,
-                      website: companyDetailsList[index].website))
-            ],
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: ListView.builder(
+          itemCount: companyDetailsList.length,
+          itemBuilder: (context, index) => _buildCard(
+            height: height,
+            width: width,
+            name: companyDetailsList[index].name,
+            toll: companyDetailsList[index].tollno,
+            email: companyDetailsList[index].email,
+            website: companyDetailsList[index].website,
           ),
         ),
       ),
     );
   }
 
-  Container _buildCard({
+  Widget _buildCard({
     required double height,
     required double width,
     required String name,
@@ -205,190 +194,129 @@ class _CompanydetailListState extends State<CompanydetailList> {
     required String email,
     required String website,
   }) {
-    return Container(
-      height: height * 0.24,
-      width: double.infinity,
-      child: Stack(
-        children: [
-          Container(
-            height: height * 0.09,
-            decoration: BoxDecoration(
-                // color: Colors.blue.shade200,
-                // color: Colors.indigoAccent.shade100,
-                color: const Color(0xFFF0F4FF),
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(12),
-                  bottomRight: Radius.circular(12),
-                )),
-          ),
-          Positioned(
-              top: 10,
-              left: 20,
-              child: Container(
-                height: height * 0.21,
-                width: width * 0.9,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    // color: Colors.indigo.shade200,
-                    // color: Colors.blue.shade200,
-                    borderRadius: BorderRadius.circular(12),
-                    // border: Border.fromBorderSide(BorderSide(color: Colors.indigo.shade700)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5), // Shadow color
-                        spreadRadius: 2, // Spread radius
-                        blurRadius: 7,
-                        offset: const Offset(0, 4),
-                      ),
-                    ]),
-                child: Column(
-                  children: [
-                    Container(
-                      height: height * 0.065,
-                      width: width * 0.9,
-                      decoration: BoxDecoration(
-                          color: Colors.indigo.shade500,
-                          // color: Colors.blue.shade200,
-                          borderRadius: const BorderRadius.only(
-                              topRight: Radius.circular(12),
-                              topLeft: Radius.circular(12))),
-                      child: Center(
-                          child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 15, vertical: 5),
-                              child: Text(
-                                name,
-                                style: GoogleFonts.poppins(
-                                    color: Colors.white,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold),
-                              ))),
-                    ),
-                    Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 2),
-                        child: _cardRaw(
-                            width: width,
-                            fieldName: 'Toll Free Number',
-                            fieldValue: toll)),
-                    _cardRaw(
-                        width: width, fieldName: 'Email', fieldValue: email),
-                    Padding(
-                        padding: const EdgeInsets.only(bottom: 1, top: 2),
-                        child: _cardRaw(
-                            width: width,
-                            fieldName: 'Website',
-                            fieldValue: website)),
-                    const Divider(
-                      color: Colors.black,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      // crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        GestureDetector(
-                          onTap: () async {
-                            await _launchWebsite("https://${website}");
-                          },
-                          child: Card(
-                            color: Colors.transparent,
-                            elevation: 0,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 3),
-                                    child: Icon(CupertinoIcons
-                                        .arrow_up_right_square_fill)),
-                                Text(
-                                  "Website",
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w500),
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () async {
-                            await _launchCall(toll);
-                          },
-                          child: Card(
-                            color: Colors.transparent,
-                            elevation: 0,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 3),
-                                    child: Icon(Icons.call)),
-                                Text(
-                                  "Call",
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w500),
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () async {
-                            await _launchEmail(email);
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 15),
-                            child: Card(
-                              color: Colors.transparent,
-                              elevation: 0,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 3),
-                                      child: Icon(Icons.email_rounded)),
-                                  Text(
-                                    "Email",
-                                    style: GoogleFonts.poppins(
-                                        fontWeight: FontWeight.w500),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
-                  ],
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+      elevation: 3,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Company Name Header
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+              decoration: BoxDecoration(
+                color: Colors.indigo.shade500,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Text(
+                name,
+                style: GoogleFonts.poppins(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
                 ),
-              ))
-        ],
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            const SizedBox(height: 12),
+            
+            // Company Details
+            _cardRow(fieldName: 'Toll Free Number', fieldValue: toll),
+            const SizedBox(height: 8),
+            _cardRow(fieldName: 'Email', fieldValue: email),
+            const SizedBox(height: 8),
+            _cardRow(fieldName: 'Website', fieldValue: website),
+            const SizedBox(height: 12),
+            const Divider(height: 1, color: Colors.grey),
+            const SizedBox(height: 12),
+            
+            // Action Buttons
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                _buildActionButton(
+                  icon: CupertinoIcons.arrow_up_right_square_fill,
+                  label: "Website",
+                  onTap: () => _launchWebsite("https://${website}"),
+                ),
+                _buildActionButton(
+                  icon: Icons.call,
+                  label: "Call",
+                  onTap: () => _launchCall(toll),
+                ),
+                _buildActionButton(
+                  icon: Icons.email_rounded,
+                  label: "Email",
+                  onTap: () => _launchEmail(email),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
 
-  Row _cardRaw(
-      {required double width, required String fieldName, required fieldValue}) {
+  Widget _cardRow({required String fieldName, required String fieldValue}) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          padding: const EdgeInsets.only(left: 10),
-          width: width * 0.35,
+        SizedBox(
+          width: 120,
           child: Text(
             fieldName,
-            style: GoogleFonts.poppins(fontWeight: FontWeight.w500),
+            style: GoogleFonts.poppins(
+              fontWeight: FontWeight.w500,
+              fontSize: 14,
+            ),
           ),
         ),
-        Container(
-          width: width * 0.5,
+        const SizedBox(width: 8),
+        Expanded(
           child: Text(
             fieldValue,
+            style: const TextStyle(fontSize: 14),
             overflow: TextOverflow.ellipsis,
           ),
-        )
+        ),
       ],
+    );
+  }
+
+  Widget _buildActionButton({
+    required IconData icon,
+    required String label,
+    required VoidCallback onTap,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        decoration: BoxDecoration(
+          color: Colors.indigo.shade50,
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 18, color: Colors.indigo.shade700),
+            const SizedBox(width: 4),
+            Text(
+              label,
+              style: GoogleFonts.poppins(
+                fontSize: 12,
+                fontWeight: FontWeight.w500,
+                color: Colors.indigo.shade700,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
@@ -411,8 +339,9 @@ class _CompanydetailListState extends State<CompanydetailList> {
   }
 
   Future<void> _launchCall(String PhoneNo) async {
-    String phone = "+91" + PhoneNo;
-    Uri uri = Uri.parse("tel:${phone}");
+    // Remove any non-digit characters from phone number
+    String cleanedPhone = PhoneNo.replaceAll(RegExp(r'[^0-9]'), '');
+    Uri uri = Uri.parse("tel:$cleanedPhone");
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
     } else {
@@ -427,9 +356,10 @@ class CompanyDetails {
   String email;
   String website;
 
-  CompanyDetails(
-      {required this.name,
-      required this.tollno,
-      required this.email,
-      required this.website});
+  CompanyDetails({
+    required this.name,
+    required this.tollno,
+    required this.email,
+    required this.website,
+  });
 }

@@ -40,8 +40,20 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (identifier.isEmpty || password.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-              content: Text("Please enter Email/Mobile No. and Password")),
+          SnackBar(
+            content: Text(
+              "Please enter Email/Mobile No. and Password",
+              style: TextStyle(fontSize: 16),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            margin: EdgeInsets.all(16),
+            backgroundColor: Colors.black87,
+          ),
         );
         return;
       }
@@ -55,6 +67,12 @@ class _LoginScreenState extends State<LoginScreen> {
       if (error == null) {
         final user = _authService.getCurrentUser();
         if (user != null) {
+          // 🔹 Validate user exists in both Auth + Firestore
+          final valid = await AuthService.isUserValid();
+          if (!valid) {
+            await AuthService.forceLogout(context);
+            return;
+          }
           try {
             SingleDeviceCheck().checkAndPromptDeviceId(context, user.uid);
             String route = await _authService.getRedirectRoute(user.uid);
@@ -75,13 +93,25 @@ class _LoginScreenState extends State<LoginScreen> {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(e.toString().replaceAll("Exception: ", "")),
-            backgroundColor: Colors.red,
+            content: Text(
+              e.toString().replaceAll("Exception: ", ""),
+              style: TextStyle(fontSize: 16, color: Colors.white),
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+            ),
+            backgroundColor: Colors.red.shade600,
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            margin: EdgeInsets.all(16),
+            duration: Duration(seconds: 5),
           ),
         );
       }
     }
   }
+
   /// Handle MPIN tap
   Future<void> _handleMpinTap(BuildContext context) async {
     final user = FirebaseAuth.instance.currentUser;
@@ -89,9 +119,29 @@ class _LoginScreenState extends State<LoginScreen> {
     if (user == null) {
       // No Firebase user logged in → must login with email first
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Please login with Email/Password first")),
+        SnackBar(
+          content: Text(
+            "Please login with Email/Password first",
+            style: TextStyle(fontSize: 16),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          margin: EdgeInsets.all(16),
+          backgroundColor: Colors.black87,
+        ),
       );
       Navigator.pushReplacementNamed(context, '/login');
+      return;
+    }
+
+    // 🔹 Validate user exists in Auth + Firestore
+    final valid = await AuthService.isUserValid();
+    if (!valid) {
+      await AuthService.forceLogout(context);
       return;
     }
 
@@ -99,6 +149,7 @@ class _LoginScreenState extends State<LoginScreen> {
     String? savedMpin = await storage.read(key: "user_mpin_${user.uid}");
 
     if (savedMpin != null) {
+      SingleDeviceCheck().checkAndPromptDeviceId(context, user.uid);
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => const EnterMPINScreen()),
@@ -143,7 +194,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: SlideInDown(
                             duration: const Duration(milliseconds: 1000),
                             child: Image.asset(
-                              'assets/insurance.png',
+                              'assets/icon/app_icon.png',
                               height: 80,
                               width: 80,
                             ),
@@ -303,11 +354,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Icon(
-                                Icons.code,
-                                color: Colors.grey.shade400,
-                                size: 16,
-                              ),
+                              // Icon(
+                              //   Icons.code,
+                              //   color: Colors.grey.shade400,
+                              //   size: 16,
+                              // ),
                               const SizedBox(width: 8),
                               Text(
                                 'Developed by: NBK SOFTWARE SOLUTIONS',

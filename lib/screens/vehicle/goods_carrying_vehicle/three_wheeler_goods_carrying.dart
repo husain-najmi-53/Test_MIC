@@ -180,16 +180,16 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
   double _getThreeWheelerOdRate(String zone, String age) {
     if (zone == 'A') {
       if (age == 'Upto 5 Years') return 1.278;
-      if (age == '>5-7 Years') return 1.310;
-      if (age == '>7 Years') return 1.342;
+      if (age == '6 to 7 Years') return 1.310;
+      if (age == 'Above 7 Years') return 1.342;
     } else if (zone == 'B') {
       if (age == 'Upto 5 Years') return 1.272;
-      if (age == '>5-7 Years') return 1.304;
-      if (age == '>7 Years') return 1.336;
+      if (age == '6 to 7 Years') return 1.304;
+      if (age == 'Above 7 Years') return 1.336;
     } else if (zone == 'C') {
       if (age == 'Upto 5 Years') return 1.260;
-      if (age == '>5-7 Years') return 1.292;
-      if (age == '>7 Years') return 1.323;
+      if (age == '6 to 7 Years') return 1.292;
+      if (age == 'Above 7 Years') return 1.323;
     }
     return 0.0; // fallback
   }
@@ -260,7 +260,11 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
                   });
                 }),
                 _buildTextField(
-                    'idv', 'IDV (₹)', 'Enter IDV (auto-calculated)',enabled: false,),
+                  'idv',
+                  'IDV (₹)',
+                  'Enter IDV (auto-calculated)',
+                  enabled: false,
+                ),
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),
                 _buildTextField(

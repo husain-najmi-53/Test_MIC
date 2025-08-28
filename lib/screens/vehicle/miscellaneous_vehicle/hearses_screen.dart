@@ -221,7 +221,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
         "CNG/LPG kit (Externally Fitted)": cngLpgValue.toStringAsFixed(2),
         "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
         "IMT23": imt23Value.toStringAsFixed(2),
-        // "Basic OD Before Discount": basicOdBeforeDiscount.toStringAsFixed(2),
+        "Basic OD Before Discount": basicOdBeforeDiscount.toStringAsFixed(2),
         "Discount on OD Premium": discountValue.toStringAsFixed(2),
         "Loading on OD Premium": loadingValue.toStringAsFixed(2),
         "Basic OD Before NCB": basicOdBeforeNcb.toStringAsFixed(2),

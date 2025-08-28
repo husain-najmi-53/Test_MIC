@@ -140,7 +140,7 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
       double odWithCngLoading = odWithAccessories + cngKitLoading;
       double ncbAmount = odWithCngLoading * selectedNcbPercent / 100;
       double netOdPremium = odWithCngLoading - ncbAmount;
-      double tpPremium = _getBusTpRate(passengerCount: passengerCount);
+      double tpPremium = 14343.0; // Fixed for upto 6 passengers
 
       if (restrictedTppdYes) {
         tpPremium = tpPremium * 0.90;
@@ -499,27 +499,32 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
 // Helper methods
 double _getBusOdRate(String zone, String age) {
   if (age == 'Upto5Years') {
-    if (zone == 'A') return 1.278;
-    if (zone == 'B') return 1.310;
-    if (zone == 'C') return 1.342;
+    if (zone == 'A') return 1.680;
+    if (zone == 'B') return 1.672;
+    if (zone == 'C') return 1.656;
   } else if (age == '5to10Years') {
-    if (zone == 'A') return 1.803;
-    if (zone == 'B') return 1.830;
-    if (zone == 'C') return 1.874;
+    if (zone == 'A') return 1.722;
+    if (zone == 'B') return 1.714;
+    if (zone == 'C') return 1.697;
+  } else if (age == 'Above10Years') {
+    // You can adjust as per rates; keeping slightly higher
+    if (zone == 'A') return 1.764;
+    if (zone == 'B') return 1.756;
+    if (zone == 'C') return 1.739;
   }
-  return 1.0;
+  return 1.680; // fallback
 }
 
-double _getBusTpRate(
-    {required int passengerCount, bool usePerPassenger = false}) {
-  if (passengerCount <= 6) {
-    return usePerPassenger ? 1214.0 * passengerCount : 2539.0;
-  } else if (passengerCount > 6 && passengerCount <= 17) {
-    return usePerPassenger ? 1349.0 * passengerCount : 6763.0;
-  } else if (passengerCount > 17 && passengerCount <= 26) {
-    return usePerPassenger ? 1349.0 * passengerCount : 9697.0;
-  } else if (passengerCount > 26) {
-    return usePerPassenger ? 1349.0 * passengerCount : 13725.0;
-  }
-  return 0.0; // fallback
-}
+// double _getBusTpRate(
+//     {required int passengerCount, bool usePerPassenger = false}) {
+//   if (passengerCount <= 6) {
+//     return usePerPassenger ? 1214.0 * passengerCount : 2539.0;
+//   } else if (passengerCount > 6 && passengerCount <= 17) {
+//     return usePerPassenger ? 1349.0 * passengerCount : 6763.0;
+//   } else if (passengerCount > 17 && passengerCount <= 26) {
+//     return usePerPassenger ? 1349.0 * passengerCount : 9697.0;
+//   } else if (passengerCount > 26) {
+//     return usePerPassenger ? 1349.0 * passengerCount : 13725.0;
+//   }
+//   return 0.0; // fallback
+// }

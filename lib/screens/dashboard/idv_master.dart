@@ -11,19 +11,36 @@ class IdvMaster extends StatefulWidget {
 
 class _IdvMasterState extends State<IdvMaster> {
   final ScrollController _scrollController = ScrollController();
-  bool _showLastContainer = false;
-  Map<String, dynamic> vehiclesData=VehicleData().vehiclesData;
+  Map<String, dynamic> vehiclesData = VehicleData().vehiclesData;
   DateTime now = DateTime.now();
-  List<String> vTypes = ['Bike','Private Car','Goods Carrying Vehicle','Passenger Carrying Vehicle','Miscellaneous Vehicle'];
+  List<String> vTypes = [
+    'Bike',
+    'Private Car',
+    'Goods Carrying Vehicle',
+    'Passenger Carrying Vehicle',
+    'Miscellaneous Vehicle'
+  ];
   List<String> mTypes = ['--Select Make--'];
   List<String> yearList = ['--Select Year--'];
   List<String> mdTypes = ['--Select Model--'];
   List<String> vrTypes = ['--Select Varient--'];
-  List<String> monthList = ["January", "Febuary", "March","April","May","June","July","August","September","October","November","December"];
-  List<String> currentYearMonth =[];
+  List<String> monthList = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+  List<String> currentYearMonth = [];
 
-
-  Map<String, dynamic> vehiclesResult={};
+  Map<String, dynamic> vehiclesResult = {};
   double? idv;
 
   String? selectedVehicleType;
@@ -34,10 +51,6 @@ class _IdvMasterState extends State<IdvMaster> {
   String? selectedYear;
 
   void _showAndScroll() {
-    setState(() {
-      _showLastContainer = true;  //through this bool value we are refreshing page
-    });
-
     // Wait for the UI to update before scrolling
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _scrollController.animateTo(
@@ -48,16 +61,13 @@ class _IdvMasterState extends State<IdvMaster> {
     });
   }
 
-  UpdateCurrentYearMonth(List<String> months){
-    if(int.parse(selectedYear!)==now.year){
-      for(int i=0;i<now.month;i++){
+  UpdateCurrentYearMonth(List<String> months) {
+    if (int.parse(selectedYear!) == now.year) {
+      for (int i = 0; i < now.month; i++) {
         currentYearMonth.add(months[i]);
       }
     }
   }
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +80,6 @@ class _IdvMasterState extends State<IdvMaster> {
       appBar: AppBar(
         backgroundColor: Colors.indigo.shade700,
         iconTheme: const IconThemeData(color: Colors.white),
-
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(12),
@@ -83,13 +92,17 @@ class _IdvMasterState extends State<IdvMaster> {
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
         centerTitle: true,
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
+            padding: EdgeInsets.symmetric(
+              horizontal: constraints.maxWidth < 360 ? 12 : 15,
+            ),
             child: SingleChildScrollView(
               controller: _scrollController,
               child: Column(
@@ -104,10 +117,10 @@ class _IdvMasterState extends State<IdvMaster> {
                     onChanged: (val) => setState(() {
                       selectedVehicleType = val;
                       mTypes = vehiclesData[selectedVehicleType].keys.toList();
-                      selectedMakeType=null;
-                      selectedYear=null;
-                      selectedModelType=null;
-                      selectedVarientType=null;
+                      selectedMakeType = null;
+                      selectedYear = null;
+                      selectedModelType = null;
+                      selectedVarientType = null;
                     }),
                   ),
                   _idvFields(
@@ -118,10 +131,13 @@ class _IdvMasterState extends State<IdvMaster> {
                     onChanged: (val) => setState(() {
                       selectedMakeType = val;
                       // mdTypes = vehiclesData[selectedVehicleType][selectedMakeType].keys.toList();
-                      yearList = vehiclesData[selectedVehicleType][selectedMakeType].keys.toList();
-                      selectedYear=null;
-                      selectedModelType=null;
-                      selectedVarientType=null;
+                      yearList = vehiclesData[selectedVehicleType]
+                              [selectedMakeType]
+                          .keys
+                          .toList();
+                      selectedYear = null;
+                      selectedModelType = null;
+                      selectedVarientType = null;
                     }),
                   ),
                   _idvFields(
@@ -130,11 +146,14 @@ class _IdvMasterState extends State<IdvMaster> {
                     fieldValue: selectedYear,
                     fieldList: yearList,
                     onChanged: (val) => setState(() {
-                      currentYearMonth=[];
+                      currentYearMonth = [];
                       selectedYear = val;
-                      mdTypes = vehiclesData[selectedVehicleType][selectedMakeType][selectedYear].keys.toList();
-                      selectedModelType=null;
-                      selectedVarientType=null;
+                      mdTypes = vehiclesData[selectedVehicleType]
+                              [selectedMakeType][selectedYear]
+                          .keys
+                          .toList();
+                      selectedModelType = null;
+                      selectedVarientType = null;
                       UpdateCurrentYearMonth(monthList);
                     }),
                   ),
@@ -142,10 +161,12 @@ class _IdvMasterState extends State<IdvMaster> {
                     height: height,
                     fieldName: 'Month',
                     fieldValue: selectedMonth,
-                    fieldList: selectedYear != null && int.parse(selectedYear!)==now.year? currentYearMonth:monthList,
+                    fieldList: selectedYear != null &&
+                            int.parse(selectedYear!) == now.year
+                        ? currentYearMonth
+                        : monthList,
                     onChanged: (val) => setState(() {
                       selectedMonth = val;
-
                     }),
                   ),
                   _idvFields(
@@ -155,8 +176,12 @@ class _IdvMasterState extends State<IdvMaster> {
                     fieldList: mdTypes,
                     onChanged: (val) => setState(() {
                       selectedModelType = val;
-                      vrTypes = vehiclesData[selectedVehicleType][selectedMakeType][selectedYear][selectedModelType].keys.toList();
-                      selectedVarientType=null;
+                      vrTypes = vehiclesData[selectedVehicleType]
+                                  [selectedMakeType][selectedYear]
+                              [selectedModelType]
+                          .keys
+                          .toList();
+                      selectedVarientType = null;
                     }),
                   ),
                   _idvFields(
@@ -186,17 +211,20 @@ class _IdvMasterState extends State<IdvMaster> {
                         "Get IDV",
                         style: GoogleFonts.poppins(
                           color: Colors.white,
-
                           fontSize: fontSize,
                           fontWeight: FontWeight.w600,
                         ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                   ),
                   SizedBox(height: height * 0.04),
 
                   /// ✅ Professional Responsive Receipt
-                  vehiclesResult.isNotEmpty?  _buildReceiptCard(width, fontSize):const SizedBox(),
+                  vehiclesResult.isNotEmpty
+                      ? _buildReceiptCard(width, fontSize)
+                      : const SizedBox(),
                 ],
               ),
             ),
@@ -204,9 +232,6 @@ class _IdvMasterState extends State<IdvMaster> {
         },
       ),
     );
-
-
-
   }
 
   /// ✅ Dropdown Field
@@ -229,6 +254,8 @@ class _IdvMasterState extends State<IdvMaster> {
               fontSize: 16,
               fontWeight: FontWeight.w600,
             ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
           const SizedBox(height: 8),
           Container(
@@ -246,12 +273,20 @@ class _IdvMasterState extends State<IdvMaster> {
               dropdownColor: Colors.white,
               borderRadius: BorderRadius.circular(12),
               onChanged: onChanged,
-              hint: Text('Select ${fieldName}'),
+              hint: Text(
+                'Select ${fieldName}',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
               items: fieldList
                   .map((element) => DropdownMenuItem(
-                value: element,
-                child: Text(element),
-              ))
+                        value: element,
+                        child: Text(
+                          element,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ))
                   .toList(),
             ),
           ),
@@ -273,14 +308,19 @@ class _IdvMasterState extends State<IdvMaster> {
           children: [
             Row(
               children: [
-                Icon(Icons.receipt_long, color: Colors.indigo.shade300, size: 28),
+                Icon(Icons.receipt_long,
+                    color: Colors.indigo.shade300, size: 28),
                 const SizedBox(width: 10),
-                Text(
-                  "IDV Receipt",
-                  style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.bold,
-                    fontSize: fontSize + 4,
-                    color: Colors.indigo.shade700,
+                Expanded(
+                  child: Text(
+                    "IDV Receipt",
+                    style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.bold,
+                      fontSize: fontSize + 4,
+                      color: Colors.indigo.shade700,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ],
@@ -296,11 +336,20 @@ class _IdvMasterState extends State<IdvMaster> {
             _buildDetailTile("Seating Capacity", "4", Icons.event_seat),
             _buildDetailTile("Ex-Showroom Price", "₹1,40,000.00", Icons.attach_money),*/
 
-            _buildDetailTile("Body Type", vehiclesResult['bodyType'], Icons.directions_car) ,
-            _buildDetailTile("CC/GVW/Watt", vehiclesResult['watt']==null? vehiclesResult['cc'].toString():vehiclesResult['watt'].toString(), Icons.speed),
-            _buildDetailTile("Fuel Type", vehiclesResult['fuelType'], Icons.local_gas_station),
-            _buildDetailTile("Seating Capacity", vehiclesResult['seating'].toString(), Icons.event_seat),
-            _buildDetailTile("Ex-Showroom Price", vehiclesResult['exShowroom'].toString(), Icons.attach_money),
+            _buildDetailTile(
+                "Body Type", vehiclesResult['bodyType'], Icons.directions_car),
+            _buildDetailTile(
+                "CC/GVW/Watt",
+                vehiclesResult['watt'] == null
+                    ? vehiclesResult['cc'].toString()
+                    : vehiclesResult['watt'].toString(),
+                Icons.speed),
+            _buildDetailTile("Fuel Type", vehiclesResult['fuelType'],
+                Icons.local_gas_station),
+            _buildDetailTile("Seating Capacity",
+                vehiclesResult['seating'].toString(), Icons.event_seat),
+            _buildDetailTile("Ex-Showroom Price",
+                vehiclesResult['exShowroom'].toString(), Icons.attach_money),
 
             const SizedBox(height: 15),
 
@@ -315,20 +364,29 @@ class _IdvMasterState extends State<IdvMaster> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "Current IDV",
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold,
-                      fontSize: fontSize + 4,
-                      color: Colors.indigo.shade700,
+                  Expanded(
+                    child: Text(
+                      "Current IDV",
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.bold,
+                        fontSize: fontSize + 4,
+                        color: Colors.indigo.shade700,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  Text(
-                    idv.toString(),
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold,
-                      fontSize: fontSize + 2,
-                      color: Colors.indigo.shade900,
+                  const SizedBox(width: 8),
+                  Flexible(
+                    child: Text(
+                      idv.toString(),
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.bold,
+                        fontSize: fontSize + 2,
+                        color: Colors.indigo.shade900,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ],
@@ -349,6 +407,7 @@ class _IdvMasterState extends State<IdvMaster> {
           Icon(icon, color: Colors.indigo.shade300, size: 22),
           const SizedBox(width: 12),
           Expanded(
+            flex: 2,
             child: Text(
               title,
               style: GoogleFonts.poppins(
@@ -356,14 +415,23 @@ class _IdvMasterState extends State<IdvMaster> {
                 fontWeight: FontWeight.w500,
                 color: Colors.black87,
               ),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
             ),
           ),
-          Text(
-            value,
-            style: GoogleFonts.poppins(
-              fontSize: 15,
-              fontWeight: FontWeight.w400,
-              color: Colors.grey.shade700,
+          const SizedBox(width: 8),
+          Expanded(
+            flex: 1,
+            child: Text(
+              value,
+              style: GoogleFonts.poppins(
+                fontSize: 15,
+                fontWeight: FontWeight.w400,
+                color: Colors.grey.shade700,
+              ),
+              textAlign: TextAlign.end,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],
@@ -372,77 +440,117 @@ class _IdvMasterState extends State<IdvMaster> {
   }
 
   validate() {
-    if(selectedVehicleType!=null && selectedMakeType!=null && selectedModelType!=null && selectedVarientType!=null && selectedMonth!=null&&selectedYear!=null &&
-        selectedVehicleType!.isNotEmpty && selectedMakeType!.isNotEmpty && selectedModelType!.isNotEmpty && selectedVarientType!.isNotEmpty&&selectedYear!.isNotEmpty&&selectedMonth!.isNotEmpty){
-
+    if (selectedVehicleType != null &&
+        selectedMakeType != null &&
+        selectedModelType != null &&
+        selectedVarientType != null &&
+        selectedMonth != null &&
+        selectedYear != null &&
+        selectedVehicleType!.isNotEmpty &&
+        selectedMakeType!.isNotEmpty &&
+        selectedModelType!.isNotEmpty &&
+        selectedVarientType!.isNotEmpty &&
+        selectedYear!.isNotEmpty &&
+        selectedMonth!.isNotEmpty) {
       //ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Success")));
       setState(() {
-        vehiclesResult = vehiclesData[selectedVehicleType][selectedMakeType][selectedYear][selectedModelType][selectedVarientType];
+        vehiclesResult = vehiclesData[selectedVehicleType][selectedMakeType]
+            [selectedYear][selectedModelType][selectedVarientType];
       });
       calculate();
       _showAndScroll();
-
-    }else{
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Fields Can't be Empty")));
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: const Text("Fields Can't be Empty"),
+          behavior: SnackBarBehavior.floating,
+          margin: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width * 0.1,
+            vertical: 20,
+          ),
+        ),
+      );
     }
-
   }
 
   void calculate() {
     DateTime now = DateTime.now();
     //int currentMonth = now.month;
     //int currentYear = now.year;
-    int vehicleMonths = monthList.indexOf(selectedMonth!)+1;
+    int vehicleMonths = monthList.indexOf(selectedMonth!) + 1;
     DateTime previousDate = DateTime(int.parse(selectedYear!), vehicleMonths);
     int monthDif = monthDifference(previousDate, now);
     int yearDif = getYearDifference(vehicleMonths, int.parse(selectedYear!));
 
-    if(yearDif<=1){
-      if(monthDif<=6){
-        double depAmount =  vehiclesResult['exShowroom']*5/100.toInt();
-        idv = vehiclesResult['exShowroom']-depAmount;
-        setState(() {idv;});
-      }else{
-        double depAmount =  vehiclesResult['exShowroom']*15/100.toInt();
-        idv = vehiclesResult['exShowroom']-depAmount;
-        setState(() {idv;});
+    if (yearDif <= 1) {
+      if (monthDif <= 6) {
+        double depAmount = vehiclesResult['exShowroom'] * 5 / 100.toInt();
+        idv = vehiclesResult['exShowroom'] - depAmount;
+        setState(() {
+          idv;
+        });
+      } else {
+        double depAmount = vehiclesResult['exShowroom'] * 15 / 100.toInt();
+        idv = vehiclesResult['exShowroom'] - depAmount;
+        setState(() {
+          idv;
+        });
       }
     }
 
-    if(yearDif>1 && yearDif<=2){
-      double depAmount =  vehiclesResult['exShowroom']*20/100;
-      idv = vehiclesResult['exShowroom']-depAmount;
-      setState(() {idv;});
+    if (yearDif > 1 && yearDif <= 2) {
+      double depAmount = vehiclesResult['exShowroom'] * 20 / 100;
+      idv = vehiclesResult['exShowroom'] - depAmount;
+      setState(() {
+        idv;
+      });
     }
-    if(yearDif>2 && yearDif<=3){
-      double depAmount =  vehiclesResult['exShowroom']*30/100;
-      idv = vehiclesResult['exShowroom']-depAmount;
-      setState(() {idv;});
+    if (yearDif > 2 && yearDif <= 3) {
+      double depAmount = vehiclesResult['exShowroom'] * 30 / 100;
+      idv = vehiclesResult['exShowroom'] - depAmount;
+      setState(() {
+        idv;
+      });
     }
-    if(yearDif>3 && yearDif<=4){
-      double depAmount =  vehiclesResult['exShowroom']*40/100;
-      idv = vehiclesResult['exShowroom']-depAmount;
-      setState(() {idv;});
+    if (yearDif > 3 && yearDif <= 4) {
+      double depAmount = vehiclesResult['exShowroom'] * 40 / 100;
+      idv = vehiclesResult['exShowroom'] - depAmount;
+      setState(() {
+        idv;
+      });
     }
-    if(yearDif>4 && yearDif<=5){
-      double depAmount =  vehiclesResult['exShowroom']*50/100;
-      idv = vehiclesResult['exShowroom']-depAmount;
-      setState(() {idv;});
+    if (yearDif > 4 && yearDif <= 5) {
+      double depAmount = vehiclesResult['exShowroom'] * 50 / 100;
+      idv = vehiclesResult['exShowroom'] - depAmount;
+      setState(() {
+        idv;
+      });
     }
 
-    if(yearDif>5){
+    if (yearDif > 5) {
       setState(() {
         idv = null;
       });
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Contact with Agent to Evaluate IDV of Vehicle Above 5 Years "),duration: Duration(seconds: 3),));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: const Text(
+            "Contact with Agent to Evaluate IDV of Vehicle Above 5 Years",
+          ),
+          duration: const Duration(seconds: 3),
+          behavior: SnackBarBehavior.floating,
+          margin: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width * 0.05,
+            vertical: 20,
+          ),
+        ),
+      );
     }
-
-
   }
 
   int monthDifference(DateTime start, DateTime end) {
     return (end.year - start.year) * 12 + (end.month - start.month);
   }
+
   int getYearDifference(int previousMonth, int previousYear) {
     DateTime now = DateTime.now();
     DateTime previousDate = DateTime(previousYear, previousMonth);
@@ -456,6 +564,4 @@ class _IdvMasterState extends State<IdvMaster> {
 
     return yearDiff;
   }
-
-
 }

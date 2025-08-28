@@ -13,16 +13,6 @@ import 'package:share_plus/share_plus.dart';
 import 'package:motor_insurance_app/models/quotation_data.dart';
 import 'package:motor_insurance_app/models/vehicle_data.dart';
 
-// Helper function to safely parse a string value to a double
-double _safeParseDouble(dynamic value) {
-  if (value is num) {
-    return value.toDouble();
-  } else if (value is String) {
-    return double.tryParse(value) ?? 0.0;
-  }
-  return 0.0;
-}
-
 class PdfSelectionScreen extends StatefulWidget {
   final QuotationData finalData;
 
@@ -43,7 +33,7 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
     "Acko General Insurance Limited",
     "Bajaj Allianz General Insurance Company Limited",
     "Cholamandalam MS General Insurance Company Ltd",
-    "Future Generali India Insurance Company Ltd",
+    "Generali Central Insurance Company Ltd",
     "Go Digit General Insurance Limited",
     "HDFC ERGO General Insurance Company Limited",
     "ICICI Lombard General Insurance Company Limited",
@@ -82,7 +72,7 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
       "email": "customercare@cholams.murugappa.com",
       "claims": "Visit www.cholainsurance.com for claims information.",
     },
-    "Future Generali India Insurance Company Ltd": {
+    "Generali Central Insurance Company Ltd": {
       "phone": "1800-220-233",
       "email": "fgcare@futuregenerali.in",
       "claims": "Visit www.general.futuregenerali.in for claims information.",
@@ -715,6 +705,54 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
     );
   }
 
+  Future<void> _showHomeConfirmationDialog(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // User must tap a button
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Row(
+            children: [
+              Icon(Icons.warning, color: Colors.orange[700]),
+              const SizedBox(width: 8),
+              const Text('Confirm Navigation'),
+            ],
+          ),
+          content: const Text(
+            'Are you sure you want to go to home?\n\nAll your current data and selections will be lost.',
+            style: TextStyle(fontSize: 16),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: Text(
+                'Cancel',
+                style: TextStyle(color: Colors.grey[600]),
+              ),
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+              },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.indigo[700],
+                foregroundColor: Colors.white,
+              ),
+              child: const Text('Go to Home'),
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+                // Navigate to home - clear all previous routes
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                  '/home', // '/home' is your home route
+                  (Route<dynamic> route) => false,
+                );
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -724,8 +762,15 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
         backgroundColor: Colors.indigo[700],
         iconTheme: const IconThemeData(color: Colors.white),
         elevation: 4,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.home, color: Colors.white),
+            onPressed: () => _showHomeConfirmationDialog(context),
+            tooltip: 'Go to Home',
+          ),
+        ],
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -815,9 +860,13 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
                     const SizedBox(height: 8),
                     const Divider(height: 1, thickness: 1),
                     const SizedBox(height: 8),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.4,
+                    ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxHeight: MediaQuery.of(context).size.height * 0.4,
+                        minHeight: 200,
+                      ),
                       child: ListView.builder(
+                        shrinkWrap: true,
                         itemCount: allCompanies.length,
                         itemBuilder: (context, index) {
                           final company = allCompanies[index];

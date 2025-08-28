@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,8 +13,41 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, '/login');
+    _checkUserStatus();
+  }
+
+  Future<void> _checkUserStatus() async {
+    final auth = FirebaseAuth.instance;
+    User? user = auth.currentUser;
+
+    if (user != null) {
+      try {
+        // 🔹 Reload to confirm if deleted in Firebase Auth
+        await user.reload();
+        user = auth.currentUser;
+      } catch (_) {
+        user = null;
+      }
+
+      if (user != null) {
+        // 🔹 Check Firestore doc
+        final doc = await FirebaseFirestore.instance
+            .collection('users')
+            .doc(user.uid)
+            .get();
+
+        if (!doc.exists) {
+          // User doc missing → logout
+          await auth.signOut();
+        }
+      }
+    }
+
+    // ✅ Always send to login after 2 seconds
+    Future.delayed(const Duration(seconds: 2), () {
+      if (mounted) {
+        Navigator.pushReplacementNamed(context, '/login');
+      }
     });
   }
 
@@ -21,9 +55,8 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     // Detect system brightness directly
     final brightness = MediaQuery.of(context).platformBrightness;
-    final backgroundColor = brightness == Brightness.dark
-        ? Colors.black
-        : Colors.white;
+    final backgroundColor =
+        brightness == Brightness.dark ? Colors.black : Colors.white;
 
     return Scaffold(
       backgroundColor: backgroundColor,

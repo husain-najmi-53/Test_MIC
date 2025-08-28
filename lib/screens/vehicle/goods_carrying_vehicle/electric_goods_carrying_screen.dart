@@ -46,7 +46,7 @@ class _ElectricGoodsCarryingScreenState
     '6 to 7 Years',
     'Above 7 Years'
   ];
-  final List<String> _zoneOptions = ['A', 'B', 'C'];
+  final List<String> _zoneOptions = ['A', 'B'];
   final List<String> _yesNoOptions = ['Yes', 'No'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
   final List<String> _geoExtnOptions = ['0', '400'];
@@ -477,33 +477,33 @@ class _ElectricGoodsCarryingScreenState
     if (zone == 'A') {
       if (gvw <= 1000) {
         if (age == 'Upto 5 Years') return 3.284;
-        if (age == '>5 to 7 Years') return 3.366;
+        if (age == '6 to 7 Years') return 3.366;
         return 3.448; // >7 Years
       } else if (gvw <= 1500) {
         if (age == 'Upto 5 Years') return 3.448;
-        if (age == '>5 to 7 Years') return 3.534;
+        if (age == '6 to 7 Years') return 3.534;
         return 3.620; // >7 Years
       } else {
         if (age == 'Upto 5 Years') return 3.612;
-        if (age == '>5 to 7 Years') return 3.703;
+        if (age == '6 to 7 Years') return 3.703;
         return 3.793; // >7 Years
       }
     } else if (zone == 'B') {
       if (gvw <= 1000) {
         if (age == 'Upto 5 Years') return 3.191;
-        if (age == '>5 to 7 Years') return 3.271;
+        if (age == '6 to 7 Years') return 3.271;
         return 3.351; // >7 Years
       } else if (gvw <= 1500) {
         if (age == 'Upto 5 Years') return 3.351;
-        if (age == '>5 to 7 Years') return 3.435;
+        if (age == '6 to 7 Years') return 3.435;
         return 3.519; // >7 Years
       } else {
         if (age == 'Upto 5 Years') return 3.510;
-        if (age == '>5 to 7 Years') return 3.598;
+        if (age == '6 to 7 Years') return 3.598;
         return 3.686; // >7 Years
       }
     }
-    return 0.0; // Safe fallback
+    return 0.00; // Safe fallback
   }
 
   double _getTpRate(int gvw) {

@@ -489,20 +489,19 @@ class _ThreeWheelerPCV_upto6PassengerState
 
 double _getOdRate(String zone, String age) {
   if (age == 'Upto 5 Years') {
-    if (zone == 'A') return 4.0;
-    if (zone == 'B') return 3.6; // 0.9x
-    if (zone == 'C') return 3.2; // 0.8x
+    if (zone == 'A') return 1.278;
+    if (zone == 'B') return 1.272; // 0.9x
+    if (zone == 'C') return 1.260; // 0.8x
   } else if (age == '5 to 7 Years') {
-    if (zone == 'A') return 5.0;
-    if (zone == 'B') return 4.5;
-    if (zone == 'C') return 4.0;
+    if (zone == 'A') return 1.310;
+    if (zone == 'B') return 1.304;
+    if (zone == 'C') return 1.292;
   } else if (age == 'Above 7 Years') {
-    if (zone == 'A') return 6.0;
-    if (zone == 'B') return 5.4;
-    if (zone == 'C') return 4.8;
+    if (zone == 'A') return 1.342;
+    if (zone == 'B') return 1.336;
+    if (zone == 'C') return 1.323;
   }
-
-  return 4.0; // fallback
+  return 1.278; // fallback
 }
 
 double _getTpRate({

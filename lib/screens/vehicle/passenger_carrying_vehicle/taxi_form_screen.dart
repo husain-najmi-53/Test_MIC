@@ -506,7 +506,6 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
   }
 }
 
-
 double _getOdRate(String zone, String age) {
   if (age == 'Upto5Years') {
     if (zone == 'A') return 3.284;
@@ -518,9 +517,8 @@ double _getOdRate(String zone, String age) {
     if (zone == 'A') return 3.448;
     if (zone == 'B') return 3.351;
   }
-  return 1.0;
+  return 3.284;
 }
-
 
 double _getTpRate(int cc) {
   if (cc <= 1000) return 6040.0;

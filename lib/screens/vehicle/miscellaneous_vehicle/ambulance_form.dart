@@ -348,7 +348,7 @@ double totalA = netOwnDamagePremium;
                 _buildDropdownField('LL to Employee (Other Than Paid Driver)', _llEmployeeOtherOptions, _selectedLlEmployeeOther,
                     (val) => setState(() => _selectedLlEmployeeOther = val)),
                 _buildTextField('ll2Passenger', 'LL to passenger (Number of passenger)', 'LL to passenger (Number of passenger)'),
-                 _buildDropdownField('Restrcited TPPD', _restrictedTppdOptions, _selectedRestrictedTppd,
+                 _buildDropdownField('Restricted TPPD', _restrictedTppdOptions, _selectedRestrictedTppd,
                     (val) => setState(() => _selectedRestrictedTppd = val)),
                 _buildTextField('otherCess', 'Other Cess (%)', 'Other Cess (%)'),
                 // const SizedBox(height: 80),

@@ -278,13 +278,17 @@ class _EPCForm1YOD3TPState extends State<EPCForm1YOD3TP> {
 
   void _resetForm() {
     _formKey.currentState?.reset();
-    for (var controller in _controllers.values) {
-      controller.clear();
+    for (var entry in _controllers.entries) {
+    if (entry.key != "od" && entry.key != "tp") {
+      entry.value.clear();
     }
+  }
     setState(() {
       _selectedAge = null;
       _selectedZone = null;
       _selectedNcb = null;
+      _selectedDepreciation = null;
+      _selectedCngLpgKit = null;
       // _selectedImt23 = null;
       _selectedLlPaidDriver = null;
       // _selectedRestrictedTppd = null;
