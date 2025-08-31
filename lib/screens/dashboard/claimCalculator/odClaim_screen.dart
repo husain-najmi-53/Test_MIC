@@ -277,7 +277,7 @@ class _OdclaimScreenState extends State<OdclaimScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 9),
               child: Text(
-                "Compensation Availble",
+                "Compensation Available",
                 style: GoogleFonts.poppins(fontSize: 14, color: Colors.black),
               ),
             ),

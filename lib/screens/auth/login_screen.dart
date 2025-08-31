@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:motor_insurance_app/screens/auth/forgot_password.dart';
@@ -142,6 +141,33 @@ class _LoginScreenState extends State<LoginScreen> {
     final valid = await AuthService.isUserValid();
     if (!valid) {
       await AuthService.forceLogout(context);
+      return;
+    }
+
+    // 🔑 Check email verification for MPIN login
+    if (!user.emailVerified) {
+      //await user.sendEmailVerification(); // resend verification
+      await FirebaseAuth.instance.signOut(); // prevent unverified login
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              "Please verify your email before using MPIN. Check your email for the verification link.(Check Spam folder if not found)",
+              style: TextStyle(fontSize: 16, color: Colors.white),
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+            ),
+            backgroundColor: Colors.orange.shade600,
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            margin: EdgeInsets.all(16),
+            duration: Duration(seconds: 5),
+          ),
+        );
+      }
+      Navigator.pushReplacementNamed(context, '/login');
       return;
     }
 

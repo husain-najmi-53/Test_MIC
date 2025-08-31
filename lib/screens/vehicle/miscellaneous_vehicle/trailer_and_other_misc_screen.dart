@@ -431,8 +431,8 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
                     (val) => setState(() => _selectedCNG = val)),
                 _buildTextField(
                     'CNG/LPG_kit(Externally_fitted)',
-                    'CNG/LPG kit(Externally fitted)',
-                    'CNG/LPG kit(Externally fitted)'),
+                    'CNG/LPG kit(Externally Fitted)',
+                    'CNG/LPG kit(Externally Fitted)'),
                 _buildDropdownField('IMT 23', _imt23Options, _selectedImt23,
                     (val) => setState(() => _selectedImt23 = val)),
                 _buildDropdownField('No Claim Bonus(%)', _ncbOptions,
@@ -450,7 +450,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
                     _selectedLlEmployeeOther,
                     (val) => setState(() => _selectedLlEmployeeOther = val)),
                 _buildDropdownField(
-                    'Restrcited TPPD',
+                    'Restricted TPPD',
                     _restrictedTppdOptions,
                     _selectedRestrictedTppd,
                     (val) => setState(() => _selectedRestrictedTppd = val)),
@@ -535,7 +535,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       String? selected, Function(String?) onChanged) {
     String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
-      'Restrcited TPPD', 'LL to Employee (Other Than Paid Driver)',
+      'Restricted TPPD', 'LL to Employee (Other Than Paid Driver)',
       'LL to Paid Driver', 'No Claim Bonus(%)',
       'IMT 23', 'CNG/LPG kits',
       'Overturning For Cranes', 'Depreciation (Attached Trailer)',

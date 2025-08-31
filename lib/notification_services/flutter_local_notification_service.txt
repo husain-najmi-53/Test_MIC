@@ -1,8 +1,5 @@
-import 'dart:convert';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart';
-import '../screens/auth/navigation_service.dart';
 
 class FlutterLocalNotificationService {
   final notificationPlugin = FlutterLocalNotificationsPlugin();
@@ -21,11 +18,7 @@ class FlutterLocalNotificationService {
     const initSettings = InitializationSettings(
         android: initsSettingsAndroid, iOS: initSettingIos);
 
-    await notificationPlugin.initialize(
-        initSettings,
-        onDidReceiveBackgroundNotificationResponse: onDidReceiveNotificationResponse,
-        onDidReceiveNotificationResponse: onDidReceiveNotificationResponse
-    );
+    await notificationPlugin.initialize(initSettings);
     _isInitialised = true;
   }
 
@@ -41,7 +34,7 @@ class FlutterLocalNotificationService {
 
   Future<void> showNotification(
       {int id = 1, String? title, String? body,String? payload}) async {
-    return notificationPlugin.show(id, title, body, notificationDetails(),payload: payload,);
+    return notificationPlugin.show(id, title, body, notificationDetails());
   }
 
   /// ✅ Respect sound/vibration when scheduling notification
@@ -81,31 +74,4 @@ class FlutterLocalNotificationService {
       }
     }
   }
-
 }
-
-
-@pragma('vm:entry-point')
-void onDidReceiveNotificationResponse(NotificationResponse response) {
-  if (response.payload != null && response.payload!.isNotEmpty) {
-    try {
-      final payload = jsonDecode(response.payload!);
-      if (payload != null) {
-        navigatorKey.currentState?.pushNamed(
-          payload['route'],
-          arguments: NotificationResponse(
-            payload: jsonEncode({
-              "data": payload['data'],
-            }),
-            notificationResponseType: response.notificationResponseType,
-          ),
-        );
-      }
-    } catch (e) {
-      debugPrint("Error parsing notification payload: $e");
-    }
-  }else{
-    navigatorKey.currentState?.pushNamed('/home');
-  }
-}
-

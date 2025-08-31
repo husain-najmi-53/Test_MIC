@@ -5,7 +5,7 @@ class WhatsAppUsScreen extends StatelessWidget {
   const WhatsAppUsScreen({super.key});
 
   // Replace with your support WhatsApp number including country code
-  final String whatsappNumber = "+911234567890";
+  final String whatsappNumber = "+919325247903";
 
   void _openWhatsApp(BuildContext context) async {
     final Uri whatsappUrl = Uri.parse(

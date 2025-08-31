@@ -120,7 +120,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
       double ncbAmt = (odBeforeNcb * ncb) / 100;
       double netOdPremium = odBeforeNcb - ncbAmt;
 
-      double basicTp = 2595.00;
+      double basicTp = 1685.00;
       double totalTp = basicTp +
           valueAddedService +
           paOwnerDriver +

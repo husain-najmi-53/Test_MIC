@@ -45,110 +45,137 @@ class _TipsNTricksScreenState extends State<TipsNTricksScreen> {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      backgroundColor: Colors.grey.shade100,
       body: SafeArea(
-        child: Stack(
-          children: [
-            Container(height: height * 0.5, color: Colors.deepOrange.shade50),
-            Container(height: height * 0.5, color: Colors.indigo.shade50),
-            Align(
-              alignment: Alignment.center,
-              child: Container(
-                height: height * 0.5,
-                width: width * 0.85,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(12)),
-                child: Column(
-                  children: [
-                    Container(
-                      height: height * 0.15,
-                      decoration: BoxDecoration(
-                          color: Colors.blue.shade100,
-                          borderRadius: BorderRadius.circular(12)),
-                      child: Center(
-                        child: Text(
-                          "Tips And Tricks",
-                          style: GoogleFonts.abyssinicaSil(
-                              fontSize: 30, fontWeight: FontWeight.bold),
-                        ),
+        child: Center(
+          child: Container(
+            height: height * 0.65,
+            width: width * 0.9,
+            margin: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.3),
+                  blurRadius: 15,
+                  offset: const Offset(0, 5),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                // Header Section
+                Container(
+                  height: height * 0.12,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.indigo.shade700,
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    ),
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Colors.indigo.shade700,
+                        Colors.indigo.shade500,
+                      ],
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Tips & Tricks",
+                      style: GoogleFonts.poppins(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
-                    const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 8),
-                        child: Divider(color: Colors.black)),
-                    Expanded(
-                      child: Stack(
-                        children: [
-                          Align(
-                            alignment: Alignment.topRight,
-                            child: IconButton(
-                              onPressed: () => Navigator.of(context).pop(),
-                              icon: const Icon(Icons.close,
-                                  color: Colors.deepOrange, size: 30),
-                            ),
-                          ),
-                          Align(
-                            alignment: Alignment.center,
+                  ),
+                ),
+                
+                // Content Section
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Stack(
+                      children: [
+                        // Tip Content
+                        Center(
+                          child: SingleChildScrollView(
                             child: Padding(
-                              padding:
-                              const EdgeInsets.symmetric(horizontal: 10),
+                              padding: const EdgeInsets.symmetric(horizontal: 10),
                               child: Text(
                                 messageText,
                                 textAlign: TextAlign.center,
-                                style: GoogleFonts.poppins(fontSize: 20),
+                                style: GoogleFonts.poppins(
+                                  fontSize: 18,
+                                  height: 1.5,
+                                  color: Colors.grey.shade800,
+                                ),
                               ),
                             ),
                           ),
-                          Align(
-                            alignment: Alignment.bottomRight,
-                            child: Padding(
-                              padding: const EdgeInsets.all(15),
+                        ),
+                        
+                        // Close Button (top right)
+                        Positioned(
+                          top: 0,
+                          right: 0,
+                          child: IconButton(
+                            onPressed: () => Navigator.of(context).pop(),
+                            icon: Container(
+                              padding: const EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                color: Colors.grey.shade200,
+                                shape: BoxShape.circle,
+                              ),
+                              child: const Icon(
+                                Icons.close,
+                                color: Colors.indigo,
+                                size: 24,
+                              ),
+                            ),
+                          ),
+                        ),
+                        
+                        // Close Text (bottom right)
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: GestureDetector(
+                            onTap: () => Navigator.of(context).pop(),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 6,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.indigo.shade100,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               child: Text(
                                 "Close",
                                 style: GoogleFonts.poppins(
-                                    fontSize: 18, color: Colors.red),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.indigo.shade800,
+                                ),
                               ),
                             ),
                           ),
-                        ],
-                      ),
-                    )
-                  ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-            )
-          ],
+              ],
+            ),
+          ),
         ),
       ),
     );
   }
 }
-
-/*class TipsNTricksScreen extends StatelessWidget {
-  final RemoteMessage? message;
-
-  const TipsNTricksScreen({Key? key, this.message}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final title = message?.notification?.title ?? "No Title";
-    final body = message?.notification?.body ?? "No Body";
-    final extraData = message?.data['data'] ?? "No Extra Data";
-
-    return Scaffold(
-      appBar: AppBar(title: const Text("Tips & Tricks")),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("🔔 Notification Title: $title"),
-            Text("📄 Body: $body"),
-            Text("📦 Extra Data: $extraData"),
-          ],
-        ),
-      ),
-    );
-  }
-}*/
-

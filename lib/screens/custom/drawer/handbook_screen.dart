@@ -6,24 +6,28 @@ class HandbookScreen extends StatelessWidget {
 
   final List<Map<String, String>> handbookTopics = const [
     {
+      "title": "User Manual",
+      "url": "https://drive.google.com/file/d/13a5VFTE83L1mPy48VIXaUZNGI0pL29ML/view?usp=sharing"
+    },
+    {
       "title": "Motor Insurance Basics",
-      "url": "https://example.com/motor_insurance_basics.pdf"
+      "url": "https://drive.google.com/file/d/1NNiVpM9IGt63n8WT3MiB60xaLDIhqoBL/view?usp=sharing"
     },
     {
       "title": "Claim Procedure",
-      "url": "https://example.com/claim_procedure.pdf"
+      "url": "https://drive.google.com/file/d/1LRB7ROLQ1YltGtEqQj4Vllt4MfIv4HSg/view?usp=sharing"
     },
     {
       "title": "Premium Calculation Guide",
-      "url": "https://example.com/premium_calculation.pdf"
+      "url": "https://drive.google.com/file/d/1HKxjmNzYLogFpJn-07mO2YFjUsYmKUAM/view?usp=sharing"
     },
     {
       "title": "Legal Liabilities Explained",
-      "url": "https://example.com/legal_liabilities.pdf"
+      "url": "https://drive.google.com/file/d/1I_NzfMLZwq2NPtMTJP9fN9z4sIpAiAcr/view?usp=sharing"
     },
     {
       "title": "Tips for Vehicle Safety",
-      "url": "https://example.com/vehicle_safety.pdf"
+      "url": "https://drive.google.com/file/d/1u6n4iJD33cCd1erpMcOFFpOSUkENw8yo/view?usp=sharing"
     },
   ];
 

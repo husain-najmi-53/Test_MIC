@@ -280,7 +280,8 @@ class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
       if (message.data.containsKey('route')) {
         navigatorKey.currentState?.pushNamed(
           message.data['route'],
-          arguments: message.data,
+          //arguments: message.data,
+          arguments: message,
         );
       } else {
         //print("onFirebaseNotificationClicked Imvoled and title: ${message.notification?.title ?? "No Title"} body ${message.notification?.body ?? "No Body"}");
@@ -303,7 +304,8 @@ class _MotorInsuranceAppState extends State<MotorInsuranceApp> {
       if (initialMessage.data.containsKey('route')) {
         navigatorKey.currentState?.pushNamed(
           initialMessage.data['route'],
-          arguments: initialMessage.data,
+          // arguments: initialMessage.data,
+          arguments: initialMessage,
         );
       }
       else {

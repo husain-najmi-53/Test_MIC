@@ -338,21 +338,21 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),
                 _buildTextField('yearOfManufacture', 'Year of Manufacture',
-                    'Year of manufacture'),
+                    'Year of Manufacture'),
                 _buildDropdownField('Zone', _zoneOptions, _selectedZone,
                     (val) => setState(() => _selectedZone = val)),
                 _buildTextField('discountOnOd', 'Discount on OD Premium (%)',
                     'Discount on OD Premium'),
                 _buildTextField(
                     'loading_on_discount_premium',
-                    'Loading on discount premium (%)',
-                    'Loading on discount premium'),
+                    'Loading on Discount Premium (%)',
+                    'Loading on Discount Premium'),
                 _buildDropdownField('CNG/LPG kits', _cngOptions, _selectedCNG,
                     (val) => setState(() => _selectedCNG = val)),
                 _buildTextField(
                     'CNG_LPG_kits_Ex_fitted',
-                    'CNG/LPG kits (externally fitted)',
-                    'CNG LPG kits (externally fitted)'),
+                    'CNG/LPG kits (Externally Fitted)',
+                    'CNG LPG kits (Externally Fitted)'),
                 _buildDropdownField('IMT 23', _imt23Options, _selectedImt23,
                     (val) => setState(() => _selectedImt23 = val)),
                 _buildDropdownField('No Claim Bonus(%)', _ncbOptions,
@@ -371,10 +371,10 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
                     (val) => setState(() => _selectedLlEmployeeOther = val)),
                 _buildTextField(
                     'll2Passenger',
-                    'LL to passenger (Number of passenger)',
-                    'LL to passenger (Number of passenger)'),
+                    'LL to Passenger (Number of Passenger)',
+                    'LL to Passenger (Number of Passenger)'),
                 _buildDropdownField(
-                    'Restrcited TPPD',
+                    'Restricted TPPD',
                     _restrictedTppdOptions,
                     _selectedRestrictedTppd,
                     (val) => setState(() => _selectedRestrictedTppd = val)),
@@ -453,7 +453,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
       String? selected, Function(String?) onChanged) {
     String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
-      'Restrcited TPPD',
+      'Restricted TPPD',
       'No Claim Bonus(%)',
       'IMT 23',
       'CNG/LPG kits',

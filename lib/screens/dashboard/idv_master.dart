@@ -23,7 +23,7 @@ class _IdvMasterState extends State<IdvMaster> {
   List<String> mTypes = ['--Select Make--'];
   List<String> yearList = ['--Select Year--'];
   List<String> mdTypes = ['--Select Model--'];
-  List<String> vrTypes = ['--Select Varient--'];
+  List<String> vrTypes = ['--Select Variant--'];
   List<String> monthList = [
     "January",
     "February",
@@ -69,6 +69,42 @@ class _IdvMasterState extends State<IdvMaster> {
     }
   }
 
+  void _resetForm() {
+    setState(() {
+      // Reset all selected values
+      selectedVehicleType = null;
+      selectedMakeType = null;
+      selectedModelType = null;
+      selectedVarientType = null;
+      selectedMonth = null;
+      selectedYear = null;
+
+      // Reset all dropdown lists to default state
+      mTypes = ['--Select Make--'];
+      yearList = ['--Select Year--'];
+      mdTypes = ['--Select Model--'];
+      vrTypes = ['--Select Variant--'];
+      currentYearMonth = [];
+
+      // Clear results
+      vehiclesResult = {};
+      idv = null;
+    });
+
+    // // Show confirmation message
+    // ScaffoldMessenger.of(context).showSnackBar(
+    //   SnackBar(
+    //     content: const Text("Form has been reset"),
+    //     behavior: SnackBarBehavior.floating,
+    //     duration: const Duration(seconds: 2),
+    //     margin: EdgeInsets.symmetric(
+    //       horizontal: MediaQuery.of(context).size.width * 0.1,
+    //       vertical: 20,
+    //     ),
+    //   ),
+    // );
+  }
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -96,6 +132,16 @@ class _IdvMasterState extends State<IdvMaster> {
           overflow: TextOverflow.ellipsis,
         ),
         centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: _resetForm,
+            icon: const Icon(
+              Icons.refresh,
+              color: Colors.white,
+            ),
+            tooltip: 'Reset Form',
+          ),
+        ],
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {
@@ -116,11 +162,23 @@ class _IdvMasterState extends State<IdvMaster> {
                     fieldList: vTypes,
                     onChanged: (val) => setState(() {
                       selectedVehicleType = val;
-                      mTypes = vehiclesData[selectedVehicleType].keys.toList();
+                      // Reset dependent fields and their lists
                       selectedMakeType = null;
                       selectedYear = null;
                       selectedModelType = null;
                       selectedVarientType = null;
+                      selectedMonth = null;
+                      
+                      // Reset dependent lists to their default state
+                      mTypes = val != null ? vehiclesData[val].keys.toList() : ['--Select Make--'];
+                      yearList = ['--Select Year--'];
+                      mdTypes = ['--Select Model--'];
+                      vrTypes = ['--Select Variant--'];
+                      currentYearMonth = [];
+                      
+                      // Clear results
+                      vehiclesResult = {};
+                      idv = null;
                     }),
                   ),
                   _idvFields(
@@ -130,14 +188,23 @@ class _IdvMasterState extends State<IdvMaster> {
                     fieldList: mTypes,
                     onChanged: (val) => setState(() {
                       selectedMakeType = val;
-                      // mdTypes = vehiclesData[selectedVehicleType][selectedMakeType].keys.toList();
-                      yearList = vehiclesData[selectedVehicleType]
-                              [selectedMakeType]
-                          .keys
-                          .toList();
+                      // Reset dependent fields and their lists
                       selectedYear = null;
                       selectedModelType = null;
                       selectedVarientType = null;
+                      selectedMonth = null;
+                      
+                      // Update year list and reset dependent lists
+                      yearList = val != null && selectedVehicleType != null 
+                          ? vehiclesData[selectedVehicleType][val].keys.toList()
+                          : ['--Select Year--'];
+                      mdTypes = ['--Select Model--'];
+                      vrTypes = ['--Select Variant--'];
+                      currentYearMonth = [];
+                      
+                      // Clear results
+                      vehiclesResult = {};
+                      idv = null;
                     }),
                   ),
                   _idvFields(
@@ -146,15 +213,27 @@ class _IdvMasterState extends State<IdvMaster> {
                     fieldValue: selectedYear,
                     fieldList: yearList,
                     onChanged: (val) => setState(() {
-                      currentYearMonth = [];
                       selectedYear = val;
-                      mdTypes = vehiclesData[selectedVehicleType]
-                              [selectedMakeType][selectedYear]
-                          .keys
-                          .toList();
+                      // Reset dependent fields and their lists
                       selectedModelType = null;
                       selectedVarientType = null;
-                      UpdateCurrentYearMonth(monthList);
+                      selectedMonth = null;
+                      
+                      // Update model list and reset dependent lists
+                      if (val != null && selectedVehicleType != null && selectedMakeType != null) {
+                        mdTypes = vehiclesData[selectedVehicleType][selectedMakeType][val].keys.toList();
+                        // Update available months based on selected year
+                        currentYearMonth = [];
+                        UpdateCurrentYearMonth(monthList);
+                      } else {
+                        mdTypes = ['--Select Model--'];
+                        currentYearMonth = [];
+                      }
+                      vrTypes = ['--Select Variant--'];
+                      
+                      // Clear results
+                      vehiclesResult = {};
+                      idv = null;
                     }),
                   ),
                   _idvFields(
@@ -167,6 +246,9 @@ class _IdvMasterState extends State<IdvMaster> {
                         : monthList,
                     onChanged: (val) => setState(() {
                       selectedMonth = val;
+                      // Clear results when month changes
+                      vehiclesResult = {};
+                      idv = null;
                     }),
                   ),
                   _idvFields(
@@ -176,12 +258,21 @@ class _IdvMasterState extends State<IdvMaster> {
                     fieldList: mdTypes,
                     onChanged: (val) => setState(() {
                       selectedModelType = val;
-                      vrTypes = vehiclesData[selectedVehicleType]
-                                  [selectedMakeType][selectedYear]
-                              [selectedModelType]
-                          .keys
-                          .toList();
+                      // Reset dependent fields and their lists
                       selectedVarientType = null;
+                      
+                      // Update variant list
+                      if (val != null && selectedVehicleType != null && 
+                          selectedMakeType != null && selectedYear != null) {
+                        vrTypes = vehiclesData[selectedVehicleType][selectedMakeType]
+                            [selectedYear][val].keys.toList();
+                      } else {
+                        vrTypes = ['--Select Variant--'];
+                      }
+                      
+                      // Clear results
+                      vehiclesResult = {};
+                      idv = null;
                     }),
                   ),
                   _idvFields(
@@ -191,6 +282,9 @@ class _IdvMasterState extends State<IdvMaster> {
                     fieldList: vrTypes,
                     onChanged: (val) => setState(() {
                       selectedVarientType = val;
+                      // Clear results when variant changes
+                      vehiclesResult = {};
+                      idv = null;
                     }),
                   ),
                   SizedBox(height: height * 0.02),
@@ -242,6 +336,12 @@ class _IdvMasterState extends State<IdvMaster> {
     String? fieldValue,
     required ValueChanged<String?> onChanged,
   }) {
+    // Ensure the fieldValue is in the fieldList, if not, set it to null
+    String? validatedValue = fieldValue;
+    if (fieldValue != null && !fieldList.contains(fieldValue)) {
+      validatedValue = null;
+    }
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Column(
@@ -267,7 +367,7 @@ class _IdvMasterState extends State<IdvMaster> {
               borderRadius: BorderRadius.circular(8),
             ),
             child: DropdownButton<String>(
-              value: fieldValue,
+              value: validatedValue,
               underline: const SizedBox(),
               isExpanded: true,
               dropdownColor: Colors.white,

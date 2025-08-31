@@ -46,7 +46,7 @@ class _GoodsCarryingVehicleScreenState
     '6 to 7 Years',
     'Above 7 Years'
   ];
-  final List<String> _zoneOptions = ['A', 'B'];
+  final List<String> _zoneOptions = ['A', 'B', 'C'];
   final List<String> _yesNoOptions = ['Yes', 'No'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
   final List<String> _geoExtnOptions = ['0', '400'];
@@ -131,12 +131,13 @@ class _GoodsCarryingVehicleScreenState
       double antiTheftAmt = _selectedAntiTheft == 'Yes' ? -200.0 : 0.0;
       double restrictedTppdAmt =
           _selectedRestrictedTppd == 'Yes' ? -100.0 : 0.0;
-      double llPaidDriverAmt = _selectedLlPaidDriver == 0 ? 0.0 : 50;
+      double llPaidDriverAmt =
+          double.tryParse(_selectedLlPaidDriver ?? '0') ?? 0.0;
       double llOtherEmpAmt =
           double.tryParse(_selectedLlOtherEmployee ?? '0') ?? 0.0;
       double cngTpAmt = _selectedCngLpgKit == 'Yes' ? 60.0 : 0.0;
 
-      double basicRate = _getOdRate(zone, age, gvw);
+      double basicRate = _getOdRate(zone, age);
 
       double basicForVehicle = (idv * basicRate) / 100;
       double basicOdBeforeDiscount = basicForVehicle +
@@ -453,41 +454,27 @@ class _GoodsCarryingVehicleScreenState
   }
 }
 
-double _getOdRate(String zone, String age, int gvw) {
+double _getOdRate(String zone, String age) {
   if (zone == 'A') {
-    if (gvw <= 1000) {
-      if (age == 'Upto 5 Years') return 3.284;
-      if (age == '6 to 7 Years') return 3.366;
-      return 3.448; // >7 Years
-    } else if (gvw <= 1500) {
-      if (age == 'Upto 5 Years') return 3.448;
-      if (age == '6 to 7 Years') return 3.534;
-      return 3.620; // >7 Years
-    } else {
-      if (age == 'Upto 5 Years') return 3.612;
-      if (age == '6 to 7 Years') return 3.703;
-      return 3.793; // >7 Years
-    }
+    if (age == 'Upto 5 Years') return 1.751;
+    if (age == '6 to 7 Years') return 1.795;
+    return 1.839; // >7 Years
   } else if (zone == 'B') {
-    if (gvw <= 1000) {
-      if (age == 'Upto 5 Years') return 3.191;
-      if (age == '6 to 7 Years') return 3.271;
-      return 3.351; // >7 Years
-    } else if (gvw <= 1500) {
-      if (age == 'Upto 5 Years') return 3.351;
-      if (age == '6 to 7 Years') return 3.435;
-      return 3.519; // >7 Years
-    } else {
-      if (age == 'Upto 5 Years') return 3.510;
-      if (age == '6 to 7 Years') return 3.598;
-      return 3.686; // >7 Years
-    }
+    if (age == 'Upto 5 Years') return 1.743;
+    if (age == '6 to 7 Years') return 1.787;
+    return 1.830; // >7 Years
+  } else if (zone == 'C') {
+    if (age == 'Upto 5 Years') return 1.726;
+    if (age == '6 to 7 Years') return 1.770;
+    return 1.812; // >7 Years
   }
-  return 0.00; // Safe fallback
+  return 0.0; // Safe fallback
 }
 
 double _getTpRate(int gvw) {
-  if (gvw <= 1000) return 6040;
-  if (gvw <= 1500) return 7940;
-  return 10523;
+  if (gvw <= 7500) return 16049;
+  if (gvw <= 12000) return 27186;
+  if (gvw <= 20000) return 35313;
+  if (gvw <= 40000) return 43950;
+  return 44242;
 }

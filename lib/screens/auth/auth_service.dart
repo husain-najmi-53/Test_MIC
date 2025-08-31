@@ -61,7 +61,12 @@ class AuthService {
           'createdAt': Timestamp.now(),
         });
         // Send verification email
-        await result.user?.sendEmailVerification();
+        try {
+          await result.user?.sendEmailVerification();
+        } catch (e) {
+          // Handle too-many-requests or other email verification errors
+          print("Email verification error: $e");
+        }
         return null; // ✅ Success
       }
 
@@ -105,9 +110,14 @@ class AuthService {
 
       // 🔑 Check email verification
       if (!credential.user!.emailVerified) {
-        await credential.user!.sendEmailVerification(); // resend verification
+        try {
+          await credential.user!.sendEmailVerification(); // resend verification
+        } catch (e) {
+          // Handle too-many-requests or other email verification errors
+          print("Email verification error: $e");
+        }
         await _auth.signOut(); // prevent unverified login
-        return "Please verify your email before logging in. We've sent a new verification link.";
+        return "Please verify your email before logging in. Check your email for the verification link.(Check Spam folder if not found)";
       }
 
       return null; // ✅ Success
@@ -148,7 +158,9 @@ class AuthService {
     await _auth.signOut();
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Your account has been deleted. Please Contact Support.")),
+        SnackBar(
+            content:
+                Text("Your account Doesn't exist. Please Contact Support.")),
       );
       Navigator.pushReplacementNamed(context, '/login');
     }

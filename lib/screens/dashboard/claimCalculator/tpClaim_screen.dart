@@ -563,7 +563,7 @@ class _TpclaimScreenState extends State<TpclaimScreen>
             Padding(
                 padding: const EdgeInsets.symmetric(vertical: 3),
                 child: Text(
-                  "Structure Formula Compensation Avaiable",
+                  "Structure Formula Compensation Available",
                   style: GoogleFonts.poppins(fontSize: 14, color: Colors.black),
                 )),
             Container(

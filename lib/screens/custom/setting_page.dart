@@ -120,7 +120,7 @@ class _SettingsPageState extends State<SettingsPage>
       path: email,
       query: 'subject=Support Request&body=Hello, I need help with...',
     );
-    
+
     try {
       if (await canLaunchUrl(emailUri)) {
         await launchUrl(emailUri);
@@ -130,7 +130,8 @@ class _SettingsPageState extends State<SettingsPage>
         if (await canLaunchUrl(fallbackUri)) {
           await launchUrl(fallbackUri);
         } else {
-          _showErrorDialog('Email app not found', 'Please install an email app to send emails.');
+          _showErrorDialog('Email app not found',
+              'Please install an email app to send emails.');
         }
       }
     } catch (e) {
@@ -140,12 +141,13 @@ class _SettingsPageState extends State<SettingsPage>
 
   Future<void> _launchPhone(String phoneNumber) async {
     final Uri phoneUri = Uri(scheme: 'tel', path: phoneNumber);
-    
+
     try {
       if (await canLaunchUrl(phoneUri)) {
         await launchUrl(phoneUri);
       } else {
-        _showErrorDialog('Phone app not found', 'Could not open phone app. Please dial $phoneNumber manually.');
+        _showErrorDialog('Phone app not found',
+            'Could not open phone app. Please dial $phoneNumber manually.');
       }
     } catch (e) {
       _showErrorDialog('Error', 'Could not open phone app. Please try again.');
@@ -203,34 +205,75 @@ class _SettingsPageState extends State<SettingsPage>
                 "FAQ / Help Center",
                 [
                   {
-                    "q": "How do I reset my password?",
+                    "q": "What is AutoInsure?",
                     "a":
-                        "Go to Settings > Account > Reset Password. Enter your email and follow the link sent."
+                        "AutoInsure is a simple and smart motor insurance app that helps you compare, calculate, and buy motor insurance policies easily."
+                  },
+                  {
+                    "q": "How does AutoInsure help me?",
+                    "a":
+                        "It saves your time by generating instant quotations from multiple insurance companies so you can choose the best plan."
+                  },
+                  {
+                    "q": "How do I get an insurance quotation?",
+                    "a":
+                        "Just enter your vehicle details and preferences. AutoInsure generates quotes instantly."
+                  },
+                  {
+                    "q": "Can I compare quotations from multiple companies?",
+                    "a":
+                        "Yes. You can compare policies company-wise or view advanced comparisons to check coverage, premium, and benefits."
+                  },
+                  {
+                    "q": "Is the premium calculator accurate?",
+                    "a":
+                        "Yes, the calculator uses the official premium and coverage details provided by insurance companies."
+                  },
+                  {
+                    "q": "Do I need an account to use AutoInsure?",
+                    "a":
+                        "Yes, creating an account helps us personalize your experience, save your quotes, and notify you about renewals."
+                  },
+                  {
+                    "q": "Is my data safe?",
+                    "a":
+                        "Absolutely. AutoInsure follows secure authentication and data protection measures to keep your personal and vehicle details safe."
+                  },
+                  {
+                    "q": "Is AutoInsure free to use?",
+                    "a":
+                        "No, it requires a subscription for full access."
+                  },
+                  {
+                    "q": "What are the benefits of subscription?",
+                    "a":
+                        "Subscribers get access to advanced comparison tools, premium insights, personalized notifications, and exclusive offers."
+                  },
+                  {
+                    "q": "How do I pay for the subscription?",
+                    "a":
+                        "You can pay through secure online methods like UPI, cards, or net banking."
+                  },
+                  {
+                    "q": "Will I get reminders for policy renewal?",
+                    "a":
+                        "Yes, AutoInsure sends timely notifications so you never miss your policy renewal."
+                  },
+                  {
+                    "q": "Can I control notifications?",
+                    "a":
+                        "Yes, you can customize notification preferences in the app settings."
                   },
                   {
                     "q": "How do I contact support?",
                     "a":
-                        "Use the Contact Support option in this menu or email support@autoinsure.com."
+                        "You can reach us through the in-app support section or via email."
                   },
                   {
-                    "q": "How do I update the app?",
-                    "a": "Visit your app store and check for updates."
-                  },
-                  {
-                    "q": "How to enable notifications?",
+                    "q": "Can AutoInsure help me buy the policy directly?",
                     "a":
-                        "Go to Settings > Notifications and toggle the options you prefer."
-                  },
-                  {
-                    "q": "How to delete my account?",
-                    "a":
-                        "Contact support from this app to request account deletion."
-                  },
-                  {
-                    "q": "Is my data secure?",
-                    "a":
-                        "Yes, we use industry-standard encryption to protect all user data."
-                  },
+                        "Yes, once you choose a quotation, you can proceed to purchase with generated quotes and agent support ."
+                  }
                 ],
                 pageType: "faq");
           }),
@@ -249,7 +292,7 @@ class _SettingsPageState extends State<SettingsPage>
           _buildSectionTitle("About"),
           _buildListTile("App Version", Icons.info_outline, () {
             _openDummyPage(context, "App Version",
-                "You are using MyApp version 1.0.0\n\nLatest Update: August 2025\n- Bug fixes and performance improvements\n- Added new notification options\n- Improved UI design",
+                "You are using AutoInsure version 1.0.0\n\nLatest Update: September 2025\n- Bug fixes and performance improvements\n- Added new notification options\n- Improved UI design",
                 pageType: "appversion");
           }),
           const SizedBox(height: 20),
@@ -310,9 +353,9 @@ class _SettingsPageState extends State<SettingsPage>
                 "App Version Info",
                 {
                   "version": "1.0.0 (Build 12)",
-                  "release": "August 15, 2025",
-                  "platforms": "Android & iOS",
-                  "requirements": "Android 7 / iOS 13"
+                  "release": "2nd September 2025",
+                  "platforms": "Android",
+                  "requirements": "Android 7"
                 },
                 pageType: "appversion");
           }),
@@ -336,7 +379,7 @@ class _SettingsPageState extends State<SettingsPage>
                     "header": "Legal Notice",
                     "points": [
                       "All libraries follow their respective OSS licenses.",
-                      "© 2025 MyApp Inc. All rights reserved."
+                      "© 2025 AutoInsure Inc. All rights reserved."
                     ]
                   }
                 ],
@@ -455,9 +498,9 @@ class ContactSupportPage extends StatelessWidget {
             _buildSupportCard(
               icon: Icons.email,
               title: 'Email Support',
-              subtitle: 'support@autoinsure.com',
+              subtitle: 'support@autoinsure.co.in',
               description: 'Send us an email for detailed support',
-              onTap: () => onEmailTap('support@autoinsure.com'),
+              onTap: () => onEmailTap('support@autoinsure.co.in'),
               color: Colors.blue,
             ),
             const SizedBox(height: 20),
@@ -465,9 +508,9 @@ class ContactSupportPage extends StatelessWidget {
             _buildSupportCard(
               icon: Icons.phone,
               title: 'Phone Support',
-              subtitle: '+91 98765 43210',
+              subtitle: '+91 93252 47903',
               description: 'Call us directly for immediate assistance',
-              onTap: () => onPhoneTap('+91 98765 43210'),
+              onTap: () => onPhoneTap('+91 93252 47903'),
               color: Colors.green,
             ),
             const SizedBox(height: 30),

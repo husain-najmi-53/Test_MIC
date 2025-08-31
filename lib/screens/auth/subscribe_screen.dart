@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:motor_insurance_app/screens/auth/const.dart';
 import 'package:motor_insurance_app/notification_services/flutter_local_notification_service.dart';
 import 'package:motor_insurance_app/screens/auth/auth_service.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
@@ -192,7 +193,7 @@ class _SubscribeScreenState extends State<SubscribeScreen> {
     }
 
     var options = {
-      'key': 'rzp_test_R7wSPViMlDXu00', // Replace with your Razorpay Key
+      'key': RazorpayKeys.currentKey, 
       'amount': _selectedAmount! * 100,
       'name': 'Motor Insurance App',
       'description': '$_selectedPlan Subscription',

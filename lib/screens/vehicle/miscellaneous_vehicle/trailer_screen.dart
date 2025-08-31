@@ -333,24 +333,24 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
                 _buildDropdownField('Zone', _zoneOptions, _selectedZone,
                     (val) => setState(() => _selectedZone = val)),
                 _buildDropdownField(
-                    'Trailer towed by',
+                    'Trailer Towed by',
                     _trailerTowedByOptions,
                     _selectedTrailerTowedBy,
                     (val) => setState(() => _selectedTrailerTowedBy = val)),
-                _buildTextField('noOfTrailers', 'No. of trailers (Attached)',
-                    'Enter number of trailers'),
+                _buildTextField('noOfTrailers', 'No. of Trailers (Attached)',
+                    'Enter number of Trailers'),
                 _buildTextField('discountOnOd', 'Discount on OD Premium (%)',
                     'Enter Discount on OD Premium'),
                 _buildTextField(
                     'loadingOnDiscountPremium',
-                    'Loading on discount premium (%)',
-                    'Enter Loading on discount premium'),
+                    'Loading on Discount Premium (%)',
+                    'Enter Loading on Discount Premium'),
                 _buildDropdownField('CNG/LPG Kit', _cngOptions, _selectedCNG,
                     (val) => setState(() => _selectedCNG = val)),
                 _buildTextField(
                     'CngLpgKitsExFitted',
-                    'CNG/LPG kits (externally fitted)',
-                    'CNG LPG kits (externally fitted)'),
+                    'CNG/LPG kits (Externally Fitted)',
+                    'CNG LPG kits (Externally Fitted)'),
                 _buildDropdownField('IMT 23', _imt23Options, _selectedImt23,
                     (val) => setState(() => _selectedImt23 = val)),
                 _buildDropdownField('No Claim Bonus(%)', _ncbOptions,
@@ -368,7 +368,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
                     _selectedLlEmployeeOther,
                     (val) => setState(() => _selectedLlEmployeeOther = val)),
                 _buildDropdownField(
-                    'Restrcited TPPD',
+                    'Restricted TPPD',
                     _restrictedTppdOptions,
                     _selectedRestrictedTppd,
                     (val) => setState(() => _selectedRestrictedTppd = val)),
@@ -450,7 +450,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
       'No Claim Bonus(%)',
       'LL to Paid Driver',
       'LL to Employee (Other Than Paid Driver)',
-      'Restrcited TPPD', // matches label or keyName
+      'Restricted TPPD', // matches label or keyName
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
