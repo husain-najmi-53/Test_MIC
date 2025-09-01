@@ -30279,1058 +30279,1058 @@ class VehicleData {
       },
       "Suzuki": {
         "2015": {
-            "Gixxer": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 77000
-                },
-                "Rear Disc": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 80726
-                }
+          "Gixxer": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77000
             },
-            "Gixxer SF": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 90000
-                },
-                "Fi": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 93499
-                },
-                "SP": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 92341
-                },
-                "MotoGP Edition": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 87597
-                }
-            },
-            "Access 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 53000
-                }
+            "Rear Disc": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 80726
             }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 90000
+            },
+            "Fi": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 93499
+            },
+            "SP": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 92341
+            },
+            "MotoGP Edition": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87597
+            }
+          },
+          "Access 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53000
+            }
+          }
         },
         "2016": {
-            "Gixxer": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 79000
-                }
-            },
-            "Gixxer SF": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 91000
-                },
-                "Fi": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 93499
-                },
-                "ABS": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 97524
-                }
-            },
-            "Access 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 58000
-                }
+          "Gixxer": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 79000
             }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000
+            },
+            "Fi": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 93499
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 97524
+            }
+          },
+          "Access 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58000
+            }
+          }
         },
         "2017": {
-            "Gixxer": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 81000
-                },
-                "SP": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 82607
-                },
-                "ABS": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 88941
-                }
+          "Gixxer": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81000
             },
-            "Gixxer SF": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 94000
-                },
-                "ABS": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 99207
-                }
+            "SP": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 82607
             },
-            "Access 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 59000
-                }
-            },
-            "Intruder 150": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 98000
-                }
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88941
             }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 94000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 99207
+            }
+          },
+          "Access 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59000
+            }
+          },
+          "Intruder 150": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 98000
+            }
+          }
         },
         "2018": {
-            "Gixxer": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 86000
-                },
-                "SP": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 87250
-                },
-                "Dual Disc": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 81550
-                }
+          "Gixxer": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86000
             },
-            "Gixxer SF": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 97000
-                },
-                "Fi": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 100000
-                },
-                "SP": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 100000
-                }
+            "SP": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87250
             },
-            "Access 125": {
-                "Drum": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 62000
-                },
-                "Disc": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 65000
-                }
-            },
-            "Intruder 150": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 101000
-                },
-                "Fi": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 111091
-                }
-            },
-            "Burgman Street 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 68000
-                }
+            "Dual Disc": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81550
             }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 97000
+            },
+            "Fi": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 100000
+            },
+            "SP": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 100000
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62000
+            },
+            "Disc": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 65000
+            }
+          },
+          "Intruder 150": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 101000
+            },
+            "Fi": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 111091
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68000
+            }
+          }
         },
         "2019": {
-            "Gixxer": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 102000
-                },
-                "Ride Connect Edition": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 138776
-                }
+          "Gixxer": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 102000
             },
-            "Gixxer SF": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 112000
-                },
-                "MotoGP BS6": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 133300
-                }
+            "Ride Connect Edition": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 138776
+            }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112000
+            },
+            "MotoGP BS6": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 133300
+            }
+          },
+          "Gixxer 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 160000
+            },
+            "Special Edition": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 198501
+            }
+          },
+          "Gixxer SF 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 170000
+            },
+            "MotoGP Edition": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 179959
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67000
+            },
+            "Disc": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70000
+            }
+          },
+          "Intruder 150": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 108000
+            },
+            "FI": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 100000
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70000
+            },
+            "Ride Connect Edition": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 98301
+            }
+          }
+        },
+        "2020": {
+          "Gixxer": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112000
+            },
+            "SF": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 122000
             },
             "Gixxer 250": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 160000
-                },
-                "Special Edition": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 198501
-                }
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 165000
             },
             "Gixxer SF 250": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 170000
-                },
-                "MotoGP Edition": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 179959
-                }
-            },
-            "Access 125": {
-                "Drum": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 67000
-                },
-                "Disc": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 70000
-                }
-            },
-            "Intruder 150": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 108000
-                },
-                "FI": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 100000
-                }
-            },
-            "Burgman Street 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 70000
-                },
-                "Ride Connect Edition": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 98301
-                }
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 176000
             }
-        },
-         "2020": {
-            "Gixxer": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 112000
-                },
-                "SF": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 122000
-                },
-                "Gixxer 250": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 165000
-                },
-                "Gixxer SF 250": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 176000
-                }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70000
             },
-            "Access 125": {
-                "Drum": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 70000
-                },
-                "Disc": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 72000
-                }
-            },
-            "Intruder 150": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 120000
-                },
-                "FI": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 122141
-                }
-            },
-            "Burgman Street 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 78000
-                }
+            "Disc": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72000
             }
+          },
+          "Intruder 150": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 120000
+            },
+            "FI": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 122141
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000
+            }
+          }
         },
         "2021": {
-            "Gixxer": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 118000
-                },
-                "SF": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 129000
-                },
-                "Gixxer 250": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 173000
-                },
-                "Gixxer SF 250": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 183000
-                }
+          "Gixxer": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118000
             },
-            "Access 125": {
-                "Drum": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 74000
-                },
-                "Disc": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 76000
-                },
-                "Special Edition": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 83000
-                }
+            "SF": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 129000
             },
-            "Intruder 150": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 128000
-                }
+            "Gixxer 250": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 173000
             },
-            "Burgman Street 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 84000
-                }
-            },
-            "Hayabusa": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 1340,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 1640000
-                }
+            "Gixxer SF 250": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 183000
             }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74000
+            },
+            "Disc": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76000
+            },
+            "Special Edition": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 83000
+            }
+          },
+          "Intruder 150": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 128000
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 84000
+            }
+          },
+          "Hayabusa": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1340,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1640000
+            }
+          }
         },
         "2022": {
-            "Gixxer": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 134000
-                }
-            },
-            "Gixxer SF": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 139000
-                },
-                "MotoGP": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 140600
-                }
-            },
-            "Gixxer 250": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 185000
-                }
-            },
-            "Gixxer SF 250": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 195000
-                },
-                "MotoGP": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 204900
-                }
-            },
-            "Access 125": {
-                "Drum": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 81000
-                },
-                "Disc": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 84000
-                },
-                "Ride Connect": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 88000
-                }
-            },
-            "Intruder 150": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 128000
-                }
-            },
-            "Burgman Street 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 89000
-                },
-                "Ride Connect Edition": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 92000
-                }
-            },
-            "Hayabusa": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 1340,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 1645000
-                }
-            },
-            "V-Strom SX": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 212000
-                }
-            },
-            "Avenis 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 86000
-                },
-                "Ride Connect Edition": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 87000
-                }
+          "Gixxer": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 134000
             }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 139000
+            },
+            "MotoGP": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 140600
+            }
+          },
+          "Gixxer 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 185000
+            }
+          },
+          "Gixxer SF 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 195000
+            },
+            "MotoGP": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 204900
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81000
+            },
+            "Disc": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 84000
+            },
+            "Ride Connect": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000
+            }
+          },
+          "Intruder 150": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 128000
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 89000
+            },
+            "Ride Connect Edition": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 92000
+            }
+          },
+          "Hayabusa": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1340,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1645000
+            }
+          },
+          "V-Strom SX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 212000
+            }
+          },
+          "Avenis 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86000
+            },
+            "Ride Connect Edition": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87000
+            }
+          }
         },
         "2023": {
-            "Gixxer": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 140000
-                }
-            },
-            "Gixxer SF": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 145000
-                },
-                "MotoGP": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 150000
-                }
-            },
-            "Gixxer 250": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 195000
-                }
-            },
-            "Gixxer SF 250": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 202000
-                },
-                "MotoGP": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 205000
-                }
-            },
-            "Access 125": {
-                "Drum": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 86000
-                },
-                "Disc": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 88000
-                },
-                "Ride Connect": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 91000
-                }
-            },
-            "Burgman Street 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 93000
-                }
-            },
-            "Hayabusa": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 1340,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 1690000
-                }
-            },
-            "V-Strom SX": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 216000
-                }
-            },
-            "Avenis 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 92000
-                },
-                "Ride Connect": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 92000
-                }
+          "Gixxer": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 140000
             }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 145000
+            },
+            "MotoGP": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 150000
+            }
+          },
+          "Gixxer 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 195000
+            }
+          },
+          "Gixxer SF 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 202000
+            },
+            "MotoGP": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 205000
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86000
+            },
+            "Disc": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000
+            },
+            "Ride Connect": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 93000
+            }
+          },
+          "Hayabusa": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1340,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1690000
+            }
+          },
+          "V-Strom SX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 216000
+            }
+          },
+          "Avenis 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 92000
+            },
+            "Ride Connect": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 92000
+            }
+          }
         },
         "2024": {
-            "Gixxer": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 145000
-                }
-            },
-            "Gixxer SF": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 148000
-                },
-                "MotoGP": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 155000
-                }
-            },
-            "Gixxer 250": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 198000
-                }
-            },
-            "Gixxer SF 250": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 207000
-                },
-                "MotoGP": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 210000
-                }
-            },
-            "Access 125": {
-                "Drum": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 88000
-                },
-                "Disc": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 91000
-                },
-                "Ride Connect": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 94000
-                }
-            },
-            "Burgman Street 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 96000
-                }
-            },
-            "Hayabusa": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 1340,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 1690000
-                }
-            },
-            "V-Strom SX": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 216000
-                }
-            },
-            "Avenis 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 93000
-                },
-                "Ride Connect": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 94000
-                }
-            },
-            "Katana": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 999,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 1361000
-                }
-            },
-            "GSX-8R": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 776,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 925000
-                }
-            },
-            "V-Strom 800 DE": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 776,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 1030000
-                }
+          "Gixxer": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 145000
             }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 148000
+            },
+            "MotoGP": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 155000
+            }
+          },
+          "Gixxer 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 198000
+            }
+          },
+          "Gixxer SF 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 207000
+            },
+            "MotoGP": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 210000
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000
+            },
+            "Disc": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000
+            },
+            "Ride Connect": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 94000
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 96000
+            }
+          },
+          "Hayabusa": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1340,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1690000
+            }
+          },
+          "V-Strom SX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 216000
+            }
+          },
+          "Avenis 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 93000
+            },
+            "Ride Connect": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 94000
+            }
+          },
+          "Katana": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 999,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1361000
+            }
+          },
+          "GSX-8R": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 776,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 925000
+            }
+          },
+          "V-Strom 800 DE": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 776,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1030000
+            }
+          }
         },
         "2025": {
-            "Gixxer": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 138000
-                }
-            },
-            "Gixxer SF": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 147000
-                },
-                "MotoGP": {
-                    "bodyType": "BIKE",
-                    "cc": 155,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 155000
-                }
-            },
-            "Gixxer 250": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 198000
-                }
-            },
-            "Gixxer SF 250": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 207000
-                },
-                "Flex-Fuel": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Flex-Fuel",
-                    "seating": 2,
-                    "exShowroom": 217000
-                }
-            },
-            "Access 125": {
-                "Drum": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 84000
-                },
-                "Disc": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 91000
-                },
-                "Ride Connect": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 102000
-                }
-            },
-            "Burgman Street 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 97000
-                }
-            },
-            "Hayabusa": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 1340,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 1690000
-                }
-            },
-            "V-Strom SX": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 249,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 216000
-                }
-            },
-            "Avenis 125": {
-                "Standard": {
-                    "bodyType": "SCOOTER",
-                    "cc": 124,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 91000
-                }
-            },
-            "Katana": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 999,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 1361000
-                }
-            },
-            "GSX-8R": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 776,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 925000
-                }
-            },
-            "V-Strom 800 DE": {
-                "Standard": {
-                    "bodyType": "BIKE",
-                    "cc": 776,
-                    "fuelType": "Petrol",
-                    "seating": 2,
-                    "exShowroom": 1030000
-                }
+          "Gixxer": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 138000
             }
+          },
+          "Gixxer SF": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 147000
+            },
+            "MotoGP": {
+              "bodyType": "BIKE",
+              "cc": 155,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 155000
+            }
+          },
+          "Gixxer 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 198000
+            }
+          },
+          "Gixxer SF 250": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 207000
+            },
+            "Flex-Fuel": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Flex-Fuel",
+              "seating": 2,
+              "exShowroom": 217000
+            }
+          },
+          "Access 125": {
+            "Drum": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 84000
+            },
+            "Disc": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000
+            },
+            "Ride Connect": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 102000
+            }
+          },
+          "Burgman Street 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 97000
+            }
+          },
+          "Hayabusa": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 1340,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1690000
+            }
+          },
+          "V-Strom SX": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 216000
+            }
+          },
+          "Avenis 125": {
+            "Standard": {
+              "bodyType": "SCOOTER",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000
+            }
+          },
+          "Katana": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 999,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1361000
+            }
+          },
+          "GSX-8R": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 776,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 925000
+            }
+          },
+          "V-Strom 800 DE": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 776,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1030000
+            }
+          }
         }
-    },
+      },
       "Sokudo": {
         "2023": {
           "Rapid": {
@@ -38985,6 +38985,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 300000.0
+            },
+            "TOUR H1": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 320000.0
+            },
+            "TOUR H1 O": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 330000.0
             }
           },
           "Swift": {
@@ -39044,6 +39058,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 310000.0
+            },
+            "TOUR H1": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 320000.0
+            },
+            "TOUR H1 O": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 330000.0
             }
           },
           "Swift": {
@@ -39103,6 +39131,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 320000.0
+            },
+            "TOUR H1": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 320000.0
+            },
+            "TOUR H1 O": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 330000.0
             }
           },
           "Swift": {
@@ -39173,6 +39215,20 @@ class VehicleData {
               "exShowroom": 280000.0
             },
             "VXi": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 330000.0
+            },
+            "TOUR H1": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 320000.0
+            },
+            "TOUR H1 O": {
               "bodyType": "CAR",
               "cc": 796,
               "fuelType": "Petrol",
@@ -39269,6 +39325,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 335000.0
+            },
+            "TOUR H1": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 320000.0
+            },
+            "TOUR H1 O": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 330000.0
             }
           },
           "Swift": {
@@ -39376,6 +39446,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 340000.0
+            },
+            "TOUR H1": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 320000.0
+            },
+            "TOUR H1 O": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 330000.0
             }
           },
           "Swift": {
@@ -39492,6 +39576,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 345000.0
+            },
+            "TOUR H1": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 320000.0
+            },
+            "TOUR H1 O": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 330000.0
             }
           },
           "Swift": {
@@ -39617,6 +39715,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 350000.0
+            },
+            "TOUR H1": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 320000.0
+            },
+            "TOUR H1 O": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 330000.0
             }
           },
           "Swift": {
@@ -39751,6 +39863,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 355000.0
+            },
+            "TOUR H1": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 320000.0
+            },
+            "TOUR H1 O": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 330000.0
             }
           },
           "Swift": {
@@ -39894,6 +40020,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 360000.0
+            },
+            "TOUR H1": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 320000.0
+            },
+            "TOUR H1 O": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 330000.0
             }
           },
           "Swift": {
@@ -40046,6 +40186,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 365000.0
+            },
+            "TOUR H1": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 320000.0
+            },
+            "TOUR H1 O": {
+              "bodyType": "CAR",
+              "cc": 796,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 330000.0
             }
           },
           "Swift": {
@@ -43670,6 +43824,41 @@ class VehicleData {
       "Honda": {
         "2015": {
           "Brio": {
+            "EX MT": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 420000
+            },
+            "EXCLUSIVE EDITION": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 470000
+            },
+            "V MT": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 500000
+            },
+            "VX O AT": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 600000
+            },
+            "VX O MT": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 580000
+            },
             "E MT": {
               "bodyType": "HATCHBACK",
               "cc": 1198,
@@ -43692,30 +43881,44 @@ class VehicleData {
               "exShowroom": 620000
             }
           },
-          "Jazz (2015 New Gen)": {
-            "E": {
-              "bodyType": "HATCHBACK",
-              "cc": 1199,
+          "Amaze": {
+            "1.2 EX I-VTEC": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 550000
+              "exShowroom": 620000
             },
-            "S": {
-              "bodyType": "HATCHBACK",
-              "cc": 1199,
+            "1.2 S PLUS I-VTEC": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 600000
+              "exShowroom": 670000
             },
-            "V Diesel": {
-              "bodyType": "HATCHBACK",
+            "1.2 VX O I-VTEC": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 720000
+            },
+            "1.5 EX I-DTEC": {
+              "bodyType": "SEDAN",
               "cc": 1498,
               "fuelType": "Diesel",
               "seating": 5,
-              "exShowroom": 750000
-            }
-          },
-          "Amaze": {
+              "exShowroom": 780000
+            },
+            "1.5 VX O I-DTEC": {
+              "bodyType": "SEDAN",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 880000
+            },
+
+            /* ✅ Newly added variants */
             "E MT Petrol": {
               "bodyType": "SEDAN",
               "cc": 1198,
@@ -43773,9 +43976,30 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 1150000
-            }
+            },
+            "E Diesel": {
+              "bodyType": "SEDAN",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 1150000
+            },
+            "SV CVT Petrol": {
+              "bodyType": "SEDAN",
+              "cc": 1497,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 1050000
+            },
           },
           "Mobilio": {
+            "E Diesel": {
+              "bodyType": "MPV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 820000
+            },
             "E Petrol": {
               "bodyType": "MPV",
               "cc": 1497,
@@ -43783,12 +44007,54 @@ class VehicleData {
               "seating": 7,
               "exShowroom": 720000
             },
+            "RS Diesel": {
+              "bodyType": "MPV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 870000
+            },
+            "RS O Diesel": {
+              "bodyType": "MPV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 890000
+            },
             "S Diesel": {
               "bodyType": "MPV",
               "cc": 1498,
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 870000
+            },
+            "S Petrol": {
+              "bodyType": "MPV",
+              "cc": 1497,
+              "fuelType": "Petrol",
+              "seating": 7,
+              "exShowroom": 760000
+            },
+            "V Diesel": {
+              "bodyType": "MPV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 920000
+            },
+            "V O Diesel": {
+              "bodyType": "MPV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 950000
+            },
+            "V O Petrol": {
+              "bodyType": "MPV",
+              "cc": 1497,
+              "fuelType": "Petrol",
+              "seating": 7,
+              "exShowroom": 910000
             },
             "V Petrol": {
               "bodyType": "MPV",
@@ -43831,6 +44097,20 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 450000
             },
+            "EX MT": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 470000
+            },
+            "EXCLUSIVE EDITION": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 490000
+            },
             "S MT": {
               "bodyType": "HATCHBACK",
               "cc": 1198,
@@ -43838,12 +44118,40 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 500000
             },
+            "V MT": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 530000
+            },
             "VX AT": {
               "bodyType": "HATCHBACK",
               "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 650000
+            },
+            "VX MT": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 600000
+            },
+            "VX O AT": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 670000
+            },
+            "VX O MT": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 620000
             }
           },
           "Jazz": {
@@ -43870,33 +44178,126 @@ class VehicleData {
             }
           },
           "Amaze (Updated)": {
-            "E MT Petrol": {
-              "bodyType": "SEDAN",
-              "cc": 1198,
-              "fuelType": "Petrol",
-              "seating": 5,
-              "exShowroom": 540000
-            },
-            "S MT Petrol": {
-              "bodyType": "SEDAN",
-              "cc": 1198,
-              "fuelType": "Petrol",
-              "seating": 5,
-              "exShowroom": 600000
-            },
-            "S MT Diesel": {
-              "bodyType": "SEDAN",
-              "cc": 1498,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 700000
-            },
-            "VX AT Petrol": {
-              "bodyType": "SEDAN",
-              "cc": 1198,
-              "fuelType": "Petrol",
-              "seating": 5,
-              "exShowroom": 760000
+            {
+              "1.2 E I-VTEC O": {
+                "bodyType": "SEDAN",
+                "cc": 1198,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 540000
+              },
+              "1.2 EX I-VTEC": {
+                "bodyType": "SEDAN",
+                "cc": 1198,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 560000
+              },
+              "1.2 S AT I-VTEC O": {
+                "bodyType": "SEDAN",
+                "cc": 1198,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 590000
+              },
+              "1.2 S I-VTEC O": {
+                "bodyType": "SEDAN",
+                "cc": 1198,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 600000
+              },
+              "1.2 S PLUS I-VTEC": {
+                "bodyType": "SEDAN",
+                "cc": 1198,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 620000
+              },
+              "1.2 SX I-VTEC": {
+                "bodyType": "SEDAN",
+                "cc": 1198,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 640000
+              },
+              "1.2 VX AT I-VTEC": {
+                "bodyType": "SEDAN",
+                "cc": 1198,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 700000
+              },
+              "1.2 VX O I-VTEC": {
+                "bodyType": "SEDAN",
+                "cc": 1198,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 720000
+              },
+              "1.5 E I-DTEC O": {
+                "bodyType": "SEDAN",
+                "cc": 1498,
+                "fuelType": "Diesel",
+                "seating": 5,
+                "exShowroom": 680000
+              },
+              "1.5 EX I-DTEC": {
+                "bodyType": "SEDAN",
+                "cc": 1498,
+                "fuelType": "Diesel",
+                "seating": 5,
+                "exShowroom": 700000
+              },
+              "1.5 S I-DTEC O": {
+                "bodyType": "SEDAN",
+                "cc": 1498,
+                "fuelType": "Diesel",
+                "seating": 5,
+                "exShowroom": 720000
+              },
+              "1.5 SX I-DTEC": {
+                "bodyType": "SEDAN",
+                "cc": 1498,
+                "fuelType": "Diesel",
+                "seating": 5,
+                "exShowroom": 740000
+              },
+              "1.5 VX O I-DTEC": {
+                "bodyType": "SEDAN",
+                "cc": 1498,
+                "fuelType": "Diesel",
+                "seating": 5,
+                "exShowroom": 760000
+              },
+              "PRIDE EDITION DIESEL": {
+                "bodyType": "SEDAN",
+                "cc": 1498,
+                "fuelType": "Diesel",
+                "seating": 5,
+                "exShowroom": 800000
+              },
+              "PRIDE EDITION PETROL": {
+                "bodyType": "SEDAN",
+                "cc": 1198,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 780000
+              },
+              "PRIVILEGE EDITION DIESEL": {
+                "bodyType": "SEDAN",
+                "cc": 1498,
+                "fuelType": "Diesel",
+                "seating": 5,
+                "exShowroom": 820000
+              },
+              "PRIVILEGE EDITION PETROL": {
+                "bodyType": "SEDAN",
+                "cc": 1198,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 800000
+              }
             }
           },
           "City": {
@@ -43927,7 +44328,14 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 1170000
-            }
+            },
+            "SV": {
+              "bodyType": "SEDAN",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 1170000
+            },
           },
           "Mobilio": {
             "E Petrol": {
@@ -43960,7 +44368,21 @@ class VehicleData {
               "seating": 7,
               "exShowroom": 900000
             },
+            "E Diesel": {
+              "bodyType": "SUV",
+              "cc": 1497,
+              "fuelType": "Petrol",
+              "seating": 7,
+              "exShowroom": 900000
+            },
             "S Petrol": {
+              "bodyType": "SUV",
+              "cc": 1497,
+              "fuelType": "Petrol",
+              "seating": 7,
+              "exShowroom": 1000000
+            },
+            "S Diesel": {
               "bodyType": "SUV",
               "cc": 1497,
               "fuelType": "Petrol",
@@ -43973,7 +44395,28 @@ class VehicleData {
               "fuelType": "Diesel",
               "seating": 7,
               "exShowroom": 1150000
-            }
+            },
+            "V Petrol": {
+              "bodyType": "SUV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 1150000
+            },
+            "VX Petrol": {
+              "bodyType": "SUV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 1150000
+            },
+            "VX Diesel": {
+              "bodyType": "SUV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 1150000
+            },
           },
           "CR-V": {
             "2.0 MT": {
@@ -44021,96 +44464,164 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 660000
+            },
+            "VX MT": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 660000
             }
           },
           "Jazz": {
-            "E": {
+            "E DIESEL": {
+              "bodyType": "HATCHBACK",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 570000
+            },
+            "E PETROL": {
               "bodyType": "HATCHBACK",
               "cc": 1199,
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 570000
             },
-            "S": {
+            "PRIVILEGE EDITION AT PETROL": {
+              "bodyType": "HATCHBACK",
+              "cc": 1199,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 680000
+            },
+            "PRIVILEGE EDITION DIESEL": {
+              "bodyType": "HATCHBACK",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 720000
+            },
+            "PRIVILEGE EDITION PETROL": {
+              "bodyType": "HATCHBACK",
+              "cc": 1199,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 640000
+            },
+            "S AT PETROL": {
+              "bodyType": "HATCHBACK",
+              "cc": 1199,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 650000
+            },
+            "S PETROL": {
               "bodyType": "HATCHBACK",
               "cc": 1199,
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 620000
             },
-            "V Diesel": {
+            "SV DIESEL": {
               "bodyType": "HATCHBACK",
               "cc": 1498,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 780000
+            },
+            "SV PETROL": {
+              "bodyType": "HATCHBACK",
+              "cc": 1199,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 720000
             }
           },
           "Amaze": {
-            "E MT Petrol": {
+            "1.2 E I-VTEC O": {
               "bodyType": "SEDAN",
               "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 550000
             },
-            "S MT Petrol": {
+            "1.2 S AT I-VTEC O": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 600000
+            },
+            "1.2 S I-VTEC O": {
               "bodyType": "SEDAN",
               "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 610000
             },
-            "S MT Diesel": {
+            "1.2 SX I-VTEC": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 640000
+            },
+            "1.2 VX AT I-VTEC": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 770000
+            },
+            "1.5 E I-DTEC O": {
               "bodyType": "SEDAN",
               "cc": 1498,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 710000
             },
-            "VX AT Petrol": {
+            "1.5 S I-DTEC O": {
+              "bodyType": "SEDAN",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 730000
+            },
+            "1.5 SX I-DTEC": {
+              "bodyType": "SEDAN",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 760000
+            },
+            "PRIDE EDITION DIESEL": {
+              "bodyType": "SEDAN",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 750000
+            },
+            "PRIDE EDITION PETROL": {
               "bodyType": "SEDAN",
               "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 770000
-            }
-          },
-          "City (2017 Facelift)": {
-            "SV MT Petrol": {
-              "bodyType": "SEDAN",
-              "cc": 1497,
-              "fuelType": "Petrol",
-              "seating": 5,
-              "exShowroom": 880000
+              "exShowroom": 740000
             },
-            "VX CVT Petrol": {
-              "bodyType": "SEDAN",
-              "cc": 1497,
-              "fuelType": "Petrol",
-              "seating": 5,
-              "exShowroom": 1090000
-            },
-            "ZX CVT Petrol": {
-              "bodyType": "SEDAN",
-              "cc": 1497,
-              "fuelType": "Petrol",
-              "seating": 5,
-              "exShowroom": 1200000
-            },
-            "SV MT Diesel": {
+            "PRIVILEGE EDITION DIESEL": {
               "bodyType": "SEDAN",
               "cc": 1498,
               "fuelType": "Diesel",
               "seating": 5,
-              "exShowroom": 990000
+              "exShowroom": 760000
             },
-            "VX MT Diesel": {
+            "PRIVILEGE EDITION PETROL": {
               "bodyType": "SEDAN",
-              "cc": 1498,
-              "fuelType": "Diesel",
+              "cc": 1198,
+              "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 1180000
+              "exShowroom": 750000
             }
           },
           "Mobilio": {
@@ -44134,6 +44645,55 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 7,
               "exShowroom": 910000
+            },
+            "V Diesel": {
+              "bodyType": "MPV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 920000
+            },
+            "V O Petrol": {
+              "bodyType": "MPV",
+              "cc": 1497,
+              "fuelType": "Petrol",
+              "seating": 7,
+              "exShowroom": 950000
+            },
+            "V O Diesel": {
+              "bodyType": "MPV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 960000
+            },
+            "RS Diesel": {
+              "bodyType": "MPV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 970000
+            },
+            "RS O Diesel": {
+              "bodyType": "MPV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 980000
+            },
+            "E Diesel": {
+              "bodyType": "MPV",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 7,
+              "exShowroom": 740000
+            },
+            "S Petrol": {
+              "bodyType": "MPV",
+              "cc": 1497,
+              "fuelType": "Petrol",
+              "seating": 7,
+              "exShowroom": 800000
             }
           },
           "BR-V": {
@@ -44220,81 +44780,174 @@ class VehicleData {
               "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 470000
+              "exShowroom": 460000
             },
             "S MT": {
               "bodyType": "HATCHBACK",
               "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 520000
+              "exShowroom": 510000
             },
             "VX AT": {
               "bodyType": "HATCHBACK",
               "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 670000
+              "exShowroom": 660000
+            },
+            "VX MT": {
+              "bodyType": "HATCHBACK",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 660000
             }
           },
           "Jazz": {
-            "E": {
-              "bodyType": "HATCHBACK",
-              "cc": 1199,
+            {
+              "E": {
+                "bodyType": "HATCHBACK",
+                "cc": 1199,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 590000
+              },
+              "S": {
+                "bodyType": "HATCHBACK",
+                "cc": 1199,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 640000
+              },
+              "V Diesel": {
+                "bodyType": "HATCHBACK",
+                "cc": 1498,
+                "fuelType": "Diesel",
+                "seating": 5,
+                "exShowroom": 800000
+              },
+              "VX AT Petrol": {
+                "bodyType": "HATCHBACK",
+                "cc": 1199,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 860000
+              },
+              "VX Diesel": {
+                "bodyType": "HATCHBACK",
+                "cc": 1498,
+                "fuelType": "Diesel",
+                "seating": 5,
+                "exShowroom": 880000
+              },
+              "SV Petrol": {
+                "bodyType": "HATCHBACK",
+                "cc": 1199,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 700000
+              },
+              "SV Diesel": {
+                "bodyType": "HATCHBACK",
+                "cc": 1498,
+                "fuelType": "Diesel",
+                "seating": 5,
+                "exShowroom": 780000
+              },
+              "V AT Petrol": {
+                "bodyType": "HATCHBACK",
+                "cc": 1199,
+                "fuelType": "Petrol",
+                "seating": 5,
+                "exShowroom": 830000
+              }
+            }
+          },
+          "Amaze (2018 New Gen)": {
+            "1.2 E I-VTEC O": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 590000
+              "exShowroom": 550000
             },
-            "S": {
-              "bodyType": "HATCHBACK",
-              "cc": 1199,
+            "1.2 S AT I-VTEC O": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 600000
+            },
+            "1.2 S I-VTEC O": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 610000
+            },
+            "1.2 SX I-VTEC": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 640000
             },
-            "V Diesel": {
-              "bodyType": "HATCHBACK",
-              "cc": 1498,
-              "fuelType": "Diesel",
-              "seating": 5,
-              "exShowroom": 800000
-            }
-          },
-          "Amaze (2018 New Gen)": {
-            "E Petrol": {
+            "1.2 VX AT I-VTEC": {
               "bodyType": "SEDAN",
-              "cc": 1199,
+              "cc": 1198,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 560000
+              "exShowroom": 770000
             },
-            "S Petrol": {
-              "bodyType": "SEDAN",
-              "cc": 1199,
-              "fuelType": "Petrol",
-              "seating": 5,
-              "exShowroom": 620000
-            },
-            "VX Petrol CVT": {
-              "bodyType": "SEDAN",
-              "cc": 1199,
-              "fuelType": "Petrol",
-              "seating": 5,
-              "exShowroom": 820000
-            },
-            "E Diesel": {
+            "1.5 E I-DTEC O": {
               "bodyType": "SEDAN",
               "cc": 1498,
               "fuelType": "Diesel",
               "seating": 5,
-              "exShowroom": 720000
+              "exShowroom": 710000
             },
-            "VX Diesel CVT": {
+            "1.5 S I-DTEC O": {
               "bodyType": "SEDAN",
               "cc": 1498,
               "fuelType": "Diesel",
               "seating": 5,
-              "exShowroom": 950000
+              "exShowroom": 730000
+            },
+            "1.5 SX I-DTEC": {
+              "bodyType": "SEDAN",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 760000
+            },
+            "PRIDE EDITION DIESEL": {
+              "bodyType": "SEDAN",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 750000
+            },
+            "PRIDE EDITION PETROL": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 740000
+            },
+            "PRIVILEGE EDITION DIESEL": {
+              "bodyType": "SEDAN",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 760000
+            },
+            "PRIVILEGE EDITION PETROL": {
+              "bodyType": "SEDAN",
+              "cc": 1198,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 750000
             }
           },
           "City (2017 Facelift)": {
@@ -44330,6 +44983,20 @@ class VehicleData {
               "bodyType": "SEDAN",
               "cc": 1498,
               "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 1190000
+            },
+            "Anniversary Edition Diesel": {
+              "bodyType": "SEDAN",
+              "cc": 1498,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 1190000
+            },
+            "Anniversary Edition Petrol": {
+              "bodyType": "SEDAN",
+              "cc": 1498,
+              "fuelType": "petrol",
               "seating": 5,
               "exShowroom": 1190000
             }
@@ -68786,6 +69453,125 @@ class VehicleData {
             }
           },
           "A6": {
+            "A6 2.0 TDI Diesel": {
+              "bodyType": "Sedan",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5200000
+            },
+            "A6 2.0 TDI Business Edition Diesel": {
+              "bodyType": "Sedan",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5250000
+            },
+            "A6 2.0 TDI Premium Diesel": {
+              "bodyType": "Sedan",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5300000
+            },
+            "A6 2.0 TDI Premium Plus Diesel": {
+              "bodyType": "Sedan",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5400000
+            },
+            "A6 2.0 TDI Technology Pack Diesel": {
+              "bodyType": "Sedan",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5500000
+            },
+            "A6 2.0 TFSI Premium Petrol": {
+              "bodyType": "Sedan",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5000000
+            },
+            "A6 2.0 TFSI Premium Plus Petrol": {
+              "bodyType": "Sedan",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5100000
+            },
+            "A6 2.0 TFSI Technology Pack Petrol": {
+              "bodyType": "Sedan",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5200000
+            },
+            "A6 2.7 TDI Diesel": {
+              "bodyType": "Sedan",
+              "cc": 2698,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5600000
+            },
+            "A6 2.8 FSI Petrol": {
+              "bodyType": "Sedan",
+              "cc": 2773,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5700000
+            },
+            "A6 3.0 TDI Quattro Premium Diesel": {
+              "bodyType": "Sedan",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 6000000
+            },
+            "A6 3.0 TDI Quattro Premium Plus Diesel": {
+              "bodyType": "Sedan",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 6200000
+            },
+            "A6 3.0 TDI Quattro Technology Pack Diesel": {
+              "bodyType": "Sedan",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 6400000
+            },
+            "A6 3.0 TDI Special Edition Diesel": {
+              "bodyType": "Sedan",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 6300000
+            },
+            "A6 3.0 TFSI Quattro Petrol": {
+              "bodyType": "Sedan",
+              "cc": 2995,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6500000
+            },
+            "A6 35 TDI Matrix Diesel": {
+              "bodyType": "Sedan",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5400000
+            },
+            "A6 35 TDI Technology Diesel": {
+              "bodyType": "Sedan",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5600000
+            },
             "A6 35 TFSI Petrol": {
               "bodyType": "Sedan",
               "cc": 1798,
@@ -68793,12 +69579,19 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 4800000
             },
-            "A6 35 TDI Diesel": {
+            "A6 35 TFSI Matrix Petrol": {
               "bodyType": "Sedan",
-              "cc": 1968,
-              "fuelType": "Diesel",
+              "cc": 1798,
+              "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 5200000
+              "exShowroom": 4900000
+            },
+            "A6 35 TFSI Premium Petrol": {
+              "bodyType": "Sedan",
+              "cc": 1798,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5000000
             }
           },
           "A8 L": {
@@ -68818,35 +69611,224 @@ class VehicleData {
             }
           },
           "Q3": {
-            "Q3 30 TFSI Petrol": {
+            "Q3 1.4 TFSI Petrol": {
               "bodyType": "SUV",
               "cc": 1395,
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 2700000
             },
-            "Q3 35 TDI Premium Diesel": {
+            "Q3 2.0 TDI Base Grade": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 2900000
+            },
+            "Q3 2.0 TDI High": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3100000
+            },
+            "Q3 2.0 TDI Quattro Dynamic": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3300000
+            },
+            "Q3 2.0 TDI Quattro Premium": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3500000
+            },
+            "Q3 2.0 TDI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3700000
+            },
+            "Q3 2.0 TDI S Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3600000
+            },
+            "Q3 2.0 TFSI High Petrol": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 3200000
+            },
+            "Q3 2.0 TFSI Quattro Petrol": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 3400000
+            },
+            "Q3 2.0 TFSI Quattro Premium Plus Petrol": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 3600000
+            },
+            "Q3 30 TDI S": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 2800000
+            },
+            "Q3 35 TDI Dynamic Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3250000
+            },
+            "Q3 35 TDI Premium": {
               "bodyType": "SUV",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 3150000
-            }
-          },
-          "Q5": {
-            "Q5 30 TDI Diesel": {
+            },
+            "Q3 35 TDI Premium + Sunroof": {
               "bodyType": "SUV",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
-              "exShowroom": 4700000
+              "exShowroom": 3350000
             },
-            "Q5 45 TFSI Petrol": {
+            "Q3 35 TDI Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3450000
+            },
+            "Q3 35 TDI Premium Plus + Sunroof": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3550000
+            },
+            "Q3 35 TDI Technology": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3650000
+            },
+            "Q3 35 TDI Technology with Navigation": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3750000
+            }
+          },
+          "Q5": {
+            "Q5 2.0 TDI Quattro Premium": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 4800000
+            },
+            "Q5 2.0 TDI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5100000
+            },
+            "Q5 2.0 TDI Technology Pack": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5500000
+            },
+            "Q5 2.0 TFSI Quattro Premium": {
               "bodyType": "SUV",
               "cc": 1984,
               "fuelType": "Petrol",
               "seating": 5,
+              "exShowroom": 5600000
+            },
+            "Q5 2.0 TFSI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6000000
+            },
+            "Q5 2.0 TFSI Technology Pack": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6300000
+            },
+            "Q5 3.0 TDI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 6600000
+            },
+            "Q5 3.0 TDI Quattro Technology Pack": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 7000000
+            },
+            "Q5 30 TDI Design Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5000000
+            },
+            "Q5 30 TDI Premium Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
               "exShowroom": 5200000
+            },
+            "Q5 30 TDI Sports Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5400000
+            },
+            "Q5 45 TDI Quattro Technology": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 7200000
+            },
+            "Q5 45 TDI Technology S Line": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 7500000
             }
           },
           "Q7": {
@@ -68927,14 +69909,14 @@ class VehicleData {
             }
           },
           "A6": {
-            "A6 35 TFSI Petrol": {
+            "A6 35 TFSI Matrix Petrol": {
               "bodyType": "Sedan",
               "cc": 1798,
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 4900000
             },
-            "A6 35 TDI Diesel": {
+            "A6 35 TDI Matrix Diesel": {
               "bodyType": "Sedan",
               "cc": 1968,
               "fuelType": "Diesel",
@@ -68959,35 +69941,140 @@ class VehicleData {
             }
           },
           "Q3": {
-            "Q3 30 TFSI Petrol": {
-              "bodyType": "SUV",
-              "cc": 1395,
-              "fuelType": "Petrol",
-              "seating": 5,
-              "exShowroom": 2800000
-            },
-            "Q3 35 TDI Quattro Diesel": {
+            "Q3 30 TDI S": {
               "bodyType": "SUV",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
-              "exShowroom": 3300000
+              "exShowroom": 2800000
+            },
+            "Q3 35 TDI Dynamic Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3250000
+            },
+            "Q3 35 TDI Premium": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3150000
+            },
+            "Q3 35 TDI Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3450000
+            },
+            "Q3 35 TDI Technology": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3650000
+            },
+            "Q3 35 TDI Technology with Navigation": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3750000
             }
           },
           "Q5": {
-            "Q5 30 TDI Diesel": {
+            "Q5 2.0 TDI Quattro Premium": {
               "bodyType": "SUV",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 4800000
             },
-            "Q5 45 TFSI Petrol": {
+            "Q5 2.0 TDI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5100000
+            },
+            "Q5 2.0 TDI Technology Pack": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5500000
+            },
+            "Q5 2.0 TFSI Quattro Premium": {
               "bodyType": "SUV",
               "cc": 1984,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 5300000
+              "exShowroom": 5600000
+            },
+            "Q5 2.0 TFSI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6000000
+            },
+            "Q5 2.0 TFSI Technology Pack": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6300000
+            },
+            "Q5 3.0 TDI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 6600000
+            },
+            "Q5 3.0 TDI Quattro Technology Pack": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 7000000
+            },
+            "Q5 30 TDI Design Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5000000
+            },
+            "Q5 30 TDI Premium Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5200000
+            },
+            "Q5 30 TDI Sports Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5400000
+            },
+            "Q5 45 TDI Quattro Technology": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 7200000
+            },
+            "Q5 45 TDI Technology S Line": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 7500000
             }
           },
           "Q7": {
@@ -69091,19 +70178,26 @@ class VehicleData {
             }
           },
           "A6": {
-            "A6 35 TFSI Petrol": {
+            "A6 35 TFSI Matrix Petrol": {
               "bodyType": "Sedan",
               "cc": 1798,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 5000000
+              "exShowroom": 4900000
             },
-            "A6 35 TDI Diesel": {
+            "A6 35 TDI Matrix Diesel": {
               "bodyType": "Sedan",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
-              "exShowroom": 5400000
+              "exShowroom": 5300000
+            },
+            "Design Edition": {
+              "bodyType": "Sedan",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5300000
             }
           },
           "A8 L": {
@@ -69123,35 +70217,168 @@ class VehicleData {
             }
           },
           "Q3": {
-            "Q3 30 TFSI Petrol": {
+            "Q3 30 TDI Premium FWD Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3000000
+            },
+            "Q3 30 TDI S Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3100000
+            },
+            "Q3 30 TFSI Premium Petrol": {
               "bodyType": "SUV (Facelift)",
               "cc": 1395,
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 2900000
             },
-            "Q3 35 TDI Quattro Diesel": {
+            "Q3 35 TDI Dynamic Edition Diesel": {
               "bodyType": "SUV (Facelift)",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
-              "exShowroom": 3400000
+              "exShowroom": 3350000
+            },
+            "Q3 35 TDI Premium Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3200000
+            },
+            "Q3 35 TDI Premium Plus Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3300000
+            },
+            "Q3 35 TDI Quattro Premium Plus Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3500000
+            },
+            "Q3 35 TDI Quattro Technology Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3600000
+            },
+            "Q3 35 TDI Technology Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3450000
+            },
+            "Q3 35 TDI Technology with Navigation Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3700000
             }
           },
           "Q5": {
-            "Q5 30 TDI Diesel": {
+            "Q5 2.0 TDI Quattro Premium": {
               "bodyType": "SUV",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
-              "exShowroom": 4900000
+              "exShowroom": 4800000
             },
-            "Q5 45 TFSI Petrol": {
+            "Q5 2.0 TDI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5100000
+            },
+            "Q5 2.0 TDI Technology Pack": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5500000
+            },
+            "Q5 2.0 TFSI Quattro Premium": {
               "bodyType": "SUV",
               "cc": 1984,
               "fuelType": "Petrol",
               "seating": 5,
+              "exShowroom": 5600000
+            },
+            "Q5 2.0 TFSI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6000000
+            },
+            "Q5 2.0 TFSI Technology Pack": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6300000
+            },
+            "Q5 3.0 TDI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 6600000
+            },
+            "Q5 3.0 TDI Quattro Technology Pack": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 7000000
+            },
+            "Q5 30 TDI Design Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5000000
+            },
+            "Q5 30 TDI Premium Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5200000
+            },
+            "Q5 30 TDI Sports Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
               "exShowroom": 5400000
+            },
+            "Q5 45 TDI Quattro Technology": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 7200000
+            },
+            "Q5 45 TDI Technology S Line": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 7500000
             }
           },
           "Q7": {
@@ -69255,19 +70482,26 @@ class VehicleData {
             }
           },
           "A6": {
-            "A6 35 TFSI Petrol": {
+            "A6 35 TFSI Matrix Petrol": {
               "bodyType": "Sedan",
               "cc": 1798,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 5100000
+              "exShowroom": 4900000
             },
-            "A6 35 TDI Diesel": {
+            "A6 35 TDI Matrix Diesel": {
               "bodyType": "Sedan",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
-              "exShowroom": 5500000
+              "exShowroom": 5300000
+            },
+            "Design Edition": {
+              "bodyType": "Sedan",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5300000
             }
           },
           "A8 L": {
@@ -69287,42 +70521,140 @@ class VehicleData {
             }
           },
           "Q3": {
-            "Q3 30 TFSI Petrol": {
-              "bodyType": "SUV",
-              "cc": 1395,
-              "fuelType": "Petrol",
+            "Q3 30 TDI Premium FWD Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 3000000
             },
-            "Q3 35 TDI Quattro Diesel": {
-              "bodyType": "SUV",
+            "Q3 30 TFSI Premium Petrol": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1395,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 2900000
+            },
+            "Q3 35 TDI Quattro Premium Plus Diesel": {
+              "bodyType": "SUV (Facelift)",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 3500000
-            }
+            },
+            "Q3 35 TDI Quattro Technology Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3600000
+            },
           },
           "Q5": {
-            "Q5 30 TDI Premium Plus Diesel": {
-              "bodyType": "SUV (New Gen)",
+            "Q5 2.0 TDI Quattro Premium": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 4800000
+            },
+            "Q5 2.0 TDI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5100000
+            },
+            "Q5 2.0 TDI Technology Pack": {
+              "bodyType": "SUV",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 5500000
             },
-            "Q5 30 TDI Technology Diesel": {
-              "bodyType": "SUV (New Gen)",
+            "Q5 2.0 TFSI Quattro Premium": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5600000
+            },
+            "Q5 2.0 TFSI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6000000
+            },
+            "Q5 2.0 TFSI Technology Pack": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6300000
+            },
+            "Q5 3.0 TDI Quattro Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 6600000
+            },
+            "Q5 3.0 TDI Quattro Technology Pack": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 7000000
+            },
+            "Q5 30 TDI Design Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5000000
+            },
+            "Q5 30 TDI Premium Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5200000
+            },
+            "Q5 30 TDI Sports Edition": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5400000
+            },
+            "Q5 35 TDI Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5800000
+            },
+            "Q5 35 TDI Technology": {
+              "bodyType": "SUV",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 6100000
             },
-            "Q5 45 TFSI Petrol": {
-              "bodyType": "SUV (New Gen)",
-              "cc": 1984,
-              "fuelType": "Petrol",
+            "Q5 45 TDI Quattro Technology": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
               "seating": 5,
-              "exShowroom": 5900000
+              "exShowroom": 7200000
+            },
+            "Q5 45 TDI Technology S Line": {
+              "bodyType": "SUV",
+              "cc": 2967,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 7500000
             }
           },
           "Q7": {
@@ -69426,6 +70758,20 @@ class VehicleData {
             }
           },
           "A6": {
+            "A6 35 TFSI Petrol": {
+              "bodyType": "Sedan",
+              "cc": 1798,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 4800000
+            },
+            "A6 35 TDI Diesel": {
+              "bodyType": "Sedan",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5200000
+            },
             "A6 45 TFSI Premium Plus Petrol": {
               "bodyType": "Sedan (New Gen)",
               "cc": 1984,
@@ -69451,20 +70797,34 @@ class VehicleData {
             }
           },
           "Q3": {
-            "Q3 30 TFSI Petrol": {
-              "bodyType": "SUV",
+            "Q3 30 TDI Premium FWD Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3000000
+            },
+            "Q3 30 TFSI Premium Petrol": {
+              "bodyType": "SUV (Facelift)",
               "cc": 1395,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 3200000
+              "exShowroom": 2900000
             },
-            "Q3 35 TDI Quattro Diesel": {
-              "bodyType": "SUV",
+            "Q3 35 TDI Quattro Premium Plus Diesel": {
+              "bodyType": "SUV (Facelift)",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 3500000
+            },
+            "Q3 35 TDI Quattro Technology Diesel": {
+              "bodyType": "SUV (Facelift)",
               "cc": 1968,
               "fuelType": "Diesel",
               "seating": 5,
               "exShowroom": 3600000
-            }
+            },
           },
           "Q5": {
             "Q5 30 TDI Premium Plus Diesel": {
@@ -69474,12 +70834,40 @@ class VehicleData {
               "seating": 5,
               "exShowroom": 5600000
             },
+            "Q5 35 TDI Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5800000
+            },
+            "Q5 35 TDI Technology": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 6000000
+            },
+            "Q5 40 TDI Premium Plus": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 6200000
+            },
+            "Q5 40 TDI Technology": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 6400000
+            },
             "Q5 45 TFSI Petrol": {
               "bodyType": "SUV",
               "cc": 1984,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 6000000
+              "exShowroom": 6600000
             }
           },
           "Q7": {
@@ -69586,6 +70974,22 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 21000000
+            }
+          },
+          "Q5": {
+            "Q5 30 TDI Premium Plus Diesel": {
+              "bodyType": "SUV",
+              "cc": 1968,
+              "fuelType": "Diesel",
+              "seating": 5,
+              "exShowroom": 5600000
+            },
+            "Q5 45 TFSI Petrol": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6000000
             }
           },
           "RS": {
@@ -69825,6 +71229,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 4900000
+            },
+            "Special Edition": {
+              "bodyType": "Sedan",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 4900000
             }
           },
           "A6": {
@@ -70005,6 +71416,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 6700000
+            },
+            "A6 45 TFSI Technology W/O Matrix Petrol": {
+              "bodyType": "Sedan",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6700000
             }
           },
           "A8 L": {
@@ -70025,6 +71443,13 @@ class VehicleData {
               "exShowroom": 4500000
             },
             "Q3 Technology 40 TFSI Petrol": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5200000
+            },
+            "Q3 Premium": {
               "bodyType": "SUV",
               "cc": 1984,
               "fuelType": "Petrol",
@@ -70057,6 +71482,13 @@ class VehicleData {
               "exShowroom": 6800000
             },
             "Q5 Special Edition Petrol": {
+              "bodyType": "SUV (Special Edition)",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 7000000
+            },
+            "Limited Edition": {
               "bodyType": "SUV (Special Edition)",
               "cc": 1984,
               "fuelType": "Petrol",
@@ -70192,6 +71624,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 6900000
+            },
+            "A6 45 TFSI Technology W/O Matrix Petrol": {
+              "bodyType": "Sedan",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 6700000
             }
           },
           "A8 L": {
@@ -70217,6 +71656,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 5300000
+            },
+            "Q3 Bold Edition": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5200000
+            },
+            "Q3 Premium": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5200000
             }
           },
           "Q3 Sportback": {
@@ -70249,6 +71702,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 7200000
+            },
+            "Limited Edition": {
+              "bodyType": "SUV (Special Edition)",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 7400000
+            },
+            "Bold Edition": {
+              "bodyType": "SUV (Special Edition)",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 8000000
             }
           },
           "Q7": {
@@ -70363,6 +71830,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 5500000
+            },
+            "A4 40 TFSI Premium": {
+              "bodyType": "Sedan",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 4600000
+            },
+            "A4 40 TFSI Signature Edition": {
+              "bodyType": "Sedan",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5700000
             }
           },
           "A6": {
@@ -70379,6 +71860,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 7100000
+            },
+            "A6 45 TFSI Technology W/O Matrix Petrol": {
+              "bodyType": "Sedan",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 7600000
             }
           },
           "A8 L": {
@@ -70396,14 +71884,28 @@ class VehicleData {
               "cc": 1984,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 4700000
+              "exShowroom": 4600000
             },
             "Q3 Technology 40 TFSI Petrol": {
               "bodyType": "SUV",
               "cc": 1984,
               "fuelType": "Petrol",
               "seating": 5,
-              "exShowroom": 5400000
+              "exShowroom": 5300000
+            },
+            "Q3 Bold Edition": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5200000
+            },
+            "Q3 Premium": {
+              "bodyType": "SUV",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 5200000
             }
           },
           "Q3 Sportback": {
@@ -70429,6 +71931,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 5,
               "exShowroom": 7100000
+            },
+            "Bold Edition": {
+              "bodyType": "SUV (Special Edition)",
+              "cc": 1984,
+              "fuelType": "Petrol",
+              "seating": 5,
+              "exShowroom": 8000000
             }
           },
           "Q7": {
@@ -81933,7 +83442,7 @@ class VehicleData {
           },
 
           /* New models introduced in 2025 */
-          "Sealion 05 EV": {
+          /* "Sealion 05 EV": {
             "EV": {
               "bodyType": "SUV",
               "cc": 0,
@@ -82001,6 +83510,7 @@ class VehicleData {
               "exShowroom": null
             }
           }
+          */
         }
       },
       "Ferrari": {
@@ -100351,7 +101861,7 @@ class VehicleData {
           "Xenon Yodha": {
             "Standard Diesel": {
               "bodyType": "Pickup Truck",
-              "cc": null,
+              "cc": 2956,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 605000.0
@@ -102381,7 +103891,7 @@ class VehicleData {
           "AVTR": {
             "Standard Diesel": {
               "bodyType": "Modular Truck",
-              "cc": null,
+              "cc": 5660,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 3500000.0
@@ -108112,7 +109622,7 @@ class VehicleData {
             }
           }
         },
-        "2019": {
+        "2018": {
           "Ape Xtra LDX": {
             "Diesel": {
               "bodyType": "3-Wheeler Goods Carrier",
