@@ -257,7 +257,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
                     _updateIdv();
                   });
                 }),
-                _buildTextField('idv', 'IDV (₹)', 'Auto calculated',
+                _buildTextField('idv', 'IDV (₹)', '',
                     enabled: false),
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),

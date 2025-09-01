@@ -281,7 +281,7 @@ class _GoodsCarryingVehicleScreenState
                     _calculateIdv();
                   });
                 }),
-                _buildTextField('idv', 'IDV (₹)', 'Auto-calculated',
+                _buildTextField('idv', 'IDV (₹)', '',
                     readOnly: true),
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),

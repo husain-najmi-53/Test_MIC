@@ -163,7 +163,7 @@ class VehicleData {
           "Phantom": {
             "STD": {
               "bodyType": "Scooter",
-              "watt": null,
+              "watt": 2000,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 149000
@@ -172,7 +172,7 @@ class VehicleData {
           "Alpha": {
             "STD": {
               "bodyType": "Scooter",
-              "watt": null,
+              "watt": 2000,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 146000
@@ -183,59 +183,129 @@ class VehicleData {
       "Aeroride": {
         "2024": {
           "E-Spark": {
-            "STD": {
+            "60 V, 28 Ah": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 69445
+            },
+            "60 V, 30 Ah": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 83445
+            },
+            "60 V, 30 Ah With Extra Battery": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 112445
             }
           },
           "YB2000": {
-            "STD": {
+            "72 V, 26 Ah": {
               "bodyType": "Scooter",
               "watt": 2000,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 97100
+            },
+            "72 V, 30 Ah": {
+              "bodyType": "Scooter",
+              "watt": 2000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 102000
+            },
+            "72 V, 36 Ah": {
+              "bodyType": "Scooter",
+              "watt": 2000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 108000
             }
           },
           "Aero": {
-            "STD": {
+            "Lead Acid": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 61445
+            },
+            "Lithium Ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 79445
             }
           }
         },
         "2025": {
           "E-Spark": {
-            "STD": {
+            "60 V, 28 Ah": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 71000
+            },
+            "60 V, 30 Ah": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 85000
+            },
+            "60 V, 30 Ah With Extra Battery": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 115000
             }
           },
           "YB2000": {
-            "STD": {
+            "72 V, 26 Ah": {
               "bodyType": "Scooter",
               "watt": 2000,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 99500
+            },
+            "72 V, 30 Ah": {
+              "bodyType": "Scooter",
+              "watt": 2000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 104000
+            },
+            "72 V, 36 Ah": {
+              "bodyType": "Scooter",
+              "watt": 2000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 110000
             }
           },
           "Aero": {
-            "STD": {
+            "Lead Acid": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 63000
+            },
+            "Lithium Ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 81500
             }
           },
           "Bravo NM": {
@@ -270,12 +340,19 @@ class VehicleData {
             }
           },
           "Jaunty": {
-            "STD": {
+            "60 V, 26 Ah La": {
               "bodyType": "Scooter",
               "watt": 249,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 62439
+            },
+            "60 V, 32 Ah Li": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 88439
             }
           },
           "Jaunty Pro": {
@@ -285,6 +362,31 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 74078
+            }
+          },
+          "Inspirer": {
+            "60 V, 26 Ah La": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 53951
+            },
+            "60 V, 32 Ah Li": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 86626
+            }
+          },
+          "Feisty EV": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 62180
             }
           }
         },
@@ -313,7 +415,21 @@ class VehicleData {
               "watt": 249,
               "fuelType": "Electric",
               "seating": 2,
+              "exShowroom": 55000
+            },
+            "60 V, 26 Ah La": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
               "exShowroom": 64500
+            },
+            "60 V, 32 Ah Li": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 90500
             }
           },
           "Jaunty Pro": {
@@ -340,7 +456,30 @@ class VehicleData {
               "watt": 249,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 53951
+              "exShowroom": 55000
+            },
+            "60 V, 26 Ah La": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 55000
+            },
+            "60 V, 32 Ah Li": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 88000
+            }
+          },
+          "Feisty EV": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 62180
             }
           }
         },
@@ -369,7 +508,21 @@ class VehicleData {
               "watt": 249,
               "fuelType": "Electric",
               "seating": 2,
+              "exShowroom": 55000
+            },
+            "60 V, 26 Ah La": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
               "exShowroom": 56852
+            },
+            "60 V, 32 Ah Li": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 90677
             }
           },
           "Jaunty Pro": {
@@ -396,7 +549,28 @@ class VehicleData {
               "watt": 249,
               "fuelType": "Electric",
               "seating": 2,
+              "exShowroom": 55000
+            },
+            "60 V, 26 Ah La": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
               "exShowroom": 54989
+            },
+            "60 V, 25 Ah Li": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 63300
+            },
+            "60 V, 34 Ah Li": {
+              "bodyType": "Scooter",
+              "watt": 249,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 86626
             }
           },
           "Feisty EV": {
@@ -412,24 +586,192 @@ class VehicleData {
       },
       "Arrow EV": {
         "2024": {
+          "Eco": {
+            "STD": {
+              "bodyType": "Electric Auto Rickshaw",
+              "power": "1 hp",
+              "gvw": "960 kg",
+              "fuelType": "Electric",
+              "seating": 4,
+              "exShowroom": 115000
+            }
+          },
+          "Max": {
+            "STD": {
+              "bodyType": "Electric Auto Rickshaw",
+              "power": "1 hp",
+              "gvw": "753 kg",
+              "fuelType": "Electric",
+              "seating": 4,
+              "exShowroom": 160000
+            }
+          },
+          "Pro": {
+            "STD": {
+              "bodyType": "Electric Auto Rickshaw",
+              "power": "1 hp",
+              "gvw": "750 kg",
+              "fuelType": "Electric",
+              "seating": 4,
+              "exShowroom": "Price Coming Soon"
+            }
+          },
+          "Sky": {
+            "STD": {
+              "bodyType": "Electric Auto Rickshaw",
+              "power": "1 hp",
+              "gvw": "350 kg",
+              "fuelType": "Electric",
+              "seating": 4,
+              "exShowroom": 128000
+            }
+          },
+          "Gem": {
+            "STD": {
+              "bodyType": "Electric Auto Rickshaw",
+              "power": "1 hp",
+              "gvw": "600 kg",
+              "fuelType": "Electric",
+              "seating": 3,
+              "exShowroom": 145000
+            }
+          },
+          "EV-121 Loader": {
+            "STD": {
+              "bodyType": "Electric Loader",
+              "power": "2 hp",
+              "gvw": "350 kg",
+              "payload": "1088 Kgs",
+              "range": "100-120 km",
+              "fuelType": "Electric",
+              "exShowroom": 160000
+            }
+          },
           "Wolf": {
             "STD": {
               "bodyType": "Scooter",
-              "watt": 1000,
+              "watt": "Not specified",
               "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 58075
+              "exShowroom": "Not Available"
+            }
+          },
+          "Eagle": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": "Not specified",
+              "fuelType": "Electric",
+              "exShowroom": 58650
+            }
+          },
+          "Vespar-Square": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": "Not specified",
+              "fuelType": "Electric",
+              "exShowroom": 58650
+            }
+          },
+          "A1": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": "Not specified",
+              "fuelType": "Electric",
+              "exShowroom": 69240
             }
           }
         },
         "2025": {
+          "Eco": {
+            "STD": {
+              "bodyType": "Electric Auto Rickshaw",
+              "power": "1 hp",
+              "gvw": "960 kg",
+              "fuelType": "Electric",
+              "seating": 4,
+              "exShowroom": 118000
+            }
+          },
+          "Max": {
+            "STD": {
+              "bodyType": "Electric Auto Rickshaw",
+              "power": "1 hp",
+              "gvw": "753 kg",
+              "fuelType": "Electric",
+              "seating": 4,
+              "exShowroom": 160000
+            }
+          },
+          "Pro": {
+            "STD": {
+              "bodyType": "Electric Auto Rickshaw",
+              "power": "1 hp",
+              "gvw": "750 kg",
+              "fuelType": "Electric",
+              "seating": 4,
+              "exShowroom": "Price Coming Soon"
+            }
+          },
+          "Sky": {
+            "STD": {
+              "bodyType": "Electric Auto Rickshaw",
+              "power": "1 hp",
+              "gvw": "350 kg",
+              "fuelType": "Electric",
+              "seating": 4,
+              "exShowroom": 128000
+            }
+          },
+          "Gem": {
+            "STD": {
+              "bodyType": "Electric Auto Rickshaw",
+              "power": "1 hp",
+              "gvw": "600 kg",
+              "fuelType": "Electric",
+              "seating": 3,
+              "exShowroom": 145000
+            }
+          },
+          "EV-121 Loader": {
+            "STD": {
+              "bodyType": "Electric Loader",
+              "power": "2 hp",
+              "gvw": "350 kg",
+              "payload": "1088 Kgs",
+              "range": "100-120 km",
+              "fuelType": "Electric",
+              "exShowroom": 180000
+            }
+          },
           "Wolf": {
             "STD": {
               "bodyType": "Scooter",
-              "watt": 1000,
+              "watt": "Not specified",
               "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 60500
+              "exShowroom": "Not Available"
+            }
+          },
+          "Eagle": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": "Not specified",
+              "fuelType": "Electric",
+              "exShowroom": 58650
+            }
+          },
+          "Vespar-Square": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": "Not specified",
+              "fuelType": "Electric",
+              "exShowroom": 58650
+            }
+          },
+          "A1": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": "Not specified",
+              "fuelType": "Electric",
+              "exShowroom": 69240
             }
           }
         }
@@ -437,7 +779,7 @@ class VehicleData {
       "Asis": {
         "2023": {
           "Classy": {
-            "STD": {
+            "Luthium ion": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
@@ -446,7 +788,7 @@ class VehicleData {
             }
           },
           "Helico": {
-            "STD": {
+            "Luthium ion": {
               "bodyType": "Scooter",
               "watt": 850,
               "fuelType": "Electric",
@@ -457,7 +799,7 @@ class VehicleData {
         },
         "2024": {
           "Classy": {
-            "STD": {
+            "Luthium ion": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
@@ -466,7 +808,7 @@ class VehicleData {
             }
           },
           "Helico": {
-            "STD": {
+            "Luthium ion": {
               "bodyType": "Scooter",
               "watt": 850,
               "fuelType": "Electric",
@@ -477,7 +819,7 @@ class VehicleData {
         },
         "2025": {
           "Classy": {
-            "STD": {
+            "Luthium ion": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
@@ -486,7 +828,7 @@ class VehicleData {
             }
           },
           "Helico": {
-            "STD": {
+            "Luthium ion": {
               "bodyType": "Scooter",
               "watt": 850,
               "fuelType": "Electric",
@@ -498,7 +840,16 @@ class VehicleData {
       },
       "Atum": {
         "2022": {
-          "1.0": {
+          "Vader": {
+            "STD": {
+              "bodyType": "Bike",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 50000
+            }
+          },
+          "Version 1.0": {
             "STD": {
               "bodyType": "Bike",
               "watt": 250,
@@ -509,7 +860,7 @@ class VehicleData {
           }
         },
         "2023": {
-          "1.0": {
+          "Version 1.0": {
             "STD": {
               "bodyType": "Bike",
               "watt": 250,
@@ -529,7 +880,7 @@ class VehicleData {
           }
         },
         "2024": {
-          "1.0": {
+          "Version 1.0": {
             "STD": {
               "bodyType": "Bike",
               "watt": 250,
@@ -549,7 +900,7 @@ class VehicleData {
           }
         },
         "2025": {
-          "1.0": {
+          "Version 1.0": {
             "STD": {
               "bodyType": "Bike",
               "watt": 250,
@@ -570,8 +921,8 @@ class VehicleData {
         }
       },
       "Avon": {
-        "2023": {
-          "E Scoot 504": {
+        "2015": {
+          "E-Scoot 504": {
             "STD": {
               "bodyType": "Scooter",
               "watt": 250,
@@ -580,13 +931,355 @@ class VehicleData {
               "exShowroom": 45000
             }
           },
-          "E-Star Dx": {
+          "E-Star": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 1000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 60000
+            }
+          },
+          "E-Plus": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 25000
+            }
+          },
+          "E-Lite": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 232,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 28000
+            }
+          },
+          "E-Mate": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 188,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 45000
+            }
+          },
+          "E-bike": {
+            "STD": {
+              "bodyType": "Electric Bicycle",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 19000
+            },
+            "VX": {
+              "bodyType": "Electric Bicycle",
+              "watt": 230,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 20000
+            }
+          }
+        },
+        "2016": {
+          "E-Scoot 504": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 46500
+            }
+          },
+          "E-Star": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 1000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 62000
+            }
+          },
+          "E-Plus": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 26000
+            }
+          },
+          "E-Lite": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 232,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 29000
+            }
+          },
+          "E-Mate": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 188,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 46500
+            }
+          },
+          "E-bike": {
+            "STD": {
+              "bodyType": "Electric Bicycle",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 20000
+            },
+            "VX": {
+              "bodyType": "Electric Bicycle",
+              "watt": 230,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 21000
+            }
+          }
+        },
+        "2017": {
+          "E-Scoot 504": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 48000
+            }
+          },
+          "E-Star": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 1000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 64000
+            }
+          },
+          "E-Plus": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 27000
+            }
+          },
+          "E-Lite": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 232,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 30000
+            }
+          },
+          "E-Mate": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 188,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 48000
+            }
+          },
+          "E-bike": {
+            "STD": {
+              "bodyType": "Electric Bicycle",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 21000
+            },
+            "VX": {
+              "bodyType": "Electric Bicycle",
+              "watt": 230,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 22000
+            }
+          }
+        },
+        "2018": {
+          "E-Scoot 504": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 50000
+            }
+          },
+          "E-Star": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 1000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 66000
+            }
+          },
+          "E-Plus": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 28000
+            }
+          },
+          "E-Lite": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 232,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 31000
+            }
+          },
+          "E-Mate": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 188,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 50000
+            }
+          },
+          "E-bike": {
+            "STD": {
+              "bodyType": "Electric Bicycle",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 22000
+            },
+            "VX": {
+              "bodyType": "Electric Bicycle",
+              "watt": 230,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 23000
+            }
+          }
+        },
+        "2019": {
+          "E-Scoot 504": {
             "STD": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 52000
+            }
+          },
+          "E-Star": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 1000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 68000
+            }
+          },
+          "E-Plus": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 29000
+            }
+          },
+          "E-Lite": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 232,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 32000
+            }
+          },
+          "E-Mate": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 188,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 52000
+            }
+          },
+          "E-bike": {
+            "STD": {
+              "bodyType": "Electric Bicycle",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 23000
+            },
+            "VX": {
+              "bodyType": "Electric Bicycle",
+              "watt": 230,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 24000
+            }
+          }
+        },
+        "2020": {
+          "E-Scoot 504": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 54000
+            }
+          },
+          "E-Star": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 1000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 70000
+            }
+          },
+          "E-Plus": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 30000
+            }
+          },
+          "E-Lite": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 232,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 33000
+            }
+          },
+          "E-Mate": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 188,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 54000
             }
           },
           "E-Zap Dx": {
@@ -597,25 +1290,68 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 94799
             }
+          },
+          "E-bike": {
+            "STD": {
+              "bodyType": "Electric Bicycle",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 24000
+            },
+            "VX": {
+              "bodyType": "Electric Bicycle",
+              "watt": 230,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 25000
+            }
           }
         },
-        "2024": {
-          "E Scoot 504": {
+        "2021": {
+          "E-Scoot 504": {
             "STD": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 66006
+              "exShowroom": 56000
             }
           },
-          "E-Star Dx": {
+          "E-Star": {
             "STD": {
               "bodyType": "Scooter",
-              "watt": 250,
+              "watt": 1000,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 99689
+              "exShowroom": 72000
+            }
+          },
+          "E-Plus": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 31000
+            }
+          },
+          "E-Lite": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 232,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 34000
+            }
+          },
+          "E-Mate": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 188,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 56000
             }
           },
           "E-Zap Dx": {
@@ -625,6 +1361,159 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 96500
+            }
+          },
+          "E-bike": {
+            "STD": {
+              "bodyType": "Electric Bicycle",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 25000
+            },
+            "VX": {
+              "bodyType": "Electric Bicycle",
+              "watt": 230,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 26000
+            }
+          }
+        },
+        "2022": {
+          "E-Scoot 504": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 58000
+            }
+          },
+          "E-Star": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 1000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 75000
+            }
+          },
+          "E-Plus": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 32000
+            }
+          },
+          "E-Lite": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 232,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 35000
+            }
+          },
+          "E-Mate": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 188,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 58000
+            }
+          },
+          "E-Zap Dx": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 98000
+            }
+          },
+          "E-bike": {
+            "STD": {
+              "bodyType": "Electric Bicycle",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 26000
+            },
+            "VX": {
+              "bodyType": "Electric Bicycle",
+              "watt": 230,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 27000
+            }
+          }
+        },
+        "2023": {
+          "E-Scoot 504": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 61000
+            }
+          },
+          "E-Star": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 1000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 78000
+            }
+          },
+          "E-Plus": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 25000
+            }
+          },
+          "E-Lite": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 232,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 28000
+            }
+          },
+          "E-Mate": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 188,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 61000
+            }
+          },
+          "E-Zap Dx": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 94799
+            }
+          },
+          "E-Star Dx": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 99689
             }
           },
           "E-Trust 900": {
@@ -642,27 +1531,70 @@ class VehicleData {
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 100000
+              "exShowroom": 101000
+            }
+          },
+          "E-bike": {
+            "STD": {
+              "bodyType": "Electric Bicycle",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 27000
+            },
+            "VX": {
+              "bodyType": "Electric Bicycle",
+              "watt": 230,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 28000
             }
           }
         },
-        "2025": {
-          "E Scoot 504": {
+        "2024": {
+          "E-Scoot 504": {
             "STD": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 68000
+              "exShowroom": 66006
             }
           },
-          "E-Star Dx": {
+          "E-Star": {
             "STD": {
               "bodyType": "Scooter",
-              "watt": 250,
+              "watt": 1000,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 102000
+              "exShowroom": 81000
+            }
+          },
+          "E-Plus": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 26000
+            }
+          },
+          "E-Lite": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 232,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 29000
+            }
+          },
+          "E-Mate": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 188,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 64000
             }
           },
           "E-Zap Dx": {
@@ -671,7 +1603,16 @@ class VehicleData {
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 98500
+              "exShowroom": 96000
+            }
+          },
+          "E-Star Dx": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 99689
             }
           },
           "E-Trust 900": {
@@ -689,7 +1630,122 @@ class VehicleData {
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
+              "exShowroom": 101000
+            }
+          },
+          "E-bike": {
+            "STD": {
+              "bodyType": "Electric Bicycle",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 28000
+            },
+            "VX": {
+              "bodyType": "Electric Bicycle",
+              "watt": 230,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 29000
+            }
+          }
+        },
+        "2025": {
+          "E-Scoot 504": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 68000
+            }
+          },
+          "E-Star": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 1000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 84000
+            }
+          },
+          "E-Plus": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 27000
+            }
+          },
+          "E-Lite": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 232,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 30000
+            }
+          },
+          "E-Mate": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 188,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 66000
+            }
+          },
+          "E-Zap Dx": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 98000
+            }
+          },
+          "E-Star Dx": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
               "exShowroom": 102000
+            }
+          },
+          "E-Trust 900": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 1200,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 218000
+            }
+          },
+          "E Mate 306": {
+            "STD": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 103000
+            }
+          },
+          "E-bike": {
+            "STD": {
+              "bodyType": "Electric Bicycle",
+              "watt": 220,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 29000
+            },
+            "VX": {
+              "bodyType": "Electric Bicycle",
+              "watt": 230,
+              "fuelType": "Electric",
+              "seating": 1,
+              "exShowroom": 30000
             }
           }
         }
@@ -869,6 +1925,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 121000
+            },
+            "Carbon": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 122000
+            },
+            "Race": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 129000
             }
           },
           "SR 125": {
@@ -878,6 +1948,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 110000
+            },
+            "Storm": {
+              "bodyType": "Scooter",
+              "cc": 124.45,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 109000
             }
           },
           "SXR 160": {
@@ -907,6 +1984,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 123000
+            },
+            "Carbon": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 124000
+            },
+            "Race": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 130000
             }
           },
           "SR 125": {
@@ -916,6 +2007,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 115000
+            },
+            "Storm": {
+              "bodyType": "Scooter",
+              "cc": 124.45,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 113000
             }
           },
           "SXR 160": {
@@ -954,6 +2052,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 129000
+            },
+            "Carbon": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 131000
+            },
+            "Race": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 137000
             }
           },
           "SR 125": {
@@ -963,6 +2075,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 120000
+            },
+            "Storm": {
+              "bodyType": "Scooter",
+              "cc": 124.45,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118000
             }
           },
           "SXR 160": {
@@ -1028,6 +2147,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 132000
+            },
+            "Carbon": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 134000
+            },
+            "Race": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 141000
             }
           },
           "SR 125": {
@@ -1037,6 +2170,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 122000
+            },
+            "Storm": {
+              "bodyType": "Scooter",
+              "cc": 124.45,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 120000
             }
           },
           "SXR 160": {
@@ -1114,9 +2254,7 @@ class VehicleData {
         }
       },
       "Ampere": {
-        "2015": {
-          // "Note": "Ampere's initial presence in the Indian market during this year was limited to a few low-speed, niche models. Mainstream product launches began in later years."
-        },
+        "2015": {},
         "2016": {
           "Reo": {
             "Standard": {
@@ -1167,6 +2305,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 49000
+            },
+            "Reo Elite": {
+              "bodyType": "Scooter",
+              "watt": "250W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 47264
             }
           },
           "Magnus": {
@@ -1176,6 +2321,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 53000
+            },
+            "Magnus Pro": {
+              "bodyType": "Scooter",
+              "watt": "1.2 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 73990
             }
           },
           "Zeal": {
@@ -1196,6 +2348,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 51000
+            },
+            "Reo Elite": {
+              "bodyType": "Scooter",
+              "watt": "250W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 49000
             }
           },
           "Magnus": {
@@ -1205,6 +2364,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 70000
+            },
+            "Magnus Pro": {
+              "bodyType": "Scooter",
+              "watt": "1.2 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 74990
             }
           },
           "Zeal": {
@@ -1243,6 +2409,22 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 54000
+            },
+            "Reo Elite": {
+              "bodyType": "Scooter",
+              "watt": "250W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 52000
+            }
+          },
+          "Magnus LT": {
+            "Standard": {
+              "bodyType": "Scooter",
+              "watt": "1.5 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 70000
             }
           }
         },
@@ -1272,6 +2454,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 59000
+            },
+            "Reo Elite": {
+              "bodyType": "Scooter",
+              "watt": "250W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 57000
             }
           }
         },
@@ -1306,12 +2495,19 @@ class VehicleData {
         },
         "2024": {
           "Nexus": {
-            "Standard": {
+            "EX": {
               "bodyType": "Scooter",
               "watt": "3.3 kW",
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 115000
+            },
+            "ST": {
+              "bodyType": "Scooter",
+              "watt": "3.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 125000
             }
           },
           "Primus": {
@@ -1335,12 +2531,19 @@ class VehicleData {
         },
         "2025": {
           "Nexus": {
-            "Standard": {
+            "EX": {
               "bodyType": "Scooter",
               "watt": "3.3 kW",
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 120000
+            },
+            "ST": {
+              "bodyType": "Scooter",
+              "watt": "3.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 130000
             }
           },
           "Primus": {
@@ -1363,6 +2566,20 @@ class VehicleData {
           },
           "Reo": {
             "Standard": {
+              "bodyType": "Scooter",
+              "watt": "250W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 59900
+            },
+            "Reo 80": {
+              "bodyType": "Scooter",
+              "watt": "250W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 59900
+            },
+            "Reo Li Plus": {
               "bodyType": "Scooter",
               "watt": "250W",
               "fuelType": "Electric",
@@ -1397,6 +2614,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 108000
+            },
+            "Retrosa Lite e": {
+              "bodyType": "Scooter",
+              "watt": "2700 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 88900
+            },
+            "Retrosa II": {
+              "bodyType": "Scooter",
+              "watt": "4800 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 128270
             }
           }
         },
@@ -1408,6 +2639,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 115000
+            },
+            "Retrosa Lite e": {
+              "bodyType": "Scooter",
+              "watt": "2700 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 88900
+            },
+            "Retrosa II": {
+              "bodyType": "Scooter",
+              "watt": "4800 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 128270
             }
           }
         },
@@ -1419,6 +2664,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 118000
+            },
+            "Retrosa Lite e": {
+              "bodyType": "Scooter",
+              "watt": "2700 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 88900
+            },
+            "Retrosa II": {
+              "bodyType": "Scooter",
+              "watt": "4800 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 128270
             }
           }
         },
@@ -1430,6 +2689,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 120000
+            },
+            "Retrosa Lite e": {
+              "bodyType": "Scooter",
+              "watt": "2700 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 88900
+            },
+            "Retrosa II": {
+              "bodyType": "Scooter",
+              "watt": "4800 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 128270
             }
           },
           "Vincero": {
@@ -1450,6 +2723,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 125000
+            },
+            "Retrosa Lite e": {
+              "bodyType": "Scooter",
+              "watt": "2700 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 88900
+            },
+            "Retrosa II": {
+              "bodyType": "Scooter",
+              "watt": "4800 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 128270
             }
           },
           "Vincero": {
@@ -1470,15 +2757,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 127000
-            }
-          },
-          "Retrosa Lite e": {
-            "Standard": {
+            },
+            "Retrosa Lite e": {
               "bodyType": "Scooter",
               "watt": "2700 W",
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 88900
+            },
+            "Retrosa II": {
+              "bodyType": "Scooter",
+              "watt": "4800 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 128270
             }
           },
           "Vincero": {
@@ -1499,15 +2791,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 128000
-            }
-          },
-          "Retrosa Lite e": {
-            "Standard": {
+            },
+            "Retrosa Lite e": {
               "bodyType": "Scooter",
               "watt": "2700 W",
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 89900
+            },
+            "Retrosa II": {
+              "bodyType": "Scooter",
+              "watt": "4800 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 128270
             }
           },
           "Vincero": {
@@ -1638,12 +2935,19 @@ class VehicleData {
         },
         "2024": {
           "Ather 450X": {
-            "Gen 3": {
+            "Standard": {
               "bodyType": "Scooter",
               "watt": "6.4 kW",
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
+            },
+            "Pro Pack": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 182000
             }
           },
           "Ather 450S": {
@@ -1653,6 +2957,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 123000
+            },
+            "Pro Pack": {
+              "bodyType": "Scooter",
+              "watt": "5.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 148000
             }
           },
           "Ather 450 Apex": {
@@ -1671,6 +2982,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 115000
+            },
+            "Z": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 155000
             }
           }
         },
@@ -1779,6 +3097,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 130000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 134000
             }
           },
           "Pulsar AS200": {
@@ -1815,6 +3140,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 40000
+            },
+            "Kick Start Spoke": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 35000
             }
           },
           "Platina 100": {
@@ -1871,6 +3203,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 132000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 136000
             }
           },
           "Pulsar AS200": {
@@ -1907,6 +3246,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 41500
+            },
+            "Kick Start Spoke": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 36500
             }
           },
           "Platina 100": {
@@ -1934,6 +3280,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 150000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 373,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 164000
             }
           }
         },
@@ -1945,6 +3298,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75500
+            },
+            "Neon": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70000
             }
           },
           "Pulsar 180": {
@@ -1954,6 +3314,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 82000
+            },
+            "F": {
+              "bodyType": "BIKE",
+              "cc": 178,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87000
             }
           },
           "Pulsar 220F": {
@@ -1981,6 +3348,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 133000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 138000
             }
           },
           "Pulsar AS200": {
@@ -2017,6 +3391,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 42000
+            },
+            "Kick Start Spoke": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 37000
+            },
+            "Electric Start": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 45000
             }
           },
           "Platina 100": {
@@ -2026,6 +3414,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 47000
+            },
+            "Electric Start": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50000
             }
           },
           "V15": {
@@ -2044,6 +3439,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 152000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 373,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 166000
             }
           },
           "Pulsar NS160": {
@@ -2080,6 +3482,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 82000
+            },
+            "Neon": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68000
             }
           },
           "Pulsar 180": {
@@ -2089,6 +3498,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 83000
+            },
+            "F": {
+              "bodyType": "BIKE",
+              "cc": 178,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000
             }
           },
           "Pulsar 220F": {
@@ -2107,6 +3523,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 95000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 108000
             }
           },
           "Pulsar RS200": {
@@ -2116,6 +3539,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 135000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 140000
             }
           },
           "Pulsar AS200": {
@@ -2152,6 +3582,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 42000
+            },
+            "Electric Start": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 45000
+            },
+            "Kick Start Spoke": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 37000
             }
           },
           "Platina 100": {
@@ -2161,6 +3605,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 47000
+            },
+            "Electric Start": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50000
             }
           },
           "V15": {
@@ -2179,6 +3630,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 162000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 373,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 176000
             }
           },
           "Pulsar NS160": {
@@ -2233,6 +3691,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 84000
+            },
+            "Neon": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71000
             }
           },
           "Pulsar 180": {
@@ -2242,6 +3707,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 85000
+            },
+            "F": {
+              "bodyType": "BIKE",
+              "cc": 178,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 90000
             }
           },
           "Pulsar 220F": {
@@ -2251,6 +3723,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 96000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 220,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105000
             }
           },
           "Pulsar NS200": {
@@ -2260,6 +3739,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 98000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112000
             }
           },
           "Pulsar RS200": {
@@ -2269,6 +3755,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 139000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 143000
             }
           },
           "Pulsar AS200": {
@@ -2287,6 +3780,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 94000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 220,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 103000
             }
           },
           "Avenger 220 Street": {
@@ -2296,6 +3796,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 93000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 220,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 102000
             }
           },
           "CT 100": {
@@ -2305,6 +3812,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 42500
+            },
+            "Electric Start": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46000
+            },
+            "Kick Start Spoke": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 37500
             }
           },
           "Platina 100": {
@@ -2314,6 +3835,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 48000
+            },
+            "Electric Start": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51000
             }
           },
           "V15": {
@@ -2332,6 +3860,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 174000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 373,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 180000
             }
           },
           "Pulsar NS160": {
@@ -2341,6 +3876,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 85000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 160,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 93000
             }
           },
           "V12": {
@@ -2368,6 +3910,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 53000
+            },
+            "H Gear": {
+              "bodyType": "BIKE",
+              "cc": 115,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55000
             }
           },
           "Pulsar 125": {
@@ -2377,6 +3926,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 67000
+            },
+            "Split Seat": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70000
             }
           },
           "Avenger 160 Street": {
@@ -2386,6 +3942,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 85000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 160,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000
             }
           }
         },
@@ -2404,6 +3967,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 96000
+            },
+            "Neon": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 90000
             }
           },
           "Pulsar 180": {
@@ -2413,6 +3983,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 110000
+            },
+            "F": {
+              "bodyType": "BIKE",
+              "cc": 178,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 114000
+            },
+            "Neon": {
+              "bodyType": "BIKE",
+              "cc": 178,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105000
             }
           },
           "Pulsar 220F": {
@@ -2431,6 +4015,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 125000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 131000
             }
           },
           "Pulsar RS200": {
@@ -2440,6 +4031,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 150000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 154000
             }
           },
           "Pulsar AS200": {
@@ -2476,6 +4074,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 44000
+            },
+            "Electric Start": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48000
+            },
+            "Kick Start Spoke": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 40000
             }
           },
           "Platina 100": {
@@ -2485,6 +4097,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 50000
+            },
+            "Electric Start": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000
             }
           },
           "V15": {
@@ -2503,6 +4122,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 194000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 373,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 199000
             }
           },
           "Pulsar NS160": {
@@ -2512,6 +4138,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 104000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 160,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 110000
             }
           },
           "V12": {
@@ -2539,6 +4172,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 55000
+            },
+            "H Gear": {
+              "bodyType": "BIKE",
+              "cc": 115,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58000
             }
           },
           "Pulsar 125": {
@@ -2548,6 +4188,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 70000
+            },
+            "Split Seat": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73000
             }
           },
           "Avenger 160 Street": {
@@ -2587,7 +4234,7 @@ class VehicleData {
         },
         "2021": {
           "Pulsar 150": {
-            "Standard": {
+            "Single Disc": {
               "bodyType": "BIKE",
               "cc": 149,
               "fuelType": "Petrol",
@@ -2600,6 +4247,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 102000
+            },
+            "Neon": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 95000
             }
           },
           "Pulsar 180": {
@@ -2672,6 +4326,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 48000
+            },
+            "ES": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000
             }
           },
           "Platina 100": {
@@ -2681,6 +4342,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 52000
+            },
+            "ES": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58000
             }
           },
           "V15": {
@@ -2729,12 +4397,19 @@ class VehicleData {
             }
           },
           "Platina 110": {
-            "Standard": {
+            "Drum": {
               "bodyType": "BIKE",
               "cc": 115,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 56000
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 115,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
             }
           },
           "Pulsar 125": {
@@ -2744,6 +4419,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 73000
+            },
+            "Split Seat": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000
             }
           },
           "Avenger 160 Street": {
@@ -2810,7 +4492,7 @@ class VehicleData {
         },
         "2022": {
           "Pulsar 150": {
-            "Standard": {
+            "Single Disc": {
               "bodyType": "BIKE",
               "cc": 149,
               "fuelType": "Petrol",
@@ -2823,6 +4505,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 107000
+            },
+            "Neon": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 100000
             }
           },
           "Pulsar 180": {
@@ -2871,11 +4560,13 @@ class VehicleData {
             }
           },
           "Avenger 220 Street": {
-            "bodyType": "BIKE",
-            "cc": 220,
-            "fuelType": "Petrol",
-            "seating": 2,
-            "exShowroom": 134000
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 220,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 134000
+            }
           },
           "Platina 100": {
             "Kick Start": {
@@ -2884,15 +4575,29 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 54000
+            },
+            "ES": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
             }
           },
           "Platina 110": {
-            "Standard": {
+            "Drum": {
               "bodyType": "BIKE",
               "cc": 115,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 58000
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 115,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62000
             }
           },
           "Pulsar 125": {
@@ -2902,6 +4607,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 80000
+            },
+            "Split Seat": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 85000
             }
           },
           "Avenger 160 Street": {
@@ -2966,23 +4678,62 @@ class VehicleData {
             }
           },
           "Pulsar N160": {
-            "Standard": {
+            "Single Channel ABS": {
               "bodyType": "BIKE",
               "cc": 164,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 127000
+            },
+            "Dual Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 164,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 132000
+            }
+          },
+          "CT 125X": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71000
+            }
+          },
+          "Pulsar P150": {
+            "Single Disc": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116000
+            },
+            "Twin Disc": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 119000
             }
           }
         },
         "2023": {
           "Pulsar 150": {
-            "Standard": {
+            "Single Disc": {
               "bodyType": "BIKE",
               "cc": 149,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 112000
+            },
+            "Twin Disc": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 115000
             }
           },
           "Pulsar 220F": {
@@ -3028,15 +4779,29 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 56000
+            },
+            "ES": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 64000
             }
           },
           "Platina 110": {
-            "Standard": {
+            "Drum": {
               "bodyType": "BIKE",
               "cc": 115,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 62000
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 115,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 65000
             }
           },
           "Pulsar 125": {
@@ -3046,6 +4811,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 85000
+            },
+            "Split Seat": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000
+            },
+            "Carbon Fiber": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000
             }
           },
           "Avenger 160 Street": {
@@ -3110,12 +4889,19 @@ class VehicleData {
             }
           },
           "Pulsar N160": {
-            "Standard": {
+            "Single Channel ABS": {
               "bodyType": "BIKE",
               "cc": 164,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 130000
+            },
+            "Dual Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 164,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 134000
             }
           },
           "CT 125X": {
@@ -3128,12 +4914,19 @@ class VehicleData {
             }
           },
           "Pulsar P150": {
-            "Standard": {
+            "Single Disc": {
               "bodyType": "BIKE",
               "cc": 149,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 120000
+              "exShowroom": 116755
+            },
+            "Twin Disc": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 119757
             }
           },
           "Triumph Speed 400": {
@@ -3148,12 +4941,26 @@ class VehicleData {
         },
         "2024": {
           "Pulsar 150": {
-            "Standard": {
+            "ABS BS VI": {
               "bodyType": "BIKE",
               "cc": 149,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 114000
+            },
+            "Neon ABS BS VI": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 115000
+            },
+            "Twin Disc BS VI": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 122000
             }
           },
           "Pulsar 220F": {
@@ -3172,6 +4979,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 154000
+            },
+            "Bluetooth": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 152895
             }
           },
           "Pulsar RS200": {
@@ -3199,6 +5013,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 58000
+            },
+            "Electric-Start": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70611
             }
           },
           "Platina 110": {
@@ -3208,6 +5029,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 64000
+            },
+            "Drum": {
+              "bodyType": "BIKE",
+              "cc": 115,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75436
             }
           },
           "Pulsar 125": {
@@ -3217,6 +5045,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 88000
+            },
+            "Carbon Fiber Single Seat": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 92320
+            },
+            "Carbon Fiber Split Seat": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 94451
             }
           },
           "Avenger 160 Street": {
@@ -3249,6 +5091,34 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 99999
+            },
+            "3001": {
+              "bodyType": "SCOOTER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 107400
+            },
+            "3503": {
+              "bodyType": "SCOOTER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 114500
+            },
+            "3502": {
+              "bodyType": "SCOOTER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 127500
+            },
+            "3501": {
+              "bodyType": "SCOOTER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 139500
             }
           },
           "Dominar 250": {
@@ -3267,6 +5137,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 155000
+            },
+            "F": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 140000
+            },
+            "All-Black": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 149978
             }
           },
           "Pulsar N250": {
@@ -3294,6 +5178,27 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 133000
+            },
+            "Single-Piece Seat Single-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 164,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121722
+            },
+            "Split-Seat Dual-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 164,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 131680
+            },
+            "Split-Seat Inverted Fork": {
+              "bodyType": "BIKE",
+              "cc": 164,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 139693
             }
           },
           "CT 125X": {
@@ -3303,6 +5208,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 76000
+            },
+            "Drum": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74016
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77216
             }
           },
           "Pulsar P150": {
@@ -3312,6 +5231,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 122000
+            },
+            "Single Disc": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116755
+            },
+            "Twin Disc": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 119757
             }
           },
           "Triumph Speed 400": {
@@ -3335,12 +5268,26 @@ class VehicleData {
         },
         "2025": {
           "Pulsar 150": {
-            "Standard": {
+            "ABS BS VI": {
               "bodyType": "BIKE",
               "cc": 149,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 116000
+            },
+            "Neon ABS BS VI": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 117000
+            },
+            "Twin Disc BS VI": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 124000
             }
           },
           "Pulsar 220F": {
@@ -3359,6 +5306,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 156000
+            },
+            "Bluetooth": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 154895
             }
           },
           "Pulsar RS200": {
@@ -3386,6 +5340,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 60000
+            },
+            "Electric-Start": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72611
             }
           },
           "Platina 110": {
@@ -3395,6 +5356,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 66000
+            },
+            "Drum": {
+              "bodyType": "BIKE",
+              "cc": 115,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77436
             }
           },
           "Pulsar 125": {
@@ -3404,6 +5372,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 90000
+            },
+            "Carbon Fiber Single Seat": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 94320
+            },
+            "Carbon Fiber Split Seat": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 96451
             }
           },
           "Avenger 160 Street": {
@@ -3436,6 +5418,34 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 102999
+            },
+            "3001": {
+              "bodyType": "SCOOTER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 109400
+            },
+            "3503": {
+              "bodyType": "SCOOTER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 116500
+            },
+            "3502": {
+              "bodyType": "SCOOTER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 129500
+            },
+            "3501": {
+              "bodyType": "SCOOTER",
+              "cc": 0,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 141500
             }
           },
           "Dominar 250": {
@@ -3454,6 +5464,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 158000
+            },
+            "F": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 142000
+            },
+            "All-Black": {
+              "bodyType": "BIKE",
+              "cc": 249,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 151978
             }
           },
           "Pulsar N250": {
@@ -3481,6 +5505,27 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 135000
+            },
+            "Single-Piece Seat Single-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 164,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 123722
+            },
+            "Split-Seat Dual-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 164,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 133680
+            },
+            "Split-Seat Inverted Fork": {
+              "bodyType": "BIKE",
+              "cc": 164,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 141693
             }
           },
           "CT 125X": {
@@ -3490,6 +5535,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 78000
+            },
+            "Drum": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76016
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 79216
             }
           },
           "Pulsar P150": {
@@ -3499,6 +5558,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 124000
+            },
+            "Single Disc": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118755
+            },
+            "Twin Disc": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121757
             }
           },
           "Triumph Speed 400": {
@@ -3526,6 +5599,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 99000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 104500
+            },
+            "Bluetooth": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 109000
             }
           }
         }
@@ -4320,10 +6407,6 @@ class VehicleData {
         },
       },
       "BattRE": {
-        "2015": {},
-        "2016": {},
-        "2017": {},
-        "2018": {},
         "2019": {
           "Electric IOT": {
             "Standard": {
@@ -4551,6 +6634,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 71500
+            },
+            "Plus": {
+              "bodyType": "Scooter",
+              "watt": "1200 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 75000
             }
           }
         }
@@ -4565,6 +6655,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 64151
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 58940
             }
           },
           "Falcon": {
@@ -4574,6 +6671,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 69540
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 64320
             }
           },
           "Icon": {
@@ -4583,6 +6687,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 65470
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 60250
             }
           }
         },
@@ -4594,6 +6705,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 65800
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 60500
             }
           },
           "Falcon": {
@@ -4603,6 +6721,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 71200
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 66000
             }
           },
           "Icon": {
@@ -4612,6 +6737,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 67000
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 61700
             }
           },
           "Aura": {
@@ -4632,6 +6764,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 67400
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 62100
             }
           },
           "Falcon": {
@@ -4641,6 +6780,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 72900
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 67700
             }
           },
           "Icon": {
@@ -4650,6 +6796,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 68600
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 63300
             }
           },
           "Aura": {
@@ -4670,6 +6823,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 69100
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 63800
             }
           },
           "Falcon": {
@@ -4679,6 +6839,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 74700
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 69400
             }
           },
           "Icon": {
@@ -4688,6 +6855,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 70300
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 64900
             }
           },
           "Aura": {
@@ -4697,6 +6871,15 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 103500
+            }
+          },
+          "Vespa": {
+            "Standard": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 69999
             }
           }
         },
@@ -4708,6 +6891,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 70800
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 65500
             }
           },
           "Falcon": {
@@ -4717,6 +6907,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 76500
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 71100
             }
           },
           "Icon": {
@@ -4726,6 +6923,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 72000
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 66600
             }
           },
           "Aura": {
@@ -4746,6 +6950,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 72500
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 67200
             }
           },
           "Falcon": {
@@ -4755,6 +6966,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 78300
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 72800
             }
           },
           "Icon": {
@@ -4764,6 +6982,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 73700
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 68300
             }
           },
           "Aura": {
@@ -4784,6 +7009,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 74300
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 68900
             }
           },
           "Falcon": {
@@ -4793,6 +7025,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 80200
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 74600
             }
           },
           "Icon": {
@@ -4802,6 +7041,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 75500
+            },
+            "Lead Acid": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 70100
             }
           },
           "Aura": {
@@ -4811,6 +7057,15 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 111300
+            }
+          },
+          "FLT Plus": {
+            "Standard": {
+              "bodyType": "Scooter",
+              "watt": "250 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 74211
             }
           }
         }
@@ -4905,21 +7160,42 @@ class VehicleData {
             }
           },
           "D15": {
-            "Standard": {
+            "i": {
               "bodyType": "Scooter",
               "watt": "1500 W",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 102500
+              "exShowroom": 146191
+            },
+            "Pro": {
+              "bodyType": "Scooter",
+              "watt": "1500 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 159191
             }
           },
-          "C12i EX": {
-            "Standard": {
+          "C12i": {
+            "EX": {
               "bodyType": "Scooter",
               "watt": "2500 W",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 99999
+              "exShowroom": 99990
+            },
+            "Max 2.0": {
+              "bodyType": "Scooter",
+              "watt": "2500 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 122992
+            },
+            "Max 3.0": {
+              "bodyType": "Scooter",
+              "watt": "2500 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 129990
             }
           }
         },
@@ -4943,30 +7219,58 @@ class VehicleData {
             }
           },
           "D15": {
-            "Standard": {
+            "i": {
               "bodyType": "Scooter",
               "watt": "1500 W",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 105000
+              "exShowroom": 147125
+            },
+            "Pro": {
+              "bodyType": "Scooter",
+              "watt": "1500 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 160125
             }
           },
-          "C12i EX": {
-            "Standard": {
+          "C12i": {
+            "EX": {
               "bodyType": "Scooter",
               "watt": "2500 W",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowRoom": 102500
+              "exShowroom": 102500
+            },
+            "Max 2.0": {
+              "bodyType": "Scooter",
+              "watt": "2500 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 125500
+            },
+            "Max 3.0": {
+              "bodyType": "Scooter",
+              "watt": "2500 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 132500
             }
           },
           "RUV 350": {
-            "Standard": {
+            "i EX": {
               "bodyType": "Scooter",
               "watt": "3500 W",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 109999
+              "exShowroom": 119990
+            },
+            "Max": {
+              "bodyType": "Scooter",
+              "watt": "3500 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 139990
             }
           }
         },
@@ -4990,39 +7294,58 @@ class VehicleData {
             }
           },
           "D15": {
-            "Standard": {
+            "i": {
               "bodyType": "Scooter",
               "watt": "1500 W",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 107500
+              "exShowroom": 150000
+            },
+            "Pro": {
+              "bodyType": "Scooter",
+              "watt": "1500 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 163000
             }
           },
-          "C12i EX": {
-            "Standard": {
+          "C12i": {
+            "EX": {
               "bodyType": "Scooter",
               "watt": "2500 W",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowRoom": 105000
+              "exShowroom": 105000
+            },
+            "Max 2.0": {
+              "bodyType": "Scooter",
+              "watt": "2500 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 128500
+            },
+            "Max 3.0": {
+              "bodyType": "Scooter",
+              "watt": "2500 W",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 135500
             }
           },
           "RUV 350": {
-            "Standard": {
+            "i EX": {
               "bodyType": "Scooter",
               "watt": "3500 W",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 112700
-            }
-          },
-          "C12 Max": {
-            "Standard": {
+              "exShowroom": 122700
+            },
+            "Max": {
               "bodyType": "Scooter",
-              "watt": "2500 W",
+              "watt": "3500 W",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 99990
+              "exShowroom": 143400
             }
           }
         }
@@ -5490,16 +7813,23 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 1738911
-            }
-          },
-          "R 1200 R": {
-            "Standard": {
+            },
+            "PRO": {
               "bodyType": "Naked",
               "cc": 1170,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 1504985
             }
+          },
+          "R 1200 R": {
+            "PRO": {
+              "bodyType": "Naked",
+              "cc": 1170,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1504985
+            },
           },
           "R 1200 RS": {
             "Standard": {
@@ -5522,7 +7852,7 @@ class VehicleData {
             }
           },
           "R 1200 R": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Naked",
               "cc": 1170,
               "fuelType": "Petrol",
@@ -5551,7 +7881,7 @@ class VehicleData {
             }
           },
           "R 1200 R": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Naked",
               "cc": 1170,
               "fuelType": "Petrol",
@@ -5607,7 +7937,7 @@ class VehicleData {
             }
           },
           "R 1200 R": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Naked",
               "cc": 1170,
               "fuelType": "Petrol",
@@ -5679,7 +8009,7 @@ class VehicleData {
             }
           },
           "F 850 GS": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Tourer",
               "cc": 853,
               "fuelType": "Petrol",
@@ -5699,7 +8029,7 @@ class VehicleData {
             }
           },
           "R 1200 R": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Naked",
               "cc": 1170,
               "fuelType": "Petrol",
@@ -5771,7 +8101,7 @@ class VehicleData {
             }
           },
           "F 850 GS": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Tourer",
               "cc": 853,
               "fuelType": "Petrol",
@@ -5800,7 +8130,7 @@ class VehicleData {
             }
           },
           "R 1200 R": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Naked",
               "cc": 1170,
               "fuelType": "Petrol",
@@ -5872,7 +8202,7 @@ class VehicleData {
             }
           },
           "F 850 GS": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Tourer",
               "cc": 853,
               "fuelType": "Petrol",
@@ -5901,7 +8231,7 @@ class VehicleData {
             }
           },
           "R 1200 R": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Naked",
               "cc": 1170,
               "fuelType": "Petrol",
@@ -5973,7 +8303,7 @@ class VehicleData {
             }
           },
           "F 850 GS": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Tourer",
               "cc": 853,
               "fuelType": "Petrol",
@@ -6011,7 +8341,7 @@ class VehicleData {
             }
           },
           "R 1200 R": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Naked",
               "cc": 1170,
               "fuelType": "Petrol",
@@ -6083,7 +8413,7 @@ class VehicleData {
             }
           },
           "F 850 GS": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Tourer",
               "cc": 853,
               "fuelType": "Petrol",
@@ -6130,7 +8460,7 @@ class VehicleData {
             }
           },
           "R 1200 R": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Naked",
               "cc": 1170,
               "fuelType": "Petrol",
@@ -6202,7 +8532,7 @@ class VehicleData {
             }
           },
           "F 850 GS": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Tourer",
               "cc": 853,
               "fuelType": "Petrol",
@@ -6256,7 +8586,7 @@ class VehicleData {
             }
           },
           "F 900 XR": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Sport",
               "cc": 895,
               "fuelType": "Petrol",
@@ -6276,7 +8606,7 @@ class VehicleData {
             }
           },
           "R 1200 R": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Naked",
               "cc": 1170,
               "fuelType": "Petrol",
@@ -6348,7 +8678,7 @@ class VehicleData {
             }
           },
           "F 850 GS": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Tourer",
               "cc": 853,
               "fuelType": "Petrol",
@@ -6402,7 +8732,7 @@ class VehicleData {
             }
           },
           "F 900 XR": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Sport",
               "cc": 895,
               "fuelType": "Petrol",
@@ -6431,7 +8761,7 @@ class VehicleData {
             }
           },
           "R 1200 R": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Naked",
               "cc": 1170,
               "fuelType": "Petrol",
@@ -6503,7 +8833,7 @@ class VehicleData {
             }
           },
           "F 850 GS": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Tourer",
               "cc": 853,
               "fuelType": "Petrol",
@@ -6557,7 +8887,7 @@ class VehicleData {
             }
           },
           "F 900 XR": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Sport",
               "cc": 895,
               "fuelType": "Petrol",
@@ -6575,7 +8905,7 @@ class VehicleData {
             }
           },
           "R 1300 GS": {
-            "Standard": {
+            "PRO": {
               "bodyType": "Adventure Tourer",
               "cc": 1300,
               "fuelType": "Petrol",
@@ -6734,12 +9064,19 @@ class VehicleData {
       "Brixton": {
         "2024": {
           "Crossfire 500 X": {
-            "Standard": {
+            "X": {
               "bodyType": "Naked",
               "cc": 486,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 474000
+            },
+            "XC": {
+              "bodyType": "Scrambler",
+              "cc": 486,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 519000
             }
           },
           "Crossfire 500 XC": {
@@ -6758,6 +9095,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 784000
+            },
+            "X": {
+              "bodyType": "Scrambler",
+              "cc": 1222,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 910000
             }
           },
           "Cromwell 1200 X": {
@@ -6772,12 +9116,19 @@ class VehicleData {
         },
         "2025": {
           "Crossfire 500 X": {
-            "Standard": {
+            "X": {
               "bodyType": "Naked",
               "cc": 486,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 474000
+            },
+            "XC": {
+              "bodyType": "Scrambler",
+              "cc": 486,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 519000
             }
           },
           "Crossfire 500 XC": {
@@ -6796,6 +9147,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 784000
+            },
+            "X": {
+              "bodyType": "Scrambler",
+              "cc": 1222,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 910000
             }
           },
           "Cromwell 1200 X": {
@@ -6821,7 +9179,7 @@ class VehicleData {
       "Carberry": {
         "2017": {
           "Double Barrel 1000": {
-            "Standard": {
+            "100CC": {
               "bodyType": "Cruiser",
               "cc": 1000,
               "fuelType": "Petrol",
@@ -6832,7 +9190,7 @@ class VehicleData {
         },
         "2018": {
           "Double Barrel 1000": {
-            "Standard": {
+            "100CC": {
               "bodyType": "Cruiser",
               "cc": 1000,
               "fuelType": "Petrol",
@@ -6843,7 +9201,7 @@ class VehicleData {
         },
         "2019": {
           "Double Barrel 1000": {
-            "Standard": {
+            "100CC": {
               "bodyType": "Cruiser",
               "cc": 1000,
               "fuelType": "Petrol",
@@ -6854,7 +9212,7 @@ class VehicleData {
         },
         "2020": {
           "Double Barrel 1000": {
-            "Standard": {
+            "100CC": {
               "bodyType": "Cruiser",
               "cc": 1000,
               "fuelType": "Petrol",
@@ -6865,7 +9223,7 @@ class VehicleData {
         },
         "2021": {
           "Double Barrel 1000": {
-            "Standard": {
+            "100CC": {
               "bodyType": "Cruiser",
               "cc": 1000,
               "fuelType": "Petrol",
@@ -6876,7 +9234,7 @@ class VehicleData {
         },
         "2022": {
           "Double Barrel 1000": {
-            "Standard": {
+            "100CC": {
               "bodyType": "Cruiser",
               "cc": 1000,
               "fuelType": "Petrol",
@@ -6887,7 +9245,7 @@ class VehicleData {
         },
         "2023": {
           "Double Barrel 1000": {
-            "Standard": {
+            "100CC": {
               "bodyType": "Cruiser",
               "cc": 1000,
               "fuelType": "Petrol",
@@ -6898,7 +9256,7 @@ class VehicleData {
         },
         "2024": {
           "Double Barrel 1000": {
-            "Standard": {
+            "100CC": {
               "bodyType": "Cruiser",
               "cc": 1000,
               "fuelType": "Petrol",
@@ -6909,7 +9267,7 @@ class VehicleData {
         },
         "2025": {
           "Double Barrel 1000": {
-            "Standard": {
+            "100CC": {
               "bodyType": "Cruiser",
               "cc": 1000,
               "fuelType": "Petrol",
@@ -6989,12 +9347,19 @@ class VehicleData {
             }
           },
           "Trueno": {
-            "Standard": {
+            "48V 32AH": {
               "bodyType": "Scooter",
               "watt": 500,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 71315
+            },
+            "60V 28AH": {
+              "bodyType": "Scooter",
+              "watt": 500,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 75000
             }
           },
           "Mysta": {
@@ -7054,12 +9419,19 @@ class VehicleData {
             }
           },
           "Trueno": {
-            "Standard": {
+            "48V 32AH": {
               "bodyType": "Scooter",
               "watt": 500,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 73454
+              "exShowroom": 71315
+            },
+            "60V 28AH": {
+              "bodyType": "Scooter",
+              "watt": 500,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 75000
             }
           },
           "Mysta": {
@@ -7398,81 +9770,137 @@ class VehicleData {
       "Crayon": {
         "2019": {
           "Envy": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 53000
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 64000
             }
           },
           "Zeez": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 48000
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 58000
             }
           }
         },
         "2020": {
           "Envy": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 54590
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 65920
             }
           },
           "Zeez": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 49440
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 59744
             }
           }
         },
         "2021": {
           "Envy": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 56228
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 67898
             }
           },
           "Zeez": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 50923
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 61536
             }
           }
         },
         "2022": {
           "Envy": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 58307
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 71575
             }
           },
           "Zeez": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 51760
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 64075
             }
           },
           "Snow+": {
@@ -7487,21 +9915,35 @@ class VehicleData {
         },
         "2023": {
           "Envy": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 59577
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 73364
             }
           },
           "Zeez": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 53313
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 65920
             }
           },
           "Snow+": {
@@ -7516,21 +9958,35 @@ class VehicleData {
         },
         "2024": {
           "Envy": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 61364
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 75565
             }
           },
           "Zeez": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 54912
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 67898
             }
           },
           "Snow+": {
@@ -7545,21 +10001,35 @@ class VehicleData {
         },
         "2025": {
           "Envy": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 63205
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 77832
             }
           },
           "Zeez": {
-            "Standard": {
+            "VRLA": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 56559
+            },
+            "Lithium-ion": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 69935
             }
           },
           "Snow+": {
@@ -7709,6 +10179,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 47000
+            },
+            "PLUS": {
+              "bodyType": "Scooter",
+              "watt": "BLDC Hub",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 49000
             }
           },
           "BRD": {
@@ -7738,6 +10215,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 48410
+            },
+            "PLUS": {
+              "bodyType": "Scooter",
+              "watt": "BLDC Hub",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 49000
             }
           },
           "BRD": {
@@ -7785,6 +10269,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 49862
+            },
+            "PLUS": {
+              "bodyType": "Scooter",
+              "watt": "BLDC Hub",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 49000
             }
           },
           "BRD": {
@@ -7819,7 +10310,7 @@ class VehicleData {
       "Dao": {
         "2021": {
           "Model 703": {
-            "Standard": {
+            "30AH": {
               "bodyType": "Scooter",
               "watt": 2500,
               "fuelType": "Electric",
@@ -7828,7 +10319,7 @@ class VehicleData {
             }
           },
           "Vidyut 108": {
-            "Standard": {
+            "20AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
@@ -7837,18 +10328,25 @@ class VehicleData {
             }
           },
           "ZOR 405": {
-            "Standard": {
+            "20AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 88000
+            },
+            "Z": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 115000
             }
           }
         },
         "2022": {
           "Model 703": {
-            "Standard": {
+            "30AH": {
               "bodyType": "Scooter",
               "watt": 2500,
               "fuelType": "Electric",
@@ -7857,7 +10355,7 @@ class VehicleData {
             }
           },
           "Vidyut 108": {
-            "Standard": {
+            "20AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
@@ -7866,18 +10364,25 @@ class VehicleData {
             }
           },
           "ZOR 405": {
-            "Standard": {
+            "20AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 90640
+            },
+            "Z": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 118450
             }
           }
         },
         "2023": {
           "Model 703": {
-            "Standard": {
+            "30AH": {
               "bodyType": "Scooter",
               "watt": 2500,
               "fuelType": "Electric",
@@ -7886,7 +10391,7 @@ class VehicleData {
             }
           },
           "Vidyut 108": {
-            "Standard": {
+            "20AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
@@ -7895,18 +10400,25 @@ class VehicleData {
             }
           },
           "ZOR 405": {
-            "Standard": {
+            "20AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 93359
+            },
+            "Z": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 122003
             }
           }
         },
         "2024": {
           "Model 703": {
-            "Standard": {
+            "30AH": {
               "bodyType": "Scooter",
               "watt": 2500,
               "fuelType": "Electric",
@@ -7915,7 +10427,7 @@ class VehicleData {
             }
           },
           "Vidyut 108": {
-            "Standard": {
+            "20AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
@@ -7924,27 +10436,34 @@ class VehicleData {
             }
           },
           "ZOR 405": {
-            "Standard": {
+            "20AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 96159
+            },
+            "Z": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 125663
             }
           }
         },
         "2025": {
           "Model 703": {
-            "Standard": {
+            "30AH": {
               "bodyType": "Scooter",
               "watt": 2500,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 126487
+              "exShowroom": 99999
             }
           },
           "Vidyut 108": {
-            "Standard": {
+            "20AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
@@ -7953,12 +10472,19 @@ class VehicleData {
             }
           },
           "ZOR 405": {
-            "Standard": {
+            "20AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 89184
+            },
+            "Z": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 118697
             }
           }
         }
@@ -7966,43 +10492,71 @@ class VehicleData {
       "Deltic": {
         "2021": {
           "Drixx": {
-            "Standard": {
+            "Lead Acid": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 64990
+            },
+            "LFP": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 91990
             }
           }
         },
         "2022": {
           "Drixx": {
-            "Standard": {
+            "Lead Acid": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 66939
+            },
+            "LFP": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 93900
             }
           }
         },
         "2023": {
           "Drixx": {
-            "Standard": {
+            "Lead Acid": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 68947
+            },
+            "LFP": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 95800
             }
           },
           "Legion": {
-            "Standard": {
+            "Lead Acid": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 69490
+            },
+            "LFP": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 95990
             }
           },
           "ZGS": {
@@ -8026,21 +10580,35 @@ class VehicleData {
         },
         "2024": {
           "Drixx": {
-            "Standard": {
+            "Lead Acid": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 71015
+            },
+            "LFP": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 98670
             }
           },
           "Legion": {
-            "Standard": {
+            "Lead Acid": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 71575
+            },
+            "LFP": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 98870
             }
           },
           "ZGS": {
@@ -8049,7 +10617,7 @@ class VehicleData {
               "watt": 2000,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowRoom": 105060
+              "exShowroom": 105060
             }
           },
           "Trento": {
@@ -8064,21 +10632,35 @@ class VehicleData {
         },
         "2025": {
           "Drixx": {
-            "Standard": {
+            "Lead Acid": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 73145
+            },
+            "LFP": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 101630
             }
           },
           "Legion": {
-            "Standard": {
+            "Lead Acid": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 73722
+            },
+            "LFP": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 101840
             }
           },
           "ZGS": {
@@ -8087,7 +10669,7 @@ class VehicleData {
               "watt": 2000,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowRoom": 108212
+              "exShowroom": 108212
             }
           },
           "Trento": {
@@ -9311,6 +11893,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 76000
+            },
+            "Big battery": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 82000
             }
           },
           "Sprinto HS": {
@@ -9320,6 +11909,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 86000
+            },
+            "Big-battery": {
+              "bodyType": "Scooter",
+              "watt": 800,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 92000
             }
           },
           "Amery": {
@@ -9358,6 +11954,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 78280
+            },
+            "Big battery": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 82000
             }
           },
           "Sprinto HS": {
@@ -9367,6 +11970,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 88580
+            },
+            "Big-battery": {
+              "bodyType": "Scooter",
+              "watt": 800,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 92000
             }
           },
           "Amery": {
@@ -9405,6 +12015,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 80628
+            },
+            "Big battery": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 82000
             }
           },
           "Sprinto HS": {
@@ -9414,6 +12031,13 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 91237
+            },
+            "Big-battery": {
+              "bodyType": "Scooter",
+              "watt": 800,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 92000
             }
           },
           "Amery": {
@@ -9838,26 +12462,26 @@ class VehicleData {
       },
       "Eider": {
         "2015": {
-          "Ruddy": {
+          "150CC": {
             "Standard": {
               "bodyType": "Cruiser",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 54210
             }
           },
           "Dronzer": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75000
             }
           },
           "Etania": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
               "cc": 150,
               "fuelType": "Petrol",
@@ -9866,7 +12490,7 @@ class VehicleData {
             }
           },
           "Stoic": {
-            "Standard": {
+            "110CC": {
               "bodyType": "Commuter",
               "cc": 107,
               "fuelType": "Petrol",
@@ -9875,7 +12499,7 @@ class VehicleData {
             }
           },
           "Leora": {
-            "Standard": {
+            "125CC": {
               "bodyType": "Scooter",
               "cc": 125,
               "fuelType": "Petrol",
@@ -9886,25 +12510,25 @@ class VehicleData {
         },
         "2016": {
           "Ruddy": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Cruiser",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 54210
             }
           },
           "Dronzer": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75000
             }
           },
           "Etania": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
               "cc": 150,
               "fuelType": "Petrol",
@@ -9913,7 +12537,7 @@ class VehicleData {
             }
           },
           "Stoic": {
-            "Standard": {
+            "110CC": {
               "bodyType": "Commuter",
               "cc": 107,
               "fuelType": "Petrol",
@@ -9922,7 +12546,7 @@ class VehicleData {
             }
           },
           "Leora": {
-            "Standard": {
+            "125CC": {
               "bodyType": "Scooter",
               "cc": 125,
               "fuelType": "Petrol",
@@ -9942,25 +12566,25 @@ class VehicleData {
         },
         "2017": {
           "Ruddy": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Cruiser",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 54210
             }
           },
           "Dronzer": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75000
             }
           },
           "Etania": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
               "cc": 150,
               "fuelType": "Petrol",
@@ -9969,7 +12593,7 @@ class VehicleData {
             }
           },
           "Stoic": {
-            "Standard": {
+            "110CC": {
               "bodyType": "Commuter",
               "cc": 107,
               "fuelType": "Petrol",
@@ -9978,7 +12602,7 @@ class VehicleData {
             }
           },
           "Leora": {
-            "Standard": {
+            "125CC": {
               "bodyType": "Scooter",
               "cc": 125,
               "fuelType": "Petrol",
@@ -9998,25 +12622,25 @@ class VehicleData {
         },
         "2018": {
           "Ruddy": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Cruiser",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 54210
             }
           },
           "Dronzer": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75000
             }
           },
           "Etania": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
               "cc": 150,
               "fuelType": "Petrol",
@@ -10025,7 +12649,7 @@ class VehicleData {
             }
           },
           "Stoic": {
-            "Standard": {
+            "110CC": {
               "bodyType": "Commuter",
               "cc": 107,
               "fuelType": "Petrol",
@@ -10034,7 +12658,7 @@ class VehicleData {
             }
           },
           "Leora": {
-            "Standard": {
+            "125CC": {
               "bodyType": "Scooter",
               "cc": 125,
               "fuelType": "Petrol",
@@ -10054,25 +12678,25 @@ class VehicleData {
         },
         "2019": {
           "Ruddy": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Cruiser",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 54210
             }
           },
           "Dronzer": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75000
             }
           },
           "Etania": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
               "cc": 150,
               "fuelType": "Petrol",
@@ -10081,7 +12705,7 @@ class VehicleData {
             }
           },
           "Stoic": {
-            "Standard": {
+            "110CC": {
               "bodyType": "Commuter",
               "cc": 107,
               "fuelType": "Petrol",
@@ -10090,7 +12714,7 @@ class VehicleData {
             }
           },
           "Leora": {
-            "Standard": {
+            "125CC": {
               "bodyType": "Scooter",
               "cc": 125,
               "fuelType": "Petrol",
@@ -10110,25 +12734,25 @@ class VehicleData {
         },
         "2020": {
           "Ruddy": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Cruiser",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 54210
             }
           },
           "Dronzer": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75000
             }
           },
           "Etania": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
               "cc": 150,
               "fuelType": "Petrol",
@@ -10137,7 +12761,7 @@ class VehicleData {
             }
           },
           "Stoic": {
-            "Standard": {
+            "110CC": {
               "bodyType": "Commuter",
               "cc": 107,
               "fuelType": "Petrol",
@@ -10146,7 +12770,7 @@ class VehicleData {
             }
           },
           "Leora": {
-            "Standard": {
+            "125CC": {
               "bodyType": "Scooter",
               "cc": 125,
               "fuelType": "Petrol",
@@ -10166,25 +12790,25 @@ class VehicleData {
         },
         "2021": {
           "Ruddy": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Cruiser",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 54210
             }
           },
           "Dronzer": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75000
             }
           },
           "Etania": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
               "cc": 150,
               "fuelType": "Petrol",
@@ -10193,7 +12817,7 @@ class VehicleData {
             }
           },
           "Stoic": {
-            "Standard": {
+            "110CC": {
               "bodyType": "Commuter",
               "cc": 107,
               "fuelType": "Petrol",
@@ -10202,7 +12826,7 @@ class VehicleData {
             }
           },
           "Leora": {
-            "Standard": {
+            "125CC": {
               "bodyType": "Scooter",
               "cc": 125,
               "fuelType": "Petrol",
@@ -10222,7 +12846,7 @@ class VehicleData {
         },
         "2022": {
           "Ruddy": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Cruiser",
               "cc": 149,
               "fuelType": "Petrol",
@@ -10231,16 +12855,16 @@ class VehicleData {
             }
           },
           "Dronzer": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75000
             }
           },
           "Etania": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
               "cc": 150,
               "fuelType": "Petrol",
@@ -10249,7 +12873,7 @@ class VehicleData {
             }
           },
           "Stoic": {
-            "Standard": {
+            "110CC": {
               "bodyType": "Commuter",
               "cc": 107,
               "fuelType": "Petrol",
@@ -10258,7 +12882,7 @@ class VehicleData {
             }
           },
           "Leora": {
-            "Standard": {
+            "125CC": {
               "bodyType": "Scooter",
               "cc": 125,
               "fuelType": "Petrol",
@@ -10278,25 +12902,25 @@ class VehicleData {
         },
         "2023": {
           "Ruddy": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Cruiser",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 54210
             }
           },
           "Dronzer": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75000
             }
           },
           "Etania": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
               "cc": 150,
               "fuelType": "Petrol",
@@ -10305,7 +12929,7 @@ class VehicleData {
             }
           },
           "Stoic": {
-            "Standard": {
+            "110CC": {
               "bodyType": "Commuter",
               "cc": 107,
               "fuelType": "Petrol",
@@ -10314,7 +12938,7 @@ class VehicleData {
             }
           },
           "Leora": {
-            "Standard": {
+            "125CC": {
               "bodyType": "Scooter",
               "cc": 125,
               "fuelType": "Petrol",
@@ -10334,25 +12958,25 @@ class VehicleData {
         },
         "2024": {
           "Ruddy": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Cruiser",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 54210
             }
           },
           "Dronzer": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75000
             }
           },
           "Etania": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
               "cc": 150,
               "fuelType": "Petrol",
@@ -10361,7 +12985,7 @@ class VehicleData {
             }
           },
           "Stoic": {
-            "Standard": {
+            "110CC": {
               "bodyType": "Commuter",
               "cc": 107,
               "fuelType": "Petrol",
@@ -10370,7 +12994,7 @@ class VehicleData {
             }
           },
           "Leora": {
-            "Standard": {
+            "125CC": {
               "bodyType": "Scooter",
               "cc": 125,
               "fuelType": "Petrol",
@@ -10390,25 +13014,25 @@ class VehicleData {
         },
         "2025": {
           "Ruddy": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Cruiser",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 54210
             }
           },
           "Dronzer": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
-              "cc": 149,
+              "cc": 150,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 75000
             }
           },
           "Etania": {
-            "Standard": {
+            "150CC": {
               "bodyType": "Commuter",
               "cc": 150,
               "fuelType": "Petrol",
@@ -10417,7 +13041,7 @@ class VehicleData {
             }
           },
           "Stoic": {
-            "Standard": {
+            "110CC": {
               "bodyType": "Commuter",
               "cc": 107,
               "fuelType": "Petrol",
@@ -10426,7 +13050,7 @@ class VehicleData {
             }
           },
           "Leora": {
-            "Standard": {
+            "125CC": {
               "bodyType": "Scooter",
               "cc": 125,
               "fuelType": "Petrol",
@@ -10996,12 +13620,19 @@ class VehicleData {
             }
           },
           "Ride": {
-            "Standard": {
+            "34 AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 67996
+            },
+            "39 AH": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 71000
             }
           }
         },
@@ -11016,12 +13647,19 @@ class VehicleData {
             }
           },
           "Ride": {
-            "Standard": {
+            "34 AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 70036
+            },
+            "39 AH": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 73136
             }
           },
           "Mighty": {
@@ -11063,12 +13701,19 @@ class VehicleData {
             }
           },
           "Ride": {
-            "Standard": {
+            "34 AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 72137
+            },
+            "39 AH": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 75337
             }
           },
           "Mighty": {
@@ -11110,12 +13755,19 @@ class VehicleData {
             }
           },
           "Ride": {
-            "Standard": {
+            "34 AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 74301
+            },
+            "39 AH": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 77697
             }
           },
           "Mighty": {
@@ -11157,12 +13809,19 @@ class VehicleData {
             }
           },
           "Ride": {
-            "Standard": {
+            "34 AH": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 76529
+            },
+            "39 AH": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 80028
             }
           },
           "Mighty": {
@@ -11688,15 +14347,43 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 79990
+            },
+            "Pro": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 86990
             }
           },
           "Warrior 5G": {
-            "Standard": {
+            "Nano": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 62999
+            },
+            "Lite": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 74990
+            },
+            "Plus": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 77990
+            },
+            "Pro": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 99990
             }
           },
           "Sniper 5G": {
@@ -11706,6 +14393,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 52990
+            },
+            "Nano": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 59999
+            },
+            "Lite": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 69990
             }
           }
         },
@@ -11735,15 +14436,43 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 82389
+            },
+            "Pro": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 89599
             }
           },
           "Warrior 5G": {
-            "Standard": {
+            "Nano": {
               "bodyType": "Scooter",
               "watt": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 64889
+            },
+            "Lite": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 77239
+            },
+            "Plus": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 80329
+            },
+            "Pro": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 102989
             }
           },
           "Sniper 5G": {
@@ -11753,6 +14482,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 54579
+            },
+            "Nano": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 61799
+            },
+            "Lite": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 72089
             }
           }
         }
@@ -16297,7 +19040,7 @@ class VehicleData {
               "watt": 2500,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": null
+              "exShowroom": 100000
             }
           }
         },
@@ -16344,7 +19087,7 @@ class VehicleData {
               "watt": 2500,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": null
+              "exShowroom": 100000
             }
           }
         },
@@ -16391,7 +19134,7 @@ class VehicleData {
               "watt": 2500,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": null
+              "exShowroom": 100000
             }
           }
         },
@@ -16438,7 +19181,7 @@ class VehicleData {
               "watt": 2500,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": null
+              "exShowroom": 100000
             }
           }
         },
@@ -16485,7 +19228,7 @@ class VehicleData {
               "watt": 2500,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": null
+              "exShowroom": 100000
             }
           }
         }
@@ -17219,6 +19962,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 84360
+            },
+            "Basic": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 81999
+            },
+            "Extended": {
+              "bodyType": "Scooter",
+              "watt": 2000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 97504
             }
           },
           "OXO": {
@@ -17228,6 +19985,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 124999
+            },
+            "Prime": {
+              "bodyType": "Commuter Bike",
+              "watt": 4200,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 133499
+            },
+            "X": {
+              "bodyType": "Commuter Bike",
+              "watt": 6000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 160999
             }
           }
         },
@@ -17239,6 +20010,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 86890
+            },
+            "Basic": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 84450
+            },
+            "Extended": {
+              "bodyType": "Scooter",
+              "watt": 2000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 99450
             }
           },
           "OXO": {
@@ -17248,6 +20033,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 128750
+            },
+            "Prime": {
+              "bodyType": "Commuter Bike",
+              "watt": 4200,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 137400
+            },
+            "X": {
+              "bodyType": "Commuter Bike",
+              "watt": 6000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 164000
             }
           }
         },
@@ -17259,6 +20058,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 89500
+            },
+            "Basic": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 87000
+            },
+            "Extended": {
+              "bodyType": "Scooter",
+              "watt": 2000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 102400
             }
           },
           "OXO": {
@@ -17268,6 +20081,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 132000
+            },
+            "Prime": {
+              "bodyType": "Commuter Bike",
+              "watt": 4200,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 140000
+            },
+            "X": {
+              "bodyType": "Commuter Bike",
+              "watt": 6000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 167000
             }
           }
         },
@@ -17279,6 +20106,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 92200
+            },
+            "Basic": {
+              "bodyType": "Scooter",
+              "watt": 250,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 89800
+            },
+            "Extended": {
+              "bodyType": "Scooter",
+              "watt": 2000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 105400
             }
           },
           "OXO": {
@@ -17288,6 +20129,20 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 136000
+            },
+            "Prime": {
+              "bodyType": "Commuter Bike",
+              "watt": 4200,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 144000
+            },
+            "X": {
+              "bodyType": "Commuter Bike",
+              "watt": 6000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 171000
             }
           }
         }
@@ -17877,283 +20732,6 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 98000
-            }
-          }
-        }
-      },
-      "Jawa": {
-        "2018": {
-          "Jawa": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 293,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 164000
-            }
-          },
-          "Jawa 42": {
-            "Standard": {
-              "bodyType": "Roadster",
-              "cc": 293,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 155000
-            }
-          }
-        },
-        "2019": {
-          "Jawa": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 293,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 172000
-            }
-          },
-          "Jawa 42": {
-            "Standard": {
-              "bodyType": "Roadster",
-              "cc": 293,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 163000
-            }
-          },
-          "Jawa Perak": {
-            "Standard": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 194500
-            }
-          }
-        },
-        "2020": {
-          "Jawa": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 293,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 172000
-            }
-          },
-          "Jawa 42": {
-            "Standard": {
-              "bodyType": "Roadster",
-              "cc": 293,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 163000
-            }
-          },
-          "Jawa Perak": {
-            "Standard": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 194500
-            }
-          }
-        },
-        "2021": {
-          "Jawa": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 293,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 172000
-            }
-          },
-          "Jawa 42": {
-            "Standard": {
-              "bodyType": "Roadster",
-              "cc": 293,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 163000
-            }
-          },
-          "Jawa Perak": {
-            "Standard": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 194500
-            }
-          }
-        },
-        "2022": {
-          "Jawa": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 293,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 182000
-            }
-          },
-          "Jawa 42": {
-            "Standard": {
-              "bodyType": "Roadster",
-              "cc": 294.72,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 175000
-            }
-          },
-          "Jawa 42 Bobber": {
-            "Standard": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 206000
-            }
-          },
-          "Jawa Perak": {
-            "Standard": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 209000
-            }
-          }
-        },
-        "2023": {
-          "Jawa": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 293,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 182000
-            }
-          },
-          "Jawa 42": {
-            "Standard": {
-              "bodyType": "Roadster",
-              "cc": 294.72,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 175000
-            }
-          },
-          "Jawa 42 Bobber": {
-            "Standard": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 206000
-            }
-          },
-          "Jawa Perak": {
-            "Standard": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 209000
-            }
-          }
-        },
-        "2024": {
-          "Jawa 350": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 214950
-            }
-          },
-          "Jawa 42": {
-            "Standard": {
-              "bodyType": "Roadster",
-              "cc": 294.72,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 190000
-            }
-          },
-          "Jawa 42 Bobber": {
-            "Standard": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 212500
-            }
-          },
-          "Jawa Perak": {
-            "Standard": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 216000
-            }
-          }
-        },
-        "2025": {
-          "Jawa 350": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 221000
-            }
-          },
-          "Jawa 42": {
-            "Standard": {
-              "bodyType": "Roadster",
-              "cc": 294.72,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 198000
-            }
-          },
-          "Jawa 42 Bobber": {
-            "Standard": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 220000
-            },
-            "Black Mirror": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 235000
-            }
-          },
-          "Jawa 42 FJ": {
-            "Standard": {
-              "bodyType": "Scrambler",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 210000
-            }
-          },
-          "Jawa Perak": {
-            "Standard": {
-              "bodyType": "Bobber",
-              "cc": 334,
-              "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 217000
             }
           }
         }
@@ -19267,232 +21845,6 @@ class VehicleData {
           }
         }
       },
-      "Keeway": {
-        "2022": {
-          "K-Light 250V": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 249000
-            }
-          },
-          "Vieste 300": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "cc": 278,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 325000
-            }
-          },
-          "Sixties 300i": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "cc": 278,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 330000
-            }
-          },
-          "K300 N": {
-            "Standard": {
-              "bodyType": "Naked",
-              "cc": 292,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 265000
-            }
-          },
-          "K300 R": {
-            "Standard": {
-              "bodyType": "Sports",
-              "cc": 292,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 299000
-            }
-          },
-          "V302C": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 298,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 389000
-            }
-          }
-        },
-        "2023": {
-          "K-Light 250V": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 255000
-            }
-          },
-          "Vieste 300": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "cc": 278,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 325000
-            }
-          },
-          "Sixties 300i": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "cc": 278,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 330000
-            }
-          },
-          "V302C": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 298,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 429000
-            }
-          },
-          "SR 125": {
-            "Standard": {
-              "bodyType": "Street",
-              "cc": 125,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 119000
-            }
-          },
-          "SR 250": {
-            "Standard": {
-              "bodyType": "Street",
-              "cc": 223,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 149000
-            }
-          }
-        },
-        "2024": {
-          "K-Light 250V": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 255000
-            }
-          },
-          "Vieste 300": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "cc": 278,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 325000
-            }
-          },
-          "Sixties 300i": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "cc": 278,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 330000
-            }
-          },
-          "V302C": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 298,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 429000
-            }
-          },
-          "SR 125": {
-            "Standard": {
-              "bodyType": "Street",
-              "cc": 125,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 120000
-            }
-          },
-          "SR 250": {
-            "Standard": {
-              "bodyType": "Street",
-              "cc": 223,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 150000
-            }
-          }
-        },
-        "2025": {
-          "K-Light 250V": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 249000
-            }
-          },
-          "Vieste 300": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "cc": 278,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 325000
-            }
-          },
-          "Sixties 300i": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "cc": 278,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 330000
-            }
-          },
-          "V302C": {
-            "Standard": {
-              "bodyType": "Cruiser",
-              "cc": 298,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 429000
-            }
-          },
-          "SR 125": {
-            "Standard": {
-              "bodyType": "Street",
-              "cc": 125,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 123000
-            }
-          },
-          "SR 250": {
-            "Standard": {
-              "bodyType": "Street",
-              "cc": 223,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 152000
-            }
-          }
-        }
-      },
       "Kick": {
         "2024": {
           "Stallion": {
@@ -19516,12 +21868,19 @@ class VehicleData {
             }
           },
           "Smassh": {
-            "Standard": {
+            "72V 35AH": {
               "bodyType": "Scooter",
               "watt": 3000,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 125000
+              "exShowroom": 150320
+            },
+            "72V 51AH": {
+              "bodyType": "Scooter",
+              "watt": 3000,
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 170570
             }
           }
         }
@@ -19663,270 +22022,6 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 111000
-            }
-          }
-        }
-      },
-      "Komaki": {
-        "2021": {
-          "XGT KM": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 56890
-            }
-          },
-          "XGT X5": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 90000
-            }
-          },
-          "SE": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 96000
-            }
-          }
-        },
-        "2022": {
-          "XGT KM": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 62000
-            }
-          },
-          "XGT X5": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 100746
-            }
-          },
-          "SE": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 98000
-            }
-          },
-          "Ranger": {
-            "Standard": {
-              "bodyType": "Cruiser Bike",
-              "watt": 4000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 134999
-            }
-          },
-          "Venice": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 110000
-            }
-          }
-        },
-        "2023": {
-          "XGT KM": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 65000
-            }
-          },
-          "XGT X5": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 102000
-            }
-          },
-          "SE": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 100000
-            }
-          },
-          "Ranger": {
-            "Standard": {
-              "bodyType": "Cruiser Bike",
-              "watt": 4000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 140000
-            }
-          },
-          "Venice": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 115000
-            }
-          },
-          "Venice Eco": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 77000
-            }
-          }
-        },
-        "2024": {
-          "XGT KM": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 68000
-            }
-          },
-          "XGT X5": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 105000
-            }
-          },
-          "SE": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 102000
-            }
-          },
-          "Ranger": {
-            "Standard": {
-              "bodyType": "Cruiser Bike",
-              "watt": 4000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 145000
-            }
-          },
-          "Venice": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 118000
-            }
-          },
-          "Venice Eco": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 79000
-            }
-          },
-          "DT 3000": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 112000
-            }
-          }
-        },
-        "2025": {
-          "XGT KM": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 70000
-            }
-          },
-          "XGT X5": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 108000
-            }
-          },
-          "SE": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 104000
-            }
-          },
-          "Ranger": {
-            "Standard": {
-              "bodyType": "Cruiser Bike",
-              "watt": 4000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 148000
-            }
-          },
-          "Venice": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 120000
-            }
-          },
-          "Venice Eco": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 81000
-            }
-          },
-          "DT 3000": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 3000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 115000
             }
           }
         }
@@ -24021,63 +26116,6 @@ class VehicleData {
               "exShowroom": 103000
             }
           }
-        },
-        "2026": {
-          "S1 Pro": {
-            "Gen 2": {
-              "bodyType": "Scooter",
-              "watt": 11000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 164000
-            }
-          },
-          "S1 Air": {
-            "2kWh": {
-              "bodyType": "Scooter",
-              "watt": 4500,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 94000
-            },
-            "3kWh": {
-              "bodyType": "Scooter",
-              "watt": 4500,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 108000
-            },
-            "4kWh": {
-              "bodyType": "Scooter",
-              "watt": 4500,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 118000
-            }
-          },
-          "S1 X": {
-            "2kWh": {
-              "bodyType": "Scooter",
-              "watt": 6000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 86000
-            },
-            "3kWh": {
-              "bodyType": "Scooter",
-              "watt": 6000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 96000
-            },
-            "4kWh": {
-              "bodyType": "Scooter",
-              "watt": 6000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 106000
-            }
-          }
         }
       },
       "Omega Seiki": {
@@ -24140,26 +26178,6 @@ class VehicleData {
               "exShowroom": 81000
             }
           }
-        },
-        "2026": {
-          "Mopido": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 2000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 92000
-            }
-          },
-          "Sharq": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 250,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 84000
-            }
-          }
         }
       },
       "One Electric": {
@@ -24215,17 +26233,6 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 141000
-            }
-          }
-        },
-        "2026": {
-          "Kridn": {
-            "Standard": {
-              "bodyType": "Motorcycle",
-              "watt": 5500,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 144000
             }
           }
         }
@@ -24525,7 +26532,6 @@ class VehicleData {
           }
         }
       },
-      "Power EV": {},
       "Prevail": {
         "2021": {
           "Wolfury": {
@@ -24671,38 +26677,8 @@ class VehicleData {
               "exShowroom": 141000
             }
           }
-        },
-        "2026": {
-          "Wolfury": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 104000
-            }
-          },
-          "Finesse": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 114000
-            }
-          },
-          "Elite": {
-            "Standard": {
-              "bodyType": "Scooter",
-              "watt": 1000,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 144000
-            }
-          }
         }
       },
-      "Prodigy": {},
       "Pure EV": {
         "2021": {
           "EPluto 7G": {
@@ -25476,6 +27452,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 115000
+            },
+            "Electra": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121000
             }
           },
           "Bullet 500": {
@@ -25494,6 +27477,27 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 130000
+            },
+            "Redditch": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 132000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 138000
+            },
+            "Desert Storm": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 135000
             }
           },
           "Classic 500": {
@@ -25503,6 +27507,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 165000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 178000
+            },
+            "Desert Storm": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 175000
             }
           },
           "Thunderbird 350": {
@@ -25541,6 +27559,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 118000
+            },
+            "Electra": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 124000
             }
           },
           "Bullet 500": {
@@ -25559,6 +27584,27 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 133000
+            },
+            "Redditch": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 135000
+            },
+            "Halcyon": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 139000
+            },
+            "Signals": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 142000
             }
           },
           "Classic 500": {
@@ -25568,6 +27614,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 168000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 181000
+            },
+            "Squadron Blue": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 178000
             }
           },
           "Thunderbird 350": {
@@ -25595,6 +27655,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 1,
               "exShowroom": 202000
+            },
+            "Black": {
+              "bodyType": "BIKE",
+              "cc": 535,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 204000
+            },
+            "Green": {
+              "bodyType": "BIKE",
+              "cc": 535,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 204000
             }
           },
           "Himalayan": {
@@ -25615,6 +27689,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 122000
+            },
+            "Electra": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 128000
             }
           },
           "Bullet 500": {
@@ -25633,6 +27714,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 136000
+            },
+            "Redditch": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 138000
             }
           },
           "Classic 500": {
@@ -25642,6 +27730,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 172000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 185000
+            },
+            "Desert Storm": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000
             }
           },
           "Thunderbird 350": {
@@ -25689,6 +27791,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 125000
+            },
+            "Electra": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 131000
             }
           },
           "Bullet 500": {
@@ -25707,6 +27816,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 140000
+            },
+            "Signals": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 162000
+            },
+            "Redditch": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 142000
             }
           },
           "Classic 500": {
@@ -25716,6 +27839,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 177000
+            },
+            "Pegasus": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 249000
             }
           },
           "Thunderbird 350": {
@@ -25725,6 +27855,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 135000
+            },
+            "350X": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 156000
             }
           },
           "Thunderbird 500": {
@@ -25734,6 +27871,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 180000
+            },
+            "500X": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 213000
             }
           },
           "Himalayan": {
@@ -25743,6 +27887,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 180000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 186000
             }
           },
           "Interceptor 650": {
@@ -25752,6 +27903,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 250000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 258000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 270000
             }
           },
           "Continental GT 650": {
@@ -25761,6 +27926,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 265000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 273000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 285000
             }
           }
         },
@@ -25772,6 +27951,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 130000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 138000
+            },
+            "ES (Electric Start)": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 142000
             }
           },
           "Bullet 500": {
@@ -25781,6 +27974,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 170000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 187000
             }
           },
           "Classic 350": {
@@ -25790,6 +27990,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 150000
+            },
+            "Signals Edition": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 162000
+            },
+            "Redditch ABS": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 153000
             }
           },
           "Classic 500": {
@@ -25799,6 +28013,27 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 182000
+            },
+            "Chrome ABS": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 212000
+            },
+            "Desert Storm ABS": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 205000
+            },
+            "Pegasus": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 249000
             }
           },
           "Thunderbird 350": {
@@ -25808,6 +28043,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 140000
+            },
+            "350X ABS": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 156000
             }
           },
           "Thunderbird 500": {
@@ -25817,6 +28059,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 185000
+            },
+            "500X ABS": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 213000
             }
           },
           "Himalayan": {
@@ -25826,6 +28075,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 190000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 195000
             }
           },
           "Interceptor 650": {
@@ -25835,6 +28091,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 260000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 268000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 280000
             }
           },
           "Continental GT 650": {
@@ -25844,6 +28114,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 275000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 283000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 295000
             }
           },
           "Bullet Trials 350": {
@@ -25873,6 +28157,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 127000
+            },
+            "ES (Electric Start)": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 132000
+            },
+            "Kick Start (KS) ABS": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 114620
             }
           },
           "Classic 350": {
@@ -25882,6 +28180,55 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 160000
+            },
+            "Single Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 145816
+            },
+            "Signals Edition": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 153708
+            },
+            "Redditch Edition": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 138644
+            },
+            "Gunmetal Grey (Spoke)": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 185287
+            },
+            "Gunmetal Grey (Alloy)": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 197874
+            },
+            "Stealth Black": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 201250
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 201250
             }
           },
           "Thunderbird 350": {
@@ -25891,6 +28238,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 145000
+            },
+            "350X Single Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 156581
+            },
+            "350X Dual Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 163544
             }
           },
           "Thunderbird 500": {
@@ -25900,6 +28261,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 190000
+            },
+            "500X": {
+              "bodyType": "BIKE",
+              "cc": 499,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 198604
             }
           },
           "Himalayan": {
@@ -25909,6 +28277,41 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 195000
+            },
+            "Sleet Grey": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 194155
+            },
+            "Gravel Grey": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 215900
+            },
+            "Granite Black": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 228490
+            },
+            "Rock Red": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 218339
+            },
+            "Lake Blue": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 218339
             }
           },
           "Interceptor 650": {
@@ -25918,6 +28321,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 270000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 317485
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 337873
             }
           },
           "Continental GT 650": {
@@ -25927,6 +28344,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 285000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 329000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 345000
             }
           },
           "Meteor 350": {
@@ -25961,15 +28392,43 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 133000
+            },
+            "ES (Electric Start)": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 140000
+            },
+            "Kick Start (KS) ABS": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 120000
             }
           },
-          "Classic 350": {
+          "Classic 350 (Old Gen)": {
             "Standard": {
               "bodyType": "BIKE",
               "cc": 346,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 175000
+            },
+            "Signals Edition": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000
+            },
+            "Gunmetal Grey (Spoke)": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 185000
             }
           },
           "Himalayan": {
@@ -25979,6 +28438,48 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 205000
+            },
+            "Mirage Silver": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 214519
+            },
+            "Gravel Grey": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 215900
+            },
+            "Lake Blue": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 218339
+            },
+            "Rock Red": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 218339
+            },
+            "Pine Green": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 222400
+            },
+            "Granite Black": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 228490
             }
           },
           "Interceptor 650": {
@@ -25988,6 +28489,48 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 285000
+            },
+            "Canyon Red": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 309551
+            },
+            "Cali Green": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 309551
+            },
+            "Sunset Strip": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 317728
+            },
+            "Black Ray": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 327943
+            },
+            "Barcelona Blue": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 327943
+            },
+            "Mark 2 (Chrome)": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 338158
             }
           },
           "Continental GT 650": {
@@ -25997,6 +28540,34 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 300000
+            },
+            "Rocker Red": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 319000
+            },
+            "British Racing Green": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 319000
+            },
+            "Dux Deluxe": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 329000
+            },
+            "Mister Clean (Chrome)": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 345000
             }
           },
           "Meteor 350": {
@@ -26023,19 +28594,40 @@ class VehicleData {
             }
           },
           "Classic 350 New Gen": {
-            "Single Channel ABS": {
+            "Single Channel ABS (Redditch)": {
               "bodyType": "BIKE",
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 184374
             },
-            "Dual Channel ABS": {
+            "Halcyon": {
               "bodyType": "BIKE",
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 190000
+              "exShowroom": 193123
+            },
+            "Signals": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 204367
+            },
+            "Dark": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 211465
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 215118
             }
           }
         },
@@ -26047,6 +28639,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 140000
+            },
+            "ES (Electric Start)": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 147000
+            },
+            "Kick Start (KS) ABS": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 125000
             }
           },
           "Classic 350": {
@@ -26056,6 +28662,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 180000
+            },
+            "Signals Edition": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 188000
+            },
+            "Gunmetal Grey (Spoke)": {
+              "bodyType": "BIKE",
+              "cc": 346,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 192000
             }
           },
           "Himalayan": {
@@ -26065,6 +28685,34 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 215000
+            },
+            "Mirage Silver": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 214519
+            },
+            "Gravel Grey": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 215900
+            },
+            "Pine Green": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 222400
+            },
+            "Granite Black": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 228490
             }
           },
           "Interceptor 650": {
@@ -26074,6 +28722,27 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 295000
+            },
+            "Canyon Red": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 319000
+            },
+            "Sunset Strip": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 325000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 350000
             }
           },
           "Continental GT 650": {
@@ -26083,6 +28752,27 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 310000
+            },
+            "Rocker Red": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 329000
+            },
+            "British Racing Green": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 329000
+            },
+            "Mr. Clean (Chrome)": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 360000
             }
           },
           "Meteor 350": {
@@ -26122,6 +28812,34 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 200000
+            },
+            "Halcyon": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 208579
+            },
+            "Signals": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 215423
+            },
+            "Dark": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 218765
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 221297
             }
           },
           "Hunter 350": {
@@ -26138,6 +28856,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 166800
+            },
+            "Metro Rebel": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 171900
             }
           }
         },
@@ -26149,6 +28874,34 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 145000
+            },
+            "Military Silver": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 177316
+            },
+            "Base": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 177316
+            },
+            "Mid": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 201707
+            },
+            "Top": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 220466
             }
           },
           "Classic 350": {
@@ -26167,6 +28920,20 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 220000
+            },
+            "Glacier Blue and Granite Black": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 228490
+            },
+            "Sleet Black": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 228490
             }
           },
           "Interceptor 650": {
@@ -26176,6 +28943,27 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 305000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 317485
+            },
+            "Alloy Wheel": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 327943
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 337873
             }
           },
           "Continental GT 650": {
@@ -26185,6 +28973,27 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 320000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 329000
+            },
+            "Alloy wheels": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 339000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 345000
             }
           },
           "Meteor 350": {
@@ -26201,6 +29010,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 206000
+            },
+            "Aurora": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 219900
             },
             "Supernova": {
               "bodyType": "BIKE",
@@ -26224,6 +29040,48 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 206000
+            },
+            "Redditch": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 193080
+            },
+            "Halcyon Single-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 195191
+            },
+            "Halcyon Dual-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 202094
+            },
+            "Signals": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 213852
+            },
+            "Dark": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 220991
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 224755
             }
           },
           "Hunter 350": {
@@ -26240,6 +29098,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 170000
+            },
+            "Metro Rebel": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000
             }
           },
           "Super Meteor 650": {
@@ -26249,6 +29114,27 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 350000
+            },
+            "Astral": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 348900
+            },
+            "Interstellar": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 363900
+            },
+            "Tourer Celestial": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 378900
             }
           }
         },
@@ -26259,7 +29145,35 @@ class VehicleData {
               "cc": 346,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 150000
+              "exShowroom": 145000
+            },
+            "Military Silver": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 177316
+            },
+            "Base": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 177316
+            },
+            "Mid": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 201707
+            },
+            "Top": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 220466
             }
           },
           "Classic 350": {
@@ -26268,16 +29182,30 @@ class VehicleData {
               "cc": 346,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 190000
+              "exShowroom": 185000
             }
           },
           "Himalayan": {
             "Standard": {
               "bodyType": "BIKE",
-              "cc": 452,
+              "cc": 411,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 269000
+              "exShowroom": 220000
+            },
+            "Glacier Blue and Granite Black": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 228490
+            },
+            "Sleet Black": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 228490
             }
           },
           "Interceptor 650": {
@@ -26286,7 +29214,28 @@ class VehicleData {
               "cc": 648,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 315000
+              "exShowroom": 305000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 317485
+            },
+            "Alloy Wheel": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 327943
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 337873
             }
           },
           "Continental GT 650": {
@@ -26295,7 +29244,28 @@ class VehicleData {
               "cc": 648,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 330000
+              "exShowroom": 320000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 329000
+            },
+            "Alloy wheels": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 339000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 345000
             }
           },
           "Meteor 350": {
@@ -26304,21 +29274,28 @@ class VehicleData {
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 205000
+              "exShowroom": 200000
             },
             "Stellar": {
               "bodyType": "BIKE",
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 211000
+              "exShowroom": 206000
+            },
+            "Aurora": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 219900
             },
             "Supernova": {
               "bodyType": "BIKE",
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 220000
+              "exShowroom": 215000
             }
           },
           "Classic 350 New Gen": {
@@ -26327,14 +29304,56 @@ class VehicleData {
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 205000
+              "exShowroom": 200000
             },
             "Dual Channel ABS": {
               "bodyType": "BIKE",
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 211000
+              "exShowroom": 206000
+            },
+            "Redditch": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 193080
+            },
+            "Halcyon Single-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 195191
+            },
+            "Halcyon Dual-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 202094
+            },
+            "Signals": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 213852
+            },
+            "Dark": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 220991
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 224755
             }
           },
           "Hunter 350": {
@@ -26343,14 +29362,21 @@ class VehicleData {
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 160000
+              "exShowroom": 150000
             },
             "Metro": {
               "bodyType": "BIKE",
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 180000
+              "exShowroom": 170000
+            },
+            "Metro Rebel": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000
             }
           },
           "Super Meteor 650": {
@@ -26359,7 +29385,28 @@ class VehicleData {
               "cc": 648,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 365000
+              "exShowroom": 350000
+            },
+            "Astral": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 348900
+            },
+            "Interstellar": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 363900
+            },
+            "Tourer Celestial": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 378900
             }
           }
         },
@@ -26370,7 +29417,35 @@ class VehicleData {
               "cc": 346,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 155000
+              "exShowroom": 145000
+            },
+            "Military Silver": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 177316
+            },
+            "Base": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 177316
+            },
+            "Mid": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 201707
+            },
+            "Top": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 220466
             }
           },
           "Classic 350": {
@@ -26379,16 +29454,30 @@ class VehicleData {
               "cc": 346,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 195000
+              "exShowroom": 185000
             }
           },
           "Himalayan": {
             "Standard": {
               "bodyType": "BIKE",
-              "cc": 452,
+              "cc": 411,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 275000
+              "exShowroom": 220000
+            },
+            "Glacier Blue and Granite Black": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 228490
+            },
+            "Sleet Black": {
+              "bodyType": "BIKE",
+              "cc": 411,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 228490
             }
           },
           "Interceptor 650": {
@@ -26397,7 +29486,28 @@ class VehicleData {
               "cc": 648,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 325000
+              "exShowroom": 305000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 317485
+            },
+            "Alloy Wheel": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 327943
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 337873
             }
           },
           "Continental GT 650": {
@@ -26406,7 +29516,28 @@ class VehicleData {
               "cc": 648,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 340000
+              "exShowroom": 320000
+            },
+            "Custom": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 329000
+            },
+            "Alloy wheels": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 339000
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 345000
             }
           },
           "Meteor 350": {
@@ -26415,21 +29546,28 @@ class VehicleData {
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 210000
+              "exShowroom": 200000
             },
             "Stellar": {
               "bodyType": "BIKE",
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 216000
+              "exShowroom": 206000
+            },
+            "Aurora": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 219900
             },
             "Supernova": {
               "bodyType": "BIKE",
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 225000
+              "exShowroom": 215000
             }
           },
           "Classic 350 New Gen": {
@@ -26438,14 +29576,56 @@ class VehicleData {
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 210000
+              "exShowroom": 200000
             },
             "Dual Channel ABS": {
               "bodyType": "BIKE",
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 216000
+              "exShowroom": 206000
+            },
+            "Redditch": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 193080
+            },
+            "Halcyon Single-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 195191
+            },
+            "Halcyon Dual-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 202094
+            },
+            "Signals": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 213852
+            },
+            "Dark": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 220991
+            },
+            "Chrome": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 224755
             }
           },
           "Hunter 350": {
@@ -26454,14 +29634,21 @@ class VehicleData {
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 165000
+              "exShowroom": 150000
             },
             "Metro": {
               "bodyType": "BIKE",
               "cc": 349,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 185000
+              "exShowroom": 170000
+            },
+            "Metro Rebel": {
+              "bodyType": "BIKE",
+              "cc": 349,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 182000
             }
           },
           "Super Meteor 650": {
@@ -26470,16 +29657,28 @@ class VehicleData {
               "cc": 648,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 375000
-            }
-          },
-          "Shotgun 650": {
-            "Standard": {
+              "exShowroom": 350000
+            },
+            "Astral": {
               "bodyType": "BIKE",
               "cc": 648,
               "fuelType": "Petrol",
-              "seating": 1,
-              "exShowroom": 359000
+              "seating": 2,
+              "exShowroom": 348900
+            },
+            "Interstellar": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 363900
+            },
+            "Tourer Celestial": {
+              "bodyType": "BIKE",
+              "cc": 648,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 378900
             }
           }
         }
@@ -27080,839 +30279,1058 @@ class VehicleData {
       },
       "Suzuki": {
         "2015": {
-          "Gixxer": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 77000
+            "Gixxer": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 77000
+                },
+                "Rear Disc": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 80726
+                }
+            },
+            "Gixxer SF": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 90000
+                },
+                "Fi": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 93499
+                },
+                "SP": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 92341
+                },
+                "MotoGP Edition": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 87597
+                }
+            },
+            "Access 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 53000
+                }
             }
-          },
-          "Gixxer SF": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 90000
-            }
-          },
-          "Access 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 53000
-            }
-          }
         },
         "2016": {
-          "Gixxer": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 79000
+            "Gixxer": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 79000
+                }
+            },
+            "Gixxer SF": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 91000
+                },
+                "Fi": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 93499
+                },
+                "ABS": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 97524
+                }
+            },
+            "Access 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 58000
+                }
             }
-          },
-          "Gixxer SF": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 91000
-            }
-          },
-          "Access 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 58000
-            }
-          }
         },
         "2017": {
-          "Gixxer": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 81000
+            "Gixxer": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 81000
+                },
+                "SP": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 82607
+                },
+                "ABS": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 88941
+                }
+            },
+            "Gixxer SF": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 94000
+                },
+                "ABS": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 99207
+                }
+            },
+            "Access 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 59000
+                }
+            },
+            "Intruder 150": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 98000
+                }
             }
-          },
-          "Gixxer SF": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 94000
-            }
-          },
-          "Access 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 59000
-            }
-          },
-          "Intruder 150": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 98000
-            }
-          }
         },
         "2018": {
-          "Gixxer": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 86000
-            }
-          },
-          "Gixxer SF": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 97000
-            }
-          },
-          "Access 125": {
-            "Drum": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 62000
+            "Gixxer": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 86000
+                },
+                "SP": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 87250
+                },
+                "Dual Disc": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 81550
+                }
             },
-            "Disc": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 65000
+            "Gixxer SF": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 97000
+                },
+                "Fi": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 100000
+                },
+                "SP": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 100000
+                }
+            },
+            "Access 125": {
+                "Drum": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 62000
+                },
+                "Disc": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 65000
+                }
+            },
+            "Intruder 150": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 101000
+                },
+                "Fi": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 111091
+                }
+            },
+            "Burgman Street 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 68000
+                }
             }
-          },
-          "Intruder 150": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 101000
-            }
-          },
-          "Burgman Street 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 68000
-            }
-          }
         },
         "2019": {
-          "Gixxer": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 102000
-            }
-          },
-          "Gixxer SF": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 112000
-            }
-          },
-          "Gixxer 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 160000
-            }
-          },
-          "Gixxer SF 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 170000
-            }
-          },
-          "Access 125": {
-            "Drum": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 67000
+            "Gixxer": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 102000
+                },
+                "Ride Connect Edition": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 138776
+                }
             },
-            "Disc": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 70000
+            "Gixxer SF": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 112000
+                },
+                "MotoGP BS6": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 133300
+                }
+            },
+            "Gixxer 250": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 160000
+                },
+                "Special Edition": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 198501
+                }
+            },
+            "Gixxer SF 250": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 170000
+                },
+                "MotoGP Edition": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 179959
+                }
+            },
+            "Access 125": {
+                "Drum": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 67000
+                },
+                "Disc": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 70000
+                }
+            },
+            "Intruder 150": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 108000
+                },
+                "FI": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 100000
+                }
+            },
+            "Burgman Street 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 70000
+                },
+                "Ride Connect Edition": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 98301
+                }
             }
-          },
-          "Intruder 150": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 108000
-            }
-          },
-          "Burgman Street 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 70000
-            }
-          }
         },
-        "2020": {
-          "Gixxer": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 112000
-            }
-          },
-          "Gixxer SF": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 122000
-            }
-          },
-          "Gixxer 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 165000
-            }
-          },
-          "Gixxer SF 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 176000
-            }
-          },
-          "Access 125": {
-            "Drum": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 70000
+         "2020": {
+            "Gixxer": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 112000
+                },
+                "SF": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 122000
+                },
+                "Gixxer 250": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 165000
+                },
+                "Gixxer SF 250": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 176000
+                }
             },
-            "Disc": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 72000
+            "Access 125": {
+                "Drum": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 70000
+                },
+                "Disc": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 72000
+                }
+            },
+            "Intruder 150": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 120000
+                },
+                "FI": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 122141
+                }
+            },
+            "Burgman Street 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 78000
+                }
             }
-          },
-          "Intruder 150": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 120000
-            }
-          },
-          "Burgman Street 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 78000
-            }
-          }
         },
         "2021": {
-          "Gixxer": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 118000
-            }
-          },
-          "Gixxer SF": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 129000
-            }
-          },
-          "Gixxer 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 173000
-            }
-          },
-          "Gixxer SF 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 183000
-            }
-          },
-          "Access 125": {
-            "Drum": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 74000
+            "Gixxer": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 118000
+                },
+                "SF": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 129000
+                },
+                "Gixxer 250": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 173000
+                },
+                "Gixxer SF 250": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 183000
+                }
             },
-            "Disc": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 76000
+            "Access 125": {
+                "Drum": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 74000
+                },
+                "Disc": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 76000
+                },
+                "Special Edition": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 83000
+                }
+            },
+            "Intruder 150": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 128000
+                }
+            },
+            "Burgman Street 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 84000
+                }
+            },
+            "Hayabusa": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 1340,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 1640000
+                }
             }
-          },
-          "Intruder 150": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 128000
-            }
-          },
-          "Burgman Street 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 84000
-            }
-          },
-          "Hayabusa": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 1340,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 1640000
-            }
-          }
         },
         "2022": {
-          "Gixxer": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 134000
-            }
-          },
-          "Gixxer SF": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 139000
-            }
-          },
-          "Gixxer 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 185000
-            }
-          },
-          "Gixxer SF 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 195000
-            }
-          },
-          "Access 125": {
-            "Drum": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 81000
+            "Gixxer": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 134000
+                }
             },
-            "Disc": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 84000
+            "Gixxer SF": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 139000
+                },
+                "MotoGP": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 140600
+                }
             },
-            "Ride Connect": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 88000
+            "Gixxer 250": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 185000
+                }
+            },
+            "Gixxer SF 250": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 195000
+                },
+                "MotoGP": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 204900
+                }
+            },
+            "Access 125": {
+                "Drum": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 81000
+                },
+                "Disc": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 84000
+                },
+                "Ride Connect": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 88000
+                }
+            },
+            "Intruder 150": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 128000
+                }
+            },
+            "Burgman Street 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 89000
+                },
+                "Ride Connect Edition": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 92000
+                }
+            },
+            "Hayabusa": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 1340,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 1645000
+                }
+            },
+            "V-Strom SX": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 212000
+                }
+            },
+            "Avenis 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 86000
+                },
+                "Ride Connect Edition": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 87000
+                }
             }
-          },
-          "Intruder 150": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 128000
-            }
-          },
-          "Burgman Street 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 89000
-            }
-          },
-          "Hayabusa": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 1340,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 1645000
-            }
-          },
-          "V-Strom SX": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 212000
-            }
-          },
-          "Avenis 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 86000
-            }
-          }
         },
         "2023": {
-          "Gixxer": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 140000
-            }
-          },
-          "Gixxer SF": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 145000
-            }
-          },
-          "Gixxer 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 195000
-            }
-          },
-          "Gixxer SF 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 202000
-            }
-          },
-          "Access 125": {
-            "Drum": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 86000
+            "Gixxer": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 140000
+                }
             },
-            "Disc": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 88000
+            "Gixxer SF": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 145000
+                },
+                "MotoGP": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 150000
+                }
             },
-            "Ride Connect": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 91000
+            "Gixxer 250": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 195000
+                }
+            },
+            "Gixxer SF 250": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 202000
+                },
+                "MotoGP": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 205000
+                }
+            },
+            "Access 125": {
+                "Drum": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 86000
+                },
+                "Disc": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 88000
+                },
+                "Ride Connect": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 91000
+                }
+            },
+            "Burgman Street 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 93000
+                }
+            },
+            "Hayabusa": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 1340,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 1690000
+                }
+            },
+            "V-Strom SX": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 216000
+                }
+            },
+            "Avenis 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 92000
+                },
+                "Ride Connect": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 92000
+                }
             }
-          },
-          "Burgman Street 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 93000
-            }
-          },
-          "Hayabusa": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 1340,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 1690000
-            }
-          },
-          "V-Strom SX": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 216000
-            }
-          },
-          "Avenis 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 92000
-            }
-          }
         },
         "2024": {
-          "Gixxer": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 145000
-            }
-          },
-          "Gixxer SF": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 148000
-            }
-          },
-          "Gixxer 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 198000
-            }
-          },
-          "Gixxer SF 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 207000
-            }
-          },
-          "Access 125": {
-            "Drum": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 88000
+            "Gixxer": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 145000
+                }
             },
-            "Disc": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 91000
+            "Gixxer SF": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 148000
+                },
+                "MotoGP": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 155000
+                }
             },
-            "Ride Connect": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 94000
+            "Gixxer 250": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 198000
+                }
+            },
+            "Gixxer SF 250": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 207000
+                },
+                "MotoGP": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 210000
+                }
+            },
+            "Access 125": {
+                "Drum": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 88000
+                },
+                "Disc": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 91000
+                },
+                "Ride Connect": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 94000
+                }
+            },
+            "Burgman Street 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 96000
+                }
+            },
+            "Hayabusa": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 1340,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 1690000
+                }
+            },
+            "V-Strom SX": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 216000
+                }
+            },
+            "Avenis 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 93000
+                },
+                "Ride Connect": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 94000
+                }
+            },
+            "Katana": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 999,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 1361000
+                }
+            },
+            "GSX-8R": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 776,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 925000
+                }
+            },
+            "V-Strom 800 DE": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 776,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 1030000
+                }
             }
-          },
-          "Burgman Street 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 96000
-            }
-          },
-          "Hayabusa": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 1340,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 1690000
-            }
-          },
-          "V-Strom SX": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 216000
-            }
-          },
-          "Avenis 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 93000
-            }
-          },
-          "Katana": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 999,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 1361000
-            }
-          },
-          "GSX-8R": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 776,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 925000
-            }
-          },
-          "V-Strom 800 DE": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 776,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 1030000
-            }
-          }
         },
         "2025": {
-          "Gixxer": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 138000
-            }
-          },
-          "Gixxer SF": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 155,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 147000
-            }
-          },
-          "Gixxer 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 198000
-            }
-          },
-          "Gixxer SF 250": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 207000
+            "Gixxer": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 138000
+                }
             },
-            "Flex-Fuel": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Flex-Fuel",
-              "seating": 2,
-              "exShowroom": 217000
-            }
-          },
-          "Access 125": {
-            "Drum": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 84000
+            "Gixxer SF": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 147000
+                },
+                "MotoGP": {
+                    "bodyType": "BIKE",
+                    "cc": 155,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 155000
+                }
             },
-            "Disc": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 91000
+            "Gixxer 250": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 198000
+                }
             },
-            "Ride Connect": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 102000
+            "Gixxer SF 250": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 207000
+                },
+                "Flex-Fuel": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Flex-Fuel",
+                    "seating": 2,
+                    "exShowroom": 217000
+                }
+            },
+            "Access 125": {
+                "Drum": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 84000
+                },
+                "Disc": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 91000
+                },
+                "Ride Connect": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 102000
+                }
+            },
+            "Burgman Street 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 97000
+                }
+            },
+            "Hayabusa": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 1340,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 1690000
+                }
+            },
+            "V-Strom SX": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 249,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 216000
+                }
+            },
+            "Avenis 125": {
+                "Standard": {
+                    "bodyType": "SCOOTER",
+                    "cc": 124,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 91000
+                }
+            },
+            "Katana": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 999,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 1361000
+                }
+            },
+            "GSX-8R": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 776,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 925000
+                }
+            },
+            "V-Strom 800 DE": {
+                "Standard": {
+                    "bodyType": "BIKE",
+                    "cc": 776,
+                    "fuelType": "Petrol",
+                    "seating": 2,
+                    "exShowroom": 1030000
+                }
             }
-          },
-          "Burgman Street 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 97000
-            }
-          },
-          "Hayabusa": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 1340,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 1690000
-            }
-          },
-          "V-Strom SX": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 249,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 216000
-            }
-          },
-          "Avenis 125": {
-            "Standard": {
-              "bodyType": "SCOOTER",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 91000
-            }
-          },
-          "Katana": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 999,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 1361000
-            }
-          },
-          "GSX-8R": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 776,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 925000
-            }
-          },
-          "V-Strom 800 DE": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 776,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 1030000
-            }
-          }
         }
-      },
+    },
       "Sokudo": {
         "2023": {
           "Rapid": {

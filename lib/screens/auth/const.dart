@@ -1,10 +1,10 @@
 class RazorpayKeys {
   // 🔹 Use test key in development
-  static const String testKeyId = "rzp_test_R7wSPViMlDXu00";
+  static const String testKeyId = "";
 
   // 🔹 Add your live key here when you go to production
-  static const String liveKeyId = "";
+  static const String liveKeyId = "rzp_live_RCEmPqOKUginAH";
 
   // 🔹 Choose which one to use
-  static const String currentKey = testKeyId;
+  static const String currentKey = liveKeyId;
 }
