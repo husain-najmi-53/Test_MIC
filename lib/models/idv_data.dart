@@ -109622,7 +109622,7 @@ class VehicleData {
             }
           }
         },
-        "2018": {
+        "2019": {
           "Ape Xtra LDX": {
             "Diesel": {
               "bodyType": "3-Wheeler Goods Carrier",
@@ -117066,10 +117066,10 @@ class VehicleData {
           "Magic Express CNG+ 2024": {
             "CNG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 694,
               "fuelType": "CNG",
               "seating": 10,
-              "exShowroom": 1500000 //update it
+              "exShowroom": 762000
             }
           }
         },
@@ -117214,10 +117214,10 @@ class VehicleData {
           "Magic Express CNG+ 2024": {
             "CNG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 694,
               "fuelType": "CNG",
               "seating": 10,
-              "exShowroom": 1500000 //update it
+              "exShowroom": 1500000
             }
           }
         },
@@ -117247,7 +117247,7 @@ class VehicleData {
           "e-Supro Van": {
             "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 61,
               "fuelType": "Electric",
               "seating": 5,
               "exShowroom": 875000
@@ -117267,7 +117267,7 @@ class VehicleData {
           "e-Supro Van": {
             "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 61,
               "fuelType": "Electric",
               "seating": 5,
               "exShowroom": 875000
@@ -117326,7 +117326,7 @@ class VehicleData {
           "e-Supro Van": {
             "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 61,
               "fuelType": "Electric",
               "seating": 5,
               "exShowroom": 875000
@@ -117392,7 +117392,7 @@ class VehicleData {
           "e-Supro Van": {
             "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 61,
               "fuelType": "Electric",
               "seating": 5,
               "exShowroom": 875000
@@ -117447,9 +117447,10 @@ class VehicleData {
           "Cruzio Bus": {
             "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
+              "cc": 2500,
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000 // update afterwards
+              "exShowroom": 1200000
             }
           },
         },
@@ -117466,7 +117467,7 @@ class VehicleData {
           "e-Supro Van": {
             "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 61,
               "fuelType": "Electric",
               "seating": 5,
               "exShowroom": 875000
@@ -117521,9 +117522,10 @@ class VehicleData {
           "Cruzio Bus": {
             "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
+              "cc": 2500,
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000 // update afterwards
+              "exShowroom": 1200000
             }
           },
         },
@@ -117540,7 +117542,7 @@ class VehicleData {
           "e-Supro Van": {
             "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 61,
               "fuelType": "Electric",
               "seating": 5,
               "exShowroom": 875000
@@ -117595,9 +117597,10 @@ class VehicleData {
           "Cruzio Bus": {
             "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
+              "cc": 2500,
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000 // update afterwards
+              "exShowroom": 1200000
             }
           },
         },
@@ -117614,7 +117617,7 @@ class VehicleData {
           "e-Supro Van": {
             "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 61,
               "fuelType": "Electric",
               "seating": 5,
               "exShowroom": 875000
@@ -117669,9 +117672,10 @@ class VehicleData {
           "Cruzio Bus": {
             "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
+              "cc": 2500,
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000 // update afterwards
+              "exShowroom": 1200000
             }
           },
           "Jeeto Plus CNG “CharSau”": {
@@ -117696,7 +117700,7 @@ class VehicleData {
           "e-Supro Van": {
             "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 61,
               "fuelType": "Electric",
               "seating": 5,
               "exShowroom": 875000
@@ -117751,9 +117755,10 @@ class VehicleData {
           "Cruzio Bus": {
             "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
+              "cc": 2500,
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000 // update afterwards
+              "exShowroom": 1200000
             }
           },
         },
@@ -117770,7 +117775,7 @@ class VehicleData {
           "e-Supro Van": {
             "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 61,
               "fuelType": "Electric",
               "seating": 5,
               "exShowroom": 875000
@@ -117825,22 +117830,25 @@ class VehicleData {
           "Cruzio Bus": {
             "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
+              "cc": 2500,
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000 // update afterwards
+              "exShowroom": 1200000
             }
           },
           "Jeeto Plus CNG “CharSau”": {
             "2022 Launch": {
               "bodyType": "COMMERCIAL",
+              "cc": 625,
               "fuelType": "CNG",
-              "payloadKg": 650,
+              "seating": 4,
               "exShowroom": 526000
             }
           },
           "Supro CNG Duo": {
             "Dual-Fuel Small Commercial Vehicle (2023 Launch)": {
               "bodyType": "COMMERCIAL",
+              "cc": 909,
               "fuelType": "CNG/Petrol",
               "payloadKg": 750,
               "exShowroom": 632000
@@ -117871,7 +117879,7 @@ class VehicleData {
           "e-Supro Van": {
             "Passenger (2016 Launch)": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 61,
               "fuelType": "Electric",
               "seating": 5,
               "exShowroom": 875000
@@ -117926,24 +117934,27 @@ class VehicleData {
           "Cruzio Bus": {
             "LPO Passenger Bus (2019 Launch)": {
               "bodyType": "PASSENGER",
+              "cc": 2500,
               "fuelType": "Diesel",
               "seating": 51,
-              "exShowroom": 1200000 // update afterwards
+              "exShowroom": 1200000
             }
           },
           "Jeeto Plus CNG “CharSau”": {
             "2022 Launch": {
               "bodyType": "COMMERCIAL",
+              "cc": 625,
               "fuelType": "CNG",
-              "payloadKg": 650,
+              "seating": 4,
               "exShowroom": 526000
             }
           },
           "Supro CNG Duo": {
             "Dual-Fuel Small Commercial Vehicle (2023 Launch)": {
               "bodyType": "COMMERCIAL",
+              "cc": 909,
               "fuelType": "CNG/Petrol",
-              "payloadKg": 750,
+              "seating": 4,
               "exShowroom": 632000
             }
           },
@@ -118865,7 +118876,7 @@ class VehicleData {
           "E9 Electric Bus (2022 Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 200,
               "fuelType": "Electric",
               "seating": 31,
               "exShowroom": 10000000
@@ -118876,7 +118887,7 @@ class VehicleData {
           "E9 Electric Bus (2022 Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 200,
               "fuelType": "Electric",
               "seating": 31,
               "exShowroom": 10000000
@@ -118887,7 +118898,7 @@ class VehicleData {
           "E9 Electric Bus (2022 Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 200,
               "fuelType": "Electric",
               "seating": 31,
               "exShowroom": 10000000
@@ -118898,7 +118909,7 @@ class VehicleData {
           "E9 Electric Bus (2022 Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 200,
               "fuelType": "Electric",
               "seating": 31,
               "exShowroom": 10000000
@@ -118907,7 +118918,7 @@ class VehicleData {
           "EKA Coach": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 339,
               "fuelType": "Electric",
               "seating": 45,
               "exShowroom": 18000000
@@ -118916,7 +118927,7 @@ class VehicleData {
           "EKA 12M": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 240,
               "fuelType": "Electric",
               "seating": 55,
               "exShowroom": 15000000
@@ -118925,7 +118936,7 @@ class VehicleData {
           "EKA 9M": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 213,
               "fuelType": "Electric",
               "seating": 35,
               "exShowroom": 12000000
@@ -118934,7 +118945,7 @@ class VehicleData {
           "EKA LF": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 160,
               "fuelType": "Electric",
               "seating": 30,
               "exShowroom": 10000000
@@ -118943,7 +118954,7 @@ class VehicleData {
           "EKA 7M": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 124,
               "fuelType": "Electric",
               "seating": 25,
               "exShowroom": 9000000
@@ -119487,7 +119498,7 @@ class VehicleData {
           "Piaggio Ape E-City (Electric Rickshaw Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 200000
@@ -119603,7 +119614,7 @@ class VehicleData {
           "Piaggio Ape E-City (Electric Rickshaw Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 200000
@@ -119719,7 +119730,7 @@ class VehicleData {
           "Piaggio Ape E-City (Electric Rickshaw Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 200000
@@ -119728,7 +119739,7 @@ class VehicleData {
           "Piaggio Ape E-Xtra FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 9.55,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 310000
@@ -119737,7 +119748,7 @@ class VehicleData {
           "Piaggio Ape E-City FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 280000
@@ -119853,7 +119864,7 @@ class VehicleData {
           "Piaggio Ape E-City (Electric Rickshaw Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 200000
@@ -119862,7 +119873,7 @@ class VehicleData {
           "Piaggio Ape E-Xtra FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 310000
@@ -119871,7 +119882,7 @@ class VehicleData {
           "Piaggio Ape E-City FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 280000
@@ -119880,7 +119891,7 @@ class VehicleData {
           "Piaggio Ape E-City FX Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 290000
@@ -120019,7 +120030,7 @@ class VehicleData {
           "Piaggio Ape E-City (Electric Rickshaw Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 200000
@@ -120028,7 +120039,7 @@ class VehicleData {
           "Piaggio Ape E-Xtra FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 310000
@@ -120037,7 +120048,7 @@ class VehicleData {
           "Piaggio Ape E-City FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 280000
@@ -120046,7 +120057,7 @@ class VehicleData {
           "Piaggio Ape E-City FX Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 290000
@@ -120078,7 +120089,7 @@ class VehicleData {
           "Piaggio Ape E-City FX Max+": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 6,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 310000
@@ -120087,7 +120098,7 @@ class VehicleData {
           "Piaggio Ape E-Xtra FX Max+": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 6,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 340000
@@ -120212,7 +120223,7 @@ class VehicleData {
           "Piaggio Ape E-City (Electric Rickshaw Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 200000
@@ -120221,7 +120232,7 @@ class VehicleData {
           "Piaggio Ape E-Xtra FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 310000
@@ -120230,7 +120241,7 @@ class VehicleData {
           "Piaggio Ape E-City FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 280000
@@ -120239,7 +120250,7 @@ class VehicleData {
           "Piaggio Ape E-City FX Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 6,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 290000
@@ -120405,7 +120416,7 @@ class VehicleData {
           "Piaggio Ape E-City (Electric Rickshaw Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 200000
@@ -120414,7 +120425,7 @@ class VehicleData {
           "Piaggio Ape E-Xtra FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 310000
@@ -120423,7 +120434,7 @@ class VehicleData {
           "Piaggio Ape E-City FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 280000
@@ -120432,7 +120443,7 @@ class VehicleData {
           "Piaggio Ape E-City FX Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 290000
@@ -120464,7 +120475,7 @@ class VehicleData {
           "Piaggio Ape E-City FX Max+": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 310000
@@ -120473,7 +120484,7 @@ class VehicleData {
           "Piaggio Ape E-Xtra FX Max+": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 340000
@@ -120851,7 +120862,7 @@ class VehicleData {
           "Eicher Skyline Pro Electric Bus": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 235,
               "fuelType": "Electric",
               "seating": 32,
               "exShowroom": 12000000
@@ -120934,7 +120945,7 @@ class VehicleData {
           "Eicher Skyline Pro Electric Bus": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 235,
               "fuelType": "Electric",
               "seating": 32,
               "exShowroom": 12000000
@@ -120970,7 +120981,7 @@ class VehicleData {
           "Eicher Skyline Pro Electric 9m Bus": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 250,
               "fuelType": "Electric",
               "seating": 32,
               "exShowroom": 12500000
@@ -121053,7 +121064,7 @@ class VehicleData {
           "Eicher Skyline Pro Electric Bus": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 235,
               "fuelType": "Electric",
               "seating": 32,
               "exShowroom": 12000000
@@ -121089,7 +121100,7 @@ class VehicleData {
           "Eicher Skyline Pro Electric 9m Bus": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 250,
               "fuelType": "Electric",
               "seating": 32,
               "exShowroom": 12500000
@@ -121125,7 +121136,7 @@ class VehicleData {
           "Eicher Electric Skyline Pro E9 (2024 Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 254,
               "fuelType": "Electric",
               "seating": 32,
               "exShowroom": 13000000
@@ -121208,7 +121219,7 @@ class VehicleData {
           "Eicher Skyline Pro Electric Bus": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 235,
               "fuelType": "Electric",
               "seating": 32,
               "exShowroom": 12000000
@@ -121244,7 +121255,7 @@ class VehicleData {
           "Eicher Skyline Pro Electric 9m Bus": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 250,
               "fuelType": "Electric",
               "seating": 32,
               "exShowroom": 12500000
@@ -121280,7 +121291,7 @@ class VehicleData {
           "Eicher Electric Skyline Pro E9 (2024 Launch)": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 254,
               "fuelType": "Electric",
               "seating": 32,
               "exShowroom": 13000000
@@ -121570,7 +121581,7 @@ class VehicleData {
           "Volvo 13.5m Electric Intercity Coach": {
             "Electric": {
               "bodyType": "INTERCITY COACH",
-              "cc": 0,
+              "cc": 200,
               "fuelType": "Electric",
               "seating": 40,
               "exShowroom": 45000000
@@ -121635,7 +121646,7 @@ class VehicleData {
           "Volvo 13.5m Electric Intercity Coach": {
             "Electric": {
               "bodyType": "INTERCITY COACH",
-              "cc": 0,
+              "cc": 200,
               "fuelType": "Electric",
               "seating": 40,
               "exShowroom": 45000000
@@ -121709,7 +121720,7 @@ class VehicleData {
           "Volvo 13.5m Electric Intercity Coach": {
             "Electric": {
               "bodyType": "INTERCITY COACH",
-              "cc": 0,
+              "cc": 200,
               "fuelType": "Electric",
               "seating": 40,
               "exShowroom": 45000000
@@ -123382,7 +123393,7 @@ class VehicleData {
           "BharatBenz 1017 City Bus EV": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 125,
               "fuelType": "Electric",
               "seating": 40,
               "exShowroom": 4500000
@@ -123600,7 +123611,7 @@ class VehicleData {
           "BharatBenz 1017 City Bus EV": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 125,
               "fuelType": "Electric",
               "seating": 40,
               "exShowroom": 4500000
@@ -124151,7 +124162,7 @@ class VehicleData {
           "Atul Elite Paxx": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 4,
               "exShowroom": 115000
@@ -124160,7 +124171,7 @@ class VehicleData {
           "Atul Rik Twin": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 9.9,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 300000
@@ -124251,7 +124262,7 @@ class VehicleData {
           "Atul Elite Paxx": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 4,
               "exShowroom": 112000
@@ -124260,7 +124271,7 @@ class VehicleData {
           "Atul Rik Twin": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 9.9,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 300000
@@ -124269,7 +124280,7 @@ class VehicleData {
           "Atul Mobili": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 9.9,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 355000
@@ -124360,7 +124371,7 @@ class VehicleData {
           "Atul Elite Paxx": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 4,
               "exShowroom": 112000
@@ -124369,7 +124380,7 @@ class VehicleData {
           "Atul Rik Twin": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 9.9,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 300000
@@ -124378,7 +124389,7 @@ class VehicleData {
           "Atul Mobili": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 9.9,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 355000
@@ -124387,7 +124398,7 @@ class VehicleData {
           "Atul Elite Plus": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 9.9,
               "fuelType": "Electric",
               "seating": 4,
               "exShowroom": 112000
@@ -124478,7 +124489,7 @@ class VehicleData {
           "Atul Elite Paxx": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 4,
               "exShowroom": 112000
@@ -124487,7 +124498,7 @@ class VehicleData {
           "Atul Rik Twin": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 9.9,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 300000
@@ -124496,7 +124507,7 @@ class VehicleData {
           "Atul Mobili": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 9.9,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 355000
@@ -124505,7 +124516,7 @@ class VehicleData {
           "Atul Elite Plus": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 9.9,
               "fuelType": "Electric",
               "seating": 4,
               "exShowroom": 112000
@@ -125436,19 +125447,19 @@ class VehicleData {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 20000000
             }
           },
-          "JBM CITYLIFE": {
-            "Diesel Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": "Varies by configuration (up to 35)",
-              "exShowroom": 0
-            }
-          },
+          // "JBM CITYLIFE": {
+          //   "Diesel Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 6700,
+          //     "fuelType": "Diesel",
+          //     "seating": 35,
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2017": {
           "JBM ECOLIFE": {
@@ -125456,19 +125467,19 @@ class VehicleData {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 20000000
             }
           },
-          "JBM CITYLIFE": {
-            "Diesel Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": "up to 35",
-              "exShowroom": 0
-            }
-          },
+          // "JBM CITYLIFE": {
+          //   "Diesel Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 6700,
+          //     "fuelType": "Diesel",
+          //     "seating": 35,
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2018": {
           "JBM ECOLIFE": {
@@ -125476,19 +125487,19 @@ class VehicleData {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 35",
+              "seating": 35,
               "exShowroom": 20000000
             }
           },
-          "JBM CITYLIFE": {
-            "Diesel Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": "up to 35",
-              "exShowroom": 0
-            }
-          },
+          // "JBM CITYLIFE": {
+          //   "Diesel Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 6700,
+          //     "fuelType": "Diesel",
+          //     "seating": 35,
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2019": {
           "JBM ECOLIFE": {
@@ -125496,19 +125507,19 @@ class VehicleData {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 35",
+              "seating": 35,
               "exShowroom": 20000000
             }
           },
-          "JBM CITYLIFE": {
-            "Diesel Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": "up to 35",
-              "exShowroom": 0
-            }
-          },
+          // "JBM CITYLIFE": {
+          //   "Diesel Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 6700,
+          //     "fuelType": "Diesel",
+          //     "seating": 35,
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2020": {
           "JBM ECOLIFE": {
@@ -125516,26 +125527,26 @@ class VehicleData {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 30",
-              "exShowroom": 0
+              "seating": 30,
+              "exShowroom": 20000000
             },
             "Electric Bus e12": {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 20000000
             }
           },
-          "JBM CITYLIFE": {
-            "Diesel Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": "up to 35",
-              "exShowroom": 0
-            }
-          }
+          // "JBM CITYLIFE": {
+          //   "Diesel Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 6700,
+          //     "fuelType": "Diesel",
+          //     "seating": 35,
+          //     "exShowroom": 0
+          //   }
+          // }
         },
         "2021": {
           "JBM ECOLIFE": {
@@ -125543,26 +125554,26 @@ class VehicleData {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 30",
-              "exShowroom": 0
+              "seating": 30,
+              "exShowroom": 20000000
             },
             "Electric Bus e12": {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 30,
+              "exShowroom": 20000000
             }
           },
-          "JBM CITYLIFE": {
-            "Diesel Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": "up to 35",
-              "exShowroom": 0
-            }
-          }
+          // "JBM CITYLIFE": {
+          //   "Diesel Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 6700,
+          //     "fuelType": "Diesel",
+          //     "seating": 35,
+          //     "exShowroom": 0
+          //   }
+          // }
         },
         "2022": {
           "JBM ECOLIFE": {
@@ -125570,26 +125581,26 @@ class VehicleData {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 30",
-              "exShowroom": 0
+              "seating": 30,
+              "exShowroom": 20000000
             },
             "Electric Bus e12": {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 20000000
             }
           },
-          "JBM CITYLIFE": {
-            "Diesel Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": "up to 35",
-              "exShowroom": 0
-            }
-          }
+          // "JBM CITYLIFE": {
+          //   "Diesel Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 6700,
+          //     "fuelType": "Diesel",
+          //     "seating": 35,
+          //     "exShowroom": 0
+          //   }
+          // }
         },
         "2023": {
           "JBM ECOLIFE": {
@@ -125597,35 +125608,35 @@ class VehicleData {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 30",
-              "exShowroom": 0
+              "seating": 30,
+              "exShowroom": 20000000
             },
             "Electric Bus e12": {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 20000000
             }
           },
-          "JBM CITYLIFE": {
-            "Diesel Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": "up to 35",
-              "exShowroom": 0
-            }
-          },
-          "JBM Galaxy": {
-            "Luxury Coach": {
-              "bodyType": "COACH",
-              "cc": 250,
-              "fuelType": "Electric",
-              "seating": "up to 45",
-              "exShowroom": 0
-            }
-          },
+          // "JBM CITYLIFE": {
+          //   "Diesel Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 6700,
+          //     "fuelType": "Diesel",
+          //     "seating": 35,
+          //     "exShowroom": 0
+          //   }
+          // },
+          // "JBM Galaxy": {
+          //   "Luxury Coach": {
+          //     "bodyType": "COACH",
+          //     "cc": 250,
+          //     "fuelType": "Electric",
+          //     "seating": 45,
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2024": {
           "JBM ECOLIFE": {
@@ -125633,35 +125644,35 @@ class VehicleData {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 30",
-              "exShowroom": 0
+              "seating": 30,
+              "exShowroom": 20000000
             },
             "Electric Bus e12": {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 20000000
             }
           },
-          "JBM CITYLIFE": {
-            "Diesel Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": "up to 35",
-              "exShowroom": 0
-            }
-          },
-          "JBM Galaxy": {
-            "Luxury Coach": {
-              "bodyType": "COACH",
-              "cc": 250,
-              "fuelType": "Electric",
-              "seating": "up to 45",
-              "exShowroom": 0
-            }
-          },
+          // "JBM CITYLIFE": {
+          //   "Diesel Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 6700,
+          //     "fuelType": "Diesel",
+          //     "seating": 35,
+          //     "exShowroom": 0
+          //   }
+          // },
+          // "JBM Galaxy": {
+          //   "Luxury Coach": {
+          //     "bodyType": "COACH",
+          //     "cc": 250,
+          //     "fuelType": "Electric",
+          //     "seating": 45,
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2025": {
           "JBM ECOLIFE": {
@@ -125669,69 +125680,69 @@ class VehicleData {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 30",
-              "exShowroom": 0
+              "seating": 30,
+              "exShowroom": 20000000
             },
             "Electric Bus e12": {
               "bodyType": "CITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 20000000
             }
           },
-          "JBM CITYLIFE": {
-            "Diesel Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 6700,
-              "fuelType": "Diesel",
-              "seating": "up to 35",
-              "exShowroom": 0
-            }
-          },
-          "JBM Galaxy": {
-            "Luxury Coach": {
-              "bodyType": "COACH",
-              "cc": 250,
-              "fuelType": "Electric",
-              "seating": "up to 45",
-              "exShowroom": 0
-            }
-          },
+          // "JBM CITYLIFE": {
+          //   "Diesel Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 6700,
+          //     "fuelType": "Diesel",
+          //     "seating": 35,
+          //     "exShowroom": 0
+          //   }
+          // },
+          // "JBM Galaxy": {
+          //   "Luxury Coach": {
+          //     "bodyType": "COACH",
+          //     "cc": 250,
+          //     "fuelType": "Electric",
+          //     "seating": 45,
+          //     "exShowroom": 0
+          //   }
+          // },
           "JBM Xpress": {
             "Intercity Bus": {
               "bodyType": "INTERCITY BUS",
               "cc": 250,
               "fuelType": "Electric",
-              "seating": "up to 55",
-              "exShowroom": 0
+              "seating": 55,
+              "exShowroom": 15000000
             }
           },
-          "JBM e-SkyLife": {
-            "Electric Tarmac Coach": {
-              "bodyType": "COACH",
-              "cc": 250,
-              "fuelType": "Electric",
-              "seating": "0",
-              "exShowroom": 0
-            },
-            "Airport Shuttle": {
-              "bodyType": "AIRPORT SHUTTLE",
-              "cc": 250,
-              "fuelType": "Electric",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
-          "JBM e-MediLife": {
-            "Electric Medical Mobile Unit": {
-              "bodyType": "SPECIALTY VEHICLE",
-              "cc": 250,
-              "fuelType": "Electric",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          }
+          // "JBM e-SkyLife": {
+          //   "Electric Tarmac Coach": {
+          //     "bodyType": "COACH",
+          //     "cc": 250,
+          //     "fuelType": "Electric",
+          //     "seating": 4,
+          //     "exShowroom": 0
+          //   },
+          //   "Airport Shuttle": {
+          //     "bodyType": "AIRPORT SHUTTLE",
+          //     "cc": 250,
+          //     "fuelType": "Electric",
+          //     "seating": 20,
+          //     "exShowroom": 0
+          //   }
+          // },
+          // "JBM e-MediLife": {
+          //   "Electric Medical Mobile Unit": {
+          //     "bodyType": "SPECIALTY VEHICLE",
+          //     "cc": 250,
+          //     "fuelType": "Electric",
+          //     "seating":6,
+          //     "exShowroom": 0
+          //   }
+          // }
         },
       },
       "Olectra Greentech": {
@@ -125739,10 +125750,10 @@ class VehicleData {
           "Olectra K9": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 48",
-              "exShowroom": 0
+              "seating": 48,
+              "exShowroom": 20000000
             }
           }
         },
@@ -125750,10 +125761,10 @@ class VehicleData {
           "Olectra K9": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 48",
-              "exShowroom": 0
+              "seating": 48,
+              "exShowroom": 20000000
             }
           }
         },
@@ -125761,19 +125772,19 @@ class VehicleData {
           "Olectra K7": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 15000000
             }
           },
           "Olectra K9": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 48",
-              "exShowroom": 0
+              "seating": 48,
+              "exShowroom": 20000000
             }
           }
         },
@@ -125783,26 +125794,26 @@ class VehicleData {
               "bodyType": "LUXURY MINI BUS",
               "cc": 180,
               "fuelType": "Electric",
-              "seating": "11 + Driver",
-              "exShowroom": 0
+              "seating": 12,
+              "exShowroom": 14000000
             }
           },
           "Olectra K7": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 15000000
             }
           },
           "Olectra K9": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 48",
-              "exShowroom": 0
+              "seating": 48,
+              "exShowroom": 20000000
             }
           }
         },
@@ -125812,35 +125823,35 @@ class VehicleData {
               "bodyType": "LUXURY MINI BUS",
               "cc": 180,
               "fuelType": "Electric",
-              "seating": "11 + Driver",
-              "exShowroom": 0
+              "seating": 12,
+              "exShowroom": 14000000
             }
           },
           "Olectra K7": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 15000000
             }
           },
           "Olectra K9": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 48",
-              "exShowroom": 0
+              "seating": 48,
+              "exShowroom": 20000000
             }
           },
           "Olectra C9": {
             "Electric Coach": {
               "bodyType": "COACH",
-              "cc": 0,
+              "cc": 360,
               "fuelType": "Electric",
-              "seating": "up to 45",
-              "exShowroom": 0
+              "seating": 45,
+              "exShowroom": 25000000
             }
           }
         },
@@ -125850,26 +125861,26 @@ class VehicleData {
               "bodyType": "LUXURY MINI BUS",
               "cc": 180,
               "fuelType": "Electric",
-              "seating": "11 + Driver",
-              "exShowroom": 0
+              "seating": 12,
+              "exShowroom": 14000000
             }
           },
           "Olectra K7": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 15000000
             }
           },
           "Olectra K9": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 48",
-              "exShowroom": 0
+              "seating": 48,
+              "exShowroom": 20000000
             }
           },
           "Olectra C9": {
@@ -125877,8 +125888,8 @@ class VehicleData {
               "bodyType": "INTER-CITY COACH",
               "cc": 360,
               "fuelType": "Electric",
-              "seating": "up to 45",
-              "exShowroom": 0
+              "seating": 45,
+              "exShowroom": 25000000
             }
           }
         },
@@ -125888,26 +125899,26 @@ class VehicleData {
               "bodyType": "LUXURY MINI BUS",
               "cc": 180,
               "fuelType": "Electric",
-              "seating": "11 + Driver",
-              "exShowroom": 0
+              "seating": 12,
+              "exShowroom": 14000000
             }
           },
           "Olectra K7": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 15000000
             }
           },
           "Olectra K9": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 48",
-              "exShowroom": 0
+              "seating": 48,
+              "exShowroom": 20000000
             }
           },
           "Olectra C9": {
@@ -125915,8 +125926,8 @@ class VehicleData {
               "bodyType": "INTER-CITY COACH",
               "cc": 360,
               "fuelType": "Electric",
-              "seating": "up to 45",
-              "exShowroom": 0
+              "seating": 45,
+              "exShowroom": 25000000
             }
           }
         },
@@ -125926,26 +125937,26 @@ class VehicleData {
               "bodyType": "LUXURY MINI BUS",
               "cc": 180,
               "fuelType": "Electric",
-              "seating": "11 + Driver",
-              "exShowroom": 0
+              "seating": 12,
+              "exShowroom": 14000000
             }
           },
           "Olectra K7": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 15000000
             }
           },
           "Olectra K9": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 48",
-              "exShowroom": 0
+              "seating": 48,
+              "exShowroom": 20000000
             }
           },
           "Olectra C9": {
@@ -125953,8 +125964,8 @@ class VehicleData {
               "bodyType": "INTER-CITY COACH",
               "cc": 360,
               "fuelType": "Electric",
-              "seating": "up to 45",
-              "exShowroom": 0
+              "seating": 45,
+              "exShowroom": 25000000
             }
           }
         },
@@ -125964,26 +125975,26 @@ class VehicleData {
               "bodyType": "LUXURY MINI BUS",
               "cc": 180,
               "fuelType": "Electric",
-              "seating": "11 + Driver",
-              "exShowroom": 0
+              "seating": 12,
+              "exShowroom": 14000000
             }
           },
           "Olectra K7": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 15000000
             }
           },
           "Olectra K9": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 48",
-              "exShowroom": 0
+              "seating": 48,
+              "exShowroom": 20000000
             }
           },
           "Olectra C9": {
@@ -125991,8 +126002,8 @@ class VehicleData {
               "bodyType": "INTER-CITY COACH",
               "mcc": 360,
               "fuelType": "Electric",
-              "seating": "up to 45",
-              "exShowroom": 0
+              "seating": 45,
+              "exShowroom": 25000000
             }
           }
         },
@@ -126002,26 +126013,26 @@ class VehicleData {
               "bodyType": "LUXURY MINI BUS",
               "cc": 180,
               "fuelType": "Electric",
-              "seating": "11 + Driver",
-              "exShowroom": 0
+              "seating": 12,
+              "exShowroom": 14000000
             }
           },
           "Olectra K7": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 15000000
             }
           },
           "Olectra K9": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 48",
-              "exShowroom": 0
+              "seating": 48,
+              "exShowroom": 20000000
             }
           },
           "Olectra C9": {
@@ -126029,46 +126040,64 @@ class VehicleData {
               "bodyType": "INTER-CITY COACH",
               "cc": 360,
               "fuelType": "Electric",
-              "seating": "up to 45",
-              "exShowroom": 0
+              "seating": 45,
+              "exShowroom": 25000000
             }
           }
         },
         "2025": {
-          "Olectra iX": {
-            "Electric Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 0,
-              "fuelType": "Electric",
-              "seating": "Varies by configuration",
-              "exShowroom": 0
-            }
-          },
+          // "Olectra iX": {
+          //   "Electric Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc":0,
+          //     "fuelType": "Electric",
+          //     "seating": "Varies by configuration",
+          //     "exShowroom": 0
+          //   }
+          // },
           "Olectra X2": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 39",
-              "exShowroom": 0
+              "seating": 39,
+              "exShowroom": 17200000
+            }
+          },
+          "Olectra K6 LuXe": {
+            "Electric Bus": {
+              "bodyType": "LUXURY MINI BUS",
+              "cc": 180,
+              "fuelType": "Electric",
+              "seating": 12,
+              "exShowroom": 14000000
             }
           },
           "Olectra K7": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 35",
-              "exShowroom": 0
+              "seating": 35,
+              "exShowroom": 15000000
+            }
+          },
+          "Olectra C9": {
+            "Electric Coach": {
+              "bodyType": "INTER-CITY COACH",
+              "cc": 360,
+              "fuelType": "Electric",
+              "seating": 45,
+              "exShowroom": 25000000
             }
           },
           "Olectra K9": {
             "Electric Bus": {
               "bodyType": "CITY BUS",
-              "cc": 0,
+              "cc": 180,
               "fuelType": "Electric",
-              "seating": "up to 48",
-              "exShowroom": 0
+              "seating": 48,
+              "exShowroom": 20000000
             }
           }
         }
@@ -126080,8 +126109,8 @@ class VehicleData {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel / CNG",
-              "seating": "Varies by variant",
-              "exShowroom": 0
+              "seating": 59,
+              "exShowroom": 2200000
             }
           },
           "SML Isuzu Executive": {
@@ -126089,26 +126118,26 @@ class VehicleData {
               "bodyType": "STAFF / TOURIST BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": "Varies by variant",
-              "exShowroom": 0
+              "seating": 38,
+              "exShowroom": 2500000
             }
           },
-          "SML Isuzu Samrat": {
-            "City Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 3455,
-              "fuelType": "Diesel",
-              "seating": "Varies by variant",
-              "exShowroom": 0
-            }
-          },
+          // "SML Isuzu Samrat": {
+          //   "City Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 3455,
+          //     "fuelType": "Diesel",
+          //     "seating": "Varies by variant",
+          //     "exShowroom": 0
+          //   }
+          // },
           "SML Isuzu FR 1318": {
             "Intercity Coach": {
               "bodyType": "INTERCITY COACH",
               "cc": 5193,
               "fuelType": "Diesel",
-              "seating": "Varies by variant",
-              "exShowroom": 0
+              "seating": 41,
+              "exShowroom": 2500000
             }
           }
         },
@@ -126118,8 +126147,8 @@ class VehicleData {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel / CNG",
-              "seating": "Varies by variant",
-              "exShowroom": 1600000
+              "seating": 59,
+              "exShowroom": 2200000
             }
           },
           "SML Isuzu Executive": {
@@ -126127,19 +126156,19 @@ class VehicleData {
               "bodyType": "STAFF / TOURIST BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": "Varies by variant",
-              "exShowroom": 1700000
+              "seating": 38,
+              "exShowroom": 2500000
             }
           },
-          "SML Isuzu Samrat": {
-            "City Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 3455,
-              "fuelType": "Diesel",
-              "seating": "Varies by variant",
-              "exShowroom": 1500000
-            }
-          }
+          // "SML Isuzu Samrat": {
+          //   "City Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 3455,
+          //     "fuelType": "Diesel",
+          //     "seating": "Varies by variant",
+          //     "exShowroom": 1500000
+          //   }
+          // }
         },
         "2017": {
           "SML Isuzu S7": {
@@ -126147,8 +126176,8 @@ class VehicleData {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel / CNG",
-              "seating": "Varies by variant",
-              "exShowroom": 1600000
+              "seating": 59,
+              "exShowroom": 2200000
             }
           },
           "SML Isuzu Executive": {
@@ -126156,19 +126185,19 @@ class VehicleData {
               "bodyType": "STAFF / TOURIST BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": "Varies by variant",
-              "exShowroom": 1700000
+              "seating": 38,
+              "exShowroom": 2500000
             }
           },
-          "SML Isuzu Samrat": {
-            "City Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 3455,
-              "fuelType": "Diesel",
-              "seating": "Varies by variant",
-              "exShowroom": 1500000
-            }
-          }
+          // "SML Isuzu Samrat": {
+          //   "City Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 3455,
+          //     "fuelType": "Diesel",
+          //     "seating": "Varies by variant",
+          //     "exShowroom": 1500000
+          //   }
+          // }
         },
         "2018": {
           "SML Isuzu S7": {
@@ -126176,8 +126205,8 @@ class VehicleData {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel / CNG",
-              "seating": "Varies by variant",
-              "exShowroom": 1600000
+              "seating": 59,
+              "exShowroom": 2200000
             }
           },
           "SML Isuzu Executive": {
@@ -126185,19 +126214,19 @@ class VehicleData {
               "bodyType": "STAFF / TOURIST BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": "Varies by variant",
-              "exShowroom": 1700000
+              "seating": 38,
+              "exShowroom": 2500000
             }
           },
-          "SML Isuzu Samrat": {
-            "City Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 3455,
-              "fuelType": "Diesel",
-              "seating": "Varies by variant",
-              "exShowroom": 1500000
-            }
-          }
+          // "SML Isuzu Samrat": {
+          //   "City Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 3455,
+          //     "fuelType": "Diesel",
+          //     "seating": "Varies by variant",
+          //     "exShowroom": 1500000
+          //   }
+          // }
         },
         "2019": {
           "SML Isuzu S7": {
@@ -126205,8 +126234,8 @@ class VehicleData {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel / CNG",
-              "seating": 0,
-              "exShowroom": 1600000
+              "seating": 59,
+              "exShowroom": 2200000
             }
           },
           "SML Isuzu Executive": {
@@ -126214,19 +126243,19 @@ class VehicleData {
               "bodyType": "STAFF / TOURIST BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1700000
+              "seating": 38,
+              "exShowroom": 2500000
             }
           },
-          "SML Isuzu Samrat": {
-            "City Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 3455,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1500000
-            }
-          }
+          // "SML Isuzu Samrat": {
+          //   "City Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 3455,
+          //     "fuelType": "Diesel",
+          //     "seating": 0,
+          //     "exShowroom": 1500000
+          //   }
+          // }
         },
         "2020": {
           "SML Isuzu S7": {
@@ -126234,8 +126263,8 @@ class VehicleData {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel / CNG",
-              "seating": 0,
-              "exShowroom": 1600000
+              "seating": 59,
+              "exShowroom": 2200000
             }
           },
           "SML Isuzu Executive": {
@@ -126243,19 +126272,19 @@ class VehicleData {
               "bodyType": "STAFF / TOURIST BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1700000
+              "seating": 38,
+              "exShowroom": 2500000
             }
           },
-          "SML Isuzu Samrat": {
-            "City Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 3455,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1500000
-            }
-          }
+          // "SML Isuzu Samrat": {
+          //   "City Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 3455,
+          //     "fuelType": "Diesel",
+          //     "seating": 0,
+          //     "exShowroom": 1500000
+          //   }
+          // }
         },
         "2021": {
           "SML Isuzu S7": {
@@ -126263,8 +126292,8 @@ class VehicleData {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel / CNG",
-              "seating": 0,
-              "exShowroom": 1600000
+              "seating": 59,
+              "exShowroom": 2200000
             }
           },
           "SML Isuzu Executive": {
@@ -126272,25 +126301,25 @@ class VehicleData {
               "bodyType": "STAFF / TOURIST BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1700000
+              "seating": 38,
+              "exShowroom": 2500000
             }
           },
-          "SML Isuzu Samrat": {
-            "City Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 3455,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1500000
-            }
-          },
+          // "SML Isuzu Samrat": {
+          //   "City Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 3455,
+          //     "fuelType": "Diesel",
+          //     "seating":0,
+          //     "exShowroom": 1500000
+          //   }
+          // },
           "SML Isuzu Hiroi": {
             "School & Staff Bus": {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 63,
               "exShowroom": 2000000
             }
           },
@@ -126301,8 +126330,8 @@ class VehicleData {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel / CNG",
-              "seating": 0,
-              "exShowroom": 1600000
+              "seating": 59,
+              "exShowroom": 2200000
             }
           },
           "SML Isuzu Executive": {
@@ -126310,25 +126339,25 @@ class VehicleData {
               "bodyType": "STAFF / TOURIST BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1700000
+              "seating": 38,
+              "exShowroom": 2500000
             }
           },
-          "SML Isuzu Samrat": {
-            "City Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 3455,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1500000
-            }
-          },
+          // "SML Isuzu Samrat": {
+          //   "City Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 3455,
+          //     "fuelType": "Diesel",
+          //     "seating": 0,
+          //     "exShowroom": 1500000
+          //   }
+          // },
           "SML Isuzu Hiroi": {
             "School & Staff Bus": {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 63,
               "exShowroom_estimated": 2000000
             }
           },
@@ -126339,8 +126368,8 @@ class VehicleData {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel / CNG",
-              "seating": 0,
-              "exShowroom": 1600000
+              "seating": 59,
+              "exShowroom": 2200000
             }
           },
           "SML Isuzu Executive": {
@@ -126348,33 +126377,34 @@ class VehicleData {
               "bodyType": "STAFF / TOURIST BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1700000
+              "seating": 38,
+              "exShowroom": 2500000
             }
           },
-          "SML Isuzu Samrat": {
-            "City Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 3455,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1500000
-            }
-          },
+          // "SML Isuzu Samrat": {
+          //   "City Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 3455,
+          //     "fuelType": "Diesel",
+          //     "seating": 0,
+          //     "exShowroom": 1500000
+          //   }
+          // },
           "SML Isuzu Hiroi": {
             "School & Staff Bus": {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 63,
               "exShowroom": 2000000
             }
           },
           "SML Isuzu Hiroi EV": {
             "Electric Bus": {
               "bodyType": "ELECTRIC BUS",
+              "cc": 200,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 33,
               "exShowroom": 8900000
             }
           },
@@ -126385,8 +126415,8 @@ class VehicleData {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel / CNG",
-              "seating": "Varies by variant",
-              "exShowroom": 1600000
+              "seating": 59,
+              "exShowroom": 2200000
             }
           },
           "SML Isuzu Executive": {
@@ -126394,32 +126424,35 @@ class VehicleData {
               "bodyType": "STAFF / TOURIST BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": "Varies by variant",
-              "exShowroom": 1700000
+              "seating": 38,
+              "exShowroom": 2500000
             }
           },
-          "SML Isuzu Samrat": {
-            "City Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 3455,
-              "fuelType": "Diesel",
-              "seating": "Varies by variant",
-              "exShowroom": 1500000
-            }
-          },
+          // "SML Isuzu Samrat": {
+          //   "City Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 3455,
+          //     "fuelType": "Diesel",
+          //     "seating": "Varies by variant",
+          //     "exShowroom": 1500000
+          //   }
+          // },
           "SML Isuzu Hiroi": {
             "School & Staff Bus": {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel",
+              "seating": 63,
               "exShowroom": 2000000
             }
           },
           "SML Isuzu Hiroi EV": {
             "Electric Bus": {
               "bodyType": "ELECTRIC BUS",
+              "cc": 200,
               "fuelType": "Electric",
-              "exShowroom_estimated": 8900000
+              "seating": 33,
+              "exShowroom": 8900000
             }
           },
         },
@@ -126429,8 +126462,8 @@ class VehicleData {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel / CNG",
-              "seating": 0,
-              "exShowroom": 1600000
+              "seating": 59,
+              "exShowroom": 2200000
             }
           },
           "SML Isuzu Executive": {
@@ -126438,33 +126471,34 @@ class VehicleData {
               "bodyType": "STAFF / TOURIST BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1700000
+              "seating": 38,
+              "exShowroom": 2500000
             }
           },
-          "SML Isuzu Samrat": {
-            "City Bus": {
-              "bodyType": "CITY BUS",
-              "cc": 3455,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1500000
-            }
-          },
+          // "SML Isuzu Samrat": {
+          //   "City Bus": {
+          //     "bodyType": "CITY BUS",
+          //     "cc": 3455,
+          //     "fuelType": "Diesel",
+          //     "seating": 0,
+          //     "exShowroom": 1500000
+          //   }
+          // },
           "SML Isuzu Hiroi": {
             "School & Staff Bus": {
               "bodyType": "CITY / SCHOOL / STAFF BUS",
               "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 63,
               "exShowroom": 2000000
             }
           },
           "SML Isuzu Hiroi EV": {
             "Electric Bus": {
               "bodyType": "ELECTRIC BUS",
+              "cc": 200,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 33,
               "exShowroom": 8900000
             }
           },
@@ -126473,7 +126507,7 @@ class VehicleData {
               "bodyType": "MAXI-CAB BUS",
               "cc": 310,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 13,
               "exShowroom": 1650000
             }
           }
@@ -126486,21 +126520,21 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "LPG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             }
           },
@@ -126509,14 +126543,14 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             }
           },
@@ -126527,21 +126561,21 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "LPG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             }
           },
@@ -126550,14 +126584,14 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             }
           },
@@ -126568,21 +126602,21 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "LPG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             }
           },
@@ -126591,14 +126625,14 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             }
           }
@@ -126609,21 +126643,21 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "LPG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             }
           },
@@ -126632,14 +126666,14 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             }
           }
@@ -126650,21 +126684,21 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "LPG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroo": 120000
             }
           },
@@ -126673,14 +126707,14 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             }
           }
@@ -126691,21 +126725,21 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "LPG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             }
           },
@@ -126714,14 +126748,14 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             }
           }
@@ -126732,21 +126766,21 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "LPG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             }
           },
@@ -126755,14 +126789,14 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             }
           }
@@ -126773,21 +126807,21 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "LPG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             }
           },
@@ -126796,23 +126830,23 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             }
           },
           "TVS King EV Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 11,
               "fuelType": "Electric",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 2295000
             }
           }
@@ -126823,21 +126857,21 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "LPG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             }
           },
@@ -126846,23 +126880,23 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom_approx": 180000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom_approx": 180000
             }
           },
           "TVS King EV Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 11,
               "fuelType": "Electric",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom_approx": 295000
             }
           }
@@ -126873,21 +126907,21 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "LPG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             }
           },
@@ -126896,23 +126930,23 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             }
           },
           "TVS King EV Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 11,
               "fuelType": "Electric",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 295000
             }
           }
@@ -126923,21 +126957,21 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 199.26,
               "fuelType": "LPG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 120000
             }
           },
@@ -126946,23 +126980,23 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "Petrol",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 225.8,
               "fuelType": "CNG",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 180000
             }
           },
           "TVS King EV Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 11,
               "fuelType": "Electric",
-              "seating": "D+3",
+              "seating": 4,
               "exShowroom": 295000
             }
           }
@@ -127230,8 +127264,8 @@ class VehicleData {
             "Prima 4625.S (4x2 tractor head)": {
               "Standard": {
                 "bodyType": "TRACTOR_HEAD",
-                "fuelType": "Diesel",
                 "cc": 6692,
+                "fuelType": "Diesel",
                 "seating": 2,
                 "exShowroom": 3273000
               }
@@ -127389,8 +127423,8 @@ class VehicleData {
           "Trailer": {
             "Prima 4625.S (4x2 tractor head)": {
               "bodyType": "TRACTOR_HEAD",
-              "fuelType": "Diesel",
               "cc": 6692,
+              "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 3273000
             }
@@ -127443,9 +127477,9 @@ class VehicleData {
           "Ace Zip XL": {
             "Diesel Variant": {
               "bodyType": "Mini Truck",
-              "seating": 2,
-              "payload": 600,
+              "cc": 650,
               "fuelType": "Diesel",
+              "seating": 2,
               "exShowroom": 308000
             }
           },
@@ -127565,8 +127599,8 @@ class VehicleData {
           "Trailer": {
             "Prima 4625.S (4x2 tractor head)": {
               "bodyType": "TRACTOR_HEAD",
-              "fuelType": "Diesel",
               "cc": 6692,
+              "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 3273000
             }
@@ -127619,9 +127653,9 @@ class VehicleData {
           "Ace Zip XL": {
             "Diesel Variant": {
               "bodyType": "Mini Truck",
-              "seating": 2,
-              "payload": 600,
+              "cc": 650,
               "fuelType": "Diesel",
+              "seating": 2,
               "exShowroom": 308000
             }
           },
@@ -127768,8 +127802,8 @@ class VehicleData {
           "Trailer": {
             "Prima 4625.S (4x2 tractor head)": {
               "bodyType": "TRACTOR_HEAD",
-              "fuelType": "Diesel",
               "cc": 6692,
+              "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 3273000
             }
@@ -127822,9 +127856,9 @@ class VehicleData {
           "Ace Zip XL": {
             "Diesel Variant": {
               "bodyType": "Mini Truck",
-              "seating": 2,
-              "payload": 600,
+              "cc": 650,
               "fuelType": "Diesel",
+              "seating": 2,
               "exShowroom": 308000
             }
           },
@@ -128522,7 +128556,6 @@ class VehicleData {
             "Prima 4625.S (4x2 tractor head)": {
               "bodyType": "TRACTOR_HEAD",
               "fuelType": "Diesel",
-              "cc": 6692,
               "seating": 2,
               "exShowroom": 3273000
             }
@@ -128575,9 +128608,9 @@ class VehicleData {
           "Ace Zip XL": {
             "Diesel Variant": {
               "bodyType": "Mini Truck",
-              "seating": 2,
-              "payload": 600,
+              "cc": 650,
               "fuelType": "Diesel",
+              "seating": 2,
               "exShowroom": 308000
             }
           },
@@ -128677,7 +128710,7 @@ class VehicleData {
           "Ace EV": {
             "Electric (BS-VI Equivalent)": {
               "bodyType": "Mini Truck / e-Cargo",
-              "cc": 0,
+              "cc": 36,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 999000
@@ -128827,8 +128860,8 @@ class VehicleData {
             "Prima 4625.S (4x2 tractor head)": {
               "Standard": {
                 "bodyType": "TRACTOR_HEAD",
-                "fuelType": "Diesel",
                 "cc": 6692,
+                "fuelType": "Diesel",
                 "seating": 2,
                 "exShowroom": 3273000
               }
@@ -128873,7 +128906,7 @@ class VehicleData {
           "Ace XL": {
             "Diesel Variant": {
               "bodyType": "Mini Truck",
-              "payload": 710,
+              "cc": 650,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 423000
@@ -128882,9 +128915,9 @@ class VehicleData {
           "Ace Zip XL": {
             "Diesel Variant": {
               "bodyType": "Mini Truck",
-              "seating": 2,
-              "payload": 600,
+              "cc": 650,
               "fuelType": "Diesel",
+              "seating": 2,
               "exShowroom": 308000
             }
           },
@@ -128984,7 +129017,7 @@ class VehicleData {
           "Ace EV": {
             "Electric (BS-VI Equivalent)": {
               "bodyType": "Mini Truck / e-Cargo",
-              "cc": 0,
+              "cc": 36,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 999000
@@ -129020,7 +129053,7 @@ class VehicleData {
           "Magic EV": {
             "Electric (Concept Launch – soon available)": {
               "bodyType": "Last-Mile Passenger Van",
-              "cc": 0,
+              "cc": 31,
               "fuelType": "Electric",
               "seating": 10,
               "exShowroom": 1100000
@@ -129029,7 +129062,7 @@ class VehicleData {
           "Ultra E.9": {
             "Electric (Urban ILCV Concept)": {
               "bodyType": "Urban Cargo Truck",
-              "cc": 0,
+              "cc": 46,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 1500000
@@ -129151,8 +129184,8 @@ class VehicleData {
           "Trailer": {
             "Prima 4625.S (4x2 tractor head)": {
               "bodyType": "TRACTOR_HEAD",
-              "fuelType": "Diesel",
               "cc": 6692,
+              "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 3273000
             }
@@ -129196,7 +129229,7 @@ class VehicleData {
           "Ace XL": {
             "Diesel Variant": {
               "bodyType": "Mini Truck",
-              "payload": 710,
+              "cc": 650,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 423000
@@ -129205,9 +129238,9 @@ class VehicleData {
           "Ace Zip XL": {
             "Diesel Variant": {
               "bodyType": "Mini Truck",
-              "seating": 2,
-              "payload": 600,
+              "cc": 650,
               "fuelType": "Diesel",
+              "seating": 2,
               "exShowroom": 308000
             }
           },
@@ -129307,7 +129340,7 @@ class VehicleData {
           "Ace EV": {
             "Electric (BS-VI Equivalent)": {
               "bodyType": "Mini Truck / e-Cargo",
-              "cc": 0,
+              "cc": 27,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 999000
@@ -129343,7 +129376,7 @@ class VehicleData {
           "Magic EV": {
             "Electric (Concept Launch – soon available)": {
               "bodyType": "Last-Mile Passenger Van",
-              "cc": 0,
+              "cc": 31,
               "fuelType": "Electric",
               "seating": 10,
               "exShowroom": 1100000
@@ -129352,19 +129385,19 @@ class VehicleData {
           "Ultra E.9": {
             "Electric (Urban ILCV Concept)": {
               "bodyType": "Urban Cargo Truck",
-              "cc": 0,
+              "cc": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 1500000
             }
           },
           "Ace EV 1000": {
-            "Electric (27 kW EVOGEN, 1 t payload)": {
+            "Electric (BS-VI Equivalent)": {
               "bodyType": "Mini Truck / e-Cargo",
-              "cc": 0,
+              "cc": 27,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 1142000
+              "exShowroom": 999000
             }
           },
         },
@@ -129539,9 +129572,9 @@ class VehicleData {
           "Ace Zip XL": {
             "Diesel Variant": {
               "bodyType": "Mini Truck",
-              "seating": 2,
-              "payload": 600,
+              "cc": 650,
               "fuelType": "Diesel",
+              "seating": 2,
               "exShowroom": 308000
             }
           },
@@ -129641,7 +129674,7 @@ class VehicleData {
           "Ace EV": {
             "Electric (BS-VI Equivalent)": {
               "bodyType": "Mini Truck / e-Cargo",
-              "cc": 0,
+              "cc": 27,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 999000
@@ -129677,7 +129710,7 @@ class VehicleData {
           "Magic EV": {
             "Electric (Concept Launch – soon available)": {
               "bodyType": "Last-Mile Passenger Van",
-              "cc": 0,
+              "cc": 31,
               "fuelType": "Electric",
               "seating": 10,
               "exShowroom": 1100000
@@ -129686,7 +129719,7 @@ class VehicleData {
           "Ultra E.9": {
             "Electric (Urban ILCV Concept)": {
               "bodyType": "Urban Cargo Truck",
-              "cc": 0,
+              "cc": 250,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 1500000
@@ -129695,7 +129728,7 @@ class VehicleData {
           "Ace EV 1000": {
             "Electric (27 kW EVOGEN, 1 t payload)": {
               "bodyType": "Mini Truck / e-Cargo",
-              "cc": 0,
+              "cc": 29,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 1142000
@@ -129704,7 +129737,7 @@ class VehicleData {
           "Ace Pro": {
             "Electric": {
               "bodyType": "Mini Truck / e-Cargo",
-              "cc": 0,
+              "cc": 29,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 550000
@@ -129727,7 +129760,7 @@ class VehicleData {
           "Intra EV Pickup": {
             "Electric (BS-VI City Pickup)": {
               "bodyType": "Electric Pick-up",
-              "cc": 0,
+              "cc": 71,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 900000
@@ -133938,7 +133971,7 @@ class VehicleData {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1360000
             }
           },
@@ -133947,7 +133980,7 @@ class VehicleData {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
-              "seating": "Driver + passenger",
+              "seating": 2,
               "exShowroom": 1087000
             }
           },
@@ -133956,7 +133989,7 @@ class VehicleData {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1495000
             }
           },
@@ -133965,7 +133998,7 @@ class VehicleData {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 0
             }
           }
@@ -133976,7 +134009,7 @@ class VehicleData {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1360000
             }
           },
@@ -133985,7 +134018,7 @@ class VehicleData {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
-              "seating": "Driver + passenger",
+              "seating": 2,
               "exShowroom": 1087000
             }
           },
@@ -133994,7 +134027,7 @@ class VehicleData {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1495000
             }
           },
@@ -134003,7 +134036,7 @@ class VehicleData {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 0
             }
           },
@@ -134012,7 +134045,7 @@ class VehicleData {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 2000000
             }
           },
@@ -134020,7 +134053,7 @@ class VehicleData {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
-            "seating": "0",
+            "seating": 4,
             "exShowroom": 1075000
           },
         },
@@ -134030,7 +134063,7 @@ class VehicleData {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1360000
             }
           },
@@ -134039,7 +134072,7 @@ class VehicleData {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
-              "seating": "Driver + passenger",
+              "seating": 2,
               "exShowroom": 1087000
             }
           },
@@ -134048,7 +134081,7 @@ class VehicleData {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1495000
             }
           },
@@ -134057,7 +134090,7 @@ class VehicleData {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 0
             }
           },
@@ -134066,7 +134099,7 @@ class VehicleData {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 2000000
             }
           },
@@ -134074,7 +134107,7 @@ class VehicleData {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
-            "seating": "0",
+            "seating": 4,
             "exShowroom": 1075000
           },
           "Force Trax Cruiser Deluxe": {
@@ -134082,7 +134115,7 @@ class VehicleData {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "9",
+              "seating": 9,
               "exShowroom": 975000
             }
           },
@@ -134091,7 +134124,7 @@ class VehicleData {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "5",
+              "seating": 5,
               "exShowroom": 1330000
             }
           },
@@ -134100,7 +134133,7 @@ class VehicleData {
               "bodyType": "Emergency Response Vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 0
             }
           },
@@ -134111,7 +134144,7 @@ class VehicleData {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1360000
             }
           },
@@ -134120,7 +134153,7 @@ class VehicleData {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
-              "seating": "Driver + passenger",
+              "seating": 2,
               "exShowroom": 1087000
             }
           },
@@ -134129,7 +134162,7 @@ class VehicleData {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1495000
             }
           },
@@ -134138,7 +134171,7 @@ class VehicleData {
               "bodyType": "Specialized police transport",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 0
             }
           },
@@ -134147,7 +134180,7 @@ class VehicleData {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 2000000
             }
           },
@@ -134155,7 +134188,7 @@ class VehicleData {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
-            "seating": "0",
+            "seating": 4,
             "exShowroom": 1075000
           },
           "Force Trax Cruiser Deluxe": {
@@ -134163,7 +134196,7 @@ class VehicleData {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "9",
+              "seating": 9,
               "exShowroom": 975000
             }
           },
@@ -134172,7 +134205,7 @@ class VehicleData {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "5",
+              "seating": 5,
               "exShowroom": 1330000
             }
           },
@@ -134181,7 +134214,7 @@ class VehicleData {
               "bodyType": "Emergency Response Vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 0
             }
           },
@@ -134192,7 +134225,7 @@ class VehicleData {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1360000
             }
           },
@@ -134201,7 +134234,7 @@ class VehicleData {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
-              "seating": "Driver + passenger",
+              "seating": 2,
               "exShowroom": 1087000
             }
           },
@@ -134210,25 +134243,25 @@ class VehicleData {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1495000
             }
           },
-          "Force Trax Police Van": {
-            "Diesel": {
-              "bodyType": "Specialized police transport",
-              "cc": "2.6L",
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Trax Police Van": {
+          //   "Diesel": {
+          //     "bodyType": "Specialized police transport",
+          //     "cc": "2.6L",
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
           "Force Trax Jungle Safari": {
             "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 2000000
             }
           },
@@ -134236,7 +134269,7 @@ class VehicleData {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
-            "seating": "0",
+            "seating": 4,
             "exShowroom": 1075000
           },
           "Force Trax Cruiser Deluxe": {
@@ -134244,7 +134277,7 @@ class VehicleData {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "9",
+              "seating": 9,
               "exShowroom": 975000
             }
           },
@@ -134253,19 +134286,19 @@ class VehicleData {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "5",
+              "seating": 5,
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle": {
-            "Diesel": {
-              "bodyType": "Emergency Response Vehicle",
-              "cc": 2596,
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Traveller First Responder Vehicle": {
+          //   "Diesel": {
+          //     "bodyType": "Emergency Response Vehicle",
+          //     "cc": 2596,
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2020": {
           "Force Trax Ambulance": {
@@ -134273,7 +134306,7 @@ class VehicleData {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1360000
             }
           },
@@ -134282,7 +134315,7 @@ class VehicleData {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
-              "seating": "Driver + passenger",
+              "seating": 2,
               "exShowroom": 1087000
             }
           },
@@ -134291,25 +134324,25 @@ class VehicleData {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1495000
             }
           },
-          "Force Trax Police Van": {
-            "Diesel": {
-              "bodyType": "Specialized police transport",
-              "cc": "2.6L",
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Trax Police Van": {
+          //   "Diesel": {
+          //     "bodyType": "Specialized police transport",
+          //     "cc": "2.6L",
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
           "Force Trax Jungle Safari": {
             "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 2000000
             }
           },
@@ -134317,7 +134350,7 @@ class VehicleData {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
-            "seating": "0",
+            "seating": 4,
             "exShowroom": 1075000
           },
           "Force Trax Cruiser Deluxe": {
@@ -134325,7 +134358,7 @@ class VehicleData {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "9",
+              "seating": 9,
               "exShowroom": 975000
             }
           },
@@ -134334,19 +134367,19 @@ class VehicleData {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "5",
+              "seating": 5,
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle": {
-            "Diesel": {
-              "bodyType": "Emergency Response Vehicle",
-              "cc": 2596,
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Traveller First Responder Vehicle": {
+          //   "Diesel": {
+          //     "bodyType": "Emergency Response Vehicle",
+          //     "cc": 2596,
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2021": {
           "Force Trax Ambulance": {
@@ -134354,7 +134387,7 @@ class VehicleData {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1360000
             }
           },
@@ -134363,7 +134396,7 @@ class VehicleData {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
-              "seating": "Driver + passenger",
+              "seating": 2,
               "exShowroom": 1087000
             }
           },
@@ -134372,25 +134405,25 @@ class VehicleData {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1495000
             }
           },
-          "Force Trax Police Van": {
-            "Diesel": {
-              "bodyType": "Specialized police transport",
-              "cc": "2.6L",
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Trax Police Van": {
+          //   "Diesel": {
+          //     "bodyType": "Specialized police transport",
+          //     "cc": "2.6L",
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
           "Force Trax Jungle Safari": {
             "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 2000000
             }
           },
@@ -134398,7 +134431,7 @@ class VehicleData {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
-            "seating": "0",
+            "seating": 4,
             "exShowroom": 1075000
           },
           "Force Trax Cruiser Deluxe": {
@@ -134406,7 +134439,7 @@ class VehicleData {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "9",
+              "seating": 9,
               "exShowroom": 975000
             }
           },
@@ -134415,19 +134448,19 @@ class VehicleData {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "5",
+              "seating": 5,
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle": {
-            "Diesel": {
-              "bodyType": "Emergency Response Vehicle",
-              "cc": 2596,
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Traveller First Responder Vehicle": {
+          //   "Diesel": {
+          //     "bodyType": "Emergency Response Vehicle",
+          //     "cc": 2596,
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2022": {
           "Force Trax Ambulance": {
@@ -134435,7 +134468,7 @@ class VehicleData {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1360000
             }
           },
@@ -134444,7 +134477,7 @@ class VehicleData {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
-              "seating": "Driver + passenger",
+              "seating": 2,
               "exShowroom": 1087000
             }
           },
@@ -134453,25 +134486,25 @@ class VehicleData {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1495000
             }
           },
-          "Force Trax Police Van": {
-            "Diesel": {
-              "bodyType": "Specialized police transport",
-              "cc": "2.6L",
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Trax Police Van": {
+          //   "Diesel": {
+          //     "bodyType": "Specialized police transport",
+          //     "cc": "2.6L",
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
           "Force Trax Jungle Safari": {
             "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 2000000
             }
           },
@@ -134479,7 +134512,7 @@ class VehicleData {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
-            "seating": "0",
+            "seating": 4,
             "exShowroom": 1075000
           },
           "Force Trax Cruiser Deluxe": {
@@ -134487,7 +134520,7 @@ class VehicleData {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "9",
+              "seating": 9,
               "exShowroom": 975000
             }
           },
@@ -134496,19 +134529,19 @@ class VehicleData {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "5",
+              "seating": 5,
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle": {
-            "Diesel": {
-              "bodyType": "Emergency Response Vehicle",
-              "cc": 2596,
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Traveller First Responder Vehicle": {
+          //   "Diesel": {
+          //     "bodyType": "Emergency Response Vehicle",
+          //     "cc": 2596,
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2023": {
           "Force Trax Ambulance": {
@@ -134516,7 +134549,7 @@ class VehicleData {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1360000
             }
           },
@@ -134525,7 +134558,7 @@ class VehicleData {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
-              "seating": "Driver + passenger",
+              "seating": 2,
               "exShowroom": 1087000
             }
           },
@@ -134534,25 +134567,25 @@ class VehicleData {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1495000
             }
           },
-          "Force Trax Police Van": {
-            "Diesel": {
-              "bodyType": "Specialized police transport",
-              "cc": "2.6L",
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Trax Police Van": {
+          //   "Diesel": {
+          //     "bodyType": "Specialized police transport",
+          //     "cc": "2.6L",
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
           "Force Trax Jungle Safari": {
             "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 2000000
             }
           },
@@ -134560,7 +134593,7 @@ class VehicleData {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
-            "seating": "0",
+            "seating": 4,
             "exShowroom": 1075000
           },
           "Force Trax Cruiser Deluxe": {
@@ -134568,7 +134601,7 @@ class VehicleData {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "9",
+              "seating": 9,
               "exShowroom": 975000
             }
           },
@@ -134577,19 +134610,19 @@ class VehicleData {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "5",
+              "seating": 5,
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle": {
-            "Diesel": {
-              "bodyType": "Emergency Response Vehicle",
-              "cc": 2596,
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Traveller First Responder Vehicle": {
+          //   "Diesel": {
+          //     "bodyType": "Emergency Response Vehicle",
+          //     "cc": 2596,
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2024": {
           "Force Trax Ambulance": {
@@ -134597,7 +134630,7 @@ class VehicleData {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1360000
             }
           },
@@ -134606,7 +134639,7 @@ class VehicleData {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
-              "seating": "Driver + passenger",
+              "seating": 2,
               "exShowroom": 1087000
             }
           },
@@ -134615,25 +134648,25 @@ class VehicleData {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1495000
             }
           },
-          "Force Trax Police Van": {
-            "Diesel": {
-              "bodyType": "Specialized police transport",
-              "cc": "2.6L",
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Trax Police Van": {
+          //   "Diesel": {
+          //     "bodyType": "Specialized police transport",
+          //     "cc": "2.6L",
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
           "Force Trax Jungle Safari": {
             "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 2000000
             }
           },
@@ -134641,7 +134674,7 @@ class VehicleData {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
-            "seating": "0",
+            "seating": 4,
             "exShowroom": 1075000
           },
           "Force Trax Cruiser Deluxe": {
@@ -134649,7 +134682,7 @@ class VehicleData {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "9",
+              "seating": 9,
               "exShowroom": 975000
             }
           },
@@ -134658,19 +134691,19 @@ class VehicleData {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "5",
+              "seating": 5,
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle": {
-            "Diesel": {
-              "bodyType": "Emergency Response Vehicle",
-              "cc": 2596,
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": 0
-            }
-          },
+          // "Force Traveller First Responder Vehicle": {
+          //   "Diesel": {
+          //     "bodyType": "Emergency Response Vehicle",
+          //     "cc": 2596,
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": 0
+          //   }
+          // },
         },
         "2025": {
           "Force Trax Ambulance": {
@@ -134678,7 +134711,7 @@ class VehicleData {
               "bodyType": "Compact Ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1360000
             }
           },
@@ -134687,7 +134720,7 @@ class VehicleData {
               "bodyType": "Fully enclosed cargo van",
               "cc": "3.2L",
               "fuelType": "Diesel",
-              "seating": "Driver + passenger",
+              "seating": 2,
               "exShowroom": 1087000
             }
           },
@@ -134696,25 +134729,25 @@ class VehicleData {
               "bodyType": "Factory-built ambulance",
               "cc": "2.6L",
               "fuelType": "Diesel",
-              "seating": "6 + 1 (driver)",
+              "seating": 7,
               "exShowroom": 1495000
             }
           },
-          "Force Trax Police Van": {
-            "Diesel": {
-              "bodyType": "Specialized police transport",
-              "cc": "2.6L",
-              "fuelType": "Diesel",
-              "seating": "0",
-              "exShowroom": "Data not available"
-            }
-          },
+          // "Force Trax Police Van": {
+          //   "Diesel": {
+          //     "bodyType": "Specialized police transport",
+          //     "cc": "2.6L",
+          //     "fuelType": "Diesel",
+          //     "seating": "0",
+          //     "exShowroom": "Data not available"
+          //   }
+          // },
           "Force Trax Jungle Safari": {
             "Diesel": {
               "bodyType": "Tourist safari vehicle",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "0",
+              "seating": 4,
               "exShowroom": 2000000
             }
           },
@@ -134722,7 +134755,7 @@ class VehicleData {
             "bodyType": "Armored cash transport",
             "cc": 2596,
             "fuelType": "Diesel",
-            "seating": "0",
+            "seating": 4,
             "exShowroom": 1075000
           },
           "Force Trax Cruiser Deluxe": {
@@ -134730,7 +134763,7 @@ class VehicleData {
               "bodyType": "Multi-Utility Vehicle (MUV)",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "9",
+              "seating": 9,
               "exShowroom": 975000
             }
           },
@@ -134739,19 +134772,19 @@ class VehicleData {
               "bodyType": "Off-road SUV",
               "cc": 2596,
               "fuelType": "Diesel",
-              "seating": "5",
+              "seating": 5,
               "exShowroom": 1330000
             }
           },
-          "Force Traveller First Responder Vehicle": {
-            "Diesel": {
-              "bodyType": "Emergency Response Vehicle",
-              "cc": 2596,
-              "fuelType": "Diesel",
-              "seating": "Varies by configuration",
-              "exShowroom": 0
-            }
-          },
+          // "Force Traveller First Responder Vehicle": {
+          //   "Diesel": {
+          //     "bodyType": "Emergency Response Vehicle",
+          //     "cc": 2596,
+          //     "fuelType": "Diesel",
+          //     "seating": "Varies by configuration",
+          //     "exShowroom": 0
+          //   }
+          // },
         },
       },
       "Eicher Motors (VECV)": {
@@ -135264,7 +135297,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 16,
               "exShowroom": 1800000
             }
           }
@@ -135350,7 +135383,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 16,
               "exShowroom": 1750000
             }
           },
@@ -135377,7 +135410,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 16,
               "exShowroom": 1800000
             }
           },
@@ -135472,7 +135505,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 14,
               "exShowroom": 1750000
             }
           },
@@ -135499,7 +135532,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 16,
               "exShowroom": 1800000
             }
           },
@@ -135639,7 +135672,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 16,
               "exShowroom": 1750000
             }
           },
@@ -135666,7 +135699,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 14,
               "exShowroom": 1800000
             }
           },
@@ -135806,7 +135839,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 16,
               "exShowroom": 1750000
             }
           },
@@ -135833,7 +135866,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 14,
               "exShowroom": 1800000
             }
           },
@@ -136009,7 +136042,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": "Customizable",
+              "seating": 16,
               "exShowroom": 1750000
             }
           },
@@ -136036,7 +136069,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 14,
               "exShowroom": 1800000
             }
           },
@@ -136248,7 +136281,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 16,
               "exShowroom": 1750000
             }
           },
@@ -136275,7 +136308,7 @@ class VehicleData {
               "bodyType": "Bus Chassis",
               "cc": 3907,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 14,
               "exShowroom": 1800000
             }
           },
@@ -137237,7 +137270,7 @@ class VehicleData {
           "Ape Xtra Dlx": {
             "Diesel": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 579,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 175000
@@ -137248,7 +137281,7 @@ class VehicleData {
           "Ape Xtra Dlx": {
             "Diesel": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 579,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 175000
@@ -137259,7 +137292,7 @@ class VehicleData {
           "Ape Xtra Dlx": {
             "Diesel": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 579,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 175000
@@ -137270,7 +137303,7 @@ class VehicleData {
               "bodyType": "CARGO",
               "cc": 652,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 318000,
             }
           }
@@ -137279,7 +137312,7 @@ class VehicleData {
           "Ape Xtra Dlx": {
             "Diesel": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 579,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 175000
@@ -137290,14 +137323,14 @@ class VehicleData {
               "bodyType": "CARGO",
               "cc": 652,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 318000,
             }
           },
           "Ape Xtra LDX": {
             "CNG/LPG": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 1,
               "exShowroom": 171709
@@ -137306,7 +137339,7 @@ class VehicleData {
           "Ape Auto DX": {
             "CNG/LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 2,
               "exShowroom": 171709
@@ -137317,7 +137350,7 @@ class VehicleData {
           "Ape Xtra Dlx": {
             "Diesel": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 579,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 175000
@@ -137328,14 +137361,14 @@ class VehicleData {
               "bodyType": "CARGO",
               "cc": 652,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 318000,
             }
           },
           "Ape Xtra LDX": {
             "CNG/LPG": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 1,
               "exShowroom": 0171709
@@ -137344,7 +137377,7 @@ class VehicleData {
           "Ape Auto DX": {
             "CNG/LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 2,
               "exShowroom": 171709
@@ -137355,37 +137388,37 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 171709,
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "CNG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 192241,
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "LPG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 183220,
             },
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 436,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 184110,
             }
           },
           "Ape E-City": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 197000,
             }
           }
@@ -137394,7 +137427,7 @@ class VehicleData {
           "Ape Xtra Dlx": {
             "Diesel": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 175000
@@ -137405,14 +137438,14 @@ class VehicleData {
               "bodyType": "CARGO",
               "cc": 652,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 318000,
             }
           },
           "Ape Xtra LDX": {
             "CNG/LPG": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 1,
               "exShowroom": 171709
@@ -137421,7 +137454,7 @@ class VehicleData {
           "Ape Auto DX": {
             "CNG/LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 2,
               "exShowroom": 171709
@@ -137432,37 +137465,37 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 171709,
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "CNG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 192241,
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "LPG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 183220,
             },
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 436,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 184110,
             }
           },
           "Ape E-City": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 197000,
             }
           },
@@ -137478,7 +137511,7 @@ class VehicleData {
           "Ape E-City ": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 196000
@@ -137489,7 +137522,7 @@ class VehicleData {
           "Ape Xtra Dlx": {
             "Diesel": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 579,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 175000
@@ -137500,14 +137533,14 @@ class VehicleData {
               "bodyType": "CARGO",
               "cc": 652,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 318000,
             }
           },
           "Ape Xtra LDX": {
             "CNG/LPG": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 1,
               "exShowroom": 171709
@@ -137516,7 +137549,7 @@ class VehicleData {
           "Ape Auto DX": {
             "CNG/LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 2,
               "exShowroom": 171709
@@ -137527,37 +137560,37 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 171709,
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "CNG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 192241,
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "LPG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 183220,
             },
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 436,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 184110,
             }
           },
           "Ape E-City": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 197000,
             }
           },
@@ -137573,7 +137606,7 @@ class VehicleData {
           "Ape E-City ": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 196000
@@ -137582,18 +137615,18 @@ class VehicleData {
           "Ape E-City FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 283878,
             }
           },
           "Ape E-Xtra FX": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 312137,
             }
           }
@@ -137602,7 +137635,7 @@ class VehicleData {
           "Ape Xtra Dlx": {
             "Diesel": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 579,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 175000
@@ -137613,14 +137646,14 @@ class VehicleData {
               "bodyType": "CARGO",
               "cc": 652,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 318000,
             }
           },
           "Ape Xtra LDX": {
             "CNG/LPG": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 1,
               "exShowroom": 171709
@@ -137629,7 +137662,7 @@ class VehicleData {
           "Ape Auto DX": {
             "CNG/LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 2,
               "exShowroom": 171709
@@ -137640,37 +137673,37 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 171709,
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "CNG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 192241,
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "LPG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 183220,
             },
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 436,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 184110,
             }
           },
           "Ape E-City": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 197000,
             }
           },
@@ -137686,7 +137719,7 @@ class VehicleData {
           "Ape E-City ": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 196000
@@ -137695,39 +137728,39 @@ class VehicleData {
           "Ape E-City FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 283878,
             }
           },
           "Ape E-Xtra FX": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 312137,
             }
           },
           "Ape NXT+": {
             "CNG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 235811,
             },
             "Petrol": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 235811
             },
             "LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "LPG",
               "seating": 2,
               "exShowroom": 235811
@@ -137736,7 +137769,7 @@ class VehicleData {
           "Ape E-City FX Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 325794,
@@ -137745,7 +137778,7 @@ class VehicleData {
           "Ape E-Xtra FX Max": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 1,
               "exShowroom": 345947,
@@ -137756,7 +137789,7 @@ class VehicleData {
           "Ape Xtra Dlx": {
             "Diesel": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 579,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 175000
@@ -137767,14 +137800,14 @@ class VehicleData {
               "bodyType": "CARGO",
               "cc": 652,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 318000,
             }
           },
           "Ape Xtra LDX": {
             "CNG/LPG": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 1,
               "exShowroom": 171709
@@ -137783,7 +137816,7 @@ class VehicleData {
           "Ape Auto DX": {
             "CNG/LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 2,
               "exShowroom": 171709
@@ -137794,37 +137827,37 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 171709,
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "CNG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 192241,
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "LPG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 183220,
             },
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 436,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 184110,
             }
           },
           "Ape E-City": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 197000,
             }
           },
@@ -137840,7 +137873,7 @@ class VehicleData {
           "Ape E-City ": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 196000
@@ -137849,39 +137882,39 @@ class VehicleData {
           "Ape E-City FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 283878,
             }
           },
           "Ape E-Xtra FX": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 312137,
             }
           },
           "Ape NXT+": {
             "CNG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 235811,
             },
             "Petrol": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 235811
             },
             "LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "LPG",
               "seating": 2,
               "exShowroom": 235811
@@ -137890,7 +137923,7 @@ class VehicleData {
           "Ape E-City FX Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 325794,
@@ -137899,7 +137932,7 @@ class VehicleData {
           "Ape E-Xtra FX Max": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 1,
               "exShowroom": 345947,
@@ -137908,7 +137941,7 @@ class VehicleData {
           "Ape E-City FX NE Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 346000,
@@ -137919,7 +137952,7 @@ class VehicleData {
           "Ape Xtra Dlx": {
             "Diesel": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 579,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 175000
@@ -137930,14 +137963,14 @@ class VehicleData {
               "bodyType": "CARGO",
               "cc": 652,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 318000,
             }
           },
           "Ape Xtra LDX": {
             "CNG/LPG": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 1,
               "exShowroom": 171709
@@ -137946,7 +137979,7 @@ class VehicleData {
           "Ape Auto DX": {
             "CNG/LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 2,
               "exShowroom": 171709
@@ -137957,37 +137990,37 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 171709,
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "CNG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 192241,
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "LPG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 183220,
             },
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 436,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 184110,
             }
           },
           "Ape E-City": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 197000,
             }
           },
@@ -138003,7 +138036,7 @@ class VehicleData {
           "Ape E-City ": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 196000
@@ -138012,39 +138045,39 @@ class VehicleData {
           "Ape E-City FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 283878,
             }
           },
           "Ape E-Xtra FX": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 312137,
             }
           },
           "Ape NXT+": {
             "CNG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 235811,
             },
             "Petrol": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 235811
             },
             "LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "LPG",
               "seating": 2,
               "exShowroom": 235811
@@ -138053,7 +138086,7 @@ class VehicleData {
           "Ape E-City FX Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 325794,
@@ -138062,7 +138095,7 @@ class VehicleData {
           "Ape E-Xtra FX Max": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 1,
               "exShowroom": 345947,
@@ -138071,7 +138104,7 @@ class VehicleData {
           "Ape E-City FX NE Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 346000,
@@ -138082,7 +138115,7 @@ class VehicleData {
           "Ape Xtra Dlx": {
             "Diesel": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 579,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 175000
@@ -138093,14 +138126,14 @@ class VehicleData {
               "bodyType": "CARGO",
               "cc": 652,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 318000,
             }
           },
           "Ape Xtra LDX": {
             "CNG/LPG": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 1,
               "exShowroom": 171709
@@ -138109,7 +138142,7 @@ class VehicleData {
           "Ape Auto DX": {
             "CNG/LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG/LPG",
               "seating": 2,
               "exShowroom": 171709
@@ -138120,37 +138153,37 @@ class VehicleData {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "Petrol",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 171709,
             },
             "CNG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "CNG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 192241,
             },
             "LPG": {
               "bodyType": "PASSENGER",
               "cc": 230,
               "fuelType": "LPG",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 183220,
             },
             "Diesel": {
               "bodyType": "PASSENGER",
               "cc": 436,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 184110,
             }
           },
           "Ape E-City": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 197000,
             }
           },
@@ -138166,7 +138199,7 @@ class VehicleData {
           "Ape E-City ": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 3,
               "exShowroom": 196000
@@ -138175,39 +138208,39 @@ class VehicleData {
           "Ape E-City FX": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 283878,
             }
           },
           "Ape E-Xtra FX": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 312137,
             }
           },
           "Ape NXT+": {
             "CNG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "CNG",
               "seating": 2,
               "exShowroom": 235811,
             },
             "Petrol": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 235811
             },
             "LPG": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 230,
               "fuelType": "LPG",
               "seating": 2,
               "exShowroom": 235811
@@ -138216,7 +138249,7 @@ class VehicleData {
           "Ape E-City FX Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 325794,
@@ -138225,7 +138258,7 @@ class VehicleData {
           "Ape E-Xtra FX Max": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 1,
               "exShowroom": 345947,
@@ -138234,7 +138267,7 @@ class VehicleData {
           "Ape E-City FX NE Max": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 346000,
@@ -138243,7 +138276,7 @@ class VehicleData {
           "Ape E-City Ultra": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 388000,
@@ -138252,7 +138285,7 @@ class VehicleData {
           "Ape E-City FX Maxx": {
             "Electric": {
               "bodyType": "PASSENGER",
-              "cc": 0,
+              "cc": 5.44,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 330000,
@@ -138265,9 +138298,9 @@ class VehicleData {
           "Mammoth Luxury Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 345,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 39,
               "exShowroom": 150000,
             }
           }
@@ -138276,27 +138309,27 @@ class VehicleData {
           "Mammoth Luxury Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 345,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 39,
               "exShowroom": 150000,
             }
           },
           "Mammoth Luxury Coach (Domestic Launch)": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
           "Columbus Tarmac Coach": {
             "Diesel": {
               "bodyType": "SPECIAL APPLICATION COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 70,
               "exShowroom": 200000,
             }
           }
@@ -138305,27 +138338,27 @@ class VehicleData {
           "Mammoth Luxury Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 345,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 39,
               "exShowroom": 150000,
             }
           },
           "Mammoth Luxury Coach (Domestic Launch)": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
           "Columbus Tarmac Coach": {
             "Diesel": {
               "bodyType": "SPECIAL APPLICATION COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 70,
               "exShowroom": 200000,
             }
           },
@@ -138334,34 +138367,34 @@ class VehicleData {
           "Mammoth Luxury Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 345,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 39,
               "exShowroom": 150000,
             }
           },
           "Mammoth Luxury Coach (Domestic Launch)": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
           "Columbus Tarmac Coach": {
             "Diesel": {
               "bodyType": "SPECIAL APPLICATION COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 70,
               "exShowroom": 200000,
             }
           },
           "Glider": {
             "Diesel": {
               "bodyType": "PASSENGER LUXURY SEATER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 43,
               "exShowroom": 200000,
@@ -138370,7 +138403,7 @@ class VehicleData {
           "Gliderz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 30,
               "exShowroom": 200000,
@@ -138379,7 +138412,7 @@ class VehicleData {
           "Dreamz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH (PREMIUM)",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 200000,
@@ -138390,34 +138423,34 @@ class VehicleData {
           "Mammoth Luxury Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 345,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 39,
               "exShowroom": 150000,
             }
           },
           "Mammoth Luxury Coach (Domestic Launch)": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
           "Columbus Tarmac Coach": {
             "Diesel": {
               "bodyType": "SPECIAL APPLICATION COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 70,
               "exShowroom": 200000,
             }
           },
           "Glider": {
             "Diesel": {
               "bodyType": "PASSENGER LUXURY SEATER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 43,
               "exShowroom": 200000,
@@ -138426,7 +138459,7 @@ class VehicleData {
           "Gliderz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 30,
               "exShowroom": 200000,
@@ -138435,7 +138468,7 @@ class VehicleData {
           "Dreamz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH (PREMIUM)",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 200000,
@@ -138444,9 +138477,9 @@ class VehicleData {
           "Starz Luxury Sleeper Coach": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           }
@@ -138455,34 +138488,34 @@ class VehicleData {
           "Mammoth Luxury Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 345,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 39,
               "exShowroom": 150000,
             }
           },
           "Mammoth Luxury Coach (Domestic Launch)": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
           "Columbus Tarmac Coach": {
             "Diesel": {
               "bodyType": "SPECIAL APPLICATION COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 70,
               "exShowroom": 200000,
             }
           },
           "Glider": {
             "Diesel": {
               "bodyType": "PASSENGER LUXURY SEATER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 43,
               "exShowroom": 200000,
@@ -138491,7 +138524,7 @@ class VehicleData {
           "Gliderz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 30,
               "exShowroom": 200000,
@@ -138500,7 +138533,7 @@ class VehicleData {
           "Dreamz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH (PREMIUM)",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 200000,
@@ -138509,9 +138542,9 @@ class VehicleData {
           "Starz Luxury Sleeper Coach": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
@@ -138520,34 +138553,34 @@ class VehicleData {
           "Mammoth Luxury Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 345,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 39,
               "exShowroom": 150000,
             }
           },
           "Mammoth Luxury Coach (Domestic Launch)": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
           "Columbus Tarmac Coach": {
             "Diesel": {
               "bodyType": "SPECIAL APPLICATION COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 70,
               "exShowroom": 200000,
             }
           },
           "Glider": {
             "Diesel": {
               "bodyType": "PASSENGER LUXURY SEATER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 43,
               "exShowroom": 200000,
@@ -138556,7 +138589,7 @@ class VehicleData {
           "Gliderz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 30,
               "exShowroom": 200000,
@@ -138565,7 +138598,7 @@ class VehicleData {
           "Dreamz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH (PREMIUM)",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 200000,
@@ -138574,9 +138607,9 @@ class VehicleData {
           "Starz Luxury Sleeper Coach": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           }
@@ -138585,34 +138618,34 @@ class VehicleData {
           "Mammoth Luxury Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 345,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 39,
               "exShowroom": 150000,
             }
           },
           "Mammoth Luxury Coach (Domestic Launch)": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
           "Columbus Tarmac Coach": {
             "Diesel": {
               "bodyType": "SPECIAL APPLICATION COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 70,
               "exShowroom": 200000,
             }
           },
           "Glider": {
             "Diesel": {
               "bodyType": "PASSENGER LUXURY SEATER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 43,
               "exShowroom": 200000,
@@ -138621,7 +138654,7 @@ class VehicleData {
           "Gliderz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 30,
               "exShowroom": 200000,
@@ -138630,7 +138663,7 @@ class VehicleData {
           "Dreamz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH (PREMIUM)",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 200000,
@@ -138639,9 +138672,9 @@ class VehicleData {
           "Starz Luxury Sleeper Coach": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           }
@@ -138650,34 +138683,34 @@ class VehicleData {
           "Mammoth Luxury Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 345,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 39,
               "exShowroom": 150000,
             }
           },
           "Mammoth Luxury Coach (Domestic Launch)": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
           "Columbus Tarmac Coach": {
             "Diesel": {
               "bodyType": "SPECIAL APPLICATION COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 70,
               "exShowroom": 200000,
             }
           },
           "Glider": {
             "Diesel": {
               "bodyType": "PASSENGER LUXURY SEATER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 43,
               "exShowroom": 200000,
@@ -138686,7 +138719,7 @@ class VehicleData {
           "Gliderz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 30,
               "exShowroom": 200000,
@@ -138695,7 +138728,7 @@ class VehicleData {
           "Dreamz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH (PREMIUM)",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 200000,
@@ -138704,9 +138737,9 @@ class VehicleData {
           "Starz Luxury Sleeper Coach": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           }
@@ -138715,34 +138748,34 @@ class VehicleData {
           "Mammoth Luxury Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 345,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 39,
               "exShowroom": 150000,
             }
           },
           "Mammoth Luxury Coach (Domestic Launch)": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
           "Columbus Tarmac Coach": {
             "Diesel": {
               "bodyType": "SPECIAL APPLICATION COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 70,
               "exShowroom": 200000,
             }
           },
           "Glider": {
             "Diesel": {
               "bodyType": "PASSENGER LUXURY SEATER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 43,
               "exShowroom": 200000,
@@ -138751,7 +138784,7 @@ class VehicleData {
           "Gliderz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 30,
               "exShowroom": 200000,
@@ -138760,7 +138793,7 @@ class VehicleData {
           "Dreamz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH (PREMIUM)",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 200000,
@@ -138769,9 +138802,9 @@ class VehicleData {
           "Starz Luxury Sleeper Coach": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           }
@@ -138780,34 +138813,34 @@ class VehicleData {
           "Mammoth Luxury Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 345,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 39,
               "exShowroom": 150000,
             }
           },
           "Mammoth Luxury Coach (Domestic Launch)": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
           "Columbus Tarmac Coach": {
             "Diesel": {
               "bodyType": "SPECIAL APPLICATION COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 70,
               "exShowroom": 200000,
             }
           },
           "Glider": {
             "Diesel": {
               "bodyType": "PASSENGER LUXURY SEATER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 43,
               "exShowroom": 200000,
@@ -138816,7 +138849,7 @@ class VehicleData {
           "Gliderz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 30,
               "exShowroom": 200000,
@@ -138825,7 +138858,7 @@ class VehicleData {
           "Dreamz": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH (PREMIUM)",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 200000,
@@ -138834,697 +138867,19 @@ class VehicleData {
           "Starz Luxury Sleeper Coach": {
             "Diesel": {
               "bodyType": "PASSENGER SLEEPER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
             }
           },
           "Tigra Super-Premium Intercity Coach": {
             "Diesel": {
               "bodyType": "PASSENGER COACH",
-              "cc": 0,
+              "cc": 3455,
               "fuelType": "Diesel",
-              "seating": 0,
+              "seating": 38,
               "exShowroom": 200000,
-            }
-          }
-        },
-      },
-      "Ambus": {
-        "2015": {
-          "Patient Transport Ambulance (PTA)": {
-            "Diesel": {
-              "bodyType": "MISC (Patient Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1030000,
-            }
-          },
-          "Basic Life Support Ambulance (BLS)": {
-            "Diesel": {
-              "bodyType": "MISC (Basic Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1090000,
-            }
-          },
-          "Advanced Life Support Ambulance (ALS)": {
-            "Diesel": {
-              "bodyType": "MISC (Advanced Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1090000,
-            }
-          },
-          "Mobile Medical Units (MMU)": {
-            "Diesel": {
-              "bodyType": "MISC (Mobile Medical Unit)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 300000,
-            }
-          }
-        },
-        "2016": {
-          "Patient Transport Ambulance (PTA)": {
-            "Diesel": {
-              "bodyType": "MISC (Patient Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1030000,
-            }
-          },
-          "Basic Life Support Ambulance (BLS)": {
-            "Diesel": {
-              "bodyType": "MISC (Basic Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1090000,
-            }
-          },
-          "Advanced Life Support Ambulance (ALS)": {
-            "Diesel": {
-              "bodyType": "MISC (Advanced Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1090000,
-            }
-          },
-          "Mobile Medical Units (MMU)": {
-            "Diesel": {
-              "bodyType": "MISC (Mobile Medical Unit)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 300000,
-            }
-          },
-        },
-        "2017": {
-          "Patient Transport Ambulance (PTA)": {
-            "Diesel": {
-              "bodyType": "MISC (Patient Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1030000,
-            }
-          },
-          "Basic Life Support Ambulance (BLS)": {
-            "Diesel": {
-              "bodyType": "MISC (Basic Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1420000,
-            }
-          },
-          "Advanced Life Support Ambulance (ALS)": {
-            "Diesel": {
-              "bodyType": "MISC (Advanced Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1420000,
-            }
-          },
-          "Mobile Medical Units (MMU)": {
-            "Diesel": {
-              "bodyType": "MISC (Mobile Medical Unit)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 300000,
-            }
-          },
-        },
-        "2018": {
-          "Patient Transport Ambulance (PTA)": {
-            "Diesel": {
-              "bodyType": "MISC (Patient Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1030000,
-            }
-          },
-          "Basic Life Support Ambulance (BLS)": {
-            "Diesel": {
-              "bodyType": "MISC (Basic Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1420000,
-            }
-          },
-          "Advanced Life Support Ambulance (ALS)": {
-            "Diesel": {
-              "bodyType": "MISC (Advanced Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1420000,
-            }
-          },
-          "Mobile Medical Units (MMU)": {
-            "Diesel": {
-              "bodyType": "MISC (Mobile Medical Unit)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 300000,
-            }
-          },
-        },
-        "2019": {
-          "Patient Transport Ambulance (PTA)": {
-            "Diesel": {
-              "bodyType": "MISC (Patient Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 825000,
-            }
-          },
-          "Basic Life Support Ambulance (BLS)": {
-            "Diesel": {
-              "bodyType": "MISC (Basic Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1420000,
-            }
-          },
-          "Advanced Life Support Ambulance (ALS)": {
-            "Diesel": {
-              "bodyType": "MISC (Advanced Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1600000,
-            }
-          },
-          "Mobile Medical Units (MMU)": {
-            "Diesel": {
-              "bodyType": "MISC (Mobile Medical Unit)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 300000,
-            }
-          },
-        },
-        "2020": {
-          "Patient Transport Ambulance (PTA)": {
-            "Diesel": {
-              "bodyType": "MISC (Patient Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 825000,
-            }
-          },
-          "Basic Life Support Ambulance (BLS)": {
-            "Diesel": {
-              "bodyType": "MISC (Basic Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1420000,
-            }
-          },
-          "Advanced Life Support Ambulance (ALS)": {
-            "Diesel": {
-              "bodyType": "MISC (Advanced Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1600000,
-            }
-          },
-          "Mobile Medical Units (MMU)": {
-            "Diesel": {
-              "bodyType": "MISC (Mobile Medical Unit)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 300000,
-            }
-          },
-        },
-        "2021": {
-          "Patient Transport Ambulance (PTA)": {
-            "Diesel": {
-              "bodyType": "MISC (Patient Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 705000,
-            }
-          },
-          "Basic Life Support Ambulance (BLS)": {
-            "Diesel": {
-              "bodyType": "MISC (Basic Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1420000,
-            }
-          },
-          "Advanced Life Support Ambulance (ALS)": {
-            "Diesel": {
-              "bodyType": "MISC (Advanced Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 2135000,
-            }
-          },
-          "Mobile Medical Units (MMU)": {
-            "Diesel": {
-              "bodyType": "MISC (Mobile Medical Unit)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 300000,
-            }
-          },
-        },
-        "2022": {
-          "Patient Transport Ambulance (PTA)": {
-            "Diesel": {
-              "bodyType": "MISC (Patient Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 705000,
-            }
-          },
-          "Basic Life Support Ambulance (BLS)": {
-            "Diesel": {
-              "bodyType": "MISC (Basic Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1420000,
-            }
-          },
-          "Advanced Life Support Ambulance (ALS)": {
-            "Diesel": {
-              "bodyType": "MISC (Advanced Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 2135000,
-            }
-          },
-          "Mobile Medical Units (MMU)": {
-            "Diesel": {
-              "bodyType": "MISC (Mobile Medical Unit)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 300000,
-            }
-          },
-        },
-        "2023": {
-          "Patient Transport Ambulance (PTA)": {
-            "Diesel": {
-              "bodyType": "MISC (Patient Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 705000,
-            }
-          },
-          "Basic Life Support Ambulance (BLS)": {
-            "Diesel": {
-              "bodyType": "MISC (Basic Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1420000,
-            }
-          },
-          "Advanced Life Support Ambulance (ALS)": {
-            "Diesel": {
-              "bodyType": "MISC (Advanced Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 2135000,
-            }
-          },
-          "Mobile Medical Units (MMU)": {
-            "Diesel": {
-              "bodyType": "MISC (Mobile Medical Unit)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 300000,
-            }
-          },
-        },
-        "2024": {
-          "Patient Transport Ambulance (PTA)": {
-            "Diesel": {
-              "bodyType": "MISC (Patient Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 705000,
-            }
-          },
-          "Basic Life Support Ambulance (BLS)": {
-            "Diesel": {
-              "bodyType": "MISC (Basic Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1420000,
-            }
-          },
-          "Advanced Life Support Ambulance (ALS)": {
-            "Diesel": {
-              "bodyType": "MISC (Advanced Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 2135000,
-            }
-          },
-          "Mobile Medical Units (MMU)": {
-            "Diesel": {
-              "bodyType": "MISC (Mobile Medical Unit)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 300000,
-            }
-          },
-        },
-        "2025": {
-          "Patient Transport Ambulance (PTA)": {
-            "Diesel": {
-              "bodyType": "MISC (Patient Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 705000,
-            }
-          },
-          "Basic Life Support Ambulance (BLS)": {
-            "Diesel": {
-              "bodyType": "MISC (Basic Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 1420000,
-            }
-          },
-          "Advanced Life Support Ambulance (ALS)": {
-            "Diesel": {
-              "bodyType": "MISC (Advanced Life Support)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 2135000,
-            }
-          },
-          "Mobile Medical Units (MMU)": {
-            "Diesel": {
-              "bodyType": "MISC (Mobile Medical Unit)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 300000,
-            }
-          },
-        },
-      },
-      "Bronto Skylift": {
-        "2015": {
-          "Fire Ladder (Aerial Ladder Platform)": {
-            "Diesel": {
-              "bodyType": "Aerial Ladder Platform-Fire Rescue",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-        },
-        "2016": {
-          "Fire Ladder (Aerial Ladder Platform)": {
-            "Diesel": {
-              "bodyType": "Aerial Ladder Platform-Fire Rescue",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-        },
-        "2017": {
-          "Fire Ladder (Aerial Ladder Platform)": {
-            "Diesel": {
-              "bodyType": "Aerial Ladder Platform-Fire Rescue",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-        },
-        "2018": {
-          "Fire Ladder (Aerial Ladder Platform)": {
-            "Diesel": {
-              "bodyType": "Aerial Ladder Platform-Fire Rescue",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S35EM Aerial Platform": {
-            "Miscellaneous": {
-              "bodyType": "AERIAL PLATFORM",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          }
-        },
-        "2019": {
-          "Fire Ladder (Aerial Ladder Platform)": {
-            "Diesel": {
-              "bodyType": "Aerial Ladder Platform-Fire Rescue",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S35EM Aerial Platform": {
-            "Miscellaneous": {
-              "bodyType": "AERIAL PLATFORM",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          }
-        },
-        "2020": {
-          "Fire Ladder (Aerial Ladder Platform)": {
-            "Diesel": {
-              "bodyType": "Aerial Ladder Platform-Fire Rescue",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S35EM Aerial Platform": {
-            "Miscellaneous": {
-              "bodyType": "AERIAL PLATFORM",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S70XDT Aerial Work Platform": {
-            "Miscellaneous": {
-              "bodyType": "Fire-Utility Access",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          }
-        },
-        "2021": {
-          "Fire Ladder (Aerial Ladder Platform)": {
-            "Diesel": {
-              "bodyType": "Aerial Ladder Platform - Fire Rescue",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S35EM Aerial Platform": {
-            "Miscellaneous": {
-              "bodyType": "AERIAL PLATFORM",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S70XDT Aerial Work Platform": {
-            "Miscellaneous": {
-              "bodyType": "Fire-Utility Access",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          }
-        },
-        "2022": {
-          "Fire Ladder (Aerial Ladder Platform)": {
-            "Diesel": {
-              "bodyType": "Aerial Ladder Platform-Fire Rescue",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S35EM Aerial Platform": {
-            "Miscellaneous": {
-              "bodyType": "AERIAL PLATFORM",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S70XDT Aerial Work Platform": {
-            "Miscellaneous": {
-              "bodyType": "Fire-Utility Access",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          }
-        },
-        "2023": {
-          "Fire Ladder (Aerial Ladder Platform)": {
-            "Diesel": {
-              "bodyType": "Aerial Ladder Platform-Fire Rescue",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S35EM Aerial Platform": {
-            "Miscellaneous": {
-              "bodyType": "AERIAL PLATFORM",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S70XDT Aerial Work Platform": {
-            "Miscellaneous": {
-              "bodyType": "Fire-Utility Access",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          }
-        },
-        "2024": {
-          "Fire Ladder (Aerial Ladder Platform)": {
-            "Diesel": {
-              "bodyType": "Aerial Ladder Platform-Fire Rescue",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S35EM Aerial Platform": {
-            "Miscellaneous": {
-              "bodyType": "AERIAL PLATFORM",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S70XDT Aerial Work Platform": {
-            "Miscellaneous": {
-              "bodyType": "Fire-Utility Access",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          }
-        },
-        "2025": {
-          "Fire Ladder (Aerial Ladder Platform)": {
-            "Diesel": {
-              "bodyType": "Aerial Ladder Platform-Fire Rescue",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S35EM Aerial Platform": {
-            "Miscellaneous": {
-              "bodyType": "AERIAL PLATFORM",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "S70XDT Aerial Work Platform": {
-            "Miscellaneous": {
-              "bodyType": "Fire-Utility Access",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
-            }
-          },
-          "F28ALR Aerial Rescue Platform": {
-            "Miscellaneous": {
-              "bodyType": "AERIAL RESCUE PLATFORM",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 150000,
             }
           }
         },
@@ -139534,9 +138889,9 @@ class VehicleData {
           "Heavy-Duty Electric Tipper (6×4) Prototype": {
             "Electric": {
               "bodyType": "MISC (Heavy-Duty Electric Tipper)",
-              "cc": 0,
+              "cc": 350,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000,
             }
           },
@@ -139545,27 +138900,27 @@ class VehicleData {
           "Heavy-Duty Electric Tipper (6×4) Prototype": {
             "Electric": {
               "bodyType": "MISC (Heavy-Duty Electric Tipper)",
-              "cc": 0,
+              "cc": 350,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000,
             }
           },
           "Heavy-Duty Electric Tipper (6×4) – Homologated": {
             "Electric": {
               "bodyType": "MISC (Heavy-Duty Electric Tipper)",
-              "cc": 0,
+              "cc": 350,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000,
             }
           },
           "Meghaetron 28T Electric Tipper (Certifiable Variant)": {
             "Electric": {
               "bodyType": "MISC (Electric Tipper Truck)",
-              "cc": 0,
+              "cc": 350,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000,
             }
           }
@@ -139574,27 +138929,27 @@ class VehicleData {
           "Heavy-Duty Electric Tipper (6×4) Prototype": {
             "Electric": {
               "bodyType": "MISC (Heavy-Duty Electric Tipper)",
-              "cc": 0,
+              "cc": 350,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000,
             }
           },
           "Heavy-Duty Electric Tipper (6×4) – Homologated": {
             "Electric": {
               "bodyType": "MISC (Heavy-Duty Electric Tipper)",
-              "cc": 0,
+              "cc": 350,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000,
             }
           },
           "Meghaetron 28T Electric Tipper (Certifiable Variant)": {
             "Electric": {
               "bodyType": "MISC (Electric Tipper Truck)",
-              "cc": 0,
+              "cc": 350,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000,
             }
           }
@@ -139603,27 +138958,27 @@ class VehicleData {
           "Heavy-Duty Electric Tipper (6×4) Prototype": {
             "Electric": {
               "bodyType": "MISC (Heavy-Duty Electric Tipper)",
-              "cc": 0,
+              "cc": 350,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000,
             }
           },
           "Heavy-Duty Electric Tipper (6×4) – Homologated": {
             "Electric": {
               "bodyType": "MISC (Heavy-Duty Electric Tipper)",
-              "cc": 0,
+              "cc": 350,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000,
             }
           },
           "Meghaetron 28T Electric Tipper (Certifiable Variant)": {
             "Electric": {
               "bodyType": "MISC (Electric Tipper Truck)",
-              "cc": 0,
+              "cc": 350,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000,
             }
           }
@@ -139636,14 +138991,14 @@ class VehicleData {
               "bodyType": "MISC (Heavy-Duty Electric Tipper)",
               "cc": 0,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000
             }
           },
           "Refuse Compactor Vehicle (RCV)": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -139652,7 +139007,7 @@ class VehicleData {
           "Metal Transport Vehicle (MTV)": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -139661,7 +139016,7 @@ class VehicleData {
           "Furnace Tending Vehicle (FTV)": {
             "Diesel": {
               "bodyType": "MISC (Furnace Tending Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -139670,7 +139025,7 @@ class VehicleData {
           "Anode Transport Vehicle (ATV)": {
             "Diesel": {
               "bodyType": "MISC (Anode Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -139679,7 +139034,7 @@ class VehicleData {
           "Alumina/Fly Ash/Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Transport Tanker)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
@@ -139692,14 +139047,14 @@ class VehicleData {
               "bodyType": "MISC (Heavy-Duty Electric Tipper)",
               "cc": 0,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000
             }
           },
           "Refuse Compactor Vehicle (RCV)": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -139708,7 +139063,7 @@ class VehicleData {
           "Metal Transport Vehicle (MTV)": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -139717,7 +139072,7 @@ class VehicleData {
           "Furnace Tending Vehicle (FTV)": {
             "Diesel": {
               "bodyType": "MISC (Furnace Tending Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -139726,7 +139081,7 @@ class VehicleData {
           "Anode Transport Vehicle (ATV)": {
             "Diesel": {
               "bodyType": "MISC (Anode Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -139735,7 +139090,7 @@ class VehicleData {
           "Alumina/Fly Ash/Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Transport Tanker)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
@@ -139744,7 +139099,7 @@ class VehicleData {
           "Sky Lift / Access Platform": {
             "Diesel": {
               "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1300000
@@ -139753,7 +139108,7 @@ class VehicleData {
           "Water Sprinkler Mounted on Water Tanker": {
             "Diesel": {
               "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -139762,7 +139117,7 @@ class VehicleData {
           "Road Ambulance / Patrol Maintenance Unit (PMU)": {
             "Diesel": {
               "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1100000
@@ -139771,7 +139126,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
@@ -139784,14 +139139,14 @@ class VehicleData {
               "bodyType": "MISC (Heavy-Duty Electric Tipper)",
               "cc": 0,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 2,
               "exShowroom": 156000
             }
           },
           "Refuse Compactor Vehicle (RCV)": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -139800,7 +139155,7 @@ class VehicleData {
           "Metal Transport Vehicle (MTV)": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -139809,7 +139164,7 @@ class VehicleData {
           "Furnace Tending Vehicle (FTV)": {
             "Diesel": {
               "bodyType": "MISC (Furnace Tending Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -139818,7 +139173,7 @@ class VehicleData {
           "Anode Transport Vehicle (ATV)": {
             "Diesel": {
               "bodyType": "MISC (Anode Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -139827,7 +139182,7 @@ class VehicleData {
           "Alumina/Fly Ash/Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Transport Tanker)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
@@ -139836,7 +139191,7 @@ class VehicleData {
           "Sky Lift / Access Platform": {
             "Diesel": {
               "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1320000
@@ -139845,7 +139200,7 @@ class VehicleData {
           "Water Sprinkler Mounted on Water Tanker": {
             "Diesel": {
               "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 920000
@@ -139854,7 +139209,7 @@ class VehicleData {
           "Road Ambulance / Patrol Maintenance Unit (PMU)": {
             "Diesel": {
               "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1120000
@@ -139863,7 +139218,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
@@ -139876,14 +139231,14 @@ class VehicleData {
               "bodyType": "MISC (Heavy-Duty Electric Tipper)",
               "cc": 0,
               "fuelType": "Electric",
-              "seating": 0,
+              "seating": 4,
               "exShowroom": 156000
             }
           },
           "Refuse Compactor Vehicle (RCV)": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -139892,7 +139247,7 @@ class VehicleData {
           "Metal Transport Vehicle (MTV)": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -139901,7 +139256,7 @@ class VehicleData {
           "Furnace Tending Vehicle (FTV)": {
             "Diesel": {
               "bodyType": "MISC (Furnace Tending Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -139910,7 +139265,7 @@ class VehicleData {
           "Anode Transport Vehicle (ATV)": {
             "Diesel": {
               "bodyType": "MISC (Anode Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -139919,34 +139274,16 @@ class VehicleData {
           "Alumina/Fly Ash/Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Transport Tanker)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
             }
           },
-          "Sky Lift / Access Platform": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1320000
-            }
-          },
-          "Water Sprinkler Mounted on Water Tanker": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 920000
-            }
-          },
           "Road Ambulance / Patrol Maintenance Unit (PMU)": {
             "Diesel": {
               "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1120000
@@ -139955,7 +139292,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
@@ -139964,64 +139301,28 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV) ": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1300000
-            }
-          },
-          "Fly Ash / Cement / Lime Tanker ": {
-            "Diesel": {
-              "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1080000
-            }
-          },
-          "Metal Transport Vehicle (MTV) ": {
-            "Diesel": {
-              "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1000000
-            }
-          },
-          "Scissor Lift": {
-            "Diesel": {
-              "bodyType": "MISC (Scissor Lift)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1180000
-            }
-          },
-          "Sky Lift / Access Platform ": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
+              "cc": 4000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1350000
             }
           },
-          "Water Sprinkler Mounted on Water Tanker ": {
+          "Fly Ash / Cement / Lime Tanker ": {
             "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
+              "bodyType": "MISC (Powder Material Tanker)",
+              "cc": 6000,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 950000
+              "exShowroom": 1120000
             }
           },
-          "Road Ambulance / Patrol Maintenance Unit (PMU) ": {
+          "Metal Transport Vehicle (MTV) ": {
             "Diesel": {
-              "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
+              "bodyType": "MISC (Metal Transport Vehicle)",
+              "cc": 3000,
               "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1150000
+              "seating": 1,
+              "exShowroom": 1000000
             }
           },
         },
@@ -140038,7 +139339,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV)": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -140047,7 +139348,7 @@ class VehicleData {
           "Metal Transport Vehicle (MTV)": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -140056,7 +139357,7 @@ class VehicleData {
           "Furnace Tending Vehicle (FTV)": {
             "Diesel": {
               "bodyType": "MISC (Furnace Tending Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -140065,7 +139366,7 @@ class VehicleData {
           "Anode Transport Vehicle (ATV)": {
             "Diesel": {
               "bodyType": "MISC (Anode Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -140074,34 +139375,16 @@ class VehicleData {
           "Alumina/Fly Ash/Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Transport Tanker)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
             }
           },
-          "Sky Lift / Access Platform": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1320000
-            }
-          },
-          "Water Sprinkler Mounted on Water Tanker": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 920000
-            }
-          },
           "Road Ambulance / Patrol Maintenance Unit (PMU)": {
             "Diesel": {
               "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1120000
@@ -140110,7 +139393,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
@@ -140119,7 +139402,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV) ": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 4000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1350000
@@ -140128,7 +139411,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker ": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 6000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1120000
@@ -140137,46 +139420,10 @@ class VehicleData {
           "Metal Transport Vehicle (MTV) ": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
-            }
-          },
-          "Scissor Lift": {
-            "Diesel": {
-              "bodyType": "MISC (Scissor Lift)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1180000
-            }
-          },
-          "Sky Lift / Access Platform ": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1350000
-            }
-          },
-          "Water Sprinkler Mounted on Water Tanker ": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 950000
-            }
-          },
-          "Road Ambulance / Patrol Maintenance Unit (PMU) ": {
-            "Diesel": {
-              "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1150000
             }
           },
         },
@@ -140193,7 +139440,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV)": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -140202,7 +139449,7 @@ class VehicleData {
           "Metal Transport Vehicle (MTV)": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -140211,7 +139458,7 @@ class VehicleData {
           "Furnace Tending Vehicle (FTV)": {
             "Diesel": {
               "bodyType": "MISC (Furnace Tending Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -140220,7 +139467,7 @@ class VehicleData {
           "Anode Transport Vehicle (ATV)": {
             "Diesel": {
               "bodyType": "MISC (Anode Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -140229,34 +139476,16 @@ class VehicleData {
           "Alumina/Fly Ash/Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Transport Tanker)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
             }
           },
-          "Sky Lift / Access Platform": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1320000
-            }
-          },
-          "Water Sprinkler Mounted on Water Tanker": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 920000
-            }
-          },
           "Road Ambulance / Patrol Maintenance Unit (PMU)": {
             "Diesel": {
               "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1120000
@@ -140265,7 +139494,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
@@ -140274,7 +139503,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV) ": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 4000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1350000
@@ -140283,7 +139512,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker ": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 6000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1120000
@@ -140292,46 +139521,10 @@ class VehicleData {
           "Metal Transport Vehicle (MTV) ": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
-            }
-          },
-          "Scissor Lift": {
-            "Diesel": {
-              "bodyType": "MISC (Scissor Lift)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1180000
-            }
-          },
-          "Sky Lift / Access Platform ": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1350000
-            }
-          },
-          "Water Sprinkler Mounted on Water Tanker ": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 950000
-            }
-          },
-          "Road Ambulance / Patrol Maintenance Unit (PMU) ": {
-            "Diesel": {
-              "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1150000
             }
           },
         },
@@ -140348,7 +139541,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV)": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -140357,7 +139550,7 @@ class VehicleData {
           "Metal Transport Vehicle (MTV)": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -140366,7 +139559,7 @@ class VehicleData {
           "Furnace Tending Vehicle (FTV)": {
             "Diesel": {
               "bodyType": "MISC (Furnace Tending Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -140375,7 +139568,7 @@ class VehicleData {
           "Anode Transport Vehicle (ATV)": {
             "Diesel": {
               "bodyType": "MISC (Anode Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -140384,34 +139577,16 @@ class VehicleData {
           "Alumina/Fly Ash/Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Transport Tanker)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
             }
           },
-          "Sky Lift / Access Platform": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1320000
-            }
-          },
-          "Water Sprinkler Mounted on Water Tanker": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 920000
-            }
-          },
           "Road Ambulance / Patrol Maintenance Unit (PMU)": {
             "Diesel": {
               "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1120000
@@ -140420,7 +139595,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
@@ -140429,7 +139604,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV) ": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 4000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1350000
@@ -140438,7 +139613,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker ": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 6000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1120000
@@ -140447,46 +139622,10 @@ class VehicleData {
           "Metal Transport Vehicle (MTV) ": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
-            }
-          },
-          "Scissor Lift": {
-            "Diesel": {
-              "bodyType": "MISC (Scissor Lift)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1180000
-            }
-          },
-          "Sky Lift / Access Platform ": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1350000
-            }
-          },
-          "Water Sprinkler Mounted on Water Tanker ": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 950000
-            }
-          },
-          "Road Ambulance / Patrol Maintenance Unit (PMU) ": {
-            "Diesel": {
-              "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1150000
             }
           },
         },
@@ -140503,7 +139642,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV)": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -140512,7 +139651,7 @@ class VehicleData {
           "Metal Transport Vehicle (MTV)": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -140521,7 +139660,7 @@ class VehicleData {
           "Furnace Tending Vehicle (FTV)": {
             "Diesel": {
               "bodyType": "MISC (Furnace Tending Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -140530,7 +139669,7 @@ class VehicleData {
           "Anode Transport Vehicle (ATV)": {
             "Diesel": {
               "bodyType": "MISC (Anode Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -140539,7 +139678,7 @@ class VehicleData {
           "Alumina/Fly Ash/Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Transport Tanker)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
@@ -140554,19 +139693,10 @@ class VehicleData {
               "exShowroom": 1320000
             }
           },
-          "Water Sprinkler Mounted on Water Tanker": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 920000
-            }
-          },
           "Road Ambulance / Patrol Maintenance Unit (PMU)": {
             "Diesel": {
               "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1120000
@@ -140575,7 +139705,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
@@ -140584,7 +139714,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV) ": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 4000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1350000
@@ -140593,7 +139723,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker ": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 6000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1120000
@@ -140602,46 +139732,10 @@ class VehicleData {
           "Metal Transport Vehicle (MTV) ": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
-            }
-          },
-          "Scissor Lift": {
-            "Diesel": {
-              "bodyType": "MISC (Scissor Lift)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1180000
-            }
-          },
-          "Sky Lift / Access Platform ": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1350000
-            }
-          },
-          "Water Sprinkler Mounted on Water Tanker ": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 950000
-            }
-          },
-          "Road Ambulance / Patrol Maintenance Unit (PMU) ": {
-            "Diesel": {
-              "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1150000
             }
           },
         },
@@ -140658,7 +139752,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV)": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -140667,7 +139761,7 @@ class VehicleData {
           "Metal Transport Vehicle (MTV)": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -140676,7 +139770,7 @@ class VehicleData {
           "Furnace Tending Vehicle (FTV)": {
             "Diesel": {
               "bodyType": "MISC (Furnace Tending Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -140685,7 +139779,7 @@ class VehicleData {
           "Anode Transport Vehicle (ATV)": {
             "Diesel": {
               "bodyType": "MISC (Anode Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -140694,7 +139788,7 @@ class VehicleData {
           "Alumina/Fly Ash/Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Transport Tanker)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
@@ -140721,7 +139815,7 @@ class VehicleData {
           "Road Ambulance / Patrol Maintenance Unit (PMU)": {
             "Diesel": {
               "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1120000
@@ -140730,7 +139824,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
@@ -140739,7 +139833,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV) ": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 4000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1350000
@@ -140748,7 +139842,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker ": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 6000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1120000
@@ -140757,46 +139851,10 @@ class VehicleData {
           "Metal Transport Vehicle (MTV) ": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
-            }
-          },
-          "Scissor Lift": {
-            "Diesel": {
-              "bodyType": "MISC (Scissor Lift)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1180000
-            }
-          },
-          "Sky Lift / Access Platform ": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1350000
-            }
-          },
-          "Water Sprinkler Mounted on Water Tanker ": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 950000
-            }
-          },
-          "Road Ambulance / Patrol Maintenance Unit (PMU) ": {
-            "Diesel": {
-              "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1150000
             }
           },
         },
@@ -140813,7 +139871,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV)": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -140822,7 +139880,7 @@ class VehicleData {
           "Metal Transport Vehicle (MTV)": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -140831,7 +139889,7 @@ class VehicleData {
           "Furnace Tending Vehicle (FTV)": {
             "Diesel": {
               "bodyType": "MISC (Furnace Tending Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -140840,7 +139898,7 @@ class VehicleData {
           "Anode Transport Vehicle (ATV)": {
             "Diesel": {
               "bodyType": "MISC (Anode Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -140849,7 +139907,7 @@ class VehicleData {
           "Alumina/Fly Ash/Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Transport Tanker)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
@@ -140876,7 +139934,7 @@ class VehicleData {
           "Road Ambulance / Patrol Maintenance Unit (PMU)": {
             "Diesel": {
               "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1120000
@@ -140885,7 +139943,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
@@ -140894,7 +139952,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV) ": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 4000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1350000
@@ -140903,7 +139961,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker ": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 6000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1120000
@@ -140912,46 +139970,10 @@ class VehicleData {
           "Metal Transport Vehicle (MTV) ": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
-            }
-          },
-          "Scissor Lift": {
-            "Diesel": {
-              "bodyType": "MISC (Scissor Lift)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1180000
-            }
-          },
-          "Sky Lift / Access Platform ": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1350000
-            }
-          },
-          "Water Sprinkler Mounted on Water Tanker ": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 950000
-            }
-          },
-          "Road Ambulance / Patrol Maintenance Unit (PMU) ": {
-            "Diesel": {
-              "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1150000
             }
           },
         },
@@ -140968,7 +139990,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV)": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -140977,7 +139999,7 @@ class VehicleData {
           "Metal Transport Vehicle (MTV)": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -140986,7 +140008,7 @@ class VehicleData {
           "Furnace Tending Vehicle (FTV)": {
             "Diesel": {
               "bodyType": "MISC (Furnace Tending Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -140995,7 +140017,7 @@ class VehicleData {
           "Anode Transport Vehicle (ATV)": {
             "Diesel": {
               "bodyType": "MISC (Anode Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -141004,7 +140026,7 @@ class VehicleData {
           "Alumina/Fly Ash/Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Transport Tanker)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
@@ -141013,7 +140035,7 @@ class VehicleData {
           "Sky Lift / Access Platform": {
             "Diesel": {
               "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1320000
@@ -141022,7 +140044,7 @@ class VehicleData {
           "Water Sprinkler Mounted on Water Tanker": {
             "Diesel": {
               "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
+              "cc": 4000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 920000
@@ -141031,7 +140053,7 @@ class VehicleData {
           "Road Ambulance / Patrol Maintenance Unit (PMU)": {
             "Diesel": {
               "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1120000
@@ -141040,7 +140062,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
@@ -141049,7 +140071,7 @@ class VehicleData {
           "Refuse Compactor Vehicle (RCV) ": {
             "Diesel": {
               "bodyType": "MISC (Refuse Compactor Vehicle)",
-              "cc": 0,
+              "cc": 4000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1350000
@@ -141058,7 +140080,7 @@ class VehicleData {
           "Fly Ash / Cement / Lime Tanker ": {
             "Diesel": {
               "bodyType": "MISC (Powder Material Tanker)",
-              "cc": 0,
+              "cc": 6000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1120000
@@ -141067,46 +140089,10 @@ class VehicleData {
           "Metal Transport Vehicle (MTV) ": {
             "Diesel": {
               "bodyType": "MISC (Metal Transport Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
-            }
-          },
-          "Scissor Lift": {
-            "Diesel": {
-              "bodyType": "MISC (Scissor Lift)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1180000
-            }
-          },
-          "Sky Lift / Access Platform ": {
-            "Diesel": {
-              "bodyType": "MISC (Sky Lift / Access Platform)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1350000
-            }
-          },
-          "Water Sprinkler Mounted on Water Tanker ": {
-            "Diesel": {
-              "bodyType": "MISC (Water Sprinkler Tanker)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 950000
-            }
-          },
-          "Road Ambulance / Patrol Maintenance Unit (PMU) ": {
-            "Diesel": {
-              "bodyType": "MISC (Road Ambulance / PMU)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1150000
             }
           },
         }
@@ -141116,7 +140102,7 @@ class VehicleData {
           "Stallion 4x4": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 6670,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
@@ -141125,7 +140111,7 @@ class VehicleData {
           "LPTA 4x4": {
             "Diesel": {
               "bodyType": "MISC (Light Tactical Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 850000
@@ -141134,7 +140120,7 @@ class VehicleData {
           "MPV 4x4": {
             "Diesel": {
               "bodyType": "MISC (Mine Protected Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1200000
@@ -141143,7 +140129,7 @@ class VehicleData {
           "Shaktiman Tipper": {
             "Diesel": {
               "bodyType": "MISC (Heavy-Duty Tipper)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
@@ -141152,7 +140138,7 @@ class VehicleData {
           "Water Bowser": {
             "Diesel": {
               "bodyType": "MISC (Water Tanker)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 950000
@@ -141161,7 +140147,7 @@ class VehicleData {
           "Fuel Tanker": {
             "Diesel": {
               "bodyType": "MISC (Fuel Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1050000
@@ -141170,7 +140156,7 @@ class VehicleData {
           "Field Ambulance": {
             "Diesel": {
               "bodyType": "MISC (Medical Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1150000
@@ -141179,7 +140165,7 @@ class VehicleData {
           "Light Recovery Vehicle": {
             "Diesel": {
               "bodyType": "MISC (Recovery Vehicle)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1000000
@@ -141190,52 +140176,52 @@ class VehicleData {
           "Stallion 4x4": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 950000
-            }
-          },
-          "LPTA 4x4": {
-            "Diesel": {
-              "bodyType": "MISC (Light Tactical Vehicle)",
-              "cc": 0,
+              "cc": 6670,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 900000
             }
           },
+          "LPTA 4x4": {
+            "Diesel": {
+              "bodyType": "MISC (Light Tactical Vehicle)",
+              "cc": 5883,
+              "fuelType": "Diesel",
+              "seating": 1,
+              "exShowroom": 850000
+            }
+          },
           "MPV 4x4": {
             "Diesel": {
               "bodyType": "MISC (Mine Protected Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1250000
+              "exShowroom": 1200000
             }
           },
           "Shaktiman Tipper": {
             "Diesel": {
               "bodyType": "MISC (Heavy-Duty Tipper)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1150000
+              "exShowroom": 1100000
             }
           },
           "Water Bowser": {
             "Diesel": {
               "bodyType": "MISC (Water Tanker)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1000000
+              "exShowroom": 950000
             }
           },
           "Fuel Tanker": {
             "Diesel": {
               "bodyType": "MISC (Fuel Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1050000
@@ -141244,19 +140230,19 @@ class VehicleData {
           "Field Ambulance": {
             "Diesel": {
               "bodyType": "MISC (Medical Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1200000
+              "exShowroom": 1150000
             }
           },
           "Light Recovery Vehicle": {
             "Diesel": {
               "bodyType": "MISC (Recovery Vehicle)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1050000
+              "exShowroom": 1000000
             }
           },
         },
@@ -141264,52 +140250,52 @@ class VehicleData {
           "Stallion 4x4": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 6670,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1000000
+              "exShowroom": 900000
             }
           },
           "LPTA 4x4": {
             "Diesel": {
               "bodyType": "MISC (Light Tactical Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 950000
+              "exShowroom": 850000
             }
           },
           "MPV 4x4": {
             "Diesel": {
               "bodyType": "MISC (Mine Protected Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1300000
+              "exShowroom": 1200000
             }
           },
           "Shaktiman Tipper": {
             "Diesel": {
               "bodyType": "MISC (Heavy-Duty Tipper)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1200000
+              "exShowroom": 1100000
             }
           },
           "Water Bowser": {
             "Diesel": {
               "bodyType": "MISC (Water Tanker)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1150000
+              "exShowroom": 950000
             }
           },
           "Fuel Tanker": {
             "Diesel": {
               "bodyType": "MISC (Fuel Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1050000
@@ -141318,19 +140304,19 @@ class VehicleData {
           "Field Ambulance": {
             "Diesel": {
               "bodyType": "MISC (Medical Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1250000
+              "exShowroom": 1150000
             }
           },
           "Light Recovery Vehicle": {
             "Diesel": {
               "bodyType": "MISC (Recovery Vehicle)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1100000
+              "exShowroom": 1000000
             }
           },
         },
@@ -141338,52 +140324,52 @@ class VehicleData {
           "Stallion 4x4": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 6670,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1050000
+              "exShowroom": 900000
             }
           },
           "LPTA 4x4": {
             "Diesel": {
               "bodyType": "MISC (Light Tactical Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1000000
+              "exShowroom": 850000
             }
           },
           "MPV 4x4": {
             "Diesel": {
               "bodyType": "MISC (Mine Protected Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1350000
+              "exShowroom": 1200000
             }
           },
           "Shaktiman Tipper": {
             "Diesel": {
               "bodyType": "MISC (Heavy-Duty Tipper)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1200000
-            }
-          },
-          "Water Bowser": {
-            "Diesel": {
-              "bodyType": "MISC (Water Tanker)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
             }
           },
+          "Water Bowser": {
+            "Diesel": {
+              "bodyType": "MISC (Water Tanker)",
+              "cc": 5883,
+              "fuelType": "Diesel",
+              "seating": 1,
+              "exShowroom": 950000
+            }
+          },
           "Fuel Tanker": {
             "Diesel": {
               "bodyType": "MISC (Fuel Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1050000
@@ -141392,19 +140378,19 @@ class VehicleData {
           "Field Ambulance": {
             "Diesel": {
               "bodyType": "MISC (Medical Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1300000
+              "exShowroom": 1150000
             }
           },
           "Light Recovery Vehicle": {
             "Diesel": {
               "bodyType": "MISC (Recovery Vehicle)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1150000
+              "exShowroom": 1000000
             }
           },
         },
@@ -141412,52 +140398,52 @@ class VehicleData {
           "Stallion 4x4": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 6670,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1050000
+              "exShowroom": 900000
             }
           },
           "LPTA 4x4": {
             "Diesel": {
               "bodyType": "MISC (Light Tactical Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1000000
+              "exShowroom": 850000
             }
           },
           "MPV 4x4": {
             "Diesel": {
               "bodyType": "MISC (Mine Protected Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1350000
+              "exShowroom": 1200000
             }
           },
           "Shaktiman Tipper": {
             "Diesel": {
               "bodyType": "MISC (Heavy-Duty Tipper)",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 1,
-              "exShowroom": 1200000
-            }
-          },
-          "Water Bowser": {
-            "Diesel": {
-              "bodyType": "MISC (Water Tanker)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
             }
           },
+          "Water Bowser": {
+            "Diesel": {
+              "bodyType": "MISC (Water Tanker)",
+              "cc": 5883,
+              "fuelType": "Diesel",
+              "seating": 1,
+              "exShowroom": 950000
+            }
+          },
           "Fuel Tanker": {
             "Diesel": {
               "bodyType": "MISC (Fuel Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1050000
@@ -141466,25 +140452,25 @@ class VehicleData {
           "Field Ambulance": {
             "Diesel": {
               "bodyType": "MISC (Medical Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1300000
+              "exShowroom": 1150000
             }
           },
           "Light Recovery Vehicle": {
             "Diesel": {
               "bodyType": "MISC (Recovery Vehicle)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1150000
+              "exShowroom": 1000000
             }
           },
           "Stallion Mk-IV": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 3833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1100000
@@ -141495,79 +140481,79 @@ class VehicleData {
           "Stallion 4x4": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 6670,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1050000
+              "exShowroom": 900000
             }
           },
           "LPTA 4x4": {
             "Diesel": {
               "bodyType": "MISC (Light Tactical Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1100000
+              "exShowroom": 850000
             }
           },
           "MPV 4x4": {
             "Diesel": {
               "bodyType": "MISC (Mine Protected Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1450000
+              "exShowroom": 1200000
             }
           },
           "Shaktiman Tipper": {
             "Diesel": {
               "bodyType": "MISC (Heavy-Duty Tipper)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1350000
+              "exShowroom": 1100000
             }
           },
           "Water Bowser": {
             "Diesel": {
               "bodyType": "MISC (Water Tanker)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1200000
+              "exShowroom": 950000
             }
           },
           "Fuel Tanker": {
             "Diesel": {
               "bodyType": "MISC (Fuel Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1300000
+              "exShowroom": 1050000
             }
           },
           "Field Ambulance": {
             "Diesel": {
               "bodyType": "MISC (Medical Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1400000
+              "exShowroom": 1150000
             }
           },
           "Light Recovery Vehicle": {
             "Diesel": {
               "bodyType": "MISC (Recovery Vehicle)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1250000
+              "exShowroom": 1000000
             }
           },
           "Stallion Mk-IV": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1150000
@@ -141578,79 +140564,79 @@ class VehicleData {
           "Stallion 4x4": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 6670,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1050000
+              "exShowroom": 900000
             }
           },
           "LPTA 4x4": {
             "Diesel": {
               "bodyType": "MISC (Light Tactical Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1150000
+              "exShowroom": 850000
             }
           },
           "MPV 4x4": {
             "Diesel": {
               "bodyType": "MISC (Mine Protected Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1500000
+              "exShowroom": 1200000
             }
           },
           "Shaktiman Tipper": {
             "Diesel": {
               "bodyType": "MISC (Heavy-Duty Tipper)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1400000
+              "exShowroom": 1100000
             }
           },
           "Water Bowser": {
             "Diesel": {
               "bodyType": "MISC (Water Tanker)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1250000
+              "exShowroom": 950000
             }
           },
           "Fuel Tanker": {
             "Diesel": {
               "bodyType": "MISC (Fuel Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1350000
+              "exShowroom": 1050000
             }
           },
           "Field Ambulance": {
             "Diesel": {
               "bodyType": "MISC (Medical Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1450000
+              "exShowroom": 1150000
             }
           },
           "Light Recovery Vehicle": {
             "Diesel": {
               "bodyType": "MISC (Recovery Vehicle)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1300000
+              "exShowroom": 1000000
             }
           },
           "Stallion Mk-IV": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1200000
@@ -141661,79 +140647,79 @@ class VehicleData {
           "Stallion 4x4": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 6670,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1050000
+              "exShowroom": 900000
             }
           },
           "LPTA 4x4": {
             "Diesel": {
               "bodyType": "MISC (Light Tactical Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1200000
+              "exShowroom": 850000
             }
           },
           "MPV 4x4": {
             "Diesel": {
               "bodyType": "MISC (Mine Protected Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1550000
+              "exShowroom": 1200000
             }
           },
           "Shaktiman Tipper": {
             "Diesel": {
               "bodyType": "MISC (Heavy-Duty Tipper)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1400000
+              "exShowroom": 1100000
             }
           },
           "Water Bowser": {
             "Diesel": {
               "bodyType": "MISC (Water Tanker)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1300000
+              "exShowroom": 950000
             }
           },
           "Fuel Tanker": {
             "Diesel": {
               "bodyType": "MISC (Fuel Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1350000
+              "exShowroom": 1050000
             }
           },
           "Field Ambulance": {
             "Diesel": {
               "bodyType": "MISC (Medical Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1500000
+              "exShowroom": 1150000
             }
           },
           "Light Recovery Vehicle": {
             "Diesel": {
               "bodyType": "MISC (Recovery Vehicle)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1350000
+              "exShowroom": 1000000
             }
           },
           "Stallion Mk-IV": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1250000
@@ -141744,79 +140730,79 @@ class VehicleData {
           "Stallion 4x4": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 6670,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1050000
+              "exShowroom": 900000
             }
           },
           "LPTA 4x4": {
             "Diesel": {
               "bodyType": "MISC (Light Tactical Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1250000
+              "exShowroom": 850000
             }
           },
           "MPV 4x4": {
             "Diesel": {
               "bodyType": "MISC (Mine Protected Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1600000
+              "exShowroom": 1200000
             }
           },
           "Shaktiman Tipper": {
             "Diesel": {
               "bodyType": "MISC (Heavy-Duty Tipper)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1500000
+              "exShowroom": 1100000
             }
           },
           "Water Bowser": {
             "Diesel": {
               "bodyType": "MISC (Water Tanker)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1350000
+              "exShowroom": 950000
             }
           },
           "Fuel Tanker": {
             "Diesel": {
               "bodyType": "MISC (Fuel Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1350000
+              "exShowroom": 1050000
             }
           },
           "Field Ambulance": {
             "Diesel": {
               "bodyType": "MISC (Medical Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1550000
+              "exShowroom": 1150000
             }
           },
           "Light Recovery Vehicle": {
             "Diesel": {
               "bodyType": "MISC (Recovery Vehicle)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1400000
+              "exShowroom": 1000000
             }
           },
           "Stallion Mk-IV": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1300000
@@ -141827,79 +140813,79 @@ class VehicleData {
           "Stallion 4x4": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 6670,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1050000
+              "exShowroom": 900000
             }
           },
           "LPTA 4x4": {
             "Diesel": {
               "bodyType": "MISC (Light Tactical Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1300000
+              "exShowroom": 850000
             }
           },
           "MPV 4x4": {
             "Diesel": {
               "bodyType": "MISC (Mine Protected Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1650000
+              "exShowroom": 1200000
             }
           },
           "Shaktiman Tipper": {
             "Diesel": {
               "bodyType": "MISC (Heavy-Duty Tipper)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1550000
+              "exShowroom": 1100000
             }
           },
           "Water Bowser": {
             "Diesel": {
               "bodyType": "MISC (Water Tanker)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1400000
+              "exShowroom": 950000
             }
           },
           "Fuel Tanker": {
             "Diesel": {
               "bodyType": "MISC (Fuel Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1500000
+              "exShowroom": 1050000
             }
           },
           "Field Ambulance": {
             "Diesel": {
               "bodyType": "MISC (Medical Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1600000
+              "exShowroom": 1150000
             }
           },
           "Light Recovery Vehicle": {
             "Diesel": {
               "bodyType": "MISC (Recovery Vehicle)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1450000
+              "exShowroom": 1000000
             }
           },
           "Stallion Mk-IV": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1350000
@@ -141910,79 +140896,79 @@ class VehicleData {
           "Stallion 4x4": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 6670,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1050000
+              "exShowroom": 900000
             }
           },
           "LPTA 4x4": {
             "Diesel": {
               "bodyType": "MISC (Light Tactical Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1350000
+              "exShowroom": 850000
             }
           },
           "MPV 4x4": {
             "Diesel": {
               "bodyType": "MISC (Mine Protected Vehicle)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1700000
+              "exShowroom": 1200000
             }
           },
           "Shaktiman Tipper": {
             "Diesel": {
               "bodyType": "MISC (Heavy-Duty Tipper)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1600000
+              "exShowroom": 1100000
             }
           },
           "Water Bowser": {
             "Diesel": {
               "bodyType": "MISC (Water Tanker)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1450000
+              "exShowroom": 950000
             }
           },
           "Fuel Tanker": {
             "Diesel": {
               "bodyType": "MISC (Fuel Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1550000
+              "exShowroom": 1050000
             }
           },
           "Field Ambulance": {
             "Diesel": {
               "bodyType": "MISC (Medical Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1650000
+              "exShowroom": 1150000
             }
           },
           "Light Recovery Vehicle": {
             "Diesel": {
               "bodyType": "MISC (Recovery Vehicle)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
-              "exShowroom": 1500000
+              "exShowroom": 1000000
             }
           },
           "Stallion Mk-IV": {
             "Diesel": {
               "bodyType": "MISC (Logistics Transport)",
-              "cc": 0,
+              "cc": 5833,
               "fuelType": "Diesel",
               "seating": 1,
               "exShowroom": 1400000
@@ -141995,7 +140981,7 @@ class VehicleData {
           "Amphibious Bus": {
             "Diesel": {
               "bodyType": "MISC (Land & Water Transport)",
-              "cc": 0,
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 30,
               "exShowroom": 4500000
@@ -142004,7 +140990,7 @@ class VehicleData {
           "Mobile Dental Van": {
             "Diesel": {
               "bodyType": "MISC (Medical Service Vehicle)",
-              "cc": 0,
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1500000
@@ -142013,7 +140999,7 @@ class VehicleData {
           "Mobile Medical Van": {
             "Diesel": {
               "bodyType": "MISC (Medical Service Vehicle)",
-              "cc": 0,
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1600000
@@ -142022,7 +141008,7 @@ class VehicleData {
           "Prison Van": {
             "Diesel": {
               "bodyType": "MISC (Security Vehicle)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 10,
               "exShowroom": 2000000
@@ -142031,7 +141017,7 @@ class VehicleData {
           "Staff Transport Bus": {
             "Diesel": {
               "bodyType": "MISC (Employee Transport)",
-              "cc": 0,
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 35,
               "exShowroom": 3500000
@@ -142040,7 +141026,7 @@ class VehicleData {
           "Luxury Sleeper Coach": {
             "Diesel": {
               "bodyType": "MISC (Long-Distance Travel Bus)",
-              "cc": 0,
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 40,
               "exShowroom": 5000000
@@ -142050,560 +141036,560 @@ class VehicleData {
         "2016": {
           "Amphibious Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Land & Water Transport)",
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 30,
-              "exShowroom": 4600000
+              "exShowroom": 4500000
             }
           },
           "Mobile Dental Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1550000
+              "exShowroom": 1500000
             }
           },
           "Mobile Medical Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1650000
+              "exShowroom": 1600000
             }
           },
           "Prison Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Security Vehicle)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 10,
-              "exShowroom": 2050000
+              "exShowroom": 2000000
             }
           },
           "Staff Transport Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Employee Transport)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 35,
-              "exShowroom": 3550000
+              "exShowroom": 3500000
             }
           },
           "Luxury Sleeper Coach": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Long-Distance Travel Bus)",
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 40,
-              "exShowroom": 5100000
+              "exShowroom": 5000000
             }
           }
         },
         "2017": {
           "Amphibious Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Land & Water Transport)",
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 30,
-              "exShowroom": 4700000
+              "exShowroom": 4500000
             }
           },
           "Mobile Dental Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
+              "fuelType": "Diesel",
+              "seating": 2,
+              "exShowroom": 1500000
+            }
+          },
+          "Mobile Medical Van": {
+            "Diesel": {
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
               "exShowroom": 1600000
             }
           },
-          "Mobile Medical Van": {
-            "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 1700000
-            }
-          },
           "Prison Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Security Vehicle)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 10,
-              "exShowroom": 2100000
+              "exShowroom": 2000000
             }
           },
           "Staff Transport Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Employee Transport)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 35,
-              "exShowroom": 3600000
+              "exShowroom": 3500000
             }
           },
           "Luxury Sleeper Coach": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Long-Distance Travel Bus)",
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 40,
-              "exShowroom": 5200000
+              "exShowroom": 5000000
             }
           }
         },
         "2018": {
           "Amphibious Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Land & Water Transport)",
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 30,
-              "exShowroom": 4800000
+              "exShowroom": 4500000
             }
           },
           "Mobile Dental Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1650000
+              "exShowroom": 1500000
             }
           },
           "Mobile Medical Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1750000
+              "exShowroom": 1600000
             }
           },
           "Prison Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Security Vehicle)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 10,
-              "exShowroom": 2150000
+              "exShowroom": 2000000
             }
           },
           "Staff Transport Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Employee Transport)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 35,
-              "exShowroom": 3650000
+              "exShowroom": 3500000
             }
           },
           "Luxury Sleeper Coach": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Long-Distance Travel Bus)",
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 40,
-              "exShowroom": 5300000
+              "exShowroom": 5000000
             }
           }
         },
         "2019": {
           "Amphibious Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Land & Water Transport)",
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 30,
-              "exShowroom": 4900000
+              "exShowroom": 4500000
             }
           },
           "Mobile Dental Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1700000
+              "exShowroom": 1500000
             }
           },
           "Mobile Medical Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1800000
+              "exShowroom": 1600000
             }
           },
           "Prison Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Security Vehicle)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 10,
-              "exShowroom": 2200000
+              "exShowroom": 2000000
             }
           },
           "Staff Transport Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Employee Transport)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 35,
-              "exShowroom": 3700000
+              "exShowroom": 3500000
             }
           },
           "Luxury Sleeper Coach": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Long-Distance Travel Bus)",
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 40,
-              "exShowroom": 5400000
+              "exShowroom": 5000000
             }
           }
         },
         "2020": {
           "Amphibious Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Land & Water Transport)",
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 30,
-              "exShowroom": 5000000
+              "exShowroom": 4500000
             }
           },
           "Mobile Dental Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1750000
+              "exShowroom": 1500000
             }
           },
           "Mobile Medical Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1850000
+              "exShowroom": 1600000
             }
           },
           "Prison Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Security Vehicle)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 10,
-              "exShowroom": 2250000
+              "exShowroom": 2000000
             }
           },
           "Staff Transport Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Employee Transport)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 35,
-              "exShowroom": 3750000
+              "exShowroom": 3500000
             }
           },
           "Luxury Sleeper Coach": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Long-Distance Travel Bus)",
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 40,
-              "exShowroom": 5500000
+              "exShowroom": 5000000
             }
           }
         },
         "2021": {
           "Amphibious Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Land & Water Transport)",
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 30,
-              "exShowroom": 5100000
+              "exShowroom": 4500000
             }
           },
           "Mobile Dental Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1800000
+              "exShowroom": 1500000
             }
           },
           "Mobile Medical Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1900000
+              "exShowroom": 1600000
             }
           },
           "Prison Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Security Vehicle)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 10,
-              "exShowroom": 2300000
+              "exShowroom": 2000000
             }
           },
           "Staff Transport Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Employee Transport)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 35,
-              "exShowroom": 3800000
+              "exShowroom": 3500000
             }
           },
           "Luxury Sleeper Coach": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Long-Distance Travel Bus)",
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 40,
-              "exShowroom": 5600000
+              "exShowroom": 5000000
             }
           }
         },
         "2022": {
           "Amphibious Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Land & Water Transport)",
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 30,
-              "exShowroom": 5200000
+              "exShowroom": 4500000
             }
           },
           "Mobile Dental Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1850000
+              "exShowroom": 1500000
             }
           },
           "Mobile Medical Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1950000
+              "exShowroom": 1600000
             }
           },
           "Prison Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Security Vehicle)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 10,
-              "exShowroom": 2350000
+              "exShowroom": 2000000
             }
           },
           "Staff Transport Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Employee Transport)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 35,
-              "exShowroom": 3850000
+              "exShowroom": 3500000
             }
           },
           "Luxury Sleeper Coach": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Long-Distance Travel Bus)",
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 40,
-              "exShowroom": 5700000
+              "exShowroom": 5000000
             }
           }
         },
         "2023": {
           "Amphibious Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Land & Water Transport)",
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 30,
-              "exShowroom": 5300000
+              "exShowroom": 4500000
             }
           },
           "Mobile Dental Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1900000
+              "exShowroom": 1500000
             }
           },
           "Mobile Medical Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 2000000
+              "exShowroom": 1600000
             }
           },
           "Prison Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Security Vehicle)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 10,
-              "exShowroom": 2400000
+              "exShowroom": 2000000
             }
           },
           "Staff Transport Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Employee Transport)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 35,
-              "exShowroom": 3900000
+              "exShowroom": 3500000
             }
           },
           "Luxury Sleeper Coach": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Long-Distance Travel Bus)",
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 40,
-              "exShowroom": 5800000
+              "exShowroom": 5000000
             }
           }
         },
         "2024": {
           "Amphibious Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Land & Water Transport)",
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 30,
-              "exShowroom": 5400000
+              "exShowroom": 4500000
             }
           },
           "Mobile Dental Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 1950000
+              "exShowroom": 1500000
             }
           },
           "Mobile Medical Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 2050000
+              "exShowroom": 1600000
             }
           },
           "Prison Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Security Vehicle)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 10,
-              "exShowroom": 2450000
+              "exShowroom": 2000000
             }
           },
           "Staff Transport Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Employee Transport)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 35,
-              "exShowroom": 3950000
+              "exShowroom": 3500000
             }
           },
           "Luxury Sleeper Coach": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Long-Distance Travel Bus)",
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 40,
-              "exShowroom": 5900000
+              "exShowroom": 5000000
             }
           }
         },
         "2025": {
           "Amphibious Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Land & Water Transport)",
+              "cc": 5000,
               "fuelType": "Diesel",
               "seating": 30,
-              "exShowroom": 5500000
+              "exShowroom": 4500000
             }
           },
           "Mobile Dental Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 2000000
+              "exShowroom": 1500000
             }
           },
           "Mobile Medical Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Medical Service Vehicle)",
+              "cc": 2200,
               "fuelType": "Diesel",
               "seating": 2,
-              "exShowroom": 2100000
+              "exShowroom": 1600000
             }
           },
           "Prison Van": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Security Vehicle)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 10,
-              "exShowroom": 2500000
+              "exShowroom": 2000000
             }
           },
           "Staff Transport Bus": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Employee Transport)",
+              "cc": 3000,
               "fuelType": "Diesel",
               "seating": 35,
-              "exShowroom": 4000000
+              "exShowroom": 3500000
             }
           },
           "Luxury Sleeper Coach": {
             "Diesel": {
-              "bodyType": "MISC",
-              "cc": 0,
+              "bodyType": "MISC (Long-Distance Travel Bus)",
+              "cc": 5883,
               "fuelType": "Diesel",
               "seating": 40,
-              "exShowroom": 6000000
+              "exShowroom": 5000000
             }
           }
         }
@@ -142613,7 +141599,7 @@ class VehicleData {
           "EKA K1.5": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 80,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 1390000,
@@ -142622,7 +141608,7 @@ class VehicleData {
           "EKA 55T": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 330,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 1390000,
@@ -142631,7 +141617,7 @@ class VehicleData {
           "EKA 7T": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 220,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 1390000,
@@ -142640,7 +141626,7 @@ class VehicleData {
           "EKA 9 Staff Bus": {
             "Electric": {
               "bodyType": "BUS",
-              "cc": 0,
+              "cc": 213,
               "fuelType": "Electric",
               "seating": 30,
               "exShowroom": 1390000,
@@ -142651,7 +141637,7 @@ class VehicleData {
           "EKA K1.5": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 80,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 1390000,
@@ -142660,7 +141646,7 @@ class VehicleData {
           "EKA 55T": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 330,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 1390000,
@@ -142669,7 +141655,7 @@ class VehicleData {
           "EKA 7T": {
             "Electric": {
               "bodyType": "CARGO",
-              "cc": 0,
+              "cc": 200,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 1390000,
@@ -142678,153 +141664,10 @@ class VehicleData {
           "EKA 9 Staff Bus": {
             "Electric": {
               "bodyType": "BUS",
-              "cc": 0,
+              "cc": 213,
               "fuelType": "Electric",
               "seating": 30,
               "exShowroom": 1390000,
-            }
-          }
-        },
-      },
-      "Five Laser Cut Metal Technology Pvt. Ltd": {
-        "2023": {
-          "Five SPV": {
-            "Diesel": {
-              "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 156000
-            }
-          },
-          "Five Lightweight Trailer": {
-            "Diesel": {
-              "bodyType": "TRAILER",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 156000
-            }
-          },
-          "Five EV Component Vehicle": {
-            "Electric": {
-              "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 156000
-            }
-          },
-        },
-        "2024": {
-          "Five SPV": {
-            "Diesel": {
-              "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 156000
-            }
-          },
-          "Five Lightweight Trailer": {
-            "Diesel": {
-              "bodyType": "TRAILER",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 156000
-            }
-          },
-          "Five EV Component Vehicle": {
-            "Electric": {
-              "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 156000
-            }
-          },
-          "Five SPV 2024": {
-            "Diesel": {
-              "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 156000
-            }
-          },
-          "Five Lightweight Trailer 2024": {
-            "Diesel": {
-              "bodyType": "TRAILER",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 156000
-            }
-          },
-          "Five EV Component Vehicle 2024": {
-            "Electric": {
-              "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 156000
-            }
-          }
-        },
-        "2025": {
-          "Five SPV": {
-            "Diesel": {
-              "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 156000
-            }
-          },
-          "Five Lightweight Trailer": {
-            "Diesel": {
-              "bodyType": "TRAILER",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 156000
-            }
-          },
-          "Five EV Component Vehicle": {
-            "Electric": {
-              "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 156000
-            }
-          },
-          "Five SPV 2024": {
-            "Diesel": {
-              "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 2,
-              "exShowroom": 156000
-            }
-          },
-          "Five Lightweight Trailer 2024": {
-            "Diesel": {
-              "bodyType": "TRAILER",
-              "cc": 0,
-              "fuelType": "Diesel",
-              "seating": 0,
-              "exShowroom": 156000
-            }
-          },
-          "Five EV Component Vehicle 2024": {
-            "Electric": {
-              "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 156000
             }
           }
         },
@@ -142834,7 +141677,7 @@ class VehicleData {
           "Sutlej Electric Golf Cart": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 15600
@@ -142843,7 +141686,7 @@ class VehicleData {
           "Sutlej Mini Electric Vehicle": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 4,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142854,7 +141697,7 @@ class VehicleData {
           "Sutlej Electric Golf Cart": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142863,7 +141706,7 @@ class VehicleData {
           "Sutlej Mini Electric Vehicle": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 4,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142874,7 +141717,7 @@ class VehicleData {
           "Sutlej Electric Golf Cart": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142883,7 +141726,7 @@ class VehicleData {
           "Sutlej Mini Electric Vehicle": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 4,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142894,7 +141737,7 @@ class VehicleData {
           "Sutlej Electric Golf Cart": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142903,7 +141746,7 @@ class VehicleData {
           "Sutlej Mini Electric Vehicle": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 4,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142914,7 +141757,7 @@ class VehicleData {
           "Sutlej Electric Golf Cart": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142923,7 +141766,7 @@ class VehicleData {
           "Sutlej Mini Electric Vehicle": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 4,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142934,7 +141777,7 @@ class VehicleData {
           "Sutlej Electric Golf Cart": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142943,7 +141786,7 @@ class VehicleData {
           "Sutlej Mini Electric Vehicle": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 4,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142954,7 +141797,7 @@ class VehicleData {
           "Sutlej Electric Golf Cart": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142963,7 +141806,7 @@ class VehicleData {
           "Sutlej Mini Electric Vehicle": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 4,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142974,7 +141817,7 @@ class VehicleData {
           "Sutlej Electric Golf Cart": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142983,7 +141826,7 @@ class VehicleData {
           "Sutlej Mini Electric Vehicle": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 4,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -142994,7 +141837,7 @@ class VehicleData {
           "Sutlej Electric Golf Cart": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -143003,7 +141846,7 @@ class VehicleData {
           "Sutlej Mini Electric Vehicle": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 4,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -143014,7 +141857,7 @@ class VehicleData {
           "Sutlej Electric Golf Cart": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 1,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
@@ -143023,7 +141866,7 @@ class VehicleData {
           "Sutlej Mini Electric Vehicle": {
             "Electric": {
               "bodyType": "SPECIAL_PURPOSE",
-              "cc": 0,
+              "cc": 4,
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 156000
