@@ -56,6 +56,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "Zone",
         ],
         "[A] Own Damage Premium Package": [
+          "Vehicle Basic Rate",
           "Basic for Vehicle",
           "IMT 23",
           "CNG/LPG kit (Externally Fitted)",
@@ -165,7 +166,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
         ],
         "[B] Liability Premium": [
           "Liability Premium (TP)",
-          "Geographical Ext",
+          //"Geographical Ext",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "LL to Employee Other than Paid Driver",

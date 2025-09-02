@@ -598,6 +598,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Zone",
     ],
     "[A] Own Damage Premium Package": [
+      "Vehicle Basic Rate",
       "Basic for Vehicle",
       "IMT 23",
       "CNG/LPG kit (Externally Fitted)",
@@ -707,7 +708,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[B] Liability Premium": [
       "Liability Premium (TP)",
-      "Geographical Ext",
+      //"Geographical Ext",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "LL to Employee Other than Paid Driver",

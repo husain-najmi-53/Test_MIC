@@ -44,7 +44,7 @@ class _EPCForm1YOD1TPState extends State<EPCForm1YOD1TP> {
   final List<String> _cngLpgKitOptions = ['Yes', 'No'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
   // final List<String> _imt23Options = ['Yes', 'No'];
-  final List<String> _llPaidDriverOptions = ['0', '250'];
+  final List<String> _llPaidDriverOptions = ['0', '50'];
   // final List<String> _restrictedTppdOptions = ['Yes', 'No'];
 
   @override
@@ -75,6 +75,8 @@ class _EPCForm1YOD1TPState extends State<EPCForm1YOD1TP> {
     };
     _controllers['od']!.text = '1';
     _controllers['tp']!.text = '1';
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
   }
 
   @override

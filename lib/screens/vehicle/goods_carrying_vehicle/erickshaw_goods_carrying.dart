@@ -56,6 +56,8 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
   void initState() {
     super.initState();
     _controllers['lastYearIdv']!.addListener(_updateIdv);
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
   }
 
   void _updateIdv() {
@@ -128,7 +130,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
           restrictedTppdAmt;
 
       double totalAB = netOdPremium + totalTp;
-      double gst = totalAB * 0.18;
+      double gst = totalAB * 0.12;
       double otherCessAmt = (totalAB * otherCess) / 100;
       double finalPremium = totalAB + gst + otherCessAmt;
 
@@ -136,7 +138,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
         "IDV": idv.toStringAsFixed(2),
         "Year of Manufacture": year,
         "Zone": zone,
-        "Vehicle Basic rate": basicRate.toStringAsFixed(2),
+        "Vehicle Basic rate": basicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicOd.toStringAsFixed(2),
         "Electrical Accessories": electricalAcc.toStringAsFixed(2),
         "IMT 23": imt23Amt.toStringAsFixed(2),

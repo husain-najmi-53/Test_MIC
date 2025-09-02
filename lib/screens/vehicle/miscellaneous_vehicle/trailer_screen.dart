@@ -27,6 +27,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
   };
 
   String? _selectedDepreciation;
+  String? _selectedAge;
   String? _selectedTrailerTowedBy;
   String? _selectedZone;
   String? _selectedCNG;
@@ -44,6 +45,11 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
     '20%',
     '25%',
     '30%',
+  ];
+  final List<String> _ageOptions = [
+    'Upto 5 Years',
+    '6-7 Years',
+    'Above 7 Years'
   ];
   final List<String> _trailerTowedByOptions = [
     'Other Vehicle',
@@ -65,6 +71,13 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
     '350'
   ];
   final List<String> _restrictedTppdOptions = ['Yes', 'No'];
+
+  @override
+  void initState() {
+    super.initState();
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
+  }
 
   @override
   void dispose() {
@@ -120,8 +133,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
           double.tryParse(_controllers['noOfTrailers']!.text) ?? 0.0;
       double selectIMT = (_selectedImt23?.toLowerCase() == 'yes') ? 15.0 : 0.0;
       String trailerTowedBy = _selectedTrailerTowedBy ?? 'Other Vehicle';
-      double yearOfManufacture =
-          double.tryParse(_controllers['yearOfManufacture']!.text) ?? 0.0;
+      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
       String zone = _selectedZone ?? "A";
       // double cngExternally = double.tryParse(_controllers['CngLpgKitsExFitted']!.text) ?? 0.0;
       double cngExternally =
@@ -152,8 +164,10 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
           double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
 
       // Get base rate from function
-      double vehicleBasicRate = _getOdRate(_selectedZone ?? '',
-          _selectedTrailerTowedBy ?? '', yearOfManufacture);
+      double vehicleBasicRate = _getOdRate(
+          _selectedZone ?? 'A',
+          _selectedTrailerTowedBy ?? 'Other Vehicle',
+          _selectedAge ?? 'Upto 5 Years');
 
       // OD Calculations
       double basicOdPremium = (currentIdv * vehicleBasicRate) / 100;
@@ -163,7 +177,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
 
 // Loading amount on OD premium (percentage)
       double loadingOdPremium =
-          (basicOdPremium * loadingOnDiscountPremium) / 100;
+          (discountOdPremium * loadingOnDiscountPremium) / 100;
 
 // IMT 23 loading (percentage)
       double imt23Amount = (basicOdPremium * selectIMT) / 100;
@@ -185,7 +199,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
       double totalA = odBeforeNcb - ncbAmount;
 
       // TP Section
-      double cngLpgRate = 4.0; // change to actual IRDA rate
+      double cngLpgRate = 60; // change to actual IRDA rate
       double cngLpgKit = (cngExternally * cngLpgRate) / 100;
       double liabilityPremiumTP = _getTpRate(trailerTowedBy.toString());
       double totalB = liabilityPremiumTP +
@@ -207,11 +221,11 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
         "IDV": currentIdv.toStringAsFixed(2),
         "No. of Trailers (Attached)": noOfTrailers.toStringAsFixed(2),
         "Trailer Towed By": trailerTowedBy.toString(),
-        "Year of Manufacture": yearOfManufacture.toString(),
+        "Year of Manufacture": yearOfManufacture,
         "Zone": zone,
 
         // A - Own Damage Premium Package
-        // "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
+        "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicOdPremium.toStringAsFixed(2),
         "IMT 23": imt23Amount.toStringAsFixed(2),
         "CNG/LPG kit (Externally Fitted)": cngLpgPremium.toStringAsFixed(2),
@@ -226,7 +240,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
         // B - Liability Premium
         "Trailer Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppd.toStringAsFixed(2),
-        "CNG/LPG Kit": cngSelected.toString(),
+        "CNG/LPG Kit": cngLpgKit.toString(),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "LL to Employee Other than Paid Driver":
@@ -266,6 +280,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
       controller.clear();
     }
     setState(() {
+      _selectedAge = null;
       _selectedZone = null;
       _selectedNcb = null;
       _selectedImt23 = null;
@@ -328,6 +343,8 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
                 ),
                 _buildReadOnlyField(
                     'currentIdv', 'Current IDV (₹)'), // Read-only field
+                _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
+                    (val) => setState(() => _selectedAge = val)),
                 _buildTextField('yearOfManufacture', 'Year of Manufacture',
                     'Enter Year Of Manufacture'),
                 _buildDropdownField('Zone', _zoneOptions, _selectedZone,
@@ -403,7 +420,8 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
       'paOwnerDriver',
       'CngLpgKitsExFitted',
       'loadingOnDiscountPremium',
-      'discountOnOd','noOfTrailers'
+      'discountOnOd',
+      'noOfTrailers'
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -434,6 +452,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+                  return null; // Valid input
                 }),
           ),
         ],
@@ -443,8 +462,8 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
 
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged) {
-    String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
+      'Age of Vehicle',
       'CNG/LPG Kit',
       'IMT 23',
       'No Claim Bonus(%)',
@@ -479,8 +498,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 
@@ -500,63 +518,49 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
   }
 }
 
-double _getOdRate(
-    String zone, String trailerTowedBy, double yearOfManufacture) {
-  int currentYear = DateTime.now().year;
-  double age = currentYear - yearOfManufacture;
-
-  // Map numeric age to bracket
-  String ageBracket;
-  if (age <= 5) {
-    ageBracket = 'Upto 5 Years';
-  } else if (age <= 7) {
-    ageBracket = '5-7 Years';
-  } else {
-    ageBracket = '> 7 Years';
-  }
-
+double _getOdRate(String zone, String trailerTowedBy, String ageCategory) {
   if (trailerTowedBy == 'Agriculture Tractors upto 6 HP') {
     if (zone == 'A') {
-      if (ageBracket == 'Upto 5 Years') return 1.208;
-      if (ageBracket == '5-7 Years') return 1.238;
-      return 1.268;
+      if (ageCategory == 'Upto 5 Years') return 1.208;
+      if (ageCategory == '6-7 Years') return 1.238;
+      return 1.268; // 'Above 7 Years'
     } else if (zone == 'B') {
-      if (ageBracket == 'Upto 5 Years') return 1.202;
-      if (ageBracket == '5-7 Years') return 1.232;
-      return 1.262;
+      if (ageCategory == 'Upto 5 Years') return 1.202;
+      if (ageCategory == '6-7 Years') return 1.232;
+      return 1.262; // 'Above 7 Years'
     } else if (zone == 'C') {
-      if (ageBracket == 'Upto 5 Years') return 1.190;
-      if (ageBracket == '5-7 Years') return 1.220;
-      return 1.250;
+      if (ageCategory == 'Upto 5 Years') return 1.190;
+      if (ageCategory == '6-7 Years') return 1.220;
+      return 1.250; // 'Above 7 Years'
     }
   } else if (trailerTowedBy == 'Other Vehicle') {
     if (zone == 'A') {
-      if (ageBracket == 'Upto 5 Years') return 1.208;
-      if (ageBracket == '5-7 Years') return 1.238;
-      return 1.268;
+      if (ageCategory == 'Upto 5 Years') return 1.208;
+      if (ageCategory == '6-7 Years') return 1.238;
+      return 1.268; // 'Above 7 Years'
     } else if (zone == 'B') {
-      if (ageBracket == 'Upto 5 Years') return 1.202;
-      if (ageBracket == '5-7 Years') return 1.232;
-      return 1.262;
+      if (ageCategory == 'Upto 5 Years') return 1.202;
+      if (ageCategory == '6-7 Years') return 1.232;
+      return 1.262; // 'Above 7 Years'
     } else if (zone == 'C') {
-      if (ageBracket == 'Upto 5 Years') return 1.190;
-      if (ageBracket == '5-7 Years') return 1.220;
-      return 1.250;
+      if (ageCategory == 'Upto 5 Years') return 1.190;
+      if (ageCategory == '6-7 Years') return 1.220;
+      return 1.250; // 'Above 7 Years'
     }
   }
 
   // Safe fallback
-  return 0.50;
+  return 1.208;
 }
 
 // Get base rate
 double _getTpRate(String trailerTowedBy) {
   switch (trailerTowedBy) {
     case 'Agriculture Tractors upto 6 HP':
-      return 1645;
+      return 910;
     case 'Other Vehicle':
       return 7267;
     default:
-      return 0.0; // fallback
+      return 7267; // fallback
   }
 }

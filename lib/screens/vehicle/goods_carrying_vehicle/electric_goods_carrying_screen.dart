@@ -77,6 +77,8 @@ class _ElectricGoodsCarryingScreenState
     super.initState();
     // Auto-update Current IDV whenever Last Year IDV changes
     _controllers['lastYearIdv']!.addListener(_updateCurrentIdv);
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
   }
 
   @override
@@ -171,7 +173,7 @@ class _ElectricGoodsCarryingScreenState
 
       // --- Final ---
       double totalABC = totalA + totalB + totalC;
-      double gst = totalABC * 0.18;
+      double gst = totalABC * 0.12;
       double otherCessAmt = (totalABC * otherCess) / 100;
       double finalPremium = totalABC + gst + otherCessAmt;
 
@@ -180,7 +182,7 @@ class _ElectricGoodsCarryingScreenState
         "Year of Manufacture": year,
         "Zone": zone,
         "Gross Vehicle Weight": gvw.toString(),
-        "Vehicle Basic Rate": basicRate.toStringAsFixed(2),
+        "Vehicle Basic Rate": basicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
         "Electrical Accessories": electricalAccessories.toStringAsFixed(2),
         "CNG/LPG Kits": externalCngLpgKit.toStringAsFixed(2),
@@ -424,7 +426,6 @@ class _ElectricGoodsCarryingScreenState
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged,
       {String placeholder = 'Select Option'}) {
-    String? keyName;
     const optionalDropdowns = [
       'LL to Paid Driver',
       'IMT 23',
@@ -454,8 +455,7 @@ class _ElectricGoodsCarryingScreenState
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
                 if (value == null) {

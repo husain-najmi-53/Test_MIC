@@ -54,6 +54,13 @@ class _ElectricTwoWheeler1YODFormScreenState
   final List<String> _llPaidDriverOptions = ['0', '50'];
 
   @override
+  void initState() {
+    super.initState();
+    // Auto-select LL to Paid Driver to 50
+    _selectedLLPaidDriver = '50';
+  }
+
+  @override
   void dispose() {
     for (var controller in _controllers.values) {
       controller.dispose();

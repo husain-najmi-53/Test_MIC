@@ -56,6 +56,13 @@ class _TwoWheelerPassengerCarryingFormScreenState
   final List<String> _restrictedTppdOptions = ['Yes', 'No'];
 
   @override
+  void initState() {
+    super.initState();
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
+  }
+
+  @override
   void dispose() {
     for (var controller in _controllers.values) {
       controller.dispose();
@@ -491,7 +498,6 @@ double _getOdRate(String zone, String ageCategory, int cc) {
 
 double _getTpPremiumPCV(int cubicCapacity, int numberOfPassengers) {
   double basicRate;
-  const passengerRate = 580.0;
 
   if (cubicCapacity <= 350) {
     basicRate = 861.0;
@@ -499,5 +505,5 @@ double _getTpPremiumPCV(int cubicCapacity, int numberOfPassengers) {
     basicRate = 2254.0;
   }
 
-  return basicRate + (numberOfPassengers * passengerRate);
+  return basicRate;
 }

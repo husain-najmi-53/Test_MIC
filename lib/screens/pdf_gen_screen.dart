@@ -446,10 +446,9 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
             pw.SizedBox(height: 2),
             ...section.value.map((field) {
               final value = insuranceResult.fieldData[field] ?? '-';
-              String displayValue = value == '-'
-                  ? '-'
-                  : (double.tryParse(value.toString())?.toStringAsFixed(2) ??
-                      value.toString());
+              
+              // Use the string value directly as it's already correctly formatted
+              String displayValue = value;
 
               return pw.Padding(
                 padding: const pw.EdgeInsets.symmetric(vertical: 1),

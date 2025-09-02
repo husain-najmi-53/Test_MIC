@@ -67,6 +67,13 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
   // }
 
   @override
+  void initState() {
+    super.initState();
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
+  }
+
+  @override
   void dispose() {
     for (var controller in _controllers.values) {
       controller.dispose();
@@ -133,9 +140,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
 
       double selectIMT =
           _selectedImt23 == 'Yes' ? 15.0 : 0.0; // IMT 23 percentage
-      double ageOfVehicle = double.tryParse(_selectedAge ?? '0') ?? 0;
-      double yearOfManufacture =
-          double.tryParse(_controllers['yearOfManufacture']!.text) ?? 0;
+      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
       String zone = _selectedZone ?? "A";
       double selectNCB =
           double.tryParse((_selectedNcb ?? "0").replaceAll('%', '')) ?? 0.0;
@@ -164,22 +169,23 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
           : 0.0; // Assuming a fixed value for restricted TPPD
 
       // Get base rate from function
-      double vehicleBasicRate = _getOdRate(zone, ageOfVehicle);
+      double vehicleBasicRate =
+          _getOdRate(zone, _selectedAge ?? 'Upto 5 Years');
 
       // OD Calculations
-      double cngLpgRate = 4; // change when got IRDA from client
+      double cngLpgRate = 60; // change when got IRDA from client
       double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
       double cngLpgValue = (cngLpgKitsExFitted * cngLpgRate) /
           100; //  CNG/LPG kit (Externally Fitted)
-      double basicOdPremium = basicForVehicle +
-          cngLpgValue; // Basic OD Premium (Basic for vehicle + CNG/LPG)
       // double imt23Value = (basicForVehicle * selectIMT) / 100;      // IMT 23
-      double imt23Value = (basicForVehicle * selectIMT) / 100 ;
+      double imt23Value = (basicForVehicle * selectIMT) / 100;
+      double basicOdPremium =
+          basicForVehicle + cngLpgValue + imt23Value; // Basic OD Premium
       double basicOdBeforeDiscount =
           basicOdPremium + imt23Value; //  Basic OD Before Discount
       double discountValue = (basicOdBeforeDiscount * discountOnOd) /
           100; //  Discount on OD Premium
-      double loadingValue = (basicOdBeforeDiscount * loadingOnDiscountPremium) /
+      double loadingValue = (discountValue * loadingOnDiscountPremium) /
           100; // Loading on OD Premium
       double basicOdBeforeNcb = basicOdBeforeDiscount -
           discountValue +
@@ -191,7 +197,9 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
 
       // TP Section
       // double cngLpgRate = 4.0;
+     double llToPassengerRate = 50.0;
       double cngLpgKit = (cngLpgKitsExFitted * cngLpgRate) / 100;
+      double llToPassenger = ll2Passenger * llToPassengerRate;
       double liabilityPremiumTP = _getTpRate();
       double totalB = liabilityPremiumTP +
           restrictedTppd +
@@ -200,7 +208,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
           paOwnerDriver +
           llToPaidDriver +
           llEmployeeOther +
-          ll2Passenger;
+          llToPassenger;
 
       // Total Premium (C)
       double totalAB = totalA + totalB;
@@ -212,7 +220,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
       Map<String, String> resultMap = {
         // Basic Details
         "IDV": currentIdv.toStringAsFixed(2),
-        "Year of Manufacture": yearOfManufacture.toString(),
+        "Year of Manufacture": yearOfManufacture,
         "Zone": zone,
 
         // A - Own Damage Premium Package
@@ -237,7 +245,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "LL to Employee Other than Paid Driver":
             llEmployeeOther.toStringAsFixed(2),
-        "LL to Passenger": ll2Passenger.toStringAsFixed(2),
+        "LL to Passenger": llToPassenger.toStringAsFixed(2),
         "Total B": totalB.toStringAsFixed(2),
 
         // C - Total Premium
@@ -272,6 +280,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
       controller.clear();
     }
     setState(() {
+      _selectedDepreciation = null;
       _selectedAge = null;
       _selectedZone = null;
       _selectedNcb = null;
@@ -442,6 +451,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+                  return null; // Valid input
                 }),
           ),
         ],
@@ -451,7 +461,6 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
 
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged) {
-    String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
       'Restricted TPPD',
       'No Claim Bonus(%)',
@@ -478,8 +487,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 
@@ -499,38 +507,41 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
   }
 }
 
-double _getOdRate(String zone, double age) {
+double _getOdRate(String zone, String ageCategory) {
   // These rates are for demonstration purposes, based on typical industry standards.
   // You should verify and use the actual rates from your insurance provider.
   if (zone == 'A') {
     // Metropolitan areas like Delhi, Mumbai
-    if (age <= 5) {
+    if (ageCategory == 'Upto 5 Years') {
       return 1.208;
-    } else if (age <= 7) {
+    } else if (ageCategory == '6-7 Years') {
       return 1.238;
     } else {
+      // 'Above 7 Years'
       return 1.268; // (Above 7 yrs)
     }
   } else if (zone == 'B') {
     // Rest of India
-    if (age <= 5) {
+    if (ageCategory == 'Upto 5 Years') {
       return 1.202;
-    } else if (age <= 7) {
+    } else if (ageCategory == '6-7 Years') {
       return 1.232;
     } else {
+      // 'Above 7 Years'
       return 1.262; // (Above 7 yrs)
     }
   } else if (zone == 'C') {
     // Rural areas
-    if (age <= 5) {
+    if (ageCategory == 'Upto 5 Years') {
       return 1.190;
-    } else if (age <= 7) {
+    } else if (ageCategory == '6-7 Years') {
       return 1.220;
     } else {
+      // 'Above 7 Years'
       return 1.250; // (Above 7 yrs)
     }
   }
-  return 2.5; // Safe fallback rate
+  return 1.208; // Safe fallback rate
 }
 
 double _getTpRate() {

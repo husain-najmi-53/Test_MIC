@@ -1751,7 +1751,6 @@ class VehicleData {
         }
       },
       "Aprilia": {
-        "2015": {},
         "2016": {
           "SR 150": {
             "STD": {
@@ -1759,9 +1758,9 @@ class VehicleData {
               "cc": 154.8,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 65000
-            }
-          }
+              "exShowroom": 65000,
+            },
+          },
         },
         "2017": {
           "SR 150": {
@@ -1770,8 +1769,8 @@ class VehicleData {
               "cc": 154.8,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 68000
-            }
+              "exShowroom": 68000,
+            },
           },
           "SR 150 Race": {
             "STD": {
@@ -1779,9 +1778,25 @@ class VehicleData {
               "cc": 154.8,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 71000
-            }
-          }
+              "exShowroom": 71000,
+            },
+          },
+          "Shiver 900": {
+            "STD": {
+              "bodyType": "Naked",
+              "cc": 896.1,
+              "fuelType": "Petrol",
+              "exShowroom": 1199000,
+            },
+          },
+          "Dorsoduro 900": {
+            "STD": {
+              "bodyType": "Supermotard",
+              "cc": 896.1,
+              "fuelType": "Petrol",
+              "exShowroom": 1250000,
+            },
+          },
         },
         "2018": {
           "SR 150": {
@@ -1790,8 +1805,8 @@ class VehicleData {
               "cc": 154.8,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 72000
-            }
+              "exShowroom": 72000,
+            },
           },
           "SR 150 Race": {
             "STD": {
@@ -1799,9 +1814,9 @@ class VehicleData {
               "cc": 154.8,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 75000
-            }
-          }
+              "exShowroom": 75000,
+            },
+          },
         },
         "2019": {
           "SR 150": {
@@ -1810,8 +1825,22 @@ class VehicleData {
               "cc": 154.8,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 81000
-            }
+              "exShowroom": 81000,
+            },
+            "Carbon": {
+              "bodyType": "Scooter",
+              "cc": 154.8,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73500,
+            },
+            "STD ABS": {
+              "bodyType": "Scooter",
+              "cc": 154.8,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 83860,
+            },
           },
           "SR 150 Race": {
             "STD": {
@@ -1819,8 +1848,15 @@ class VehicleData {
               "cc": 154.8,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 83000
-            }
+              "exShowroom": 83000,
+            },
+            "Race ABS": {
+              "bodyType": "Scooter",
+              "cc": 154.8,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 92814,
+            },
           },
           "SR 125": {
             "STD": {
@@ -1828,8 +1864,15 @@ class VehicleData {
               "cc": 124.45,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 72000
-            }
+              "exShowroom": 72000,
+            },
+            "STD CBS": {
+              "bodyType": "Scooter",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69960,
+            },
           },
           "SR 125 Storm": {
             "STD": {
@@ -1837,19 +1880,33 @@ class VehicleData {
               "cc": 124.49,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 65000
-            }
-          }
+              "exShowroom": 65000,
+            },
+          },
         },
         "2020": {
           "SR 160": {
-            "STD": {
+            "STD BS6": {
               "bodyType": "Scooter",
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 104000
-            }
+              "exShowroom": 104000,
+            },
+            "Carbon BS6": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 108000,
+            },
+            "Race BS6": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 114000,
+            },
           },
           "SR 160 Race": {
             "STD": {
@@ -1857,8 +1914,8 @@ class VehicleData {
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 110000
-            }
+              "exShowroom": 110000,
+            },
           },
           "SR 125": {
             "STD": {
@@ -1866,8 +1923,8 @@ class VehicleData {
               "cc": 124.45,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 91000
-            }
+              "exShowroom": 91000,
+            },
           },
           "SXR 160": {
             "STD": {
@@ -1875,28 +1932,74 @@ class VehicleData {
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 127000
-            }
-          }
+              "exShowroom": 127000,
+            },
+          },
+          "Storm 125": {
+            "STD BS6": {
+              "bodyType": "Scooter",
+              "cc": 124.49,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86974,
+            },
+            "Disc BS6": {
+              "bodyType": "Scooter",
+              "cc": 124.49,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91321,
+            },
+          },
+          "RSV4 1100 Factory": {
+            "STD": {
+              "bodyType": "Superbike",
+              "cc": 1078,
+              "fuelType": "Petrol",
+              "exShowroom": 2242000,
+            },
+          },
+          "Tuono 1100 RR": {
+            "STD": {
+              "bodyType": "Streetfighter",
+              "cc": 1078,
+              "fuelType": "Petrol",
+              "exShowroom": 1796000,
+            },
+          },
         },
         "2021": {
           "SR 160": {
-            "STD": {
+            "STD Facelift": {
               "bodyType": "Scooter",
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 117494
-            }
-          },
-          "SR 125": {
-            "STD": {
+              "exShowroom": 117494,
+            },
+            "Carbon Facelift": {
               "bodyType": "Scooter",
-              "cc": 124.45,
+              "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 107595
-            }
+              "exShowroom": 119950,
+            },
+            "Race Facelift": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 126087,
+            },
+          },
+          "SR 125": {
+            "STD Facelift": {
+              "bodyType": "Scooter",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 107595,
+            },
           },
           "SXR 160": {
             "STD": {
@@ -1904,8 +2007,8 @@ class VehicleData {
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 133000
-            }
+              "exShowroom": 133000,
+            },
           },
           "SXR 125": {
             "STD": {
@@ -1913,9 +2016,17 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 124000
-            }
-          }
+              "exShowroom": 124000,
+            },
+          },
+          "Tuono 660": {
+            "STD": {
+              "bodyType": "Streetfighter",
+              "cc": 659,
+              "fuelType": "Petrol",
+              "exShowroom": 1309000,
+            },
+          },
         },
         "2022": {
           "SR 160": {
@@ -1924,22 +2035,43 @@ class VehicleData {
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 121000
+              "exShowroom": 121000,
             },
             "Carbon": {
               "bodyType": "Scooter",
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 122000
+              "exShowroom": 122000,
             },
             "Race": {
               "bodyType": "Scooter",
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 129000
-            }
+              "exShowroom": 129000,
+            },
+            "STD Facelift": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121307,
+            },
+            "Carbon Facelift": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 123800,
+            },
+            "Race Facelift": {
+              "bodyType": "Scooter",
+              "cc": 160.03,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 129750,
+            },
           },
           "SR 125": {
             "STD": {
@@ -1947,15 +2079,15 @@ class VehicleData {
               "cc": 124.45,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 110000
+              "exShowroom": 110000,
             },
             "Storm": {
               "bodyType": "Scooter",
               "cc": 124.45,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 109000
-            }
+              "exShowroom": 109000,
+            },
           },
           "SXR 160": {
             "STD": {
@@ -1963,8 +2095,8 @@ class VehicleData {
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 139000
-            }
+              "exShowroom": 139000,
+            },
           },
           "SXR 125": {
             "STD": {
@@ -1972,9 +2104,33 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 129000
-            }
-          }
+              "exShowroom": 129000,
+            },
+          },
+          "RSV4 Factory": {
+            "STD": {
+              "bodyType": "Superbike",
+              "cc": 1099,
+              "fuelType": "Petrol",
+              "exShowroom": 2369000,
+            },
+          },
+          "Tuono V4 Factory": {
+            "STD": {
+              "bodyType": "Streetfighter",
+              "cc": 1077,
+              "fuelType": "Petrol",
+              "exShowroom": 2066000,
+            },
+          },
+          "Tuareg 660": {
+            "STD": {
+              "bodyType": "Adventure",
+              "cc": 659,
+              "fuelType": "Petrol",
+              "exShowroom": 1885000,
+            },
+          },
         },
         "2023": {
           "SR 160": {
@@ -1983,38 +2139,38 @@ class VehicleData {
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 123000
+              "exShowroom": 123000,
             },
             "Carbon": {
               "bodyType": "Scooter",
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 124000
+              "exShowroom": 124000,
             },
             "Race": {
               "bodyType": "Scooter",
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 130000
-            }
+              "exShowroom": 130000,
+            },
           },
           "SR 125": {
             "STD": {
               "bodyType": "Scooter",
-              "cc": 124.45,
+              "cc": 124.49,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 115000
+              "exShowroom": 122314,
             },
             "Storm": {
               "bodyType": "Scooter",
               "cc": 124.45,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 113000
-            }
+              "exShowroom": 113000,
+            },
           },
           "SXR 160": {
             "STD": {
@@ -2022,8 +2178,8 @@ class VehicleData {
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 144000
-            }
+              "exShowroom": 144000,
+            },
           },
           "SXR 125": {
             "STD": {
@@ -2031,8 +2187,8 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 134000
-            }
+              "exShowroom": 134000,
+            },
           },
           "RS 457": {
             "STD": {
@@ -2040,9 +2196,45 @@ class VehicleData {
               "cc": 457,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 410000
-            }
-          }
+              "exShowroom": 410000,
+            },
+          },
+          "RS 660": {
+            "STD": {
+              "bodyType": "Sport Bike",
+              "cc": 659,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1774000,
+            },
+          },
+          "Tuono 660": {
+            "STD": {
+              "bodyType": "Streetfighter",
+              "cc": 659,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1744000,
+            },
+          },
+          "Tuareg 660": {
+            "STD": {
+              "bodyType": "Adventure",
+              "cc": 659,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1885000,
+            },
+          },
+          "RSV4 1100 Factory": {
+            "STD": {
+              "bodyType": "Superbike",
+              "cc": 1099,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 3126000,
+            },
+          },
         },
         "2024": {
           "SR 160": {
@@ -2051,22 +2243,22 @@ class VehicleData {
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 129000
+              "exShowroom": 129000,
             },
             "Carbon": {
               "bodyType": "Scooter",
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 131000
+              "exShowroom": 131000,
             },
             "Race": {
               "bodyType": "Scooter",
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 137000
-            }
+              "exShowroom": 137000,
+            },
           },
           "SR 125": {
             "STD": {
@@ -2074,15 +2266,15 @@ class VehicleData {
               "cc": 124.45,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 120000
+              "exShowroom": 120000,
             },
             "Storm": {
               "bodyType": "Scooter",
               "cc": 124.45,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 118000
-            }
+              "exShowroom": 118000,
+            },
           },
           "SXR 160": {
             "STD": {
@@ -2090,8 +2282,8 @@ class VehicleData {
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 146000
-            }
+              "exShowroom": 146000,
+            },
           },
           "SXR 125": {
             "STD": {
@@ -2099,8 +2291,8 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 135000
-            }
+              "exShowroom": 135000,
+            },
           },
           "RS 457": {
             "STD": {
@@ -2108,8 +2300,8 @@ class VehicleData {
               "cc": 457,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 423000
-            }
+              "exShowroom": 423000,
+            },
           },
           "RS 660": {
             "STD": {
@@ -2117,8 +2309,8 @@ class VehicleData {
               "cc": 659,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 1774000
-            }
+              "exShowroom": 1774000,
+            },
           },
           "Tuono 660": {
             "STD": {
@@ -2126,8 +2318,8 @@ class VehicleData {
               "cc": 659,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 1744000
-            }
+              "exShowroom": 1744000,
+            },
           },
           "Tuareg 660": {
             "STD": {
@@ -2135,9 +2327,34 @@ class VehicleData {
               "cc": 659,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 1885000
-            }
-          }
+              "exShowroom": 1885000,
+            },
+            "Evocative Dakar Podium": {
+              "bodyType": "Adventure",
+              "cc": 659,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1916000,
+            },
+          },
+          "RSV4 Factory": {
+            "STD": {
+              "bodyType": "Superbike",
+              "cc": 1099,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 3126000,
+            },
+          },
+          "Tuono V4 Factory": {
+            "STD": {
+              "bodyType": "Streetfighter",
+              "cc": 1077,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 2066000,
+            },
+          },
         },
         "2025": {
           "SR 160": {
@@ -2146,22 +2363,22 @@ class VehicleData {
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 132000
+              "exShowroom": 132000,
             },
             "Carbon": {
               "bodyType": "Scooter",
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 134000
+              "exShowroom": 134000,
             },
             "Race": {
               "bodyType": "Scooter",
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 141000
-            }
+              "exShowroom": 141000,
+            },
           },
           "SR 125": {
             "STD": {
@@ -2169,15 +2386,15 @@ class VehicleData {
               "cc": 124.45,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 122000
+              "exShowroom": 122000,
             },
             "Storm": {
               "bodyType": "Scooter",
               "cc": 124.45,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 120000
-            }
+              "exShowroom": 120000,
+            },
           },
           "SXR 160": {
             "STD": {
@@ -2185,8 +2402,8 @@ class VehicleData {
               "cc": 160.03,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 146000
-            }
+              "exShowroom": 146000,
+            },
           },
           "SXR 125": {
             "STD": {
@@ -2194,8 +2411,8 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 135000
-            }
+              "exShowroom": 135000,
+            },
           },
           "RS 457": {
             "STD": {
@@ -2203,8 +2420,8 @@ class VehicleData {
               "cc": 457,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 427000
-            }
+              "exShowroom": 427000,
+            },
           },
           "RS 660": {
             "STD": {
@@ -2212,8 +2429,8 @@ class VehicleData {
               "cc": 659,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 1774000
-            }
+              "exShowroom": 1774000,
+            },
           },
           "Tuono 660": {
             "STD": {
@@ -2221,8 +2438,8 @@ class VehicleData {
               "cc": 659,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 1744000
-            }
+              "exShowroom": 1744000,
+            },
           },
           "Tuareg 660": {
             "STD": {
@@ -2230,8 +2447,15 @@ class VehicleData {
               "cc": 659,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 1885000
-            }
+              "exShowroom": 1885000,
+            },
+            "Evocative Dakar Podium": {
+              "bodyType": "Adventure",
+              "cc": 659,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1916000,
+            },
           },
           "Tuono 457": {
             "STD": {
@@ -2239,8 +2463,8 @@ class VehicleData {
               "cc": 457,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 395000
-            }
+              "exShowroom": 395000,
+            },
           },
           "RSV4": {
             "STD": {
@@ -2248,10 +2472,44 @@ class VehicleData {
               "cc": 1099,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 3126000
-            }
-          }
-        }
+              "exShowroom": 3126000,
+            },
+          },
+          "SR 175": {
+            "STD": {
+              "bodyType": "Scooter",
+              "cc": 174.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 126000,
+            },
+          },
+          "SR Storm 125": {
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 124.45,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 115000,
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 124.45,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 120000,
+            },
+          },
+          "Tuono V4 Factory": {
+            "STD": {
+              "bodyType": "Streetfighter",
+              "cc": 1077,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 2066000,
+            },
+          },
+        },
       },
       "Ampere": {
         "2015": {},
@@ -2861,93 +3119,180 @@ class VehicleData {
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 159000
-            }
-          },
-          "Ather 450 Plus": {
-            "Standard": {
+            },
+            "X Plus": {
               "bodyType": "Scooter",
-              "watt": "5.4 kW",
+              "watt": "6 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 139000
+              "exShowroom": 155919
+            },
+            "X Pro": {
+              "bodyType": "Scooter",
+              "watt": "6 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 166202
             }
           }
         },
         "2021": {
           "Ather 450X": {
-            "Gen 2": {
+            "Standard": {
               "bodyType": "Scooter",
               "watt": "6 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 147000
-            }
-          },
-          "Ather 450 Plus": {
-            "Gen 2": {
+              "exShowroom": 155919
+            },
+            "X Plus": {
               "bodyType": "Scooter",
-              "watt": "5.4 kW",
+              "watt": "6 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 127000
+              "exShowroom": 156998
+            },
+            "X Pro": {
+              "bodyType": "Scooter",
+              "watt": "6 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 166202
             }
           }
         },
         "2022": {
-          "Ather 450X": {
-            "Gen 3": {
+          "Ather 450": {
+            "X Plus": {
               "bodyType": "Scooter",
-              "watt": "6.4 kW",
+              "watt": "5.4 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 157500
-            }
-          },
-          "Ather 450 Plus": {
-            "Gen 3": {
+              "exShowroom": 139000
+            },
+            "X Pro": {
               "bodyType": "Scooter",
-              "watt": "5.8 kW",
-              "fuelType": "Electric",
-              "seating": 2,
-              "exShowroom": 137500
-            }
-          }
-        },
-        "2023": {
-          "Ather 450X": {
-            "Gen 3": {
-              "bodyType": "Scooter",
-              "watt": "6.4 kW",
+              "watt": "5.4 kW",
               "fuelType": "Electric",
               "seating": 2,
               "exShowroom": 145000
             }
           },
+          "Ather 450X Gen 3": {
+            "Plus": {
+              "bodyType": "Scooter",
+              "watt": "6.2 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 156000
+            },
+            "X": {
+              "bodyType": "Scooter",
+              "watt": "6.2 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 168000
+            }
+          }
+        },
+        "2023": {
           "Ather 450S": {
             "Standard": {
               "bodyType": "Scooter",
               "watt": "5.4 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 130000
+              "exShowroom": 123416
+            },
+            "Ather Stack Pro": {
+              "bodyType": "Scooter",
+              "watt": "5.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 124002
+            },
+            "3.7 kWh": {
+              "bodyType": "Scooter",
+              "watt": "5.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 145026
+            }
+          },
+          "Ather 450X Gen 3": {
+            "2.9 kWh (Core)": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 155919
+            },
+            "2.9 kWh – Stack Pro": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 156998
+            },
+            "3.7 kWh (Core)": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 166202
+            },
+            "3.7 kWh – Stack Pro": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 167471
             }
           }
         },
         "2024": {
           "Ather 450X": {
-            "Standard": {
+            "2.9 kWh (Core)": {
               "bodyType": "Scooter",
               "watt": "6.4 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 156000
+              "exShowroom": 155919
             },
-            "Pro Pack": {
+            "2.9 kWh – Ather Stack Pro": {
               "bodyType": "Scooter",
               "watt": "6.4 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 182000
+              "exShowroom": 156998
+            },
+            "3.7 kWh (Core)": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 166202
+            },
+            "3.7 kWh – Ather Stack Pro": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 167471
+            },
+            "Ather Stack Pro": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 156998
+            },
+            "X": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 167471
             }
           },
           "Ather 450S": {
@@ -2976,53 +3321,137 @@ class VehicleData {
             }
           },
           "Ather Rizta": {
-            "S": {
+            "S - 2.9 kWh Mono": {
               "bodyType": "Scooter",
               "watt": "4.3 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 115000
+              "exShowroom": 114746
             },
-            "Z": {
+            "S - 2.9 kWh Mono (Ather Stack Pro)": {
               "bodyType": "Scooter",
               "watt": "4.3 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 155000
+              "exShowroom": 114746 + 14000
+            },
+            "Z - 2.9 kWh Mono": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 130661
+            },
+            "Z - 2.9 kWh Mono (Ather Stack Pro)": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 130661 + 17000
+            },
+            "Z - 3.7 kWh Mono": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 160054
+            },
+            "Z - 3.7 kWh Mono (Ather Stack Pro)": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 160054 + 20000
+            },
+            "Z Duo - 2.9 kWh": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 130661 // approximate, based on Z 2.9
+            },
+            "Z Duo - 3.7 kWh": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 160054 // approximate, based on Z 3.7
             }
           }
         },
         "2025": {
           "Ather 450X": {
-            "Standard": {
+            "2.9 kWh (Core)": {
               "bodyType": "Scooter",
               "watt": "6.4 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 150000
+              "exShowroom": 146999
             },
-            "Pro Pack": {
+            "2.9 kWh – Ather Stack Pro": {
               "bodyType": "Scooter",
               "watt": "6.4 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 180000
+              "exShowroom": 155919
+            },
+            "3.7 kWh (Core)": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 156999
+            },
+            "3.7 kWh – Ather Stack Pro": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 167471
+            },
+            "Ather Stack Pro (General)": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 167471
+            },
+            "X (Top Variant)": {
+              "bodyType": "Scooter",
+              "watt": "6.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 200000
             }
           },
           "Ather 450S": {
-            "Standard": {
+            "Standard (IDC 122 km)": {
               "bodyType": "Scooter",
               "watt": "5.4 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 123000
+              "exShowroom": 123416
             },
-            "Pro Pack": {
+            "IDC 122 km (Stack Pro)": {
               "bodyType": "Scooter",
               "watt": "5.4 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 148000
+              "exShowroom": 135889
+            },
+            "IDC 161 km (3.7 kWh)": {
+              "bodyType": "Scooter",
+              "watt": "5.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 148047
+            },
+            "Battery as a Service (BaaS)": {
+              "bodyType": "Scooter",
+              "watt": "5.4 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 84341
             }
           },
           "Ather 450 Apex": {
@@ -3035,19 +3464,103 @@ class VehicleData {
             }
           },
           "Ather Rizta": {
-            "S": {
+            "Battery as a Service (BaaS)": {
               "bodyType": "Scooter",
               "watt": "4.3 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 115000
+              "exShowroom": 75999
             },
-            "Z": {
+            "S - 2.9 kWh Mono": {
               "bodyType": "Scooter",
               "watt": "4.3 kW",
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 155000
+              "exShowroom": 114546
+            },
+            "S - 2.9 kWh Super Matte": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 116546
+            },
+            "S - 2.9 kWh Pro Pack": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 114546 + 14000
+            },
+            "S - 3.7 kWh Mono": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 137047
+            },
+            "S - 3.7 kWh Pro Pack": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 137047 + 15000
+            },
+            "Z - 2.9 kWh Mono": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 132547
+            },
+            "Z - 2.9 kWh Duo": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 133547
+            },
+            "Z - 2.9 kWh Super Matte": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 134547
+            },
+            "Z - 2.9 kWh Pro Pack": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 132547 + 17000
+            },
+            "Z - 3.7 kWh Mono": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 152547
+            },
+            "Z - 3.7 kWh Duo": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 153547
+            },
+            "Z - 3.7 kWh Super Matte": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 154547
+            },
+            "Z - 3.7 kWh Pro Pack": {
+              "bodyType": "Scooter",
+              "watt": "4.3 kW",
+              "fuelType": "Electric",
+              "seating": 2,
+              "exShowroom": 152547 + 20000
             }
           }
         }
@@ -3061,6 +3574,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 73000
+            },
+            "Dual Disc": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76000
             }
           },
           "Pulsar 180": {
@@ -3088,6 +3608,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 90000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 98000
             }
           },
           "Pulsar RS200": {
@@ -3134,28 +3661,42 @@ class VehicleData {
             }
           },
           "CT 100": {
-            "Kick Start": {
+            "KS Alloy": {
               "bodyType": "BIKE",
               "cc": 99,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 40000
             },
-            "Kick Start Spoke": {
+            "KS Spoke": {
               "bodyType": "BIKE",
               "cc": 99,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 35000
+            },
+            "ES Alloy": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 42000
             }
           },
           "Platina 100": {
-            "Kick Start": {
+            "KS Alloy": {
               "bodyType": "BIKE",
               "cc": 102,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 45000
+            },
+            "ES Alloy": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48000
             }
           }
         },
@@ -3239,6 +3780,15 @@ class VehicleData {
               "exShowroom": 89000
             }
           },
+          "Avenger 150 Street": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75000
+            }
+          },
           "CT 100": {
             "Kick Start": {
               "bodyType": "BIKE",
@@ -3253,6 +3803,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 36500
+            },
+            "Electric Start": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43500
             }
           },
           "Platina 100": {
@@ -3262,6 +3819,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 46500
+            },
+            "Electric Start": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49000
             }
           },
           "V15": {
@@ -3339,6 +3903,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 94000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 99000
             }
           },
           "Pulsar RS200": {
@@ -3489,6 +4060,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 68000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000
             }
           },
           "Pulsar 180": {
@@ -3505,6 +4083,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 88000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 178,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 94000
             }
           },
           "Pulsar 220F": {
@@ -3514,6 +4099,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 94000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 220,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 99000
             }
           },
           "Pulsar NS200": {
@@ -3555,6 +4147,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 98000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 103000
             }
           },
           "Avenger 220 Cruise": {
@@ -3564,6 +4163,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 92000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 220,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 97000
             }
           },
           "Avenger 220 Street": {
@@ -3573,6 +4179,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 91000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 220,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 96000
             }
           },
           "CT 100": {
@@ -3596,6 +4209,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 37000
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47000
             }
           },
           "Platina 100": {
@@ -3612,6 +4232,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 50000
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52000
             }
           },
           "V15": {
@@ -3621,6 +4248,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 68000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73000
             }
           },
           "Dominar 400": {
@@ -3646,6 +4280,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 82000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 160,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87000
             }
           },
           "V12": {
@@ -3655,6 +4296,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 60000
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63000
             }
           },
           "Avenger 180 Street": {
@@ -3664,6 +4312,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 86000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 178,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 91000
             }
           },
           "Platina 110": {
@@ -3673,6 +4328,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 52000
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 115,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55000
             }
           }
         },
@@ -3698,6 +4360,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 71000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 90000
             }
           },
           "Pulsar 180": {
@@ -3714,6 +4383,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 90000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 178,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 96000
             }
           },
           "Pulsar 220F": {
@@ -3771,6 +4447,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 99000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 104000
             }
           },
           "Avenger 220 Cruise": {
@@ -3826,6 +4509,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 37500
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 99,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48000
             }
           },
           "Platina 100": {
@@ -3842,6 +4532,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 51000
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53000
             }
           },
           "V15": {
@@ -3851,6 +4548,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 69000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74000
             }
           },
           "Dominar 400": {
@@ -3892,6 +4596,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 61000
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 64000
             }
           },
           "Avenger 180 Street": {
@@ -3901,6 +4612,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 88000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 178,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 93000
             }
           },
           "Platina 110": {
@@ -3917,6 +4635,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 55000
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 115,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57000
             }
           },
           "Pulsar 125": {
@@ -3933,6 +4658,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 70000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74000
             }
           },
           "Avenger 160 Street": {
@@ -4006,6 +4738,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 117000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 220,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 125000
             }
           },
           "Pulsar NS200": {
@@ -4056,6 +4795,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 122000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 220,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 130000
             }
           },
           "Avenger 220 Street": {
@@ -4065,6 +4811,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 121000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 220,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 129000
             }
           },
           "CT 100": {
@@ -4112,7 +4865,30 @@ class VehicleData {
               "cc": 149,
               "fuelType": "Petrol",
               "seating": 2,
+              "exShowroom": 68000
+            },
+            "Power Up": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
               "exShowroom": 70000
+            }
+          },
+          "V12": {
+            "Standard": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
+            },
+            "Disc": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62000
             }
           },
           "Dominar 400": {
@@ -4145,15 +4921,6 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 110000
-            }
-          },
-          "V12": {
-            "Standard": {
-              "bodyType": "BIKE",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 62000
             }
           },
           "Avenger 180 Street": {
@@ -4204,6 +4971,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 92000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 160,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 98000
             }
           },
           "Chetak": {
@@ -4327,7 +5101,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 48000
             },
-            "ES": {
+            "Electric Start": {
               "bodyType": "BIKE",
               "cc": 99,
               "fuelType": "Petrol",
@@ -4343,7 +5117,7 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 52000
             },
-            "ES": {
+            "Electric Start": {
               "bodyType": "BIKE",
               "cc": 102,
               "fuelType": "Petrol",
@@ -4533,7 +5307,7 @@ class VehicleData {
             }
           },
           "Pulsar NS200": {
-            "Standard": {
+            "BS VI": {
               "bodyType": "BIKE",
               "cc": 199,
               "fuelType": "Petrol",
@@ -4734,6 +5508,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 115000
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118000
             }
           },
           "Pulsar 220F": {
@@ -4742,7 +5523,14 @@ class VehicleData {
               "cc": 220,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 140000
+              "exShowroom": 137715
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 220,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 145000
             }
           },
           "Pulsar NS200": {
@@ -4751,7 +5539,21 @@ class VehicleData {
               "cc": 199,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 149000
+              "exShowroom": 143213
+            },
+            "Dual Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 148000
+            },
+            "Bluetooth": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 152895
             }
           },
           "Pulsar RS200": {
@@ -4760,7 +5562,14 @@ class VehicleData {
               "cc": 199,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 172000
+              "exShowroom": 141000
+            },
+            "Dual Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 145000
             }
           },
           "Avenger 220 Cruise": {
@@ -4769,7 +5578,7 @@ class VehicleData {
               "cc": 220,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 140000
+              "exShowroom": 147827
             }
           },
           "Platina 100": {
@@ -4778,14 +5587,14 @@ class VehicleData {
               "cc": 102,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 56000
+              "exShowroom": 70611
             },
             "ES": {
               "bodyType": "BIKE",
               "cc": 102,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 64000
+              "exShowroom": 70611
             }
           },
           "Platina 110": {
@@ -4794,14 +5603,14 @@ class VehicleData {
               "cc": 115,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 62000
+              "exShowroom": 74100
             },
             "Disc": {
               "bodyType": "BIKE",
               "cc": 115,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 65000
+              "exShowroom": 74100
             }
           },
           "Pulsar 125": {
@@ -4810,21 +5619,28 @@ class VehicleData {
               "cc": 124,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 85000
+              "exShowroom": 85178
             },
             "Split Seat": {
               "bodyType": "BIKE",
               "cc": 124,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 88000
+              "exShowroom": 94451
             },
             "Carbon Fiber": {
               "bodyType": "BIKE",
               "cc": 124,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 91000
+              "exShowroom": 94451
+            },
+            "ABS": {
+              "bodyType": "BIKE",
+              "cc": 124,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 95000
             }
           },
           "Avenger 160 Street": {
@@ -4833,7 +5649,7 @@ class VehicleData {
               "cc": 160,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 106000
+              "exShowroom": 120704
             }
           },
           "Chetak": {
@@ -4842,14 +5658,14 @@ class VehicleData {
               "cc": 0,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 125000
+              "exShowroom": 120000
             },
             "Premium": {
               "bodyType": "SCOOTER",
               "cc": 0,
               "fuelType": "Electric",
               "seating": 2,
-              "exShowroom": 145000
+              "exShowroom": 135000
             }
           },
           "Dominar 250": {
@@ -4858,7 +5674,7 @@ class VehicleData {
               "cc": 248,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 181000
+              "exShowroom": 175000
             }
           },
           "Pulsar F250": {
@@ -4867,7 +5683,7 @@ class VehicleData {
               "cc": 249,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 152000
+              "exShowroom": 149000
             }
           },
           "Pulsar N250": {
@@ -4876,7 +5692,7 @@ class VehicleData {
               "cc": 249,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 150000
+              "exShowroom": 147000
             }
           },
           "CT 110X": {
@@ -4885,7 +5701,7 @@ class VehicleData {
               "cc": 115,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 63000
+              "exShowroom": 61000
             }
           },
           "Pulsar N160": {
@@ -4894,14 +5710,14 @@ class VehicleData {
               "cc": 164,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 130000
+              "exShowroom": 127000
             },
             "Dual Channel ABS": {
               "bodyType": "BIKE",
               "cc": 164,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 134000
+              "exShowroom": 132000
             }
           },
           "CT 125X": {
@@ -4910,7 +5726,7 @@ class VehicleData {
               "cc": 124,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 74000
+              "exShowroom": 71000
             }
           },
           "Pulsar P150": {
@@ -4919,23 +5735,21 @@ class VehicleData {
               "cc": 149,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 116755
+              "exShowroom": 116000
             },
             "Twin Disc": {
               "bodyType": "BIKE",
               "cc": 149,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 119757
-            }
-          },
-          "Triumph Speed 400": {
-            "Standard": {
+              "exShowroom": 119000
+            },
+            "Dual Channel ABS": {
               "bodyType": "BIKE",
-              "cc": 398,
+              "cc": 149,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 235000
+              "exShowroom": 123000
             }
           }
         },
@@ -4986,6 +5800,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 152895
+            },
+            "Dual-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 156000
             }
           },
           "Pulsar RS200": {
@@ -4995,6 +5816,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 175000
+            },
+            "Dual-Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 178000
             }
           },
           "Avenger 220 Cruise": {
@@ -5288,6 +6116,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 124000
+            },
+            "Single Disc": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118000
             }
           },
           "Pulsar 220F": {
@@ -5307,6 +6142,13 @@ class VehicleData {
               "seating": 2,
               "exShowroom": 156000
             },
+            "Dual Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 162000
+            },
             "Bluetooth": {
               "bodyType": "BIKE",
               "cc": 199,
@@ -5322,6 +6164,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 178000
+            },
+            "Dual Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 199,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 183000
             }
           },
           "Avenger 220 Cruise": {
@@ -5572,6 +6421,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 121757
+            },
+            "Dual Channel ABS": {
+              "bodyType": "BIKE",
+              "cc": 149,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 126000
             }
           },
           "Triumph Speed 400": {
@@ -15393,39 +16249,123 @@ class VehicleData {
       "Hero": {
         "2015": {
           "Splendor Plus": {
-            "Self Start": {
+            "Standard": {
               "bodyType": "BIKE",
               "cc": 97,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 47599.6
+            },
+            "iSmart": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49200
             }
           },
           "HF Deluxe": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 38917.9
+              "exShowroom": 42100
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44150
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 45150
+            },
+            "Eco": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46150
             }
           },
           "Passion Pro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 60000.0
+              "exShowroom": 47850
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48700
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49650
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50600
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52500
             }
           },
           "Glamour": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 124,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 72000.0
+              "exShowroom": 58524
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61600
+            },
+            "PGM-Fi": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62840
+            },
+            "PGM-Fi Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66353
             }
           },
           "HF Dawn": {
@@ -15438,12 +16378,12 @@ class VehicleData {
             }
           },
           "Passion XPro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 65000.0
+              "exShowroom": 53030
             }
           },
           "Ignitor": {
@@ -15453,44 +16393,163 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 70000.0
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60200
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62147
             }
-          }
+          },
         },
         "2016": {
           "Splendor Plus": {
-            "Self Start": {
+            "Standard": {
               "bodyType": "BIKE",
               "cc": 97,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 50104.8
+              "exShowroom": 47599.6
+            },
+            "iSmart": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49200
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49900
             }
           },
           "HF Deluxe": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 40966.2
+              "exShowroom": 43220
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44150
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47250
+            },
+            "Eco": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46150
             }
           },
           "Passion Pro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 62500.0
+              "exShowroom": 47850
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48700
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49650
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50600
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52500
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50400
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52600
             }
           },
           "Glamour": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 124,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 74500.0
+              "exShowroom": 58524
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61600
+            },
+            "PGM-Fi": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63200
+            },
+            "PGM-Fi Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66353
             }
           },
           "HF Dawn": {
@@ -15499,16 +16558,16 @@ class VehicleData {
               "cc": 97,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 39000.0
+              "exShowroom": 38000.0
             }
           },
           "Passion XPro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 67000.0
+              "exShowroom": 53030
             }
           },
           "Ignitor": {
@@ -15517,45 +16576,212 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 72000.0
+              "exShowroom": 70000.0
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60200
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62147
             }
-          }
+          },
+          "Splendor iSmart 110": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53300
+            }
+          },
+          "Maestro Edge": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50941
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51150
+            }
+          },
+          "Duet": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48400
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49900
+            }
+          },
         },
         "2017": {
           "Splendor Plus": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 52741.9
+              "exShowroom": 46800
+            },
+            "iSmart": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49200
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50500
             }
           },
           "HF Deluxe": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 43122.3
+              "exShowroom": 43500
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44150
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47800
+            },
+            "Eco": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46150
             }
           },
           "Passion Pro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 65000.0
+              "exShowroom": 47850
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48700
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49650
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50600
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52500
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50850
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52900
             }
           },
           "Glamour": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 124,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 74500.0
+              "exShowroom": 57755
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59755
+            },
+            "PGM-Fi": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63200
+            },
+            "Programmed FI": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66580
+            },
+            "PGM-Fi Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66353
             }
           },
           "HF Dawn": {
@@ -15564,16 +16790,23 @@ class VehicleData {
               "cc": 97,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 39000.0
+              "exShowroom": 38000.0
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 39370
             }
           },
           "Passion XPro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 67000.0
+              "exShowroom": 53030
             }
           },
           "Ignitor": {
@@ -15582,54 +16815,255 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 72000.0
+              "exShowroom": 70000.0
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60500
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62500
+            }
+          },
+          "Splendor iSmart 110": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53300
+            }
+          },
+          "Maestro Edge": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50941
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52800
+            }
+          },
+          "Duet": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47830
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49900
             }
           },
           "Achiever 150": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 149,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 66300.0
+              "exShowroom": 65900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67900
+            }
+          },
+          "Karizma ZMR": {
+            "Standard": {
+              "bodyType": "Sport Tourer",
+              "cc": 223,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105500
             }
           }
         },
         "2018": {
           "Splendor Plus": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 54200.0
+              "exShowroom": 49300
+            },
+            "iSmart": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49200
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50500
+            }
+          },
+          "Super Splendor": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57190
+            }
+          },
+          "Splendor Pro": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47450
             }
           },
           "HF Deluxe": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 46630.0
+              "exShowroom": 44400
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44150
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47600
+            },
+            "Eco": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46150
             }
           },
           "Passion Pro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 66500.0
+              "exShowroom": 47850
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48700
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49650
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50600
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52500
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53100
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55100
             }
           },
           "Glamour": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 124,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 77000.0
+              "exShowroom": 59900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61900
+            },
+            "PGM-Fi": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63200
+            },
+            "Programmed FI": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66580
+            },
+            "PGM-Fi Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66353
             }
           },
           "HF Dawn": {
@@ -15638,16 +17072,30 @@ class VehicleData {
               "cc": 97,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 37400.0
+              "exShowroom": 38000.0
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 39370
             }
           },
           "Passion XPro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 68500.0
+              "exShowroom": 54100
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 56000
             }
           },
           "Ignitor": {
@@ -15656,63 +17104,347 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 75000.0
+              "exShowroom": 70000.0
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60500
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62500
+            }
+          },
+          "Splendor iSmart 110": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53300
+            }
+          },
+          "Maestro Edge": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50941
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52800
+            },
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51500
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52900
+            }
+          },
+          "Duet": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47830
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49480
             }
           },
           "Achiever 150": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 149,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 68100.0
+              "exShowroom": 65900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67900
+            }
+          },
+          "Karizma ZMR": {
+            "Standard": {
+              "bodyType": "Sport Tourer",
+              "cc": 223,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105500
             }
           },
           "Xtreme 200R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+            "Standard": {
+              "bodyType": "Naked Sport",
+              "cc": 199.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 89900.0
+              "exShowroom": 89900
             }
-          }
+          },
+          "Destini 125": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54650
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57500
+            }
+          },
+          "Pleasure": {
+            "Standard": {
+              "bodyType": "Scooter",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 45100
+            }
+          },
         },
         "2019": {
           "Splendor Plus": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 56000.0
+              "exShowroom": 49300
+            },
+            "iSmart": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49200
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53500
+            },
+            "Kick Start": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50100
+            },
+            "Self Start": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52300
+            },
+          },
+          "Super Splendor": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57190
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            }
+          },
+          "Splendor Pro": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47450
             }
           },
           "HF Deluxe": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 48900.0
+              "exShowroom": 40100
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44150
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49800
+            },
+            "Eco": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46150
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50100
             }
           },
           "Passion Pro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 68000.0
+              "exShowroom": 47850
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48700
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49650
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50600
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52500
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53100
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55100
+            }
+          },
+          "Passion Pro 110": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57100
             }
           },
           "Glamour": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 124,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 78500.0
+              "exShowroom": 61700
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 64000
+            },
+            "PGM-Fi": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63200
+            },
+            "Programmed FI": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66580
+            },
+            "PGM-Fi Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66353
             }
           },
           "HF Dawn": {
@@ -15721,16 +17453,30 @@ class VehicleData {
               "cc": 97,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 38865.0
+              "exShowroom": 38000.0
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 39370
             }
           },
           "Passion XPro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69500.0
+              "exShowroom": 55700
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57900
             }
           },
           "Ignitor": {
@@ -15739,81 +17485,586 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 76500.0
+              "exShowroom": 70000.0
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60500
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62500
+            }
+          },
+          "Splendor iSmart 110": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53300
+            }
+          },
+          "Maestro Edge": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50941
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52800
+            },
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51500
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52900
+            }
+          },
+          "Duet": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47830
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49480
             }
           },
           "Achiever 150": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 149,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69600.0
+              "exShowroom": 65900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67900
+            }
+          },
+          "Karizma ZMR": {
+            "Standard": {
+              "bodyType": "Sport Tourer",
+              "cc": 223,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105500
             }
           },
           "Xtreme 200R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+            "Standard": {
+              "bodyType": "Naked Sport",
+              "cc": 199.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 91900.0
+              "exShowroom": 89900
             }
           },
-          "XPulse 200": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Destini 125": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 97000.0
+              "exShowroom": 55580
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58580
             }
           },
-          "XPulse 200T": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Pleasure": {
+            "Standard": {
+              "bodyType": "Scooter",
+              "cc": 102,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 94000.0
+              "exShowroom": 45100
             }
-          }
+          },
+          "Pleasure Plus": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            }
+          },
+          "Xpulse 200": {
+            "Carburetor": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 97000
+            },
+            "Fuel Injection (FI)": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105000
+            }
+          },
+          "Xpulse 200T": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 94000
+            }
+          },
+          "Xtreme 200S": {
+            "Standard": {
+              "bodyType": "Sport",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 98500
+            }
+          },
+          "Maestro Edge 125": {
+            "Carburetor Drum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
+            },
+            "Carburetor Disc": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Fuel Injection (FI)": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62700
+            }
+          },
         },
         "2020": {
           "Splendor Plus": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 60300.0
+              "exShowroom": 49300
+            },
+            "iSmart": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49200
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53500
+            },
+            "Kick Start": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61785
+            },
+            "Self Start": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 64085
+            },
+            "Black and Accent Edition": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 65295
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74700
+            }
+          },
+          "Super Splendor": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57190
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69900
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73400
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77200
+            }
+          },
+          "Splendor Pro": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47450
+            }
+          },
+          "Splendor Plus BS6": {
+            "Kick Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60350
+            },
+            "Self Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62650
+            },
+            "Self Start with Alloy Wheel and i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63950
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67300
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowRoom": 70800
+            }
+          },
+          "Hero Splendor iSmart": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66500
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68700
             }
           },
           "HF Deluxe": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Kick Start with Spoke Wheels": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 51200.0
+              "exShowroom": 51200
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44150
+            },
+            "Self Start with Alloy Wheels": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59900
+            },
+            "Eco": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46150
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61225
+            },
+            "Pro": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73550
+            }
+          },
+          "Hero HF 100": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50100
+            }
+          },
+          "HF Deluxe BS6": {
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48000
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57175
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
             }
           },
           "Passion Pro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69900.0
+              "exShowroom": 47850
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48700
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49650
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50600
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66900
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69100
+            }
+          },
+          "Passion Pro BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66052
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68269
+            }
+          },
+          "Passion Pro 110": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57100
             }
           },
           "Glamour": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 124,
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 71000.0
+              "exShowroom": 71900
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75400
+            },
+            "Blaze Edition": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73100
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78900
+            },
+            "PGM-Fi": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63200
+            },
+            "Programmed FI": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66580
+            },
+            "PGM-Fi Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66353
+            }
+          },
+          "Glamour 125 BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72400
             }
           },
           "HF Dawn": {
@@ -15822,16 +18073,30 @@ class VehicleData {
               "cc": 97,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 37625.0
+              "exShowroom": 38000.0
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 39370
             }
           },
           "Passion XPro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69500.0
+              "exShowroom": 55700
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57900
             }
           },
           "Ignitor": {
@@ -15840,90 +18105,768 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 76500.0
+              "exShowroom": 70000.0
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60500
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62500
+            }
+          },
+          "Splendor iSmart 110": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53300
+            }
+          },
+          "Maestro Edge": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50941
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52800
+            },
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51500
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52900
+            }
+          },
+          "Maestro Edge 110": {
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61950
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63450
+            },
+            "Alloy Wheel": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62450
+            }
+          },
+          "Maestro Edge 125": {
+            "Carburetor Drum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
+            },
+            "Carburetor Disc": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Fuel Injection (FI)": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70870
+            },
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69250
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71450
+            },
+            "Stealth Edition": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72950
+            },
+            "Connect": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 84829
+            }
+          },
+          "Duet": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47830
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49480
             }
           },
           "Achiever 150": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 149,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69600.0
+              "exShowroom": 65900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67900
+            }
+          },
+          "Karizma ZMR": {
+            "Standard": {
+              "bodyType": "Sport Tourer",
+              "cc": 223,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105500
             }
           },
           "Xtreme 200R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+            "Standard": {
+              "bodyType": "Naked Sport",
+              "cc": 199.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 92000.0
+              "exShowroom": 89900
             }
           },
-          "XPulse 200": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Destini 125": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 111700.0
+              "exShowroom": 66960
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70450
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72000
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76000
             }
           },
-          "XPulse 200T": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Pleasure": {
+            "Standard": {
+              "bodyType": "Scooter",
+              "cc": 102,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 105000.0
+              "exShowroom": 45100
             }
           },
-          "Xtreme 160R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 160,
+          "Pleasure Plus": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 99950.0
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            },
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57300
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59950
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 64900
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61950
             }
-          }
+          },
+          "Pleasure Plus 110": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            }
+          },
+          "Xpulse 200": {
+            "Carburetor": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 115230
+            },
+            "Fuel-Injected": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118230
+            },
+            "Rally Kit": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 38000
+            }
+          },
+          "Xpulse 200 BS6": {
+            "Standard": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 111790
+            }
+          },
+          "Xpulse 200T": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116230
+            }
+          },
+          "Xpulse 200T BS6": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112800
+            }
+          },
+          "Xtreme 200S": {
+            "Standard": {
+              "bodyType": "Sports",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121500
+            }
+          },
+          "Xtreme 200S BS6": {
+            "Standard": {
+              "bodyType": "Full Faired Sport",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116000
+            }
+          },
+          "Xtreme 160R BS6": {
+            "Front Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 100000
+            },
+            "Double Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 103500
+            }
+          },
+          "Hero Xtreme 160R": {
+            "Single Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 103900
+            },
+            "Double Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 106950
+            },
+            "Stealth Edition": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 117214
+            }
+          },
         },
         "2021": {
           "Splendor Plus": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 63900.0
+              "exShowroom": 49300
+            },
+            "iSmart": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49200
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53500
+            },
+            "Kick Start": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61785
+            },
+            "Self Start": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 64085
+            },
+            "Black and Accent Edition": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 65295
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74700
+            }
+          },
+          "Super Splendor": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57190
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69900
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73400
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77200
+            }
+          },
+          "Splendor Pro": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47450
+            }
+          },
+          "Splendor Plus BS6": {
+            "Kick Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60350
+            },
+            "Self Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62650
+            },
+            "Self Start with Alloy Wheel and i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63950
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67300
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowRoom": 70800
+            }
+          },
+          "Hero Splendor iSmart": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66500
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68700
             }
           },
           "HF Deluxe": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Kick Start with Spoke Wheels": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 52320.0
+              "exShowroom": 51200
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44150
+            },
+            "Self Start with Alloy Wheels": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59900
+            },
+            "Eco": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46150
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61225
+            },
+            "Pro": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73550
+            }
+          },
+          "Hero HF 100": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50100
+            }
+          },
+          "HF Deluxe BS6": {
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48000
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57175
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
             }
           },
           "Passion Pro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 70900.0
+              "exShowroom": 47850
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48700
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49650
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50600
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66900
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69100
+            }
+          },
+          "Passion Pro BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66052
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68269
+            }
+          },
+          "Passion Pro 110": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57100
             }
           },
           "Glamour": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 124,
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 73200.0
+              "exShowroom": 71900
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75400
+            },
+            "Blaze Edition": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73100
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78900
+            },
+            "PGM-Fi": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63200
+            },
+            "Programmed FI": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66580
+            },
+            "PGM-Fi Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66353
+            }
+          },
+          "Glamour 125 BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72400
             }
           },
           "HF Dawn": {
@@ -15932,16 +18875,30 @@ class VehicleData {
               "cc": 97,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 37400.0
+              "exShowroom": 38000.0
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 39370
             }
           },
           "Passion XPro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69500.0
+              "exShowroom": 55700
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57900
             }
           },
           "Ignitor": {
@@ -15950,99 +18907,775 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 76500.0
-            }
-          },
-          "Achiever 150": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 149,
+              "exShowroom": 70000.0
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69600.0
-            }
-          },
-          "Xtreme 200R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+              "exShowroom": 60500
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 93000.0
+              "exShowroom": 62500
             }
           },
-          "XPulse 200": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Splendor iSmart 110": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 118400.0
+              "exShowroom": 53300
             }
           },
-          "XPulse 200T": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Maestro Edge": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 112800.0
-            }
-          },
-          "Xtreme 160R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 160,
+              "exShowroom": 50941
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 105500.0
+              "exShowroom": 52800
+            },
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51500
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52900
             }
           },
           "Maestro Edge 110": {
-            "Self Start": {
-              "bodyType": "SCOOTER",
-              "cc": 110,
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 65900.0
+              "exShowroom": 61950
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63450
+            },
+            "Alloy Wheel": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62450
             }
-          }
+          },
+          "Maestro Edge 125": {
+            "Carburetor Drum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
+            },
+            "Carburetor Disc": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Fuel Injection (FI)": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70870
+            },
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69250
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71450
+            },
+            "Stealth Edition": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72950
+            },
+            "Connect": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 84829
+            }
+          },
+          "Duet": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47830
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49480
+            }
+          },
+          "Achiever 150": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 65900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67900
+            }
+          },
+          "Karizma ZMR": {
+            "Standard": {
+              "bodyType": "Sport Tourer",
+              "cc": 223,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105500
+            }
+          },
+          "Xtreme 200R": {
+            "Standard": {
+              "bodyType": "Naked Sport",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 89900
+            }
+          },
+          "Destini 125": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66960
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70450
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72000
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76000
+            }
+          },
+          "Pleasure": {
+            "Standard": {
+              "bodyType": "Scooter",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 45100
+            }
+          },
+          "Pleasure Plus": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            },
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57300
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59950
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 64900
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61950
+            }
+          },
+          "Pleasure Plus 110": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            }
+          },
+          "Xpulse 200": {
+            "Carburetor": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 115230
+            },
+            "Fuel-Injected": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118230
+            },
+            "Rally Kit": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 38000
+            }
+          },
+          "Xpulse 200 BS6": {
+            "Standard": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 111790
+            }
+          },
+          "Xpulse 200T": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116230
+            }
+          },
+          "Xpulse 200T BS6": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112800
+            }
+          },
+          "Xtreme 200S": {
+            "Standard": {
+              "bodyType": "Sports",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121500
+            }
+          },
+          "Xtreme 200S BS6": {
+            "Standard": {
+              "bodyType": "Full Faired Sport",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116000
+            }
+          },
+          "Xtreme 160R BS6": {
+            "Front Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 100000
+            },
+            "Double Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 103500
+            }
+          },
+          "Hero Xtreme 160R": {
+            "Single Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 103900
+            },
+            "Double Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 106950
+            },
+            "Stealth Edition": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 117214
+            }
+          },
         },
         "2022": {
           "Splendor Plus": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 70700.0
+              "exShowroom": 49300
+            },
+            "iSmart": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49200
+            },
+            "i3s": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73285
+            },
+            "Kick Start": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61785
+            },
+            "Self Start": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 64085
+            },
+            "Black and Accent Edition": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73295
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74700
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71785
+            },
+          },
+          "Super Splendor": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57190
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77500
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81000
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77200
+            }
+          },
+          "Splendor Pro": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47450
+            }
+          },
+          "Splendor Plus BS6": {
+            "Kick Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60350
+            },
+            "Self Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62650
+            },
+            "Self Start with Alloy Wheel and i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63950
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67300
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowRoom": 70800
+            }
+          },
+          "Hero Splendor iSmart": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66500
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68700
             }
           },
           "HF Deluxe": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Kick Start with Spoke Wheels": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 60760.0
+              "exShowroom": 56070
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44150
+            },
+            "Self Start with Alloy Wheels": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61225
+            },
+            "Eco": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46150
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62725
+            },
+            "Pro": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73550
+            }
+          },
+          "Hero HF 100": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50100
+            }
+          },
+          "HF Deluxe BS6": {
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48000
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57175
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
             }
           },
           "Passion Pro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 72500.0
+              "exShowroom": 47850
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48700
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49650
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50600
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66900
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69100
+            }
+          },
+          "Passion Pro BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66052
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68269
+            }
+          },
+          "Passion Pro 110": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57100
             }
           },
           "Glamour": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 124,
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 84698.0
+              "exShowroom": 77200
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81200
+            },
+            "Blaze Edition": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73100
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78900
+            },
+            "PGM-Fi": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63200
+            },
+            "Programmed FI": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66580
+            },
+            "PGM-Fi Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66353
+            }
+          },
+          "Glamour 125 BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72400
             }
           },
           "HF Dawn": {
@@ -16051,16 +19684,30 @@ class VehicleData {
               "cc": 97,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 37400.0
+              "exShowroom": 38000.0
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 39370
             }
           },
           "Passion XPro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69500.0
+              "exShowroom": 55700
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57900
             }
           },
           "Ignitor": {
@@ -16069,108 +19716,844 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 76500.0
-            }
-          },
-          "Achiever 150": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 149,
+              "exShowroom": 70000.0
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69600.0
-            }
-          },
-          "Xtreme 200R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+              "exShowroom": 60500
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 93000.0
+              "exShowroom": 62500
             }
           },
-          "XPulse 200": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Splendor iSmart 110": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 128150.0
+              "exShowroom": 53300
             }
           },
-          "XPulse 200T": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Maestro Edge": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 115800.0
-            }
-          },
-          "Xtreme 160R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 160,
+              "exShowroom": 50941
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 110600.0
+              "exShowroom": 52800
+            },
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51500
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52900
             }
           },
           "Maestro Edge 110": {
-            "Self Start": {
-              "bodyType": "SCOOTER",
-              "cc": 110,
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 67300.0
+              "exShowroom": 61950
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63450
+            },
+            "Alloy Wheel": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62450
             }
           },
-          "Splendor Plus Xtec": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+          "Maestro Edge 125": {
+            "Carburetor Drum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 74500.0
+              "exShowroom": 58500
+            },
+            "Carburetor Disc": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Fuel Injection (FI)": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70870
+            },
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75000
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000
+            },
+            "Stealth Edition": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 82000
+            },
+            "Connect": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86000
             }
-          }
+          },
+          "Duet": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47830
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49480
+            }
+          },
+          "Achiever 150": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 65900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67900
+            }
+          },
+          "Karizma ZMR": {
+            "Standard": {
+              "bodyType": "Sport Tourer",
+              "cc": 223,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105500
+            }
+          },
+          "Xtreme 200R": {
+            "Standard": {
+              "bodyType": "Naked Sport",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 89900
+            }
+          },
+          "Destini 125": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70500
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75000
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 80000
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72000
+            },
+          },
+          "Pleasure": {
+            "Standard": {
+              "bodyType": "Scooter",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 45100
+            }
+          },
+          "Pleasure Plus": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            },
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63400
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59950
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69500
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61950
+            }
+          },
+          "Pleasure Plus 110": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            }
+          },
+          "Xpulse 200": {
+            "Carburetor": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 115230
+            },
+            "Fuel-Injected": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118230
+            },
+            "Rally Kit": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 38000
+            },
+            "4V": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 137400
+            }
+          },
+          "Xpulse 200 BS6": {
+            "Standard": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 111790
+            }
+          },
+          "Xpulse 200T": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116230
+            }
+          },
+          "Xpulse 200T BS6": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112800
+            }
+          },
+          "Xtreme 200S": {
+            "Standard": {
+              "bodyType": "Sports",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121500
+            },
+            "4V": {
+              "bodyType": "Sports",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 135000
+            }
+          },
+          "Xtreme 200S BS6": {
+            "Standard": {
+              "bodyType": "Full Faired Sport",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116000
+            }
+          },
+          "Xtreme 160R BS6": {
+            "Front Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 100000
+            },
+            "Double Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 103500
+            }
+          },
+          "Hero Xtreme 160R": {
+            "Single Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 113900
+            },
+            "Double Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 117214
+            },
+            "Stealth Edition": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 117214
+            }
+          },
+          "Hero Passion XTEC": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74778
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000
+            }
+          },
         },
         "2023": {
           "Splendor Plus": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 74800.0
+              "exShowroom": 49300
+            },
+            "iSmart": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49200
+            },
+            "i3s": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73285
+            },
+            "Kick Start": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61785
+            },
+            "Self Start": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73200
+            },
+            "Black and Accent Edition": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73295
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74700
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71785
+            },
+          },
+          "Super Splendor": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57190
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77500
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81000
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77200
+            }
+          },
+          "Splendor Pro": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47450
+            }
+          },
+          "Splendor Plus BS6": {
+            "Kick Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60350
+            },
+            "Self Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62650
+            },
+            "Self Start with Alloy Wheel and i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63950
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67300
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowRoom": 70800
+            }
+          },
+          "Hero Splendor iSmart": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66500
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68700
+            }
+          },
+          "Hero Super Splendor Xtec": {
+            "Drum": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 83368
+            },
+            "Disc": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87268
+            },
+            "STD": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78200
             }
           },
           "HF Deluxe": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+            "Kick Start with Spoke Wheels": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 61200.0
+              "exShowroom": 61200
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44150
+            },
+            "Self Start with Alloy Wheels": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66200
+            },
+            "Eco": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46150
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62725
+            },
+            "Pro": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73550
+            }
+          },
+          "Hero HF 100": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50100
+            }
+          },
+          "HF Deluxe BS6": {
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48000
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57175
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
             }
           },
           "Passion Pro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 74500.0
+              "exShowroom": 47850
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48700
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49650
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50600
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66900
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69100
+            }
+          },
+          "Passion Pro BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66052
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68269
+            }
+          },
+          "Passion Pro 110": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57100
             }
           },
           "Glamour": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 124,
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 87198.0
+              "exShowroom": 77200
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81200
+            },
+            "Blaze Edition": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73100
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78900
+            },
+            "PGM-Fi": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63200
+            },
+            "Programmed FI": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66580
+            },
+            "PGM-Fi Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66353
+            }
+          },
+          "Glamour 125 BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72400
+            }
+          },
+          "Hero Glamour Xtec": {
+            "Drum": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000
+            },
+            "Disc": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 92000
             }
           },
           "HF Dawn": {
@@ -16179,16 +20562,30 @@ class VehicleData {
               "cc": 97,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 38865.0
+              "exShowroom": 38000.0
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 39370
             }
           },
           "Passion XPro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69500.0
+              "exShowroom": 55700
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57900
             }
           },
           "Ignitor": {
@@ -16197,428 +20594,2734 @@ class VehicleData {
               "cc": 125,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 76500.0
+              "exShowroom": 70000.0
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60500
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62500
             }
           },
-          "Achiever 150": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 149,
+          "Splendor iSmart 110": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69600.0
+              "exShowroom": 53300
             }
           },
-          "Xtreme 200R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Maestro Edge": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 93000.0
-            }
-          },
-          "XPulse 200": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+              "exShowroom": 50941
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 140000.0
-            }
-          },
-          "XPulse 200T": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+              "exShowroom": 52800
+            },
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 125700.0
-            }
-          },
-          "Xtreme 160R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 160,
+              "exShowroom": 51500
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 115000.0
-            }
-          },
-          "Maestro Edge 110": {
-            "Self Start": {
-              "bodyType": "SCOOTER",
-              "cc": 110,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 74500.0
-            }
-          },
-          "Splendor Plus Xtec": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 77600.0
-            }
-          },
-          "Xtreme 200S 4V": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 141250.0
-            }
-          },
-          "Xpulse 200 4V": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 151250.0
-            }
-          }
-        },
-        "2024": {
-          "Splendor Plus": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 76500.0
-            }
-          },
-          "HF Deluxe": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 62500.0
-            }
-          },
-          "Passion Pro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 75800.0
-            }
-          },
-          "Glamour": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 88048.0
-            }
-          },
-          "HF Dawn": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 38865.0
-            }
-          },
-          "Passion XPro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 69500.0
-            }
-          },
-          "Ignitor": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 125,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 76500.0
-            }
-          },
-          "Achiever 150": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 149,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 69600.0
-            }
-          },
-          "Xtreme 200R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 93000.0
-            }
-          },
-          "XPulse 200": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 140000.0
-            }
-          },
-          "XPulse 200T": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 125700.0
-            }
-          },
-          "Xtreme 160R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 160,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 120500.0
+              "exShowroom": 52900
             }
           },
           "Maestro Edge 110": {
-            "Self Start": {
-              "bodyType": "SCOOTER",
-              "cc": 110,
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 75800.0
+              "exShowroom": 61950
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63450
+            },
+            "Alloy Wheel": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62450
             }
           },
-          "Splendor Plus Xtec": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+          "Maestro Edge 125": {
+            "Carburetor Drum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 81000.0
+              "exShowroom": 58500
+            },
+            "Carburetor Disc": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Fuel Injection (FI)": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70870
+            },
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75000
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000
+            },
+            "Stealth Edition": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 82000
+            },
+            "Connect": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86000
             }
           },
-          "Xtreme 200S 4V": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Duet": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 141250.0
-            }
-          },
-          "Xpulse 200 4V": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+              "exShowroom": 47830
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 155000.0
-            }
-          },
-          "Passion Plus": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 100,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 76301.0
-            }
-          }
-        },
-        "2025": {
-          "Splendor Plus": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 78000.0
-            }
-          },
-          "HF Deluxe": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 63500.0
-            }
-          },
-          "Passion Pro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 77500.0
-            }
-          },
-          "Glamour": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 124,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 89900.0
-            }
-          },
-          "HF Dawn": {
-            "Kick Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 39478.0
-            }
-          },
-          "Passion XPro": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 110,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 69500.0
-            }
-          },
-          "Ignitor": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 125,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 76500.0
+              "exShowroom": 49480
             }
           },
           "Achiever 150": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 149,
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 69600.0
+              "exShowroom": 65900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67900
+            }
+          },
+          "Karizma ZMR": {
+            "Standard": {
+              "bodyType": "Sport Tourer",
+              "cc": 223,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105500
             }
           },
           "Xtreme 200R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+            "Standard": {
+              "bodyType": "Naked Sport",
+              "cc": 199.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 93000.0
+              "exShowroom": 89900
             }
           },
-          "XPulse 200": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Destini 125": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 140000.0
-            }
-          },
-          "XPulse 200T": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+              "exShowroom": 70500
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 125700.0
-            }
-          },
-          "Xtreme 160R": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 160,
+              "exShowroom": 75000
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 122500.0
-            }
-          },
-          "Maestro Edge 110": {
-            "Self Start": {
-              "bodyType": "SCOOTER",
-              "cc": 110,
+              "exShowroom": 80000
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 77000.0
-            }
+              "exShowroom": 72000
+            },
           },
-          "Splendor Plus Xtec": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 97,
+          "Hero Destini 125 Xtec": {
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 83751.0
-            }
-          },
-          "Xtreme 200S 4V": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+              "exShowroom": 81000
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 141250.0
+              "exShowroom": 86000
             }
           },
-          "Xpulse 200 4V": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 200,
+          "Pleasure": {
+            "Standard": {
+              "bodyType": "Scooter",
+              "cc": 102,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 158000.0
+              "exShowroom": 45100
             }
           },
-          "Passion Plus": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 100,
+          "Pleasure Plus": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 77500.0
-            }
-          },
-          "Mavrick 440": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 440,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 199000.0
-            }
-          },
-          "Glamour X": {
-            "Self Start": {
-              "bodyType": "BIKE",
-              "cc": 125,
+              "exShowroom": 51200
+            },
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 89999.0
+              "exShowroom": 63400
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59950
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69500
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61950
             }
           },
-          "Karizma XMR": {
-            "Self Start": {
-              "bodyType": "BIKE",
+          "Hero Pleasure Plus Xtec": {
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76000
+            },
+            "Connected": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 80000
+            }
+          },
+          "Pleasure Plus 110": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            }
+          },
+          "Xpulse 200": {
+            "Carburetor": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 115230
+            },
+            "Fuel-Injected": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118230
+            },
+            "Rally Kit": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 38000
+            },
+            "4V": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 137400
+            }
+          },
+          "Xpulse 200 BS6": {
+            "Standard": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 111790
+            }
+          },
+          "Hero XPulse 200 4V": {
+            "STD": {
+              "bodyType": "Adventure Tourer",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 146000
+            },
+            "Pro": {
+              "bodyType": "Adventure Tourer",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 153000
+            }
+          },
+          "Xpulse 200T": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116230
+            }
+          },
+          "Xpulse 200T BS6": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112800
+            }
+          },
+          "Xtreme 200S": {
+            "Standard": {
+              "bodyType": "Sports",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121500
+            },
+            "4V": {
+              "bodyType": "Sports",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 135000
+            }
+          },
+          "Xtreme 200S BS6": {
+            "Standard": {
+              "bodyType": "Full Faired Sport",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116000
+            }
+          },
+          "Xtreme 160R BS6": {
+            "Front Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 100000
+            },
+            "Double Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 103500
+            }
+          },
+          "Hero Xtreme 160R": {
+            "Single Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 113900
+            },
+            "Double Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 117214
+            },
+            "Stealth Edition": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 117214
+            }
+          },
+          "Hero Xtreme 160R 4V": {
+            "Single Disc": {
+              "bodyType": "Street Bike",
+              "cc": 163.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 127300
+            },
+            "Dual Disc": {
+              "bodyType": "Street Bike",
+              "cc": 163.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 130800
+            },
+            "Connected": {
+              "bodyType": "Street Bike",
+              "cc": 163.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 132800
+            }
+          },
+          "Hero Passion XTEC": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74778
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000
+            }
+          },
+          "Hero Karizma XMR": {
+            "STD": {
+              "bodyType": "Sport Bike",
               "cc": 210,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 179900.0
+              "exShowroom": 179900
             }
-          }
-        }
+          },
+          "Harley-Davidson X440": {
+            "STD": {
+              "bodyType": "Roadster",
+              "cc": 440,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 229000
+            }
+          },
+          "Hero Xoom 110": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71400
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74900
+            },
+            "ZX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77200
+            }
+          },
+        },
+        "2024": {
+          "Splendor Plus": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "iSmart": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49200
+            },
+            "i3s": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73285
+            },
+            "Kick Start": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61785
+            },
+            "Self Start": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73200
+            },
+            "Black and Accent Edition": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73295
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74700
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71785
+            },
+          },
+          "Super Splendor": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57190
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77500
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81000
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77200
+            }
+          },
+          "Splendor Pro": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47450
+            }
+          },
+          "Splendor Plus BS6": {
+            "Kick Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60350
+            },
+            "Self Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62650
+            },
+            "Self Start with Alloy Wheel and i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63950
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67300
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowRoom": 70800
+            }
+          },
+          "Hero Splendor Plus Xtec": {
+            "STD": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78200
+            },
+            "2.0": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 82911
+            }
+          },
+          "Hero Splendor iSmart": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66500
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68700
+            }
+          },
+          "Hero Super Splendor Xtec": {
+            "Drum": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 83368
+            },
+            "Disc": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87268
+            },
+            "STD": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78200
+            }
+          },
+          "HF Deluxe": {
+            "Kick Start with Spoke Wheels": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61200
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44150
+            },
+            "Self Start with Alloy Wheels": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66408
+            },
+            "Eco": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46150
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62725
+            },
+            "Pro": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73550
+            }
+          },
+          "Hero HF 100": {
+            "STD": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59018
+            }
+          },
+          "HF Deluxe BS6": {
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48000
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57175
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
+            }
+          },
+          "Passion Pro": {
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47850
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48700
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49650
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50600
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66900
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69100
+            }
+          },
+          "Passion Pro BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66052
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68269
+            }
+          },
+          "Passion Pro 110": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57100
+            }
+          },
+          "Hero Passion Plus": {
+            "STD": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78200
+            }
+          },
+          "Glamour": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77200
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81200
+            },
+            "Blaze Edition": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73100
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78900
+            },
+            "PGM-Fi": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63200
+            },
+            "Programmed FI": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66580
+            },
+            "PGM-Fi Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66353
+            }
+          },
+          "Glamour 125 BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72400
+            }
+          },
+          "Hero Glamour Xtec": {
+            "Drum": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000
+            },
+            "Disc": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 92000
+            }
+          },
+          "HF Dawn": {
+            "Kick Start": {
+              "bodyType": "BIKE",
+              "cc": 97,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 38000.0
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 39370
+            }
+          },
+          "Passion XPro": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55700
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57900
+            }
+          },
+          "Ignitor": {
+            "Self Start": {
+              "bodyType": "BIKE",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70000.0
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60500
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62500
+            }
+          },
+          "Splendor iSmart 110": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53300
+            }
+          },
+          "Maestro Edge": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50941
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52800
+            },
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51500
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52900
+            }
+          },
+          "Maestro Edge 110": {
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61950
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63450
+            },
+            "Alloy Wheel": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62450
+            }
+          },
+          "Maestro Edge 125": {
+            "Carburetor Drum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
+            },
+            "Carburetor Disc": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Fuel Injection (FI)": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70870
+            },
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75000
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000
+            },
+            "Stealth Edition": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 82000
+            },
+            "Connect": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86000
+            }
+          },
+          "Duet": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47830
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49480
+            }
+          },
+          "Achiever 150": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 65900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67900
+            }
+          },
+          "Karizma ZMR": {
+            "Standard": {
+              "bodyType": "Sport Tourer",
+              "cc": 223,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105500
+            }
+          },
+          "Xtreme 200R": {
+            "Standard": {
+              "bodyType": "Naked Sport",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 89900
+            }
+          },
+          "Destini 125": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70500
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75000
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 80000
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72000
+            },
+          },
+          "Hero Destini 125 Xtec": {
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81000
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86000
+            }
+          },
+          "Pleasure": {
+            "Standard": {
+              "bodyType": "Scooter",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 45100
+            }
+          },
+          "Pleasure Plus": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            },
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63400
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59950
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69500
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61950
+            }
+          },
+          "Hero Pleasure Plus Xtec": {
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76000
+            },
+            "Connected": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 80000
+            }
+          },
+          "Pleasure Plus 110": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            }
+          },
+          "Xpulse 200": {
+            "Carburetor": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 115230
+            },
+            "Fuel-Injected": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118230
+            },
+            "Rally Kit": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 38000
+            },
+            "4V": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 137400
+            }
+          },
+          "Xpulse 200 BS6": {
+            "Standard": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 111790
+            }
+          },
+          "Hero XPulse 200 4V": {
+            "STD": {
+              "bodyType": "Adventure Tourer",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 146000
+            },
+            "Pro": {
+              "bodyType": "Adventure Tourer",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 153000
+            }
+          },
+          "Xpulse 200T": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116230
+            }
+          },
+          "Xpulse 200T BS6": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112800
+            }
+          },
+          "Xtreme 200S": {
+            "Standard": {
+              "bodyType": "Sports",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121500
+            },
+            "4V": {
+              "bodyType": "Sports",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 135000
+            }
+          },
+          "Xtreme 200S BS6": {
+            "Standard": {
+              "bodyType": "Full Faired Sport",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116000
+            }
+          },
+          "Xtreme 160R BS6": {
+            "Front Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 100000
+            },
+            "Double Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 103500
+            }
+          },
+          "Hero Xtreme 160R": {
+            "Single Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 113900
+            },
+            "Double Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 117214
+            },
+            "Stealth Edition": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 117214
+            }
+          },
+          "Hero Xtreme 160R 4V": {
+            "Single Disc": {
+              "bodyType": "Street Bike",
+              "cc": 163.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 127300
+            },
+            "Dual Disc": {
+              "bodyType": "Street Bike",
+              "cc": 163.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 130800
+            },
+            "Connected": {
+              "bodyType": "Street Bike",
+              "cc": 163.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 132800
+            },
+          },
+          "Hero Xtreme 125R": {
+            "IBS": {
+              "bodyType": "Street Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 95000
+            },
+            "ABS": {
+              "bodyType": "Street Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 99500
+            }
+          },
+          "Hero Passion XTEC": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74778
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000
+            }
+          },
+          "Hero Karizma XMR": {
+            "STD": {
+              "bodyType": "Sport Bike",
+              "cc": 210,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 179900
+            }
+          },
+          "Harley-Davidson X440": {
+            "STD": {
+              "bodyType": "Roadster",
+              "cc": 440,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 229000
+            }
+          },
+          "Hero Xoom 110": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71400
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74900
+            },
+            "ZX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77200
+            }
+          },
+          "Hero Xoom 125R": {
+            "STD": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86900
+            }
+          },
+          "Hero Xoom 160": {
+            "STD": {
+              "bodyType": "Scooter",
+              "cc": 156,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 148500
+            }
+          },
+          "Hero Mavrick 440": {
+            "Base": {
+              "bodyType": "Roadster",
+              "cc": 440,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 199000
+            },
+            "Mid": {
+              "bodyType": "Roadster",
+              "cc": 440,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 214000
+            },
+            "Top": {
+              "bodyType": "Roadster",
+              "cc": 440,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 224000
+            }
+          },
+        },
+        "2025": {
+          "Splendor Plus": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "iSmart": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49200
+            },
+            "i3s": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73285
+            },
+            "Kick Start": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61785
+            },
+            "Self Start": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73200
+            },
+            "Black and Accent Edition": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74500
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74700
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71785
+            },
+          },
+          "Super Splendor": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57190
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77500
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81000
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77200
+            }
+          },
+          "Splendor Pro": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47450
+            }
+          },
+          "Splendor Plus BS6": {
+            "Kick Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60350
+            },
+            "Self Start with Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62650
+            },
+            "Self Start with Alloy Wheel and i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63950
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67300
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowRoom": 70800
+            }
+          },
+          "Hero Splendor Plus Xtec": {
+            "STD": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78200
+            },
+            "2.0": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 82911
+            }
+          },
+          "Hero Splendor iSmart": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66500
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68700
+            }
+          },
+          "Hero Super Splendor Xtec": {
+            "Drum": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 83368
+            },
+            "Disc": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 87268
+            },
+            "STD": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78200
+            }
+          },
+          "HF Deluxe": {
+            "Kick Start with Spoke Wheels": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61200
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 43000
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 44150
+            },
+            "Self Start with Alloy Wheels": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66408
+            },
+            "Eco": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 46150
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62725
+            },
+            "Pro": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73550
+            }
+          },
+          "Hero HF 100": {
+            "STD": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59018
+            }
+          },
+          "HF Deluxe BS6": {
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48000
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57175
+            },
+            "i3S": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
+            }
+          },
+          "Passion Pro": {
+            "Kick Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47850
+            },
+            "Kick Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 48700
+            },
+            "Self Start Spoke Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49650
+            },
+            "Self Start Alloy Wheel": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50600
+            },
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66900
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69100
+            }
+          },
+          "Passion Pro BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66052
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68269
+            }
+          },
+          "Passion Pro 110": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 54900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57100
+            }
+          },
+          "Hero Passion Plus": {
+            "STD": {
+              "bodyType": "Commuter Bike",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78200
+            }
+          },
+          "Glamour": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77200
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81200
+            },
+            "Blaze Edition": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 73100
+            },
+            "Xtec": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78900
+            },
+            "PGM-Fi": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63200
+            },
+            "Programmed FI": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66580
+            },
+            "PGM-Fi Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 66353
+            }
+          },
+          "Glamour 125 BS6": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 68900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72400
+            }
+          },
+          "Hero Glamour Xtec": {
+            "Drum": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 88000
+            },
+            "Disc": {
+              "bodyType": "Commuter Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 92000
+            }
+          },
+          "HF Dawn": {
+            "Kick Start": {
+              "bodyType": "BIKE",
+              "cc": 97,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 38000.0
+            },
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 97.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 39370
+            }
+          },
+          "Passion XPro": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 55700
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 57900
+            }
+          },
+          "Ignitor": {
+            "Self Start": {
+              "bodyType": "BIKE",
+              "cc": 125,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70000.0
+            },
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60500
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62500
+            }
+          },
+          "Splendor iSmart 110": {
+            "Standard": {
+              "bodyType": "Commuter",
+              "cc": 109.15,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 53300
+            }
+          },
+          "Maestro Edge": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 50941
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52800
+            },
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51500
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 52900
+            }
+          },
+          "Maestro Edge 110": {
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61950
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63450
+            },
+            "Alloy Wheel": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 62450
+            }
+          },
+          "Maestro Edge 125": {
+            "Carburetor Drum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 58500
+            },
+            "Carburetor Disc": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 60000
+            },
+            "Fuel Injection (FI)": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70870
+            },
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75000
+            },
+            "Disc Brake": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000
+            },
+            "Stealth Edition": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 82000
+            },
+            "Connect": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86000
+            }
+          },
+          "Duet": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 47830
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49480
+            }
+          },
+          "Achiever 150": {
+            "Drum": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 65900
+            },
+            "Disc": {
+              "bodyType": "Commuter",
+              "cc": 149.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 67900
+            }
+          },
+          "Karizma ZMR": {
+            "Standard": {
+              "bodyType": "Sport Tourer",
+              "cc": 223,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 105500
+            }
+          },
+          "Xtreme 200R": {
+            "Standard": {
+              "bodyType": "Naked Sport",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 89900
+            }
+          },
+          "Destini 125": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 70500
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 75000
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 80000
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 72000
+            },
+          },
+          "Hero Destini 125 Xtec": {
+            "Drum": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 81000
+            },
+            "Disc": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86000
+            }
+          },
+          "Pleasure": {
+            "Standard": {
+              "bodyType": "Scooter",
+              "cc": 102,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 45100
+            }
+          },
+          "Pleasure Plus": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            },
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 63400
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 59950
+            },
+            "Xtec": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 69500
+            },
+            "Platinum": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 61950
+            }
+          },
+          "Hero Pleasure Plus Xtec": {
+            "Drum Brake": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 76000
+            },
+            "Connected": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 80000
+            }
+          },
+          "Pleasure Plus 110": {
+            "Sheet Metal Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 49300
+            },
+            "Cast Wheels": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 51200
+            }
+          },
+          "Xpulse 200": {
+            "Carburetor": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 115230
+            },
+            "Fuel-Injected": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 118230
+            },
+            "Rally Kit": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 38000
+            },
+            "4V": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 137400
+            }
+          },
+          "Xpulse 200 BS6": {
+            "Standard": {
+              "bodyType": "Adventure",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 111790
+            }
+          },
+          "Hero XPulse 200 4V": {
+            "STD": {
+              "bodyType": "Adventure Tourer",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 146000
+            },
+            "Pro": {
+              "bodyType": "Adventure Tourer",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 153000
+            }
+          },
+          "Hero XPulse 210": {
+            "STD": {
+              "bodyType": "Adventure Tourer",
+              "cc": 210,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 175800
+            }
+          },
+          "Xpulse 200T": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116230
+            }
+          },
+          "Xpulse 200T BS6": {
+            "Standard": {
+              "bodyType": "Touring",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 112800
+            }
+          },
+          "Xtreme 200S": {
+            "Standard": {
+              "bodyType": "Sports",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 121500
+            },
+            "4V": {
+              "bodyType": "Sports",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 135000
+            }
+          },
+          "Xtreme 200S BS6": {
+            "Standard": {
+              "bodyType": "Full Faired Sport",
+              "cc": 199.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 116000
+            }
+          },
+          "Xtreme 160R BS6": {
+            "Front Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 100000
+            },
+            "Double Disc": {
+              "bodyType": "Naked Sport",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 103500
+            }
+          },
+          "Hero Xtreme 160R": {
+            "Single Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 113900
+            },
+            "Double Disc": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 117214
+            },
+            "Stealth Edition": {
+              "bodyType": "Sports",
+              "cc": 163,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 117214
+            }
+          },
+          "Hero Xtreme 160R 4V": {
+            "Single Disc": {
+              "bodyType": "Street Bike",
+              "cc": 163.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 127300
+            },
+            "Dual Disc": {
+              "bodyType": "Street Bike",
+              "cc": 163.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 130800
+            },
+            "Connected": {
+              "bodyType": "Street Bike",
+              "cc": 163.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 132800
+            }
+          },
+          "Hero Xtreme 125R": {
+            "IBS": {
+              "bodyType": "Street Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 95000
+            },
+            "Single Disc": {
+              "bodyType": "Street Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 95000
+            },
+            "ABS": {
+              "bodyType": "Street Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 99500
+            }
+          },
+          "Hero Xtreme 250R": {
+            "STD": {
+              "bodyType": "Street Bike",
+              "cc": 250,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 180000
+            }
+          },
+          "Hero Passion XTEC": {
+            "Drum Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74778
+            },
+            "Disc Brake": {
+              "bodyType": "Commuter",
+              "cc": 113,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78000
+            }
+          },
+          "Hero Karizma XMR": {
+            "STD": {
+              "bodyType": "Sport Bike",
+              "cc": 210,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 179900
+            }
+          },
+          "Harley-Davidson X440": {
+            "STD": {
+              "bodyType": "Roadster",
+              "cc": 440,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 229000
+            }
+          },
+          "Hero Xoom 110": {
+            "LX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 71400
+            },
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 74900
+            },
+            "ZX": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 77200
+            },
+            "Combat Edition": {
+              "bodyType": "Scooter",
+              "cc": 110.9,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 78500
+            }
+          },
+          "Hero Xoom 125": {
+            "VX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86900
+            },
+            "ZX": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 92900
+            }
+          },
+          "Hero Xoom 125R": {
+            "STD": {
+              "bodyType": "Scooter",
+              "cc": 124.6,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 86900
+            }
+          },
+          "Hero Xoom 160": {
+            "STD": {
+              "bodyType": "Maxi-Scooter",
+              "cc": 156,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 148500
+            }
+          },
+          "Hero Mavrick 440": {
+            "Base": {
+              "bodyType": "Roadster",
+              "cc": 440,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 199500
+            },
+            "Mid": {
+              "bodyType": "Roadster",
+              "cc": 440,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 214500
+            },
+            "Top": {
+              "bodyType": "Roadster",
+              "cc": 440,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 224500
+            },
+            "Pro": {
+              "bodyType": "Roadster",
+              "cc": 440,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 230000
+            }
+          },
+        },
       },
       "Honda": {
         "2015": {
@@ -22035,6 +28738,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 138000
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 148000
             }
           },
           "Duke 390": {
@@ -22044,6 +28754,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 190000
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 200000
             }
           },
           "RC 200": {
@@ -22053,6 +28770,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 166000
+            },
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 176000
             }
           },
           "RC 390": {
@@ -22062,6 +28786,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 213000
+            },
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 223000
             }
           }
         },
@@ -22076,7 +28807,7 @@ class VehicleData {
             }
           },
           "Duke 390": {
-            "Standard": {
+            "ABS": {
               "bodyType": "Naked Bike",
               "cc": 373.2,
               "fuelType": "Petrol",
@@ -22110,16 +28841,16 @@ class VehicleData {
               "cc": 199.5,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 147000
+              "exShowroom": 140000
             }
           },
           "Duke 390": {
-            "Standard": {
+            "ABS": {
               "bodyType": "Naked Bike",
               "cc": 373.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 225000
+              "exShowroom": 191000
             }
           },
           "RC 200": {
@@ -22128,7 +28859,7 @@ class VehicleData {
               "cc": 199.5,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 171000
+              "exShowroom": 165000
             }
           },
           "RC 390": {
@@ -22137,16 +28868,7 @@ class VehicleData {
               "cc": 373.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 236000
-            }
-          },
-          "Duke 250": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 248.8,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 173000
+              "exShowroom": 213000
             }
           }
         },
@@ -22158,6 +28880,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 151000
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 160000
             }
           },
           "Duke 390": {
@@ -22166,7 +28895,14 @@ class VehicleData {
               "cc": 373.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 240000
+              "exShowroom": 238000
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 248000
             }
           },
           "RC 200": {
@@ -22176,6 +28912,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 178000
+            },
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 187738
             }
           },
           "RC 390": {
@@ -22185,6 +28928,13 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 244000
+            },
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 254000
             }
           },
           "Duke 250": {
@@ -22194,26 +28944,88 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 181000
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 248.8,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 191000
             }
           }
         },
         "2019": {
+          "Duke 125": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 130000
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 130000
+            }
+          },
           "Duke 200": {
             "Standard": {
               "bodyType": "Naked Bike",
               "cc": 199.5,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 160000
-            }
-          },
-          "Duke 390": {
-            "Standard": {
+              "exShowroom": 207299
+            },
+            "ABS": {
               "bodyType": "Naked Bike",
-              "cc": 373.2,
+              "cc": 199.5,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 248000
+              "exShowroom": 162000
+            }
+          },
+          "Duke 250": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 248.8,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 193421
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 248.8,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 193421
+            }
+          },
+          "Duke 790": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 799,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 863945
+            }
+          },
+          "RC 125": {
+            "Standard": {
+              "bodyType": "Supersport",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 147000
+            },
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 147000
             }
           },
           "RC 200": {
@@ -22223,39 +29035,35 @@ class VehicleData {
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 188000
-            }
-          },
-          "RC 390": {
-            "Standard": {
+            },
+            "ABS": {
               "bodyType": "Supersport",
-              "cc": 373.2,
+              "cc": 199.5,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 253000
-            }
-          },
-          "Duke 250": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 248.8,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 190000
-            }
-          },
-          "Duke 125": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 124.7,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 125000
+              "exShowroom": 188000
             }
           }
         },
         "2020": {
-          "Duke 200": {
-            "BS6": {
+          "125 DUKE": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 130764
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 130764
+            }
+          },
+          "200 DUKE": {
+            "Standard": {
               "bodyType": "Naked Bike",
               "cc": 199.5,
               "fuelType": "Petrol",
@@ -22263,419 +29071,752 @@ class VehicleData {
               "exShowroom": 172000
             }
           },
-          "Duke 390": {
-            "BS6": {
+          "250 DUKE": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 249.07,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 230179
+            }
+          },
+          "390 DUKE": {
+            "Standard": {
               "bodyType": "Naked Bike",
               "cc": 373.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 258000
+              "exShowroom": 297443
             }
           },
-          "RC 200": {
-            "BS6": {
+          "790 DUKE": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 799,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 864000
+            }
+          },
+          "RC125": {
+            "Standard": {
+              "bodyType": "Supersport",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 148553
+            },
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 148553
+            }
+          },
+          "RC200": {
+            "Standard": {
               "bodyType": "Supersport",
               "cc": 199.5,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 200000
+              "exShowroom": 173453
+            },
+            "GP Edition": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 173453
             }
           },
-          "RC 390": {
-            "BS6": {
+          "RC390": {
+            "Standard": {
               "bodyType": "Supersport",
               "cc": 373.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 260000
-            }
-          },
-          "Duke 250": {
-            "BS6": {
-              "bodyType": "Naked Bike",
-              "cc": 248.8,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 200000
-            }
-          },
-          "Duke 125": {
-            "BS6": {
-              "bodyType": "Naked Bike",
-              "cc": 124.7,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 139000
-            }
-          },
-          "390 Adventure": {
-            "Standard": {
-              "bodyType": "Adventure Tourer",
+              "exShowroom": 243193
+            },
+            "ABS": {
+              "bodyType": "Supersport",
               "cc": 373.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 304000
+              "exShowroom": 243193
             }
           }
         },
         "2021": {
-          "Duke 200": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 199.5,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 182000
-            }
-          },
-          "Duke 390": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 373.2,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 270000
-            }
-          },
-          "RC 200": {
-            "Standard": {
-              "bodyType": "Supersport",
-              "cc": 199.5,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 209000
-            }
-          },
-          "RC 390": {
-            "Standard": {
-              "bodyType": "Supersport",
-              "cc": 373.2,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 278000
-            }
-          },
-          "Duke 250": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 248.8,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 221000
-            }
-          },
-          "Duke 125": {
+          "125 DUKE": {
             "Standard": {
               "bodyType": "Naked Bike",
               "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 160000
+              "exShowroom": 132426
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 132426
             }
           },
-          "390 Adventure": {
+          "200 DUKE": {
             "Standard": {
-              "bodyType": "Adventure Tourer",
+              "bodyType": "Naked Bike",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 151330
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 151330
+            }
+          },
+          "250 DUKE": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 249.07,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 180393
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 249.07,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 180393
+            }
+          },
+          "390 DUKE": {
+            "Standard": {
+              "bodyType": "Naked Bike",
               "cc": 373.2,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 328000
+              "exShowroom": 252928
+            },
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 252928
+            }
+          },
+          "RC125": {
+            "Standard": {
+              "bodyType": "Supersport",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 132426
+            },
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 132426
+            }
+          },
+          "RC200": {
+            "Standard": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 179136
+            },
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 179136
+            }
+          },
+          "RC390": {
+            "Standard": {
+              "bodyType": "Supersport",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 252928
+            },
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 252928
             }
           }
         },
         "2022": {
-          "Duke 200": {
-            "Standard": {
+          "125 DUKE": {
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 181000
+            }
+          },
+          "200 DUKE": {
+            "ABS": {
               "bodyType": "Naked Bike",
               "cc": 199.5,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 192000
+              "exShowroom": 207299
             }
           },
-          "Duke 390": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 373.2,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 288000
-            }
-          },
-          "RC 200": {
-            "Standard": {
-              "bodyType": "Supersport",
-              "cc": 199.5,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 215000
-            }
-          },
-          "RC 390": {
-            "Standard": {
-              "bodyType": "Supersport",
-              "cc": 373.2,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 298000
-            }
-          },
-          "Duke 250": {
-            "Standard": {
+          "250 DUKE": {
+            "ABS": {
               "bodyType": "Naked Bike",
               "cc": 248.8,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 232000
+              "exShowroom": 236462
             }
           },
-          "Duke 125": {
+          "390 DUKE": {
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 295644
+            }
+          },
+          "RC 200": {
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 220192
+            },
+            "GP Edition": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 235500
+            }
+          },
+          "RC 390": {
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 318173
+            },
+            "GP Edition": {
+              "bodyType": "Supersport",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 323022
+            }
+          }
+        },
+        "2023": {
+          "125 DUKE": {
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 177253
+            }
+          },
+          "200 DUKE": {
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 207299
+            }
+          },
+          "250 ADVENTURE": {
+            "ABS": {
+              "bodyType": "Adventure Tourer",
+              "cc": 249.07,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 260349
+            }
+          },
+          "250 DUKE": {
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 249.07,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 230179
+            }
+          },
+          "390 ADVENTURE": {
+            "ABS": {
+              "bodyType": "Adventure Tourer",
+              "cc": 399,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 368299
+            }
+          },
+          "390 DUKE": {
+            "ABS": {
+              "bodyType": "Naked Bike",
+              "cc": 373.27,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 295644
+            }
+          },
+          "RC125": {
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 188074
+            }
+          },
+          "RC200": {
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 220192
+            },
+            "GP Edition ABS": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 235500
+            }
+          },
+          "RC390": {
+            "ABS": {
+              "bodyType": "Supersport",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 318173
+            },
+            "GP Edition ABS": {
+              "bodyType": "Supersport",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 323022
+            }
+          }
+        },
+        "2024": {
+          "125 DUKE": {
             "Standard": {
               "bodyType": "Naked Bike",
               "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 172000
+              "exShowroom": 177253
             }
           },
-          "390 Adventure": {
-            "Standard": {
-              "bodyType": "Adventure Tourer",
-              "cc": 373.2,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 337000
-            }
-          },
-          "250 Adventure": {
-            "Standard": {
-              "bodyType": "Adventure Tourer",
-              "cc": 248.8,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 235000
-            }
-          }
-        },
-        "2023": {
-          "Duke 200": {
+          "200 DUKE": {
             "Standard": {
               "bodyType": "Naked Bike",
               "cc": 199.5,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 196000
+              "exShowroom": 207299
             }
           },
-          "Duke 390": {
+          "250 ADVENTURE": {
+            "Standard": {
+              "bodyType": "Adventure Tourer",
+              "cc": 248.8,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 246651
+            }
+          },
+          "250 DUKE": {
             "Standard": {
               "bodyType": "Naked Bike",
+              "cc": 248.8,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 230489
+            }
+          },
+          "390 ADVENTURE": {
+            "Standard": {
+              "bodyType": "Adventure Tourer",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 341878
+            }
+          },
+          "390 DUKE": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 297251
+            }
+          },
+          "RC125": {
+            "Standard": {
+              "bodyType": "Supersport",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 181000
+            }
+          },
+          "RC200": {
+            "Standard": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 207299
+            },
+            "GP Edition": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 222000
+            }
+          },
+          "RC390": {
+            "Standard": {
+              "bodyType": "Supersport",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 295644
+            },
+            "GP Edition": {
+              "bodyType": "Supersport",
               "cc": 373.2,
               "fuelType": "Petrol",
               "seating": 2,
               "exShowroom": 310000
             }
           },
-          "RC 200": {
-            "Standard": {
-              "bodyType": "Supersport",
-              "cc": 199.5,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 218000
-            }
-          },
-          "RC 390": {
-            "Standard": {
-              "bodyType": "Supersport",
-              "cc": 373.2,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 316000
-            }
-          },
-          "Duke 250": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 248.8,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 240000
-            }
-          },
-          "Duke 125": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 124.7,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 179000
-            }
-          },
-          "390 Adventure": {
+          "1290 SUPER ADVENTURE S": {
             "Standard": {
               "bodyType": "Adventure Tourer",
-              "cc": 373.2,
+              "cc": 1301,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 339000
+              "exShowroom": 2295800
             }
           },
-          "250 Adventure": {
+          "1390 SUPER DUKE R": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 1301,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 2295800
+            }
+          },
+          "250 SX-F": {
+            "Standard": {
+              "bodyType": "Motocross",
+              "cc": 249.9,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 800000
+            }
+          },
+          "350 EXC-F": {
+            "Standard": {
+              "bodyType": "Enduro",
+              "cc": 349.7,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 900000
+            }
+          },
+          "450 SX-F": {
+            "Standard": {
+              "bodyType": "Motocross",
+              "cc": 449.9,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 950000
+            }
+          },
+          "50 SX": {
+            "Standard": {
+              "bodyType": "Mini Motocross",
+              "cc": 49.9,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 300000
+            }
+          },
+          "65 SX": {
+            "Standard": {
+              "bodyType": "Mini Motocross",
+              "cc": 64.9,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 400000
+            }
+          },
+          "85 SX": {
+            "Standard": {
+              "bodyType": "Mini Motocross",
+              "cc": 84.9,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 500000
+            }
+          },
+          "890 ADVENTURE R": {
             "Standard": {
               "bodyType": "Adventure Tourer",
-              "cc": 248.8,
+              "cc": 889,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 245000
+              "exShowroom": 1400000
             }
-          }
-        },
-        "2024": {
-          "Duke 200": {
+          },
+          "890 DUKE R": {
             "Standard": {
               "bodyType": "Naked Bike",
-              "cc": 199.5,
+              "cc": 889,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 200000
-            }
-          },
-          "Duke 390": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 398.6,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 318000
-            }
-          },
-          "RC 200": {
-            "Standard": {
-              "bodyType": "Supersport",
-              "cc": 199.5,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 225000
-            }
-          },
-          "RC 390": {
-            "Standard": {
-              "bodyType": "Supersport",
-              "cc": 373.2,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 326000
-            }
-          },
-          "Duke 250": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 250,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 248000
-            }
-          },
-          "Duke 125": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 124.7,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 182000
-            }
-          },
-          "390 Adventure": {
-            "Standard": {
-              "bodyType": "Adventure Tourer",
-              "cc": 398.6,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 345000
-            }
-          },
-          "250 Adventure": {
-            "Standard": {
-              "bodyType": "Adventure Tourer",
-              "cc": 248.8,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 252000
+              "exShowroom": 1450000
             }
           }
         },
         "2025": {
-          "Duke 200": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 199.5,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 208000
-            }
-          },
-          "Duke 390": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 398.6,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 328000
-            }
-          },
-          "RC 200": {
-            "Standard": {
-              "bodyType": "Supersport",
-              "cc": 199.5,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 234000
-            }
-          },
-          "RC 390": {
-            "Standard": {
-              "bodyType": "Supersport",
-              "cc": 373.2,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 335000
-            }
-          },
-          "Duke 250": {
-            "Standard": {
-              "bodyType": "Naked Bike",
-              "cc": 250,
-              "fuelType": "Petrol",
-              "seating": 2,
-              "exShowroom": 255000
-            }
-          },
-          "Duke 125": {
+          "125 DUKE": {
             "Standard": {
               "bodyType": "Naked Bike",
               "cc": 124.7,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 186000
+              "exShowroom": 177253
             }
           },
-          "390 Adventure": {
+          "200 DUKE": {
             "Standard": {
-              "bodyType": "Adventure Tourer",
-              "cc": 398.6,
+              "bodyType": "Naked Bike",
+              "cc": 199.5,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 355000
+              "exShowroom": 207299
             }
           },
-          "250 Adventure": {
+          "250 ADVENTURE": {
             "Standard": {
               "bodyType": "Adventure Tourer",
               "cc": 248.8,
               "fuelType": "Petrol",
               "seating": 2,
-              "exShowroom": 260000
+              "exShowroom": 246651
+            }
+          },
+          "250 DUKE": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 248.8,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 230489
+            }
+          },
+          "250 SX-F": {
+            "Standard": {
+              "bodyType": "Motocross",
+              "cc": 249.9,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 800000
+            }
+          },
+          "350 EXC-F": {
+            "Standard": {
+              "bodyType": "Enduro",
+              "cc": 349.7,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 900000
+            }
+          },
+          "390 ADVENTURE": {
+            "Standard": {
+              "bodyType": "Adventure Tourer",
+              "cc": 399,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 368000
+            }
+          },
+          "390 ADVENTURE X": {
+            "Standard": {
+              "bodyType": "Adventure Tourer",
+              "cc": 399,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 291000
+            }
+          },
+          "390 DUKE": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 297251
+            }
+          },
+          "390 ENDURO R": {
+            "Standard": {
+              "bodyType": "Enduro",
+              "cc": 399,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 354000
+            }
+          },
+          "450 SX-F": {
+            "Standard": {
+              "bodyType": "Motocross",
+              "cc": 449.9,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 950000
+            }
+          },
+          "50 SX": {
+            "Standard": {
+              "bodyType": "Mini Motocross",
+              "cc": 49.9,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 300000
+            }
+          },
+          "65 SX": {
+            "Standard": {
+              "bodyType": "Mini Motocross",
+              "cc": 64.9,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 400000
+            }
+          },
+          "85 SX": {
+            "Standard": {
+              "bodyType": "Mini Motocross",
+              "cc": 84.9,
+              "fuelType": "Petrol",
+              "seating": 1,
+              "exShowroom": 500000
+            }
+          },
+          "890 ADVENTURE R": {
+            "Standard": {
+              "bodyType": "Adventure Tourer",
+              "cc": 889,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1400000
+            }
+          },
+          "890 DUKE R": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 889,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 1450000
+            }
+          },
+          "1290 SUPER ADVENTURE S": {
+            "Standard": {
+              "bodyType": "Adventure Tourer",
+              "cc": 1301,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 2295800
+            }
+          },
+          "1390 SUPER DUKE R": {
+            "Standard": {
+              "bodyType": "Naked Bike",
+              "cc": 1301,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 2295800
+            }
+          },
+          "RC125": {
+            "Standard": {
+              "bodyType": "Supersport",
+              "cc": 124.7,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 181000
+            }
+          },
+          "RC200": {
+            "Standard": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 207299
+            },
+            "GP Edition": {
+              "bodyType": "Supersport",
+              "cc": 199.5,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 222000
+            }
+          },
+          "RC390": {
+            "Standard": {
+              "bodyType": "Supersport",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 295644
+            },
+            "GP Edition": {
+              "bodyType": "Supersport",
+              "cc": 373.2,
+              "fuelType": "Petrol",
+              "seating": 2,
+              "exShowroom": 310000
             }
           }
         }
@@ -38967,7 +46108,6 @@ class VehicleData {
         }
       }
     },
-
     "Private Car": {
       "Maruti Suzuki": {
         "2015": {
@@ -101603,7 +108743,6 @@ class VehicleData {
         },
       }
     },
-
     "Goods Carrying Vehicle": {
       "Tata": {
         "2015": {
@@ -116132,7 +123271,6 @@ class VehicleData {
         }
       }
     },
-
     "Passenger Carrying Vehicle": {
       "TATA": {
         "2015": {
@@ -127003,7 +134141,6 @@ class VehicleData {
         },
       }
     },
-
     "Miscellaneous Vehicle": {
       "TATA": {
         "2015": {
@@ -141875,6 +149012,5 @@ class VehicleData {
         },
       },
     }
-
   };
 }

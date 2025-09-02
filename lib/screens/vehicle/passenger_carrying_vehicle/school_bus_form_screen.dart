@@ -64,6 +64,8 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
   void initState() {
     super.initState();
     _controllers['idv']!.addListener(_updateCurrentIdv);
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
   }
 
   @override

@@ -58,6 +58,13 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
   final List<String> _llEmployeeOtherOptions = ['0','50','100','150','200','250','300','350'];
 
   @override
+  void initState() {
+    super.initState();
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
+  }
+
+  @override
   void dispose() {
     for (var controller in _controllers.values) {
       controller.dispose();
@@ -109,7 +116,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
     // double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
     double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
     double selectIMT =_selectedImt23 == 'Yes' ? 15.0 : 0.0;
-    double ageOfVehicle = double.tryParse(_selectedAge ?? "0") ?? 0.0;
+    String ageCategory = _selectedAge ?? 'Upto 5 Years';
     double geographicalExtent = double.tryParse(_selectedGeographicalExt ?? "0") ?? 0.0;
     double overturning = _selectedOverTurningForCranes == 'Yes' ? 5.0 : 0.0; 
     String vehicleType = _selectedVehicleType ?? "Others Vehicle";
@@ -124,7 +131,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
     double ncbPercentage = double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
 
     // Get base rate from function
-    double vehicleBasicRate =  _getOdRate(zone, ageOfVehicle);
+    double vehicleBasicRate =  _getOdRate(zone, ageCategory);
 
     // OD Calculations
     double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
@@ -134,17 +141,14 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
     double basicAfterDiscount = basicOdPremium - discountAmount; // Basic OD after discount
     double geographicalExtensionAmount = (basicAfterDiscount * geographicalExtent) / 100.0;
     double overturningAmount = (basicAfterDiscount * overturning) / 100.0;
-    double imt23Amount = selectIMT; 
-    double odBeforeNcb = geographicalExtensionAmount
-      + overturningAmount
-      + imt23Amount;
+    double imt23Amount = (basicForVehicle * selectIMT) / 100 ;
+    double odBeforeNcb = basicAfterDiscount + geographicalExtensionAmount + overturningAmount + imt23Amount;
     double ncbAmount = (odBeforeNcb * ncbPercentage) / 100;
     double totalA = odBeforeNcb - ncbAmount;
 
     // TP Section
     double liabilityPremiumTP = _getTpRate(vehicleType);
     double totalB = liabilityPremiumTP +
-     geographicalExtensionAmount + 
      paOwnerDriver + 
      llToPaidDriver + 
      llLEmployeeOther;
@@ -179,7 +183,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
 
       // B - Liability Premium
       "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-      "Geographical Ext": geographicalExtensionAmount.toStringAsFixed(2),
+      //"Geographical Ext": geographicalExtensionAmount.toStringAsFixed(2),
       "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
       "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
       "LL to Employee Other than Paid Driver": llLEmployeeOther.toStringAsFixed(2),
@@ -216,10 +220,16 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
       controller.clear();
     }
     setState(() {
+      _selectedAge = null;
+      _selectedDepreciation = null;
+      _selectedOverTurningForCranes = null;
+      _selectedVehicleType = null;
+      _selectedGeographicalExt = null;
       _selectedZone = null;
       _selectedNcb = null;
       _selectedImt23 = null;
-      _selectedLlPaidDriver = null;
+      _selectedLlPaidDriver = '50'; // Reset to default value
+      _selectedLlEmployeeOther = null;
     });
   }
 
@@ -349,7 +359,9 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
               // Required validation
               if (value == null || value.trim().isEmpty) {
                 return 'Enter $label';
-              }}
+              }
+              return null; // Add missing return statement
+            }
             ),
           ),
         ],
@@ -359,7 +371,6 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
 
   Widget _buildDropdownField(
     String label, List<String> options, String? selected, Function(String?) onChanged) {
-             String? keyName; // Optional: pass a key for validation skip
         const optionalDropdowns = [
     'LL to Paid Driver','LL to Employee Other than Paid Driver','No Claim Bonus (%)','IMT 23',
     'Geographical Extension','Over Turning for Cranes' // matches label or keyName
@@ -393,8 +404,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
             decoration: const InputDecoration(border: OutlineInputBorder()),
              validator: (value) {
               // Skip validation if optional
-              if (optionalDropdowns.contains(label) ||
-                  (keyName!= null && optionalDropdowns.contains(keyName))) {
+              if (optionalDropdowns.contains(label)) {
                 return null;
               }
 
@@ -417,19 +427,19 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
 
 
 
-double _getOdRate(String zone, double ageOfVehicle) {
+double _getOdRate(String zone, String ageCategory) {
   if (zone == 'A') {
-    if (ageOfVehicle <= 5) return 1.208;
-    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.238;
-    if (ageOfVehicle > 7) return 1.268;
+    if (ageCategory == 'Upto 5 Years') return 1.208;
+    if (ageCategory == '6-7 Years') return 1.238;
+    return 1.268; // Above 7 Years
   } else if (zone == 'B') {
-    if (ageOfVehicle <= 5) return 1.202;
-    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.232;
-    if (ageOfVehicle > 7) return 1.262;
+    if (ageCategory == 'Upto 5 Years') return 1.202;
+    if (ageCategory == '6-7 Years') return 1.232;
+    return 1.262; // Above 7 Years
   } else if (zone == 'C') {
-    if (ageOfVehicle <= 5) return 1.190;
-    if (ageOfVehicle > 5 && ageOfVehicle <= 7) return 1.220;
-    if (ageOfVehicle > 7) return 1.250;
+    if (ageCategory == 'Upto 5 Years') return 1.190;
+    if (ageCategory == '6-7 Years') return 1.220;
+    return 1.250; // Above 7 Years
   }
 
   return 1.20; // Safe fallback
@@ -439,9 +449,9 @@ double _getTpRate(String vehicleType) {
   switch (vehicleType) {
     case 'Others Vehicle':
       return 7267;
-    case 'Agriculture Tractors upto 6 Hp':
-      return 1645;
+    case 'Agriculture upto 6 HP':
+      return 910;
     default:
-      return 0; // generic misc vehicle rate
+      return 7267; // default to Others Vehicle rate
   }
 }

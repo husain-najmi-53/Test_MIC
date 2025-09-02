@@ -63,6 +63,8 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
       _controllers[key] = TextEditingController();
     }
     _controllers['idv']!.addListener(_updateCurrentIdv);
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
   }
 
   @override

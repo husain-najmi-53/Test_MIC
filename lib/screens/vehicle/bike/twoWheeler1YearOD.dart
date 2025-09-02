@@ -52,6 +52,13 @@ class _TwoWheeler1YearODFormScreenState
   final List<String> _llPaidDriverOptions = ['0', '50'];
 
   @override
+  void initState() {
+    super.initState();
+    // Auto-select LL to Paid Driver to 50
+    _selectedLLPaidDriver = '50';
+  }
+
+  @override
   void dispose() {
     for (var controller in _controllers.values) {
       controller.dispose();
@@ -427,27 +434,35 @@ double _getOdRate(String zone, String age, int cc) {
   if (zone == 'A') {
     if (cc <= 150) {
       if (age == 'Upto 5 Years') return 1.708;
-      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.793;
+      if (age == '6-10 Years') return 1.793;
+      if (age == 'Above 10 Years') return 1.886; // Corrected rate
     } else if (cc <= 350) {
       if (age == 'Upto 5 Years') return 1.793;
-      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.883;
-    } else {
+      if (age == '6-10 Years') return 1.883;
+      if (age == 'Above 10 Years') return 1.978; // Corrected rate
+    } else { // cc > 350
       if (age == 'Upto 5 Years') return 1.879;
-      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.973;
+      if (age == '6-10 Years') return 1.973;
+      if (age == 'Above 10 Years') return 2.020; // Corrected rate
     }
   } else if (zone == 'B') {
     if (cc <= 150) {
       if (age == 'Upto 5 Years') return 1.676;
-      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.760;
+      if (age == '6-10 Years') return 1.760;
+      if (age == 'Above 10 Years') return 1.802; // Corrected rate
     } else if (cc <= 350) {
       if (age == 'Upto 5 Years') return 1.760;
-      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.848;
-    } else {
-      if (age == 'Upto 5 Years') return 1.884;
-      if (age == '6-10 Years' || age == 'Above 10 Years') return 1.936;
+      if (age == '6-10 Years') return 1.848;
+      if (age == 'Above 10 Years') return 1.892; // Corrected rate
+    } else { // cc > 350
+      if (age == 'Upto 5 Years') return 1.844; // Corrected rate
+      if (age == '6-10 Years') return 1.936;
+      if (age == 'Above 10 Years') return 1.982; // Corrected rate
     }
   }
 
-  return 1.936; // fallback
+  // Fallback for invalid input. Returning -1 is a better practice
+  // than returning a rate value that corresponds to valid data.
+  return -1.0; 
 }
 

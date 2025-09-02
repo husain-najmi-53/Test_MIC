@@ -56,6 +56,13 @@ class _ThreeWheelerPCV_upto6PassengerState
   ];
 
   @override
+  void initState() {
+    super.initState();
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
+  }
+
+  @override
   void dispose() {
     for (var controller in _controllers.values) {
       controller.dispose();
@@ -218,7 +225,7 @@ class _ThreeWheelerPCV_upto6PassengerState
       'No. of Passengers': numberOfPassengers.toString(),
 
       // A - Own Damage Premium Package
-      "Base OD Rate (%)": vehicleBasicRate.toStringAsFixed(2),
+      "Base OD Rate (%)": vehicleBasicRate.toStringAsFixed(3),
       "Basic OD Premium": basicForVehicle.toStringAsFixed(2),
       "IMT 23 Loading": imt23Loading.toStringAsFixed(2),
       "CNG/LPG Kit Loading": cngKitLoading.toStringAsFixed(2),

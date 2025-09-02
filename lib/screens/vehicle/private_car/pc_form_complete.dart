@@ -57,7 +57,7 @@ class _PCFormCompleteState extends State<PCFormComplete> {
     '15000',
   ];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
-  final List<String> _llPaidDriverOptions = ['0', '250'];
+  final List<String> _llPaidDriverOptions = ['0', '50'];
   final List<String> _depreciationOptions = [
     '0%',
     '5%',
@@ -115,6 +115,8 @@ class _PCFormCompleteState extends State<PCFormComplete> {
     */
       //17
     };
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
   }
 
   @override
@@ -165,7 +167,7 @@ class _PCFormCompleteState extends State<PCFormComplete> {
     if (_formKey.currentState!.validate()) {
       // Fetch form inputs
       double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
-      double currentIdv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+      double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
       String yearOfManufacture = _controllers['yearOfManufacture']!.text;
       String zone = _selectedZone ?? "A";
       int cubicCapacity =
@@ -265,7 +267,7 @@ class _PCFormCompleteState extends State<PCFormComplete> {
               CNG_LPG_kits_Ex_fitted +
               OptionalExtensions) -
           TotalDiscounts;
-      double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
+      double ncbAmount = (ncbPercentage / 100) * totalBasicPremium.abs();
       double netOdPremium = totalBasicPremium - ncbAmount;
       double totalA = netOdPremium;
 

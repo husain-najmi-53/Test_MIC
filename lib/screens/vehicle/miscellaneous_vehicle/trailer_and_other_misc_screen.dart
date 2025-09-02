@@ -91,6 +91,13 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
   final List<String> _restrictedTppdOptions = ['Yes', 'No'];
 
   @override
+  void initState() {
+    super.initState();
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
+  }
+
+  @override
   void dispose() {
     for (var controller in _controllers.values) {
       controller.dispose();
@@ -162,7 +169,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
               _controllers['currentIdv (Attached Trailer)']!.text) ??
           0.0;
       // double DepreciationAttached = double.tryParse(_controllers['Depreciation (Attached trailer)']!.text) ?? 0.0;
-      double ageOfVehicle = double.tryParse(_selectedAge ?? '0') ?? 0.0;
+      String ageCategory = _selectedAge ?? 'Upto 5 Years';
       String yearOfManufacture = _controllers['Year_of_manufacture']!.text;
       String zone = _selectedZone ?? "A";
       double imt23 = _selectedImt23 == 'Yes' ? 15.0 : 0.0; // IMT 23 percentage
@@ -201,7 +208,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
 
       // Get base rate from function
       double vehicleBasicRate =
-          _getOdRate(zone, selectedTrailerTowedBy, ageOfVehicle);
+          _getOdRate(zone, selectedTrailerTowedBy, ageCategory);
 
       // OD Calculations
       double trailerODRate = 1.0; //change this when confirmed
@@ -223,7 +230,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       double discountOnODPremium =
           basicODBeforePremium * discountRate / 100; //Discount on OD Premium
       double loadingOnODPremium =
-          basicODBeforePremium * loadingRate / 100; //Loading on OD Premium
+          discountOnODPremium * loadingRate / 100; //Loading on OD Premium
       double basicODBeforeNCB = basicODBeforePremium -
           discountOnODPremium +
           loadingOnODPremium; //Basic OD Before NCB
@@ -233,15 +240,16 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       double totalA = netOwnDamage;
 
       // TP Section
-      double trailerTpRate = 7267; //change this when confirmed
+      double trailerTpRate = 2485; //change this when confirmed
       double trailerLiabilityTP =
           noOfTrailersAttached * trailerTpRate; //Trailer Liability Premium (TP)
-      double cngLpgKitTP = _selectedCNG == "Yes" ? 4 : 0.0;
+      //double cngLpgKitTP = _selectedCNG == "Yes" ? 4 : 0.0;
+      double cngLpgValue = (cngLpgKitValue * cngLpgRate) /100;
 
       double liabilityPremiumTP = _getTpRate(selectedTrailerTowedBy);
       double totalB = liabilityPremiumTP +
           trailerLiabilityTP +
-          cngLpgKitTP +
+          cngLpgValue +
           paOwnerDriver +
           llPaidDriver +
           restrictedTPPDValue +
@@ -285,7 +293,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
         "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
         "Trailer Liability Premium (TP)": trailerLiabilityTP.toStringAsFixed(2),
         "Restricted TPPD": restrictedTPPDValue.toStringAsFixed(2),
-        "CNG/LPG Kit": cngLpgKitTP.toStringAsFixed(2),
+        "CNG/LPG Kit": cngLpgValue.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "LL to Employee Other than Paid Driver":
@@ -324,11 +332,17 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       controller.clear();
     }
     setState(() {
+      _selectedTrailerTowedBy = null;
+      _selectedDepreciation = null;
+      _selectedDepreciationAttached = null;
+      _selectedOverturningForCranes = null;
       _selectedAge = null;
       _selectedZone = null;
-      _selectedNcb = null;
+      _selectedCNG = null;
       _selectedImt23 = null;
-      _selectedLlPaidDriver = null;
+      _selectedNcb = null;
+      _selectedLlPaidDriver = '50'; // Reset to default value
+      _selectedLlEmployeeOther = null;
       _selectedRestrictedTppd = null;
     });
   }
@@ -524,6 +538,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+                  return null; // Add missing return statement
                 }),
           ),
         ],
@@ -533,7 +548,6 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
 
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged) {
-    String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
       'Restricted TPPD', 'LL to Employee (Other Than Paid Driver)',
       'LL to Paid Driver', 'No Claim Bonus(%)',
@@ -568,8 +582,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 
@@ -589,22 +602,22 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
   }
 }
 
-double _getOdRate(String zone, String trailerTowedBy, double ageOfVehicle) {
+double _getOdRate(String zone, String trailerTowedBy, String ageCategory) {
   zone = zone.toUpperCase();
   trailerTowedBy = trailerTowedBy.toLowerCase();
 
   if (zone == 'A') {
-    if (ageOfVehicle <= 5) return 1.208;
-    if (ageOfVehicle <= 7) return 1.238;
-    return 1.268;
+    if (ageCategory == 'Upto 5 Years') return 1.208;
+    if (ageCategory == '6-7 Years') return 1.238;
+    return 1.268; // Above 7 Years
   } else if (zone == 'B') {
-    if (ageOfVehicle <= 5) return 1.202;
-    if (ageOfVehicle <= 7) return 1.232;
-    return 1.262;
+    if (ageCategory == 'Upto 5 Years') return 1.202;
+    if (ageCategory == '6-7 Years') return 1.232;
+    return 1.262; // Above 7 Years
   } else if (zone == 'C') {
-    if (ageOfVehicle <= 5) return 1.190;
-    if (ageOfVehicle <= 7) return 1.220;
-    return 1.250;
+    if (ageCategory == 'Upto 5 Years') return 1.190;
+    if (ageCategory == '6-7 Years') return 1.220;
+    return 1.250; // Above 7 Years
   }
   return 0.0;
 }
@@ -613,10 +626,10 @@ double _getTpRate(String trailerTowedBy) {
   trailerTowedBy = trailerTowedBy.toLowerCase();
 
   if (trailerTowedBy == 'Agriculture Tractors upto 6 HP') {
-    return 1645;
+    return 910;
   } else if (trailerTowedBy == 'Other Vehicle') {
     return 7267;
   } else {
-    return 1645; // fallback/default TP premium if type unknown
+    return 7267; // fallback/default TP premium if type unknown
   }
 }

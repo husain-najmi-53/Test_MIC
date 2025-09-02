@@ -59,6 +59,13 @@ class _AgricultureTractorFormScreenState
   final List<String> _restrictedTppdOptions = ['Yes', 'No'];
 
   @override
+  void initState() {
+    super.initState();
+    // Auto-select LL to Paid Driver to 50
+    _selectedLlPaidDriver = '50';
+  }
+
+  @override
   void dispose() {
     for (var controller in _controllers.values) {
       controller.dispose();
@@ -108,7 +115,6 @@ void _submitForm() {
     // Fetch form inputs
     // double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
     double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
-    double ageOfVehicle = double.tryParse(_selectedAge ?? '0') ?? 0.0;
     String yearOfManufacture = _controllers['yearOfManufacture']!.text;
     String zone = _selectedZone ?? "A";
     double selectedCNG = (_selectedCNG?.toLowerCase() == 'yes') ? 60.0 : 0.0;   // change the cng/ppg rate once confirmed from clinet
@@ -128,7 +134,7 @@ void _submitForm() {
 
     // Get base rate from function
     double vehicleBasicRate =
-        _getOdRate(zone, ageOfVehicle);
+        _getOdRate(zone, _selectedAge ?? 'Upto 5 Years');
 
     // OD Calculations
       // 2. Basic for Vehicle
@@ -138,7 +144,7 @@ void _submitForm() {
       double cngLpgPremium = (cngKitExternal * selectedCNG) / 100;
       
       // 4. Basic OD Premium
-      double basicOdPremium = basicForVehicle + cngLpgPremium + cngLpgPremium;
+      double basicOdPremium = basicForVehicle + cngLpgPremium;
       
       // 5. IMT 23
       double imt23 = (basicForVehicle * imt23Value) / 100;
@@ -163,8 +169,10 @@ void _submitForm() {
       double totalA = netOwnDamagePremium ;
 
     // TP Section
-    double cngLpgRate = 4.0;   // change to actual IRDA rate
+    double cngLpgRate = 60;   // change to actual IRDA rate
     double cngLpgKit = (cngKitExternal* cngLpgRate) / 100;
+    double llToPassengerRate = 50.0;
+    double llToPassenger = ll2Passenger * llToPassengerRate;
     double liabilityPremiumTP = _getTpRate();
     double totalB = liabilityPremiumTP +
       paOwnerDriver +
@@ -172,8 +180,7 @@ void _submitForm() {
       cngLpgKit+
       llLEmployeeOther+
       restrictedTppd+
-      otherCess+
-      ll2Passenger;
+      llToPassenger;
 
 
 
@@ -187,7 +194,7 @@ void _submitForm() {
     Map<String, String> resultMap = {
       // Basic Details
       "IDV": currentIdv.toStringAsFixed(2),
-      "Year of Manufacture": yearOfManufacture.toString(),
+      "Year of Manufacture": yearOfManufacture,
       "Zone": zone,
 
       // A - Own Damage Premium Package
@@ -211,7 +218,7 @@ void _submitForm() {
       "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
       "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
       "LL to Employee/Other": llLEmployeeOther.toStringAsFixed(2),
-      "LL to Passenger":ll2Passenger.toStringAsFixed(2),
+      "LL to Passenger":llToPassenger.toStringAsFixed(2),
       "Total B": totalB.toStringAsFixed(2),
 
       // C - Total Premium
@@ -246,6 +253,7 @@ void _submitForm() {
     }
     setState(() {
       _selectedAge = null;
+      _selectedDepreciation = null;
       _selectedZone = null;
       _selectedNcb = null;
       _selectedImt23 = null;
@@ -381,7 +389,9 @@ void _submitForm() {
               // Required validation
               if (value == null || value.trim().isEmpty) {
                 return 'Enter $label';
-              }}
+              }
+              return null; // Valid input
+            }
             ),
           ),
         ],
@@ -391,7 +401,6 @@ void _submitForm() {
 
   Widget _buildDropdownField(
       String label, List<String> options, String? selected, Function(String?) onChanged) {
-        String? keyName; // Optional: pass a key for validation skip
         const optionalDropdowns = [
     'Restricted TPPD','LL to Employee other than Paid Driver','LL to Paid Driver',
     'No Claim Bonus','IMT 23','CNG/LPG kits' // matches label or keyName
@@ -409,8 +418,7 @@ void _submitForm() {
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
               // Skip validation if optional
-              if (optionalDropdowns.contains(label) ||
-                  (keyName!= null && optionalDropdowns.contains(keyName))) {
+              if (optionalDropdowns.contains(label)) {
                 return null;
               }
 
@@ -431,25 +439,25 @@ void _submitForm() {
 }
 
 
-double _getOdRate(String zone, double age) {
+double _getOdRate(String zone, String ageCategory) {
   if (zone == 'A') {
-    if (age <= 5) return 1.208;
-    if (age <= 7) return 1.238;
-    return 1.268; // Above 7 years
+    if (ageCategory == 'Upto 5 Years') return 1.208;
+    if (ageCategory == '6-7 Years') return 1.238;
+    return 1.268; // 'Above 7 Years'
   } 
   else if (zone == 'B') {
-    if (age <= 5) return 1.202;
-    if (age <= 7) return 1.232;
-    return 1.262;
+    if (ageCategory == 'Upto 5 Years') return 1.202;
+    if (ageCategory == '6-7 Years') return 1.232;
+    return 1.262; // 'Above 7 Years'
   }
   else if (zone == 'C') {
-    if (age <= 5) return 1.190;
-    if (age <= 7) return 1.220;
-    return 1.250;
+    if (ageCategory == 'Upto 5 Years') return 1.190;
+    if (ageCategory == '6-7 Years') return 1.220;
+    return 1.250; // 'Above 7 Years'
   }
 
   // Safe fallback rate
-  return 1.75; 
+  return 1.208; 
 }
 
 
@@ -466,5 +474,5 @@ double _getTpRate() {
   // As per IRDAI, Tractor 
   // or a similar commercial vehicle class. The rate is a fixed amount.
   // This is a representative rate and must be verified with the latest IRDAI circular.
-  return 1645; // A fixed rate, for instance, based on vehicles up to 7500 kg GVW.
+  return 910; // A fixed rate, for instance, based on vehicles up to 7500 kg GVW.
 }
