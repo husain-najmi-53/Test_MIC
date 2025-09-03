@@ -144,7 +144,6 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
       String zone = _selectedZone ?? "A";
       double selectNCB =
           double.tryParse((_selectedNcb ?? "0").replaceAll('%', '')) ?? 0.0;
-      double selectedCNG = double.tryParse(_selectedCNG ?? "0") ?? 0.0;
       double currentIdv =
           double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
       double discountOnOd =
@@ -165,7 +164,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
       double llEmployeeOther =
           double.tryParse(_selectedLlEmployeeOther ?? "0") ?? 0.0;
       double restrictedTppd = _selectedRestrictedTppd == 'Yes'
-          ? 100.0
+          ? 200.0
           : 0.0; // Assuming a fixed value for restricted TPPD
 
       // Get base rate from function
@@ -173,19 +172,20 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
           _getOdRate(zone, _selectedAge ?? 'Upto 5 Years');
 
       // OD Calculations
-      double cngLpgRate = 60; // change when got IRDA from client
       double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
-      double cngLpgValue = (cngLpgKitsExFitted * cngLpgRate) /
-          100; //  CNG/LPG kit (Externally Fitted)
-      // double imt23Value = (basicForVehicle * selectIMT) / 100;      // IMT 23
+     double cngLpgPremium = 0.0;
+      if (_selectedCNG == 'Yes' && cngLpgKitsExFitted > 0) {
+        cngLpgPremium = (cngLpgKitsExFitted / 1000) * 60;
+      } //  CNG/LPG kit (Externally Fitted)
       double imt23Value = (basicForVehicle * selectIMT) / 100;
       double basicOdPremium =
-          basicForVehicle + cngLpgValue + imt23Value; // Basic OD Premium
+          basicForVehicle + cngLpgPremium; // Basic OD Premium (without IMT)
       double basicOdBeforeDiscount =
-          basicOdPremium + imt23Value; //  Basic OD Before Discount
+          basicOdPremium + imt23Value; //  Basic OD Before Discount (includes IMT)
       double discountValue = (basicOdBeforeDiscount * discountOnOd) /
           100; //  Discount on OD Premium
-      double loadingValue = (discountValue * loadingOnDiscountPremium) /
+      double basicOdAfterDiscPremium = basicOdBeforeDiscount - discountValue;
+      double loadingValue = (basicOdAfterDiscPremium * loadingOnDiscountPremium) /
           100; // Loading on OD Premium
       double basicOdBeforeNcb = basicOdBeforeDiscount -
           discountValue +
@@ -197,14 +197,16 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
 
       // TP Section
       // double cngLpgRate = 4.0;
-     double llToPassengerRate = 50.0;
-      double cngLpgKit = (cngLpgKitsExFitted * cngLpgRate) / 100;
+      double llToPassengerRate = 60.0;
+      double cngTpExtra = 0.0;
+      if (_selectedCNG == 'Yes') {
+        cngTpExtra = 60;
+      }
       double llToPassenger = ll2Passenger * llToPassengerRate;
       double liabilityPremiumTP = _getTpRate();
-      double totalB = liabilityPremiumTP +
+      double totalB = liabilityPremiumTP -
           restrictedTppd +
-          selectedCNG +
-          cngLpgKit +
+          cngTpExtra +
           paOwnerDriver +
           llToPaidDriver +
           llEmployeeOther +
@@ -213,8 +215,8 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
       // Total Premium (C)
       double totalAB = totalA + totalB;
       double gst = totalAB * 0.18;
-      otherCess = (otherCess * totalAB) / 100;
-      double finalPremium = totalAB + gst + otherCess;
+      double otherCessAmt = (otherCess * totalAB) / 100;
+      double finalPremium = totalAB + gst + otherCessAmt;
 
       // Result Map
       Map<String, String> resultMap = {
@@ -226,7 +228,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
         // A - Own Damage Premium Package
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-        "CNG/LPG kit (Externally Fitted)": cngLpgValue.toStringAsFixed(2),
+        "CNG/LPG kit (Externally Fitted)": cngLpgPremium.toStringAsFixed(2),
         "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
         "IMT23": imt23Value.toStringAsFixed(2),
         "Basic OD Before Discount": basicOdBeforeDiscount.toStringAsFixed(2),
@@ -240,7 +242,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
         // B - Liability Premium
         "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppd.toStringAsFixed(2),
-        "CNG/LPG Kit": cngLpgKit.toStringAsFixed(2),
+        "CNG/LPG Kit": cngTpExtra.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "LL to Employee Other than Paid Driver":
@@ -251,7 +253,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
         // C - Total Premium
         "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
         "GST @ 18%": gst.toStringAsFixed(2),
-        "Other CESS": otherCess.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2),
 
         // Final Premium
         "Final Premium": finalPremium.toStringAsFixed(2),
@@ -287,6 +289,8 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
       _selectedImt23 = null;
       _selectedLlPaidDriver = null;
       _selectedRestrictedTppd = null;
+      _selectedCNG = null;
+      _selectedLlEmployeeOther = null;
     });
   }
 

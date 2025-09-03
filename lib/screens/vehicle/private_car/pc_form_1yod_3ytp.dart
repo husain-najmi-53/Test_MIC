@@ -185,9 +185,15 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
       double basicOdAfterDiscount = basicForVehicle - discountAmount;
       basicOdAfterDiscount +=
           (basicOdAfterDiscount * loading_on_discount_premium) / 100;
-      double accessoriesValue = electricAccessories + nonElectricAccessories;
+      double electricAccessoriesValue = electricAccessories==0.0?0.0:(electricAccessories/1000)*40;
+      double nonElectricAccessoriesValue = nonElectricAccessories==0.0?0.0:(nonElectricAccessories/1000)*30;
+      double accessoriesValue = electricAccessoriesValue + nonElectricAccessoriesValue;
+      double cngLpgPremium = 0.0;
+      if (_cngLpgKitOptions == 'Yes' && CNG_LPG_kits_Ex_fitted > 0) {
+        cngLpgPremium = (CNG_LPG_kits_Ex_fitted / 1000) * 60;
+      }
       double totalBasicPremium =
-          basicOdAfterDiscount + accessoriesValue + CNG_LPG_kits_Ex_fitted;
+          basicOdAfterDiscount + accessoriesValue + cngLpgPremium;
       double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
       double netOdPremium = totalBasicPremium - ncbAmount;
       double totalA = netOdPremium;

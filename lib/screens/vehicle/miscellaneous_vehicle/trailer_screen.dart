@@ -171,26 +171,31 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
 
       // OD Calculations
       double basicOdPremium = (currentIdv * vehicleBasicRate) / 100;
-
-// Discount amount on OD premium (percentage)
-      double discountOdPremium = (basicOdPremium * discountOnOd) / 100;
-
-// Loading amount on OD premium (percentage)
-      double loadingOdPremium =
-          (discountOdPremium * loadingOnDiscountPremium) / 100;
-
 // IMT 23 loading (percentage)
       double imt23Amount = (basicOdPremium * selectIMT) / 100;
 
 // CNG/LPG kit premium (fixed amount), add only if selected
 // double cngPremium = cngSelected == 1 ? cngExternally : 0;
-      double cngLpgPremium = (cngExternally * cngSelected) / 100;
+      double cngLpgPremium = 0.0;
+      if (_selectedCNG == 'Yes' && cngExternally > 0) {
+        cngLpgPremium = (cngExternally / 1000) * 60;
+      }
+      basicOdPremium = imt23Amount + cngLpgPremium + basicOdPremium;
+
+      double basicOdBeforeDiscount =
+          imt23Amount + cngLpgPremium + basicOdPremium;
+
+// Discount amount on OD premium (percentage)
+      double discountOdPremium = (basicOdBeforeDiscount * discountOnOd) / 100;
+
+      double basicOdAfterDiscPremium =
+          basicOdBeforeDiscount - discountOdPremium;
+// Loading amount on OD premium (percentage)
+      double loadingOdPremium =
+          (basicOdAfterDiscPremium * loadingOnDiscountPremium) / 100;
 
 // OD premium before applying NCB
-      double odBeforeNcb = (basicOdPremium - discountOdPremium) +
-          loadingOdPremium +
-          imt23Amount +
-          cngLpgPremium;
+      double odBeforeNcb = basicOdAfterDiscPremium + loadingOdPremium;
 
 // NCB amount (percentage discount)
       double ncbAmount = (odBeforeNcb * ncbPercentage) / 100;
@@ -199,12 +204,15 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
       double totalA = odBeforeNcb - ncbAmount;
 
       // TP Section
-      double cngLpgRate = 60; // change to actual IRDA rate
-      double cngLpgKit = (cngExternally * cngLpgRate) / 100;
+      double cngTpExtra = 0.0;
+      if (_selectedCNG == 'Yes') {
+        cngTpExtra = 60;
+      }
       double liabilityPremiumTP = _getTpRate(trailerTowedBy.toString());
+      liabilityPremiumTP = liabilityPremiumTP * noOfTrailers;
       double totalB = liabilityPremiumTP +
           restrictedTppd +
-          cngLpgKit +
+          cngTpExtra +
           paOwnerDriver +
           llPaidDriver +
           llLEmployeeOther;
@@ -212,8 +220,8 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
       // Total Premium (C)
       double totalAB = totalA + totalB;
       double gst = totalAB * 0.18;
-      otherCess = (otherCess * totalAB) / 100;
-      double finalPremium = totalAB + gst + otherCess;
+      double otherCessAmt = (otherCess * totalAB) / 100;
+      double finalPremium = totalAB + gst + otherCessAmt;
 
       // Result Map
       Map<String, String> resultMap = {
@@ -229,7 +237,8 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
         "Basic for Vehicle": basicOdPremium.toStringAsFixed(2),
         "IMT 23": imt23Amount.toStringAsFixed(2),
         "CNG/LPG kit (Externally Fitted)": cngLpgPremium.toStringAsFixed(2),
-        "Basic OD Premium Before discount": basicOdPremium.toStringAsFixed(2),
+        "Basic OD Premium Before discount":
+            basicOdBeforeDiscount.toStringAsFixed(2),
         "Discount on OD Premium": discountOdPremium.toStringAsFixed(2),
         "Loading on OD Premium": loadingOdPremium.toStringAsFixed(2),
         "Basic OD Before NCB": odBeforeNcb.toStringAsFixed(2),
@@ -240,7 +249,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
         // B - Liability Premium
         "Trailer Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppd.toStringAsFixed(2),
-        "CNG/LPG Kit": cngLpgKit.toString(),
+        "CNG/LPG Kit": cngTpExtra.toString(),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "LL to Employee Other than Paid Driver":
@@ -251,7 +260,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
         // C - Total Premium
         "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
         "GST @ 18%": gst.toStringAsFixed(2),
-        "Other CESS": otherCess.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2),
 
         // Final Premium
         "Final Premium": finalPremium.toStringAsFixed(2),

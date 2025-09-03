@@ -197,7 +197,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       double llToPaidDriver =
           double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
       double restrictedTPPDValue =
-          (_selectedRestrictedTppd == "Yes") ? 100 : 0.0;
+          (_selectedRestrictedTppd == "Yes") ? 200 : 0.0;
       double noOfTrailersAttached =
           double.tryParse(_controllers['No_of_trailers(Attached)']!.text) ??
               0.0;
@@ -211,47 +211,59 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
           _getOdRate(zone, selectedTrailerTowedBy, ageCategory);
 
       // OD Calculations
-      double trailerODRate = 1.0; //change this when confirmed
-      double cngLpgRate = 4.0; // change this when confirmed
+      //double trailerODRate = 1.0; //change this when confirmed
       double basicForVehicle =
           currentIdv * vehicleBasicRate / 100; //Basic for Vehicle
-      double trailerOD = currentIdv * trailerODRate / 100; //Trailer OD
-      double basicODPremium =
-          basicForVehicle + trailerOD; //Basic OD Premium (before crane/imt/cng)
+      double trailerOD = currentIdvAttached * vehicleBasicRate / 100; //Trailer OD
+      double basicODPremium = basicForVehicle + trailerOD; //Basic OD Premium (before crane/imt/cng)
+
       double overturningCranePremium =
           basicODPremium * overturningForCranes / 100; //Overturning for Cranes
+
+      double cngLpgPremium = 0.0;
+      if (_selectedCNG == 'Yes' && cngLpgKitValue > 0) {
+        cngLpgPremium = (cngLpgKitValue / 1000) * 60;
+      }
+
       double imt23Loading = basicODPremium * imt23 / 100; //IMT 23
-      double cngLpgPremium =
-          cngLpgKitValue * cngLpgRate / 100; // CNG/LPG kit (Externally Fitted)
+
+
       double basicODBeforePremium = basicODPremium +
           overturningCranePremium +
           imt23Loading +
           cngLpgPremium; // Basic OD Before Discount
+
       double discountOnODPremium =
           basicODBeforePremium * discountRate / 100; //Discount on OD Premium
+
+
+      double basicOdAfterDiscPremium = basicODBeforePremium - discountOnODPremium;
+
       double loadingOnODPremium =
-          discountOnODPremium * loadingRate / 100; //Loading on OD Premium
-      double basicODBeforeNCB = basicODBeforePremium -
-          discountOnODPremium +
+          basicOdAfterDiscPremium * loadingRate / 100; //Loading on OD Premium
+
+      double basicODBeforeNCB = basicOdAfterDiscPremium +
           loadingOnODPremium; //Basic OD Before NCB
+
       double ncbAmount = basicODBeforeNCB * ncbRate / 100; //No Claim Bonus
       double netOwnDamage =
           basicODBeforeNCB - ncbAmount; // Net Own Damage Premium
       double totalA = netOwnDamage;
 
       // TP Section
+      double cngLpgRate = 60; // change this when confirmed
       double trailerTpRate = 2485; //change this when confirmed
       double trailerLiabilityTP =
           noOfTrailersAttached * trailerTpRate; //Trailer Liability Premium (TP)
       //double cngLpgKitTP = _selectedCNG == "Yes" ? 4 : 0.0;
-      double cngLpgValue = (cngLpgKitValue * cngLpgRate) /100;
+      double cngLpgValue = _selectedCNG == 'Yes'?cngLpgRate:0.0;
 
       double liabilityPremiumTP = _getTpRate(selectedTrailerTowedBy);
       double totalB = liabilityPremiumTP +
           trailerLiabilityTP +
           cngLpgValue +
           paOwnerDriver +
-          llPaidDriver +
+          llPaidDriver -
           restrictedTPPDValue +
           llLEmployeeOther +
           ll2Passenger;
@@ -259,15 +271,14 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       // Total Premium (C)
       double totalAB = totalA + totalB;
       double gst = totalAB * 0.18;
-      otherCess = (otherCess * totalAB) / 100;
-      double finalPremium = totalAB + gst + otherCess;
+      double otherCessAmt = (otherCess * totalAB) / 100;
+      double finalPremium = totalAB + gst + otherCessAmt;
 
       // Result Map
       Map<String, String> resultMap = {
         // Basic Details
         "IDV": currentIdv.toStringAsFixed(2),
-        "Trailer IDV (Attached trailer)":
-            (currentIdvAttached * 0.1).toStringAsFixed(2),
+        "Trailer IDV (Attached trailer)": currentIdvAttached.toStringAsFixed(2),
         "No of Trailers (Attached)": noOfTrailersAttached.toStringAsFixed(2),
         "Trailer Towed By": _selectedTrailerTowedBy ?? 'Other Vehicle',
         "Year of Manufacture": yearOfManufacture.toString(),
@@ -280,8 +291,8 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
         "Basic OD Premium": basicODPremium.toStringAsFixed(2),
         "Overturning for Cranes": overturningCranePremium.toStringAsFixed(2),
         "IMT 23": imt23Loading.toStringAsFixed(2),
-        "CNG/LPG kit (Externally Fitted)": cngLpgKitValue.toStringAsFixed(2),
-        "Basic OD Premium before discount": basicODPremium.toStringAsFixed(2),
+        "CNG/LPG kit (Externally Fitted)": cngLpgPremium.toStringAsFixed(2),
+        "Basic OD Premium before discount": basicODBeforePremium.toStringAsFixed(2),
         "Discount on OD Premium": discountOnODPremium.toStringAsFixed(2),
         "Loading on OD Premium": loadingOnODPremium.toStringAsFixed(2),
         "Basic OD Before NCB": basicODBeforeNCB.toStringAsFixed(2),
@@ -303,7 +314,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
         // C - Total Premium
         "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
         "GST @ 18%": gst.toStringAsFixed(2),
-        "Other CESS": otherCess.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2),
 
         // Final Premium
         "Final Premium": finalPremium.toStringAsFixed(2),

@@ -139,7 +139,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
     double basicOdPremium = (currentIdv * vehicleBasicRate) / 100.0;
     double discountAmount = (basicOdPremium * discountOnOd) / 100.0; //discount on OD premium
     double basicAfterDiscount = basicOdPremium - discountAmount; // Basic OD after discount
-    double geographicalExtensionAmount = (basicAfterDiscount * geographicalExtent) / 100.0;
+    double geographicalExtensionAmount = geographicalExtent; // Fixed amount: 0 or 400
     double overturningAmount = (basicAfterDiscount * overturning) / 100.0;
     double imt23Amount = (basicForVehicle * selectIMT) / 100 ;
     double odBeforeNcb = basicAfterDiscount + geographicalExtensionAmount + overturningAmount + imt23Amount;
@@ -158,8 +158,8 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
     // Total Premium (C)
     double totalAB = totalA + totalB;
     double gst = totalAB * 0.18;
-    otherCess = (otherCess * totalAB) / 100;
-    double finalPremium = totalAB + gst + otherCess;
+    double otherCessAmt = (otherCess * totalAB) / 100;
+    double finalPremium = totalAB + gst + otherCessAmt;
 
     // Result Map
     Map<String, String> resultMap = {
@@ -173,7 +173,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
       "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
       "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
       "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-      "Basic OD Premium After discount": basicOdPremium.toStringAsFixed(2),
+      "Basic OD Premium After discount":  basicAfterDiscount.toStringAsFixed(2),
       "Geographical Ext": geographicalExtensionAmount.toStringAsFixed(2),
       "Overturning For Cranes": overturningAmount.toStringAsFixed(2),
       "IMT 23": imt23Amount.toStringAsFixed(2),
@@ -192,7 +192,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
       // C - Total Premium
       "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
       "GST @ 18%": gst.toStringAsFixed(2),
-      "Other CESS": otherCess.toStringAsFixed(2),
+      "Other CESS": otherCessAmt.toStringAsFixed(2),
 
       // Final Premium
       "Final Premium": finalPremium.toStringAsFixed(2),

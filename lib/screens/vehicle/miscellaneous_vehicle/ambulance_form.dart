@@ -138,13 +138,11 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
           double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
       double llLEmployeeOther =
           double.tryParse(_selectedLlEmployeeOther ?? "0") ?? 0.0;
-      double llToPaidDriver =
-          double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
       // double restrictedTppd = double.tryParse(_selectedRestrictedTppd ?? "0")?? 0.0;
       String selectedNCBText = _selectedNcb ?? "0%";
       double ncbPercentage =
           double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
-      double restrictedTppd = _selectedRestrictedTppd == 'Yes' ? 100 : 0.0;
+      double restrictedTppd = _selectedRestrictedTppd == 'Yes' ? 200 : 0.0;
 
       // Get base rate from function
       double vehicleBasicRate =
@@ -166,29 +164,33 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
       double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
 
 // Step 2: CNG/LPG kit (Externally Fitted)
-      int cngLpgRate = 60;
-      double cngLpgPremium =
-          (cngLpgKitsExFitted * cngLpgRate) / 100; // define cngLpgRate
+      double cngLpgPremium = 0.0;
+      if (_selectedCNG == 'Yes' && cngLpgKitsExFitted > 0) {
+        cngLpgPremium = (cngLpgKitsExFitted / 1000) * 60;
+      }
 
 // Step 3: IMT 23 (separate value so you can display it)
       double imt23Value =
           (basicForVehicle * imt23Percent) / 100; // define imt23Percent
 
-// Step 4: Basic OD Premium (with CNG/LPG + IMT 23)
-      double basicOdPremium = basicForVehicle + cngLpgPremium + imt23Value;
+// Step 4: Basic OD Premium (with CNG/LPG, without IMT 23)
+      double basicOdPremium = basicForVehicle + cngLpgPremium;
 
-// Step 5: Basic OD Premium Before Discount
-      double basicOdBeforeDiscount = basicOdPremium;
+// Step 5: Basic OD Premium Before Discount (includes IMT 23)
+      double basicOdBeforeDiscount = basicOdPremium + imt23Value;
 
 // Step 6: Discount on OD Premium
       double discountAmount = (basicOdBeforeDiscount * discountOnOd) / 100;
 
+// Step 6: Basic OD After Discount Premium
+      double basicOdAfterDiscPremium = basicOdBeforeDiscount - discountAmount;
+
 // Step 7: Loading on OD Premium
-      double loadingAmount = (discountAmount * loadingOnDiscountPremium) / 100;
+      double loadingAmount =
+          (basicOdAfterDiscPremium * loadingOnDiscountPremium) / 100;
 
 // Step 8: Basic OD Before NCB
-      double odBeforeNcb =
-          (basicOdBeforeDiscount - discountAmount) + loadingAmount;
+      double odBeforeNcb = basicOdAfterDiscPremium + loadingAmount;
 
 // Step 9: No Claim Bonus
       double ncbAmount = (odBeforeNcb * ncbPercentage) / 100;
@@ -200,18 +202,21 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
       double totalA = netOwnDamagePremium;
 
       // TP Section
-      double llToPassengerRate = 50.0; // change to actual IRDA rate
-     // double cngLpgRate = 4.0; // change to actual IRDA rate
+      double llToPassengerRate = 60.0; // change to actual IRDA rate
       double llToPassenger = ll2Passenger * llToPassengerRate;
       double llToEmployeeOther = llLEmployeeOther;
-      double cngLpgKit = (cngLpgKitsExFitted * cngLpgRate) / 100;
+      double cngTpExtra = 0.0;
+      if (_selectedCNG == 'Yes') {
+        cngTpExtra = 60;
+      }
+
       // double llToPaidDriver = llToPaidDriver;
       // double paOwnerDriver = paOwnerDriver;
       // double restrictedTppd = restrictedTppd;
       double liabilityPremiumTP = _getTpRate();
       double totalB = liabilityPremiumTP +
           paOwnerDriver +
-          cngLpgKit +
+          cngTpExtra -
           restrictedTppd +
           llPaidDriver +
           llToEmployeeOther +
@@ -220,8 +225,8 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
       // Total Premium (C)
       double totalAB = totalA + totalB;
       double gst = totalAB * 0.18;
-      otherCess = (otherCess * totalAB) / 100;
-      double finalPremium = totalAB + gst + otherCess;
+      double otherCessAmt = (otherCess * totalAB) / 100;
+      double finalPremium = totalAB + gst + otherCessAmt;
 
       // Result Map
       Map<String, String> resultMap = {
@@ -233,8 +238,7 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
         // A - Own Damage Premium Package
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-        "CNG/LPG kit (Externally Fitted)":
-            cngLpgKitsExFitted.toStringAsFixed(2),
+        "CNG/LPG kit (Externally Fitted)": cngLpgPremium.toStringAsFixed(2),
         "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
         "IMT 23": imt23Value.toStringAsFixed(2),
         "Basic OD Premium Before discount":
@@ -248,9 +252,9 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
         // B - Liability Premium
         "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppd.toStringAsFixed(2),
-        "CNG/LPG Kit": cngLpgKit.toString(),
+        "CNG/LPG Kit": cngTpExtra.toString(),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-        "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llPaidDriver.toStringAsFixed(2),
         "LL to Employee Other than Paid Driver":
             llLEmployeeOther.toStringAsFixed(2),
         "LL to Passenger": llToPassenger.toStringAsFixed(2),
@@ -259,7 +263,7 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
         // C - Total Premium
         "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
         "GST @ 18%": gst.toStringAsFixed(2),
-        "Other CESS": otherCess.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2),
 
         // Final Premium
         "Final Premium": finalPremium.toStringAsFixed(2),
@@ -295,6 +299,8 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
       _selectedImt23 = null;
       _selectedLlPaidDriver = null;
       _selectedRestrictedTppd = null;
+      _selectedCNG = null;
+      _selectedLlEmployeeOther = null;
     });
   }
 

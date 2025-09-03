@@ -167,7 +167,8 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
     if (_formKey.currentState!.validate()) {
       // Fetch form inputs
       double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
-      double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
+      double currentIdv =
+          double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
       String yearOfManufacture = _controllers['yearOfManufacture']!.text;
       String zone = _selectedZone ?? "A";
       double kwCapacity =
@@ -234,7 +235,6 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
         kiloWatt: kwCapacity,
         isElectric: true,
       ); // ODRate
-      
 
       //values for these Variable
       double basicOD = currentIdv * vehicleBasicRate / 100;
@@ -259,14 +259,24 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
       double basicOdAfterDiscount = basicForVehicle - discountAmount;
       basicOdAfterDiscount +=
           (basicOdAfterDiscount * loading_on_discount_premium) / 100;
-      double accessoriesValue = electricAccessories + nonElectricAccessories;
+      double electricAccessoriesValue =
+          electricAccessories == 0.0 ? 0.0 : (electricAccessories / 1000) * 40;
+      double nonElectricAccessoriesValue = nonElectricAccessories == 0.0
+          ? 0.0
+          : (nonElectricAccessories / 1000) * 30;
+      double accessoriesValue =
+          electricAccessoriesValue + nonElectricAccessoriesValue;
+      double cngLpgPremium = 0.0;
+      if (_cngLpgKitOptions == 'Yes' && CNG_LPG_kits_Ex_fitted > 0) {
+        cngLpgPremium = (CNG_LPG_kits_Ex_fitted / 1000) * 60;
+      }
       double OptionalExtensions =
           geographicalExt + fiberGlassTank + drivingTutions;
       double TotalDiscounts =
           antiTheftValue + handicapValue + AAIValue + VoluntaryDeduct;
       double totalBasicPremium = (basicOdAfterDiscount +
               accessoriesValue +
-              CNG_LPG_kits_Ex_fitted +
+              cngLpgPremium +
               OptionalExtensions) -
           TotalDiscounts;
       double ncbAmount = (ncbPercentage / 100) * totalBasicPremium.abs();
@@ -658,7 +668,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
     String? keyName;
     const optionalDropdowns = [
       'LL to Paid Driver', 'CNG/ LPG kits',
-      'No Claim Bonus (%)','Voluntary Deductible', 'AAI', 'Handicap',
+      'No Claim Bonus (%)', 'Voluntary Deductible', 'AAI', 'Handicap',
       'Anti Theft' // matches label or keyName
     ];
     return Padding(
@@ -713,7 +723,6 @@ double getOdRate({
   double? kiloWatt, // For Electric Vehicle
   required bool isElectric,
 }) {
-  
   // Petrol/Diesel rate table (CC based)
   Map<String, Map<String, List<double>>> rateTableCC = {
     "A": {
@@ -722,9 +731,9 @@ double getOdRate({
       ">1500": [3.440, 3.612, 3.698],
     },
     "B": {
-      "<=1000": [3.039, 3.191,3.267 ],
-      "1001-1500": [3.191, 3.351,3.430],
-      ">1500": [3.343, 3.510,3.594],
+      "<=1000": [3.039, 3.191, 3.267],
+      "1001-1500": [3.191, 3.351, 3.430],
+      ">1500": [3.343, 3.510, 3.594],
     },
   };
 
@@ -736,9 +745,9 @@ double getOdRate({
       ">65": [3.440, 3.612, 3.698],
     },
     "B": {
-      "<=30": [3.039, 3.191,3.267 ],
-      "31-65": [3.191, 3.351,3.430],
-      ">65": [3.343, 3.510,3.594],
+      "<=30": [3.039, 3.191, 3.267],
+      "31-65": [3.191, 3.351, 3.430],
+      ">65": [3.343, 3.510, 3.594],
     },
   };
 

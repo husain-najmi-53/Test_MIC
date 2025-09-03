@@ -117,7 +117,7 @@ void _submitForm() {
     double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
     String yearOfManufacture = _controllers['yearOfManufacture']!.text;
     String zone = _selectedZone ?? "A";
-    double selectedCNG = (_selectedCNG?.toLowerCase() == 'yes') ? 60.0 : 0.0;   // change the cng/ppg rate once confirmed from clinet
+    //double selectedCNG = (_selectedCNG?.toLowerCase() == 'yes') ? 60.0 : 0.0;   // change the cng/ppg rate once confirmed from clinet
     double discountOnOd = double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
     double paOwnerDriver = double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
     double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
@@ -128,7 +128,7 @@ void _submitForm() {
     double llPaidDriver = double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
     double llLEmployeeOther = double.tryParse(_selectedLlEmployeePaidDriver ?? "0") ?? 0.0;
     double llToPaidDriver =double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
-    double restrictedTppd = _selectedRestrictedTppd == 'Yes' ? 100.0 : 0.0;
+    double restrictedTppd = _selectedRestrictedTppd == 'Yes' ? 200.0 : 0.0;
     String selectedNCBText = _selectedNcb ?? "0%";
     double ncbPercentage = double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
 
@@ -141,25 +141,34 @@ void _submitForm() {
       double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
       
       // 3. CNG/LPG Kit (Externally Fitted)
-      double cngLpgPremium = (cngKitExternal * selectedCNG) / 100;
+    double cngLpgPremium = 0.0;
+    if (_selectedCNG == 'Yes' && cngKitExternal > 0) {
+      cngLpgPremium = (cngKitExternal / 1000) * 60;
+    }
+
+    // 4. IMT 23
+    double imt23 = (basicForVehicle * imt23Value) / 100;
+
+      // 5. Basic OD Premium
+    double basicOdPremium = basicForVehicle + cngLpgPremium + imt23;
       
-      // 4. Basic OD Premium
-      double basicOdPremium = basicForVehicle + cngLpgPremium;
-      
-      // 5. IMT 23
-      double imt23 = (basicForVehicle * imt23Value) / 100;
+
       
       // 6. Basic OD Premium Before Discount
       double odBeforeDiscount = basicOdPremium ;
       
       // 7. Discount on OD Premium
-      double discountOdPremium = (odBeforeDiscount * discountOnOd) / 100;
+      double discountOdPremium = basicOdPremium * discountOnOd/100;
+
+    double basicOdAfterDiscPremium = odBeforeDiscount - discountOdPremium;
+    //print("--------------basicOdAfterDiscPremium :  ${basicOdAfterDiscPremium}--------");
       
       // 8. Loading on OD Premium
-      double loadingOdPremium = ((odBeforeDiscount - discountOdPremium) * loadingOnDiscountPremium) / 100;
+      double loadingOdPremium = (basicOdAfterDiscPremium * loadingOnDiscountPremium) / 100;
+
       
       // 9. Basic OD Before NCB
-      double odBeforeNcb = (odBeforeDiscount - discountOdPremium) + loadingOdPremium;
+      double odBeforeNcb = basicOdAfterDiscPremium + loadingOdPremium;
       
       // 10. No Claim Bonus (NCB)
       double ncbAmount = (odBeforeNcb * ncbPercentage) / 100;
@@ -170,15 +179,15 @@ void _submitForm() {
 
     // TP Section
     double cngLpgRate = 60;   // change to actual IRDA rate
-    double cngLpgKit = (cngKitExternal* cngLpgRate) / 100;
-    double llToPassengerRate = 50.0;
+    double cngLpgKit = _selectedCNG == 'Yes'?cngLpgRate:0.0;
+    double llToPassengerRate = 60.0;
     double llToPassenger = ll2Passenger * llToPassengerRate;
     double liabilityPremiumTP = _getTpRate();
     double totalB = liabilityPremiumTP +
       paOwnerDriver +
       llPaidDriver+
       cngLpgKit+
-      llLEmployeeOther+
+      llLEmployeeOther-
       restrictedTppd+
       llToPassenger;
 
@@ -187,8 +196,8 @@ void _submitForm() {
     // Total Premium (C)
     double totalAB = totalA + totalB;
     double gst = totalAB * 0.18;
-    otherCess = (otherCess * totalAB) / 100;
-    double finalPremium = totalAB + gst + otherCess;
+    double otherCessAmt = (otherCess * totalAB) / 100;
+    double finalPremium = totalAB + gst + otherCessAmt;
 
     // Result Map
     Map<String, String> resultMap = {
@@ -224,7 +233,7 @@ void _submitForm() {
       // C - Total Premium
       "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
       "GST @ 18%": gst.toStringAsFixed(2),
-      "Other CESS": otherCess.toStringAsFixed(2),
+      "Other CESS": otherCessAmt.toStringAsFixed(2),
 
       // Final Premium
       "Final Premium": finalPremium.toStringAsFixed(2),
