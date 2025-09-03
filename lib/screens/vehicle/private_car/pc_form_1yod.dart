@@ -204,9 +204,12 @@ class _PCForm1YODState extends State<PCForm1YOD> {
           ValueAddedServices;
 
       // TP Section
+      double cngLpgRate = 60;   // change to actual IRDA rate
+      double cngLpgKit = _cngLpgKitOptions == 'Yes'?cngLpgRate:0.0;
       double liabilityPremiumTP = 00.00;
       double totalC = liabilityPremiumTP +
           paOwnerDriver +
+          cngLpgKit +
           llToPaidDriver +
           paUnnamedPassenger;
 

@@ -205,6 +205,8 @@ class _EPCForm1YOD1TPState extends State<EPCForm1YOD1TP> {
           ValueAddedServices;
 
       // TP Section
+      double cngLpgRate = 60;   // change to actual IRDA rate
+      double cngLpgKit = _cngLpgKitOptions == 'Yes'?cngLpgRate:0.0;
       int tp_years =
           findTPYear(int.tryParse(_controllers['tp']?.text.trim() ?? "") ?? 1);
       double liabilityPremiumTP = getThirdPartyPremium(
@@ -214,6 +216,7 @@ class _EPCForm1YOD1TPState extends State<EPCForm1YOD1TP> {
           years: tp_years);
       double totalC = liabilityPremiumTP +
           paOwnerDriver +
+          cngLpgKit +
           llToPaidDriver +
           paUnnamedPassenger;
 

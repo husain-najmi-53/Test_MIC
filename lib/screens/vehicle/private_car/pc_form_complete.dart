@@ -289,11 +289,14 @@ class _PCFormCompleteState extends State<PCFormComplete> {
           ValueAddedServices;
 
       // TP Section
+      double cngLpgRate = 60;   // change to actual IRDA rate
+      double cngLpgKit = _cngLpgKitOptions == 'Yes'?cngLpgRate:0.0;
       int tp_years =
           findTPYear(int.tryParse(_controllers['tp']?.text.trim() ?? "") ?? 1);
       double liabilityPremiumTP = getThirdPartyPremium(
           cubicCapacity: cc, isElectric: false, batteryKwh: 0, years: tp_years);
       double totalC = liabilityPremiumTP +
+          cngLpgKit +
           paOwnerDriver +
           llToPaidDriver +
           paUnnamedPassenger;
