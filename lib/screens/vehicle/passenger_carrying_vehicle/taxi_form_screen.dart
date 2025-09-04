@@ -131,7 +131,7 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
         double.tryParse(_controllers['zeroDepRate']!.text) ?? 0.0;
     double rsaAmount = double.tryParse(_controllers['rsaAmount']!.text) ?? 0.0;
     double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
-    int cubicCapacity = int.tryParse(_controllers['cubicCapacity']!.text) ?? 0;
+    int cubicCapacity = int.tryParse(_controllers['cubicCapacity']!.text) ?? 1000;
 
     double selectedNcb = 0.0;
     if (_selectedNcb != null) {
@@ -172,7 +172,7 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
     }
 
     // Base OD rate
-    double vehicleBasicRate = _getOdRate(zone, ageKey);
+    double vehicleBasicRate = _getOdRate(zone, ageKey,cubicCapacity);
 
     // 1) Basic OD premium based on current IDV and base rate
     double basicOdPremium = (currentIdv * vehicleBasicRate) / 100;
@@ -454,6 +454,20 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
                   return null;
                 }
             ),
@@ -508,17 +522,42 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
   }
 }
 
-double _getOdRate(String zone, String age) {
-  if (age == 'Upto5Years') {
-    if (zone == 'A') return 3.284;
-    if (zone == 'B') return 3.191;
-  } else if (age == '5to7Years') {
-    if (zone == 'A') return 3.366;
-    if (zone == 'B') return 3.271;
-  } else if (age == 'Above7Years') {
-    if (zone == 'A') return 3.448;
-    if (zone == 'B') return 3.351;
+double _getOdRate(String zone, String age ,int cubicCapacity) {
+  if(cubicCapacity<=1000){
+    if (age == 'Upto5Years') {
+      if (zone == 'A') return 3.284;
+      if (zone == 'B') return 3.191;
+    } else if (age == '5to7Years') {
+      if (zone == 'A') return 3.366;
+      if (zone == 'B') return 3.271;
+    } else if (age == 'Above7Years') {
+      if (zone == 'A') return 3.448;
+      if (zone == 'B') return 3.351;
+    }
+  }else if(cubicCapacity>1000 && cubicCapacity<=1500 ){
+    if (age == 'Upto5Years') {
+      if (zone == 'A') return 3.448;
+      if (zone == 'B') return 3.351;
+    } else if (age == '5to7Years') {
+      if (zone == 'A') return 3.534;
+      if (zone == 'B') return 3.435;
+    } else if (age == 'Above7Years') {
+      if (zone == 'A') return 3.620;
+      if (zone == 'B') return 3.519;
+    }
+  }else{ //above 1500
+    if (age == 'Upto5Years') {
+      if (zone == 'A') return 3.612;
+      if (zone == 'B') return 3.510;
+    } else if (age == '5to7Years') {
+      if (zone == 'A') return 3.703;
+      if (zone == 'B') return 3.598;
+    } else if (age == 'Above7Years') {
+      if (zone == 'A') return 3.793;
+      if (zone == 'B') return 3.686;
+    }
   }
+
   return 3.284;
 }
 

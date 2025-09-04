@@ -439,6 +439,36 @@ class _ThreeWheelerPCV_upto6PassengerState
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+
+                  // Passenger count validation
+                  if (key == 'numberOfPassengers') {
+                    int? passengerCount = int.tryParse(value.trim());
+                    if (passengerCount == null) {
+                      return 'Enter a valid number';
+                    }
+                    if (passengerCount > 6) {
+                      return 'Can\'t be more than 6';
+                    }
+                    if (passengerCount < 1) {
+                      return 'Must be at least 1';
+                    }
+                  }
+
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
+                  
                   return null;
                 }
             ),
@@ -450,7 +480,6 @@ class _ThreeWheelerPCV_upto6PassengerState
 
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged) {
-        String? keyName; // Optional: pass a key for validation skip
         const optionalDropdowns = [
       'LL to Paid Driver', 'No Claim Bonus (%)', 'Geographical Extn.',
       'CNG/LPG Kits', 'IMT 23', 'Restricted TPPD','LL to Other Employees','Anti Theft' // matches label or keyName
@@ -473,8 +502,7 @@ class _ThreeWheelerPCV_upto6PassengerState
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 

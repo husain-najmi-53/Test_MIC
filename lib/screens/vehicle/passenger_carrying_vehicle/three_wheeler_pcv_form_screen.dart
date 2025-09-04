@@ -307,7 +307,7 @@ class _ThreeWheelerPCVFormScreenState extends State<ThreeWheelerPCVFormScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                'Three Wheeler PCV (Upto 6 Passenger)',
+                'Three Wheeler PCV (Upto 17 Passenger)',
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
             ],
@@ -440,6 +440,35 @@ class _ThreeWheelerPCVFormScreenState extends State<ThreeWheelerPCVFormScreen> {
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+
+                  // Passenger count validation
+                  if (key == 'numberOfPassengers') {
+                    int? passengerCount = int.tryParse(value.trim());
+                    if (passengerCount == null) {
+                      return 'Enter Between 7 to 16';
+                    }
+                    if (passengerCount <= 6) {
+                      return 'Must be greater than 6';
+                    }
+                    if (passengerCount >= 17) {
+                      return 'Must be less than 17';
+                    }
+                  }
+
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
                   return null;
                 }
                 // onChanged: onChanged,
@@ -452,7 +481,6 @@ class _ThreeWheelerPCVFormScreenState extends State<ThreeWheelerPCVFormScreen> {
 
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged) {
-    String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
       'LL to Paid Driver', 'No Claim Bonus (%)', 'Geographical Extn.',
       'CNG/LPG Kits', 'IMT 23', 'Restricted TPPD', 'LL to Other Employees',
@@ -476,8 +504,7 @@ class _ThreeWheelerPCVFormScreenState extends State<ThreeWheelerPCVFormScreen> {
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 

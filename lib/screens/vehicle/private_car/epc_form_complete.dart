@@ -658,6 +658,30 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
                 if (value == null || value.trim().isEmpty) {
                   return 'Enter $label';
                 }
+
+                //Limit tp till 3
+                if (key == 'tp') {
+                  int tpYears = int.tryParse(_controllers['tp']?.text.trim() ?? "") ?? 1;
+                  if(tpYears>3){
+                    return 'Tp Year should be Upto 3 Yrs';
+                  }
+                }
+
+                // Date validation for Year of Manufacture
+                if (key == 'yearOfManufacture') {
+                  int? year = int.tryParse(value.trim());
+                  if (year == null) {
+                    return 'Enter a valid year';
+                  }
+                  int currentYear = DateTime.now().year;
+                  if (year > currentYear) {
+                    return 'Year cannot be greater than $currentYear';
+                  }
+                  if (year < 1900) {
+                    return 'Year cannot be less than 1900';
+                  }
+                }
+
               },
             ),
           ),
@@ -714,8 +738,8 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
 
   int findTPYear(int i) {
     if (i == 1) return 1;
-    if (i == 2 || i == 3) return 3;
-    return 5;
+    if (i == 2) return 2;
+    return 3;
   }
 }
 
@@ -825,25 +849,23 @@ double getThirdPartyPremium({
   // Petrol/Diesel/Hybrid/CNG cars
   const Map<int, Map<String, double>> fuelRates = {
     1: {"upto1000": 2094.0, "1001to1500": 3416.0, "above1500": 7897.0},
-    3: {"upto1000": 6010.0, "1001to1500": 9841.0, "above1500": 22411.0},
-    5: {"upto1000": 7896.0, "1001to1500": 12890.0, "above1500": 29340.0}
+    2: {"upto1000": 2094.0*2, "1001to1500": 3416.0*2, "above1500": 7897.0*2},
+    3: {"upto1000": 6521.0, "1001to1500": 10640.0, "above1500": 24596.0},
+    // 5: {"upto1000": 7896.0, "1001to1500": 12890.0, "above1500": 29340.0}
   };
 
   // Electric Vehicles (battery capacity in kWh)
   const Map<int, Map<String, double>> evRates = {
     1: {"upto30": 1780.0, "31to65": 2904.0, "above65": 6712.0},
+    2: {"upto30": 1780.0*2, "31to65": 2904.0*2, "above65": 6712.0*2},
     3: {"upto30": 5543.0, "31to65": 9044.0, "above65": 20907.0},
-    5: {
-      "upto30": 7500.0, // example placeholder
-      "31to65": 12500.0, // example placeholder
-      "above65": 28000.0 // example placeholder
-    }
+    // 5: {"upto30": 7500.0, "31to65": 12500.0, "above65": 28000.0}
   };
 
-  // ---- Validation ----
+  /*// ---- Validation ----
   if (years != 1 && years != 3 && years != 5) {
     throw ArgumentError("Invalid policy duration: $years (Allowed: 1, 3, 5)");
-  }
+  }*/
 
   // ---- Electric Vehicle Logic ----
   if (isElectric) {

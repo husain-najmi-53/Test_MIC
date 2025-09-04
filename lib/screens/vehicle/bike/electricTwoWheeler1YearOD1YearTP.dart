@@ -106,106 +106,113 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-    // Fetch form inputs
-    double idv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;// Current IDV
-    String yearOfManufacture = _controllers['yearOfManufacture']!.text;
-    String zone = _selectedZone ?? "A";
-    double kwCapacity =
-        double.tryParse(_controllers['kwCapacity']!.text) ?? 0.0;
-    double discountOnOd =
-        double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-    double accessoriesValue =
-        double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
-    double zeroDepreciation =
-        double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
-    double paOwnerDriver =
-        double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
-    double paUnnamedPassenger =
-        double.tryParse(_controllers['paUnnamedPassenger']!.text) ?? 0.0;
-    double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
-    double llToPaidDriver =
-        double.tryParse(_selectedLLPaidDriver ?? "0") ?? 0.0;
-    String selectedNCBText = _selectedNoClaimBonus ?? "0%";
-    double ncbPercentage =
-        double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
+      // Fetch form inputs
+      double idv = double.tryParse(_controllers['currentIdv']!.text) ??
+          0.0; // Current IDV
+      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
+      String zone = _selectedZone ?? "A";
+      double kwCapacity =
+          double.tryParse(_controllers['kwCapacity']!.text) ?? 0.0;
+      double discountOnOd =
+          double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+      double accessoriesValue =
+          double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
+      double zeroDepreciation =
+          double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
+      double paOwnerDriver =
+          double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      double paUnnamedPassenger =
+          double.tryParse(_controllers['paUnnamedPassenger']!.text) ?? 0.0;
+      double otherCess =
+          double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+      double llToPaidDriver =
+          double.tryParse(_selectedLLPaidDriver ?? "0") ?? 0.0;
+      String selectedNCBText = _selectedNoClaimBonus ?? "0%";
+      double ncbPercentage =
+          double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
 
-    // Get base rate from function
-    double vehicleBasicRate = _getElectricTwoWheelerOdRate(kwCapacity);
+      // Get age of vehicle
+      String ageOfVehicle = _selectedAge ?? "Upto 5 Years";
 
-    // OD Calculations
-    double basicForVehicle = (idv * vehicleBasicRate) / 100;
-    double discountAmount = (basicForVehicle * discountOnOd) / 100;
-    double basicOdAfterDiscount = basicForVehicle - discountAmount;
-    double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
-    double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
-    double netOdPremium = totalBasicPremium - ncbAmount;
-    double totalA = netOdPremium + zeroDepreciation;
+      // Get base rate from function
+      double vehicleBasicRate =
+          _getElectricTwoWheelerOdRate(zone, ageOfVehicle, kwCapacity);
 
-    // TP Section
-    double liabilityPremiumTP = _getElectricTwoWheelerTpRate(kwCapacity,
-        isFiveYear: false); //Else True for 5 Year TP
-    double totalB = liabilityPremiumTP +
-        paOwnerDriver +
-        llToPaidDriver +
-        paUnnamedPassenger;
+      // OD Calculations
+      double basicForVehicle = (idv * vehicleBasicRate) / 100;
+      double discountAmount = (basicForVehicle * discountOnOd) / 100;
+      double basicOdAfterDiscount = basicForVehicle - discountAmount;
+      double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
+      double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
+      double netOdPremium = totalBasicPremium - ncbAmount;
+      double totalA = netOdPremium + zeroDepreciation;
 
-    // Total Premium (C)
-    double totalAB = totalA + totalB;
-    double gst = totalAB * 0.18;
-    double otherCessAmt = (otherCess * totalAB) / 100;
-    double finalPremium = totalAB + gst + otherCessAmt;
+      // TP Section
+      double liabilityPremiumTP = _getElectricTwoWheelerTpRate(kwCapacity,
+          isFiveYear: false); //Else True for 5 Year TP
+      double totalB = liabilityPremiumTP +
+          paOwnerDriver +
+          llToPaidDriver +
+          paUnnamedPassenger;
 
-    // Result Map
-    Map<String, String> resultMap = {
-      // Basic Details
-      "IDV": idv.toStringAsFixed(2),
-      "Year of Manufacture": yearOfManufacture.toString(),
-      "Zone": zone,
-      "Kilowatt": kwCapacity.toString(),
+      // Total Premium (C)
+      double totalAB = totalA + totalB;
+      double gst = totalAB * 0.18;
+      double otherCessAmt = (otherCess * totalAB) / 100;
+      double finalPremium = totalAB + gst + otherCessAmt;
 
-      // A - Own Damage Premium Package
-      "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
-      "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-      "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-      "Basic OD Premium after discount":
-          basicOdAfterDiscount.toStringAsFixed(2),
-      "Accessories Value": accessoriesValue.toStringAsFixed(2),
-      "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
-      "No Claim Bonus": ncbAmount.toStringAsFixed(2),
-      "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
-      "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
-      "Total A": totalA.toStringAsFixed(2),
+      // Result Map
+      Map<String, String> resultMap = {
+        // Basic Details
+        "IDV": idv.toStringAsFixed(2),
+        "Year of Manufacture": yearOfManufacture.toString(),
+        "Zone": zone,
+        "Kilowatt": kwCapacity.toString(),
 
-      // B - Liability Premium
-      "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-      "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-      "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
-      "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
-      "Total B": totalB.toStringAsFixed(2),
+        // A - Own Damage Premium Package
+        "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
+        "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
+        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Basic OD Premium after discount":
+            basicOdAfterDiscount.toStringAsFixed(2),
+        "Accessories Value": accessoriesValue.toStringAsFixed(2),
+        "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
+        "No Claim Bonus": ncbAmount.toStringAsFixed(2),
+        "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
+        "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
+        "Total A": totalA.toStringAsFixed(2),
 
-      // C - Total Premium
-      "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
-      "GST @ 18%": gst.toStringAsFixed(2),
-      "Other CESS": otherCessAmt.toStringAsFixed(2).trim(),
+        // B - Liability Premium
+        "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
+        "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
+        "Total B": totalB.toStringAsFixed(2),
 
-      // Final Premium
-      "Final Premium": finalPremium.toStringAsFixed(2),
-    };
+        // C - Total Premium
+        "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
+        "GST @ 18%": gst.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2).trim(),
 
-    // Pass data to result screen
-    InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Electric Two Wheeler 1Y OD + 1Y TP",
-      fieldData: resultMap,
-      totalPremium: finalPremium,
-    );
+        // Final Premium
+        "Final Premium": finalPremium.toStringAsFixed(2),
+      };
 
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => BikeInsuranceResultScreen(resultData: resultData),
-      ),
-    );
-  }
+      // Pass data to result screen
+      InsuranceResultData resultData = InsuranceResultData(
+        vehicleType: "Electric Two Wheeler 1Y OD + 1Y TP",
+        fieldData: resultMap,
+        totalPremium: finalPremium,
+      );
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              BikeInsuranceResultScreen(resultData: resultData),
+        ),
+      );
+    }
   }
 
   void _resetForm() {
@@ -334,7 +341,7 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
     );
   }
 
-Widget _buildTextField(String key, String label, String placeholder) {
+  Widget _buildTextField(String key, String label, String placeholder) {
     // Optional dropdown fields
     const optionalFields = [
       'accessoriesValue',
@@ -374,6 +381,20 @@ Widget _buildTextField(String key, String label, String placeholder) {
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
                   return null;
                 }),
           ),
@@ -388,7 +409,6 @@ Widget _buildTextField(String key, String label, String placeholder) {
     String? selected,
     Function(String?) onChanged,
   ) {
-    String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
       'LL to Paid Driver', 'No Claim Bonus (%)' // matches label or keyName
     ];
@@ -411,8 +431,7 @@ Widget _buildTextField(String key, String label, String placeholder) {
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 
@@ -432,14 +451,41 @@ Widget _buildTextField(String key, String label, String placeholder) {
   }
 }
 
-double _getElectricTwoWheelerOdRate(double kwCapacity) {
-  if (kwCapacity <= 3) {
-    return 1.41;
-  } else if (kwCapacity <= 7) {
-    return 1.76;
-  } else {
-    return 2.10;
+double _getElectricTwoWheelerOdRate(
+    String zone, String age, double kwCapacity) {
+  if (zone == 'A') {
+    if (kwCapacity <= 3) {
+      if (age == 'Upto 5 Years') return 1.708;
+      if (age == '6-10 Years') return 1.793;
+      if (age == 'Above 10 Years') return 1.886;
+    } else if (kwCapacity <= 7) {
+      if (age == 'Upto 5 Years') return 1.793;
+      if (age == '6-10 Years') return 1.883;
+      if (age == 'Above 10 Years') return 1.978;
+    } else {
+      // kwCapacity > 7
+      if (age == 'Upto 5 Years') return 1.879;
+      if (age == '6-10 Years') return 1.973;
+      if (age == 'Above 10 Years') return 2.020;
+    }
+  } else if (zone == 'B') {
+    if (kwCapacity <= 3) {
+      if (age == 'Upto 5 Years') return 1.676;
+      if (age == '6-10 Years') return 1.760;
+      if (age == 'Above 10 Years') return 1.802;
+    } else if (kwCapacity <= 7) {
+      if (age == 'Upto 5 Years') return 1.760;
+      if (age == '6-10 Years') return 1.848;
+      if (age == 'Above 10 Years') return 1.892;
+    } else {
+      // kwCapacity > 7
+      if (age == 'Upto 5 Years') return 1.844;
+      if (age == '6-10 Years') return 1.936;
+      if (age == 'Above 10 Years') return 1.982;
+    }
   }
+  // Fallback for invalid input
+  return -1.0;
 }
 
 double _getElectricTwoWheelerTpRate(double kwCapacity,

@@ -134,8 +134,7 @@ class _TwoWheeler1YearODFormScreenState
       String ageOfVehicle = _selectedAge ?? "Upto 5 Years";
 
       // Get base rate from function
-      double vehicleBasicRate =
-          _getOdRate(zone, ageOfVehicle, cubicCapacity);
+      double vehicleBasicRate = _getOdRate(zone, ageOfVehicle, cubicCapacity);
 
       // OD Calculations
       double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
@@ -372,6 +371,20 @@ class _TwoWheeler1YearODFormScreenState
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
                   return null;
                 }),
           ),
@@ -386,7 +399,6 @@ class _TwoWheeler1YearODFormScreenState
     String? selected,
     Function(String?) onChanged,
   ) {
-    String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
       'LL to Paid Driver', 'No Claim Bonus (%)' // matches label or keyName
     ];
@@ -409,8 +421,7 @@ class _TwoWheeler1YearODFormScreenState
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 
@@ -440,7 +451,8 @@ double _getOdRate(String zone, String age, int cc) {
       if (age == 'Upto 5 Years') return 1.793;
       if (age == '6-10 Years') return 1.883;
       if (age == 'Above 10 Years') return 1.978; // Corrected rate
-    } else { // cc > 350
+    } else {
+      // cc > 350
       if (age == 'Upto 5 Years') return 1.879;
       if (age == '6-10 Years') return 1.973;
       if (age == 'Above 10 Years') return 2.020; // Corrected rate
@@ -454,15 +466,14 @@ double _getOdRate(String zone, String age, int cc) {
       if (age == 'Upto 5 Years') return 1.760;
       if (age == '6-10 Years') return 1.848;
       if (age == 'Above 10 Years') return 1.892; // Corrected rate
-    } else { // cc > 350
+    } else {
+      // cc > 350
       if (age == 'Upto 5 Years') return 1.844; // Corrected rate
       if (age == '6-10 Years') return 1.936;
       if (age == 'Above 10 Years') return 1.982; // Corrected rate
     }
   }
-
   // Fallback for invalid input. Returning -1 is a better practice
   // than returning a rate value that corresponds to valid data.
-  return -1.0; 
+  return -1.0;
 }
-

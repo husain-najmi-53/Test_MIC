@@ -106,109 +106,111 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-    // Fetch form inputs
-    double idv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
-    String yearOfManufacture = _controllers['yearOfManufacture']!.text;
-    String zone = _selectedZone ?? "A";
-    int cubicCapacity = int.tryParse(_controllers['cubicCapacity']!.text) ?? 0;
-    double discountOnOd =
-        double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-    double accessoriesValue =
-        double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
-    double zeroDepreciation =
-        double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
-    double paOwnerDriver =
-        double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
-    double paUnnamedPassenger =
-        double.tryParse(_controllers['paUnnamedPassenger']!.text) ?? 0.0;
-    double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
-    double llToPaidDriver =
-        double.tryParse(_selectedLLPaidDriver ?? "0") ?? 0.0;
-    String selectedNCBText = _selectedNoClaimBonus ?? "0%";
-    double ncbPercentage =
-        double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
+      // Fetch form inputs
+      double idv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
+      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
+      String zone = _selectedZone ?? "A";
+      int cubicCapacity =
+          int.tryParse(_controllers['cubicCapacity']!.text) ?? 0;
+      double discountOnOd =
+          double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+      double accessoriesValue =
+          double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
+      double zeroDepreciation =
+          double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
+      double paOwnerDriver =
+          double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      double paUnnamedPassenger =
+          double.tryParse(_controllers['paUnnamedPassenger']!.text) ?? 0.0;
+      double otherCess =
+          double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+      double llToPaidDriver =
+          double.tryParse(_selectedLLPaidDriver ?? "0") ?? 0.0;
+      String selectedNCBText = _selectedNoClaimBonus ?? "0%";
+      double ncbPercentage =
+          double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
 
-     // Get age of vehicle
+      // Get age of vehicle
       String ageOfVehicle = _selectedAge ?? "Upto 5 Years";
 
       // Get base rate from function
-      double vehicleBasicRate =
-          _getOdRate(zone, ageOfVehicle, cubicCapacity);
+      double vehicleBasicRate = _getOdRate(zone, ageOfVehicle, cubicCapacity);
 
-    // OD Calculations
-    double basicForVehicle = (idv * vehicleBasicRate) / 100;
-    double discountAmount = (basicForVehicle * discountOnOd) / 100;
-    double basicOdAfterDiscount = basicForVehicle - discountAmount;
-    double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
-    double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
-    double netOdPremium = totalBasicPremium - ncbAmount;
-    double totalA = netOdPremium + zeroDepreciation;
+      // OD Calculations
+      double basicForVehicle = (idv * vehicleBasicRate) / 100;
+      double discountAmount = (basicForVehicle * discountOnOd) / 100;
+      double basicOdAfterDiscount = basicForVehicle - discountAmount;
+      double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
+      double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
+      double netOdPremium = totalBasicPremium - ncbAmount;
+      double totalA = netOdPremium + zeroDepreciation;
 
-    // TP Section
-    double liabilityPremiumTP =
-        getTpRate(cubicCapacity, isFiveYear: false); // This is 1 Year TP
-    double totalB = liabilityPremiumTP +
-        paOwnerDriver +
-        llToPaidDriver +
-        paUnnamedPassenger;
+      // TP Section
+      double liabilityPremiumTP =
+          getTpRate(cubicCapacity, isFiveYear: false); // This is 1 Year TP
+      double totalB = liabilityPremiumTP +
+          paOwnerDriver +
+          llToPaidDriver +
+          paUnnamedPassenger;
 
-    // Total Premium (C)
-    double totalAB = totalA + totalB;
-    double gst = totalAB * 0.18;
-    otherCess = (otherCess * totalAB) / 100;
-    double finalPremium = totalAB + gst + otherCess;
+      // Total Premium (C)
+      double totalAB = totalA + totalB;
+      double gst = totalAB * 0.18;
+      double otherCessAmt = (otherCess * totalAB) / 100;
+      double finalPremium = totalAB + gst + otherCessAmt;
 
-    // Result Map
-    Map<String, String> resultMap = {
-      // Basic Details
-      "IDV": idv.toStringAsFixed(2),
-      "Year of Manufacture": yearOfManufacture.toString(),
-      "Zone": zone,
-      "Cubic Capacity": cubicCapacity.toString(),
+      // Result Map
+      Map<String, String> resultMap = {
+        // Basic Details
+        "IDV": idv.toStringAsFixed(2),
+        "Year of Manufacture": yearOfManufacture.toString(),
+        "Zone": zone,
+        "Cubic Capacity": cubicCapacity.toString(),
 
-      // A - Own Damage Premium Package
-      "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
-      "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-      "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-      "Basic OD Premium after discount":
-          basicOdAfterDiscount.toStringAsFixed(2),
-      "Accessories Value": accessoriesValue.toStringAsFixed(2),
-      "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
-      "No Claim Bonus": ncbAmount.toStringAsFixed(2),
-      "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
-      "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
-      "Total A": totalA.toStringAsFixed(2),
+        // A - Own Damage Premium Package
+        "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
+        "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
+        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Basic OD Premium after discount":
+            basicOdAfterDiscount.toStringAsFixed(2),
+        "Accessories Value": accessoriesValue.toStringAsFixed(2),
+        "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
+        "No Claim Bonus": ncbAmount.toStringAsFixed(2),
+        "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
+        "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
+        "Total A": totalA.toStringAsFixed(2),
 
-      // B - Liability Premium
-      "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-      "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-      "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
-      "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
-      "Total B": totalB.toStringAsFixed(2),
+        // B - Liability Premium
+        "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
+        "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
+        "Total B": totalB.toStringAsFixed(2),
 
-      // C - Total Premium
-      "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
-      "GST @ 18%": gst.toStringAsFixed(2),
-      "Other CESS": otherCess.toStringAsFixed(2),
+        // C - Total Premium
+        "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
+        "GST @ 18%": gst.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2),
 
-      // Final Premium
-      "Final Premium": finalPremium.toStringAsFixed(2),
-    };
+        // Final Premium
+        "Final Premium": finalPremium.toStringAsFixed(2),
+      };
 
-    // Pass data to result screen
-    InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Two Wheeler 1Y OD + 1Y TP",
-      fieldData: resultMap,
-      totalPremium: finalPremium,
-    );
+      // Pass data to result screen
+      InsuranceResultData resultData = InsuranceResultData(
+        vehicleType: "Two Wheeler 1Y OD + 1Y TP",
+        fieldData: resultMap,
+        totalPremium: finalPremium,
+      );
 
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => BikeInsuranceResultScreen(resultData: resultData),
-      ),
-    );
-  }
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              BikeInsuranceResultScreen(resultData: resultData),
+        ),
+      );
+    }
   }
 
   void _resetForm() {
@@ -384,6 +386,20 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
                   return null;
                 }),
           ),
@@ -398,7 +414,6 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
     String? selected,
     Function(String?) onChanged,
   ) {
-    String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
       'LL to Paid Driver', 'No Claim Bonus (%)' // matches label or keyName
     ];
@@ -421,8 +436,7 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 
@@ -452,7 +466,8 @@ double _getOdRate(String zone, String age, int cc) {
       if (age == 'Upto 5 Years') return 1.793;
       if (age == '6-10 Years') return 1.883;
       if (age == 'Above 10 Years') return 1.978; // Corrected rate
-    } else { // cc > 350
+    } else {
+      // cc > 350
       if (age == 'Upto 5 Years') return 1.879;
       if (age == '6-10 Years') return 1.973;
       if (age == 'Above 10 Years') return 2.020; // Corrected rate
@@ -466,7 +481,8 @@ double _getOdRate(String zone, String age, int cc) {
       if (age == 'Upto 5 Years') return 1.760;
       if (age == '6-10 Years') return 1.848;
       if (age == 'Above 10 Years') return 1.892; // Corrected rate
-    } else { // cc > 350
+    } else {
+      // cc > 350
       if (age == 'Upto 5 Years') return 1.844; // Corrected rate
       if (age == '6-10 Years') return 1.936;
       if (age == 'Above 10 Years') return 1.982; // Corrected rate
@@ -475,7 +491,7 @@ double _getOdRate(String zone, String age, int cc) {
 
   // Fallback for invalid input. Returning -1 is a better practice
   // than returning a rate value that corresponds to valid data.
-  return -1.0; 
+  return -1.0;
 }
 
 double getTpRate(int cc, {bool isFiveYear = false}) {

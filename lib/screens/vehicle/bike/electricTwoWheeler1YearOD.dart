@@ -131,8 +131,11 @@ class _ElectricTwoWheeler1YODFormScreenState
       double ncbPercentage =
           double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
 
+      // Get age of vehicle
+      String ageOfVehicle = _selectedAge ?? "Upto 5 Years";
       // Get base rate from function
-      double vehicleBasicRate = _getElectricTwoWheelerOdRate(kwCapacity);
+      double vehicleBasicRate =
+          _getElectricTwoWheelerOdRate(zone, ageOfVehicle, kwCapacity);
 
       // OD Calculations
       double basicForVehicle = (idv * vehicleBasicRate) / 100;
@@ -375,6 +378,20 @@ class _ElectricTwoWheeler1YODFormScreenState
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
                   return null;
                 }),
           ),
@@ -389,7 +406,6 @@ class _ElectricTwoWheeler1YODFormScreenState
     String? selected,
     Function(String?) onChanged,
   ) {
-    String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
       'LL to Paid Driver', 'No Claim Bonus (%)' // matches label or keyName
     ];
@@ -412,8 +428,7 @@ class _ElectricTwoWheeler1YODFormScreenState
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 
@@ -433,12 +448,39 @@ class _ElectricTwoWheeler1YODFormScreenState
   }
 }
 
-double _getElectricTwoWheelerOdRate(double kwCapacity) {
-  if (kwCapacity <= 3) {
-    return 1.41;
-  } else if (kwCapacity <= 7) {
-    return 1.76;
-  } else {
-    return 2.10;
+double _getElectricTwoWheelerOdRate(
+    String zone, String age, double kwCapacity) {
+  if (zone == 'A') {
+    if (kwCapacity <= 3) {
+      if (age == 'Upto 5 Years') return 1.708;
+      if (age == '6-10 Years') return 1.793;
+      if (age == 'Above 10 Years') return 1.886;
+    } else if (kwCapacity <= 7) {
+      if (age == 'Upto 5 Years') return 1.793;
+      if (age == '6-10 Years') return 1.883;
+      if (age == 'Above 10 Years') return 1.978;
+    } else {
+      // kwCapacity > 7
+      if (age == 'Upto 5 Years') return 1.879;
+      if (age == '6-10 Years') return 1.973;
+      if (age == 'Above 10 Years') return 2.020;
+    }
+  } else if (zone == 'B') {
+    if (kwCapacity <= 3) {
+      if (age == 'Upto 5 Years') return 1.676;
+      if (age == '6-10 Years') return 1.760;
+      if (age == 'Above 10 Years') return 1.802;
+    } else if (kwCapacity <= 7) {
+      if (age == 'Upto 5 Years') return 1.760;
+      if (age == '6-10 Years') return 1.848;
+      if (age == 'Above 10 Years') return 1.892;
+    } else {
+      // kwCapacity > 7
+      if (age == 'Upto 5 Years') return 1.844;
+      if (age == '6-10 Years') return 1.936;
+      if (age == 'Above 10 Years') return 1.982;
+    }
   }
+  // Fallback for invalid input
+  return -1.0;
 }

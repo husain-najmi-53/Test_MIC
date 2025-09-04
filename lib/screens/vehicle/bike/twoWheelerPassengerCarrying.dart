@@ -396,6 +396,22 @@ class _TwoWheelerPassengerCarryingFormScreenState
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
+                  
                   return null;
                 }),
           ),
@@ -410,7 +426,6 @@ class _TwoWheelerPassengerCarryingFormScreenState
     String? selected,
     Function(String?) onChanged,
   ) {
-    String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
       'LL to Paid Driver', 'No Claim Bonus (%)','IMT 23','Restricted TPPD' // matches label or keyName
     ];
@@ -433,8 +448,7 @@ class _TwoWheelerPassengerCarryingFormScreenState
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 
@@ -454,46 +468,40 @@ class _TwoWheelerPassengerCarryingFormScreenState
   }
 }
 
-double _getOdRate(String zone, String ageCategory, int cc) {
-  zone = zone.toUpperCase();
-
+double _getOdRate(String zone, String age, int cc) {
   if (zone == 'A') {
-    if (cc <= 75) {
-      if (ageCategory == 'Upto 5 Years') return 1.830;
-      if (ageCategory == '6-10 Years') return 1.876;
-      return 1.922; // Above 10 years
-    } else if (cc <= 150) {
-      if (ageCategory == 'Upto 5 Years') return 1.884;
-      if (ageCategory == '6-10 Years') return 1.931;
-      return 1.978;
+    if (cc <= 150) {
+      if (age == 'Upto 5 Years') return 1.708;
+      if (age == '6-10 Years') return 1.793;
+      if (age == 'Above 10 Years') return 1.886; // Corrected rate
     } else if (cc <= 350) {
-      if (ageCategory == 'Upto 5 Years') return 1.884;
-      if (ageCategory == '6-10 Years') return 1.931;
-      return 1.978;
-    } else {
-      if (ageCategory == 'Upto 5 Years') return 1.930;
-      if (ageCategory == '6-10 Years') return 1.978;
-      return 2.020;
+      if (age == 'Upto 5 Years') return 1.793;
+      if (age == '6-10 Years') return 1.883;
+      if (age == 'Above 10 Years') return 1.978; // Corrected rate
+    } else { // cc > 350
+      if (age == 'Upto 5 Years') return 1.879;
+      if (age == '6-10 Years') return 1.973;
+      if (age == 'Above 10 Years') return 2.020; // Corrected rate
     }
-  } else {
-    if (cc <= 75) {
-      if (ageCategory == 'Upto 5 Years') return 1.743;
-      if (ageCategory == '6-10 Years') return 1.787;
-      return 1.830;
-    } else if (cc <= 150) {
-      if (ageCategory == 'Upto 5 Years') return 1.743;
-      if (ageCategory == '6-10 Years') return 1.787;
-      return 1.830;
+  } else if (zone == 'B') {
+    if (cc <= 150) {
+      if (age == 'Upto 5 Years') return 1.676;
+      if (age == '6-10 Years') return 1.760;
+      if (age == 'Above 10 Years') return 1.802; // Corrected rate
     } else if (cc <= 350) {
-      if (ageCategory == 'Upto 5 Years') return 1.830;
-      if (ageCategory == '6-10 Years') return 1.876;
-      return 1.922;
-    } else {
-      if (ageCategory == 'Upto 5 Years') return 1.884;
-      if (ageCategory == '6-10 Years') return 1.931;
-      return 1.978;
+      if (age == 'Upto 5 Years') return 1.760;
+      if (age == '6-10 Years') return 1.848;
+      if (age == 'Above 10 Years') return 1.892; // Corrected rate
+    } else { // cc > 350
+      if (age == 'Upto 5 Years') return 1.844; // Corrected rate
+      if (age == '6-10 Years') return 1.936;
+      if (age == 'Above 10 Years') return 1.982; // Corrected rate
     }
   }
+
+  // Fallback for invalid input. Returning -1 is a better practice
+  // than returning a rate value that corresponds to valid data.
+  return -1.0; 
 }
 
 double _getTpPremiumPCV(int cubicCapacity, int numberOfPassengers) {

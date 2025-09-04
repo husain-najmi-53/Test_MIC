@@ -167,7 +167,7 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
       double netOdPremium = totalBasicPremium - ncbAmount;
 
       // 7. TP Premium based on passenger count using official IRDA rates
-      double tpPremium = 12192.0; // Fixed for School Bus 
+      double tpPremium = 13729.0; // Fixed for School Bus 
 
       // 8. Add geographical extension if any
       double geographicalExtn = geographicalExtnAmount;
@@ -446,6 +446,20 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
                   // Required validation
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
+                  }
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
                   }
                   return null;
                 }),
