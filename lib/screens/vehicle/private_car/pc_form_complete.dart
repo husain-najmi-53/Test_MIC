@@ -234,8 +234,11 @@ class _PCFormCompleteState extends State<PCFormComplete> {
         isElectric: false,
       ); // ODRate
 
+      // Get OD years for multiplication
+      int odYears = int.tryParse(_controllers['od']?.text ?? "1") ?? 1;
+
       //values for these Variable
-      double basicOD = currentIdv * vehicleBasicRate / 100;
+      double basicOD = currentIdv * vehicleBasicRate / 100 * odYears;
       print(_controllers['currentIdv']!.text);
       print(basicOD);
       double antiTheftValue = _selectedAntiTheft != true
@@ -252,7 +255,7 @@ class _PCFormCompleteState extends State<PCFormComplete> {
           double.tryParse(_selectedVoluntaryDeduct ?? "0") ?? 0.0; //
 
       // OD Calculations
-      double basicForVehicle = currentIdv * vehicleBasicRate / 100;
+      double basicForVehicle = currentIdv * vehicleBasicRate / 100 * odYears;
       double discountAmount = (basicForVehicle * discountOnOd) / 100;
       double basicOdAfterDiscount = basicForVehicle - discountAmount;
       basicOdAfterDiscount +=
@@ -658,6 +661,14 @@ class _PCFormCompleteState extends State<PCFormComplete> {
                   }
                 }
 
+                //Limit OD till 3
+                if (key == 'od') {
+                  int odYears = int.tryParse(_controllers['od']?.text.trim() ?? "") ?? 1;
+                  if(odYears>3){
+                    return 'OD Year should not be greater than 3';
+                  }
+                }
+
 
                 // Date validation for Year of Manufacture
                 if (key == 'yearOfManufacture') {
@@ -674,6 +685,7 @@ class _PCFormCompleteState extends State<PCFormComplete> {
                   }
                 }
 
+                return null;
               },
             ),
           ),
@@ -684,7 +696,6 @@ class _PCFormCompleteState extends State<PCFormComplete> {
 
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged) {
-    String? keyName;
     const optionalDropdowns = [
       'LL to Paid Driver', 'CNG/ LPG kits',
       'No Claim Bonus (%)', 'Voluntary Deductible', 'AAI', 'Handicap',
@@ -708,8 +719,7 @@ class _PCFormCompleteState extends State<PCFormComplete> {
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 

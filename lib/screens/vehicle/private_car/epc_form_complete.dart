@@ -221,6 +221,9 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
       double ncbPercentage =
           double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
 
+      // Get OD years for calculation
+      int odYears = int.tryParse(_controllers['od']?.text.trim() ?? "") ?? 1;
+
       // Get base rate from function
 
       // int cc = int.tryParse(_controllers['cubicCapacity']?.text ?? "") ?? 1000;
@@ -236,8 +239,9 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
         isElectric: true,
       ); // ODRate
 
+
       //values for these Variable
-      double basicOD = currentIdv * vehicleBasicRate / 100;
+      double basicOD = currentIdv * vehicleBasicRate / 100 * odYears; // Multiply by OD years
       print(_controllers['currentIdv']!.text);
       print(basicOD);
       double antiTheftValue = _selectedAntiTheft != true
@@ -254,7 +258,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
           double.tryParse(_selectedVoluntaryDeduct ?? "0") ?? 0.0; //
 
       // OD Calculations
-      double basicForVehicle = currentIdv * vehicleBasicRate / 100;
+      double basicForVehicle = currentIdv * vehicleBasicRate / 100 * odYears; // Multiply by OD years
       double discountAmount = (basicForVehicle * discountOnOd) / 100;
       double basicOdAfterDiscount = basicForVehicle - discountAmount;
       basicOdAfterDiscount +=
@@ -659,6 +663,17 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
                   return 'Enter $label';
                 }
 
+                //Limit OD till 3
+                if (key == 'od') {
+                  int odYears = int.tryParse(_controllers['od']?.text.trim() ?? "") ?? 1;
+                  if(odYears > 3){
+                    return 'OD Year should not be greater than 3';
+                  }
+                  if(odYears < 1){
+                    return 'OD Year should be at least 1';
+                  }
+                }
+
                 //Limit tp till 3
                 if (key == 'tp') {
                   int tpYears = int.tryParse(_controllers['tp']?.text.trim() ?? "") ?? 1;
@@ -682,6 +697,8 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
                   }
                 }
 
+                return null;
+
               },
             ),
           ),
@@ -692,7 +709,6 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
 
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged) {
-    String? keyName;
     const optionalDropdowns = [
       'LL to Paid Driver', 'CNG/ LPG kits',
       'No Claim Bonus (%)', 'Voluntary Deductible', 'AAI', 'Handicap',
@@ -716,8 +732,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
                 // Skip validation if optional
-                if (optionalDropdowns.contains(label) ||
-                    (keyName != null && optionalDropdowns.contains(keyName))) {
+                if (optionalDropdowns.contains(label)) {
                   return null;
                 }
 
