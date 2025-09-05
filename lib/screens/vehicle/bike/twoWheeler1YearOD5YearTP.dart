@@ -51,13 +51,13 @@ class _TwoWheeler1YearOD5YearTPFormScreenState
   ];
   final List<String> _zoneOptions = ['A', 'B'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
-  final List<String> _llPaidDriverOptions = ['0', '50'];
+  final List<String> _llPaidDriverOptions = ['0', '250'];
 
   @override
   void initState() {
     super.initState();
     // Auto-select LL to Paid Driver to 50
-    _selectedLLPaidDriver = '50';
+    _selectedLLPaidDriver = '250';
   }
 
   @override
@@ -143,10 +143,10 @@ class _TwoWheeler1YearOD5YearTPFormScreenState
       double accessoriesPremium = (accessoriesValue * 4) / 100;
       
       // Add accessories premium before discount
-      double basicPremiumWithAccessories = basicForVehicle + accessoriesPremium;
-      double discountAmount = (basicPremiumWithAccessories * discountOnOd) / 100;
-      double basicOdAfterDiscount = basicPremiumWithAccessories - discountAmount;
-      double totalBasicPremium = basicOdAfterDiscount;
+      //double basicPremiumWithAccessories = basicForVehicle + accessoriesPremium;
+      double discountAmount = (basicForVehicle * discountOnOd) / 100;
+      double basicOdAfterDiscount = basicForVehicle - discountAmount;
+      double totalBasicPremium = basicOdAfterDiscount + accessoriesPremium;
       double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
       double netOdPremium = totalBasicPremium - ncbAmount;
       

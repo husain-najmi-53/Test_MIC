@@ -173,11 +173,11 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     "[A] Own Damage Premium": [
       "Vehicle Basic Rate",
       "Basic for Vehicle",
+      "Discount on OD Premium",
+      "Basic OD Premium after discount",
       "Accessories Value",
       "IMT 23",
       "Total Basic Premium",
-      "Discount on OD Premium",
-      "Basic OD Premium after discount",
       "No Claim Bonus",
       "Net Own Damage Premium(A)",
     ],

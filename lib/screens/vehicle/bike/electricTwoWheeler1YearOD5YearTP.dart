@@ -51,13 +51,13 @@ class _ElectricTwoWheeler1YOD5YTPFormScreenState
   ];
   final List<String> _zoneOptions = ['A', 'B'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
-  final List<String> _llPaidDriverOptions = ['0', '50'];
+  final List<String> _llPaidDriverOptions = ['0', '250'];
 
   @override
   void initState() {
     super.initState();
     // Auto-select LL to Paid Driver to 50
-    _selectedLLPaidDriver = '50';
+    _selectedLLPaidDriver = '250';
   }
 
   @override
@@ -138,14 +138,20 @@ class _ElectricTwoWheeler1YOD5YTPFormScreenState
       double vehicleBasicRate =
           _getElectricTwoWheelerOdRate(zone, ageOfVehicle, kwCapacity);
 
+      // Calculate accessories premium (4% of accessories value)
+      double accessoriesPremium = (accessoriesValue * 4) / 100;
+
+      // Calculate zero depreciation on current IDV
+      double zeroDepPremium = (idv * zeroDepreciation) / 100;
+
       // OD Calculations
       double basicForVehicle = (idv * vehicleBasicRate) / 100;
       double discountAmount = (basicForVehicle * discountOnOd) / 100;
       double basicOdAfterDiscount = basicForVehicle - discountAmount;
-      double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
+      double totalBasicPremium = basicOdAfterDiscount + accessoriesPremium;
       double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
       double netOdPremium = totalBasicPremium - ncbAmount;
-      double totalA = netOdPremium + zeroDepreciation;
+      double totalA = netOdPremium + zeroDepPremium;
 
       // TP Section
       double liabilityPremiumTP = _getElectricTwoWheelerTpRate(kwCapacity,
@@ -175,11 +181,11 @@ class _ElectricTwoWheeler1YOD5YTPFormScreenState
         "Discount on OD Premium": discountAmount.toStringAsFixed(2),
         "Basic OD Premium after discount":
             basicOdAfterDiscount.toStringAsFixed(2),
-        "Accessories Value": accessoriesValue.toStringAsFixed(2),
+        "Accessories Value": accessoriesPremium.toStringAsFixed(2),
         "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
         "No Claim Bonus": ncbAmount.toStringAsFixed(2),
         "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
-        "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
+        "Zero Dep Premium": zeroDepPremium.toStringAsFixed(2),
         "Total A": totalA.toStringAsFixed(2),
 
         // B - Liability Premium
@@ -301,8 +307,8 @@ class _ElectricTwoWheeler1YOD5YTPFormScreenState
                     _ncbOptions,
                     _selectedNoClaimBonus,
                     (val) => setState(() => _selectedNoClaimBonus = val)),
-                _buildTextField('zeroDepreciation', 'Zero Depreciation (₹)',
-                    'Enter Amount'),
+                _buildTextField('zeroDepreciation', 'Zero Depreciation (%)',
+                    'Enter Percentage'),
                 _buildTextField(
                     'paOwnerDriver', 'PA to Owner Driver (₹)', 'Enter Amount'),
                 _buildTextField('paUnnamedPassenger',

@@ -21,8 +21,7 @@ class _TwoWheelerPassengerCarryingFormScreenState
     'cubicCapacity': TextEditingController(),
     'numberOfPassengers': TextEditingController(),
     'discountOnOd': TextEditingController(),
-    'electricAccessories': TextEditingController(),
-    'nonElectricAccessories': TextEditingController(),
+    'accessoriesValue': TextEditingController(),
     'paOwnerDriver': TextEditingController(),
     'otherCess': TextEditingController(),
     'currentIdv': TextEditingController(),
@@ -117,10 +116,8 @@ class _TwoWheelerPassengerCarryingFormScreenState
           int.tryParse(_controllers['cubicCapacity']!.text) ?? 0;
       double discountOnOd =
           double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-      double electricAccessories =
-          double.tryParse(_controllers['electricAccessories']!.text) ?? 0.0;
-      double nonElectricAccessories =
-          double.tryParse(_controllers['nonElectricAccessories']!.text) ?? 0.0;
+      double accessoriesValue =
+          double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
       double paOwnerDriver =
           double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
       double otherCess =
@@ -135,7 +132,7 @@ class _TwoWheelerPassengerCarryingFormScreenState
       int numberOfPassengers =
           int.tryParse(_controllers['numberOfPassengers']!.text) ?? 1;
 
-       // Get age of vehicle
+      // Get age of vehicle
       String ageOfVehicle = _selectedAge ?? "Upto 5 Years";
 
       // Get base rate from function
@@ -144,6 +141,9 @@ class _TwoWheelerPassengerCarryingFormScreenState
 
       double passenegrCoverage = numberOfPassengers * 580.0;
 
+      // Calculate accessories premium (4% of accessories value)
+      double accessoriesPremium = (accessoriesValue * 4) / 100;
+
       // OD Calculations
       double basicForVehicle = (idv * vehicleBasicRate) / 100;
       double imt23Premium = 0.0;
@@ -151,16 +151,11 @@ class _TwoWheelerPassengerCarryingFormScreenState
         imt23Premium = (basicForVehicle * 15) / 100;
       }
       
-      // Calculate accessories value with 4% for electrical and 3% for non-electrical
-      double electricAccessoriesValue = (electricAccessories * 4) / 100;
-      double nonElectricAccessoriesValue = (nonElectricAccessories * 3) / 100;
-      double accessoriesValue = electricAccessoriesValue + nonElectricAccessoriesValue;
-      
       // Add accessories and IMT23 value before discount
-      double basicPremiumWithImt23AndAccessories = basicForVehicle + imt23Premium + accessoriesValue;
-      double totalBasicPremium = basicPremiumWithImt23AndAccessories;
-      double discountAmount = (basicPremiumWithImt23AndAccessories * discountOnOd) / 100;
-      double basicOdAfterDiscount = basicPremiumWithImt23AndAccessories - discountAmount;
+      // double basicPremiumWithImt23AndAccessories = basicForVehicle + imt23Premium + accessoriesPremium;
+      double discountAmount = (basicForVehicle * discountOnOd) / 100;
+      double basicOdAfterDiscount = basicForVehicle - discountAmount;
+      double totalBasicPremium = basicOdAfterDiscount + accessoriesPremium + imt23Premium;
       double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
       double netOdPremium = totalBasicPremium - ncbAmount;
       double totalA = netOdPremium;
@@ -197,11 +192,11 @@ class _TwoWheelerPassengerCarryingFormScreenState
         // A - Own Damage Premium Package
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-        "IMT 23": imt23Premium.toStringAsFixed(2),
         "Discount on OD Premium": discountAmount.toStringAsFixed(2),
         "Basic OD Premium after discount":
             basicOdAfterDiscount.toStringAsFixed(2),
-        "Accessories Value": accessoriesValue.toStringAsFixed(2),
+        "IMT 23": imt23Premium.toStringAsFixed(2),
+        "Accessories Value": accessoriesPremium.toStringAsFixed(2),
         "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
         "No Claim Bonus": ncbAmount.toStringAsFixed(2),
         "Net Own Damage Premium(A)": netOdPremium.toStringAsFixed(2),
@@ -326,10 +321,8 @@ class _TwoWheelerPassengerCarryingFormScreenState
                     'Enter Discount'),
                 _buildDropdownField('IMT 23', _imt23Options, _selectedImt23,
                     (val) => setState(() => _selectedImt23 = val)),
-                _buildTextField('electricAccessories', 'Electrical Accessories (₹)',
-                    'Enter Electrical Accessories Value'),
-                _buildTextField('nonElectricAccessories', 'Non-Electrical Accessories (₹)',
-                    'Enter Non-Electrical Accessories Value'),
+                _buildTextField('accessoriesValue', 'Accessories Value (₹)',
+                    'Enter Accessories Value'),
                 _buildDropdownField('No Claim Bonus (%)', _ncbOptions,
                     _selectedNcb, (val) => setState(() => _selectedNcb = val)),
                 _buildTextField(
@@ -371,9 +364,7 @@ class _TwoWheelerPassengerCarryingFormScreenState
   Widget _buildTextField(String key, String label, String placeholder) {
     // Optional dropdown fields
     const optionalFields = [
-      'electricAccessories',
-      'nonElectricAccessories',
-      'zeroDepreciation',
+      'accessoriesValue',
       'paOwnerDriver',
       'paUnnamedPassenger',
       'otherCess',

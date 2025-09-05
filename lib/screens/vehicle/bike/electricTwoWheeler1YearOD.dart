@@ -111,8 +111,8 @@ class _ElectricTwoWheeler1YODFormScreenState
           0.0; //Current IDV
       String yearOfManufacture = _controllers['yearOfManufacture']!.text;
       String zone = _selectedZone ?? "A";
-      double kwCapacity =
-          double.tryParse(_controllers['kwCapacity']!.text) ?? 0.0;
+      int kwCapacity =
+          int.tryParse(_controllers['kwCapacity']!.text) ?? 0;
       double discountOnOd =
           double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
       double accessoriesValue =
@@ -139,12 +139,21 @@ class _ElectricTwoWheeler1YODFormScreenState
 
       // OD Calculations
       double basicForVehicle = (idv * vehicleBasicRate) / 100;
+      
+      // Calculate accessories premium with 4% directly on accessories value
+      double accessoriesPremium = (accessoriesValue * 4) / 100;
+      
+      // Add accessories premium before discount
+      //double basicPremiumWithAccessories = basicForVehicle + accessoriesPremium;
       double discountAmount = (basicForVehicle * discountOnOd) / 100;
       double basicOdAfterDiscount = basicForVehicle - discountAmount;
-      double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
+      double totalBasicPremium = basicOdAfterDiscount + accessoriesPremium;
       double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
       double netOdPremium = totalBasicPremium - ncbAmount;
-      double totalA = netOdPremium + zeroDepreciation;
+      
+      // Calculate zero depreciation on current IDV
+      double zeroDepPremium = (idv * zeroDepreciation) / 100;
+      double totalA = netOdPremium + zeroDepPremium;
 
       // TP Section
       double liabilityPremiumTP = 00.00;
@@ -173,11 +182,11 @@ class _ElectricTwoWheeler1YODFormScreenState
         "Discount on OD Premium": discountAmount.toStringAsFixed(2),
         "Basic OD Premium after discount":
             basicOdAfterDiscount.toStringAsFixed(2),
-        "Accessories Value": accessoriesValue.toStringAsFixed(2),
+        "Accessories Value": accessoriesPremium.toStringAsFixed(2),
         "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
         "No Claim Bonus": ncbAmount.toStringAsFixed(2),
         "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
-        "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
+        "Zero Dep Premium": zeroDepPremium.toStringAsFixed(2),
         "Total A": totalA.toStringAsFixed(2),
 
         // B - Liability Premium
@@ -303,8 +312,8 @@ class _ElectricTwoWheeler1YODFormScreenState
                     _ncbOptions,
                     _selectedNoClaimBonus,
                     (val) => setState(() => _selectedNoClaimBonus = val)),
-                _buildTextField('zeroDepreciation', 'Zero Depreciation (₹)',
-                    'Enter Amount'),
+                _buildTextField('zeroDepreciation', 'Zero Depreciation (%)',
+                    'Enter Percentage'),
                 _buildTextField(
                     'paOwnerDriver', 'PA to Owner Driver (₹)', 'Enter Amount'),
                 _buildDropdownField(
@@ -449,7 +458,7 @@ class _ElectricTwoWheeler1YODFormScreenState
 }
 
 double _getElectricTwoWheelerOdRate(
-    String zone, String age, double kwCapacity) {
+    String zone, String age, int kwCapacity) {
   if (zone == 'A') {
     if (kwCapacity <= 3) {
       if (age == 'Upto 5 Years') return 1.708;

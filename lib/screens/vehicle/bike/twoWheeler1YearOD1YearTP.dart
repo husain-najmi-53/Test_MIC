@@ -143,10 +143,10 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
       double accessoriesPremium = (accessoriesValue * 4) / 100;
       
       // Add accessories premium before discount
-      double basicPremiumWithAccessories = basicForVehicle + accessoriesPremium;
-      double discountAmount = (basicPremiumWithAccessories * discountOnOd) / 100;
-      double basicOdAfterDiscount = basicPremiumWithAccessories - discountAmount;
-      double totalBasicPremium = basicOdAfterDiscount;
+      //double basicPremiumWithAccessories = basicForVehicle + accessoriesPremium;
+      double discountAmount = (basicForVehicle * discountOnOd) / 100;
+      double basicOdAfterDiscount = basicForVehicle - discountAmount;
+      double totalBasicPremium = basicOdAfterDiscount + accessoriesPremium;
       double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
       double netOdPremium = totalBasicPremium - ncbAmount;
       
