@@ -774,6 +774,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Basic for Vehicle",
       "Discount on OD Premium",
       "Basic OD Premium after discount",
+      "Loading Discount Premium",
       "Accessories Value",
       "Total Basic Premium",
       "No Claim Bonus",
@@ -789,6 +790,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Liability Premium": [
       "Liability Premium (TP)",
+      "CNG/LPG kit",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "PA to Unnamed Passenger",
@@ -806,6 +808,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Vehicle Basic Rate",
       "Basic for Vehicle",
       "Discount on OD Premium",
+      "Loading Discount Premium",
       "Basic OD Premium after discount",
       "Accessories Value",
       "Total Basic Premium",
@@ -822,6 +825,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Liability Premium": [
       "Liability Premium (TP)",
+      "CNG/LPG kit",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "PA to Unnamed Passenger",
@@ -839,6 +843,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Vehicle Basic Rate",
       "Basic for Vehicle",
       "Discount on OD Premium",
+      "Loading Discount Premium",
       "Basic OD Premium after discount",
       "Accessories Value",
       "Optional Extensions(GeoExt+FiberGT+DrTutions)",
@@ -862,6 +867,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Liability Premium": [
       "Liability Premium (TP)",
+      "CNG/LPG kit",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "PA to Unnamed Passenger",
@@ -879,6 +885,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Vehicle Basic Rate",
       "Basic for Vehicle",
       "Discount on OD Premium",
+      "Loading Discount Premium",
       "Basic OD Premium after discount",
       "Accessories Value",
       "Optional Extensions(GeoExt+FiberGT+DrTutions)",
@@ -902,6 +909,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Liability Premium": [
       "Liability Premium (TP)",
+      "CNG/LPG kit",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "PA to Unnamed Passenger",
@@ -913,4 +921,5 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Other CESS"
     ]
   },
+
 };

@@ -24,6 +24,7 @@ class InsuranceCarResultScreen extends StatelessWidget {
           "Basic for Vehicle",
           "Discount on OD Premium",
           "Basic OD Premium after discount",
+          "Loading Discount Premium",
           "Accessories Value",
           "Total Basic Premium",
           "No Claim Bonus",
@@ -41,6 +42,7 @@ class InsuranceCarResultScreen extends StatelessWidget {
 
         "[C] Liability Premium": [
           "Liability Premium (TP)",
+          "CNG/LPG kit",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
@@ -58,6 +60,7 @@ class InsuranceCarResultScreen extends StatelessWidget {
           "Vehicle Basic Rate",
           "Basic for Vehicle",
           "Discount on OD Premium",
+          "Loading Discount Premium",
           "Basic OD Premium after discount",
           "Accessories Value",
           "Total Basic Premium",
@@ -76,6 +79,7 @@ class InsuranceCarResultScreen extends StatelessWidget {
 
         "[C] Liability Premium": [
           "Liability Premium (TP)",
+          "CNG/LPG kit",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
@@ -98,6 +102,7 @@ class InsuranceCarResultScreen extends StatelessWidget {
           "Vehicle Basic Rate",
           "Basic for Vehicle",
           "Discount on OD Premium",
+          "Loading Discount Premium",
           "Basic OD Premium after discount",
           "Accessories Value",
           "Optional Extensions(GeoExt+FiberGT+DrTutions)",
@@ -123,6 +128,7 @@ class InsuranceCarResultScreen extends StatelessWidget {
 
         "[C] Liability Premium": [
           "Liability Premium (TP)",
+          "CNG/LPG kit",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
@@ -145,6 +151,7 @@ class InsuranceCarResultScreen extends StatelessWidget {
           "Vehicle Basic Rate",
           "Basic for Vehicle",
           "Discount on OD Premium",
+          "Loading Discount Premium",
           "Basic OD Premium after discount",
           "Accessories Value",
           "Optional Extensions(GeoExt+FiberGT+DrTutions)",
@@ -170,6 +177,7 @@ class InsuranceCarResultScreen extends StatelessWidget {
 
         "[C] Liability Premium": [
           "Liability Premium (TP)",
+          "CNG/LPG kit",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",

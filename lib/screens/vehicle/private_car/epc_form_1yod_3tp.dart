@@ -184,13 +184,13 @@ class _EPCForm1YOD3TPState extends State<EPCForm1YOD3TP> {
       double basicForVehicle = currentIdv * vehicleBasicRate / 100;
       double discountAmount = (basicForVehicle * discountOnOd) / 100;
       double basicOdAfterDiscount = basicForVehicle - discountAmount;
-      basicOdAfterDiscount +=
-          (basicOdAfterDiscount * loading_on_discount_premium) / 100;
+      double loading_on_discount_premium_map = (basicOdAfterDiscount * loading_on_discount_premium) / 100;
+      basicOdAfterDiscount += loading_on_discount_premium_map;
       double electricAccessoriesValue = electricAccessories==0.0?0.0:(electricAccessories/1000)*40;
       double nonElectricAccessoriesValue = nonElectricAccessories==0.0?0.0:(nonElectricAccessories/1000)*30;
       double accessoriesValue = electricAccessoriesValue + nonElectricAccessoriesValue;
       double cngLpgPremium = 0.0;
-      if (_cngLpgKitOptions == 'Yes' && CNG_LPG_kits_Ex_fitted > 0) {
+      if (_selectedCngLpgKit == 'Yes' && CNG_LPG_kits_Ex_fitted > 0) {
         cngLpgPremium = (CNG_LPG_kits_Ex_fitted / 1000) * 60;
       }
       double totalBasicPremium =
@@ -200,14 +200,16 @@ class _EPCForm1YOD3TPState extends State<EPCForm1YOD3TP> {
       double totalA = netOdPremium;
 
       //Add-ons
-      double totalB = zeroDepreciation +
+      // Calculate zero depreciation on current IDV
+      double zeroDepPremium = (currentIdv * zeroDepreciation) / 100;
+      double totalB = zeroDepPremium +
           RSAaddons +
           otherAddonCoverage +
           ValueAddedServices;
 
       // TP Section
       double cngLpgRate = 60;   // change to actual IRDA rate
-      double cngLpgKit = _cngLpgKitOptions == 'Yes'?cngLpgRate:0.0;
+      double cngLpgKit = _selectedCngLpgKit == 'Yes'?cngLpgRate:0.0;
       int tp_years =
           findTPYear(int.tryParse(_controllers['tp']?.text.trim() ?? "") ?? 1);
       double liabilityPremiumTP = getThirdPartyPremium(
@@ -239,6 +241,7 @@ class _EPCForm1YOD3TPState extends State<EPCForm1YOD3TP> {
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
         "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Loading Discount Premium": loading_on_discount_premium_map.toStringAsFixed(2),
         "Basic OD Premium after discount":
             basicOdAfterDiscount.toStringAsFixed(2),
         "Accessories Value": accessoriesValue.toStringAsFixed(2),
@@ -248,7 +251,7 @@ class _EPCForm1YOD3TPState extends State<EPCForm1YOD3TP> {
         "Total A": totalA.toStringAsFixed(2),
 
         // B - Add-ons
-        "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
+        "Zero Dep Premium": zeroDepPremium.toStringAsFixed(2),
         "RSA": RSAaddons.toStringAsFixed(2),
         "Other Addon Coverage": otherAddonCoverage.toStringAsFixed(2),
         "Value Added Services": ValueAddedServices.toStringAsFixed(2),
@@ -256,6 +259,7 @@ class _EPCForm1YOD3TPState extends State<EPCForm1YOD3TP> {
 
         // C - Liability Premium
         "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "CNG/LPG kit": cngLpgKit.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
@@ -390,7 +394,7 @@ class _EPCForm1YOD3TPState extends State<EPCForm1YOD3TP> {
                 _buildTextField('RSAaddons',
                     'RSA/Additional for Addons(amount)', true, "Enter Addons "),
                 _buildTextField('otherAddonCoverage',
-                    'Other Addon Coverage(rate)', true, "Enter rate "),
+                    'Other Addon Coverage(amount)', true, "Enter Amount "),
                 _buildTextField('ValueAddedServices',
                     'Value Added Service(amount)', true, "Enter Amount "),
                 _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)', true,
@@ -401,7 +405,7 @@ class _EPCForm1YOD3TPState extends State<EPCForm1YOD3TP> {
                     _selectedLlPaidDriver,
                     (val) => setState(() => _selectedLlPaidDriver = val)),
                 _buildTextField('paUnnamedPassenger',
-                    'PA to Unnamed Passenger (₹)', true, "Enter Passengers "),
+                    'PA to Unnamed Passenger (₹)', true, "Enter Value "),
                 _buildTextField(
                     'otherCess', 'Other Cess (%)', true, "Enter Cess % "),
               ],
@@ -519,14 +523,16 @@ class _EPCForm1YOD3TPState extends State<EPCForm1YOD3TP> {
                 if (key == 'yearOfManufacture') {
                   int? year = int.tryParse(value.trim());
                   if (year == null) {
-                    return 'Enter a valid year';
+                    return 'Enter year';
                   }
                   int currentYear = DateTime.now().year;
                   if (year > currentYear) {
-                    return 'Year cannot be greater than $currentYear';
+                    // return 'Year cannot be greater than $currentYear';
+                    return 'Enter a valid year';
                   }
                   if (year < 1900) {
-                    return 'Year cannot be less than 1900';
+                    // return 'Year cannot be less than 1900';
+                    return 'Year not less than 1900';
                   }
                 }
 

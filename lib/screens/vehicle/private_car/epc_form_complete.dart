@@ -254,15 +254,16 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
           ? double.parse((min(basicOD * 0.05, 200)).toStringAsFixed(2))
           : 0.0;
       print(AAIValue);
-      double VoluntaryDeduct =
-          double.tryParse(_selectedVoluntaryDeduct ?? "0") ?? 0.0; //
+      double VoluntaryDeduct = calculateVoluntaryDeductibleDiscount(odPremium: basicOD,
+          deductible: double.tryParse(_selectedVoluntaryDeduct ?? "0") ?? 0.0
+      ); //
 
       // OD Calculations
       double basicForVehicle = currentIdv * vehicleBasicRate / 100 * odYears; // Multiply by OD years
       double discountAmount = (basicForVehicle * discountOnOd) / 100;
       double basicOdAfterDiscount = basicForVehicle - discountAmount;
-      basicOdAfterDiscount +=
-          (basicOdAfterDiscount * loading_on_discount_premium) / 100;
+      double loading_on_discount_premium_map = (basicOdAfterDiscount * loading_on_discount_premium) / 100;
+      basicOdAfterDiscount += loading_on_discount_premium_map;
       double electricAccessoriesValue =
           electricAccessories == 0.0 ? 0.0 : (electricAccessories / 1000) * 40;
       double nonElectricAccessoriesValue = nonElectricAccessories == 0.0
@@ -271,7 +272,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
       double accessoriesValue =
           electricAccessoriesValue + nonElectricAccessoriesValue;
       double cngLpgPremium = 0.0;
-      if (_cngLpgKitOptions == 'Yes' && CNG_LPG_kits_Ex_fitted > 0) {
+      if (_selectedCngLpgKit == 'Yes' && CNG_LPG_kits_Ex_fitted > 0) {
         cngLpgPremium = (CNG_LPG_kits_Ex_fitted / 1000) * 60;
       }
       double OptionalExtensions =
@@ -285,10 +286,13 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
           TotalDiscounts;
       double ncbAmount = (ncbPercentage / 100) * totalBasicPremium.abs();
       double netOdPremium = totalBasicPremium - ncbAmount;
+      if (netOdPremium < 0) netOdPremium = 0.0;
       double totalA = netOdPremium;
 
       //Add-ons
-      double totalB = zeroDepreciation +
+      // Calculate zero depreciation on current IDV
+      double zeroDepPremium = (currentIdv * zeroDepreciation) / 100;
+      double totalB = zeroDepPremium +
           RSAaddons +
           consumables +
           tyreCover +
@@ -300,7 +304,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
 
       // TP Section
       double cngLpgRate = 60;   // change to actual IRDA rate
-      double cngLpgKit = _cngLpgKitOptions == 'Yes'?cngLpgRate:0.0;
+      double cngLpgKit = _selectedCngLpgKit == 'Yes'?cngLpgRate:0.0;
       int tp_years =
           findTPYear(int.tryParse(_controllers['tp']?.text.trim() ?? "") ?? 1);
       double liabilityPremiumTP = getThirdPartyPremium(
@@ -332,6 +336,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
         "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Loading Discount Premium": loading_on_discount_premium_map.toStringAsFixed(2),
         "Basic OD Premium after discount":
             basicOdAfterDiscount.toStringAsFixed(2),
         "Accessories Value": accessoriesValue.toStringAsFixed(2),
@@ -345,7 +350,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
         "Total A": totalA.toStringAsFixed(2),
 
         // B - Add-ons
-        "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
+        "Zero Dep Premium": zeroDepPremium.toStringAsFixed(2),
         "RSA": RSAaddons.toStringAsFixed(2),
         "Consumables": consumables.toStringAsFixed(2),
         "Tyre Cover": tyreCover.toStringAsFixed(2),
@@ -358,6 +363,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
 
         // C - Liability Premium
         "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "CNG/LPG kit": cngLpgKit.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
@@ -513,27 +519,27 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
                 _buildDropdownField('No Claim Bonus (%)', _ncbOptions,
                     _selectedNcb, (val) => setState(() => _selectedNcb = val)),
                 _buildTextField('zeroDepreciation', 'Zero Depreciation (rate)',
-                    true, "Enter 1 Yr Rate "),
+                    true, "Enter Rate "),
                 _buildTextField(
                     'RSAaddons',
                     'RSA/Additional for Addons(amount)',
                     true,
-                    "Enter 1 Yr Amount "),
-                _buildTextField('consumables', 'Consumables(rate)', true,
-                    "Enter 1 Yr rate "),
+                    "Enter  Amount "),
+                _buildTextField('consumables', 'Consumables(₹)', true,
+                    "Enter Amount "),
                 _buildTextField(
-                    'tyreCover', 'Tyre Cover(rate)', true, "Enter 1 Yr rate "),
-                _buildTextField('NCBprotection', 'NCB Protection(rate)', true,
-                    "Enter 1 Yr rate "),
+                    'tyreCover', 'Tyre Cover(₹)', true, "Enter Amount "),
+                _buildTextField('NCBprotection', 'NCB Protection(₹)', true,
+                    "Enter Amount "),
                 _buildTextField('engineProtector', 'Engine Protector', true,
-                    "Enter 1 Yr Rate "),
-                _buildTextField('returnToInvoice', 'Return to Invoice(rate)',
-                    true, "Enter 1 Yr Rate "),
+                    "Enter Amoount "),
+                _buildTextField('returnToInvoice', 'Return to Invoice(₹)',
+                    true, "Enter Amoount "),
                 _buildTextField('otherAddonCoverage',
-                    'Other Addon Coverage(rate)', true, "Enter 1 Yr Rate "),
+                    'Other Addon Coverage(₹)', true, "Enter Amount "),
                 _buildTextField('ValueAddedServices',
                     'Value Added Service(amount)', true, "Enter 1 Yr Amount "),
-                _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)', true,
+                _buildTextField('paOwnerDriver', 'PA to Owner Driver', true,
                     "Enter Amount "),
                 _buildDropdownField(
                     'LL to Paid Driver',
@@ -541,7 +547,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
                     _selectedLlPaidDriver,
                     (val) => setState(() => _selectedLlPaidDriver = val)),
                 _buildTextField('paUnnamedPassenger',
-                    'PA to Unnamed Passenger (₹)', true, "Enter Passengers "),
+                    'PA to Unnamed Passenger (₹)', true, "Enter Value "),
                 _buildTextField(
                     'otherCess', 'Other Cess (%)', true, "Enter Cess % "),
               ],
@@ -565,6 +571,32 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
         ),
       ),
     );
+  }
+
+  double calculateVoluntaryDeductibleDiscount({
+    required double deductible,
+    required double odPremium,
+  }) {
+    double percent = 0.0;
+
+    switch (deductible) {
+      case 2500:
+        percent = 20.0;
+        break;
+      case 5000:
+        percent = 25.0;
+        break;
+      case 7500:
+        percent = 30.0;
+        break;
+      case 15000:
+        percent = 35.0;
+        break;
+      default:
+        percent = 0.0; // if no deductible or invalid input
+    }
+
+    return (odPremium * percent) / 100.0;
   }
 
   Widget _buildStickyNote() {
@@ -663,37 +695,45 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
                   return 'Enter $label';
                 }
 
-                //Limit OD till 3
-                if (key == 'od') {
-                  int odYears = int.tryParse(_controllers['od']?.text.trim() ?? "") ?? 1;
-                  if(odYears > 3){
-                    return 'Should not be more than 3 Yrs';
-                  }
-                  if(odYears < 1){
-                    return 'Should be at least 1';
-                  }
-                }
-
                 //Limit tp till 3
                 if (key == 'tp') {
                   int tpYears = int.tryParse(_controllers['tp']?.text.trim() ?? "") ?? 1;
                   if(tpYears>3){
-                    return 'Should not be more than 3 Yrs';
+                    return 'Not greater than 3 Yrs';
+                    // return 'Should not be greater than 3 Yrs';
+                  }
+                  if(tpYears < 1){
+                    return 'Should be at least 1 Yr';
                   }
                 }
+
+                //Limit OD till 3
+                if (key == 'od') {
+                  int odYears = int.tryParse(_controllers['od']?.text.trim() ?? "") ?? 1;
+                  if(odYears>3){
+                    return 'Not greater than 3 Yrs';
+                    // return 'Should not be greater than 3 Yrs';
+                  }
+                  if(odYears < 1){
+                    return 'Should be at least 1 yr';
+                  }
+                }
+
 
                 // Date validation for Year of Manufacture
                 if (key == 'yearOfManufacture') {
                   int? year = int.tryParse(value.trim());
                   if (year == null) {
-                    return 'Enter a valid year';
+                    return 'Enter year';
                   }
                   int currentYear = DateTime.now().year;
                   if (year > currentYear) {
-                    return 'Year cannot be greater than $currentYear';
+                    // return 'Year cannot be greater than $currentYear';
+                    return 'Enter a valid year';
                   }
                   if (year < 1900) {
-                    return 'Year cannot be less than 1900';
+                    // return 'Year cannot be less than 1900';
+                    return 'Year not less than 1900';
                   }
                 }
 
