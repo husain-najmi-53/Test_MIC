@@ -117,8 +117,10 @@ class _ElectricGoodsCarryingScreenState
           double.tryParse(_controllers['electricalAccessories']!.text) ?? 0.0;
       double externalCngLpgKit =
           double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
-      double zeroDep =
+      double zeroDepPercent =
           double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
+      double zeroDep = (zeroDepPercent / 100) * idv;
+
       double rsaAmount =
           double.tryParse(_controllers['rsaAmount']!.text) ?? 0.0;
       double paOwnerDriver =
@@ -131,7 +133,7 @@ class _ElectricGoodsCarryingScreenState
       // Optional Add-ons
       double geoExtAmt =
           (int.tryParse(_selectedGeographicalExtn ?? '0') == 0) ? 0.0 : 400;
-      double imt23Amt = _selectedImt23 == 'Yes' ? 200.0 : 0.0;
+      double imt23Percent = _selectedImt23 == 'Yes' ? 15.0 : 0.0;
       double antiTheftAmt = _selectedAntiTheft == 'Yes' ? -200.0 : 0.0;
       double restrictedTppdAmt =
           _selectedRestrictedTppd == 'Yes' ? -100.0 : 0.0;
@@ -144,10 +146,21 @@ class _ElectricGoodsCarryingScreenState
       // --- OD Calculation (A) ---
       double basicRate = _getOdRate(zone, age);
 
+      double cngLpgPremium = 0.0;
+      if (_selectedCngLpgKit == 'Yes' && externalCngLpgKit > 0) {
+        cngLpgPremium = (externalCngLpgKit / 1000) * 60;
+      }
+
+      double electricAccessoriesVal = 0.0;
+      if (electricalAccessories > 0) {
+        electricAccessoriesVal = (electricalAccessories / 1000) * 60;
+      }
+
       double basicForVehicle = (idv * basicRate) / 100;
+      double imt23Amt = (basicForVehicle * imt23Percent) / 100;
       double basicOdBeforeDiscount = basicForVehicle +
-          electricalAccessories +
-          externalCngLpgKit +
+          electricAccessoriesVal +
+          cngLpgPremium +
           geoExtAmt +
           imt23Amt +
           antiTheftAmt;
@@ -184,8 +197,8 @@ class _ElectricGoodsCarryingScreenState
         "Gross Vehicle Weight": gvw.toString(),
         "Vehicle Basic Rate": basicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-        "Electrical Accessories": electricalAccessories.toStringAsFixed(2),
-        "CNG/LPG Kits": externalCngLpgKit.toStringAsFixed(2),
+        "Electrical Accessories": electricAccessoriesVal.toStringAsFixed(2),
+        "CNG/LPG Kits": cngLpgPremium.toStringAsFixed(2),
         "Geographical Ext": geoExtAmt.toStringAsFixed(2),
         "IMT 23": imt23Amt.toStringAsFixed(2),
         "Anti-Theft": antiTheftAmt.toStringAsFixed(2),
@@ -206,7 +219,7 @@ class _ElectricGoodsCarryingScreenState
         "LL to Other Employee": llOtherEmpAmt.toStringAsFixed(2),
         "Total Liability Premium (C)": totalC.toStringAsFixed(2),
         "Total Premium (A+B+C)": totalABC.toStringAsFixed(2),
-        "GST (18%)": gst.toStringAsFixed(2),
+        "GST (12%)": gst.toStringAsFixed(2),
         "Other CESS": otherCessAmt.toStringAsFixed(2),
         "Final Premium": finalPremium.toStringAsFixed(2),
       };
@@ -414,6 +427,21 @@ class _ElectricGoodsCarryingScreenState
                 if (value == null || value.trim().isEmpty) {
                   return 'Enter $label';
                 }
+
+                // Date validation for Year of Manufacture
+                if (key == 'yearOfManufacture') {
+                  int? year = int.tryParse(value.trim());
+                  if (year == null) {
+                    return 'Enter a valid year';
+                  }
+                  int currentYear = DateTime.now().year;
+                  if (year > currentYear) {
+                    return 'Year cannot be greater than $currentYear';
+                  }
+                  if (year < 1900) {
+                    return 'Year cannot be less than 1900';
+                  }
+                }
                 return null;
               },
             ),
@@ -491,10 +519,10 @@ class _ElectricGoodsCarryingScreenState
   }
 
   double _getTpRate(int gvw) {
-    if (gvw <= 7500) return 16049;
-    if (gvw <= 12000) return 27186;
-    if (gvw <= 20000) return 35313;
-    if (gvw <= 40000) return 43950;
-    return 44242;
+    if (gvw <= 7500) return 13642;
+    if (gvw <= 12000) return 23108;
+    if (gvw <= 20000) return 30016;
+    if (gvw <= 40000) return 37357;
+    return 37606;
   }
 }

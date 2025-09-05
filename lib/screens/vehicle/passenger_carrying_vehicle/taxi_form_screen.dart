@@ -177,6 +177,16 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
     // 1) Basic OD premium based on current IDV and base rate
     double basicOdPremium = (currentIdv * vehicleBasicRate) / 100;
 
+      double accessories = 0.0;
+      if (electronicAccessories > 0) {
+        accessories = (electronicAccessories / 1000) * 60;
+      }
+     
+      double cngKitLoading = 0.0;
+      if (_selectedCngLpgKit == 'Yes' && externalCngLpgKit > 0) {
+        cngKitLoading = (externalCngLpgKit / 1000) * 60;
+      }
+
     // 2) Accessories loading: electronic accessories + external CNG/LPG kit
     double accessoriesLoading = electronicAccessories + externalCngLpgKit;
 
@@ -242,7 +252,9 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
       "Discount Amount": discountAmount.toStringAsFixed(2),
       "Anti Theft Discount": antiTheftDiscount.toStringAsFixed(2),
       "OD Premium after Discounts": odPremiumAfterDiscounts.toStringAsFixed(2),
+      "Electronic/Electrical Accessories":accessories.toStringAsFixed(2),
       "Accessories Loading": accessoriesLoading.toStringAsFixed(2),
+      "CNG/LPG kits(Externally Fitted)":cngKitLoading.toStringAsFixed(2),
       "No Claim Bonus (%)": selectedNcb.toStringAsFixed(2),
       "NCB Amount": ncbAmount.toStringAsFixed(2),
       "Net OD Premium": netOdPremium.toStringAsFixed(2),

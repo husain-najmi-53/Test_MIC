@@ -105,7 +105,7 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
           int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
       double discountOnOd =
           double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-      double accessories =
+      double electricalAccessories =
           double.tryParse(_controllers['electricalAccessories']!.text) ?? 0.0;
       double externalCng =
           double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
@@ -146,7 +146,7 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
 
       // 2. IMT 23 - if Yes, 5% discount on OD premium
       if (imt23 == 'Yes') {
-        basicOdPremium *= 0.95;
+        basicOdPremium *= 0.15;
       }
 
       // 3. Anti Theft Discount - 2.5% discount on OD if Yes
@@ -158,9 +158,20 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
       double discountAmount = basicOdPremium * discountOnOd / 100;
       double odAfterDiscount = basicOdPremium - discountAmount;
 
+       double accessories = 0.0;
+      if (electricalAccessories > 0) {
+        accessories = (electricalAccessories / 1000) * 60;
+      }
+      
+      double cngKitLoading= 0.0;
+      if (_selectedCngLpgKit== 'Yes' && externalCng > 0) {
+        cngKitLoading = (externalCng/ 1000) * 60;
+      }
+
+
       // 5. Add accessories, external CNG/LPG kit, RSA Addons
       double totalBasicPremium =
-          odAfterDiscount + accessories + externalCng + rsaAddons;
+          odAfterDiscount + accessories + cngKitLoading  + rsaAddons;
 
       // 6. NCB discount on totalBasicPremium
       double ncbAmount = totalBasicPremium * selectedNcbPercent / 100;
@@ -207,7 +218,7 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
         'OD Premium after Discount (₹)': odAfterDiscount.toStringAsFixed(2),
         'Electrical Accessories (₹)': accessories.toStringAsFixed(2),
         'CNG/LPG Kits': cngLpgKit,
-        'CNG/LPG Kits (Externally Fitted) (₹)': externalCng.toStringAsFixed(2),
+        'CNG/LPG Kits (Externally Fitted) (₹)': cngKitLoading.toStringAsFixed(2),
         'RSA/Addons (₹)': rsaAddons.toStringAsFixed(2),
         'Total Basic Premium (₹)': totalBasicPremium.toStringAsFixed(2),
         'No Claim Bonus (%)': selectedNcbPercent.toStringAsFixed(2),

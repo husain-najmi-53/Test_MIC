@@ -158,7 +158,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
           double.tryParse(_selectedLlEmployeeOther ?? "0") ?? 0.0;
       double llToPaidDriver =
           double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
-      double restrictedTppd = _selectedRestrictedTppd == 'Yes' ? 100 : 0.0;
+      double restrictedTppd = _selectedRestrictedTppd == 'Yes' ? 200 : 0.0;
       String selectedNCBText = _selectedNcb ?? "0%";
       double ncbPercentage =
           double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
@@ -209,8 +209,8 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
         cngTpExtra = 60;
       }
       double liabilityPremiumTP = _getTpRate(trailerTowedBy.toString());
-      liabilityPremiumTP = liabilityPremiumTP * noOfTrailers;
-      double totalB = liabilityPremiumTP +
+      double totalLiabilityPremiumTP = liabilityPremiumTP * noOfTrailers;
+      double totalB = totalLiabilityPremiumTP -
           restrictedTppd +
           cngTpExtra +
           paOwnerDriver +
@@ -248,6 +248,8 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
 
         // B - Liability Premium
         "Trailer Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "Total Trailer Liability Premium (TP)":
+            totalLiabilityPremiumTP.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppd.toStringAsFixed(2),
         "CNG/LPG Kit": cngTpExtra.toString(),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
@@ -461,6 +463,22 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
+
                   return null; // Valid input
                 }),
           ),
@@ -568,8 +586,8 @@ double _getTpRate(String trailerTowedBy) {
     case 'Agriculture Tractors upto 6 HP':
       return 910;
     case 'Other Vehicle':
-      return 7267;
+      return 2485;
     default:
-      return 7267; // fallback
+      return 2485; // fallback
   }
 }

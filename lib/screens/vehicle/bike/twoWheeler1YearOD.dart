@@ -138,12 +138,21 @@ class _TwoWheeler1YearODFormScreenState
 
       // OD Calculations
       double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
-      double discountAmount = (basicForVehicle * discountOnOd) / 100;
-      double basicOdAfterDiscount = basicForVehicle - discountAmount;
-      double totalBasicPremium = basicOdAfterDiscount + accessoriesValue;
+      
+      // Calculate accessories premium with 4% directly on accessories value
+      double accessoriesPremium = (accessoriesValue * 4) / 100;
+      
+      // Add accessories premium before discount
+      double basicPremiumWithAccessories = basicForVehicle + accessoriesPremium;
+      double discountAmount = (basicPremiumWithAccessories * discountOnOd) / 100;
+      double basicOdAfterDiscount = basicPremiumWithAccessories - discountAmount;
+      double totalBasicPremium = basicOdAfterDiscount;
       double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
       double netOdPremium = totalBasicPremium - ncbAmount;
-      double totalA = netOdPremium + zeroDepreciation;
+      
+      // Calculate zero depreciation on basic for vehicle
+      double zeroDepPremium = (currentIdv * zeroDepreciation) / 100;
+      double totalA = netOdPremium + zeroDepPremium;
 
       // TP Section
       double liabilityPremiumTP = 00.00;
@@ -172,11 +181,11 @@ class _TwoWheeler1YearODFormScreenState
         "Discount on OD Premium": discountAmount.toStringAsFixed(2),
         "Basic OD Premium after discount":
             basicOdAfterDiscount.toStringAsFixed(2),
-        "Accessories Value": accessoriesValue.toStringAsFixed(2),
+        "Accessories Value": accessoriesPremium.toStringAsFixed(2),
         "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
         "No Claim Bonus": ncbAmount.toStringAsFixed(2),
         "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
-        "Zero Dep Premium": zeroDepreciation.toStringAsFixed(2),
+        "Zero Dep Premium": zeroDepPremium.toStringAsFixed(2),
         "Total A": totalA.toStringAsFixed(2),
 
         // B - Liability Premium
@@ -296,8 +305,8 @@ class _TwoWheeler1YearODFormScreenState
                     _ncbOptions,
                     _selectedNoClaimBonus,
                     (val) => setState(() => _selectedNoClaimBonus = val)),
-                _buildTextField('zeroDepreciation', 'Zero Depreciation (₹)',
-                    'Enter Amount'),
+                _buildTextField('zeroDepreciation', 'Zero Depreciation (%)',
+                    'Enter Percentage'),
                 _buildTextField(
                     'paOwnerDriver', 'PA to Owner Driver (₹)', 'Enter Amount'),
                 _buildTextField('paUnnamedPassenger',

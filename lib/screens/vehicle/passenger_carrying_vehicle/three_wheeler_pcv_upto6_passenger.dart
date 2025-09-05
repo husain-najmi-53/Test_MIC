@@ -157,23 +157,34 @@ class _ThreeWheelerPCV_upto6PassengerState
     // 2) IMT 23 Loading
     double imt23Loading = 0.0;
     if (selectedImt23 == 'Yes') {
-      // 2% on electrical accessories value
-      imt23Loading = electronicAccessories * 0.02;
+      imt23Loading = basicForVehicle *=0.15;
     }
 
     // 3) CNG/LPG factory fitted kit loading
-    double cngKitLoading = 0.0;
-    if (cngLpgKit == 'Yes') {
-      cngKitLoading = currentIdv * 0.10; // 10% of current IDV
-    }
+    // double cngKitLoading = 0.0;
+    // if (cngLpgKit == 'Yes' && cngExternalLoading > 0) {
+    //     cngKitLoading = (cngExternalLoading / 1000) * 60;
+    //   }
 
-    // 4) CNG/LPG external kit loading
-    double cngExternalLoading =
-        externalCngLpgKit * 0.02; // 2% of external kit value
+    // 4) CNG/LPG external kit loading 
+    // double cngExternalLoading =
+    //     externalCngLpgKit * 0.02; // 2% of external kit value
+
+    double cngKitLoading = 0.0;
+    if (cngLpgKit == 'Yes' && externalCngLpgKit > 0) {
+        cngKitLoading = (externalCngLpgKit / 1000) * 60;
+      } 
+    
+    double accessories = 0.0;
+      if (electronicAccessories > 0) {
+        accessories = (electronicAccessories / 1000) * 60;
+      }
+       
+
 
     // 5) Sum OD before discounts
     double totalOdBeforeDiscount =
-        basicForVehicle + imt23Loading + cngKitLoading + cngExternalLoading;
+        basicForVehicle + imt23Loading + cngKitLoading + externalCngLpgKit;
 
     // 6) Apply discount on OD premium
     double discountAmount = (totalOdBeforeDiscount * discountOnOd) / 100;
@@ -228,8 +239,10 @@ class _ThreeWheelerPCV_upto6PassengerState
       "Base OD Rate (%)": vehicleBasicRate.toStringAsFixed(3),
       "Basic OD Premium": basicForVehicle.toStringAsFixed(2),
       "IMT 23 Loading": imt23Loading.toStringAsFixed(2),
+      "Electronic/Electrical Accessories":accessories.toStringAsFixed(2),
       "CNG/LPG Kit Loading": cngKitLoading.toStringAsFixed(2),
-      "External CNG/LPG Kit Loading": cngExternalLoading.toStringAsFixed(2),
+    
+      // "External CNG/LPG Kit Loading": externalCngLpgKit.toStringAsFixed(2),
       "Total OD before Discount": totalOdBeforeDiscount.toStringAsFixed(2),
       "Discount on OD Premium (%)": discountOnOd.toStringAsFixed(2),
       "Discount Amount": discountAmount.toStringAsFixed(2),

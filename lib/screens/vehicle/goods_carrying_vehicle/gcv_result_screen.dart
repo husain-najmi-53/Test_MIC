@@ -50,7 +50,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         ],
         "[D] Total Premium": [
           "Total Premium (A+B+C)",
-          "GST (18%)",
+          "GST (12%)",
           "Other CESS",
           "Final Premium"
         ],
@@ -93,7 +93,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         ],
         "[D] Total Premium": [
           "Total Premium (A+B+C)",
-          "GST (18%)",
+          "GST (12%)",
           "Other CESS",
           "Final Premium"
         ]
@@ -125,7 +125,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         ],
         "[C] Total Premium": [
           "Total Premium (OD+TP)",
-          "GST (18%)",
+          "GST (12%)",
           "Other Cess",
           "Final Premium"
         ]
@@ -158,7 +158,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         ],
         "[D] Total Premium": [
           "Total Premium (OD+TP)",
-          "GST (18%)",
+          "GST (12%)",
           "Other Cess",
           "Final Premium"
         ]

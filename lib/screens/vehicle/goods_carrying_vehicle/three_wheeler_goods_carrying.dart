@@ -104,7 +104,7 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
           double.tryParse((_selectedNcb ?? '0%').replaceAll('%', '')) ?? 0.0;
 
       // Add-ons
-      double imt23Amt = _selectedImt23 == 'Yes' ? 200.0 : 0.0;
+      double imt23Percent = _selectedImt23 == 'Yes' ? 15.0 : 0.0;
       double cngTpAmt = _selectedCngLpgKit == 'Yes' ? 60.0 : 0.0;
       double restrictedTppdAmt =
           _selectedRestrictedTppd == 'Yes' ? -100.0 : 0.0;
@@ -113,17 +113,23 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
               ? double.tryParse(_selectedLlPaidDriver!) ?? 0.0
               : 0.0;
 
+      double cngLpgPremium = 0.0;
+      if (_selectedCngLpgKit == 'Yes' && externalCngLpgKit > 0) {
+        cngLpgPremium = (externalCngLpgKit / 1000) * 60;
+      }
+
       // ---- OD Calculation ----
       double basicRate = _getThreeWheelerOdRate(zone, age);
       double basicOd = (idv * basicRate) / 100;
-      double odBeforeDiscount = basicOd + externalCngLpgKit + imt23Amt;
+      double imt23Amt = (basicOd * imt23Percent) / 100;
+      double odBeforeDiscount = basicOd + cngLpgPremium + imt23Amt;
       double discountAmt = (odBeforeDiscount * discount) / 100;
       double odBeforeNcb = odBeforeDiscount - discountAmt;
       double ncbAmt = (odBeforeNcb * ncb) / 100;
       double netOdPremium = odBeforeNcb - ncbAmt;
 
       // ---- TP Calculation ----
-      double basicTp = 2595.0;
+      double basicTp = 4492.0;
       double totalTp = basicTp +
           cngTpAmt +
           paOwnerDriver +
@@ -143,7 +149,7 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
         "Zone": zone,
         "Basic OD Rate (%)": basicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicOd.toStringAsFixed(2),
-        "External CNG/LPG": externalCngLpgKit.toStringAsFixed(2),
+        "External CNG/LPG": cngLpgPremium.toStringAsFixed(2),
         "IMT 23": imt23Amt.toStringAsFixed(2),
         "OD Before Discount": odBeforeDiscount.toStringAsFixed(2),
         "Discount on OD": discountAmt.toStringAsFixed(2),
@@ -157,7 +163,7 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
         "Restricted TPPD": restrictedTppdAmt.toStringAsFixed(2),
         "Total TP Premium": totalTp.toStringAsFixed(2),
         "Total Premium (OD+TP)": totalAB.toStringAsFixed(2),
-        "GST (18%)": gst.toStringAsFixed(2),
+        "GST (12%)": gst.toStringAsFixed(2),
         "Other Cess": otherCessAmt.toStringAsFixed(2),
         "Final Premium": finalPremium.toStringAsFixed(2),
       };
@@ -181,17 +187,17 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
   // OD Rate for Three-Wheeler Goods Carrying
   double _getThreeWheelerOdRate(String zone, String age) {
     if (zone == 'A') {
-      if (age == 'Upto 5 Years') return 1.278;
-      if (age == '6 to 7 Years') return 1.310;
-      if (age == 'Above 7 Years') return 1.342;
+      if (age == 'Upto 5 Years') return 1.664;
+      if (age == '6 to 7 Years') return 1.706;
+      if (age == 'Above 7 Years') return 1.747;
     } else if (zone == 'B') {
-      if (age == 'Upto 5 Years') return 1.272;
-      if (age == '6 to 7 Years') return 1.304;
-      if (age == 'Above 7 Years') return 1.336;
+      if (age == 'Upto 5 Years') return 1.656;
+      if (age == '6 to 7 Years') return 1.697;
+      if (age == 'Above 7 Years') return 1.739;
     } else if (zone == 'C') {
-      if (age == 'Upto 5 Years') return 1.260;
-      if (age == '6 to 7 Years') return 1.292;
-      if (age == 'Above 7 Years') return 1.323;
+      if (age == 'Upto 5 Years') return 1.640;
+      if (age == '6 to 7 Years') return 1.681;
+      if (age == 'Above 7 Years') return 1.722;
     }
     return 0.0; // fallback
   }
@@ -360,6 +366,21 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
                 // Required validation
                 if (value == null || value.trim().isEmpty) {
                   return 'Enter $label';
+                }
+
+                // Date validation for Year of Manufacture
+                if (key == 'yearOfManufacture') {
+                  int? year = int.tryParse(value.trim());
+                  if (year == null) {
+                    return 'Enter a valid year';
+                  }
+                  int currentYear = DateTime.now().year;
+                  if (year > currentYear) {
+                    return 'Year cannot be greater than $currentYear';
+                  }
+                  if (year < 1900) {
+                    return 'Year cannot be less than 1900';
+                  }
                 }
 
                 return null; // ✅ Always return null if valid

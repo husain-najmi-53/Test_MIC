@@ -70,6 +70,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
         ],
         "[B] Liability Premium": [
           "Trailer Liability Premium (TP)",
+          "Total Trailer Liability Premium (TP)",
           "Restricted TPPD",
           "CNG/LPG Kit",
           "PA to Owner Driver",

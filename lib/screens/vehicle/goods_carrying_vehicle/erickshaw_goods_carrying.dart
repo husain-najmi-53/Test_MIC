@@ -104,7 +104,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
       double ncb =
           double.tryParse((_selectedNcb ?? '0%').replaceAll('%', '')) ?? 0.0;
 
-      double imt23Amt = _selectedImt23 == 'Yes' ? 200.0 : 0.0;
+      double imt23Percent = _selectedImt23 == 'Yes' ? 15.0 : 0.0;
       double restrictedTppdAmt =
           _selectedRestrictedTppd == 'Yes' ? -100.0 : 0.0;
       double llPaidDriverAmt =
@@ -112,9 +112,14 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
               ? double.tryParse(_selectedLlPaidDriver!) ?? 0.0
               : 0.0;
 
+      double electricAccessoriesVal = 0.0;
+      if (electricalAcc > 0) {
+        electricAccessoriesVal = (electricalAcc / 1000) * 60;
+      }
       double basicRate = _getERickshawOdRate(zone, age);
       double basicOd = (idv * basicRate) / 100;
-      double odBeforeDiscount = basicOd + electricalAcc + imt23Amt;
+      double imt23Amt = (basicOd * imt23Percent) / 100;
+      double odBeforeDiscount = basicOd + electricAccessoriesVal + imt23Amt;
       double discountAmt = (odBeforeDiscount * discount) / 100;
       double odAfterDiscount = odBeforeDiscount - discountAmt;
       double loadingAmt = (odAfterDiscount * loadingOnDiscount) / 100;
@@ -122,7 +127,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
       double ncbAmt = (odBeforeNcb * ncb) / 100;
       double netOdPremium = odBeforeNcb - ncbAmt;
 
-      double basicTp = 1685.00;
+      double basicTp = 3139.00;
       double totalTp = basicTp +
           valueAddedService +
           paOwnerDriver +
@@ -140,7 +145,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
         "Zone": zone,
         "Vehicle Basic rate": basicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicOd.toStringAsFixed(2),
-        "Electrical Accessories": electricalAcc.toStringAsFixed(2),
+        "Electrical Accessories": electricAccessoriesVal.toStringAsFixed(2),
         "IMT 23": imt23Amt.toStringAsFixed(2),
         "OD Before Discount": odBeforeDiscount.toStringAsFixed(2),
         "Discount on OD Premium": discountAmt.toStringAsFixed(2),
@@ -157,7 +162,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
         "Restricted TPPD": restrictedTppdAmt.toStringAsFixed(2),
         "Total TP Premium": totalTp.toStringAsFixed(2),
         "Total Premium (OD+TP)": totalAB.toStringAsFixed(2),
-        "GST (18%)": gst.toStringAsFixed(2),
+        "GST (12%)": gst.toStringAsFixed(2),
         "Other Cess": otherCessAmt.toStringAsFixed(2),
         "Final Premium": finalPremium.toStringAsFixed(2),
       };
@@ -259,8 +264,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
                     _updateIdv();
                   });
                 }),
-                _buildTextField('idv', 'IDV (₹)', '',
-                    enabled: false),
+                _buildTextField('idv', 'IDV (₹)', '', enabled: false),
                 _buildDropdownField('Age of Vehicle', _ageOptions, _selectedAge,
                     (val) => setState(() => _selectedAge = val)),
                 _buildTextField(
@@ -356,6 +360,21 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
                 // Required validation
                 if (value == null || value.trim().isEmpty) {
                   return 'Enter $label';
+                }
+
+                // Date validation for Year of Manufacture
+                if (key == 'yearOfManufacture') {
+                  int? year = int.tryParse(value.trim());
+                  if (year == null) {
+                    return 'Enter a valid year';
+                  }
+                  int currentYear = DateTime.now().year;
+                  if (year > currentYear) {
+                    return 'Year cannot be greater than $currentYear';
+                  }
+                  if (year < 1900) {
+                    return 'Year cannot be less than 1900';
+                  }
                 }
 
                 return null; // ✅ Always return null if valid

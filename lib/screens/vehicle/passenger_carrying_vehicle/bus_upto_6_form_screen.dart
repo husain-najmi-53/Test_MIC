@@ -102,7 +102,9 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
           int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
       double discountOnOdPercent =
           double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-      double accessories =
+      // double accessories =
+      //     double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
+          double accessoriesValue =
           double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
       double externalCng =
           double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
@@ -133,14 +135,25 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
 
       double odRate = _getBusOdRate(zone, ageKey);
       double basicOdPremium = (currentIdv * odRate) / 100;
-      double imt23Loading = imt23Yes ? basicOdPremium * 0.05 : 0.0;
+      double imt23Loading = imt23Yes ? basicOdPremium * 0.15 : 0.0;
       double odAfterImt23 = basicOdPremium + imt23Loading;
       double discountAmount = odAfterImt23 * discountOnOdPercent / 100;
       double odAfterDiscount = odAfterImt23 - discountAmount;
-      double odWithAccessories = odAfterDiscount + accessories + externalCng;
-      double cngKitLoading = cngKitYes ? currentIdv * 0.02 : 0.0;
-      double odWithCngLoading = odWithAccessories + cngKitLoading;
-      double ncbAmount = odWithCngLoading * selectedNcbPercent / 100;
+
+      double accessories = 0.0;
+      if (accessoriesValue > 0) {
+        accessories = (accessoriesValue / 1000) * 60;
+      }
+      
+      double odWithAccessories = odAfterDiscount + accessories + externalCng; 
+      // double cngKitLoading = cngKitYes ? currentIdv * 0.02 : 0.0;
+      double cngKitLoading= 0.0;
+      if (_selectedCngKit == 'Yes' && externalCng > 0) {
+        cngKitLoading = (externalCng/ 1000) * 60;
+      }
+
+      double odWithCngLoading = odWithAccessories + cngKitLoading;  
+      double ncbAmount = odWithCngLoading * selectedNcbPercent / 100; 
       double netOdPremium = odWithCngLoading - ncbAmount;
       double tpPremium = 14343.0; // Fixed for upto 6 passengers
 
@@ -175,7 +188,7 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
         'Electrical/Electronic Accessories (₹)': accessories.toStringAsFixed(2),
         'CNG/LPG Kits (Externally Fitted) (₹)': externalCng.toStringAsFixed(2),
         'CNG/LPG Kit Loading (₹)': cngKitLoading.toStringAsFixed(2),
-        'OD Premium after Accessories and CNG Loading (₹)':
+        'Total OD Premium before NCB (₹)':
             odWithCngLoading.toStringAsFixed(2),
         'No Claim Bonus (%)': selectedNcbPercent.toStringAsFixed(2),
         'NCB Amount (₹)': ncbAmount.toStringAsFixed(2),

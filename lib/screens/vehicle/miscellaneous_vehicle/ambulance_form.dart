@@ -468,6 +468,21 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
                 if (value == null || value.trim().isEmpty) {
                   return 'Enter $label';
                 }
+
+                // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
                 return null; // Valid input
               },
             ),

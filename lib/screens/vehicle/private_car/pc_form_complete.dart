@@ -657,7 +657,7 @@ class _PCFormCompleteState extends State<PCFormComplete> {
                 if (key == 'tp') {
                   int tpYears = int.tryParse(_controllers['tp']?.text.trim() ?? "") ?? 1;
                   if(tpYears>3){
-                    return 'Tp Year should be Upto 3 Yrs';
+                    return 'Should not be greater than 3 Yrs';
                   }
                 }
 
@@ -665,7 +665,7 @@ class _PCFormCompleteState extends State<PCFormComplete> {
                 if (key == 'od') {
                   int odYears = int.tryParse(_controllers['od']?.text.trim() ?? "") ?? 1;
                   if(odYears>3){
-                    return 'OD Year should not be greater than 3';
+                    return 'Should not be greater than 3 Yrs';
                   }
                 }
 

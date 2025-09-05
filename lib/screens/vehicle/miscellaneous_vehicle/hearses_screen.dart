@@ -455,6 +455,21 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
                   return null; // Valid input
                 }),
           ),
@@ -552,5 +567,5 @@ double _getTpRate() {
   // As per IRDAI, Hearses fall under the "Public Service Vehicles" category
   // or a similar commercial vehicle class. The rate is a fixed amount.
   // This is a representative rate and must be verified with the latest IRDAI circular.
-  return 7267; // A fixed rate, for instance, based on vehicles up to 7500 kg GVW.
+  return 1645; // A fixed rate, for instance, based on vehicles up to 7500 kg GVW.
 }

@@ -173,8 +173,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       String yearOfManufacture = _controllers['Year_of_manufacture']!.text;
       String zone = _selectedZone ?? "A";
       double imt23 = _selectedImt23 == 'Yes' ? 15.0 : 0.0; // IMT 23 percentage
-      String selectedTrailerTowedBy =
-          _selectedTrailerTowedBy ?? 'Other Vehicle';
+      String selectedTrailerTowedBy = _selectedTrailerTowedBy ?? 'Other Vehicle';
       double overturningForCranes = _selectedOverturningForCranes == 'Yes'
           ? 0.50
           : 0.0; // Overturning for Cranes percentage change as per client given IRDA Rates
@@ -252,7 +251,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
 
       // TP Section
       double cngLpgRate = 60; // change this when confirmed
-      double trailerTpRate = 2485; //change this when confirmed
+      double trailerTpRate = _getTpRate(selectedTrailerTowedBy); //change this when confirmed
       double trailerLiabilityTP =
           noOfTrailersAttached * trailerTpRate; //Trailer Liability Premium (TP)
       //double cngLpgKitTP = _selectedCNG == "Yes" ? 4 : 0.0;
@@ -549,6 +548,21 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+
+                  // Date validation for Year of Manufacture
+                  if (key == 'yearOfManufacture') {
+                    int? year = int.tryParse(value.trim());
+                    if (year == null) {
+                      return 'Enter a valid year';
+                    }
+                    int currentYear = DateTime.now().year;
+                    if (year > currentYear) {
+                      return 'Year cannot be greater than $currentYear';
+                    }
+                    if (year < 1900) {
+                      return 'Year cannot be less than 1900';
+                    }
+                  }
                   return null; // Add missing return statement
                 }),
           ),
@@ -634,13 +648,13 @@ double _getOdRate(String zone, String trailerTowedBy, String ageCategory) {
 }
 
 double _getTpRate(String trailerTowedBy) {
-  trailerTowedBy = trailerTowedBy.toLowerCase();
+  // trailerTowedBy = trailerTowedBy.toLowerCase();
 
   if (trailerTowedBy == 'Agriculture Tractors upto 6 HP') {
     return 910;
   } else if (trailerTowedBy == 'Other Vehicle') {
-    return 7267;
+    return 2485;
   } else {
-    return 7267; // fallback/default TP premium if type unknown
+    return 910; // fallback/default TP premium if type unknown
   }
 }

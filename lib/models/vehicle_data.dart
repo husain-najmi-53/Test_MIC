@@ -1,5 +1,4 @@
 const Map<String, Map<String, List<String>>> vehicleCategorySections = {
-  
   // Two Wheeler categories
   "Two Wheeler 1Y OD": {
     "Basic Details": ["IDV", "Year of Manufacture", "Zone", "Cubic Capacity"],
@@ -176,9 +175,9 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Basic for Vehicle",
       "Accessories Value",
       "IMT 23",
+      "Total Basic Premium",
       "Discount on OD Premium",
       "Basic OD Premium after discount",
-      "Total Basic Premium",
       "No Claim Bonus",
       "Net Own Damage Premium(A)",
     ],
@@ -196,7 +195,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Other CESS"
     ]
   },
-  
+
   //Goods Carrying categories
   "Goods Carrying Vehicle": {
     "Basic Details": [
@@ -236,7 +235,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[D] Total Premium": [
       "Total Premium (A+B+C)",
-      "GST (18%)",
+      "GST (12%)",
       "Other CESS",
       "Final Premium"
     ],
@@ -279,7 +278,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[D] Total Premium": [
       "Total Premium (A+B+C)",
-      "GST (18%)",
+      "GST (12%)",
       "Other CESS",
       "Final Premium"
     ]
@@ -311,7 +310,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Total Premium": [
       "Total Premium (OD+TP)",
-      "GST (18%)",
+      "GST (12%)",
       "Other Cess",
       "Final Premium"
     ]
@@ -344,12 +343,12 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[D] Total Premium": [
       "Total Premium (OD+TP)",
-      "GST (18%)",
+      "GST (12%)",
       "Other Cess",
       "Final Premium"
     ]
   },
-  
+
   // Passenger Carrying categories
   "Three Wheeler PCV(Upto 6 Passengers)": {
     "Basic Details": [
@@ -365,8 +364,9 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Base OD Rate (%)",
       "Basic OD Premium",
       "IMT 23 Loading",
+      "Electronic/Electrical Accessories",
       "CNG/LPG Kit Loading",
-      "External CNG/LPG Kit Loading",
+      // "External CNG/LPG Kit Loading",
       "Total OD before Discount",
       "Discount on OD Premium (%)",
       "Discount Amount",
@@ -400,12 +400,12 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Zone",
       "Age of Vehicle",
       "No. of Passengers",
-      "Cubic Capacity"
     ],
     "[A] Own Damage Premium Package": [
       "Base OD Rate (%)",
       "Basic OD Premium",
       "IMT 23 Loading",
+      "Electronic/Electrical Accessories",
       "CNG/LPG Kit Loading",
       "External CNG/LPG Kit Loading",
       "Total OD before Discount",
@@ -440,7 +440,8 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Year of Manufacture",
       "Zone",
       "Age of Vehicle",
-      "No. of Passengers"
+      "No. of Passengers",
+      "Cubic Capacity" // added this
     ],
     "[A] Own Damage Premium Package": [
       "Vehicle Basic Rate (%)",
@@ -448,6 +449,8 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Discount on OD Premium (%)",
       "Discount Amount",
       "Anti Theft Discount",
+      "Electronic/Electrical Accessories",
+      "CNG/LPG kits(Externally Fitted)",
       "OD Premium after Discounts",
       "Accessories Loading",
       "No Claim Bonus (%)",
@@ -552,7 +555,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Final Premium Payable (₹)",
     ],
   },
-  
+
   //Miscellaneous Categories
   "Ambulance": {
     "Basic Details": [
@@ -612,6 +615,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[B] Liability Premium": [
       "Trailer Liability Premium (TP)",
+      "Total Trailer Liability Premium (TP)",
       "Restricted TPPD",
       "CNG/LPG Kit",
       "PA to Owner Driver",
@@ -756,12 +760,12 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Total Liability Premium (B)"
     ],
     "[C] Total Premium": [
-          "Total Package Premium[A+B]",
-          "GST @ 18%",
-          "Other CESS"
-        ],
+      "Total Package Premium[A+B]",
+      "GST @ 18%",
+      "Other CESS"
+    ],
   },
-  
+
   //Private Car categories
   "Four Wheeler": {
     "Basic Details": ["IDV", "Year of Manufacture", "Zone", "Cubic Capacity"],
