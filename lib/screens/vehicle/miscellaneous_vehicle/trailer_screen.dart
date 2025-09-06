@@ -261,7 +261,7 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
 
         // C - Total Premium
         "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
-        "GST @ 18%": gst.toStringAsFixed(2),
+        "GST @ 18% [Applied on OD and TP]": gst.toStringAsFixed(2),
         "Other CESS": otherCessAmt.toStringAsFixed(2),
 
         // Final Premium

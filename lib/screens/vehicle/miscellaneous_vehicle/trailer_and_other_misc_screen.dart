@@ -95,6 +95,8 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
     super.initState();
     // Auto-select LL to Paid Driver to 50
     _selectedLlPaidDriver = '50';
+    _selectedTrailerTowedBy = 'Other Vehicle'; // Default selection
+    _controllers['No_of_trailers(Attached)']!.text = 1.toString(); // Default to 1
   }
 
   @override
@@ -213,15 +215,17 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       //double trailerODRate = 1.0; //change this when confirmed
       double basicForVehicle =
           currentIdv * vehicleBasicRate / 100; //Basic for Vehicle
-      double trailerOD = currentIdvAttached * vehicleBasicRate / 100; //Trailer OD
+      double trailerOD = currentIdvAttached * 1.16 / 100; //Trailer OD
       double basicODPremium = basicForVehicle + trailerOD; //Basic OD Premium (before crane/imt/cng)
 
       double overturningCranePremium =
           basicODPremium * overturningForCranes / 100; //Overturning for Cranes
 
+
       double cngLpgPremium = 0.0;
       if (_selectedCNG == 'Yes' && cngLpgKitValue > 0) {
-        cngLpgPremium = (cngLpgKitValue / 1000) * 60;
+        // cngLpgPremium = (cngLpgKitValue / 1000) * 60;
+        cngLpgPremium = (cngLpgKitValue * 0.04); // 4% of the CNG/LPG kit value
       }
 
       double imt23Loading = basicODPremium * imt23 / 100; //IMT 23
@@ -236,13 +240,15 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
           basicODBeforePremium * discountRate / 100; //Discount on OD Premium
 
 
-      double basicOdAfterDiscPremium = basicODBeforePremium - discountOnODPremium;
+      // double basicOdAfterDiscPremium = basicODBeforePremium - discountOnODPremium;
 
       double loadingOnODPremium =
-          basicOdAfterDiscPremium * loadingRate / 100; //Loading on OD Premium
+          discountOnODPremium * loadingRate / 100; //Loading on OD Premium
 
-      double basicODBeforeNCB = basicOdAfterDiscPremium +
-          loadingOnODPremium; //Basic OD Before NCB
+      // double basicODBeforeNCB = basicOdAfterDiscPremium +
+      //     loadingOnODPremium; //Basic OD Before NCB
+      double basicODBeforeNCB = basicODBeforePremium - discountOnODPremium + loadingOnODPremium;
+
 
       double ncbAmount = basicODBeforeNCB * ncbRate / 100; //No Claim Bonus
       double netOwnDamage =
@@ -257,7 +263,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       //double cngLpgKitTP = _selectedCNG == "Yes" ? 4 : 0.0;
       double cngLpgValue = _selectedCNG == 'Yes'?cngLpgRate:0.0;
 
-      double liabilityPremiumTP = _getTpRate(selectedTrailerTowedBy);
+      double liabilityPremiumTP = _getTP(selectedTrailerTowedBy);
       double totalB = liabilityPremiumTP +
           trailerLiabilityTP +
           cngLpgValue +
@@ -312,7 +318,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
 
         // C - Total Premium
         "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
-        "GST @ 18%": gst.toStringAsFixed(2),
+        "GST @ 18% [Applied on OD and TP]": gst.toStringAsFixed(2),
         "Other CESS": otherCessAmt.toStringAsFixed(2),
 
         // Final Premium
@@ -512,7 +518,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       'Loading_on_discount_premium(%)',
       'Discount_on_OD_premium(%)',
       'No_of_trailers(Attached)',
-      'idvAttached'
+      'idvAttached',
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -655,6 +661,16 @@ double _getTpRate(String trailerTowedBy) {
   } else if (trailerTowedBy == 'Other Vehicle') {
     return 2485;
   } else {
-    return 910; // fallback/default TP premium if type unknown
+    return 2485; // fallback/default TP premium if type unknown
+  }
+}
+
+double _getTP(String selectedTrailerTowedBy) {
+  if (selectedTrailerTowedBy == 'Agriculture Tractors upto 6 HP') {
+    return 1645; // Updated TP premium for Agriculture Tractors upto 6 HP
+  } else if (selectedTrailerTowedBy == 'Other Vehicle') {
+    return 7267; // TP premium for Other Vehicle
+  } else {
+    return 7267; // fallback/default TP premium if type unknown
   }
 }

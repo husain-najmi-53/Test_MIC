@@ -24,6 +24,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
           "Basic for Vehicle",
           "Electrical Accessories",
           "CNG/LPG Kits",
+          "Basic Od Premium",
           "Geographical Ext",
           "IMT 23",
           "Anti-Theft",
@@ -42,7 +43,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
           "Basic Liability Premium (TP)",
           "Restricted TPPD",
           "CNG/LPG Kit (TP)",
-          "Geographical Ext (TP)",
+          "Geographical Extn (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "LL to Other Employee",
@@ -50,7 +51,8 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         ],
         "[D] Total Premium": [
           "Total Premium (A+B+C)",
-          "GST (12%)",
+          "GST (18%)",
+          "Gst (12%) on Basic Tp",
           "Other CESS",
           "Final Premium"
         ],
@@ -67,6 +69,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
           "Basic for Vehicle",
           "Electrical Accessories",
           "CNG/LPG Kits",
+          "Basic Od Premium",
           "Geographical Ext",
           "IMT 23",
           "Anti-Theft",
@@ -85,7 +88,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
           "Basic Liability Premium (TP)",
           "Restricted TPPD",
           "CNG/LPG Kit (TP)",
-          "Geographical Ext (TP)",
+          "Geographical Extn (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "LL to Other Employee",
@@ -93,7 +96,8 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         ],
         "[D] Total Premium": [
           "Total Premium (A+B+C)",
-          "GST (12%)",
+          "GST (18%)",
+          "Gst (12%) on Basic Tp",
           "Other CESS",
           "Final Premium"
         ]
@@ -108,6 +112,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
           "Basic OD Rate (%)",
           "Basic for Vehicle",
           "External CNG/LPG",
+          "Basic Od Premium",
           "IMT 23",
           "OD Before Discount",
           "Discount on OD",
@@ -125,7 +130,8 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         ],
         "[C] Total Premium": [
           "Total Premium (OD+TP)",
-          "GST (12%)",
+          "GST (18%)",
+          "Gst (12%) on Basic Tp",
           "Other Cess",
           "Final Premium"
         ]
@@ -158,7 +164,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         ],
         "[D] Total Premium": [
           "Total Premium (OD+TP)",
-          "GST (12%)",
+          "GST (18%)",
           "Other Cess",
           "Final Premium"
         ]

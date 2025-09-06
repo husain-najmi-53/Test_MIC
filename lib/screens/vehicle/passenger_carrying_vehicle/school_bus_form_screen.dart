@@ -23,6 +23,7 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
     'rsaAddon': TextEditingController(),
     'paOwnerDriver': TextEditingController(),
     'otherCess': TextEditingController(),
+    'zeroDepreciation': TextEditingController(),
   };
 
   String? _selectedAge;
@@ -92,17 +93,18 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
   }
 
   void _submitForm() {
-    // if (!_formKey.currentState!.validate()) return;
-    if (_formKey.currentState!.validate()) {
+    // if (_formKey.currentState!.validate())
+     {
       double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
       double depreciation =
           double.tryParse((_selectedDepreciation ?? '0').replaceAll('%', '')) ??
               0.0;
+      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
       String age = _selectedAge ?? 'Upto 5 Years';
       String zone = _selectedZone ?? 'A';
-      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
       int passengerCount =
           int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
+      double geographicalExtent = double.tryParse(_selectedGeExtn?? "0") ?? 0.0;
       double discountOnOd =
           double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
       double electricalAccessories =
@@ -115,10 +117,11 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
       double otherCessPercent =
           double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
 
-      String imt23 = _selectedImt23 ?? 'No';
+      // String imt23 = _selectedImt23 ?? 'No';
+      double imt23 =
+          _selectedImt23 == 'Yes' ? 15.0 : 0.0; // Assuming 15% for IMT 23
       String cngLpgKit = _selectedCngLpgKit ?? 'No';
       String antiTheft = _selectedAntiTheft ?? 'No';
-
       double selectedNcbPercent = double.tryParse(_selectedNcb ?? '0') ?? 0.0;
       double llPaidDriverAmount =
           double.tryParse(_selectedLlPaidDriver ?? '0') ?? 0.0;
@@ -126,114 +129,149 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
           double.tryParse(_selectedLlOtherEmployee ?? '0') ?? 0.0;
       double geographicalExtnAmount =
           double.tryParse(_selectedGeExtn ?? '0') ?? 0.0;
+        double zeroDepreciation =
+    double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
 
-      // Current IDV after depreciation
+       double cngTpExtra = 0.0;
+      if (_selectedCngLpgKit== 'Yes') {
+        cngTpExtra = 60;
+      }
+      // 🔹 Step 1: Current IDV
       double currentIdv = idv * (1 - (depreciation / 100));
 
-      // Map age text to key for rates
-      String ageKey = '';
-      if (age == 'Upto 5 Years') {
-        ageKey = 'Upto5Years';
-      } else if (age == '6 to 7 Years') {
-        ageKey = '5to10Years'; // approximate reuse
-      } else {
-        ageKey = 'Above10Years';
-      }
-
-      // 1. Calculate OD Premium
+      // 🔹 Step 2: OD Rate
+      String ageKey = (age == 'Upto 5 Years')
+          ? 'Upto5Years'
+          : (age == '6 to 7 Years')
+              ? '5to10Years'
+              : 'Above10Years';
       double odRate = _getOdRate(zone, ageKey);
-      double basicOdPremium = (currentIdv * odRate) / 100;
+      double basicforvehicle = (currentIdv * odRate) / 100;
+      double accessories = (electricalAccessories*4)/100;
+      double cngKitLoading = (externalCng* 0.04);
+      double basicOdPremium = basicforvehicle+ accessories + cngKitLoading ;
+      double geographicalExt = geographicalExtent;
+      // 🔹 Step 3: Discounts
+      // if (imt23 == 'Yes') {
+      //   basicOdPremium *= 0.95; // 5% discount
+      // }
+      double imt23value= (basicforvehicle * imt23)/100;
 
-      // 2. IMT 23 - if Yes, 5% discount on OD premium
-      if (imt23 == 'Yes') {
-        basicOdPremium *= 0.15;
-      }
+      // double atDiscount=0.0;
+      // if (antiTheft == 'Yes') {
+      //   double atDiscount = basicOdPremium * 0.025;
+      //   if (atDiscount > 500) atDiscount = 500;
+      //   basicOdPremium -= atDiscount;
+      // }
 
-      // 3. Anti Theft Discount - 2.5% discount on OD if Yes
-      if (antiTheft == 'Yes') {
-        basicOdPremium *= 0.975;
-      }
-
-      // 4. Discount on OD (from user)
-      double discountAmount = basicOdPremium * discountOnOd / 100;
-      double odAfterDiscount = basicOdPremium - discountAmount;
-
-       double accessories = 0.0;
-      if (electricalAccessories > 0) {
-        accessories = (electricalAccessories / 1000) * 60;
-      }
+      //ANTI THEFT 
+      double atDiscount = (2.5*basicOdPremium)/100;
+       double basicOdBeforeDiscount = basicOdPremium + imt23value + geographicalExt+ atDiscount; //basic od before disc
+      // 🔹 Step 4: OD discount
+      double discountAmount = (basicOdBeforeDiscount * discountOnOd) / 100;
+      double odAfterDiscount = basicOdBeforeDiscount - discountAmount;
       
-      double cngKitLoading= 0.0;
-      if (_selectedCngLpgKit== 'Yes' && externalCng > 0) {
-        cngKitLoading = (externalCng/ 1000) * 60;
-      }
+      
+      
+      
+
+      // 🔹 Step 6: Total OD before NCB
+      double totalBasicPremium = odAfterDiscount +
+          accessories +
+          cngKitLoading +
+          rsaAddons +
+          geographicalExtnAmount;
+        
+       
+        
+       
 
 
-      // 5. Add accessories, external CNG/LPG kit, RSA Addons
-      double totalBasicPremium =
-          odAfterDiscount + accessories + cngKitLoading  + rsaAddons;
+      // 🔹 Step 7: Apply NCB
+      double ncbAmount = (odAfterDiscount * selectedNcbPercent) / 100;
+      double netOdPremium = odAfterDiscount - ncbAmount;
 
-      // 6. NCB discount on totalBasicPremium
-      double ncbAmount = totalBasicPremium * selectedNcbPercent / 100;
-      double netOdPremium = totalBasicPremium - ncbAmount;
-
-      // 7. TP Premium based on passenger count using official IRDA rates
-      double tpPremium = 13729.0; // Fixed for School Bus 
-
-      // 8. Add geographical extension if any
-      double geographicalExtn = geographicalExtnAmount;
-
-      // 9. Sum before cess and GST
-      double premiumBeforeCess = netOdPremium +
-          tpPremium +
+      // 🔹 Step 8: Liability Premium (dynamic)
+      double tpPremium =
+          13729.0; // ← if this should be dynamic, replace with field
+          double passCov=passengerCount * 839;
+          double fixedGeogExt=100;
+      double liabilityPremium = tpPremium +
           paOwnerDriver +
           llPaidDriverAmount +
-          llOtherEmployeeAmount +
-          geographicalExtn;
+          passCov+
+          fixedGeogExt+
+          cngTpExtra+
+          llOtherEmployeeAmount;
+            
 
-      // 10. Other cess
-      double otherCessAmount = (otherCessPercent / 100) * premiumBeforeCess;
+        double zeroDep = (zeroDepreciation*idv)/100;
+        double addonPremium =zeroDep + rsaAddons;
 
-      // 11. GST 18% on premiumBeforeCess + otherCessAmount
-      double gstAmount = (premiumBeforeCess + otherCessAmount) * 0.18;
 
-      // 12. Final premium
-      double finalPremium = premiumBeforeCess + otherCessAmount + gstAmount;
+      // 🔹 Step 9: Premium before cess
+      double premiumBeforeCess = netOdPremium + liabilityPremium;
 
-      // Prepare result map
+      
+      double totalABC= netOdPremium+liabilityPremium+addonPremium;
+
+      // 🔹 Step 10: Other Cess
+      double otherCessAmount = (totalABC * otherCessPercent) / 100;
+
+      // 🔹 Step 11: GST (18% on OD + Liability)
+      double gstAmount = (netOdPremium + liabilityPremium +addonPremium) * 0.18;
+
+      // 🔹 Step 12: Final premium
+      double finalPremium = totalABC + otherCessAmount + gstAmount;
+
+
+      // ✅ Flattened Map<String, String> for result screen
       Map<String, String> resultData = {
-        'IDV (₹)': currentIdv.toStringAsFixed(2),
-        'Year Of Manufacture': yearOfManufacture,
-        'Depreciation (%)': depreciation.toStringAsFixed(2),
-        'Current IDV (₹)': currentIdv.toStringAsFixed(2),
-        'Age of Vehicle': age,
-        'Zone': zone,
-        'No. of Passengers': passengerCount.toString(),
-        'Basic OD Rate (%)': odRate.toStringAsFixed(3),
-        'Basic OD Premium (₹)': basicOdPremium.toStringAsFixed(2),
-        'IMT 23 Applied': imt23,
-        'Anti Theft Applied': antiTheft,
-        'Discount on OD Premium (%)': discountOnOd.toStringAsFixed(2),
-        'Discount on OD Premium (₹)': discountAmount.toStringAsFixed(2),
-        'OD Premium after Discount (₹)': odAfterDiscount.toStringAsFixed(2),
-        'Electrical Accessories (₹)': accessories.toStringAsFixed(2),
-        'CNG/LPG Kits': cngLpgKit,
-        'CNG/LPG Kits (Externally Fitted) (₹)': cngKitLoading.toStringAsFixed(2),
-        'RSA/Addons (₹)': rsaAddons.toStringAsFixed(2),
-        'Total Basic Premium (₹)': totalBasicPremium.toStringAsFixed(2),
-        'No Claim Bonus (%)': selectedNcbPercent.toStringAsFixed(2),
-        'NCB Amount (₹)': ncbAmount.toStringAsFixed(2),
-        'Net OD Premium (₹)': netOdPremium.toStringAsFixed(2),
-        'TP Premium (₹)': tpPremium.toStringAsFixed(2),
-        'Geographical Extension (₹)': geographicalExtn.toStringAsFixed(2),
-        'PA to Owner Driver (₹)': paOwnerDriver.toStringAsFixed(2),
-        'LL to Paid Driver (₹)': llPaidDriverAmount.toStringAsFixed(2),
-        'LL to Other Employees (₹)': llOtherEmployeeAmount.toStringAsFixed(2),
-        'Premium Before Cess (₹)': premiumBeforeCess.toStringAsFixed(2),
-        'Other CESS (%)': otherCessPercent.toStringAsFixed(2),
-        'Other CESS Amount (₹)': otherCessAmount.toStringAsFixed(2),
-        'GST @ 18% (₹)': gstAmount.toStringAsFixed(2),
-        'Final Premium Payable (₹)': finalPremium.toStringAsFixed(2),
+        // Basic
+        "IDV (₹)": idv.toStringAsFixed(2),
+        "Year Of Manufacture": yearOfManufacture,
+        "Zone": zone,
+        "Age of Vehicle": age,
+        "No. of Passengers": passengerCount.toString(),
+
+        // [A] Own Damage
+        "Vehicle Basic Rate(₹)": odRate.toStringAsFixed(3),
+        "Basics for Vehicle (₹)": basicforvehicle.toStringAsFixed(2),
+        "Electrical Accessories (₹)": accessories.toStringAsFixed(2),
+        "CNG/LPG Kits (Externally Fitted) (₹)": cngKitLoading.toStringAsFixed(2),
+        "Basic OD Premium (₹)": basicOdPremium.toStringAsFixed(2), //check the formula
+        "Geographical Extension (₹)": geographicalExt.toStringAsFixed(2),
+        "IMT 23 Applied": imt23value.toStringAsFixed(2),
+        "Anti Theft Applied": atDiscount.toStringAsFixed(2),
+        "Basic OD Before Discount":basicOdBeforeDiscount.toStringAsFixed(2),//check formula
+        "Discount on OD Premium (₹)": discountAmount.toStringAsFixed(2),
+        "No Claim Bonus (%)": selectedNcbPercent.toStringAsFixed(2),
+        "Basic OD Before Ncb":totalBasicPremium .toStringAsFixed(2),
+        "NCB Amount (₹)": ncbAmount.toStringAsFixed(2),
+        
+        "Net OD Premium (₹)": netOdPremium.toStringAsFixed(2),
+
+        //[B] Addon Coverages
+        "Zero Depreciation":zeroDep.toStringAsFixed(2),
+        "RSA/Addons (₹)": rsaAddons.toStringAsFixed(2),
+        "Total Addon Premium":addonPremium.toStringAsFixed(2),
+        
+
+        // [C] Liability
+        "Basic Liability Premium (₹)": tpPremium.toStringAsFixed(2),
+        "Passenger Coverage":passCov.toStringAsFixed(2),
+        "Geographical Extn":fixedGeogExt.toStringAsFixed(2),
+        "CNG/LPG Kits": cngTpExtra.toStringAsFixed(2),
+        "PA to Owner Driver (₹)": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver (₹)": llPaidDriverAmount.toStringAsFixed(2),
+        "LL to Other Employees (₹)": llOtherEmployeeAmount.toStringAsFixed(2),
+        "Total Liability Premium (₹)":liabilityPremium.toStringAsFixed(2),
+
+        // [D] Total
+        "Premium Before GST":totalABC.toStringAsFixed(2),
+        "GST @ 18% [Applied on A+B+C]": gstAmount.toStringAsFixed(2),
+        "Other CESS Amount (₹)": otherCessAmount.toStringAsFixed(2),
+       "Final Premium Payable (₹)": finalPremium.toStringAsFixed(2),
       };
 
       InsuranceResultData insuranceResultData = InsuranceResultData(
@@ -245,8 +283,9 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) =>
-              PcvInsuranceResultScreen(resultData: insuranceResultData),
+          builder: (context) => PcvInsuranceResultScreen(
+            resultData: insuranceResultData,
+          ),
         ),
       );
     }
@@ -374,6 +413,12 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
                             (val) => setState(() => _selectedGeExtn = val),
                             hintText: 'Select Option'),
                         _buildTextField(
+                          'zeroDepreciation',
+                          'Zero Depreciation (₹)',
+                          'Enter Amount',
+                        ),
+
+                        _buildTextField(
                             'rsaAddon', 'RSA/Addons (₹)', 'Enter Amount'),
                         _buildTextField('paOwnerDriver',
                             'PA to Owner Driver (₹)', 'Enter Amount'),
@@ -427,7 +472,8 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
       'paUnnamedPassenger',
       'otherCess',
       'discountOnOd',
-      'externalCngLpgKit','rsaAddon'
+      'externalCngLpgKit',
+      'rsaAddon'
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -490,7 +536,8 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
     String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
       'LL to Paid Driver', 'No Claim Bonus (%)', 'Geographical Extn.',
-      'CNG/LPG Kits', 'IMT 23', 'Restricted TPPD','LL to Other Employees','Anti Theft' // matches label or keyName
+      'CNG/LPG Kits', 'IMT 23', 'Restricted TPPD', 'LL to Other Employees',
+      'Anti Theft' // matches label or keyName
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),

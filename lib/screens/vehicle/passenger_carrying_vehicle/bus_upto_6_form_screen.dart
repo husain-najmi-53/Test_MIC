@@ -7,10 +7,10 @@ class BusUpto6FormScreen extends StatefulWidget {
   const BusUpto6FormScreen({super.key});
 
   @override
-  State<BusUpto6FormScreen> createState() => _BusUpto6FormScreenState();
+  State<BusUpto6FormScreen> createState() => BusUpto6FormScreenState();
 }
 
-class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
+class BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
   final _formKey = GlobalKey<FormState>();
 
   final Map<String, TextEditingController> _controllers = {
@@ -18,35 +18,39 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
     'yearOfManufacture': TextEditingController(),
     'numberOfPassengers': TextEditingController(),
     'discountOnOd': TextEditingController(),
-    'accessoriesValue': TextEditingController(),
+    'electricalAccessories': TextEditingController(),
     'externalCngLpgKit': TextEditingController(),
+    'rsaAddon': TextEditingController(),
     'paOwnerDriver': TextEditingController(),
     'otherCess': TextEditingController(),
+    'zeroDepreciation': TextEditingController(),
   };
 
   String? _selectedAge;
   String? _selectedZone;
   String? _selectedImt23;
-  String? _selectedCngKit;
+  String? _selectedCngLpgKit;
+  String? _selectedAntiTheft;
   String? _selectedNcb;
+  String? _selectedGeExtn;
   String? _selectedLlPaidDriver;
-  String? _selectedRestrictedTppd;
+  String? _selectedLlOtherEmployee;
   String? _selectedDepreciation;
-  String? _selectedGeographicalExtn;
 
   double _currentIdv = 0.0;
 
   final List<String> _ageOptions = [
     'Upto 5 Years',
-    '6-10 Years',
-    'Above 10 Years'
+    '6 to 7 Years',
+    'Above 7 Years'
   ];
   final List<String> _zoneOptions = ['A', 'B', 'C'];
   final List<String> _imt23Options = ['Yes', 'No'];
-  final List<String> _cngKitOptions = ['Yes', 'No'];
+  final List<String> _yesNoOptions = ['Yes', 'No'];
   final List<String> _ncbOptions = ['0', '20', '25', '35', '45', '50'];
+  final List<String> _geographicalExtnOptions = ['0', '400'];
   final List<String> _llPaidDriverOptions = ['0', '50'];
-  final List<String> _restrictedTppdOptions = ['Yes', 'No'];
+  final List<String> _llOtherEmployeeOptions = ['0', '50', '100', '150'];
   final List<String> _depreciationOptions = [
     '0%',
     '5%',
@@ -56,7 +60,6 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
     '25%',
     '30%'
   ];
-  final List<String> _geographicalExtnOptions = ['0', '400'];
 
   @override
   void initState() {
@@ -78,7 +81,7 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
   void _updateCurrentIdv() {
     double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
     double depreciation =
-        double.tryParse(_selectedDepreciation?.replaceAll('%', '') ?? '0') ??
+        double.tryParse((_selectedDepreciation ?? '0').replaceAll('%', '')) ??
             0.0;
     setState(() {
       if (idv > 0 && depreciation >= 0) {
@@ -90,124 +93,189 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
   }
 
   void _submitForm() {
-    if (_formKey.currentState!.validate()) {
+    // if (_formKey.currentState!.validate())
+     {
       double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
       double depreciation =
-          double.tryParse(_selectedDepreciation?.replaceAll('%', '') ?? '0') ??
+          double.tryParse((_selectedDepreciation ?? '0').replaceAll('%', '')) ??
               0.0;
+      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
       String age = _selectedAge ?? 'Upto 5 Years';
       String zone = _selectedZone ?? 'A';
-      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
       int passengerCount =
           int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
-      double discountOnOdPercent =
+      double geographicalExtent = double.tryParse(_selectedGeExtn?? "0") ?? 0.0;
+      double discountOnOd =
           double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-      // double accessories =
-      //     double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
-          double accessoriesValue =
-          double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
+      double electricalAccessories =
+          double.tryParse(_controllers['electricalAccessories']!.text) ?? 0.0;
       double externalCng =
           double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
+      double rsaAddons = double.tryParse(_controllers['rsaAddon']!.text) ?? 0.0;
       double paOwnerDriver =
           double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
       double otherCessPercent =
           double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
 
+      // String imt23 = _selectedImt23 ?? 'No';
+      double imt23 =
+          _selectedImt23 == 'Yes' ? 15.0 : 0.0; // Assuming 15% for IMT 23
+      String cngLpgKit = _selectedCngLpgKit ?? 'No';
+      String antiTheft = _selectedAntiTheft ?? 'No';
       double selectedNcbPercent = double.tryParse(_selectedNcb ?? '0') ?? 0.0;
       double llPaidDriverAmount =
           double.tryParse(_selectedLlPaidDriver ?? '0') ?? 0.0;
+      double llOtherEmployeeAmount =
+          double.tryParse(_selectedLlOtherEmployee ?? '0') ?? 0.0;
       double geographicalExtnAmount =
-          double.tryParse(_selectedGeographicalExtn ?? '0') ?? 0.0;
-      bool imt23Yes = (_selectedImt23 == 'Yes');
-      bool restrictedTppdYes = (_selectedRestrictedTppd == 'Yes');
-      bool cngKitYes = (_selectedCngKit == 'Yes');
+          double.tryParse(_selectedGeExtn ?? '0') ?? 0.0;
+        double zeroDepreciation =
+    double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
 
+       double cngTpExtra = 0.0;
+      if (_selectedCngLpgKit== 'Yes') {
+        cngTpExtra = 60;
+      }
+      // 🔹 Step 1: Current IDV
       double currentIdv = idv * (1 - (depreciation / 100));
 
-      String ageKey = '';
-      if (age == 'Upto 5 Years') {
-        ageKey = 'Upto5Years';
-      } else if (age == '6-10 Years') {
-        ageKey = '5to10Years';
-      } else {
-        ageKey = 'Above10Years';
-      }
+      // 🔹 Step 2: OD Rate
+      String ageKey = (age == 'Upto 5 Years')
+          ? 'Upto5Years'
+          : (age == '6 to 7 Years')
+              ? '5to10Years'
+              : 'Above10Years';
+      double odRate = _getOdRate(zone, ageKey);
+      double basicforvehicle = (currentIdv * odRate) / 100;
+      double accessories = (electricalAccessories*4)/100;
+      double cngKitLoading = (externalCng* 0.04);
+      double basicOdPremium = basicforvehicle+ accessories + cngKitLoading ;
+      double geographicalExt = geographicalExtent;
+      // 🔹 Step 3: Discounts
+      // if (imt23 == 'Yes') {
+      //   basicOdPremium *= 0.95; // 5% discount
+      // }
+      double imt23value= (basicforvehicle * imt23)/100;
 
-      double odRate = _getBusOdRate(zone, ageKey);
-      double basicOdPremium = (currentIdv * odRate) / 100;
-      double imt23Loading = imt23Yes ? basicOdPremium * 0.15 : 0.0;
-      double odAfterImt23 = basicOdPremium + imt23Loading;
-      double discountAmount = odAfterImt23 * discountOnOdPercent / 100;
-      double odAfterDiscount = odAfterImt23 - discountAmount;
+      // double atDiscount=0.0;
+      // if (antiTheft == 'Yes') {
+      //   double atDiscount = basicOdPremium * 0.025;
+      //   if (atDiscount > 500) atDiscount = 500;
+      //   basicOdPremium -= atDiscount;
+      // }
 
-      double accessories = 0.0;
-      if (accessoriesValue > 0) {
-        accessories = (accessoriesValue / 1000) * 60;
-      }
+      //ANTI THEFT 
+      double atDiscount = (2.5*basicOdPremium)/100;
+       double basicOdBeforeDiscount = basicOdPremium + imt23value + geographicalExt+ atDiscount; //basic od before disc
+      // 🔹 Step 4: OD discount
+      double discountAmount = (basicOdBeforeDiscount * discountOnOd) / 100;
+      double odAfterDiscount = basicOdBeforeDiscount - discountAmount;
       
-      double odWithAccessories = odAfterDiscount + accessories + externalCng; 
-      // double cngKitLoading = cngKitYes ? currentIdv * 0.02 : 0.0;
-      double cngKitLoading= 0.0;
-      if (_selectedCngKit == 'Yes' && externalCng > 0) {
-        cngKitLoading = (externalCng/ 1000) * 60;
-      }
+      
+      
+      
 
-      double odWithCngLoading = odWithAccessories + cngKitLoading;  
-      double ncbAmount = odWithCngLoading * selectedNcbPercent / 100; 
-      double netOdPremium = odWithCngLoading - ncbAmount;
-      double tpPremium = 14343.0; // Fixed for upto 6 passengers
+      // 🔹 Step 6: Total OD before NCB
+      double totalBasicPremium = odAfterDiscount +
+          accessories +
+          cngKitLoading +
+          rsaAddons +
+          geographicalExtnAmount;
+        
+       
+        
+       
 
-      if (restrictedTppdYes) {
-        tpPremium = tpPremium * 0.90;
-      }
 
-      double premiumBeforeCess = netOdPremium +
-          tpPremium +
+      // 🔹 Step 7: Apply NCB
+      double ncbAmount = (odAfterDiscount * selectedNcbPercent) / 100;
+      double netOdPremium = odAfterDiscount - ncbAmount;
+
+      // 🔹 Step 8: Liability Premium (dynamic)
+      double tpPremium =
+          14343.0; // ← if this should be dynamic, replace with field
+          double passCov=passengerCount * 877;
+          double fixedGeogExt=100;
+      double liabilityPremium = tpPremium +
           paOwnerDriver +
           llPaidDriverAmount +
-          geographicalExtnAmount;
-      double otherCessAmount = (otherCessPercent / 100) * premiumBeforeCess;
-      double gstAmount = premiumBeforeCess * 0.18;
-      double finalPremium = premiumBeforeCess + otherCessAmount + gstAmount;
+          passCov+
+          fixedGeogExt+
+          cngTpExtra+
+          llOtherEmployeeAmount;
+            
 
+        double zeroDep = (zeroDepreciation*idv)/100;
+        double addonPremium =zeroDep + rsaAddons;
+
+
+      // 🔹 Step 9: Premium before cess
+      double premiumBeforeCess = netOdPremium + liabilityPremium;
+
+      
+      double totalABC= netOdPremium+liabilityPremium+addonPremium;
+
+      // 🔹 Step 10: Other Cess
+      double otherCessAmount = (totalABC * otherCessPercent) / 100;
+
+      // 🔹 Step 11: GST (18% on OD + Liability)
+      double gstAmount = (netOdPremium + liabilityPremium +addonPremium) * 0.18;
+
+      // 🔹 Step 12: Final premium
+      double finalPremium = totalABC + otherCessAmount + gstAmount;
+
+
+      // ✅ Flattened Map<String, String> for result screen
       Map<String, String> resultData = {
-        'IDV (₹)': currentIdv.toStringAsFixed(2),
-        'Depreciation (%)': depreciation.toStringAsFixed(2),
-        'Current IDV (₹)': currentIdv.toStringAsFixed(2),
-        'Age of Vehicle': age,
-        'Zone': zone,
-        'No. of Passengers': passengerCount.toString(),
-        'Year Of Manufacture': yearOfManufacture,
-        'Basic OD Rate (%)': odRate.toStringAsFixed(3),
-        'Basic OD Premium (₹)': basicOdPremium.toStringAsFixed(2),
-        'IMT 23 Loading (₹)': imt23Loading.toStringAsFixed(2),
-        'OD Premium after IMT 23 (₹)': odAfterImt23.toStringAsFixed(2),
-        'Discount on OD Premium (%)': discountOnOdPercent.toStringAsFixed(2),
-        'Discount Amount (₹)': discountAmount.toStringAsFixed(2),
-        'OD Premium after Discount (₹)': odAfterDiscount.toStringAsFixed(2),
-        'Electrical/Electronic Accessories (₹)': accessories.toStringAsFixed(2),
-        'CNG/LPG Kits (Externally Fitted) (₹)': externalCng.toStringAsFixed(2),
-        'CNG/LPG Kit Loading (₹)': cngKitLoading.toStringAsFixed(2),
-        'Total OD Premium before NCB (₹)':
-            odWithCngLoading.toStringAsFixed(2),
-        'No Claim Bonus (%)': selectedNcbPercent.toStringAsFixed(2),
-        'NCB Amount (₹)': ncbAmount.toStringAsFixed(2),
-        'Geographical Extn. (₹)': geographicalExtnAmount.toStringAsFixed(2),
-        'Net OD Premium (₹)': netOdPremium.toStringAsFixed(2),
-        'TP Premium (₹)': tpPremium.toStringAsFixed(2),
-        'Restricted TPPD':
-            restrictedTppdYes ? 'Yes (10% discount applied)' : 'No',
-        'PA to Owner Driver (₹)': paOwnerDriver.toStringAsFixed(2),
-        'LL to Paid Driver (₹)': llPaidDriverAmount.toStringAsFixed(2),
-        'Premium Before Cess (₹)': premiumBeforeCess.toStringAsFixed(2),
-        'Other Cess (%)': otherCessPercent.toStringAsFixed(2),
-        'Other Cess Amount (₹)': otherCessAmount.toStringAsFixed(2),
-        'GST @ 18% (₹)': gstAmount.toStringAsFixed(2),
-        'Final Premium Payable (₹)': finalPremium.toStringAsFixed(2),
+        // Basic
+        "IDV (₹)": idv.toStringAsFixed(2),
+        "Year Of Manufacture": yearOfManufacture,
+        "Zone": zone,
+        "Age of Vehicle": age,
+        "No. of Passengers": passengerCount.toString(),
+
+        // [A] Own Damage
+        "Vehicle Basic Rate(₹)": odRate.toStringAsFixed(3),
+        "Basics for Vehicle (₹)": basicforvehicle.toStringAsFixed(2),
+        "Electrical Accessories (₹)": accessories.toStringAsFixed(2),
+        "CNG/LPG Kits (Externally Fitted) (₹)": cngKitLoading.toStringAsFixed(2),
+        "Basic OD Premium (₹)": basicOdPremium.toStringAsFixed(2), //check the formula
+        "Geographical Extension (₹)": geographicalExt.toStringAsFixed(2),
+        "IMT 23 Applied": imt23value.toStringAsFixed(2),
+        "Anti Theft Applied": atDiscount.toStringAsFixed(2),
+        "Basic OD Before Discount":basicOdBeforeDiscount.toStringAsFixed(2),//check formula
+        "Discount on OD Premium (₹)": discountAmount.toStringAsFixed(2),
+        "No Claim Bonus (%)": selectedNcbPercent.toStringAsFixed(2),
+        "Basic OD Before Ncb":totalBasicPremium .toStringAsFixed(2),
+        "NCB Amount (₹)": ncbAmount.toStringAsFixed(2),
+        
+        "Net OD Premium (₹)": netOdPremium.toStringAsFixed(2),
+
+        //[B] Addon Coverages
+        "Zero Depreciation":zeroDep.toStringAsFixed(2),
+        "RSA/Addons (₹)": rsaAddons.toStringAsFixed(2),
+        "Total Addon Premium":addonPremium.toStringAsFixed(2),
+        
+
+        // [C] Liability
+        "Basic Liability Premium (₹)": tpPremium.toStringAsFixed(2),
+        "Passenger Coverage":passCov.toStringAsFixed(2),
+        "Geographical Extn":fixedGeogExt.toStringAsFixed(2),
+        "CNG/LPG Kits": cngTpExtra.toStringAsFixed(2),
+        "PA to Owner Driver (₹)": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver (₹)": llPaidDriverAmount.toStringAsFixed(2),
+        "LL to Other Employees (₹)": llOtherEmployeeAmount.toStringAsFixed(2),
+        "Total Liability Premium (₹)":liabilityPremium.toStringAsFixed(2),
+
+        // [D] Total
+        "Premium Before GST":totalABC.toStringAsFixed(2),
+        "GST @ 18% [Applied on A+B+C]": gstAmount.toStringAsFixed(2),
+        "Other CESS Amount (₹)": otherCessAmount.toStringAsFixed(2),
+       "Final Premium Payable (₹)": finalPremium.toStringAsFixed(2),
       };
 
       InsuranceResultData insuranceResultData = InsuranceResultData(
-        vehicleType: "Bus Upto 6 Passenger",
+        vehicleType: "Bus More than 6 Passenger",
         fieldData: resultData,
         totalPremium: finalPremium,
       );
@@ -215,8 +283,9 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) =>
-              PcvInsuranceResultScreen(resultData: insuranceResultData),
+          builder: (context) => PcvInsuranceResultScreen(
+            resultData: insuranceResultData,
+          ),
         ),
       );
     }
@@ -231,13 +300,15 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
       _selectedAge = null;
       _selectedZone = null;
       _selectedImt23 = null;
-      _selectedCngKit = null;
+      _selectedCngLpgKit = null;
+      _selectedAntiTheft = null;
       _selectedNcb = null;
+      _selectedGeExtn = null;
       _selectedLlPaidDriver = null;
-      _selectedRestrictedTppd = null;
+      _selectedLlOtherEmployee = null;
       _selectedDepreciation = null;
-      _selectedGeographicalExtn = null;
-      _currentIdv = 0.0;
+      // _currentIdv = 0.0;
+      _controllers['currentIdv']!.text = '-';
     });
   }
 
@@ -251,7 +322,7 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            'Bus Upto 6 Passenger',
+            "Bus More than 6 Passenger",
             style: TextStyle(color: Colors.white, fontSize: 18),
           ),
         ),
@@ -293,13 +364,14 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
                           hintText: 'Select Depreciation',
                         ),
                         _buildCurrentIdvField(),
+                        // _buildReadOnlyField('currentIdv', 'Current IDV (₹)'),
                         _buildDropdownField(
                             'Age of Vehicle',
                             _ageOptions,
                             _selectedAge,
                             (val) => setState(() => _selectedAge = val)),
                         _buildTextField('yearOfManufacture',
-                            'Year Of Manufacture', 'Enter Year'),
+                            'Year of Manufacture', 'Enter Year'),
                         _buildDropdownField('Zone', _zoneOptions, _selectedZone,
                             (val) => setState(() => _selectedZone = val)),
                         _buildTextField('numberOfPassengers',
@@ -312,20 +384,22 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
                             _selectedImt23,
                             (val) => setState(() => _selectedImt23 = val),
                             hintText: 'Select Option'),
-                        _buildTextField(
-                            'accessoriesValue',
-                            'Electrical/Electronic Accessories (₹)',
-                            'Enter Value'),
+                        _buildTextField('electricalAccessories',
+                            'Electrical Accessories (₹)', 'Enter Value'),
                         _buildDropdownField(
                             'CNG/LPG Kits',
-                            _cngKitOptions,
-                            _selectedCngKit,
-                            (val) => setState(() => _selectedCngKit = val),
+                            _yesNoOptions,
+                            _selectedCngLpgKit,
+                            (val) => setState(() => _selectedCngLpgKit = val),
                             hintText: 'Select Option'),
-                        _buildTextField(
-                            'externalCngLpgKit',
-                            'CNG/LPG Kits (Externally Fitted) (₹)',
-                            'Enter Value'),
+                        _buildTextField('externalCngLpgKit',
+                            'Externally Fitted CNG/LPG (₹)', 'Enter Kit Value'),
+                        _buildDropdownField(
+                            'Anti Theft',
+                            _yesNoOptions,
+                            _selectedAntiTheft,
+                            (val) => setState(() => _selectedAntiTheft = val),
+                            hintText: 'Select Option'),
                         _buildDropdownField(
                             'No Claim Bonus (%)',
                             _ncbOptions,
@@ -335,10 +409,17 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
                         _buildDropdownField(
                             'Geographical Extn.',
                             _geographicalExtnOptions,
-                            _selectedGeographicalExtn,
-                            (val) =>
-                                setState(() => _selectedGeographicalExtn = val),
+                            _selectedGeExtn,
+                            (val) => setState(() => _selectedGeExtn = val),
                             hintText: 'Select Option'),
+                        _buildTextField(
+                          'zeroDepreciation',
+                          'Zero Depreciation (₹)',
+                          'Enter Amount',
+                        ),
+
+                        _buildTextField(
+                            'rsaAddon', 'RSA/Addons (₹)', 'Enter Amount'),
                         _buildTextField('paOwnerDriver',
                             'PA to Owner Driver (₹)', 'Enter Amount'),
                         _buildDropdownField(
@@ -349,11 +430,11 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
                                 setState(() => _selectedLlPaidDriver = val),
                             hintText: 'Select Option'),
                         _buildDropdownField(
-                            'Restricted TPPD',
-                            _restrictedTppdOptions,
-                            _selectedRestrictedTppd,
+                            'LL to Other Employees',
+                            _llOtherEmployeeOptions,
+                            _selectedLlOtherEmployee,
                             (val) =>
-                                setState(() => _selectedRestrictedTppd = val),
+                                setState(() => _selectedLlOtherEmployee = val),
                             hintText: 'Select Option'),
                         _buildTextField(
                             'otherCess', 'Other Cess (%)', 'Enter Cess %'),
@@ -385,13 +466,14 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
 
   Widget _buildTextField(String key, String label, String placeholder) {
     const optionalFields = [
-      'accessoriesValue',
+      'electricalAccessories',
       'zeroDepreciation',
       'paOwnerDriver',
       'paUnnamedPassenger',
       'otherCess',
       'discountOnOd',
       'externalCngLpgKit',
+      'rsaAddon'
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -454,7 +536,8 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
     String? keyName; // Optional: pass a key for validation skip
     const optionalDropdowns = [
       'LL to Paid Driver', 'No Claim Bonus (%)', 'Geographical Extn.',
-      'CNG/LPG Kits', 'IMT 23','Restricted TPPD' // matches label or keyName
+      'CNG/LPG Kits', 'IMT 23', 'Restricted TPPD', 'LL to Other Employees',
+      'Anti Theft' // matches label or keyName
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -525,8 +608,8 @@ class _BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
   }
 }
 
-// Helper methods
-double _getBusOdRate(String zone, String age) {
+// Helper methods for premium calculations (adapted for School Bus)
+double _getOdRate(String zone, String age) {
   if (age == 'Upto5Years') {
     if (zone == 'A') return 1.680;
     if (zone == 'B') return 1.672;
@@ -544,16 +627,4 @@ double _getBusOdRate(String zone, String age) {
   return 1.680; // fallback
 }
 
-// double _getBusTpRate(
-//     {required int passengerCount, bool usePerPassenger = false}) {
-//   if (passengerCount <= 6) {
-//     return usePerPassenger ? 1214.0 * passengerCount : 2539.0;
-//   } else if (passengerCount > 6 && passengerCount <= 17) {
-//     return usePerPassenger ? 1349.0 * passengerCount : 6763.0;
-//   } else if (passengerCount > 17 && passengerCount <= 26) {
-//     return usePerPassenger ? 1349.0 * passengerCount : 9697.0;
-//   } else if (passengerCount > 26) {
-//     return usePerPassenger ? 1349.0 * passengerCount : 13725.0;
-//   }
-//   return 0.0; // fallback
-// }
+

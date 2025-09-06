@@ -43,7 +43,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
         ],
         "[C] Total Premium": [
           "Total Package Premium[A+B]",
-          "GST @ 18%",
+          "GST @ 18% [Applied on OD and TP]",
           "Other CESS"
         ],
       },
@@ -81,7 +81,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
         ],
         "[C] Total Premium": [
           "Total Package Premium[A+B]",
-          "GST @ 18%",
+          "GST @ 18% [Applied on OD and TP]",
           "Other CESS"
         ],
       },
@@ -116,7 +116,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
         ],
         "[C] Total Premium": [
           "Total Package Premium[A+B]",
-          "GST @ 18%",
+          "GST @ 18% [Applied on OD and TP]",
           "Other CESS"
         ],
       },
@@ -148,7 +148,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
         ],
         "[C] Total Premium": [
           "Total Package Premium[A+B]",
-          "GST @ 18%",
+          "GST @ 18% [Applied on OD and TP]",
           "Other CESS"
         ]
       },
@@ -162,12 +162,13 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "Geographical Ext",
           "Overturning For Cranes",
           "IMT 23",
+          "Total Own Damage Premium",
           "No Claim Bonus",
           "Net Own Damage Premium",
         ],
         "[B] Liability Premium": [
           "Liability Premium (TP)",
-          //"Geographical Ext",
+          "Geographical Extension",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "LL to Employee Other than Paid Driver",
@@ -175,7 +176,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
         ],
         "[C] Total Premium": [
           "Total Package Premium[A+B]",
-          "GST @ 18%",
+          "GST @ 18% [Applied on OD and TP]",
           "Other CESS"
         ]
       },
@@ -216,7 +217,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
         ],
         "[C] Total Premium": [
           "Total Package Premium[A+B]",
-          "GST @ 18%",
+          "GST @ 18% [Applied on OD and TP]",
           "Other CESS"
         ],
       }

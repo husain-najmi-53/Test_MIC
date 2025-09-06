@@ -132,9 +132,8 @@ class _GoodsCarryingVehicleScreenState
       double geoExtAmt =
           (int.tryParse(_selectedGeographicalExtn ?? '0') == 0) ? 0.0 : 400;
       double imt23Percent = _selectedImt23 == 'Yes' ? 15.0 : 0.0;
-      double antiTheftAmt = _selectedAntiTheft == 'Yes' ? -200.0 : 0.0;
-      double restrictedTppdAmt =
-          _selectedRestrictedTppd == 'Yes' ? -100.0 : 0.0;
+      double antiTheftAmt = _selectedAntiTheft == 'Yes' ? 6.78 : 0.0;
+      double restrictedTppdAmt = _selectedRestrictedTppd == 'Yes' ? 200.0 : 0.0;
       double llPaidDriverAmt =
           double.tryParse(_selectedLlPaidDriver ?? '0') ?? 0.0;
       double llOtherEmpAmt =
@@ -145,24 +144,16 @@ class _GoodsCarryingVehicleScreenState
 
       double basicForVehicle = (idv * basicRate) / 100;
 
-      double cngLpgPremium = 0.0;
-      if (_selectedCngLpgKit == 'Yes' && externalCngLpgKit > 0) {
-        cngLpgPremium = (externalCngLpgKit / 1000) * 60;
-      }
+      double cngLpgPremium = externalCngLpgKit * 0.04;
 
-      double electricAccessoriesVal = 0.0;
-      if (electricalAccessories > 0) {
-        electricAccessoriesVal = (electricalAccessories / 1000) * 60;
-      }
+      double electricAccessoriesVal = electricalAccessories * 0.04;
       //imt23 calculated
       double imt23Amt = (basicForVehicle * imt23Percent) / 100;
 
-      double basicOdBeforeDiscount = basicForVehicle +
-          electricAccessoriesVal +
-          cngLpgPremium +
-          geoExtAmt +
-          imt23Amt +
-          antiTheftAmt;
+      double BasicOdPremium =
+          basicForVehicle + electricAccessoriesVal + cngLpgPremium;
+      double basicOdBeforeDiscount =
+          BasicOdPremium + geoExtAmt + imt23Amt + antiTheftAmt;
       double discountAmt = (basicOdBeforeDiscount * discount) / 100;
       double basicOdBeforeNcb = basicOdBeforeDiscount - discountAmt;
       double ncbAmt = (basicOdBeforeNcb * ncb) / 100;
@@ -172,19 +163,25 @@ class _GoodsCarryingVehicleScreenState
       double totalB = zeroDep + rsaAmount;
 
       double basicTp = _getTpRate(gvw);
+      double fixedGeoamt = 100;
 
-      double totalC = basicTp +
+      double totalC = basicTp -
           restrictedTppdAmt +
           cngTpAmt +
-          geoExtAmt +
+          fixedGeoamt +
           paOwnerDriver +
           llPaidDriverAmt +
           llOtherEmpAmt;
 
       double totalABC = totalA + totalB + totalC;
-      double gst = totalABC * 0.12;
+
+      double tpgst12 = basicTp * 0.12; // GST @12% on Basic TP
+      double gst18Base =
+          totalA + totalB + (totalC - basicTp); // GST @18% on rest
+      double gst18 = gst18Base * 0.18;
+
       double otherCessAmt = (totalABC * otherCess) / 100;
-      double finalPremium = totalABC + gst + otherCessAmt;
+      double finalPremium = totalABC + gst18 + tpgst12 + otherCessAmt;
 
       Map<String, String> resultMap = {
         "IDV": idv.toStringAsFixed(2),
@@ -195,6 +192,7 @@ class _GoodsCarryingVehicleScreenState
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
         "Electrical Accessories": electricAccessoriesVal.toStringAsFixed(2),
         "CNG/LPG Kits": cngLpgPremium.toStringAsFixed(2),
+        "Basic Od Premium": BasicOdPremium.toStringAsFixed(2),
         "Geographical Ext": geoExtAmt.toStringAsFixed(2),
         "IMT 23": imt23Amt.toStringAsFixed(2),
         "Anti-Theft": antiTheftAmt.toStringAsFixed(2),
@@ -209,13 +207,14 @@ class _GoodsCarryingVehicleScreenState
         "Basic Liability Premium (TP)": basicTp.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppdAmt.toStringAsFixed(2),
         "CNG/LPG Kit (TP)": cngTpAmt.toStringAsFixed(2),
-        "Geographical Ext (TP)": geoExtAmt.toStringAsFixed(2),
+        "Geographical Extn (TP)": fixedGeoamt.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llPaidDriverAmt.toStringAsFixed(2),
         "LL to Other Employee": llOtherEmpAmt.toStringAsFixed(2),
         "Total Liability Premium (C)": totalC.toStringAsFixed(2),
         "Total Premium (A+B+C)": totalABC.toStringAsFixed(2),
-        "GST (12%)": gst.toStringAsFixed(2),
+        "GST (18%)": gst18.toStringAsFixed(2),
+        "Gst (12%) on Basic Tp": tpgst12.toStringAsFixed(2),
         "Other CESS": otherCessAmt.toStringAsFixed(2),
         "Final Premium": finalPremium.toStringAsFixed(2),
       };

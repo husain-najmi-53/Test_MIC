@@ -105,37 +105,33 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
           double.tryParse((_selectedNcb ?? '0%').replaceAll('%', '')) ?? 0.0;
 
       double imt23Percent = _selectedImt23 == 'Yes' ? 15.0 : 0.0;
-      double restrictedTppdAmt =
-          _selectedRestrictedTppd == 'Yes' ? -100.0 : 0.0;
+      double restrictedTppdAmt = _selectedRestrictedTppd == 'Yes' ? 200.0 : 0.0;
       double llPaidDriverAmt =
           (_selectedLlPaidDriver != null && _selectedLlPaidDriver != '0')
               ? double.tryParse(_selectedLlPaidDriver!) ?? 0.0
               : 0.0;
 
-      double electricAccessoriesVal = 0.0;
-      if (electricalAcc > 0) {
-        electricAccessoriesVal = (electricalAcc / 1000) * 60;
-      }
+      double electricAccessoriesVal = electricalAcc * 0.04;
       double basicRate = _getERickshawOdRate(zone, age);
       double basicOd = (idv * basicRate) / 100;
-      double imt23Amt = (basicOd * imt23Percent) / 100;
-      double odBeforeDiscount = basicOd + electricAccessoriesVal + imt23Amt;
+      double BasicOdPremium = basicOd + electricAccessoriesVal;
+      double imt23Amt = (BasicOdPremium * imt23Percent) / 100;
+      double odBeforeDiscount = BasicOdPremium + imt23Amt;
       double discountAmt = (odBeforeDiscount * discount) / 100;
-      double odAfterDiscount = odBeforeDiscount - discountAmt;
-      double loadingAmt = (odAfterDiscount * loadingOnDiscount) / 100;
-      double odBeforeNcb = odAfterDiscount + loadingAmt;
+
+      //double odAfterDiscount = odBeforeDiscount - discountAmt;
+
+      double loadingAmt = (odBeforeDiscount * loadingOnDiscount) / 100;
+      double odBeforeNcb = odBeforeDiscount - discountAmt + loadingAmt;
       double ncbAmt = (odBeforeNcb * ncb) / 100;
       double netOdPremium = odBeforeNcb - ncbAmt;
 
       double basicTp = 3139.00;
-      double totalTp = basicTp +
-          valueAddedService +
-          paOwnerDriver +
-          llPaidDriverAmt +
-          restrictedTppdAmt;
+      double totalTp =
+          basicTp + paOwnerDriver + llPaidDriverAmt - restrictedTppdAmt;
 
-      double totalAB = netOdPremium + totalTp;
-      double gst = totalAB * 0.12;
+      double totalAB = netOdPremium + valueAddedService + totalTp;
+      double gst = totalAB * 0.18;
       double otherCessAmt = (totalAB * otherCess) / 100;
       double finalPremium = totalAB + gst + otherCessAmt;
 
@@ -149,7 +145,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
         "IMT 23": imt23Amt.toStringAsFixed(2),
         "OD Before Discount": odBeforeDiscount.toStringAsFixed(2),
         "Discount on OD Premium": discountAmt.toStringAsFixed(2),
-        "OD After Discount": odAfterDiscount.toStringAsFixed(2),
+        //"OD After Discount": odAfterDiscount.toStringAsFixed(2),
         "Loading on Discount": loadingAmt.toStringAsFixed(2),
         "OD Before NCB": odBeforeNcb.toStringAsFixed(2),
         "NCB": ncbAmt.toStringAsFixed(2),
@@ -162,7 +158,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
         "Restricted TPPD": restrictedTppdAmt.toStringAsFixed(2),
         "Total TP Premium": totalTp.toStringAsFixed(2),
         "Total Premium (OD+TP)": totalAB.toStringAsFixed(2),
-        "GST (12%)": gst.toStringAsFixed(2),
+        "GST (18%)": gst.toStringAsFixed(2),
         "Other Cess": otherCessAmt.toStringAsFixed(2),
         "Final Premium": finalPremium.toStringAsFixed(2),
       };
@@ -185,17 +181,17 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
 
   double _getERickshawOdRate(String zone, String age) {
     if (zone == 'A') {
-      if (age == 'Upto 5 Years') return 1.278;
-      if (age == '6 to 7 Years') return 1.310;
-      if (age == 'Above 7 Years') return 1.342;
+      if (age == 'Upto 5 Years') return 1.664;
+      if (age == '6 to 7 Years') return 1.706;
+      if (age == 'Above 7 Years') return 1.747;
     } else if (zone == 'B') {
-      if (age == 'Upto 5 Years') return 1.272;
-      if (age == '6 to 7 Years') return 1.304;
-      if (age == 'Above 7 Years') return 1.336;
+      if (age == 'Upto 5 Years') return 1.656;
+      if (age == '6 to 7 Years') return 1.697;
+      if (age == 'Above 7 Years') return 1.739;
     } else if (zone == 'C') {
-      if (age == 'Upto 5 Years') return 1.260;
-      if (age == '6 to 7 Years') return 1.292;
-      if (age == 'Above 7 Years') return 1.323;
+      if (age == 'Upto 5 Years') return 1.640;
+      if (age == '6 to 7 Years') return 1.681;
+      if (age == 'Above 7 Years') return 1.722;
     }
     return 0.00; // fallback
   }

@@ -106,23 +106,21 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
       // Add-ons
       double imt23Percent = _selectedImt23 == 'Yes' ? 15.0 : 0.0;
       double cngTpAmt = _selectedCngLpgKit == 'Yes' ? 60.0 : 0.0;
-      double restrictedTppdAmt =
-          _selectedRestrictedTppd == 'Yes' ? -100.0 : 0.0;
+      double restrictedTppdAmt = _selectedRestrictedTppd == 'Yes' ? 150.0 : 0.0;
       double llPaidDriverAmt =
           (_selectedLlPaidDriver != null && _selectedLlPaidDriver != '0')
               ? double.tryParse(_selectedLlPaidDriver!) ?? 0.0
               : 0.0;
 
-      double cngLpgPremium = 0.0;
-      if (_selectedCngLpgKit == 'Yes' && externalCngLpgKit > 0) {
-        cngLpgPremium = (externalCngLpgKit / 1000) * 60;
-      }
+      double cngLpgPremium = externalCngLpgKit * 0.04;
 
       // ---- OD Calculation ----
       double basicRate = _getThreeWheelerOdRate(zone, age);
       double basicOd = (idv * basicRate) / 100;
-      double imt23Amt = (basicOd * imt23Percent) / 100;
-      double odBeforeDiscount = basicOd + cngLpgPremium + imt23Amt;
+
+      double BasicOdPremium = basicOd + cngLpgPremium;
+      double imt23Amt = (BasicOdPremium * imt23Percent) / 100;
+      double odBeforeDiscount = BasicOdPremium + imt23Amt;
       double discountAmt = (odBeforeDiscount * discount) / 100;
       double odBeforeNcb = odBeforeDiscount - discountAmt;
       double ncbAmt = (odBeforeNcb * ncb) / 100;
@@ -133,14 +131,15 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
       double totalTp = basicTp +
           cngTpAmt +
           paOwnerDriver +
-          llPaidDriverAmt +
+          llPaidDriverAmt -
           restrictedTppdAmt;
 
       // ---- Total ----
       double totalAB = netOdPremium + totalTp;
-      double gst = totalAB * 0.12;
+      double tpgst12 = basicTp * 0.12;
+      double gst = (totalAB - basicTp) * 0.18;
       double otherCessAmt = (totalAB * otherCess) / 100;
-      double finalPremium = totalAB + gst + otherCessAmt;
+      double finalPremium = totalAB + tpgst12 + gst + otherCessAmt;
 
       // Prepare result map
       Map<String, String> resultMap = {
@@ -150,6 +149,7 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
         "Basic OD Rate (%)": basicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicOd.toStringAsFixed(2),
         "External CNG/LPG": cngLpgPremium.toStringAsFixed(2),
+        "Basic Od Premium": BasicOdPremium.toStringAsFixed(2),
         "IMT 23": imt23Amt.toStringAsFixed(2),
         "OD Before Discount": odBeforeDiscount.toStringAsFixed(2),
         "Discount on OD": discountAmt.toStringAsFixed(2),
@@ -163,7 +163,8 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
         "Restricted TPPD": restrictedTppdAmt.toStringAsFixed(2),
         "Total TP Premium": totalTp.toStringAsFixed(2),
         "Total Premium (OD+TP)": totalAB.toStringAsFixed(2),
-        "GST (12%)": gst.toStringAsFixed(2),
+        "GST (18%)": gst.toStringAsFixed(2),
+        "Gst (12%) on Basic Tp": tpgst12.toStringAsFixed(2),
         "Other Cess": otherCessAmt.toStringAsFixed(2),
         "Final Premium": finalPremium.toStringAsFixed(2),
       };

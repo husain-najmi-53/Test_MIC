@@ -140,6 +140,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
     double discountAmount = (basicOdPremium * discountOnOd) / 100.0; //discount on OD premium
     double basicAfterDiscount = basicOdPremium - discountAmount; // Basic OD after discount
     double geographicalExtensionAmount = geographicalExtent; // Fixed amount: 0 or 400
+    double fixedGeographicalExtensionAmount = 100; //fixed value as if selected yes in dropdown
     double overturningAmount = (basicAfterDiscount * overturning) / 100.0;
     double imt23Amount = (basicForVehicle * selectIMT) / 100 ;
     double odBeforeNcb = basicAfterDiscount + geographicalExtensionAmount + overturningAmount + imt23Amount;
@@ -149,9 +150,10 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
     // TP Section
     double liabilityPremiumTP = _getTpRate(vehicleType);
     double totalB = liabilityPremiumTP +
-     paOwnerDriver + 
-     llToPaidDriver + 
-     llLEmployeeOther;
+      fixedGeographicalExtensionAmount +
+      paOwnerDriver + 
+      llToPaidDriver + 
+      llLEmployeeOther;
 
 
 
@@ -177,13 +179,14 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
       "Geographical Ext": geographicalExtensionAmount.toStringAsFixed(2),
       "Overturning For Cranes": overturningAmount.toStringAsFixed(2),
       "IMT 23": imt23Amount.toStringAsFixed(2),
+      "Total Own Damage Premium": odBeforeNcb.toStringAsFixed(2),
       "No Claim Bonus": ncbAmount.toStringAsFixed(2),
       "Net Own Damage Premium": totalA.toStringAsFixed(2),
       // "Total A": totalA.toStringAsFixed(2),
 
       // B - Liability Premium
       "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-      //"Geographical Ext": geographicalExtensionAmount.toStringAsFixed(2),
+      "Geographical Extension": fixedGeographicalExtensionAmount.toStringAsFixed(2),
       "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
       "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
       "LL to Employee Other than Paid Driver": llLEmployeeOther.toStringAsFixed(2),
@@ -191,7 +194,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
 
       // C - Total Premium
       "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
-      "GST @ 18%": gst.toStringAsFixed(2),
+      "GST @ 18% [Applied on OD and TP]": gst.toStringAsFixed(2),
       "Other CESS": otherCessAmt.toStringAsFixed(2),
 
       // Final Premium
@@ -465,7 +468,7 @@ double _getTpRate(String vehicleType) {
     case 'Others Vehicle':
       return 7267;
     case 'Agriculture upto 6 HP':
-      return 910;
+      return 1645;
     default:
       return 7267; // default to Others Vehicle rate
   }

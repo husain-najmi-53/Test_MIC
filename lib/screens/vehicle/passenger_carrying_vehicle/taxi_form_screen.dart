@@ -57,13 +57,12 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
       'rsaAmount',
       'paOwnerDriver',
       'otherCess',
-      'currentIdv', // added controller for currentIdv
+      'currentIdv',
     ];
     for (var key in fieldKeys) {
       _controllers[key] = TextEditingController();
     }
     _controllers['idv']!.addListener(_updateCurrentIdv);
-    // Auto-select LL to Paid Driver to 50
     _selectedLlPaidDriver = '50';
   }
 
@@ -101,191 +100,160 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
   void _updateCurrentIdv() {
     double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
     double depreciation = 0.0;
-
     if (_selectedDepreciation != null) {
       depreciation =
           double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0;
     }
-
     double currentIdv = idv - ((idv * depreciation) / 100);
     _controllers['currentIdv']!.text = currentIdv.toStringAsFixed(2);
   }
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
-    String ageOfVehicle = _selectedAge ?? 'Upto 5 years';
-    String yearOfManufacture = _controllers['yearOfManufacture']!.text;
-    String zone = _selectedZone ?? 'A';
-    int numberOfPassengers =
-        int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
-    double discountOnOd =
-        double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-    double electronicAccessories =
-        double.tryParse(_controllers['electronicAccessories']!.text) ?? 0.0;
-    double externalCngLpgKit =
-        double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
-    double paOwnerDriver =
-        double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
-    double zeroDepRate =
-        double.tryParse(_controllers['zeroDepRate']!.text) ?? 0.0;
-    double rsaAmount = double.tryParse(_controllers['rsaAmount']!.text) ?? 0.0;
-    double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
-    int cubicCapacity = int.tryParse(_controllers['cubicCapacity']!.text) ?? 1000;
+      double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+      String ageOfVehicle = _selectedAge ?? 'Upto 5 years';
+      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
+      String zone = _selectedZone ?? 'A';
+      int numberOfPassengers =
+          int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
+      double discountOnOd =
+          double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+      double electronicAccessories =
+          double.tryParse(_controllers['electronicAccessories']!.text) ?? 0.0;
+      double externalCngLpgKit =
+          double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
+      double paOwnerDriver =
+          double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      double zeroDepRate =
+          double.tryParse(_controllers['zeroDepRate']!.text) ?? 0.0;
+      double rsaAmount = double.tryParse(_controllers['rsaAmount']!.text) ?? 0.0;
+      double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+      int cubicCapacity = int.tryParse(_controllers['cubicCapacity']!.text) ?? 1000;
 
-    double selectedNcb = 0.0;
-    if (_selectedNcb != null) {
-      selectedNcb = double.tryParse(_selectedNcb!) ?? 0.0;
-    }
-
-    double llPaidDriverAmount = 0.0;
-    if (_selectedLlPaidDriver != null) {
-      llPaidDriverAmount = double.tryParse(_selectedLlPaidDriver!) ?? 0.0;
-    }
-
-    String antiTheft = _selectedAntiTheft ?? 'No';
-
-    // Calculate current IDV after depreciation
-    double depreciationPercent = 0.0;
-    if (_selectedDepreciation != null) {
-      depreciationPercent =
-          double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0;
-    }
-    double currentIdv = idv * (1 - (depreciationPercent / 100));
-    // double currentIdv =
-    //     double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
-
-    // Convert age label to key for rate lookup
-    String ageKey = '';
-    switch (ageOfVehicle) {
-      case 'Upto 5 years':
-        ageKey = 'Upto5Years';
-        break;
-      case '6 to 7 years':
-        ageKey = '5to7Years';
-        break;
-      case 'Above 7 years':
-        ageKey = 'Above7Years';
-        break;
-      default:
-        ageKey = 'Upto5Years';
-    }
-
-    // Base OD rate
-    double vehicleBasicRate = _getOdRate(zone, ageKey,cubicCapacity);
-
-    // 1) Basic OD premium based on current IDV and base rate
-    double basicOdPremium = (currentIdv * vehicleBasicRate) / 100;
-
-      double accessories = 0.0;
-      if (electronicAccessories > 0) {
-        accessories = (electronicAccessories / 1000) * 60;
-      }
-     
-      double cngKitLoading = 0.0;
-      if (_selectedCngLpgKit == 'Yes' && externalCngLpgKit > 0) {
-        cngKitLoading = (externalCngLpgKit / 1000) * 60;
+      double selectedNcb = 0.0;
+      if (_selectedNcb != null) {
+        selectedNcb = double.tryParse(_selectedNcb!) ?? 0.0;
       }
 
-    // 2) Accessories loading: electronic accessories + external CNG/LPG kit
-    double accessoriesLoading = electronicAccessories + externalCngLpgKit;
+      double llPaidDriverAmount = 0.0;
+      if (_selectedLlPaidDriver != null) {
+        llPaidDriverAmount = double.tryParse(_selectedLlPaidDriver!) ?? 0.0;
+      }
 
-    // 3) Anti-theft discount/loading: assuming 5% discount if Yes
-    double antiTheftDiscount = 0.0;
-    if (antiTheft == 'Yes') {
-      antiTheftDiscount =
-          0.05 * basicOdPremium; // 5% discount on basic OD premium
+      String antiTheft = _selectedAntiTheft ?? 'No';
+
+      double depreciationPercent = 0.0;
+      if (_selectedDepreciation != null) {
+        depreciationPercent =
+            double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0;
+      }
+      double currentIdv = idv * (1 - (depreciationPercent / 100));
+
+      String ageKey = '';
+      switch (ageOfVehicle) {
+        case 'Upto 5 years':
+          ageKey = 'Upto5Years';
+          break;
+        case '6 to 7 years':
+          ageKey = '5to7Years';
+          break;
+        case 'Above 7 years':
+          ageKey = 'Above7Years';
+          break;
+        default:
+          ageKey = 'Upto5Years';
+      }
+
+      // OD Premium calculations
+      double vehicleBasicRate = _getOdRate(zone, ageKey, cubicCapacity);
+      double basicOdPremium = (currentIdv * vehicleBasicRate) / 100;
+      
+      double electronicAccessoriesPremium = (electronicAccessories * 0.04);
+      double cngKitLoading = (externalCngLpgKit * 0.04);
+      double odPremiumWithAddons = basicOdPremium + electronicAccessoriesPremium + cngKitLoading;
+
+      double antiTheftDiscount = 0.0;
+      if (antiTheft == 'Yes') {
+        antiTheftDiscount = (odPremiumWithAddons * 2.5) / 100;
+      }
+      
+      double odBeforeDiscount = odPremiumWithAddons - antiTheftDiscount;
+      
+      double discountAmount = (odBeforeDiscount * discountOnOd) / 100;
+      double odPremiumAfterDiscounts = odBeforeDiscount - discountAmount;
+      
+      double ncbAmount = (odPremiumAfterDiscounts * selectedNcb) / 100;
+      double netOdPremium = odPremiumAfterDiscounts - ncbAmount;
+
+      // Addons calculations
+      double zeroDepPremium = (currentIdv * zeroDepRate) / 100;
+      double totalA = netOdPremium + zeroDepPremium + rsaAmount;
+
+      // Liability Premium (TP) calculations
+      double liabilityPremiumTP = _getTpRate(cubicCapacity);
+      double paUnnamedPassenger = _getPaPassengerRate(numberOfPassengers);
+      double totalB = liabilityPremiumTP + paOwnerDriver + llPaidDriverAmount + paUnnamedPassenger;
+
+      // Total premium before GST
+      double totalAB = totalA + totalB;
+      
+      // GST & Other CESS
+      double gst = totalAB * 0.18;
+      double otherCessAmt = (otherCess * totalAB) / 100;
+
+      // Final payable premium
+      double finalPremium = totalAB + gst + otherCessAmt;
+
+      // Prepare results map
+      Map<String, String> resultMap = {
+        "IDV": idv.toStringAsFixed(2),
+        "Current IDV": currentIdv.toStringAsFixed(2),
+        "Year of Manufacture": yearOfManufacture,
+        "Zone": zone,
+        "Age of Vehicle": ageOfVehicle,
+        "No. of Passengers": numberOfPassengers.toString(),
+        "Cubic Capacity": cubicCapacity.toString(),
+        "Vehicle Basic Rate (%)": vehicleBasicRate.toStringAsFixed(3),
+        "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
+        "Discount on OD Premium (%)": discountOnOd.toStringAsFixed(2),
+        "Discount Amount": discountAmount.toStringAsFixed(2),
+        "Anti Theft Discount": antiTheftDiscount.toStringAsFixed(2),
+        "OD Premium after Discounts": odPremiumAfterDiscounts.toStringAsFixed(2),
+        "Electronic/Electrical Accessories": electronicAccessoriesPremium.toStringAsFixed(2),
+        "CNG/LPG kits(Externally Fitted)": cngKitLoading.toStringAsFixed(2),
+        "No Claim Bonus (%)": selectedNcb.toStringAsFixed(2),
+        "NCB Amount": ncbAmount.toStringAsFixed(2),
+        "Net OD Premium": netOdPremium.toStringAsFixed(2),
+        "Zero Depreciation Premium": zeroDepPremium.toStringAsFixed(2),
+        "RSA Amount": rsaAmount.toStringAsFixed(2),
+        "Total A (Net OD Premium + Zero Dep + RSA)": totalA.toStringAsFixed(2),
+        "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "PA to Unnamed Passengers": paUnnamedPassenger.toStringAsFixed(2),
+        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
+        "Total B (Liability Premium)": totalB.toStringAsFixed(2),
+        "Total Package Premium (A + B)": totalAB.toStringAsFixed(2),
+        'GST @ 18% [Applied on OD and TP]': gst.toStringAsFixed(2),
+        "Other CESS (%)": otherCess.toStringAsFixed(2),
+        "Other CESS Amount": otherCessAmt.toStringAsFixed(2),
+        "Final Premium Payable": finalPremium.toStringAsFixed(2),
+      };
+
+      // Show results screen
+      InsuranceResultData resultData = InsuranceResultData(
+        vehicleType: "Taxi (Upto 6 Passengers)",
+        fieldData: resultMap,
+        totalPremium: finalPremium,
+      );
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => PcvInsuranceResultScreen(resultData: resultData),
+        ),
+      );
     }
-
-    // 4) Apply discount on OD premium (entered by user)
-    double discountAmount = (basicOdPremium * discountOnOd) / 100;
-
-    // OD premium after discount and anti-theft discount
-    double odPremiumAfterDiscounts =
-        basicOdPremium - discountAmount - antiTheftDiscount;
-
-    // 5) Add accessories loading (usually full amount added)
-    double odWithAccessories = odPremiumAfterDiscounts + accessoriesLoading;
-
-    // 6) Apply No Claim Bonus (NCB) on OD premium after discounts and accessories
-    double ncbAmount = (odWithAccessories * selectedNcb) / 100;
-    double netOdPremium = odWithAccessories - ncbAmount;
-
-    // 7) Zero Depreciation premium (if applicable) as % of current IDV
-    double zeroDepPremium = (currentIdv * zeroDepRate) / 100;
-
-    // 8) Add RSA amount
-    double totalA = netOdPremium + zeroDepPremium + rsaAmount;
-
-    // Liability Premium (TP)
-    double liabilityPremiumTP = _getTpRate(cubicCapacity);
-        // _getTpRate(passengerCount: numberOfPassengers, usePerPassenger: false);
-
-    // Total Liability premium includes TP + PA Owner Driver + LL to Paid Driver
-    double totalB = liabilityPremiumTP + paOwnerDriver + llPaidDriverAmount;
-
-    // Total package premium before taxes
-    double totalAB = totalA + totalB;
-
-    // GST @18%
-    double gst = totalAB * 0.18;
-
-    // Other CESS amount
-    double otherCessAmt = (otherCess * totalAB) / 100;
-
-    // Final payable premium
-    double finalPremium = totalAB + gst + otherCessAmt;
-
-    // Prepare results map
-    Map<String, String> resultMap = {
-      "IDV": currentIdv.toStringAsFixed(2),
-      // "Depreciation (%)": _selectedDepreciation ?? '0%',
-      // "Current IDV": currentIdv.toStringAsFixed(2),
-      "Year of Manufacture": yearOfManufacture,
-      "Zone": zone,
-      "Age of Vehicle": ageOfVehicle,
-      "No. of Passengers": numberOfPassengers.toString(),
-      "Cubic Capacity":cubicCapacity.toString(),
-      "Vehicle Basic Rate (%)": vehicleBasicRate.toStringAsFixed(3),
-      "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
-      "Discount on OD Premium (%)": discountOnOd.toStringAsFixed(2),
-      "Discount Amount": discountAmount.toStringAsFixed(2),
-      "Anti Theft Discount": antiTheftDiscount.toStringAsFixed(2),
-      "OD Premium after Discounts": odPremiumAfterDiscounts.toStringAsFixed(2),
-      "Electronic/Electrical Accessories":accessories.toStringAsFixed(2),
-      "Accessories Loading": accessoriesLoading.toStringAsFixed(2),
-      "CNG/LPG kits(Externally Fitted)":cngKitLoading.toStringAsFixed(2),
-      "No Claim Bonus (%)": selectedNcb.toStringAsFixed(2),
-      "NCB Amount": ncbAmount.toStringAsFixed(2),
-      "Net OD Premium": netOdPremium.toStringAsFixed(2),
-      "Zero Depreciation Premium": zeroDepPremium.toStringAsFixed(2),
-      "RSA Amount": rsaAmount.toStringAsFixed(2),
-      "Total A (Net OD Premium + Zero Dep + RSA)": totalA.toStringAsFixed(2),
-      "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-      "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-      "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
-      "Total B (Liability Premium)": totalB.toStringAsFixed(2),
-      "Total Package Premium (A + B)": totalAB.toStringAsFixed(2),
-      "GST @ 18%": gst.toStringAsFixed(2),
-      "Other CESS (%)": otherCess.toStringAsFixed(2),
-      "Other CESS Amount": otherCessAmt.toStringAsFixed(2),
-      "Final Premium Payable": finalPremium.toStringAsFixed(2),
-    };
-
-    // Show results screen
-    InsuranceResultData resultData = InsuranceResultData(
-      vehicleType: "Taxi (Upto 6 Passengers)",
-      fieldData: resultMap,
-      totalPremium: finalPremium,
-    );
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => PcvInsuranceResultScreen(resultData: resultData),
-      ),
-    );
-  }}
+  }
 
   void _resetForm() {
     _formKey.currentState!.reset();
@@ -429,14 +397,15 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
 
   Widget _buildTextField(String key, String label, String placeholder,
       {bool readOnly = false}) {
-        const optionalFields = [
+    const optionalFields = [
       'electronicAccessories',
       'zeroDepRate',
       'paOwnerDriver',
       'paUnnamedPassenger',
       'otherCess',
       'discountOnOd',
-      'externalCngLpgKit','rsaAmount'
+      'externalCngLpgKit',
+      'rsaAmount'
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -459,29 +428,26 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
                 FilteringTextInputFormatter.allow(RegExp(r'[0-9.]'))
               ],
               validator: (value) {
-                  // Skip validation if this field is optional
-                  if (optionalFields.contains(key)) return null;
+                if (optionalFields.contains(key)) return null;
 
-                  // Required validation
-                  if (value == null || value.trim().isEmpty) {
-                    return 'Enter $label';
-                  }
-                  // Date validation for Year of Manufacture
-                  if (key == 'yearOfManufacture') {
-                    int? year = int.tryParse(value.trim());
-                    if (year == null) {
-                      return 'Enter a valid year';
-                    }
-                    int currentYear = DateTime.now().year;
-                    if (year > currentYear) {
-                      return 'Year cannot be greater than $currentYear';
-                    }
-                    if (year < 1900) {
-                      return 'Year cannot be less than 1900';
-                    }
-                  }
-                  return null;
+                if (value == null || value.trim().isEmpty) {
+                  return 'Enter $label';
                 }
+                if (key == 'yearOfManufacture') {
+                  int? year = int.tryParse(value.trim());
+                  if (year == null) {
+                    return 'Enter a valid year';
+                  }
+                  int currentYear = DateTime.now().year;
+                  if (year > currentYear) {
+                    return 'Year cannot be greater than $currentYear';
+                  }
+                  if (year < 1900) {
+                    return 'Year cannot be less than 1900';
+                  }
+                }
+                return null;
+              },
             ),
           ),
         ],
@@ -492,10 +458,15 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged,
       {String placeholder = 'Select Option'}) {
-        String? keyName; // Optional: pass a key for validation skip
+    String? keyName;
     const optionalDropdowns = [
-      'LL To Paid Driver', 'No Claim Bonus (%)', 'Geographical Extn.',
-      'CNG/LPG Kits', 'IMT 23','Restricted TPPD','Anti Theft' // matches label or keyName
+      'LL To Paid Driver',
+      'No Claim Bonus (%)',
+      'Geographical Extn.',
+      'CNG/LPG Kits',
+      'IMT 23',
+      'Restricted TPPD',
+      'Anti Theft'
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -514,12 +485,10 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
               onChanged: onChanged,
               decoration: const InputDecoration(border: OutlineInputBorder()),
               validator: (value) {
-                // Skip validation if optional
                 if (optionalDropdowns.contains(label) ||
                     (keyName != null && optionalDropdowns.contains(keyName))) {
                   return null;
                 }
-
                 if (value == null) {
                   return 'Select $label';
                 }
@@ -534,8 +503,8 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
   }
 }
 
-double _getOdRate(String zone, String age ,int cubicCapacity) {
-  if(cubicCapacity<=1000){
+double _getOdRate(String zone, String age, int cubicCapacity) {
+  if (cubicCapacity <= 1000) {
     if (age == 'Upto5Years') {
       if (zone == 'A') return 3.284;
       if (zone == 'B') return 3.191;
@@ -546,7 +515,7 @@ double _getOdRate(String zone, String age ,int cubicCapacity) {
       if (zone == 'A') return 3.448;
       if (zone == 'B') return 3.351;
     }
-  }else if(cubicCapacity>1000 && cubicCapacity<=1500 ){
+  } else if (cubicCapacity > 1000 && cubicCapacity <= 1500) {
     if (age == 'Upto5Years') {
       if (zone == 'A') return 3.448;
       if (zone == 'B') return 3.351;
@@ -557,7 +526,7 @@ double _getOdRate(String zone, String age ,int cubicCapacity) {
       if (zone == 'A') return 3.620;
       if (zone == 'B') return 3.519;
     }
-  }else{ //above 1500
+  } else {
     if (age == 'Upto5Years') {
       if (zone == 'A') return 3.612;
       if (zone == 'B') return 3.510;
@@ -569,7 +538,6 @@ double _getOdRate(String zone, String age ,int cubicCapacity) {
       if (zone == 'B') return 3.686;
     }
   }
-
   return 3.284;
 }
 
@@ -578,4 +546,8 @@ double _getTpRate(int cc) {
   if (cc > 1000 && cc <= 1500) return 7940.0;
   if (cc > 1500) return 10523.0;
   return 0.0;
+}
+
+double _getPaPassengerRate(int passengers) {
+  return passengers * 652;
 }

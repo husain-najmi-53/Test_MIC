@@ -209,6 +209,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Basic for Vehicle",
       "Electrical Accessories",
       "CNG/LPG Kits",
+      "Basic Od Premium",
       "Geographical Ext",
       "IMT 23",
       "Anti-Theft",
@@ -227,7 +228,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Basic Liability Premium (TP)",
       "Restricted TPPD",
       "CNG/LPG Kit (TP)",
-      "Geographical Ext (TP)",
+      "Geographical Extn (TP)",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "LL to Other Employee",
@@ -235,7 +236,8 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[D] Total Premium": [
       "Total Premium (A+B+C)",
-      "GST (12%)",
+      "GST (18%)",
+      "Gst (12%) on Basic Tp",
       "Other CESS",
       "Final Premium"
     ],
@@ -252,6 +254,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Basic for Vehicle",
       "Electrical Accessories",
       "CNG/LPG Kits",
+      "Basic Od Premium",
       "Geographical Ext",
       "IMT 23",
       "Anti-Theft",
@@ -270,7 +273,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Basic Liability Premium (TP)",
       "Restricted TPPD",
       "CNG/LPG Kit (TP)",
-      "Geographical Ext (TP)",
+      "Geographical Extn (TP)",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "LL to Other Employee",
@@ -278,7 +281,8 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[D] Total Premium": [
       "Total Premium (A+B+C)",
-      "GST (12%)",
+      "GST (18%)",
+      "Gst (12%) on Basic Tp",
       "Other CESS",
       "Final Premium"
     ]
@@ -293,6 +297,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Basic OD Rate (%)",
       "Basic for Vehicle",
       "External CNG/LPG",
+      "Basic Od Premium",
       "IMT 23",
       "OD Before Discount",
       "Discount on OD",
@@ -310,7 +315,8 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Total Premium": [
       "Total Premium (OD+TP)",
-      "GST (12%)",
+      "GST (18%)",
+      "Gst (12%) on Basic Tp",
       "Other Cess",
       "Final Premium"
     ]
@@ -343,7 +349,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[D] Total Premium": [
       "Total Premium (OD+TP)",
-      "GST (12%)",
+      "GST (18%)",
       "Other Cess",
       "Final Premium"
     ]
@@ -377,6 +383,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[B] Liability Premium": [
       "Base TP Premium",
+      "Passenger Coverage",
       "Restricted TPPD",
       "TP Premium after restriction",
       "PA to Owner Driver",
@@ -385,7 +392,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Total Premium": [
       "Total Premium before Taxes",
-      "GST @ 18%",
+      'GST @ 18% [Applied on OD and TP]',
       "Other CESS (%)",
       "Other CESS Amount",
       "Final Premium Payable",
@@ -426,7 +433,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Total Premium": [
       "Total Premium before Taxes",
-      "GST @ 18%",
+      'GST @ 18% [Applied on OD and TP]',
       "Other CESS (%)",
       "Other CESS Amount",
       "Final Premium Payable",
@@ -452,7 +459,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Electronic/Electrical Accessories",
       "CNG/LPG kits(Externally Fitted)",
       "OD Premium after Discounts",
-      "Accessories Loading",
+      // "Accessories Loading",
       "No Claim Bonus (%)",
       "NCB Amount",
       "Net OD Premium",
@@ -468,13 +475,13 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Total Premium": [
       "Total Package Premium (A + B)",
-      "GST @ 18%",
+      'GST @ 18% [Applied on OD and TP]',
       "Other CESS (%)",
       "Other CESS Amount",
       "Final Premium Payable"
     ]
   },
-  "Bus Upto 6 Passenger": {
+  "Bus More Than 6 Passenger": {
     "Basic Details": [
       "IDV (₹)",
       // "Depreciation (%)",
@@ -485,31 +492,39 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "No. of Passengers",
     ],
     "[A] Own Damage Premium Package": [
-      "Basic OD Rate (%)",
-      'Electrical/Electronic Accessories (₹)',
+      "Vehicle Basic Rate(₹)",
+      "Basics for Vehicle (₹)",
+      "Electrical Accessories (₹)",
       "CNG/LPG Kits (Externally Fitted) (₹)",
       "Basic OD Premium (₹)",
-      "IMT 23 Loading (₹)",
-      "Discount on OD Premium (%)",
-      "Discount Amount (₹)",
-      "OD Premium after Discount (₹)",
-      "CNG/LPG Kit Loading (₹)",
-      "Total OD Premium before NCB (₹)",
-      "No Claim Bonus (%)",
+      "Geographical Extension (₹)",
+      "IMT 23 Applied",
+      "Anti Theft Applied",
+      "Basic OD Before Discount",
+      "Discount on OD Premium (₹)",
+      "Basic OD Before Ncb",
       "NCB Amount (₹)",
       "Net OD Premium (₹)",
     ],
-    "[B] Liability Premium": [
-      "TP Premium (₹)",
-      "Restricted TPPD",
+    "[B] Addon Coverages": [
+      "Zero Depreciation",
+      "RSA/Addons (₹)",
+      "Total Addon Premium",
+    ],
+    "[C] Liability Premium": [
+      "Basic Liability Premium (₹)",
+      "Passenger Coverage",
+      "Geographical Extn",
+      "CNG/LPG Kits",
       "PA to Owner Driver (₹)",
       "LL to Paid Driver (₹)",
-      "Premium Before Cess (₹)",
+      "LL to Other Employees (₹)",
+      "Total Liability Premium (₹)",
     ],
-    "[C] Total Premium": [
-      "Other Cess (%)",
-      'Other Cess Amount (₹)',
-      "GST @ 18% (₹)",
+    "[D] Total Premium": [
+      "Premium Before GST",
+      "GST @ 18% [Applied on A+B+C]",
+      "Other CESS Amount (₹)",
       "Final Premium Payable (₹)",
     ],
   },
@@ -524,34 +539,39 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "No. of Passengers",
     ],
     "[A] Own Damage Premium Package": [
-      "Basic OD Rate (%)",
+      "Vehicle Basic Rate(₹)",
+      "Basics for Vehicle (₹)",
       "Electrical Accessories (₹)",
       "CNG/LPG Kits (Externally Fitted) (₹)",
       "Basic OD Premium (₹)",
       "Geographical Extension (₹)",
       "IMT 23 Applied",
       "Anti Theft Applied",
-      "Discount on OD Premium (%)",
+      "Basic OD Before Discount",
       "Discount on OD Premium (₹)",
-      "No Claim Bonus (%)",
-      "Net OD Premium (₹)",
-      "OD Premium after Discount (₹)",
-      "RSA/Addons (₹)",
+      "Basic OD Before Ncb",
       "NCB Amount (₹)",
-      "Total Basic Premium (₹)",
+      "Net OD Premium (₹)",
     ],
-    "[B] Liability Premium": [
-      "TP Premium (₹)",
+    "[B] Addon Coverages": [
+      "Zero Depreciation",
+      "RSA/Addons (₹)",
+      "Total Addon Premium",
+    ],
+    "[C] Liability Premium": [
+      "Basic Liability Premium (₹)",
+      "Passenger Coverage",
+      "Geographical Extn",
       "CNG/LPG Kits",
       "PA to Owner Driver (₹)",
       "LL to Paid Driver (₹)",
       "LL to Other Employees (₹)",
-      "Premium Before Cess (₹)",
+      "Total Liability Premium (₹)",
     ],
-    "[C] Total Premium": [
-      "Other CESS (%)",
+    "[D] Total Premium": [
+      "Premium Before GST",
+      "GST @ 18% [Applied on A+B+C]",
       "Other CESS Amount (₹)",
-      "GST @ 18% (₹)",
       "Final Premium Payable (₹)",
     ],
   },
@@ -588,7 +608,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Total Premium": [
       "Total Package Premium[A+B]",
-      "GST @ 18%",
+      "GST @ 18% [Applied on OD and TP]",
       "Other CESS"
     ],
   },
@@ -626,7 +646,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Total Premium": [
       "Total Package Premium[A+B]",
-      "GST @ 18%",
+      "GST @ 18% [Applied on OD and TP]",
       "Other CESS"
     ],
   },
@@ -661,7 +681,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Total Premium": [
       "Total Package Premium[A+B]",
-      "GST @ 18%",
+      "GST @ 18% [Applied on OD and TP]",
       "Other CESS"
     ],
   },
@@ -693,7 +713,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Total Premium": [
       "Total Package Premium[A+B]",
-      "GST @ 18%",
+      "GST @ 18% [Applied on OD and TP]",
       "Other CESS"
     ]
   },
@@ -707,12 +727,13 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Geographical Ext",
       "Overturning For Cranes",
       "IMT 23",
+      "Total Own Damage Premium",
       "No Claim Bonus",
       "Net Own Damage Premium",
     ],
     "[B] Liability Premium": [
       "Liability Premium (TP)",
-      //"Geographical Ext",
+      "Geographical Extension",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "LL to Employee Other than Paid Driver",
@@ -720,7 +741,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Total Premium": [
       "Total Package Premium[A+B]",
-      "GST @ 18%",
+      "GST @ 18% [Applied on OD and TP]",
       "Other CESS"
     ]
   },
@@ -761,7 +782,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
     ],
     "[C] Total Premium": [
       "Total Package Premium[A+B]",
-      "GST @ 18%",
+      "GST @ 18% [Applied on OD and TP]",
       "Other CESS"
     ],
   },
@@ -921,5 +942,4 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Other CESS"
     ]
   },
-
 };

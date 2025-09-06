@@ -166,7 +166,8 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
 // Step 2: CNG/LPG kit (Externally Fitted)
       double cngLpgPremium = 0.0;
       if (_selectedCNG == 'Yes' && cngLpgKitsExFitted > 0) {
-        cngLpgPremium = (cngLpgKitsExFitted / 1000) * 60;
+        // cngLpgPremium = (cngLpgKitsExFitted / 1000) * 60;
+         cngLpgPremium = (cngLpgKitsExFitted * 0.04); // 4% of the CNG/LPG kit value
       }
 
 // Step 3: IMT 23 (separate value so you can display it)
@@ -262,7 +263,7 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
 
         // C - Total Premium
         "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
-        "GST @ 18%": gst.toStringAsFixed(2),
+        "GST @ 18% [Applied on OD and TP]": gst.toStringAsFixed(2),
         "Other CESS": otherCessAmt.toStringAsFixed(2),
 
         // Final Premium

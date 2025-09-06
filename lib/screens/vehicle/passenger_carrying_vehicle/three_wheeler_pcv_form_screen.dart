@@ -113,181 +113,146 @@ class _ThreeWheelerPCVFormScreenState extends State<ThreeWheelerPCVFormScreen> {
   }
 
   void _submitForm() {
-    if (_formKey.currentState!.validate()) {
-      //   return;
-      // }
+  if (_formKey.currentState!.validate()) {
+    double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+    String ageOfVehicle = _selectedAge ?? 'Upto 5 Years';
+    String yearOfManufacture = _controllers['yearOfManufacture']!.text;
+    String zone = _selectedZone ?? "A";
+    int numberOfPassengers = int.tryParse(_controllers['numberOfPassengers']!.text) ?? 1;
+    double discountOnOd = double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
+    double electronicAccessories = double.tryParse(_controllers['electronicAccessories']!.text) ?? 0.0;
+    double externalCngLpgKit = double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
+    double paOwnerDriver = double.tryParse(_controllers['paOwnerDriver']!.text) ?? 40.0;
+    double otherCess = double.tryParse(_controllers['otherCess']!.text) ?? 50.0;
 
-      double lastYearIdv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
-      String ageOfVehicle = _selectedAge ?? 'Upto 5 Years'; // dropdown value
-      String yearOfManufacture = _controllers['yearOfManufacture']!.text;
-      String zone = _selectedZone ?? "A";
-      int numberOfPassengers =
-          int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
-      double discountOnOd =
-          double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
-      double electronicAccessories =
-          double.tryParse(_controllers['electronicAccessories']!.text) ?? 0.0;
-      double externalCngLpgKit =
-          double.tryParse(_controllers['externalCngLpgKit']!.text) ?? 0.0;
-      double paOwnerDriver =
-          double.tryParse(_controllers['paOwnerDriver']!.text) ??
-              150.0; // default 150 if blank
-      double otherCess =
-          double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
+    String selectedImt23 = _selectedImt23 ?? "Yes";
+    String cngLpgKit = _selectedCngLpgKit ?? "Yes";
+    double selectedNcb = _selectedNcb != null ? double.tryParse(_selectedNcb!) ?? 0.0 : 25.0;
+    String llPaidDriver = _selectedLlPaidDriver ?? "50";
+    String restrictedTPPD = _selectedRestrictedTPPD ?? "Yes";
 
-      String selectedImt23 = _selectedImt23 ?? "No";
-      String cngLpgKit = _selectedCngLpgKit ?? "No";
-      double selectedNcb =
-          _selectedNcb != null ? double.tryParse(_selectedNcb!) ?? 0.0 : 0.0;
-      String llPaidDriver = _selectedLlPaidDriver ?? "0";
-      String restrictedTPPD = _selectedRestrictedTPPD ?? "No";
+    double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
 
-      // Calculate current IDV based on depreciation
-      double depreciationPercent = _selectedDepreciation != null
-          ? double.tryParse(_selectedDepreciation!.replaceAll('%', '')) ?? 0.0
-          : 0.0;
-      double currentIdv = lastYearIdv * (1 - depreciationPercent / 100);
-
-      // Helper to get base OD rate
-      double vehicleBasicRate = _getOdRate(zone, ageOfVehicle);
-
-      // 1) Base OD premium on current IDV
-      double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
-
-      // 2) IMT 23 Loading
-      double imt23Loading = 0.0;
-      if (selectedImt23 == 'Yes') {
-      
-        imt23Loading = basicForVehicle *=0.15;
-      }
-
-      // 3) CNG/LPG factory fitted kit loading
-      double cngKitLoading = 0.0;
-      if (cngLpgKit == 'Yes'&& externalCngLpgKit > 0) {
-        cngKitLoading = (externalCngLpgKit / 1000) * 60;
-      } 
-
-      double accessories = 0.0;
-      if (electronicAccessories > 0) {
-        accessories = (electronicAccessories / 1000) * 60;
-      }
-       
-
-      // 4) CNG/LPG external kit loading
-      double cngExternalLoading =
-          externalCngLpgKit * 0.02; // 2% of external kit value
-
-      // 5) Sum OD before discounts
-      double totalOdBeforeDiscount =
-          basicForVehicle + imt23Loading + cngKitLoading + cngExternalLoading;
-
-      // 6) Apply discount on OD premium
-      double discountAmount = (totalOdBeforeDiscount * discountOnOd) / 100;
-      double odAfterDiscount = totalOdBeforeDiscount - discountAmount;
-
-      // 7) Apply No Claim Bonus (NCB) on OD premium after discount
-      double ncbAmount = (odAfterDiscount * selectedNcb) / 100;
-      double netOdPremium = odAfterDiscount - ncbAmount;
-
-      // TP Premium calculation (use existing function)
-      double baseTpPremium = _getTpRate(
-        passengerCount: numberOfPassengers,
-        usePerPassenger: false,
-      );
-
-      // Apply restricted TPPD discount if yes (20%)
-      double tpPremium =
-          restrictedTPPD == 'Yes' ? baseTpPremium * 0.80 : baseTpPremium;
-
-      // PA to owner driver and LL to paid driver fixed premium
-      double llPaidDriverAmount = double.tryParse(llPaidDriver) ?? 0.0;
-      if (paOwnerDriver == 0.0)
-        paOwnerDriver = 150.0; // default if user left blank
-
-      double totalLiabilityPremium =
-          tpPremium + paOwnerDriver + llPaidDriverAmount;
-
-      // Total premium before taxes
-      double totalPremiumBeforeTaxes = netOdPremium + totalLiabilityPremium;
-
-      // GST 18%
-      double gst = totalPremiumBeforeTaxes * 0.18;
-
-      // Other CESS (%)
-      double otherCessAmt = (otherCess * totalPremiumBeforeTaxes) / 100;
-
-      // Final premium payable
-      double finalPremium = totalPremiumBeforeTaxes + gst + otherCessAmt;
-
-      // Result map for display
-      Map<String, String> resultMap = {
-        // Basic Details
-        "IDV": currentIdv.toStringAsFixed(2),
-        // "Depreciation %": depreciationPercent.toStringAsFixed(2),
-        // "Current IDV": currentIdv.toStringAsFixed(2),
-        "Year of Manufacture": yearOfManufacture,
-        "Zone": zone,
-        "Age of Vehicle": ageOfVehicle,
-        'No. of Passengers': numberOfPassengers.toString(),
-
-        // A - Own Damage Premium Package
-        "Base OD Rate (%)": vehicleBasicRate.toStringAsFixed(3),
-        "Basic OD Premium": basicForVehicle.toStringAsFixed(2),
-        "IMT 23 Loading": imt23Loading.toStringAsFixed(2),
-        "Electronic/Electrical Accessories":accessories.toStringAsFixed(2),
-        "CNG/LPG Kit Loading": cngKitLoading.toStringAsFixed(2),
-        "External CNG/LPG Kit Loading": cngExternalLoading.toStringAsFixed(2),
-        "Total OD before Discount": totalOdBeforeDiscount.toStringAsFixed(2),
-        "Discount on OD Premium (%)": discountOnOd.toStringAsFixed(2),
-        "Discount Amount": discountAmount.toStringAsFixed(2),
-        "OD after Discount": odAfterDiscount.toStringAsFixed(2),
-        "No Claim Bonus (%)": selectedNcb.toStringAsFixed(2),
-        "NCB Amount": ncbAmount.toStringAsFixed(2),
-        "Net OD Premium": netOdPremium.toStringAsFixed(2),
-
-        // B - Liability Premium
-        "Base TP Premium": baseTpPremium.toStringAsFixed(2),
-        "Restricted TPPD":
-            restrictedTPPD == 'Yes' ? "Yes (20% discount)" : "No",
-        "TP Premium after restriction": tpPremium.toStringAsFixed(2),
-        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-        "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
-        "Total Liability Premium (TP + PA + LL)":
-            totalLiabilityPremium.toStringAsFixed(2),
-
-        // C - Total Premium and Taxes
-        "Total Premium before Taxes":
-            totalPremiumBeforeTaxes.toStringAsFixed(2),
-        "GST @ 18%": gst.toStringAsFixed(2),
-        "Other CESS (%)": otherCess.toStringAsFixed(2),
-        "Other CESS Amount": otherCessAmt.toStringAsFixed(2),
-
-        // Final Premium
-        "Final Premium Payable": finalPremium.toStringAsFixed(2),
-      };
-
-      // Pass data to result screen
-      InsuranceResultData resultData = InsuranceResultData(
-        vehicleType: "Three Wheeler PCV (More Than 6 Upto 17 passenger)",
-        fieldData: resultMap,
-        totalPremium: finalPremium,
-      );
-
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) =>
-              PcvInsuranceResultScreen(resultData: resultData),
-        ),
-      );
+    // OD Premium calculations
+    double vehicleBasicRate = _getOdRate(zone, ageOfVehicle);
+    double basicForVehicle = (currentIdv * vehicleBasicRate) / 100;
+    
+    double imt23Loading = 0.0;
+    if (selectedImt23 == 'Yes') {
+      imt23Loading = basicForVehicle * 0.15;
     }
+    
+    double cngKitLoading = 0.0;
+    if (cngLpgKit == 'Yes' && externalCngLpgKit > 0) {
+      cngKitLoading = (externalCngLpgKit * 60) / 1000;
+    }
+    
+    double accessories = 0.0;
+    if (electronicAccessories > 0) {
+      accessories = (electronicAccessories * 4) / 100;
+    }
+
+    double totalOdBeforeDiscount = basicForVehicle + imt23Loading + accessories + cngKitLoading;
+
+    double discountAmount = (totalOdBeforeDiscount * discountOnOd) / 100;
+    double odAfterDiscount = totalOdBeforeDiscount - discountAmount;
+
+    double ncbAmount = (odAfterDiscount * selectedNcb) / 100;
+    double netOdPremium = odAfterDiscount - ncbAmount;
+
+    // Liability Premium calculations
+    double baseTpPremium = _getTpRate(
+      passengerCount: numberOfPassengers,
+      usePerPassenger: false,
+    );
+
+    double paUnnamedPassengerRate = _getTpRate(
+      passengerCount: numberOfPassengers,
+      usePerPassenger: true,
+    );
+    double paUnnamedPassengerAmount = paUnnamedPassengerRate * numberOfPassengers;
+
+    double tpPremium = baseTpPremium;
+    if (restrictedTPPD == 'Yes') {
+      tpPremium = baseTpPremium * 0.80;
+    }
+
+    double llPaidDriverAmount = double.tryParse(llPaidDriver) ?? 0.0;
+    
+    // Corrected line: Including paUnnamedPassengerAmount
+    double totalLiabilityPremium = tpPremium + paOwnerDriver + llPaidDriverAmount + paUnnamedPassengerAmount;
+
+    // Total Premium and Taxes
+    double totalPremiumBeforeTaxes = netOdPremium + totalLiabilityPremium;
+    double gst = totalPremiumBeforeTaxes * 0.18;
+    double otherCessAmt = (otherCess * totalPremiumBeforeTaxes) / 100;
+    double finalPremium = totalPremiumBeforeTaxes + gst + otherCessAmt;
+
+    // Result map for display
+    Map<String, String> resultMap = {
+      // Basic Details
+      "IDV": idv.toStringAsFixed(2),
+      "Current IDV": currentIdv.toStringAsFixed(2),
+      "Year of Manufacture": yearOfManufacture,
+      "Zone": zone,
+      "Age of Vehicle": ageOfVehicle,
+      'No. of Passengers': numberOfPassengers.toString(),
+
+      // A - Own Damage Premium Package
+      "Base OD Rate (%)": vehicleBasicRate.toStringAsFixed(3),
+      "Basic OD Premium": basicForVehicle.toStringAsFixed(2),
+      "IMT 23 Loading": imt23Loading.toStringAsFixed(2),
+      "Electronic/Electrical Accessories": accessories.toStringAsFixed(2),
+      "CNG/LPG Kit Loading": cngKitLoading.toStringAsFixed(2),
+      "Total OD before Discount": totalOdBeforeDiscount.toStringAsFixed(2),
+      "Discount on OD Premium (%)": discountOnOd.toStringAsFixed(2),
+      "Discount Amount": discountAmount.toStringAsFixed(2),
+      "OD after Discount": odAfterDiscount.toStringAsFixed(2),
+      "No Claim Bonus (%)": selectedNcb.toStringAsFixed(2),
+      "NCB Amount": ncbAmount.toStringAsFixed(2),
+      "Net OD Premium": netOdPremium.toStringAsFixed(2),
+
+      // B - Liability Premium
+      "Base TP Premium": baseTpPremium.toStringAsFixed(2),
+      "Passenger Coverage": paUnnamedPassengerAmount.toStringAsFixed(2),
+      "Restricted TPPD": restrictedTPPD == 'Yes' ? "Yes (20% discount)" : "No",
+      "TP Premium after restriction": tpPremium.toStringAsFixed(2),
+      "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+      "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
+      "Total Liability Premium (TP + PA + LL)":
+          totalLiabilityPremium.toStringAsFixed(2),
+
+      // C - Total Premium and Taxes
+      "Total Premium before Taxes": totalPremiumBeforeTaxes.toStringAsFixed(2),
+      'GST @ 18% [Applied on OD and TP]': gst.toStringAsFixed(2),
+      "Other CESS (%)": otherCess.toStringAsFixed(2),
+      "Other CESS Amount": otherCessAmt.toStringAsFixed(2),
+
+      // Final Premium
+      "Final Premium Payable": finalPremium.toStringAsFixed(2),
+    };
+
+    // Pass data to result screen
+    InsuranceResultData resultData = InsuranceResultData(
+      vehicleType: "Three Wheeler PCV(Upto 6 Passengers)",
+      fieldData: resultMap,
+      totalPremium: finalPremium,
+    );
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => PcvInsuranceResultScreen(resultData: resultData),
+      ),
+    );
   }
+}
 
   void _resetForm() {
     _formKey.currentState!.reset();
     for (var controller in _controllers.values) {
       controller.clear();
-    }
+    }  
     setState(() {
       _selectedZone = null;
       _selectedImt23 = null;
