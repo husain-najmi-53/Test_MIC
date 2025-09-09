@@ -352,7 +352,7 @@ class _PCFormCompleteState extends State<PCFormComplete> {
         "AntiTheft":antiTheftValue.toStringAsFixed(2),
         "Handicap":handicapValue.toStringAsFixed(2),
         "AAI":AAIValue.toStringAsFixed(2),
-        "VoluntaryDeduct":VoluntaryDeduct.toStringAsFixed(2),
+        "Voluntary Deduct":VoluntaryDeduct.toStringAsFixed(2),
         "Total Discounts(AntiTheft+Handicap+AAI+VoluntaryDeduct)":
             TotalDiscounts.toStringAsFixed(2), //
         "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
