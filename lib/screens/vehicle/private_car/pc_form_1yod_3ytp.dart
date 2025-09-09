@@ -25,6 +25,7 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
   String? _selectedCngLpgKit;
   String? _selectedNcb;
   String? _selectedLlPaidDriver;
+  String? _selectedRestrictedTppd;
 
   final List<String> _depreciationOptions = [
     '0%',
@@ -45,7 +46,7 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
   // final List<String> _imt23Options = ['Yes', 'No'];
   final List<String> _llPaidDriverOptions = ['0', '50'];
-  // final List<String> _restrictedTppdOptions = ['Yes', 'No'];
+  final List<String> _restrictedTppdOptions = ['Yes', 'No'];
 
   @override
   void initState() {
@@ -127,6 +128,7 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
     if (_formKey.currentState!.validate()) {
       // Fetch form inputs
       double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+      double tp = double.tryParse(_controllers['tp']!.text) ?? 0.0;
       double currentIdv =
           double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
       String yearOfManufacture = _controllers['yearOfManufacture']!.text;
@@ -190,7 +192,7 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
       double accessoriesValue = electricAccessoriesValue + nonElectricAccessoriesValue;
       double cngLpgPremium = 0.0;
       if (_selectedCngLpgKit == 'Yes' && CNG_LPG_kits_Ex_fitted > 0) {
-        cngLpgPremium = (CNG_LPG_kits_Ex_fitted / 1000) * 60;
+        cngLpgPremium = (CNG_LPG_kits_Ex_fitted / 1000) * 40;
       }
       double totalBasicPremium =
           basicOdAfterDiscount + accessoriesValue + cngLpgPremium;
@@ -201,16 +203,19 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
       //Add-ons
       // Calculate zero depreciation on current IDV
       double zeroDepPremium = (currentIdv * zeroDepreciation) / 100;
+      double otherAddonCoverageRate = totalA*0.25;
+      otherAddonCoverage = otherAddonCoverage*otherAddonCoverageRate;
       double totalB = zeroDepPremium +
           RSAaddons +
           otherAddonCoverage +
           ValueAddedServices;
 
       // TP Section
-      double cngLpgRate = 60;   // change to actual IRDA rate
+      double cngLpgRate = 60*3;   // change to actual IRDA rate
       double cngLpgKit = _selectedCngLpgKit == 'Yes'?cngLpgRate:0.0;
       int tp_years =
           findTPYear(int.tryParse(_controllers['tp']?.text.trim() ?? "") ?? 1);
+      double restrictedTppd = _selectedRestrictedTppd=='Yes'?tp*50.0:0.0;
       double liabilityPremiumTP = getThirdPartyPremium(
           cubicCapacity: cc, isElectric: false, batteryKwh: 0, years: tp_years);
       double totalC = liabilityPremiumTP +
@@ -259,6 +264,7 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
+        "Restricted TPPD": "-${restrictedTppd}",
         "Total C": totalC.toStringAsFixed(2),
 
         // D - Total Premium
@@ -302,7 +308,7 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
       _selectedCngLpgKit = null;
       // _selectedImt23 = null;
       _selectedLlPaidDriver = null;
-      // _selectedRestrictedTppd = null;
+      _selectedRestrictedTppd = null;
     });
   }
 
@@ -390,7 +396,7 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
                 _buildTextField('RSAaddons',
                     'RSA/Additional for Addons(amount)', true, "Enter Addons "),
                 _buildTextField('otherAddonCoverage',
-                    'Other Addon Coverage(amount)', true, "Enter Amount "),
+                    'Other Addon Coverage(Rate)', true, " Ex: 0.25 % "),
                 _buildTextField('ValueAddedServices',
                     'Value Added Service(amount)', true, "Enter Amount "),
                 _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)', true,
@@ -402,6 +408,11 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
                     (val) => setState(() => _selectedLlPaidDriver = val)),
                 _buildTextField('paUnnamedPassenger',
                     'PA to Unnamed Passenger (₹)', true, "Enter Value "),
+                _buildDropdownField(
+                    'Restricted TPPD',
+                    _restrictedTppdOptions,
+                    _selectedRestrictedTppd,
+                        (val) => setState(() => _selectedRestrictedTppd = val)),
                 _buildTextField(
                     'otherCess', 'Other Cess (%)', true, "Enter Cess % "),
               ],
@@ -545,7 +556,7 @@ class _PCForm1YOD3TPState extends State<PCForm1YOD3TP> {
     String? keyName;
     const optionalDropdowns = [
       'LL to Paid Driver', 'CNG/ LPG kits',
-      'No Claim Bonus (%)' // matches label or keyName
+      'No Claim Bonus (%)','Restricted TPPD' // matches label or keyName
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -603,14 +614,14 @@ double getOdRate({
   // Petrol/Diesel rate table (CC based)
   Map<String, Map<String, List<double>>> rateTableCC = {
     "A": {
-      "<=1000": [3.127, 3.283, 3.362],
-      "1001-1500": [3.283, 3.447, 3.529],
-      ">1500": [3.440, 3.612, 3.698],
+      "<1000": [3.127, 3.283, 3.362],         //less than 1000 till 999
+      "1000-1499": [3.283, 3.447, 3.529],     //1000-1499
+      ">=1500": [3.440, 3.612, 3.698],        // 1500 and above
     },
     "B": {
-      "<=1000": [3.039, 3.191,3.267 ],
-      "1001-1500": [3.191, 3.351,3.430],
-      ">1500": [3.343, 3.510,3.594],
+      "<1000": [3.039, 3.191,3.267 ],
+      "1000-1499": [3.191, 3.351,3.430],
+      ">=1500": [3.343, 3.510,3.594],
     },
   };
 
@@ -644,12 +655,12 @@ double getOdRate({
   } else {
     if (cubicCapacity == null)
       throw ArgumentError("cubicCapacity is required for Petrol/Diesel");
-    if (cubicCapacity <= 1000)
-      band = "<=1000";
-    else if (cubicCapacity <= 1500)
-      band = "1001-1500";
+    if (cubicCapacity < 1000)
+      band = "<1000";
+    else if (cubicCapacity < 1500)
+      band = "1000-1499";
     else
-      band = ">1500";
+      band = ">=1500";
   }
 
   // Determine age index
@@ -699,14 +710,14 @@ double getThirdPartyPremium({
   // Petrol/Diesel/Hybrid/CNG cars
   const Map<int, Map<String, double>> fuelRates = {
     1: {"upto1000": 2094.0, "1001to1500": 3416.0, "above1500": 7897.0},
-    3: {"upto1000": 6010.0, "1001to1500": 9841.0, "above1500": 22411.0},
-    5: {"upto1000": 7896.0, "1001to1500": 12890.0, "above1500": 29340.0}
+    3: {"upto1000": 6521.0, "1001to1500": 10640.0, "above1500": 24596.0},
+    // 5: {"upto1000": 7896.0, "1001to1500": 12890.0, "above1500": 29340.0}
   };
 
   // Electric Vehicles (battery capacity in kWh)
   const Map<int, Map<String, double>> evRates = {
     1: {"upto30": 1780.0, "31to65": 2904.0, "above65": 6712.0},
-    3: {"upto1000": 6521.0, "1001to1500": 10640.0, "above1500": 24596.0},
+    3: {"upto30": 5543.0, "31to65": 9044.0, "above65": 20907.0},
     // 5: {"upto30": 7500.0, "31to65": 12500.0, "above65": 28000.0}
   };
 

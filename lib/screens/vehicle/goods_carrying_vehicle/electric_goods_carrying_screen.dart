@@ -161,7 +161,10 @@ class _ElectricGoodsCarryingScreenState
       double netOdPremium = basicOdBeforeNcb - ncbAmt;
       double totalA = netOdPremium;
 
-      double fixedGeoExt = 100;
+      double fixedGeoExt = (_selectedGeographicalExtn == null ||
+              _selectedGeographicalExtn == '0')
+          ? 0.0
+          : 100.0;
 
       // --- Add-on Coverage (B) ---
       double totalB = zeroDep + rsaAmount;
@@ -169,7 +172,7 @@ class _ElectricGoodsCarryingScreenState
       // --- TP Calculation (C) ---
       double basicTp = _getTpRate(gvw);
 
-      double totalC = basicTp +
+      double totalC = basicTp -
           restrictedTppdAmt +
           cngTpAmt +
           geoExtAmt +
@@ -180,9 +183,8 @@ class _ElectricGoodsCarryingScreenState
       // --- Final ---
       double totalABC = totalA + totalB + totalC;
       double tpgst12 = basicTp * 0.12; // GST @12% on Basic TP
-      double gst18Base =
-          totalA + totalB + (totalC - basicTp); // GST @18% on rest
-      double gst18 = gst18Base * 0.18;
+
+      double gst18 = totalA * 0.18;
 
       double otherCessAmt = (totalABC * otherCess) / 100;
       double finalPremium = totalABC + tpgst12 + gst18 + otherCessAmt;

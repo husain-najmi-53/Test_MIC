@@ -25,16 +25,16 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
   String? _selectedAge;
   String? _selectedZone;
   String? _selectedCngLpgKit;
-  // String? _selectedGeoExt;
-  // String? _selectedFiberGlassTank;
-  // String? _selectedDrivingTutions;
+  String? _selectedGeoExt;
+  String? _selectedFiberGlassTank;
+  String? _selectedDrivingTutions;
   String? _selectedAntiTheft;
   String? _selectedHandicap;
   String? _selectedAAI;
   String? _selectedVoluntaryDeduct;
   String? _selectedNcb;
   String? _selectedLlPaidDriver;
-  // String? _selectedRestrictedTppd;
+  String? _selectedRestrictedTppd;
 
   final List<String> _ageOptions = [
     'Upto 5 Years',
@@ -43,9 +43,9 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
   ];
   final List<String> _zoneOptions = ['A', 'B'];
   final List<String> _cngLpgKitOptions = ['Yes', 'No'];
-  // final List<String> _geoExtOptions = ['0', '400'];
-  // final List<String> _fiberGlassTankOptions = ['Yes', 'No'];
-  // final List<String> _drivingTutionsOptions = ['Yes', 'No'];
+  final List<String> _geoExtOptions = ['0', '400'];
+  final List<String> _fiberGlassTankOptions = ['Yes', 'No'];
+  final List<String> _drivingTutionsOptions = ['Yes', 'No'];
   final List<String> _antiTheftOptions = ['Yes', 'No'];
   final List<String> _handicapOptions = ['Yes', 'No'];
   final List<String> _AAIOptions = ['Yes', 'No'];
@@ -67,6 +67,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
     '25%',
     '30%',
   ];
+  final List<String> _restrictedTppdOptions = ['Yes', 'No'];
 
   @override
   void initState() {
@@ -86,7 +87,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
       'nonElectricAccessories': TextEditingController(), //11
       // 'CNG_LPG_kits': TextEditingController(), //12  dropdown
       'CNG_LPG_kits_Ex_fitted': TextEditingController(), //13
-      'geographicalExt': TextEditingController(), //14  dropdown
+      // 'geographicalExt': TextEditingController(), //14  dropdown
       'fiberGlassTank': TextEditingController(), //15
       'drivingTutions': TextEditingController(), //16
       // 'antiTheft': TextEditingController(), //17
@@ -167,6 +168,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
     if (_formKey.currentState!.validate()) {
       // Fetch form inputs
       double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
+      double tp = double.tryParse(_controllers['tp']!.text) ?? 0.0;
       double currentIdv =
           double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
       String yearOfManufacture = _controllers['yearOfManufacture']!.text;
@@ -184,12 +186,9 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
           double.tryParse(_controllers['nonElectricAccessories']!.text) ?? 0.0;
       double CNG_LPG_kits_Ex_fitted =
           double.tryParse(_controllers['CNG_LPG_kits_Ex_fitted']!.text) ?? 0.0;
-      double geographicalExt =
-          double.tryParse(_controllers['geographicalExt']!.text) ?? 0.0; //
-      double fiberGlassTank =
-          double.tryParse(_controllers['fiberGlassTank']!.text) ?? 0.0; //
-      double drivingTutions =
-          double.tryParse(_controllers['drivingTutions']!.text) ?? 0.0; //
+      // double geographicalExt = double.tryParse(_controllers['geographicalExt']!.text) ?? 0.0; //
+      // double fiberGlassTank = double.tryParse(_controllers['fiberGlassTank']!.text) ?? 0.0; //
+      // double drivingTutions = double.tryParse(_controllers['drivingTutions']!.text) ?? 0.0; //
 
       double zeroDepreciation =
           double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
@@ -244,13 +243,13 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
       double basicOD = currentIdv * vehicleBasicRate / 100 * odYears; // Multiply by OD years
       print(_controllers['currentIdv']!.text);
       print(basicOD);
-      double antiTheftValue = _selectedAntiTheft != true
+      double antiTheftValue = _selectedAntiTheft == 'Yes'
           ? double.parse((min(basicOD * 0.025, 500)).toStringAsFixed(2))
           : 0.0;
       print(antiTheftValue);
-      double handicapValue = _selectedHandicap != true ? basicOD * 0.5 : 0.0; //
+      double handicapValue = _selectedHandicap == 'Yes' ? basicOD * 0.5 : 0.0; //
       print(handicapValue);
-      double AAIValue = _selectedAAI != true
+      double AAIValue = _selectedAAI == 'Yes'
           ? double.parse((min(basicOD * 0.05, 200)).toStringAsFixed(2))
           : 0.0;
       print(AAIValue);
@@ -273,8 +272,11 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
           electricAccessoriesValue + nonElectricAccessoriesValue;
       double cngLpgPremium = 0.0;
       if (_selectedCngLpgKit == 'Yes' && CNG_LPG_kits_Ex_fitted > 0) {
-        cngLpgPremium = (CNG_LPG_kits_Ex_fitted / 1000) * 60;
+        cngLpgPremium = (CNG_LPG_kits_Ex_fitted / 1000) * 40;
       }
+      double fiberGlassTank = _selectedFiberGlassTank=='Yes'?50.0:0.0;
+      double drivingTutions = _selectedDrivingTutions=='Yes'?basicForVehicle:0.0;
+      double geographicalExt = _selectedGeoExt=='400'?400.0:0.0;
       double OptionalExtensions =
           geographicalExt + fiberGlassTank + drivingTutions;
       double TotalDiscounts =
@@ -292,6 +294,13 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
       //Add-ons
       // Calculate zero depreciation on current IDV
       double zeroDepPremium = (currentIdv * zeroDepreciation) / 100;
+      double otherAddonCoverageRate = totalA*0.25;
+      otherAddonCoverage = otherAddonCoverage*otherAddonCoverageRate;
+      consumables=consumables*(currentIdv*2/100);
+      tyreCover=tyreCover*(currentIdv*2/100);
+      NCBprotection=NCBprotection*(totalA*5/100);
+      engineProtector=engineProtector*(currentIdv*1/100);
+      returnToInvoice=returnToInvoice*(totalA*10/100);
       double totalB = zeroDepPremium +
           RSAaddons +
           consumables +
@@ -303,10 +312,12 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
           ValueAddedServices;
 
       // TP Section
-      double cngLpgRate = 60;   // change to actual IRDA rate
+      double cngLpgRate = tp*60;   // change to actual IRDA rate
       double cngLpgKit = _selectedCngLpgKit == 'Yes'?cngLpgRate:0.0;
+      double tpGeographicalExt = _selectedGeoExt=='400'?100.0:0.0;
       int tp_years =
           findTPYear(int.tryParse(_controllers['tp']?.text.trim() ?? "") ?? 1);
+      double restrictedTppd = _selectedRestrictedTppd=='Yes'?tp*50.0:0.0;
       double liabilityPremiumTP = getThirdPartyPremium(
           cubicCapacity: 0,
           isElectric: true,
@@ -314,6 +325,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
           years: tp_years);
       double totalC = liabilityPremiumTP +
           cngLpgKit +
+          tpGeographicalExt +
           paOwnerDriver +
           llToPaidDriver +
           paUnnamedPassenger;
@@ -340,8 +352,15 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
         "Basic OD Premium after discount":
             basicOdAfterDiscount.toStringAsFixed(2),
         "Accessories Value": accessoriesValue.toStringAsFixed(2),
+        "Geographical Extn":geographicalExt.toStringAsFixed(2),
+        "Fiber Glass Tank":fiberGlassTank.toStringAsFixed(2),
+        "Driving Tutions": drivingTutions.toStringAsFixed(2),
         "Optional Extensions(GeoExt+FiberGT+DrTutions)":
             OptionalExtensions.toStringAsFixed(2), //
+        "AntiTheft":antiTheftValue.toStringAsFixed(2),
+        "Handicap":handicapValue.toStringAsFixed(2),
+        "AAI":AAIValue.toStringAsFixed(2),
+        "VoluntaryDeduct":VoluntaryDeduct.toStringAsFixed(2),
         "Total Discounts(AntiTheft+Handicap+AAI+VoluntaryDeduct)":
             TotalDiscounts.toStringAsFixed(2), //
         "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
@@ -364,9 +383,11 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
         // C - Liability Premium
         "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
         "CNG/LPG kit": cngLpgKit.toStringAsFixed(2),
+        "Geographical Extn (TP)" : tpGeographicalExt.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
+        "Restricted TPPD": "-${restrictedTppd}",
         "Total C": totalC.toStringAsFixed(2),
 
         // D - Total Premium
@@ -411,6 +432,8 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
       _selectedLlPaidDriver = null;
       _selectedNcb = null;
       _selectedVoluntaryDeduct = null;
+      _selectedRestrictedTppd=null;
+      _selectedGeoExt=null;
     });
   }
 
@@ -490,15 +513,12 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
                     (val) => setState(() => _selectedCngLpgKit = val)),
                 _buildTextField('CNG_LPG_kits_Ex_fitted',
                     'CNG/LPG kits (externally fitted)', true, "Enter Value"),
-                _buildTextField('geographicalExt', 'Geographical Ext', true,
-                    "Enter Value "),
-                // _buildDropdownField('Geographical Ext', _geoExtOptions, _selectedGeoExt, (val) => setState(() => _selectedGeoExt = val)),
-                _buildTextField(
-                    'fiberGlassTank', 'Fiber Glass Tank', true, "Enter Value "),
-                // _buildDropdownField('Fiber Glass Tank', _fiberGlassTankOptions, _selectedFiberGlassTank, (val) => setState(() => _selectedFiberGlassTank = val)),
-                _buildTextField(
-                    'drivingTutions', 'Driving Tutions', true, "Enter Value "),
-                // _buildDropdownField('Driving Tutions', _drivingTutionsOptions, _selectedDrivingTutions, (val) => setState(() => _selectedDrivingTutions = val)),
+                // _buildTextField('geographicalExt', 'Geographical Ext', true, "Enter Value "),
+                _buildDropdownField('Geographical Ext', _geoExtOptions, _selectedGeoExt, (val) => setState(() => _selectedGeoExt = val)),
+                // _buildTextField('fiberGlassTank', 'Fiber Glass Tank', true, "Enter Value "),
+                _buildDropdownField('Fiber Glass Tank', _fiberGlassTankOptions, _selectedFiberGlassTank, (val) => setState(() => _selectedFiberGlassTank = val)),
+                // _buildTextField('drivingTutions', 'Driving Tutions', true, "Enter Value "),
+                _buildDropdownField('Driving Tutions', _drivingTutionsOptions, _selectedDrivingTutions, (val) => setState(() => _selectedDrivingTutions = val)),
                 _buildDropdownField(
                     'Anti Theft',
                     _antiTheftOptions,
@@ -525,20 +545,20 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
                     'RSA/Additional for Addons(amount)',
                     true,
                     "Enter  Amount "),
-                _buildTextField('consumables', 'Consumables(₹)', true,
-                    "Enter Amount "),
+                _buildTextField('consumables', 'Consumables(Rate)', true,
+                    "Enter Rate "),
                 _buildTextField(
-                    'tyreCover', 'Tyre Cover(₹)', true, "Enter Amount "),
-                _buildTextField('NCBprotection', 'NCB Protection(₹)', true,
-                    "Enter Amount "),
+                    'tyreCover', 'Tyre Cover(Rate)', true, "Enter Rate "),
+                _buildTextField('NCBprotection', 'NCB Protection(Rate)', true,
+                    "Enter Rate "),
                 _buildTextField('engineProtector', 'Engine Protector', true,
-                    "Enter Amoount "),
-                _buildTextField('returnToInvoice', 'Return to Invoice(₹)',
-                    true, "Enter Amoount "),
+                    "Enter Rate "),
+                _buildTextField('returnToInvoice', 'Return to Invoice(Rate)',
+                    true, "Enter Rate "),
                 _buildTextField('otherAddonCoverage',
-                    'Other Addon Coverage(₹)', true, "Enter Amount "),
+                    'Other Addon Coverage(Rate)', true, " Ex: 0.25 %  "),
                 _buildTextField('ValueAddedServices',
-                    'Value Added Service(amount)', true, "Enter 1 Yr Amount "),
+                    'Value Added Service(amount)', true, "Enter  Amount "),
                 _buildTextField('paOwnerDriver', 'PA to Owner Driver', true,
                     "Enter Amount "),
                 _buildDropdownField(
@@ -548,6 +568,11 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
                     (val) => setState(() => _selectedLlPaidDriver = val)),
                 _buildTextField('paUnnamedPassenger',
                     'PA to Unnamed Passenger (₹)', true, "Enter Value "),
+                _buildDropdownField(
+                    'Restricted TPPD',
+                    _restrictedTppdOptions,
+                    _selectedRestrictedTppd,
+                        (val) => setState(() => _selectedRestrictedTppd = val)),
                 _buildTextField(
                     'otherCess', 'Other Cess (%)', true, "Enter Cess % "),
               ],
@@ -750,9 +775,10 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
   Widget _buildDropdownField(String label, List<String> options,
       String? selected, Function(String?) onChanged) {
     const optionalDropdowns = [
+      'Fiber Glass Tank','Driving Tutions',
       'LL to Paid Driver', 'CNG/ LPG kits',
       'No Claim Bonus (%)', 'Voluntary Deductible', 'AAI', 'Handicap',
-      'Anti Theft' // matches label or keyName
+      'Anti Theft','Restricted TPPD' , 'Geographical Ext' // matches label or keyName
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -808,14 +834,14 @@ double getOdRate({
   // Petrol/Diesel rate table (CC based)
   Map<String, Map<String, List<double>>> rateTableCC = {
     "A": {
-      "<=1000": [3.127, 3.283, 3.362],
-      "1001-1500": [3.283, 3.447, 3.529],
-      ">1500": [3.440, 3.612, 3.698],
+      "<1000": [3.127, 3.283, 3.362],         //less than 1000 till 999
+      "1000-1499": [3.283, 3.447, 3.529],     //1000-1499
+      ">=1500": [3.440, 3.612, 3.698],        // 1500 and above
     },
     "B": {
-      "<=1000": [3.039, 3.191, 3.267],
-      "1001-1500": [3.191, 3.351, 3.430],
-      ">1500": [3.343, 3.510, 3.594],
+      "<1000": [3.039, 3.191,3.267 ],
+      "1000-1499": [3.191, 3.351,3.430],
+      ">=1500": [3.343, 3.510,3.594],
     },
   };
 
@@ -849,12 +875,12 @@ double getOdRate({
   } else {
     if (cubicCapacity == null)
       throw ArgumentError("cubicCapacity is required for Petrol/Diesel");
-    if (cubicCapacity <= 1000)
-      band = "<=1000";
-    else if (cubicCapacity <= 1500)
-      band = "1001-1500";
+    if (cubicCapacity < 1000)
+      band = "<1000";
+    else if (cubicCapacity < 1500)
+      band = "1000-1499";
     else
-      band = ">1500";
+      band = ">=1500";
   }
 
   // Determine age index

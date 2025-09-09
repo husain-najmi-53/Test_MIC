@@ -166,36 +166,53 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
 
       // OD Premium calculations
       double vehicleBasicRate = _getOdRate(zone, ageKey, cubicCapacity);
-      double basicOdPremium = (currentIdv * vehicleBasicRate) / 100;
+      
+      double basicforvehicle = (currentIdv * vehicleBasicRate) / 100;
+      
       
       double electronicAccessoriesPremium = (electronicAccessories * 0.04);
       double cngKitLoading = (externalCngLpgKit * 0.04);
-      double odPremiumWithAddons = basicOdPremium + electronicAccessoriesPremium + cngKitLoading;
+      double basicOdPremium =  basicforvehicle+ electronicAccessoriesPremium + cngKitLoading;
 
       double antiTheftDiscount = 0.0;
       if (antiTheft == 'Yes') {
-        antiTheftDiscount = (odPremiumWithAddons * 2.5) / 100;
+        antiTheftDiscount = (basicOdPremium  * 2.5) / 100;
+      }
+
+      
+       double cngTpExtra = 0.0;
+      if (_selectedCngLpgKit== 'Yes') {
+        cngTpExtra = 60;
       }
       
-      double odBeforeDiscount = odPremiumWithAddons - antiTheftDiscount;
+      double odBeforeDiscount = basicOdPremium - antiTheftDiscount;
       
       double discountAmount = (odBeforeDiscount * discountOnOd) / 100;
       double odPremiumAfterDiscounts = odBeforeDiscount - discountAmount;
+
+      double odBeforeNcb=discountAmount;
+      // odPremiumAfterDiscounts+
+      //     electronicAccessoriesPremium +
+      //     cngKitLoading +
+      //     rsaAmount ;
       
       double ncbAmount = (odPremiumAfterDiscounts * selectedNcb) / 100;
       double netOdPremium = odPremiumAfterDiscounts - ncbAmount;
 
       // Addons calculations
       double zeroDepPremium = (currentIdv * zeroDepRate) / 100;
-      double totalA = netOdPremium + zeroDepPremium + rsaAmount;
+      double totalA = netOdPremium;
+      double totalAddon=zeroDepPremium+rsaAmount;
 
       // Liability Premium (TP) calculations
       double liabilityPremiumTP = _getTpRate(cubicCapacity);
-      double paUnnamedPassenger = _getPaPassengerRate(numberOfPassengers);
-      double totalB = liabilityPremiumTP + paOwnerDriver + llPaidDriverAmount + paUnnamedPassenger;
+      double passCov= numberOfPassengers* _getPaPassengerRate(cubicCapacity);
+
+      // double paUnnamedPassenger = _getPaPassengerRate(numberOfPassengers);
+      double totalB = liabilityPremiumTP + paOwnerDriver + llPaidDriverAmount + passCov+cngTpExtra;
 
       // Total premium before GST
-      double totalAB = totalA + totalB;
+      double totalAB = totalA + totalB+ totalAddon;
       
       // GST & Other CESS
       double gst = totalAB * 0.18;
@@ -213,26 +230,37 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
         "Age of Vehicle": ageOfVehicle,
         "No. of Passengers": numberOfPassengers.toString(),
         "Cubic Capacity": cubicCapacity.toString(),
+
         "Vehicle Basic Rate (%)": vehicleBasicRate.toStringAsFixed(3),
-        "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
-        "Discount on OD Premium (%)": discountOnOd.toStringAsFixed(2),
-        "Discount Amount": discountAmount.toStringAsFixed(2),
-        "Anti Theft Discount": antiTheftDiscount.toStringAsFixed(2),
-        "OD Premium after Discounts": odPremiumAfterDiscounts.toStringAsFixed(2),
+        "Basic for Vehicle": basicforvehicle.toStringAsFixed(2),
         "Electronic/Electrical Accessories": electronicAccessoriesPremium.toStringAsFixed(2),
         "CNG/LPG kits(Externally Fitted)": cngKitLoading.toStringAsFixed(2),
-        "No Claim Bonus (%)": selectedNcb.toStringAsFixed(2),
-        "NCB Amount": ncbAmount.toStringAsFixed(2),
-        "Net OD Premium": netOdPremium.toStringAsFixed(2),
+        "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
+        "Anti Theft Discount": antiTheftDiscount.toStringAsFixed(2),
+        "Basic OD Before Discount":odBeforeDiscount.toStringAsFixed(2),
+        "Discount on OD Premium (%)": discountAmount.toStringAsFixed(2),
+        "Basic OD Before NCB":odBeforeNcb.toStringAsFixed(2), //check formula
+        // "Discount Amount": discountAmount.toStringAsFixed(2),
+        "No Claim Bonus (%)": ncbAmount.toStringAsFixed(2),
+        // "OD Premium after Discounts": odPremiumAfterDiscounts.toStringAsFixed(2),
+        // "NCB Amount": ncbAmount.toStringAsFixed(2),
+        "Net OD Premium[A]": netOdPremium.toStringAsFixed(2),
+
         "Zero Depreciation Premium": zeroDepPremium.toStringAsFixed(2),
         "RSA Amount": rsaAmount.toStringAsFixed(2),
-        "Total A (Net OD Premium + Zero Dep + RSA)": totalA.toStringAsFixed(2),
+        "Total Addon Premium": totalAddon.toStringAsFixed(2),
+
+        //C liability premium
         "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-        "PA to Unnamed Passengers": paUnnamedPassenger.toStringAsFixed(2),
+        "Passenger Coverage": passCov.toStringAsFixed(2),
+        // "PA to Unnamed Passengers": paUnnamedPassenger.toStringAsFixed(2),
+        "CNG/LPG Kit":cngTpExtra.toStringAsFixed(2), 
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
-        "Total B (Liability Premium)": totalB.toStringAsFixed(2),
-        "Total Package Premium (A + B)": totalAB.toStringAsFixed(2),
+        "Total C (Liability Premium)": totalB.toStringAsFixed(2),
+
+        //D 
+        "Premium Before GST(A + B + C)": totalAB.toStringAsFixed(2),
         'GST @ 18% [Applied on OD and TP]': gst.toStringAsFixed(2),
         "Other CESS (%)": otherCess.toStringAsFixed(2),
         "Other CESS Amount": otherCessAmt.toStringAsFixed(2),
@@ -433,6 +461,21 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
                 if (value == null || value.trim().isEmpty) {
                   return 'Enter $label';
                 }
+
+                 // Passenger count validation
+                  if (key == 'numberOfPassengers') {
+                    int? passengerCount = int.tryParse(value.trim());
+                    if (passengerCount == null) {
+                      return 'Enter a valid number';
+                    }
+                    if (passengerCount > 6) {
+                      return 'Can\'t be more than 6';
+                    }
+                    if (passengerCount < 1) {
+                      return 'Must be at least 1';
+                    }
+                  }
+                  
                 if (key == 'yearOfManufacture') {
                   int? year = int.tryParse(value.trim());
                   if (year == null) {
@@ -548,6 +591,9 @@ double _getTpRate(int cc) {
   return 0.0;
 }
 
-double _getPaPassengerRate(int passengers) {
-  return passengers * 652;
+double _getPaPassengerRate(int cc) {
+  if (cc <= 1000) return 1162;
+  if (cc > 1000 && cc <= 1500) return 978;
+  if (cc > 1500) return 1117;
+  return 0.0;
 }

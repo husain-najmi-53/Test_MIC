@@ -125,13 +125,13 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
       double odBeforeNcb = odBeforeDiscount - discountAmt + loadingAmt;
       double ncbAmt = (odBeforeNcb * ncb) / 100;
       double netOdPremium = odBeforeNcb - ncbAmt;
-
+      double TotalA = netOdPremium;
       double basicTp = 3139.00;
       double totalTp =
           basicTp + paOwnerDriver + llPaidDriverAmt - restrictedTppdAmt;
 
       double totalAB = netOdPremium + valueAddedService + totalTp;
-      double gst = totalAB * 0.18;
+      double gst = TotalA * 0.18;
       double otherCessAmt = (totalAB * otherCess) / 100;
       double finalPremium = totalAB + gst + otherCessAmt;
 

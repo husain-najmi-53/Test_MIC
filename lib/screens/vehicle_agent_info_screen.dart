@@ -1,9 +1,12 @@
 import 'dart:convert';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:motor_insurance_app/screens/pdf_gen_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/result_data.dart';
 import '../models/quotation_data.dart';
+import 'auth/auth_service.dart';
 
 class VehicleAgentFormScreen extends StatefulWidget {
   final InsuranceResultData insuranceResult;
@@ -37,7 +40,8 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
   @override
   void initState() {
     super.initState();
-    _loadSavedData();
+    // _loadSavedData();
+    _loadAgentData();
   }
 
   @override
@@ -46,6 +50,15 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
       controller.dispose();
     }
     super.dispose();
+  }
+
+  Future<void> _loadAgentData()async{
+    User? user = await AuthService().getCurrentUser();
+    DocumentSnapshot snapshots =  await FirebaseFirestore.instance.collection("users").doc(user!.uid).get();
+    final data = snapshots.data() as Map<String, dynamic>;
+    _controllers['agentName']?.text = data["name"] ?? "No Name";
+    _controllers['agentEmail']?.text = data["email"] ?? "No Email";
+    _controllers['agentContact']?.text = data["phone"] ?? "No Contact";
   }
 
   Future<void> _loadSavedData() async {
@@ -263,12 +276,15 @@ class _VehicleAgentFormScreenState extends State<VehicleAgentFormScreen> {
           Expanded(
             child: TextFormField(
               controller: _controllers[key],
+              readOnly: key == 'agentName' || key == 'agentEmail' || key == 'agentContact'? true : false,
               textCapitalization: key == 'registrationNumber'
                   ? TextCapitalization
                       .characters // Auto-capitalize for registration
                   : TextCapitalization.none,
               decoration: InputDecoration(
-                border: const OutlineInputBorder(),
+                border: OutlineInputBorder(),
+                focusedBorder: key == 'agentName' || key == 'agentEmail' || key == 'agentContact'?
+                OutlineInputBorder(borderSide: BorderSide(color: Colors.black45)) :InputBorder.none,
                 hintText: placeholder,
                 contentPadding:
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 12),

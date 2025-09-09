@@ -81,7 +81,6 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
     '0',
     '50',
     '100',
-    '100',
     '150',
     '200',
     '250',

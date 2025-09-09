@@ -34,6 +34,7 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
   String? _selectedZone;
   String? _selectedNoClaimBonus;
   String? _selectedLLPaidDriver;
+  String? _selectedRestrictedTppd;
 
   final List<String> _depreciationOptions = [
     '0%',
@@ -52,6 +53,7 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
   final List<String> _zoneOptions = ['A', 'B'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
   final List<String> _llPaidDriverOptions = ['0', '50'];
+  final List<String> _restrictedTppdOptions = ['Yes', 'No'];
 
   @override
   void initState() {
@@ -155,12 +157,14 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
       double totalA = netOdPremium + zeroDepPremium;
 
       // TP Section
+      double restrictedTppd = _selectedRestrictedTppd=='Yes'?50.0:0.0;
       double liabilityPremiumTP =
           getTpRate(cubicCapacity, isFiveYear: false); // This is 1 Year TP
       double totalB = liabilityPremiumTP +
           paOwnerDriver +
           llToPaidDriver +
-          paUnnamedPassenger;
+          paUnnamedPassenger-
+          restrictedTppd;
 
       // Total Premium (C)
       double totalAB = totalA + totalB;
@@ -194,6 +198,7 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
+        "Restricted TPPD": "-${restrictedTppd}",
         "Total B": totalB.toStringAsFixed(2),
 
         // C - Total Premium
@@ -324,6 +329,11 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
                     _llPaidDriverOptions,
                     _selectedLLPaidDriver,
                     (val) => setState(() => _selectedLLPaidDriver = val)),
+                _buildDropdownField(
+                    'Restricted TPPD',
+                    _restrictedTppdOptions,
+                    _selectedRestrictedTppd,
+                        (val) => setState(() => _selectedRestrictedTppd = val)),
                 _buildTextField('otherCess', 'Other Cess (%)', 'Enter Cess %'),
                 //const Divider(),
                 // _buildTextField('tpBasic', 'Third Party Basic Premium (₹)',
@@ -424,7 +434,7 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
     Function(String?) onChanged,
   ) {
     const optionalDropdowns = [
-      'LL to Paid Driver', 'No Claim Bonus (%)' // matches label or keyName
+      'LL to Paid Driver', 'No Claim Bonus (%)' , 'Restricted TPPD' // matches label or keyName
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -467,7 +477,7 @@ class _TwoWheeler1YearOD1YearTPFormScreenState
 
 double _getOdRate(String zone, String age, int cc) {
   if (zone == 'A') {
-    if (cc <= 150) {
+    if (cc < 150) {
       if (age == 'Upto 5 Years') return 1.708;
       if (age == '6-10 Years') return 1.793;
       if (age == 'Above 10 Years') return 1.886; // Corrected rate
@@ -482,7 +492,7 @@ double _getOdRate(String zone, String age, int cc) {
       if (age == 'Above 10 Years') return 2.020; // Corrected rate
     }
   } else if (zone == 'B') {
-    if (cc <= 150) {
+    if (cc < 150) {
       if (age == 'Upto 5 Years') return 1.676;
       if (age == '6-10 Years') return 1.760;
       if (age == 'Above 10 Years') return 1.802; // Corrected rate

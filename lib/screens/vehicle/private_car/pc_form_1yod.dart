@@ -22,9 +22,9 @@ class _PCForm1YODState extends State<PCForm1YOD> {
   String? _selectedDepreciation;
   String? _selectedAge;
   String? _selectedZone;
-  String? _selectedCngLpgKit;
+  // String? _selectedCngLpgKit;
   String? _selectedNcb;
-  String? _selectedLlPaidDriver;
+  // String? _selectedLlPaidDriver;
 
   final List<String> _depreciationOptions = [
     '0%',
@@ -41,10 +41,10 @@ class _PCForm1YODState extends State<PCForm1YOD> {
     'Above 10 Years'
   ];
   final List<String> _zoneOptions = ['A', 'B'];
-  final List<String> _cngLpgKitOptions = ['Yes', 'No'];
+  // final List<String> _cngLpgKitOptions = ['Yes', 'No'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
   // final List<String> _imt23Options = ['Yes', 'No'];
-  final List<String> _llPaidDriverOptions = ['0', '50'];
+  // final List<String> _llPaidDriverOptions = ['0', '50'];
   // final List<String> _restrictedTppdOptions = ['Yes', 'No'];
 
   @override
@@ -68,14 +68,14 @@ class _PCForm1YODState extends State<PCForm1YOD> {
       'RSAaddons': TextEditingController(), //16
       'otherAddonCoverage': TextEditingController(), //17
       'ValueAddedServices': TextEditingController(), //18
-      'paOwnerDriver': TextEditingController(), //319
-      'paUnnamedPassenger': TextEditingController(), //21
+      // 'paOwnerDriver': TextEditingController(), //319
+      // 'paUnnamedPassenger': TextEditingController(), //21
       'otherCess': TextEditingController(), //22
       // 'currentIdv': TextEditingController(),
     };
     _controllers['od']!.text = '1';
     // Auto-select LL to Paid Driver to 50
-    _selectedLlPaidDriver = '50';
+    // _selectedLlPaidDriver = '50';
   }
 
   @override
@@ -141,8 +141,7 @@ class _PCForm1YODState extends State<PCForm1YOD> {
           double.tryParse(_controllers['electricAccessories']!.text) ?? 0.0;
       double nonElectricAccessories =
           double.tryParse(_controllers['nonElectricAccessories']!.text) ?? 0.0;
-      double CNG_LPG_kits_Ex_fitted =
-          double.tryParse(_controllers['CNG_LPG_kits_Ex_fitted']!.text) ?? 0.0;
+      // double CNG_LPG_kits_Ex_fitted = double.tryParse(_controllers['CNG_LPG_kits_Ex_fitted']!.text) ?? 0.0;
       double zeroDepreciation =
           double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
       double RSAaddons =
@@ -151,14 +150,11 @@ class _PCForm1YODState extends State<PCForm1YOD> {
           double.tryParse(_controllers['otherAddonCoverage']!.text) ?? 0.0;
       double ValueAddedServices =
           double.tryParse(_controllers['ValueAddedServices']!.text) ?? 0.0;
-      double paOwnerDriver =
-          double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
-      double paUnnamedPassenger =
-          double.tryParse(_controllers['paUnnamedPassenger']!.text) ?? 0.0;
+      // double paOwnerDriver = double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      // double paUnnamedPassenger = double.tryParse(_controllers['paUnnamedPassenger']!.text) ?? 0.0;
       double otherCess =
           double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
-      double llToPaidDriver =
-          double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
+      // double llToPaidDriver = double.tryParse(_selectedLlPaidDriver ?? "0") ?? 0.0;
       String selectedNCBText = _selectedNcb ?? "0%";
       double ncbPercentage =
           double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
@@ -187,12 +183,12 @@ class _PCForm1YODState extends State<PCForm1YOD> {
       double electricAccessoriesValue = electricAccessories==0.0?0.0:(electricAccessories/1000)*40;
       double nonElectricAccessoriesValue = nonElectricAccessories==0.0?0.0:(nonElectricAccessories/1000)*30;
       double accessoriesValue = electricAccessoriesValue + nonElectricAccessoriesValue;
-      double cngLpgPremium = 0.0;
+     /* double cngLpgPremium = 0.0;
       if (_selectedCngLpgKit == 'Yes' && CNG_LPG_kits_Ex_fitted > 0) {
         cngLpgPremium = (CNG_LPG_kits_Ex_fitted / 1000) * 60;
-      }
+      }*/
       double totalBasicPremium =
-          basicOdAfterDiscount + accessoriesValue + cngLpgPremium;
+          basicOdAfterDiscount + accessoriesValue;
       double ncbAmount = (totalBasicPremium * ncbPercentage) / 100;
       double netOdPremium = totalBasicPremium - ncbAmount;
       double totalA = netOdPremium;
@@ -200,26 +196,28 @@ class _PCForm1YODState extends State<PCForm1YOD> {
       //Add-ons
       // Calculate zero depreciation on current IDV
       double zeroDepPremium = (currentIdv * zeroDepreciation) / 100;
+      double otherAddonCoverageRate = totalA*0.25;
+      otherAddonCoverage = otherAddonCoverage*otherAddonCoverageRate;
       double totalB = zeroDepPremium +
           RSAaddons +
           otherAddonCoverage +
           ValueAddedServices;
 
       // TP Section
-      double cngLpgRate = 60;   // change to actual IRDA rate
+     /* double cngLpgRate = 60;   // change to actual IRDA rate
       double cngLpgKit = _selectedCngLpgKit == 'Yes'?cngLpgRate:0.0;
       double liabilityPremiumTP = 00.00;
       double totalC = liabilityPremiumTP +
           paOwnerDriver +
           cngLpgKit +
           llToPaidDriver +
-          paUnnamedPassenger;
+          paUnnamedPassenger;*/
 
       // Total Premium (C)
-      double totalABC = totalA + totalB + totalC;
-      double gst = totalABC * 0.18;
-      double otherCessAmt = (otherCess * totalABC) / 100;
-      double finalPremium = totalABC + gst + otherCessAmt;
+      double totalAB = totalA + totalB ;
+      double gst = totalAB * 0.18;
+      double otherCessAmt = (otherCess * totalAB) / 100;
+      double finalPremium = totalAB + gst + otherCessAmt;
 
       // Result Map
       Map<String, String> resultMap = {
@@ -249,16 +247,8 @@ class _PCForm1YODState extends State<PCForm1YOD> {
         "Value Added Services": ValueAddedServices.toStringAsFixed(2),
         "Total B": totalB.toStringAsFixed(2),
 
-        // C - Liability Premium
-        "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-        "CNG/LPG kit": cngLpgKit.toStringAsFixed(2),
-        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
-        "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
-        "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
-        "Total C": totalC.toStringAsFixed(2),
-
-        // D - Total Premium
-        "Total Package Premium[A+B+C]": totalABC.toStringAsFixed(2),
+        // C - Total Premium
+        "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
         "GST @ 18%": gst.toStringAsFixed(2),
         "Other CESS": otherCessAmt.toStringAsFixed(2).trim(),
 
@@ -268,7 +258,7 @@ class _PCForm1YODState extends State<PCForm1YOD> {
 
       // Pass data to result screen
       InsuranceResultData resultData = InsuranceResultData(
-        vehicleType: "Four Wheeler",
+        vehicleType: "Four Wheeler OD",
         fieldData: resultMap,
         totalPremium: finalPremium,
       );
@@ -294,10 +284,10 @@ class _PCForm1YODState extends State<PCForm1YOD> {
       _selectedAge = null;
       _selectedZone = null;
       _selectedNcb = null;
-      _selectedCngLpgKit = null;
+      // _selectedCngLpgKit = null;
       _selectedDepreciation = null;
       // _selectedImt23 = null;
-      _selectedLlPaidDriver = null;
+      // _selectedLlPaidDriver = null;
       // _selectedRestrictedTppd = null;
     });
   }
@@ -371,13 +361,13 @@ class _PCForm1YODState extends State<PCForm1YOD> {
                     true, "Enter value"),
                 _buildTextField('nonElectricAccessories',
                     'Non Electrical Accessories', true, "Enter Value"),
-                _buildDropdownField(
+                /*_buildDropdownField(
                     'CNG/ LPG kits',
                     _cngLpgKitOptions,
                     _selectedCngLpgKit,
-                    (val) => setState(() => _selectedCngLpgKit = val)),
-                _buildTextField('CNG_LPG_kits_Ex_fitted',
-                    'CNG/LPG kits (externally fitted)', true, "Enter Value"),
+                    (val) => setState(() => _selectedCngLpgKit = val)),*/
+                /*_buildTextField('CNG_LPG_kits_Ex_fitted',
+                    'CNG/LPG kits (externally fitted)', true, "Enter Value"),*/
                 _buildDropdownField('No Claim Bonus (%)', _ncbOptions,
                     _selectedNcb, (val) => setState(() => _selectedNcb = val)),
                 _buildTextField('zeroDepreciation', 'Zero Depreciation (rate)',
@@ -385,18 +375,16 @@ class _PCForm1YODState extends State<PCForm1YOD> {
                 _buildTextField('RSAaddons',
                     'RSA/Additional for Addons(amount)', true, "Enter Addons "),
                 _buildTextField('otherAddonCoverage',
-                    'Other Addon Coverage(amount)', true, "Enter Amount "),
+                    'Other Addon Coverage(Rate)', true, "Ex: 0.25 %  "),
                 _buildTextField('ValueAddedServices',
                     'Value Added Service(amount)', true, "Enter Amount "),
-                _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)', true,
-                    "Enter Amount "),
-                _buildDropdownField(
+                // _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)', true, "Enter Amount "),
+                /*_buildDropdownField(
                     'LL to Paid Driver',
                     _llPaidDriverOptions,
                     _selectedLlPaidDriver,
-                    (val) => setState(() => _selectedLlPaidDriver = val)),
-                _buildTextField('paUnnamedPassenger',
-                    'PA to Unnamed Passenger (₹)', true, "Enter Value "),
+                    (val) => setState(() => _selectedLlPaidDriver = val)),*/
+                // _buildTextField('paUnnamedPassenger', 'PA to Unnamed Passenger (₹)', true, "Enter Value "),
                 _buildTextField(
                     'otherCess', 'Other Cess (%)', true, "Enter Cess % "),
               ],
@@ -592,14 +580,14 @@ class _PCForm1YODState extends State<PCForm1YOD> {
     // Petrol/Diesel rate table (CC based)
     Map<String, Map<String, List<double>>> rateTableCC = {
       "A": {
-        "<=1000": [3.127, 3.283, 3.362],
-        "1001-1500": [3.283, 3.447, 3.529],
-        ">1500": [3.440, 3.612, 3.698],
+        "<1000": [3.127, 3.283, 3.362],         //less than 1000 till 999
+        "1000-1499": [3.283, 3.447, 3.529],     //1000-1499
+        ">=1500": [3.440, 3.612, 3.698],        // 1500 and above
       },
       "B": {
-        "<=1000": [3.039, 3.191,3.267 ],
-        "1001-1500": [3.191, 3.351,3.430],
-        ">1500": [3.343, 3.510,3.594],
+        "<1000": [3.039, 3.191,3.267 ],
+        "1000-1499": [3.191, 3.351,3.430],
+        ">=1500": [3.343, 3.510,3.594],
       },
     };
 
@@ -633,12 +621,12 @@ class _PCForm1YODState extends State<PCForm1YOD> {
     } else {
       if (cubicCapacity == null)
         throw ArgumentError("cubicCapacity is required for Petrol/Diesel");
-      if (cubicCapacity <= 1000)
-        band = "<=1000";
-      else if (cubicCapacity <= 1500)
-        band = "1001-1500";
+      if (cubicCapacity < 1000)
+        band = "<1000";
+      else if (cubicCapacity < 1500)
+        band = "1000-1499";
       else
-        band = ">1500";
+        band = ">=1500";
     }
 
     // Determine age index

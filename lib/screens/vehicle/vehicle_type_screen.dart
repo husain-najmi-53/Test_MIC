@@ -37,7 +37,7 @@ class _VehicleTypeScreenState extends State<VehicleTypeScreen> {
     // Passenger
     'Three Wheeler PCV(Upto 6 Passengers)': '/threeWheelerPCVUpto6',
     'Three Wheeler PCV(More than 6 upto 17 Passengers)': '/threeWheelerPCVMoreThan6',
-    'Bus(Upto 6 Passengers)': '/busUpto6',
+    'Bus (More than 6 Passenger)': '/busUpto6',
     'Taxi(Upto 6 Passengers)': '/taxiUpto6',
     // 'Bus': '/bus',
     'School Bus': '/schoolBus',
@@ -129,7 +129,7 @@ class _VehicleTypeScreenState extends State<VehicleTypeScreen> {
           'icon': Icons.directions_bus_filled
         },
         {'name': 'Taxi(Upto 6 Passengers)', 'icon': Icons.local_taxi}, 
-        {'name': 'Bus(Upto 6 Passengers)', 'icon': Icons.departure_board},
+        {'name': 'Bus (More than 6 Passenger)', 'icon': Icons.departure_board},
         {'name': 'School Bus', 'icon': Icons.departure_board},
       ],
     },

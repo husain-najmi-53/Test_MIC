@@ -161,7 +161,8 @@ void _submitForm() {
           
       
       // 7. Discount on OD Premium
-      double discountOdPremium = basicOdPremium * discountOnOd/100;
+      double discountOdPremium = odBeforeDiscount * discountOnOd/100;
+      // double discountOdPremium = basicOdPremium * discountOnOd/100;
 
      double basicOdAfterDiscPremium = odBeforeDiscount - discountOdPremium;
      //print("--------------basicOdAfterDiscPremium :  ${basicOdAfterDiscPremium}--------");

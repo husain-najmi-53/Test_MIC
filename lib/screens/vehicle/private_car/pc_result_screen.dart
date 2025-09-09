@@ -12,6 +12,40 @@ class InsuranceCarResultScreen extends StatelessWidget {
     final Map<String, String> fields = resultData.fieldData;
 
     final categoryFieldMapping = {
+      "Four Wheeler OD": {
+        "Basic Details": [
+          "IDV",
+          "Year of Manufacture",
+          "Zone",
+          "Cubic Capacity"
+        ],
+        "[A] Own Damage Premium Package": [
+          "Vehicle Basic Rate",
+          "Basic for Vehicle",
+          "Discount on OD Premium",
+          "Basic OD Premium after discount",
+          "Loading Discount Premium",
+          "Accessories Value",
+          "Total Basic Premium",
+          "No Claim Bonus",
+          "Net Own Damage Premium",
+          "Total A"
+        ],
+
+        "[B] Addon Coverage": [
+          "Zero Dep Premium",
+          "RSA",
+          "Other Addon Coverage",
+          "Value Added Services",
+          "Total B"
+        ],
+
+        "[C] Total Premium": [
+          "Total Package Premium[A+B]",
+          "GST @ 18%",
+          "Other CESS"
+        ]
+      },
       "Four Wheeler": {
         "Basic Details": [
           "IDV",
@@ -46,10 +80,41 @@ class InsuranceCarResultScreen extends StatelessWidget {
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
+          "Restricted TPPD",
           "Total C"
         ],
         "[D] Total Premium": [
           "Total Package Premium[A+B+C]",
+          "GST @ 18%",
+          "Other CESS"
+        ]
+      },
+      "Electric Four Wheeler OD": {
+        "Basic Details": ["IDV", "Year of Manufacture", "Zone", "Kilowatt"],
+        "[A] Own Damage Premium Package": [
+          "Vehicle Basic Rate",
+          "Basic for Vehicle",
+          "Discount on OD Premium",
+          "Loading Discount Premium",
+          "Basic OD Premium after discount",
+          "Accessories Value",
+          "Total Basic Premium",
+          "No Claim Bonus",
+          "Net Own Damage Premium",
+          "Total A"
+        ],
+
+        "[B] Addon Coverage": [
+          "Zero Dep Premium",
+          "RSA",
+          "Other Addon Coverage",
+          "Value Added Services",
+          "Total B"
+        ],
+
+
+        "[C] Total Premium": [
+          "Total Package Premium[A+B]",
           "GST @ 18%",
           "Other CESS"
         ]
@@ -83,6 +148,7 @@ class InsuranceCarResultScreen extends StatelessWidget {
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
+          "Restricted TPPD",
           "Total C"
         ],
         "[D] Total Premium": [
@@ -105,8 +171,15 @@ class InsuranceCarResultScreen extends StatelessWidget {
           "Loading Discount Premium",
           "Basic OD Premium after discount",
           "Accessories Value",
-          "Optional Extensions(GeoExt+FiberGT+DrTutions)",
-          "Total Discounts(AntiTheft+Handicap+AAI+VoluntaryDeduct)",
+          // "Optional Extensions(GeoExt+FiberGT+DrTutions)",
+          "Geographical Extn",
+          "Fiber Glass Tank",
+          "Driving Tutions",
+          // "Total Discounts(AntiTheft+Handicap+AAI+VoluntaryDeduct)",
+          "AntiTheft",
+          "Handicap",
+          "AAI",
+          "VoluntaryDeduct",
           "Total Basic Premium",
           "No Claim Bonus",
           "Net Own Damage Premium",
@@ -129,9 +202,11 @@ class InsuranceCarResultScreen extends StatelessWidget {
         "[C] Liability Premium": [
           "Liability Premium (TP)",
           "CNG/LPG kit",
+          "Geographical Extn (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
+          "Restricted TPPD",
           "Total C"
         ],
         "[D] Total Premium": [
@@ -154,8 +229,15 @@ class InsuranceCarResultScreen extends StatelessWidget {
           "Loading Discount Premium",
           "Basic OD Premium after discount",
           "Accessories Value",
-          "Optional Extensions(GeoExt+FiberGT+DrTutions)",
-          "Total Discounts(AntiTheft+Handicap+AAI+VoluntaryDeduct)",
+          "Geographical Extn",
+          "Fiber Glass Tank",
+          "Driving Tutions",
+          // "Optional Extensions(GeoExt+FiberGT+DrTutions)",
+          "AntiTheft",
+          "Handicap",
+          "AAI",
+          "VoluntaryDeduct",
+          // "Total Discounts(AntiTheft+Handicap+AAI+VoluntaryDeduct)",
           "Total Basic Premium",
           "No Claim Bonus",
           "Net Own Damage Premium",
@@ -178,9 +260,11 @@ class InsuranceCarResultScreen extends StatelessWidget {
         "[C] Liability Premium": [
           "Liability Premium (TP)",
           "CNG/LPG kit",
+          "Geographical Extn (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
+          "Restricted TPPD",
           "Total C"
         ],
         "[D] Total Premium": [

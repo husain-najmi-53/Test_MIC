@@ -125,7 +125,7 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
       double odBeforeNcb = odBeforeDiscount - discountAmt;
       double ncbAmt = (odBeforeNcb * ncb) / 100;
       double netOdPremium = odBeforeNcb - ncbAmt;
-
+      double TotalA = netOdPremium;
       // ---- TP Calculation ----
       double basicTp = 4492.0;
       double totalTp = basicTp +
@@ -137,7 +137,7 @@ class _ThreeWheelerGoodsScreenState extends State<ThreeWheelerGoodsScreen> {
       // ---- Total ----
       double totalAB = netOdPremium + totalTp;
       double tpgst12 = basicTp * 0.12;
-      double gst = (totalAB - basicTp) * 0.18;
+      double gst = TotalA * 0.18;
       double otherCessAmt = (totalAB * otherCess) / 100;
       double finalPremium = totalAB + tpgst12 + gst + otherCessAmt;
 

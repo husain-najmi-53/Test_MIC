@@ -31,15 +31,15 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "Zero Dep Premium",
           "Total A"
         ],
-        "[B] Liability Premium": [
+        /* "[B] Liability Premium": [
           "Liability Premium (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
           "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
+        ],*/
+        "[B] Total Premium": [
+          "Total Package Premium[A]",
           "GST @ 18%",
           "Other CESS"
         ]
@@ -68,6 +68,7 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
+          "Restricted TPPD",
           "Total B"
         ],
         "[C] Total Premium": [
@@ -100,6 +101,7 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
+          "Restricted TPPD",
           "Total B"
         ],
         "[C] Total Premium": [
@@ -122,15 +124,15 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "Zero Dep Premium",
           "Total A"
         ],
-        "[B] Liability Premium": [
+        /* "[B] Liability Premium": [
           "Liability Premium (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
           "Total B"
-        ],
-        "[C] Total Premium": [
-          "Total Package Premium[A+B]",
+        ],*/
+        "[B] Total Premium": [
+          "Total Package Premium[A]",
           "GST @ 18%",
           "Other CESS"
         ]
@@ -154,6 +156,7 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
+          "Restricted TPPD",
           "Total B"
         ],
         "[C] Total Premium": [
@@ -181,6 +184,7 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
+          "Restricted TPPD",
           "Total B"
         ],
         "[C] Total Premium": [

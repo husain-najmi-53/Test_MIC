@@ -178,9 +178,8 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
 // double cngPremium = cngSelected == 1 ? cngExternally : 0;
       double cngLpgPremium = 0.0;
       if (_selectedCNG == 'Yes' && cngExternally > 0) {
-        cngLpgPremium = (cngExternally / 1000) * 60;
+        cngLpgPremium = (cngExternally / 1000) * 40;
       }
-      basicOdPremium = imt23Amount + cngLpgPremium + basicOdPremium;
 
       double basicOdBeforeDiscount =
           imt23Amount + cngLpgPremium + basicOdPremium;

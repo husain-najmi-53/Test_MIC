@@ -163,7 +163,13 @@ class _GoodsCarryingVehicleScreenState
       double totalB = zeroDep + rsaAmount;
 
       double basicTp = _getTpRate(gvw);
-      double fixedGeoamt = 100;
+      // old: double fixedGeoamt = 100;
+
+// updated:
+      double fixedGeoamt = (_selectedGeographicalExtn == null ||
+              _selectedGeographicalExtn == '0')
+          ? 0.0
+          : 100.0;
 
       double totalC = basicTp -
           restrictedTppdAmt +
@@ -176,9 +182,8 @@ class _GoodsCarryingVehicleScreenState
       double totalABC = totalA + totalB + totalC;
 
       double tpgst12 = basicTp * 0.12; // GST @12% on Basic TP
-      double gst18Base =
-          totalA + totalB + (totalC - basicTp); // GST @18% on rest
-      double gst18 = gst18Base * 0.18;
+
+      double gst18 = totalA * 0.18;
 
       double otherCessAmt = (totalABC * otherCess) / 100;
       double finalPremium = totalABC + gst18 + tpgst12 + otherCessAmt;

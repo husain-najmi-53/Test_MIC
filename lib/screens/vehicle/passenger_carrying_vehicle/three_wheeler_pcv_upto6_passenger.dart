@@ -60,6 +60,11 @@ class _ThreeWheelerPCV_upto6PassengerState
     super.initState();
     // Auto-select LL to Paid Driver to 50
     _selectedLlPaidDriver = '50';
+    _selectedImt23='No';
+    _selectedNcb='0';
+    _controllers['paOwnerDriver']!.text=0.toString();
+    _controllers['otherCess']!.text=0.toString();
+    _selectedRestrictedTPPD='No';
   }
 
   @override
@@ -132,7 +137,9 @@ class _ThreeWheelerPCV_upto6PassengerState
       String cngLpgKit = _selectedCngLpgKit ?? "Yes";
       double selectedNcb = _selectedNcb != null ? double.tryParse(_selectedNcb!) ?? 0.0 : 25.0;
       String llPaidDriver = _selectedLlPaidDriver ?? "50";
-      String restrictedTPPD = _selectedRestrictedTPPD ?? "Yes";
+      // String restrictedTPPD = _selectedRestrictedTPPD ?? "Yes";
+      double restrictedTPPD =
+          (_selectedRestrictedTPPD == "Yes") ? 150 : 0.0;
 
       double currentIdv = double.tryParse(_controllers['currentIdv']!.text) ?? 0.0;
 
@@ -147,21 +154,36 @@ class _ThreeWheelerPCV_upto6PassengerState
       
       double cngKitLoading = 0.0;
       if (cngLpgKit == 'Yes' && externalCngLpgKit > 0) {
-        cngKitLoading = (externalCngLpgKit / 1000) * 60;
+        cngKitLoading = (externalCngLpgKit *0.04) ;
       }
       
       double accessories = 0.0;
       if (electronicAccessories > 0) {
-        accessories = (electronicAccessories / 1000) * 60;
+        accessories = (electronicAccessories *0.04);
+      }
+     
+      double cngTpExtra = 0.0;
+      if (_selectedCngLpgKit== 'Yes') {
+        cngTpExtra = 60;
       }
 
+     double basicOdPremium = basicForVehicle+ accessories + cngKitLoading ;
       double totalOdBeforeDiscount = basicForVehicle + imt23Loading + accessories + cngKitLoading;
 
       double discountAmount = (totalOdBeforeDiscount * discountOnOd) / 100;
       double odAfterDiscount = totalOdBeforeDiscount - discountAmount;
+      
+
+     double odBeforeNcb = discountAmount ;
+      // odAfterDiscount +
+      //     accessories +
+      //     cngKitLoading ;
 
       double ncbAmount = (odAfterDiscount * selectedNcb) / 100;
+
       double netOdPremium = odAfterDiscount - ncbAmount;
+
+
 
       // Liability Premium calculations
       double baseTpPremium = _getTpRate(
@@ -175,15 +197,16 @@ class _ThreeWheelerPCV_upto6PassengerState
       );
       double paUnnamedPassengerAmount = paUnnamedPassengerRate * numberOfPassengers;
 
-      double tpPremium = baseTpPremium;
-      if (restrictedTPPD == 'Yes') {
-        tpPremium = baseTpPremium * 0.80;
-      }
+      // double tpPremium = baseTpPremium;
+      // if (restrictedTPPD == 'Yes') {
+      //   tpPremium = baseTpPremium * 0.80;
+      // }
 
       double llPaidDriverAmount = double.tryParse(llPaidDriver) ?? 0.0;
       
       double totalLiabilityPremium =
-          tpPremium + paOwnerDriver + llPaidDriverAmount + paUnnamedPassengerAmount;
+          // tpPremium +
+            baseTpPremium+ paOwnerDriver + llPaidDriverAmount + paUnnamedPassengerAmount+cngTpExtra-restrictedTPPD;
 
       // Total Premium and Taxes
       double totalPremiumBeforeTaxes = netOdPremium + totalLiabilityPremium;
@@ -201,33 +224,39 @@ class _ThreeWheelerPCV_upto6PassengerState
         'No. of Passengers': numberOfPassengers.toString(),
 
         // A - Own Damage Premium Package
-        "Base OD Rate (%)": vehicleBasicRate.toStringAsFixed(3),
-        "Basic OD Premium": basicForVehicle.toStringAsFixed(2),
-        "IMT 23 Loading": imt23Loading.toStringAsFixed(2),
+        "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
+        "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
+        
         "Electronic/Electrical Accessories":accessories.toStringAsFixed(2),
         "CNG/LPG Kit Loading": cngKitLoading.toStringAsFixed(2),
-        "Total OD before Discount": totalOdBeforeDiscount.toStringAsFixed(2),
-        "Discount on OD Premium (%)": discountOnOd.toStringAsFixed(2),
-        "Discount Amount": discountAmount.toStringAsFixed(2),
-        "OD after Discount": odAfterDiscount.toStringAsFixed(2),
-        "No Claim Bonus (%)": selectedNcb.toStringAsFixed(2),
-        "NCB Amount": ncbAmount.toStringAsFixed(2),
-        "Net OD Premium": netOdPremium.toStringAsFixed(2),
+        "Basic OD Premium" :basicOdPremium.toStringAsFixed(2),
+        "IMT 23 Loading": imt23Loading.toStringAsFixed(2),
+        "Basic OD before Discount": totalOdBeforeDiscount.toStringAsFixed(2),
+        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Basic OD Before NCB": odBeforeNcb.toStringAsFixed(2),
+        // "OD after Discount": odAfterDiscount.toStringAsFixed(2),
+        "No Claim Bonus": ncbAmount.toStringAsFixed(2),
+        "Net OD Premium[A]": netOdPremium.toStringAsFixed(2),
 
         // B - Liability Premium
         "Base TP Premium": baseTpPremium.toStringAsFixed(2),
         "Passenger Coverage": paUnnamedPassengerAmount.toStringAsFixed(2),
-        "Restricted TPPD": restrictedTPPD == 'Yes' ? "Yes (20% discount)" : "No",
-        "TP Premium after restriction": tpPremium.toStringAsFixed(2),
+        "CNG/LPG kit": cngTpExtra.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
-        "Total Liability Premium (TP + PA + LL)": totalLiabilityPremium.toStringAsFixed(2),
+        // "Restricted TPPD": restrictedTPPD == 'Yes' ? "Yes (20% discount)" : "No",
+        "Restricted TPPD":restrictedTPPD.toStringAsFixed(2),
+        "Total Liability Premium": totalLiabilityPremium.toStringAsFixed(2),
+        // "TP Premium after restriction": tpPremium.toStringAsFixed(2),
+        
+        
+        
 
         // C - Total Premium and Taxes
         "Total Premium before Taxes": totalPremiumBeforeTaxes.toStringAsFixed(2),
         'GST @ 18% [Applied on OD and TP]': gst.toStringAsFixed(2),
-        "Other CESS (%)": otherCess.toStringAsFixed(2),
-        "Other CESS Amount": otherCessAmt.toStringAsFixed(2),
+        "Other CESS (%)": otherCessAmt.toStringAsFixed(2),
+        
 
         // Final Premium
         "Final Premium Payable": finalPremium.toStringAsFixed(2),

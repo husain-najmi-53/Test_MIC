@@ -22,8 +22,8 @@ class _TwoWheeler1YearODFormScreenState
     'cubicCapacity': TextEditingController(),
     'discountOnOd': TextEditingController(),
     'accessoriesValue': TextEditingController(),
-    'paOwnerDriver': TextEditingController(),
-    'paUnnamedPassenger': TextEditingController(),
+    // 'paOwnerDriver': TextEditingController(),
+    // 'paUnnamedPassenger': TextEditingController(),
     'zeroDepreciation': TextEditingController(),
     'otherCess': TextEditingController(),
   };
@@ -31,7 +31,7 @@ class _TwoWheeler1YearODFormScreenState
   String? _selectedAge;
   String? _selectedZone;
   String? _selectedNoClaimBonus;
-  String? _selectedLLPaidDriver;
+  // String? _selectedLLPaidDriver;
 
   final List<String> _depreciationOptions = [
     '0%',
@@ -49,13 +49,13 @@ class _TwoWheeler1YearODFormScreenState
   ];
   final List<String> _zoneOptions = ['A', 'B'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
-  final List<String> _llPaidDriverOptions = ['0', '50'];
+  // final List<String> _llPaidDriverOptions = ['0', '50'];
 
   @override
   void initState() {
     super.initState();
     // Auto-select LL to Paid Driver to 50
-    _selectedLLPaidDriver = '50';
+    // _selectedLLPaidDriver = '50';
   }
 
   @override
@@ -118,14 +118,11 @@ class _TwoWheeler1YearODFormScreenState
           double.tryParse(_controllers['accessoriesValue']!.text) ?? 0.0;
       double zeroDepreciation =
           double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
-      double paOwnerDriver =
-          double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
-      double paUnnamedPassenger =
-          double.tryParse(_controllers['paUnnamedPassenger']!.text) ?? 0.0;
+      // double paOwnerDriver = double.tryParse(_controllers['paOwnerDriver']!.text) ?? 0.0;
+      // double paUnnamedPassenger = double.tryParse(_controllers['paUnnamedPassenger']!.text) ?? 0.0;
       double otherCess =
           double.tryParse(_controllers['otherCess']!.text) ?? 0.0;
-      double llToPaidDriver =
-          double.tryParse(_selectedLLPaidDriver ?? "0") ?? 0.0;
+      // double llToPaidDriver = double.tryParse(_selectedLLPaidDriver ?? "0") ?? 0.0;
       String selectedNCBText = _selectedNoClaimBonus ?? "0%";
       double ncbPercentage =
           double.tryParse(selectedNCBText.replaceAll('%', '')) ?? 0.0;
@@ -155,17 +152,17 @@ class _TwoWheeler1YearODFormScreenState
       double totalA = netOdPremium + zeroDepPremium;
 
       // TP Section
-      double liabilityPremiumTP = 00.00;
+      /*double liabilityPremiumTP = 00.00;
       double totalB = liabilityPremiumTP +
           paOwnerDriver +
           llToPaidDriver +
-          paUnnamedPassenger;
+          paUnnamedPassenger;*/
 
       // Total Premium (C)
-      double totalAB = totalA + totalB;
-      double gst = totalAB * 0.18;
-      double otherCessAmt = (otherCess * totalAB) / 100;
-      double finalPremium = totalAB + gst + otherCessAmt;
+      // double totalAB = totalA ;
+      double gst = totalA * 0.18;
+      double otherCessAmt = (otherCess * totalA) / 100;
+      double finalPremium = totalA + gst + otherCessAmt;
 
       // Result Map
       Map<String, String> resultMap = {
@@ -189,14 +186,14 @@ class _TwoWheeler1YearODFormScreenState
         "Total A": totalA.toStringAsFixed(2),
 
         // B - Liability Premium
-        "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        /*"Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
-        "Total B": totalB.toStringAsFixed(2),
+        "Total B": totalB.toStringAsFixed(2),*/
 
         // C - Total Premium
-        "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),
+        "Total Package Premium[A]": totalA.toStringAsFixed(2),
         "GST @ 18%": gst.toStringAsFixed(2),
         "Other CESS": otherCessAmt.toStringAsFixed(2).trim(),
 
@@ -231,7 +228,7 @@ class _TwoWheeler1YearODFormScreenState
       _selectedAge = null;
       _selectedZone = null;
       _selectedNoClaimBonus = null;
-      _selectedLLPaidDriver = null;
+      // _selectedLLPaidDriver = null;
     });
   }
 
@@ -307,15 +304,13 @@ class _TwoWheeler1YearODFormScreenState
                     (val) => setState(() => _selectedNoClaimBonus = val)),
                 _buildTextField('zeroDepreciation', 'Zero Depreciation (%)',
                     'Enter Percentage'),
-                _buildTextField(
-                    'paOwnerDriver', 'PA to Owner Driver (₹)', 'Enter Amount'),
-                _buildTextField('paUnnamedPassenger',
-                    'PA to Unnamed Passenger (₹)', 'Enter Amount'),
-                _buildDropdownField(
+                // _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)', 'Enter Amount'),
+                // _buildTextField('paUnnamedPassenger', 'PA to Unnamed Passenger (₹)', 'Enter Amount'),
+                /*_buildDropdownField(
                     'LL to Paid Driver',
                     _llPaidDriverOptions,
                     _selectedLLPaidDriver,
-                    (val) => setState(() => _selectedLLPaidDriver = val)),
+                    (val) => setState(() => _selectedLLPaidDriver = val)),*/
                 _buildTextField('otherCess', 'Other Cess (%)', 'Enter Cess %'),
                 //const SizedBox(height: 80),
               ],
@@ -452,7 +447,7 @@ class _TwoWheeler1YearODFormScreenState
 
 double _getOdRate(String zone, String age, int cc) {
   if (zone == 'A') {
-    if (cc <= 150) {
+    if (cc < 150) {
       if (age == 'Upto 5 Years') return 1.708;
       if (age == '6-10 Years') return 1.793;
       if (age == 'Above 10 Years') return 1.886; // Corrected rate
@@ -467,7 +462,7 @@ double _getOdRate(String zone, String age, int cc) {
       if (age == 'Above 10 Years') return 2.020; // Corrected rate
     }
   } else if (zone == 'B') {
-    if (cc <= 150) {
+    if (cc < 150) {
       if (age == 'Upto 5 Years') return 1.676;
       if (age == '6-10 Years') return 1.760;
       if (age == 'Above 10 Years') return 1.802; // Corrected rate

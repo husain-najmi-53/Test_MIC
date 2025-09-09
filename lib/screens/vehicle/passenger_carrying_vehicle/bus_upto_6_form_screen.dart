@@ -93,8 +93,8 @@ class BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
   }
 
   void _submitForm() {
-    // if (_formKey.currentState!.validate())
-     {
+    if (_formKey.currentState!.validate())
+    {
       double idv = double.tryParse(_controllers['idv']!.text) ?? 0.0;
       double depreciation =
           double.tryParse((_selectedDepreciation ?? '0').replaceAll('%', '')) ??
@@ -104,7 +104,8 @@ class BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
       String zone = _selectedZone ?? 'A';
       int passengerCount =
           int.tryParse(_controllers['numberOfPassengers']!.text) ?? 0;
-      double geographicalExtent = double.tryParse(_selectedGeExtn?? "0") ?? 0.0;
+      double geographicalExtent =
+          double.tryParse(_selectedGeExtn ?? "0") ?? 0.0;
       double discountOnOd =
           double.tryParse(_controllers['discountOnOd']!.text) ?? 0.0;
       double electricalAccessories =
@@ -129,11 +130,11 @@ class BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
           double.tryParse(_selectedLlOtherEmployee ?? '0') ?? 0.0;
       double geographicalExtnAmount =
           double.tryParse(_selectedGeExtn ?? '0') ?? 0.0;
-        double zeroDepreciation =
-    double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
+      double zeroDepreciation =
+          double.tryParse(_controllers['zeroDepreciation']!.text) ?? 0.0;
 
-       double cngTpExtra = 0.0;
-      if (_selectedCngLpgKit== 'Yes') {
+      double cngTpExtra = 0.0;
+      if (_selectedCngLpgKit == 'Yes') {
         cngTpExtra = 60;
       }
       // 🔹 Step 1: Current IDV
@@ -147,15 +148,15 @@ class BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
               : 'Above10Years';
       double odRate = _getOdRate(zone, ageKey);
       double basicforvehicle = (currentIdv * odRate) / 100;
-      double accessories = (electricalAccessories*4)/100;
-      double cngKitLoading = (externalCng* 0.04);
-      double basicOdPremium = basicforvehicle+ accessories + cngKitLoading ;
+      double accessories = (electricalAccessories * 4) / 100;
+      double cngKitLoading = (externalCng * 0.04);
+      double basicOdPremium = basicforvehicle + accessories + cngKitLoading;
       double geographicalExt = geographicalExtent;
       // 🔹 Step 3: Discounts
       // if (imt23 == 'Yes') {
       //   basicOdPremium *= 0.95; // 5% discount
       // }
-      double imt23value= (basicforvehicle * imt23)/100;
+      double imt23value = (basicforvehicle * imt23) / 100;
 
       // double atDiscount=0.0;
       // if (antiTheft == 'Yes') {
@@ -164,28 +165,23 @@ class BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
       //   basicOdPremium -= atDiscount;
       // }
 
-      //ANTI THEFT 
-      double atDiscount = (2.5*basicOdPremium)/100;
-       double basicOdBeforeDiscount = basicOdPremium + imt23value + geographicalExt+ atDiscount; //basic od before disc
+      //ANTI THEFT
+      double atDiscount =  antiTheft=='Yes'?(2.5 * basicOdPremium) / 100:0.0;
+      double basicOdBeforeDiscount = basicOdPremium +
+          imt23value +
+          geographicalExt +
+          atDiscount; //basic od before disc
       // 🔹 Step 4: OD discount
       double discountAmount = (basicOdBeforeDiscount * discountOnOd) / 100;
       double odAfterDiscount = basicOdBeforeDiscount - discountAmount;
-      
-      
-      
-      
 
       // 🔹 Step 6: Total OD before NCB
-      double totalBasicPremium = odAfterDiscount +
+      /*double totalBasicPremium = odAfterDiscount +
           accessories +
           cngKitLoading +
           rsaAddons +
-          geographicalExtnAmount;
-        
-       
-        
-       
-
+          geographicalExtnAmount;*/
+      double totalBasicPremium = odAfterDiscount;
 
       // 🔹 Step 7: Apply NCB
       double ncbAmount = (odAfterDiscount * selectedNcbPercent) / 100;
@@ -194,41 +190,39 @@ class BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
       // 🔹 Step 8: Liability Premium (dynamic)
       double tpPremium =
           14343.0; // ← if this should be dynamic, replace with field
-          double passCov=passengerCount * 877;
-          double fixedGeogExt=100;
+      double passCov = passengerCount * 877;
+      double fixedGeogExt = _selectedGeExtn=='400'?100.0:0.0;
       double liabilityPremium = tpPremium +
           paOwnerDriver +
           llPaidDriverAmount +
-          passCov+
-          fixedGeogExt+
-          cngTpExtra+
+          passCov +
+          fixedGeogExt +
+          cngTpExtra +
           llOtherEmployeeAmount;
-            
 
-        double zeroDep = (zeroDepreciation*idv)/100;
-        double addonPremium =zeroDep + rsaAddons;
-
+      double zeroDep = (zeroDepreciation * idv) / 100;
+      double addonPremium = zeroDep + rsaAddons;
 
       // 🔹 Step 9: Premium before cess
       double premiumBeforeCess = netOdPremium + liabilityPremium;
 
-      
-      double totalABC= netOdPremium+liabilityPremium+addonPremium;
+      double totalABC = netOdPremium + liabilityPremium + addonPremium;
 
       // 🔹 Step 10: Other Cess
       double otherCessAmount = (totalABC * otherCessPercent) / 100;
 
       // 🔹 Step 11: GST (18% on OD + Liability)
-      double gstAmount = (netOdPremium + liabilityPremium +addonPremium) * 0.18;
+      double gstAmount =
+          (netOdPremium + liabilityPremium + addonPremium) * 0.18;
 
       // 🔹 Step 12: Final premium
       double finalPremium = totalABC + otherCessAmount + gstAmount;
-
 
       // ✅ Flattened Map<String, String> for result screen
       Map<String, String> resultData = {
         // Basic
         "IDV (₹)": idv.toStringAsFixed(2),
+        "Current IDV (₹)": currentIdv.toStringAsFixed(2),
         "Year Of Manufacture": yearOfManufacture,
         "Zone": zone,
         "Age of Vehicle": age,
@@ -238,40 +232,42 @@ class BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
         "Vehicle Basic Rate(₹)": odRate.toStringAsFixed(3),
         "Basics for Vehicle (₹)": basicforvehicle.toStringAsFixed(2),
         "Electrical Accessories (₹)": accessories.toStringAsFixed(2),
-        "CNG/LPG Kits (Externally Fitted) (₹)": cngKitLoading.toStringAsFixed(2),
-        "Basic OD Premium (₹)": basicOdPremium.toStringAsFixed(2), //check the formula
+        "CNG/LPG Kits (Externally Fitted) (₹)":
+            cngKitLoading.toStringAsFixed(2),
+        "Basic OD Premium (₹)":
+            basicOdPremium.toStringAsFixed(2), //check the formula
         "Geographical Extension (₹)": geographicalExt.toStringAsFixed(2),
         "IMT 23 Applied": imt23value.toStringAsFixed(2),
         "Anti Theft Applied": atDiscount.toStringAsFixed(2),
-        "Basic OD Before Discount":basicOdBeforeDiscount.toStringAsFixed(2),//check formula
+        "Basic OD Before Discount":
+            basicOdBeforeDiscount.toStringAsFixed(2), //check formula
         "Discount on OD Premium (₹)": discountAmount.toStringAsFixed(2),
         "No Claim Bonus (%)": selectedNcbPercent.toStringAsFixed(2),
-        "Basic OD Before Ncb":totalBasicPremium .toStringAsFixed(2),
+        "Basic OD Before Ncb": totalBasicPremium.toStringAsFixed(2),
         "NCB Amount (₹)": ncbAmount.toStringAsFixed(2),
-        
+
         "Net OD Premium (₹)": netOdPremium.toStringAsFixed(2),
 
         //[B] Addon Coverages
-        "Zero Depreciation":zeroDep.toStringAsFixed(2),
+        "Zero Depreciation": zeroDep.toStringAsFixed(2),
         "RSA/Addons (₹)": rsaAddons.toStringAsFixed(2),
-        "Total Addon Premium":addonPremium.toStringAsFixed(2),
-        
+        "Total Addon Premium": addonPremium.toStringAsFixed(2),
 
         // [C] Liability
         "Basic Liability Premium (₹)": tpPremium.toStringAsFixed(2),
-        "Passenger Coverage":passCov.toStringAsFixed(2),
-        "Geographical Extn":fixedGeogExt.toStringAsFixed(2),
+        "Passenger Coverage": passCov.toStringAsFixed(2),
+        "Geographical Extn": fixedGeogExt.toStringAsFixed(2),
         "CNG/LPG Kits": cngTpExtra.toStringAsFixed(2),
         "PA to Owner Driver (₹)": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver (₹)": llPaidDriverAmount.toStringAsFixed(2),
         "LL to Other Employees (₹)": llOtherEmployeeAmount.toStringAsFixed(2),
-        "Total Liability Premium (₹)":liabilityPremium.toStringAsFixed(2),
+        "Total Liability Premium (₹)": liabilityPremium.toStringAsFixed(2),
 
         // [D] Total
-        "Premium Before GST":totalABC.toStringAsFixed(2),
+        "Premium Before GST": totalABC.toStringAsFixed(2),
         "GST @ 18% [Applied on A+B+C]": gstAmount.toStringAsFixed(2),
         "Other CESS Amount (₹)": otherCessAmount.toStringAsFixed(2),
-       "Final Premium Payable (₹)": finalPremium.toStringAsFixed(2),
+        "Final Premium Payable (₹)": finalPremium.toStringAsFixed(2),
       };
 
       InsuranceResultData insuranceResultData = InsuranceResultData(
@@ -504,6 +500,17 @@ class BusUpto6FormScreenState extends State<BusUpto6FormScreen> {
                   if (value == null || value.trim().isEmpty) {
                     return 'Enter $label';
                   }
+
+                  // Passenger count validation
+                  if (key == 'numberOfPassengers') {
+  int? passengerCount = int.tryParse(value.trim());
+  if (passengerCount == null) {
+    return 'Please enter a valid number';
+  }
+  if (passengerCount < 6) {
+    return 'Must be 6 or more';
+  }
+}
                   // Date validation for Year of Manufacture
                   if (key == 'yearOfManufacture') {
                     int? year = int.tryParse(value.trim());
@@ -626,5 +633,3 @@ double _getOdRate(String zone, String age) {
   }
   return 1.680; // fallback
 }
-
-

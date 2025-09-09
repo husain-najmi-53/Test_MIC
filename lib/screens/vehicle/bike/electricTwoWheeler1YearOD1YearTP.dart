@@ -34,6 +34,7 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
   String? _selectedZone;
   String? _selectedNoClaimBonus;
   String? _selectedLLPaidDriver;
+  String? _selectedRestrictedTppd;
 
   final List<String> _depreciationOptions = [
     '0%',
@@ -52,6 +53,7 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
   final List<String> _zoneOptions = ['A', 'B'];
   final List<String> _ncbOptions = ['0%', '20%', '25%', '35%', '45%', '50%'];
   final List<String> _llPaidDriverOptions = ['0', '50'];
+  final List<String> _restrictedTppdOptions = ['Yes', 'No'];
 
   @override
   void initState() {
@@ -157,12 +159,14 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
       double totalA = netOdPremium + zeroDepPremium;
 
       // TP Section
+      double restrictedTppd = _selectedRestrictedTppd=='Yes'?50.0:0.0;
       double liabilityPremiumTP = _getElectricTwoWheelerTpRate(kwCapacity,
           isFiveYear: false); //Else True for 5 Year TP
       double totalB = liabilityPremiumTP +
           paOwnerDriver +
           llToPaidDriver +
-          paUnnamedPassenger;
+          paUnnamedPassenger-
+          restrictedTppd;
 
       // Total Premium (C)
       double totalAB = totalA + totalB;
@@ -196,6 +200,7 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),
+        "Restricted TPPD": "-$restrictedTppd",
         "Total B": totalB.toStringAsFixed(2),
 
         // C - Total Premium
@@ -326,6 +331,11 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
                     (val) => setState(() => _selectedLLPaidDriver = val)),
                 _buildTextField('paUnnamedPassenger',
                     'PA to Unnamed Passenger (₹)', 'Enter Amount'),
+                _buildDropdownField(
+                    'Restricted TPPD',
+                    _restrictedTppdOptions,
+                    _selectedRestrictedTppd,
+                        (val) => setState(() => _selectedRestrictedTppd = val)),
                 _buildTextField('otherCess', 'Other Cess (%)', 'Enter Cess'),
                 //const SizedBox(height: 80),
               ],
@@ -419,7 +429,7 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
     Function(String?) onChanged,
   ) {
     const optionalDropdowns = [
-      'LL to Paid Driver', 'No Claim Bonus (%)' // matches label or keyName
+      'LL to Paid Driver', 'No Claim Bonus (%)' , 'Restricted TPPD' // matches label or keyName
     ];
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),

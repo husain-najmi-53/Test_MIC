@@ -140,7 +140,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
     double discountAmount = (basicOdPremium * discountOnOd) / 100.0; //discount on OD premium
     double basicAfterDiscount = basicOdPremium - discountAmount; // Basic OD after discount
     double geographicalExtensionAmount = geographicalExtent; // Fixed amount: 0 or 400
-    double fixedGeographicalExtensionAmount = 100; //fixed value as if selected yes in dropdown
+    double fixedGeographicalExtensionAmount = _selectedGeographicalExt=='400'?100:0.0; //fixed value as if selected yes in dropdown
     double overturningAmount = (basicAfterDiscount * overturning) / 100.0;
     double imt23Amount = (basicForVehicle * selectIMT) / 100 ;
     double odBeforeNcb = basicAfterDiscount + geographicalExtensionAmount + overturningAmount + imt23Amount;

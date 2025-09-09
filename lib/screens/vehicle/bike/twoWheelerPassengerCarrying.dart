@@ -474,7 +474,7 @@ class _TwoWheelerPassengerCarryingFormScreenState
 
 double _getOdRate(String zone, String age, int cc) {
   if (zone == 'A') {
-    if (cc <= 150) {
+    if (cc < 150) {
       if (age == 'Upto 5 Years') return 1.708;
       if (age == '6-10 Years') return 1.793;
       if (age == 'Above 10 Years') return 1.886; // Corrected rate
@@ -488,7 +488,7 @@ double _getOdRate(String zone, String age, int cc) {
       if (age == 'Above 10 Years') return 2.020; // Corrected rate
     }
   } else if (zone == 'B') {
-    if (cc <= 150) {
+    if (cc < 150) {
       if (age == 'Upto 5 Years') return 1.676;
       if (age == '6-10 Years') return 1.760;
       if (age == 'Above 10 Years') return 1.802; // Corrected rate
