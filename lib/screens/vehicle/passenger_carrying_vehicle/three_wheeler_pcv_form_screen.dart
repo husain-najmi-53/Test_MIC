@@ -213,10 +213,10 @@ class _ThreeWheelerPCVFormScreenState extends State<ThreeWheelerPCVFormScreen> {
     Map<String, String> resultMap = {
       // Basic Details
       "IDV": idv.toStringAsFixed(2),
-      "Current IDV": currentIdv.toStringAsFixed(2),
+      // "Current IDV": currentIdv.toStringAsFixed(2),
       "Year of Manufacture": yearOfManufacture,
       "Zone": zone,
-      "Age of Vehicle": ageOfVehicle,
+      // "Age of Vehicle": ageOfVehicle,
       'No. of Passengers': numberOfPassengers.toString(),
 
       // A - Own Damage Premium Package
@@ -225,7 +225,7 @@ class _ThreeWheelerPCVFormScreenState extends State<ThreeWheelerPCVFormScreen> {
       "Electronic/Electrical Accessories": accessories.toStringAsFixed(2),
       "CNG/LPG Kit(Externally Fitted)": cngKitLoading.toStringAsFixed(2),
       "Basic OD Premium":basicOdPremium.toStringAsFixed(2),
-       "IMT 23 Loading": imt23Loading.toStringAsFixed(2),
+      "IMT 23": imt23Loading.toStringAsFixed(2),
       "Basic OD before Discount": totalOdBeforeDiscount.toStringAsFixed(2),
      
       "Discount on OD Premium": discountAmount.toStringAsFixed(2),
@@ -235,18 +235,20 @@ class _ThreeWheelerPCVFormScreenState extends State<ThreeWheelerPCVFormScreen> {
       "No Claim Bonus": ncbAmount.toStringAsFixed(2),
       // "NCB Amount": ncbAmount.toStringAsFixed(2),
       "Net OD Premium(A)": netOdPremium.toStringAsFixed(2),
+      "Total A": netOdPremium.toStringAsFixed(2),
 
       // B - Liability Premium
-      "Basic TP Premium": baseTpPremium.toStringAsFixed(2),
+      "Basic Liability Premium": baseTpPremium.toStringAsFixed(2),
       "Passenger Coverage": paUnnamedPassengerAmount.toStringAsFixed(2),
       "CNG/LPG kit":cngTpExtra.toStringAsFixed(2),
       "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
       "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
       "Restricted TPPD": restrictedTPPD.toStringAsFixed(2),
       "Total Liability Premium (B)": totalLiabilityPremium.toStringAsFixed(2),
+      "Total B": totalLiabilityPremium.toStringAsFixed(2),
 
       // C - Total Premium and Taxes
-      "Total Premium before GST[A+B]": totalPremiumBeforeTaxes.toStringAsFixed(2),
+      "Total Package Premium[A+B]": totalPremiumBeforeTaxes.toStringAsFixed(2),
       'GST @ 18% [Applied on OD and TP]': gst.toStringAsFixed(2),
       "Other CESS (%)": otherCessAmt.toStringAsFixed(2),
       

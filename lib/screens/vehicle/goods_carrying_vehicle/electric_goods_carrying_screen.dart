@@ -175,7 +175,7 @@ class _ElectricGoodsCarryingScreenState
       double totalC = basicTp -
           restrictedTppdAmt +
           cngTpAmt +
-          geoExtAmt +
+          fixedGeoExt +
           paOwnerDriver +
           llPaidDriverAmt +
           llOtherEmpAmt;
@@ -205,24 +205,25 @@ class _ElectricGoodsCarryingScreenState
         "Basic OD before Discount": basicOdBeforeDiscount.toStringAsFixed(2),
         "Discount on OD": discountAmt.toStringAsFixed(2),
         "Basic OD before NCB": basicOdBeforeNcb.toStringAsFixed(2),
-        "NCB": ncbAmt.toStringAsFixed(2),
+        "No Claim Bonus": ncbAmt.toStringAsFixed(2),
         "Net Own Damage Premium (A)": totalA.toStringAsFixed(2),
         "Zero Depreciation": zeroDep.toStringAsFixed(2),
         "RSA": rsaAmount.toStringAsFixed(2),
-        "Total Addon Premium (B)": totalB.toStringAsFixed(2),
+        "Total B": totalB.toStringAsFixed(2),
         "Basic Liability Premium (TP)": basicTp.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppdAmt.toStringAsFixed(2),
-        "CNG/LPG Kit (TP)": cngTpAmt.toStringAsFixed(2),
-        "Geographical Extn (TP)": fixedGeoExt.toStringAsFixed(2),
+        "CNG/LPG Kit": cngTpAmt.toStringAsFixed(2),
+        "Geographical Extn": fixedGeoExt.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llPaidDriverAmt.toStringAsFixed(2),
         "LL to Other Employee": llOtherEmpAmt.toStringAsFixed(2),
-        "Total Liability Premium (C)": totalC.toStringAsFixed(2),
-        "Total Premium (A+B+C)": totalABC.toStringAsFixed(2),
-        "GST (18%)": gst18.toStringAsFixed(2),
-        "Gst (12%) on Basic Tp": tpgst12.toStringAsFixed(2),
+        "Total C": totalC.toStringAsFixed(2),
+        "Total Package Premium (A+B+C)": totalABC.toStringAsFixed(2),
+        "GST @ (18%)": gst18.toStringAsFixed(2),
+        "Gst @ (12%) on Basic Tp": tpgst12.toStringAsFixed(2),
         "Other CESS": otherCessAmt.toStringAsFixed(2),
         "Final Premium": finalPremium.toStringAsFixed(2),
+        "Total A": totalA.toStringAsFixed(2)
       };
 
       InsuranceResultData resultData = InsuranceResultData(

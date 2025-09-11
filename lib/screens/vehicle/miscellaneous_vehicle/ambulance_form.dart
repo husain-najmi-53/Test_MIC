@@ -249,6 +249,7 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
         "Basic OD Before NCB": odBeforeNcb.toStringAsFixed(2),
         "No Claim Bonus": ncbAmount.toStringAsFixed(2),
         "Net Own Damage Premium [Total A]": totalA.toStringAsFixed(2),
+        "Total A": totalA.toStringAsFixed(2),
 
         // B - Liability Premium
         "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),

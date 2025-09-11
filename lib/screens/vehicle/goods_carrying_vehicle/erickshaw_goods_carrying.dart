@@ -130,6 +130,8 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
       double totalTp =
           basicTp + paOwnerDriver + llPaidDriverAmt - restrictedTppdAmt;
 
+      double TotalC = totalTp;
+
       double totalAB = netOdPremium + valueAddedService + totalTp;
       double gst = TotalA * 0.18;
       double otherCessAmt = (totalAB * otherCess) / 100;
@@ -146,25 +148,26 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
         "OD Before Discount": odBeforeDiscount.toStringAsFixed(2),
         "Discount on OD Premium": discountAmt.toStringAsFixed(2),
         //"OD After Discount": odAfterDiscount.toStringAsFixed(2),
-        "Loading on Discount": loadingAmt.toStringAsFixed(2),
+        "Loading Discount Premium": loadingAmt.toStringAsFixed(2),
         "OD Before NCB": odBeforeNcb.toStringAsFixed(2),
-        "NCB": ncbAmt.toStringAsFixed(2),
-        "Net OD Premium": netOdPremium.toStringAsFixed(2),
-        "Basic TP": basicTp.toStringAsFixed(2),
+        "No Claim Bonus": ncbAmt.toStringAsFixed(2),
+        "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
+        "Basic Liability Premium (TP)": basicTp.toStringAsFixed(2),
         "Value Added Service": valueAddedService.toStringAsFixed(2),
-        "Total Addon Premium:": valueAddedService.toStringAsFixed(2),
-        "PA Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "Total B": valueAddedService.toStringAsFixed(2),
+        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llPaidDriverAmt.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppdAmt.toStringAsFixed(2),
-        "Total TP Premium": totalTp.toStringAsFixed(2),
-        "Total Premium (OD+TP)": totalAB.toStringAsFixed(2),
-        "GST (18%)": gst.toStringAsFixed(2),
+        "Total C": totalTp.toStringAsFixed(2),
+        "Total package Premium (A+B+C)": totalAB.toStringAsFixed(2),
+        "GST @ (18%)": gst.toStringAsFixed(2),
         "Other Cess": otherCessAmt.toStringAsFixed(2),
         "Final Premium": finalPremium.toStringAsFixed(2),
+        "Total A": TotalA.toStringAsFixed(2),
       };
 
       InsuranceResultData resultData = InsuranceResultData(
-        vehicleType: "E-Rickshaw Goods Carrying",
+        vehicleType: "E-Three Wheeler Goods Carrying",
         fieldData: resultMap,
         totalPremium: finalPremium,
       );
@@ -226,7 +229,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
             children: [
               SizedBox(width: 8),
               Text(
-                'E-Rickshaw Goods Carrying',
+                'E-Three Wheeler Goods Carrying',
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
             ],

@@ -220,53 +220,56 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
       // ✅ Flattened Map<String, String> for result screen
       Map<String, String> resultData = {
         // Basic
-        "IDV (₹)": idv.toStringAsFixed(2),
-        "Current IDV (₹)": currentIdv.toStringAsFixed(2),
+        "IDV": idv.toStringAsFixed(2),
+        // "Current IDV (₹)": currentIdv.toStringAsFixed(2),
         "Year Of Manufacture": yearOfManufacture,
         "Zone": zone,
-        "Age of Vehicle": age,
+        // "Age of Vehicle": age,
         "No. of Passengers": passengerCount.toString(),
 
         // [A] Own Damage
-        "Vehicle Basic Rate(₹)": odRate.toStringAsFixed(3),
-        "Basics for Vehicle (₹)": basicforvehicle.toStringAsFixed(2),
-        "Electrical Accessories (₹)": accessories.toStringAsFixed(2),
-        "CNG/LPG Kits (Externally Fitted) (₹)":
+        "Vehicle Basic Rate": odRate.toStringAsFixed(3),
+        "Basics for Vehicle": basicforvehicle.toStringAsFixed(2),
+        "Electrical Accessories": accessories.toStringAsFixed(2),
+        "CNG/LPG Kits (Externally Fitted)":
             cngKitLoading.toStringAsFixed(2),
-        "Basic OD Premium (₹)":
+        "Basic OD Premium":
             basicOdPremium.toStringAsFixed(2), //check the formula
-        "Geographical Extension (₹)": geographicalExt.toStringAsFixed(2),
-        "IMT 23 Applied": imt23value.toStringAsFixed(2),
-        "Anti Theft Applied": atDiscount.toStringAsFixed(2),
+        "Geographical Extension": geographicalExt.toStringAsFixed(2),
+        "IMT 23": imt23value.toStringAsFixed(2),
+        "Anti Theft": atDiscount.toStringAsFixed(2),
         "Basic OD Before Discount":
             basicOdBeforeDiscount.toStringAsFixed(2), //check formula
-        "Discount on OD Premium (₹)": discountAmount.toStringAsFixed(2),
-        "No Claim Bonus (%)": selectedNcbPercent.toStringAsFixed(2),
-        "Basic OD Before Ncb": totalBasicPremium.toStringAsFixed(2),
-        "NCB Amount (₹)": ncbAmount.toStringAsFixed(2),
+        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "No Claim Bonus": selectedNcbPercent.toStringAsFixed(2),
+        "Basic OD Before NCB": totalBasicPremium.toStringAsFixed(2),
+        "NCB Amount": ncbAmount.toStringAsFixed(2),
 
-        "Net OD Premium (₹)": netOdPremium.toStringAsFixed(2),
+        "Net OD Premium": netOdPremium.toStringAsFixed(2),
+        "Total A": netOdPremium.toStringAsFixed(2),
 
         //[B] Addon Coverages
         "Zero Depreciation": zeroDep.toStringAsFixed(2),
-        "RSA/Addons (₹)": rsaAddons.toStringAsFixed(2),
+        "RSA/Additional for Addons": rsaAddons.toStringAsFixed(2),
         "Total Addon Premium": addonPremium.toStringAsFixed(2),
+        "Total B": addonPremium.toStringAsFixed(2),
 
         // [C] Liability
-        "Basic Liability Premium (₹)": tpPremium.toStringAsFixed(2),
+        "Basic Liability Premium": tpPremium.toStringAsFixed(2),
         "Passenger Coverage": passCov.toStringAsFixed(2),
         "Geographical Extn": fixedGeogExt.toStringAsFixed(2),
         "CNG/LPG Kits": cngTpExtra.toStringAsFixed(2),
-        "PA to Owner Driver (₹)": paOwnerDriver.toStringAsFixed(2),
-        "LL to Paid Driver (₹)": llPaidDriverAmount.toStringAsFixed(2),
-        "LL to Other Employees (₹)": llOtherEmployeeAmount.toStringAsFixed(2),
-        "Total Liability Premium (₹)": liabilityPremium.toStringAsFixed(2),
+        "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
+        "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
+        "LL to Other Employees": llOtherEmployeeAmount.toStringAsFixed(2),
+        "Total Liability Premium": liabilityPremium.toStringAsFixed(2),
+        "Total C": liabilityPremium.toStringAsFixed(2),
 
         // [D] Total
-        "Premium Before GST": totalABC.toStringAsFixed(2),
+        "Total Package Premium[A+B+C]": totalABC.toStringAsFixed(2),
         "GST @ 18% [Applied on A+B+C]": gstAmount.toStringAsFixed(2),
-        "Other CESS Amount (₹)": otherCessAmount.toStringAsFixed(2),
-        "Final Premium Payable (₹)": finalPremium.toStringAsFixed(2),
+        "Other CESS": otherCessAmount.toStringAsFixed(2),
+        "Final Premium Payable": finalPremium.toStringAsFixed(2),
       };
 
       InsuranceResultData insuranceResultData = InsuranceResultData(

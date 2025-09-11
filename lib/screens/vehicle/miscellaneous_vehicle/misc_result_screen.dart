@@ -29,7 +29,8 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "Loading on OD Premium",
           "Basic OD Before NCB",
           "No Claim Bonus",
-          "Net Own Damage Premium [Total A]"
+          "Net Own Damage Premium [Total A]",
+          "Total A"
         ],
         "[B] Liability Premium": [
           "Basic Liability Premium (TP)",
@@ -102,7 +103,8 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "Loading on OD Premium",
           "Basic OD Before NCB",
           "No Claim Bonus",
-          "Net Own Damage Premium [A]"
+          "Net Own Damage Premium [A]",
+          "Total A"
         ],
         "[B] Liability Premium": [
           "Basic Liability Premium (TP)",
@@ -134,7 +136,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "Basic OD Before NCB",
           "No Claim Bonus",
           "Net Own Damage Premium",
-          // "Total A"
+          "Total A"
         ],
         "[B] Liability Premium": [
           "Basic Liability Premium (TP)",
@@ -142,7 +144,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "CNG/LPG Kit",
           "PA to Owner Driver",
           "LL to Paid Driver",
-          "LL to Employee/Other",
+          "LL to Employee Other than Paid Driver",
           "LL to Passenger",
           "Total B"
         ],
@@ -165,6 +167,7 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "Total Own Damage Premium",
           "No Claim Bonus",
           "Net Own Damage Premium",
+          "Total A",
         ],
         "[B] Liability Premium": [
           "Liability Premium (TP)",
@@ -213,7 +216,8 @@ class MiscInsuranceResultScreen extends StatelessWidget {
           "PA to Owner Driver",
           "LL to Paid Driver",
           "LL to Employee Other than Paid Driver",
-          "Total Liability Premium (B)"
+          //"Total Liability Premium (B)",
+          "Total B"
         ],
         "[C] Total Premium": [
           "Total Package Premium[A+B]",

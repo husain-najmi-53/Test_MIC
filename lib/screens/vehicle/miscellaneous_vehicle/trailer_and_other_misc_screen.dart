@@ -314,6 +314,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
         "LL to Employee Other than Paid Driver":
             llLEmployeeOther.toStringAsFixed(2),
         "Total Liability Premium (B)": totalB.toStringAsFixed(2),
+        "Total B":totalB.toStringAsFixed(2),
 
         // C - Total Premium
         "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),

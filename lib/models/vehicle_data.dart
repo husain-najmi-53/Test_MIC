@@ -212,30 +212,27 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Basic OD before Discount",
       "Discount on OD",
       "Basic OD before NCB",
-      "NCB",
-      "Net Own Damage Premium (A)"
+      "No Claim Bonus",
+      "Net Own Damage Premium (A)",
+      "Total A"
     ],
-    "[B] Addon Coverage": [
-      "Zero Depreciation",
-      "RSA",
-      "Total Addon Premium (B)"
-    ],
+    "[B] Addon Coverage": ["Zero Depreciation", "RSA", "Total B"],
     "[C] Liability Premium": [
       "Basic Liability Premium (TP)",
       "Restricted TPPD",
-      "CNG/LPG Kit (TP)",
-      "Geographical Extn (TP)",
+      "CNG/LPG Kit",
+      "Geographical Extn",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "LL to Other Employee",
-      "Total Liability Premium (C)"
+      "Total C"
     ],
     "[D] Total Premium": [
-      "Total Premium (A+B+C)",
-      "GST (18%)",
-      "Gst (12%) on Basic Tp",
+      "Total Package Premium (A+B+C)",
+      "GST @ (18%)",
+      "Gst @ (12%) on Basic Tp",
       "Other CESS",
-      "Final Premium"
+      //"Final Premium"
     ],
   },
   "Electric Goods Carrying": {
@@ -257,30 +254,27 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Basic OD before Discount",
       "Discount on OD",
       "Basic OD before NCB",
-      "NCB",
-      "Net Own Damage Premium (A)"
+      "No Claim Bonus",
+      "Net Own Damage Premium (A)",
+      "Total A"
     ],
-    "[B]Add-on Coverage": [
-      "RSA",
-      "Zero Depreciation",
-      "Total Addon Premium (B)"
-    ],
+    "[B]Add-on Coverage": ["RSA", "Zero Depreciation", "Total B"],
     "[C] Liability Premium": [
       "Basic Liability Premium (TP)",
       "Restricted TPPD",
-      "CNG/LPG Kit (TP)",
-      "Geographical Extn (TP)",
+      "CNG/LPG Kit",
+      "Geographical Extn",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "LL to Other Employee",
-      "Total Liability Premium (C)"
+      "Total C"
     ],
     "[D] Total Premium": [
-      "Total Premium (A+B+C)",
-      "GST (18%)",
-      "Gst (12%) on Basic Tp",
+      "Total Package Premium (A+B+C)",
+      "GST @ (18%)",
+      "Gst @ (12%) on Basic Tp",
       "Other CESS",
-      "Final Premium"
+      // "Final Premium"
     ]
   },
   "Three-Wheeler Goods Carrying": {
@@ -290,34 +284,35 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Zone",
     ],
     "[A] Own Damage Premium Package": [
-      "Basic OD Rate (%)",
+      "Vehicle Basic Rate",
       "Basic for Vehicle",
-      "External CNG/LPG",
+      "CNG/LPG kits",
       "Basic Od Premium",
       "IMT 23",
       "OD Before Discount",
       "Discount on OD",
       "OD Before NCB",
-      "NCB",
-      "Net OD Premium"
+      "No Claim Bonus",
+      "Net Own Damage Premium",
+      "Total A"
     ],
     "[B] Liability Premium": [
-      "Basic TP",
+      "Basic Liability Premium (TP)",
       "Restricted TPPD",
-      "CNG TP",
-      "PA Owner Driver",
+      "CNG/LPG kit",
+      "PA to Owner Driver",
       "LL to Paid Driver",
-      "Total TP Premium"
+      "Total B"
     ],
     "[C] Total Premium": [
-      "Total Premium (OD+TP)",
-      "GST (18%)",
-      "Gst (12%) on Basic Tp",
+      "Total Package Premium (A+B)",
+      "GST @ (18%)",
+      "Gst @ (12%) on Basic Tp",
       "Other Cess",
-      "Final Premium"
+      //"Final Premium"
     ]
   },
-  "E-Rickshaw Goods Carrying": {
+  "E-Three Wheeler Goods Carrying": {
     "Basic Details": [
       "IDV",
       "Year of Manufacture",
@@ -330,24 +325,28 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "IMT 23",
       "OD Before Discount",
       "Discount on OD Premium",
-      "Loading on Discount",
+      "Loading Discount Premium",
       "OD Before NCB",
-      "NCB",
-      "Net OD Premium"
+      "No Claim Bonus",
+      "Net Own Damage Premium",
+      "Total A"
     ],
-    "[B] Addon Coverage": ["Value Added Service", "Total Addon Premium:"],
+    "[B] Addon Coverage": [
+      "Value Added Service",
+      "Total B",
+    ],
     "[C] Liability Premium": [
-      "Basic TP",
+      "Basic Liability Premium (TP)",
       "Restricted TPPD",
-      "PA Owner Driver",
+      "PA to Owner Driver",
       "LL to Paid Driver",
-      "Total TP Premium",
+      "Total C"
     ],
     "[D] Total Premium": [
-      "Total Premium (OD+TP)",
-      "GST (18%)",
+      "Total package Premium (A+B+C)",
+      "GST @ (18%)",
       "Other Cess",
-      "Final Premium"
+      // "Final Premium"
     ]
   },
 
@@ -359,46 +358,48 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       // "Current IDV",
       "Year of Manufacture",
       "Zone",
-      "Age of Vehicle",
+      // "Age of Vehicle",
       "No. of Passengers",
     ],
     "[A] Own Damage Premium Package": [
       "Vehicle Basic Rate",
       "Basic for Vehicle",
       "Electronic/Electrical Accessories",
-      "CNG/LPG Kit Loading",
+      "CNG/LPG Kit(Externally Fitted)",
       "Basic OD Premium",
-      "IMT 23 Loading",
+      "IMT 23",
       "Basic OD before Discount",
       "Discount on OD Premium",
       "Basic OD Before NCB",
       "No Claim Bonus",
       "Net OD Premium[A]",
+      "Total A"
     ],
     "[B] Liability Premium": [
-      "Base TP Premium",
+      "Basic Liability Premium",
       "Passenger Coverage",
       "CNG/LPG kit",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "Restricted TPPD",
       "Total Liability Premium",
+      "Total B"
     ],
     "[C] Total Premium": [
-      "Total Premium before Taxes",
+      "Total Package Premium [A+B]",
       'GST @ 18% [Applied on OD and TP]',
       "Other CESS (%)",
-      "Final Premium Payable",
+      //"Final Premium Payable",
     ],
   },
   "Three Wheeler PCV (More Than 6 Upto 17 passenger)": {
     "Basic Details": [
-      // "IDV",
+      "IDV",
       // "Depreciation %",
-      "Current IDV",
+      // "Current IDV",
       "Year of Manufacture",
       "Zone",
-      "Age of Vehicle",
+      // "Age of Vehicle",
       "No. of Passengers",
     ],
     "[A] Own Damage Premium Package": [
@@ -407,61 +408,65 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Electronic/Electrical Accessories",
       "CNG/LPG Kit(Externally Fitted)",
       "Basic OD Premium",
-      "IMT 23 Loading",
+      "IMT 23",
       "Basic OD before Discount",
       "Discount on OD Premium",
       "Basic OD Before NCB",
       "No Claim Bonus",
       "Net OD Premium(A)",
+      "Total A"
     ],
     "[B] Liability Premium": [
-      "Basic TP Premium",
+      "Basic Liability Premium",
       "Passenger Coverage",
       "CNG/LPG kit",
       "PA to Owner Driver",
       "LL to Paid Driver",
       "Restricted TPPD",
       "Total Liability Premium (B)",
+      "Total B"
     ],
     "[C] Total Premium": [
-      "Total Premium before GST[A+B]",
+      "Total Package Premium[A+B]",
       'GST @ 18% [Applied on OD and TP]',
       "Other CESS (%)",
-      "Final Premium Payable",
+     // "Final Premium Payable",
     ],
   },
   "Taxi (Upto 6 Passengers)": {
     "Basic Details": [
-      // "IDV",
+      "IDV",
       // "Depreciation (%)",
-      "Current IDV",
+      // "Current IDV",
       "Year of Manufacture",
       "Zone",
-      "Age of Vehicle",
+      // "Age of Vehicle",
       "No. of Passengers",
       "Cubic Capacity" // added this
     ],
     "[A] Own Damage Premium Package": [
-      "Vehicle Basic Rate (%)",
+      "Vehicle Basic Rate",
       "Basic for Vehicle",
       "Electronic/Electrical Accessories",
       "CNG/LPG kits(Externally Fitted)",
       "Basic OD Premium",
-      "Anti Theft Discount",
+      "Anti Theft",
       "Basic OD Before Discount",
-      "Discount on OD Premium (%)",
+      "Discount on OD Premium",
       "Basic OD Before NCB",
-      "No Claim Bonus (%)",
+      "No Claim Bonus",
       "Net OD Premium[A]",
       // "Discount Amount",
+      "Total A"
     ],
     "[B] Addon Coverage": [
-      "Zero Depreciation Premium",
-      "RSA Amount",
+      "Zero Depreciation",
+      "RSA/Additional for Addons",
       "Total Addon Premium",
+      "Total B"
     ],
     "[C] Liability Premium": [
-      "Liability Premium (TP)",
+      "Basic Liability Premium (TP)",
       "Passenger Coverage",
       "CNG/LPG Kit",
       "PA to Owner Driver",
@@ -469,105 +474,111 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Total C (Liability Premium)"
     ],
     "[D] Total Premium": [
-      "Premium Before GST(A + B + C)",
+      "Total Package Premium(A + B + C)",
       'GST @ 18% [Applied on OD and TP]',
-      "Other CESS (%)",
-      "Other CESS Amount",
-      "Final Premium Payable"
+      "Other CESS",
+      // "Other CESS Amount",
+      //"Final Premium Payable"
     ]
   },
   "Bus More than 6 Passenger": {
     "Basic Details": [
-      // "IDV (₹)",
+      "IDV",
       // "Depreciation (%)",
-      "Current IDV (₹)",
+      // "Current IDV (₹)",
       "Year Of Manufacture",
       "Zone",
-      "Age of Vehicle",
+      // "Age of Vehicle",
       "No. of Passengers",
     ],
     "[A] Own Damage Premium Package": [
-      "Vehicle Basic Rate(₹)",
-      "Basics for Vehicle (₹)",
-      "Electrical Accessories (₹)",
-      "CNG/LPG Kits (Externally Fitted) (₹)",
-      "Basic OD Premium (₹)",
-      "Geographical Extension (₹)",
-      "IMT 23 Applied",
-      "Anti Theft Applied",
+      "Vehicle Basic Rate",
+      "Basics for Vehicle",
+      "Electrical Accessories",
+      "CNG/LPG Kits (Externally Fitted)",
+      "Basic OD Premium",
+      "Geographical Extension",
+      "IMT 23",
+      "Anti Theft",
       "Basic OD Before Discount",
-      "Discount on OD Premium (₹)",
-      "Basic OD Before Ncb",
-      "NCB Amount (₹)",
-      "Net OD Premium (₹)",
+      "Discount on OD Premium",
+      "Basic OD Before NCB",
+      "NCB Amount",
+      "Net OD Premium",
+      "Total A"
     ],
     "[B] Addon Coverages": [
       "Zero Depreciation",
-      "RSA/Addons (₹)",
+      "RSA/Additional for Addons",
       "Total Addon Premium",
+      "Total B"
     ],
     "[C] Liability Premium": [
-      "Basic Liability Premium (₹)",
+      "Basic Liability Premium",
       "Passenger Coverage",
       "Geographical Extn",
       "CNG/LPG Kits",
-      "PA to Owner Driver (₹)",
-      "LL to Paid Driver (₹)",
-      "LL to Other Employees (₹)",
-      "Total Liability Premium (₹)",
+      "PA to Owner Driver",
+      "LL to Paid Driver",
+      "LL to Other Employees",
+      "Total Liability Premium",
+      "Total C"
     ],
     "[D] Total Premium": [
-      "Premium Before GST",
+      "Total Package premium[A+B+C]",
       "GST @ 18% [Applied on A+B+C]",
-      "Other CESS Amount (₹)",
-      "Final Premium Payable (₹)",
+      "Other CESS",
+      //"Final Premium Payable",
     ],
   },
   "School Bus": {
     "Basic Details": [
-      // "IDV (₹)",
+      "IDV",
       // "Depreciation (%)",
-      "Current IDV (₹)",
+      // "Current IDV (₹)",
       "Year Of Manufacture",
       "Zone",
-      "Age of Vehicle",
+      // "Age of Vehicle",
       "No. of Passengers",
     ],
     "[A] Own Damage Premium Package": [
-      "Vehicle Basic Rate(₹)",
-      "Basics for Vehicle (₹)",
-      "Electrical Accessories (₹)",
-      "CNG/LPG Kits (Externally Fitted) (₹)",
-      "Basic OD Premium (₹)",
-      "Geographical Extension (₹)",
-      "IMT 23 Applied",
-      "Anti Theft Applied",
+      "Vehicle Basic Rate",
+      "Basics for Vehicle",
+      "Electrical Accessories",
+      "CNG/LPG Kits (Externally Fitted)",
+      "Basic OD Premium",
+      "Geographical Extension",
+      "IMT 23",
+      "Anti Theft",
       "Basic OD Before Discount",
-      "Discount on OD Premium (₹)",
-      "Basic OD Before Ncb",
-      "NCB Amount (₹)",
-      "Net OD Premium (₹)",
+      "Discount on OD Premium",
+      "Basic OD Before NCB",
+      "NCB Amount",
+      "Net OD Premium",
+      "Total A"
     ],
     "[B] Addon Coverages": [
       "Zero Depreciation",
-      "RSA/Addons (₹)",
+      "RSA/Additional for Addons",
       "Total Addon Premium",
+      "Total B"
     ],
     "[C] Liability Premium": [
-      "Basic Liability Premium (₹)",
+      "Basic Liability Premium",
       "Passenger Coverage",
       "Geographical Extn",
       "CNG/LPG Kits",
-      "PA to Owner Driver (₹)",
-      "LL to Paid Driver (₹)",
-      "LL to Other Employees (₹)",
-      "Total Liability Premium (₹)",
+      "PA to Owner Driver",
+      "LL to Paid Driver",
+      "LL to Other Employees",
+      "Total Liability Premium",
+      "Total C"
     ],
     "[D] Total Premium": [
-      "Premium Before GST",
+      "Total Package Premium[A+B+C]",
       "GST @ 18% [Applied on A+B+C]",
-      "Other CESS Amount (₹)",
-      "Final Premium Payable (₹)",
+      "Other CESS",
+      //"Final Premium Payable",
     ],
   },
 
@@ -589,7 +600,8 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Loading on OD Premium",
       "Basic OD Before NCB",
       "No Claim Bonus",
-      "Net Own Damage Premium [Total A]"
+      "Net Own Damage Premium [Total A]",
+      "Total A"
     ],
     "[B] Liability Premium": [
       "Basic Liability Premium (TP)",
@@ -662,7 +674,8 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Loading on OD Premium",
       "Basic OD Before NCB",
       "No Claim Bonus",
-      "Net Own Damage Premium [A]"
+      "Net Own Damage Premium [A]",
+      "Total A"
     ],
     "[B] Liability Premium": [
       "Basic Liability Premium (TP)",
@@ -694,7 +707,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Basic OD Before NCB",
       "No Claim Bonus",
       "Net Own Damage Premium",
-      // "Total A"
+      "Total A"
     ],
     "[B] Liability Premium": [
       "Basic Liability Premium (TP)",
@@ -702,7 +715,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "CNG/LPG Kit",
       "PA to Owner Driver",
       "LL to Paid Driver",
-      "LL to Employee/Other",
+      "LL to Employee Other than Paid Driver",
       "LL to Passenger",
       "Total B"
     ],
@@ -725,6 +738,7 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "Total Own Damage Premium",
       "No Claim Bonus",
       "Net Own Damage Premium",
+      "Total A",
     ],
     "[B] Liability Premium": [
       "Liability Premium (TP)",
@@ -773,7 +787,8 @@ const Map<String, Map<String, List<String>>> vehicleCategorySections = {
       "PA to Owner Driver",
       "LL to Paid Driver",
       "LL to Employee Other than Paid Driver",
-      "Total Liability Premium (B)"
+      //"Total Liability Premium (B)",
+      "Total B"
     ],
     "[C] Total Premium": [
       "Total Package Premium[A+B]",

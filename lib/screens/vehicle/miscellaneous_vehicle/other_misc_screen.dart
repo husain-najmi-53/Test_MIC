@@ -182,7 +182,7 @@ class _OtherMiscFormScreenState extends State<OtherMiscFormScreen> {
       "Total Own Damage Premium": odBeforeNcb.toStringAsFixed(2),
       "No Claim Bonus": ncbAmount.toStringAsFixed(2),
       "Net Own Damage Premium": totalA.toStringAsFixed(2),
-      // "Total A": totalA.toStringAsFixed(2),
+      "Total A": totalA.toStringAsFixed(2),
 
       // B - Liability Premium
       "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),

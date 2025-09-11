@@ -238,7 +238,7 @@ class _HearsesFormScreenState extends State<HearsesFormScreen> {
         "Basic OD Before NCB": basicOdBeforeNcb.toStringAsFixed(2),
         "No Claim Bonus": ncbValue.toStringAsFixed(2),
         "Net Own Damage Premium [A]": netOdPremium.toStringAsFixed(2),
-        // "Total A": totalA.toStringAsFixed(2),
+        "Total A": totalA.toStringAsFixed(2),
 
         // B - Liability Premium
         "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),

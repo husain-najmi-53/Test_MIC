@@ -488,7 +488,7 @@ class _PCFormCompleteState extends State<PCFormComplete> {
                     true, "Enter Year"),
                 _buildDropdownField('Zone', _zoneOptions, _selectedZone,
                     (val) => setState(() => _selectedZone = val)),
-                _buildTextField('cubicCapacity', 'Cubic Capacity (cc)', true,
+                _buildTextField('cubicCapacity', 'Cubic Capacity (CC)', true,
                     "Enter Capacity"),
                 _buildTextField('discountOnOd', 'Discount on OD Premium (%)',
                     true, "Enter Discount "),

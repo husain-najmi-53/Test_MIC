@@ -32,7 +32,7 @@ class _VehicleTypeScreenState extends State<VehicleTypeScreen> {
     'Goods Carrying Vehicle': '/goodsCarryingVehicle',
     'Electric goods Carrying Vehicle': '/electricGoodsCarryingVehicle',
     'Three Wheeler Goods Carrying': '/threeWheelerGoodsCarrying',
-    'E-Rickshaw Goods Carrying': '/eRickshawGoodsCarrying',
+    'E-Three Wheeler Goods Carrying': '/eRickshawGoodsCarrying',
 
     // Passenger
     'Three Wheeler PCV(Upto 6 Passengers)': '/threeWheelerPCVUpto6',
@@ -113,7 +113,7 @@ class _VehicleTypeScreenState extends State<VehicleTypeScreen> {
           'icon': Icons.electric_rickshaw
         },
         {'name': 'Three Wheeler Goods Carrying', 'icon': Icons.local_shipping},
-        {'name': 'E-Rickshaw Goods Carrying', 'icon': Icons.electric_rickshaw},
+        {'name': 'E-Three Wheeler Goods Carrying', 'icon': Icons.electric_rickshaw},
       ],
     },
     {

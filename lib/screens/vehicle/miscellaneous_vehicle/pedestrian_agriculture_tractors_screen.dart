@@ -222,7 +222,7 @@ void _submitForm() {
       "Basic OD Before NCB": odBeforeNcb.toStringAsFixed(2),
       "No Claim Bonus": ncbAmount.toStringAsFixed(2),
       "Net Own Damage Premium": totalA.toStringAsFixed(2),
-      // "Total A": totalA.toStringAsFixed(2),
+      "Total A": totalA.toStringAsFixed(2),
 
       // B - Liability Premium
       "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
@@ -230,7 +230,7 @@ void _submitForm() {
       "CNG/LPG Kit": cngLpgKit.toString(),
       "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
       "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
-      "LL to Employee/Other": llLEmployeeOther.toStringAsFixed(2),
+      "LL to Employee Other than Paid Driver": llLEmployeeOther.toStringAsFixed(2),
       "LL to Passenger":llToPassenger.toStringAsFixed(2),
       "Total B": totalB.toStringAsFixed(2),
 
