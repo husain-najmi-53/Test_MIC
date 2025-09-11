@@ -342,14 +342,14 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
         "IDV": currentIdv.toStringAsFixed(2),
         "Year of Manufacture": yearOfManufacture.toString(),
         "Zone": zone,
-        "Kilowatt": kwCapacity.toString(),
+        "Kilowatt": kwCapacity.toInt().toString(),
 
         // A - Own Damage Premium Package
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Discount on OD": discountAmount.toStringAsFixed(2),
         "Loading Discount Premium": loading_on_discount_premium_map.toStringAsFixed(2),
-        "Basic OD Premium after discount":
+        "Basic OD after Discount":
             basicOdAfterDiscount.toStringAsFixed(2),
         "Accessories Value": accessoriesValue.toStringAsFixed(2),
         "Geographical Extn":geographicalExt.toStringAsFixed(2),
@@ -357,7 +357,7 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
         "Driving Tutions": drivingTutions.toStringAsFixed(2),
         "Optional Extensions(GeoExt+FiberGT+DrTutions)":
             OptionalExtensions.toStringAsFixed(2), //
-        "AntiTheft":antiTheftValue.toStringAsFixed(2),
+        "Anti-Theft":antiTheftValue.toStringAsFixed(2),
         "Handicap":handicapValue.toStringAsFixed(2),
         "AAI":AAIValue.toStringAsFixed(2),
         "Voluntary Deduct":VoluntaryDeduct.toStringAsFixed(2),
@@ -381,8 +381,8 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
         "Total B": totalB.toStringAsFixed(2),
 
         // C - Liability Premium
-        "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-        "CNG/LPG kit": cngLpgKit.toStringAsFixed(2),
+        "Basic Liability Premium": liabilityPremiumTP.toStringAsFixed(2),
+        "CNG/LPG kit (TP)": cngLpgKit.toStringAsFixed(2),
         "Geographical Extn (TP)" : tpGeographicalExt.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
@@ -538,27 +538,27 @@ class _EPCFormCompleteState extends State<EPCFormComplete> {
                     (val) => setState(() => _selectedVoluntaryDeduct = val)),
                 _buildDropdownField('No Claim Bonus (%)', _ncbOptions,
                     _selectedNcb, (val) => setState(() => _selectedNcb = val)),
-                _buildTextField('zeroDepreciation', 'Zero Depreciation (rate)',
+                _buildTextField('zeroDepreciation', 'Zero Depreciation (%)',
                     true, "Enter Rate "),
                 _buildTextField(
                     'RSAaddons',
-                    'RSA/Additional for Addons(amount)',
+                    'RSA/Additional for Addons(Amount)',
                     true,
                     "Enter  Amount "),
-                _buildTextField('consumables', 'Consumables(Rate)', true,
+                _buildTextField('consumables', 'Consumables(%)', true,
                     "Enter Rate "),
                 _buildTextField(
-                    'tyreCover', 'Tyre Cover(Rate)', true, "Enter Rate "),
-                _buildTextField('NCBprotection', 'NCB Protection(Rate)', true,
+                    'tyreCover', 'Tyre Cover(%)', true, "Enter Rate "),
+                _buildTextField('NCBprotection', 'NCB Protection(%)', true,
                     "Enter Rate "),
-                _buildTextField('engineProtector', 'Engine Protector', true,
+                _buildTextField('engineProtector', 'Engine Protector(%)', true,
                     "Enter Rate "),
-                _buildTextField('returnToInvoice', 'Return to Invoice(Rate)',
+                _buildTextField('returnToInvoice', 'Return to Invoice(%)',
                     true, "Enter Rate "),
                 _buildTextField('otherAddonCoverage',
-                    'Other Addon Coverage(Rate)', true, " Ex: 0.25 %  "),
+                    'Other Addon Coverage(%)', true, " Ex: 0.25 %  "),
                 _buildTextField('ValueAddedServices',
-                    'Value Added Service(amount)', true, "Enter  Amount "),
+                    'Value Added Service(Amount)', true, "Enter  Amount "),
                 _buildTextField('paOwnerDriver', 'PA to Owner Driver', true,
                     "Enter Amount "),
                 _buildDropdownField(

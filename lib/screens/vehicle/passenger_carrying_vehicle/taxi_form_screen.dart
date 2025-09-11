@@ -234,11 +234,11 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicforvehicle.toStringAsFixed(2),
         "Electronic/Electrical Accessories": electronicAccessoriesPremium.toStringAsFixed(2),
-        "CNG/LPG kits(Externally Fitted)": cngKitLoading.toStringAsFixed(2),
+        "CNG/LPG kits": cngKitLoading.toStringAsFixed(2),
         "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
-        "Anti Theft": antiTheftDiscount.toStringAsFixed(2),
+        "Anti-Theft": antiTheftDiscount.toStringAsFixed(2),
         "Basic OD Before Discount":odBeforeDiscount.toStringAsFixed(2),
-        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Discount on OD": discountAmount.toStringAsFixed(2),
         "Basic OD Before NCB":odBeforeNcb.toStringAsFixed(2), //check formula
         // "Discount Amount": discountAmount.toStringAsFixed(2),
         "No Claim Bonus": ncbAmount.toStringAsFixed(2),
@@ -247,19 +247,19 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
         "Net OD Premium[A]": netOdPremium.toStringAsFixed(2),
         "Total A": totalA.toStringAsFixed(2),
 
-        "Zero Depreciation": zeroDepPremium.toStringAsFixed(2),
+        "Zero Dep Premium": zeroDepPremium.toStringAsFixed(2),
         "RSA/Additional for Addons": rsaAmount.toStringAsFixed(2),
         "Total Addon Premium": totalAddon.toStringAsFixed(2),
         "Total B": totalAddon.toStringAsFixed(2),
 
         //C liability premium
-        "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "Basic Liability Premium": liabilityPremiumTP.toStringAsFixed(2),
         "Passenger Coverage": passCov.toStringAsFixed(2),
         // "PA to Unnamed Passengers": paUnnamedPassenger.toStringAsFixed(2),
-        "CNG/LPG Kit":cngTpExtra.toStringAsFixed(2), 
+        "CNG/LPG Kit (TP)":cngTpExtra.toStringAsFixed(2), 
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
-        "Total C (Liability Premium)": totalB.toStringAsFixed(2),
+        "Total C": totalB.toStringAsFixed(2),
 
         //D 
         "Total Package Premium(A + B + C)": totalAB.toStringAsFixed(2),

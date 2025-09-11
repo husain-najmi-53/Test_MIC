@@ -60,11 +60,11 @@ class _ThreeWheelerPCV_upto6PassengerState
     super.initState();
     // Auto-select LL to Paid Driver to 50
     _selectedLlPaidDriver = '50';
-    _selectedImt23='No';
-    _selectedNcb='0';
-    _controllers['paOwnerDriver']!.text=0.toString();
-    _controllers['otherCess']!.text=0.toString();
-    _selectedRestrictedTPPD='No';
+    // _selectedImt23='No';
+    // _selectedNcb='0';
+    // _controllers['paOwnerDriver']!.text=0.toString();
+    // _controllers['otherCess']!.text=0.toString();
+    // _selectedRestrictedTPPD='No';
   }
 
   @override
@@ -228,11 +228,11 @@ class _ThreeWheelerPCV_upto6PassengerState
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
         
         "Electronic/Electrical Accessories":accessories.toStringAsFixed(2),
-        "CNG/LPG Kit(Externally Fitted)": cngKitLoading.toStringAsFixed(2),
+        "CNG/LPG Kit": cngKitLoading.toStringAsFixed(2),
         "Basic OD Premium" :basicOdPremium.toStringAsFixed(2),
         "IMT 23": imt23Loading.toStringAsFixed(2),
         "Basic OD before Discount": totalOdBeforeDiscount.toStringAsFixed(2),
-        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Discount on OD": discountAmount.toStringAsFixed(2),
         "Basic OD Before NCB": odBeforeNcb.toStringAsFixed(2),
         // "OD after Discount": odAfterDiscount.toStringAsFixed(2),
         "No Claim Bonus": ncbAmount.toStringAsFixed(2),
@@ -242,7 +242,7 @@ class _ThreeWheelerPCV_upto6PassengerState
         // B - Liability Premium
         "Basic Liability Premium": baseTpPremium.toStringAsFixed(2),
         "Passenger Coverage": paUnnamedPassengerAmount.toStringAsFixed(2),
-        "CNG/LPG kit": cngTpExtra.toStringAsFixed(2),
+        "CNG/LPG Kit (TP)": cngTpExtra.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
         // "Restricted TPPD": restrictedTPPD == 'Yes' ? "Yes (20% discount)" : "No",
@@ -251,13 +251,10 @@ class _ThreeWheelerPCV_upto6PassengerState
         // "TP Premium after restriction": tpPremium.toStringAsFixed(2),
         "Total B": totalLiabilityPremium.toStringAsFixed(2),
         
-        
-        
-
         // C - Total Premium and Taxes
         "Total Package Premium [A+B]": totalPremiumBeforeTaxes.toStringAsFixed(2),
         'GST @ 18% [Applied on OD and TP]': gst.toStringAsFixed(2),
-        "Other CESS (%)": otherCessAmt.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2),
         
 
         // Final Premium

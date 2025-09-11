@@ -192,22 +192,21 @@ class _TwoWheelerPassengerCarryingFormScreenState
         // A - Own Damage Premium Package
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-        "Basic OD Premium after discount":
-            basicOdAfterDiscount.toStringAsFixed(2),
+        "Discount on OD": discountAmount.toStringAsFixed(2),
+        "Basic OD after Discount": basicOdAfterDiscount.toStringAsFixed(2),
         "IMT 23": imt23Premium.toStringAsFixed(2),
         "Accessories Value": accessoriesPremium.toStringAsFixed(2),
         "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
         "No Claim Bonus": ncbAmount.toStringAsFixed(2),
-        "Net Own Damage Premium(A)": netOdPremium.toStringAsFixed(2),
+        "Total A": netOdPremium.toStringAsFixed(2),
 
         // B - Liability Premium
-        "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "Basic Liability Premium": liabilityPremiumTP.toStringAsFixed(2),
         "Passenger Coverage": passenegrCoverage.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppd,
-        "Total Liability Premium (B)": totalB.toStringAsFixed(2),
+        "Total B": totalB.toStringAsFixed(2),
 
         // C - Total Premium
         "Total Package Premium[A+B]": totalAB.toStringAsFixed(2),

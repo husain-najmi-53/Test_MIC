@@ -24,23 +24,23 @@ class GcvInsuranceResultScreen extends StatelessWidget {
           "Basic for Vehicle",
           "Electrical Accessories",
           "CNG/LPG Kits",
-          "Basic Od Premium",
-          "Geographical Ext",
+          "Basic OD Premium",
+          "Geographical Extn",
           "IMT 23",
           "Anti-Theft",
           "Basic OD before Discount",
           "Discount on OD",
           "Basic OD before NCB",
           "No Claim Bonus",
-          "Net Own Damage Premium (A)",
+          //"Net Own Damage Premium (A)",
           "Total A"
         ],
         "[B] Addon Coverage": ["Zero Depreciation", "RSA", "Total B"],
         "[C] Liability Premium": [
-          "Basic Liability Premium (TP)",
+          "Basic Liability Premium",
           "Restricted TPPD",
-          "CNG/LPG Kit",
-          "Geographical Extn",
+          "CNG/LPG Kit (TP)",
+          "Geographical Extn (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "LL to Other Employee",
@@ -49,7 +49,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         "[D] Total Premium": [
           "Total Package Premium (A+B+C)",
           "GST @ (18%)",
-          "Gst @ (12%) on Basic Tp",
+          "GST @ (12%) on Basic TP",
           "Other CESS",
           //"Final Premium"
         ],
@@ -66,23 +66,23 @@ class GcvInsuranceResultScreen extends StatelessWidget {
           "Basic for Vehicle",
           "Electrical Accessories",
           "CNG/LPG Kits",
-          "Basic Od Premium",
-          "Geographical Ext",
+          "Basic OD Premium",
+          "Geographical Extn",
           "IMT 23",
           "Anti-Theft",
           "Basic OD before Discount",
           "Discount on OD",
           "Basic OD before NCB",
           "No Claim Bonus",
-          "Net Own Damage Premium (A)",
+          //"Net Own Damage Premium (A)",
           "Total A"
         ],
         "[B]Add-on Coverage": ["RSA", "Zero Depreciation", "Total B"],
         "[C] Liability Premium": [
-          "Basic Liability Premium (TP)",
+          "Basic Liability Premium",
           "Restricted TPPD",
-          "CNG/LPG Kit",
-          "Geographical Extn",
+          "CNG/LPG Kit (TP)",
+          "Geographical Extn (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "LL to Other Employee",
@@ -91,7 +91,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         "[D] Total Premium": [
           "Total Package Premium (A+B+C)",
           "GST @ (18%)",
-          "Gst @ (12%) on Basic Tp",
+          "GST @ (12%) on Basic TP",
           "Other CESS",
          // "Final Premium"
         ]
@@ -106,19 +106,19 @@ class GcvInsuranceResultScreen extends StatelessWidget {
           "Vehicle Basic Rate",
           "Basic for Vehicle",
           "CNG/LPG kits",
-          "Basic Od Premium",
+          "Basic OD Premium",
           "IMT 23",
-          "OD Before Discount",
+          "Basic OD before Discount",
           "Discount on OD",
-          "OD Before NCB",
+          "Basic OD before NCB",
           "No Claim Bonus",
-          "Net Own Damage Premium",
+          //"Net Own Damage Premium",
           "Total A"
         ],
         "[B] Liability Premium": [
-          "Basic Liability Premium (TP)",
+          "Basic Liability Premium",
           "Restricted TPPD",
-          "CNG/LPG kit",
+          "CNG/LPG Kit (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "Total B"
@@ -126,8 +126,8 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         "[C] Total Premium": [
           "Total Package Premium (A+B)",
           "GST @ (18%)",
-          "Gst @ (12%) on Basic Tp",
-          "Other Cess",
+          "GST @ (12%) on Basic TP",
+          "Other CESS",
           //"Final Premium"
         ]
       },
@@ -142,12 +142,12 @@ class GcvInsuranceResultScreen extends StatelessWidget {
           "Basic for Vehicle",
           "Electrical Accessories",
           "IMT 23",
-          "OD Before Discount",
-          "Discount on OD Premium",
+          "Basic OD before Discount",
+          "Discount on OD",
           "Loading Discount Premium",
-          "OD Before NCB",
+          "Basic OD before NCB",
           "No Claim Bonus",
-          "Net Own Damage Premium",
+         // "Net Own Damage Premium",
           "Total A"
         ],
         "[B] Addon Coverage": [
@@ -155,7 +155,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
           "Total B",
         ],
         "[C] Liability Premium": [
-          "Basic Liability Premium (TP)",
+          "Basic Liability Premium",
           "Restricted TPPD",
           "PA to Owner Driver",
           "LL to Paid Driver",
@@ -164,7 +164,7 @@ class GcvInsuranceResultScreen extends StatelessWidget {
         "[D] Total Premium": [
           "Total package Premium (A+B+C)",
           "GST @ (18%)",
-          "Other Cess",
+          "Other CESS",
          // "Final Premium"
         ]
       },

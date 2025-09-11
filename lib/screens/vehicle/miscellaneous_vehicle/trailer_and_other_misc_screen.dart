@@ -176,7 +176,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       double imt23 = _selectedImt23 == 'Yes' ? 15.0 : 0.0; // IMT 23 percentage
       String selectedTrailerTowedBy = _selectedTrailerTowedBy ?? 'Other Vehicle';
       double overturningForCranes = _selectedOverturningForCranes == 'Yes'
-          ? 0.50
+          ? 0.5
           : 0.0; // Overturning for Cranes percentage change as per client given IRDA Rates
       double discountRate =
           double.tryParse(_controllers['Discount_on_OD_premium(%)']!.text) ??
@@ -218,7 +218,7 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
       double basicODPremium = basicForVehicle + trailerOD; //Basic OD Premium (before crane/imt/cng)
 
       double overturningCranePremium =
-          basicODPremium * overturningForCranes / 100; //Overturning for Cranes
+          basicODPremium * overturningForCranes; //Overturning for Cranes
 
 
       double cngLpgPremium = 0.0;
@@ -295,20 +295,20 @@ class _TrailerAndOtherFormScreenState extends State<TrailerAndOtherFormScreen> {
         "Basic OD Premium": basicODPremium.toStringAsFixed(2),
         "Overturning for Cranes": overturningCranePremium.toStringAsFixed(2),
         "IMT 23": imt23Loading.toStringAsFixed(2),
-        "CNG/LPG kit (Externally Fitted)": cngLpgPremium.toStringAsFixed(2),
-        "Basic OD Premium before discount": basicODBeforePremium.toStringAsFixed(2),
-        "Discount on OD Premium": discountOnODPremium.toStringAsFixed(2),
-        "Loading on OD Premium": loadingOnODPremium.toStringAsFixed(2),
+        "CNG/LPG kit": cngLpgPremium.toStringAsFixed(2),
+        "Basic OD before Discount": basicODBeforePremium.toStringAsFixed(2),
+        "Discount on OD": discountOnODPremium.toStringAsFixed(2),
+        "Loading Discount Premium": loadingOnODPremium.toStringAsFixed(2),
         "Basic OD Before NCB": basicODBeforeNCB.toStringAsFixed(2),
         "No Claim Bonus": ncbAmount.toStringAsFixed(2),
         "Net Own Damage Premium": totalA.toStringAsFixed(2),
         "Total A": totalA.toStringAsFixed(2),
 
         // B - Liability Premium
-        "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-        "Trailer Liability Premium (TP)": trailerLiabilityTP.toStringAsFixed(2),
+        "Basic Liability Premium": liabilityPremiumTP.toStringAsFixed(2),
+        "Trailer Liability Premium": trailerLiabilityTP.toStringAsFixed(2),
         "Restricted TPPD": restrictedTPPDValue.toStringAsFixed(2),
-        "CNG/LPG Kit": cngLpgValue.toStringAsFixed(2),
+        "CNG/LPG Kit (TP)": cngLpgValue.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "LL to Employee Other than Paid Driver":

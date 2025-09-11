@@ -230,9 +230,9 @@ class _PCForm1YODState extends State<PCForm1YOD> {
         // A - Own Damage Premium Package
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
+        "Discount on OD": discountAmount.toStringAsFixed(2),
         "Loading Discount Premium": loading_on_discount_premium_map.toStringAsFixed(2),
-        "Basic OD Premium after discount":
+        "Basic OD after Discount":
             basicOdAfterDiscount.toStringAsFixed(2),
         "Accessories Value": accessoriesValue.toStringAsFixed(2),
         "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
@@ -370,14 +370,14 @@ class _PCForm1YODState extends State<PCForm1YOD> {
                     'CNG/LPG kits (externally fitted)', true, "Enter Value"),*/
                 _buildDropdownField('No Claim Bonus (%)', _ncbOptions,
                     _selectedNcb, (val) => setState(() => _selectedNcb = val)),
-                _buildTextField('zeroDepreciation', 'Zero Depreciation (rate)',
+                _buildTextField('zeroDepreciation', 'Zero Depreciation (%)',
                     true, "Enter Depreciation "),
                 _buildTextField('RSAaddons',
-                    'RSA/Additional for Addons(amount)', true, "Enter Addons "),
+                    'RSA/Additional for Addons(Amount)', true, "Enter Addons "),
                 _buildTextField('otherAddonCoverage',
-                    'Other Addon Coverage(Rate)', true, "Ex: 0.25 %  "),
+                    'Other Addon Coverage(%)', true, "Ex: 0.25 %  "),
                 _buildTextField('ValueAddedServices',
-                    'Value Added Service(amount)', true, "Enter Amount "),
+                    'Value Added Service(Amount)', true, "Enter Amount "),
                 // _buildTextField('paOwnerDriver', 'PA to Owner Driver (₹)', true, "Enter Amount "),
                 /*_buildDropdownField(
                     'LL to Paid Driver',

@@ -176,8 +176,8 @@ class _ElectricTwoWheeler1YODFormScreenState
         // A - Own Damage Premium Package
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-        "Basic OD Premium after discount":
+        "Discount on OD": discountAmount.toStringAsFixed(2),
+        "Basic OD after Discount":
             basicOdAfterDiscount.toStringAsFixed(2),
         "Accessories Value": accessoriesPremium.toStringAsFixed(2),
         "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),

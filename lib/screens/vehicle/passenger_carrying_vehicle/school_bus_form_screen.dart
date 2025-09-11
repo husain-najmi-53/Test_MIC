@@ -229,27 +229,27 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
 
         // [A] Own Damage
         "Vehicle Basic Rate": odRate.toStringAsFixed(3),
-        "Basics for Vehicle": basicforvehicle.toStringAsFixed(2),
+        "Basic for Vehicle": basicforvehicle.toStringAsFixed(2),
         "Electrical Accessories": accessories.toStringAsFixed(2),
-        "CNG/LPG Kits (Externally Fitted)":
+        "CNG/LPG Kits":
             cngKitLoading.toStringAsFixed(2),
         "Basic OD Premium":
             basicOdPremium.toStringAsFixed(2), //check the formula
-        "Geographical Extension": geographicalExt.toStringAsFixed(2),
+        "Geographical Extn": geographicalExt.toStringAsFixed(2),
         "IMT 23": imt23value.toStringAsFixed(2),
-        "Anti Theft": atDiscount.toStringAsFixed(2),
+        "Anti-Theft": atDiscount.toStringAsFixed(2),
         "Basic OD Before Discount":
             basicOdBeforeDiscount.toStringAsFixed(2), //check formula
-        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-        "No Claim Bonus": selectedNcbPercent.toStringAsFixed(2),
+        "Discount on OD": discountAmount.toStringAsFixed(2),
+        //"No Claim Bonus": selectedNcbPercent.toStringAsFixed(2),
         "Basic OD Before NCB": totalBasicPremium.toStringAsFixed(2),
-        "NCB Amount": ncbAmount.toStringAsFixed(2),
+        "No Claim Bonus": ncbAmount.toStringAsFixed(2),
 
         "Net OD Premium": netOdPremium.toStringAsFixed(2),
         "Total A": netOdPremium.toStringAsFixed(2),
 
         //[B] Addon Coverages
-        "Zero Depreciation": zeroDep.toStringAsFixed(2),
+        "Zero Dep Premium": zeroDep.toStringAsFixed(2),
         "RSA/Additional for Addons": rsaAddons.toStringAsFixed(2),
         "Total Addon Premium": addonPremium.toStringAsFixed(2),
         "Total B": addonPremium.toStringAsFixed(2),
@@ -257,8 +257,8 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
         // [C] Liability
         "Basic Liability Premium": tpPremium.toStringAsFixed(2),
         "Passenger Coverage": passCov.toStringAsFixed(2),
-        "Geographical Extn": fixedGeogExt.toStringAsFixed(2),
-        "CNG/LPG Kits": cngTpExtra.toStringAsFixed(2),
+        "Geographical Extn (TP)": fixedGeogExt.toStringAsFixed(2),
+        "CNG/LPG Kit (TP)": cngTpExtra.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llPaidDriverAmount.toStringAsFixed(2),
         "LL to Other Employees": llOtherEmployeeAmount.toStringAsFixed(2),
@@ -412,8 +412,8 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
                             hintText: 'Select Option'),
                         _buildTextField(
                           'zeroDepreciation',
-                          'Zero Depreciation (₹)',
-                          'Enter Amount',
+                          'Zero Depreciation (%)',
+                          'Enter %',
                         ),
 
                         _buildTextField(

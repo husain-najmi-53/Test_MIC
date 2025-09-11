@@ -185,8 +185,8 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
         // A - Own Damage Premium Package
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-        "Basic OD Premium after discount":
+        "Discount on OD": discountAmount.toStringAsFixed(2),
+        "Basic OD after Discount":
             basicOdAfterDiscount.toStringAsFixed(2),
         "Accessories Value": accessoriesPremium.toStringAsFixed(2),
         "Total Basic Premium": totalBasicPremium.toStringAsFixed(2),
@@ -196,7 +196,7 @@ class _ElectricTwoWheeler1YearOD1YearTPFormScreenState
         "Total A": totalA.toStringAsFixed(2),
 
         // B - Liability Premium
-        "Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "Basic Liability Premium": liabilityPremiumTP.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "PA to Unnamed Passenger": paUnnamedPassenger.toStringAsFixed(2),

@@ -239,22 +239,22 @@ class _AmbulanceFormScreenState extends State<AmbulanceFormScreen> {
         // A - Own Damage Premium Package
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicForVehicle.toStringAsFixed(2),
-        "CNG/LPG kit (Externally Fitted)": cngLpgPremium.toStringAsFixed(2),
+        "CNG/LPG kit": cngLpgPremium.toStringAsFixed(2),
         "Basic OD Premium": basicOdPremium.toStringAsFixed(2),
         "IMT 23": imt23Value.toStringAsFixed(2),
-        "Basic OD Premium Before discount":
+        "Basic OD before Discount":
             basicOdBeforeDiscount.toStringAsFixed(2),
-        "Discount on OD Premium": discountAmount.toStringAsFixed(2),
-        "Loading on OD Premium": loadingAmount.toStringAsFixed(2),
+        "Discount on OD": discountAmount.toStringAsFixed(2),
+        "Loading Discount Premium": loadingAmount.toStringAsFixed(2),
         "Basic OD Before NCB": odBeforeNcb.toStringAsFixed(2),
         "No Claim Bonus": ncbAmount.toStringAsFixed(2),
         "Net Own Damage Premium [Total A]": totalA.toStringAsFixed(2),
         "Total A": totalA.toStringAsFixed(2),
 
         // B - Liability Premium
-        "Basic Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
+        "Basic Liability Premium": liabilityPremiumTP.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppd.toStringAsFixed(2),
-        "CNG/LPG Kit": cngTpExtra.toString(),
+        "CNG/LPG Kit (TP)": cngTpExtra.toString(),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llPaidDriver.toStringAsFixed(2),
         "LL to Employee Other than Paid Driver":

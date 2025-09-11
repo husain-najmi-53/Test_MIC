@@ -22,13 +22,13 @@ class InsuranceCarResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
+          "Discount on OD",
+          "Basic OD after Discount",
           "Loading Discount Premium",
           "Accessories Value",
           "Total Basic Premium",
           "No Claim Bonus",
-          "Net Own Damage Premium",
+          //"Net Own Damage Premium",
           "Total A"
         ],
 
@@ -56,13 +56,13 @@ class InsuranceCarResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
+          "Discount on OD",
+          "Basic OD after Discount",
           "Loading Discount Premium",
           "Accessories Value",
           "Total Basic Premium",
           "No Claim Bonus",
-          "Net Own Damage Premium",
+         // "Net Own Damage Premium",
           "Total A"
         ],
 
@@ -75,8 +75,8 @@ class InsuranceCarResultScreen extends StatelessWidget {
         ],
 
         "[C] Liability Premium": [
-          "Liability Premium (TP)",
-          "CNG/LPG kit",
+          "Basic Liability Premium",
+          "CNG/LPG kit (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
@@ -94,13 +94,13 @@ class InsuranceCarResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
+          "Discount on OD",
           "Loading Discount Premium",
-          "Basic OD Premium after discount",
+          "Basic OD after Discount",
           "Accessories Value",
           "Total Basic Premium",
           "No Claim Bonus",
-          "Net Own Damage Premium",
+         // "Net Own Damage Premium",
           "Total A"
         ],
 
@@ -124,13 +124,13 @@ class InsuranceCarResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
+          "Discount on OD",
           "Loading Discount Premium",
-          "Basic OD Premium after discount",
+          "Basic OD after Discount",
           "Accessories Value",
           "Total Basic Premium",
           "No Claim Bonus",
-          "Net Own Damage Premium",
+         // "Net Own Damage Premium",
           "Total A"
         ],
 
@@ -143,8 +143,8 @@ class InsuranceCarResultScreen extends StatelessWidget {
         ],
 
         "[C] Liability Premium": [
-          "Liability Premium (TP)",
-          "CNG/LPG kit",
+          "Basic Liability Premium",
+          "CNG/LPG kit (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
@@ -167,22 +167,22 @@ class InsuranceCarResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
+          "Discount on OD",
           "Loading Discount Premium",
-          "Basic OD Premium after discount",
+          "Basic OD after Discount",
           "Accessories Value",
           // "Optional Extensions(GeoExt+FiberGT+DrTutions)",
           "Geographical Extn",
           "Fiber Glass Tank",
           "Driving Tutions",
           // "Total Discounts(AntiTheft+Handicap+AAI+VoluntaryDeduct)",
-          "AntiTheft",
+          "Anti-Theft",
           "Handicap",
           "AAI",
           "Voluntary Deduct",
           "Total Basic Premium",
           "No Claim Bonus",
-          "Net Own Damage Premium",
+         // "Net Own Damage Premium",
           "Total A"
         ],
 
@@ -200,8 +200,8 @@ class InsuranceCarResultScreen extends StatelessWidget {
         ],
 
         "[C] Liability Premium": [
-          "Liability Premium (TP)",
-          "CNG/LPG kit",
+          "Basic Liability Premium",
+          "CNG/LPG kit (TP)",
           "Geographical Extn (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",
@@ -225,22 +225,22 @@ class InsuranceCarResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
+          "Discount on OD",
           "Loading Discount Premium",
-          "Basic OD Premium after discount",
+          "Basic OD after Discount",
           "Accessories Value",
           "Geographical Extn",
           "Fiber Glass Tank",
           "Driving Tutions",
           // "Optional Extensions(GeoExt+FiberGT+DrTutions)",
-          "AntiTheft",
+          "Anti-Theft",
           "Handicap",
           "AAI",
           "Voluntary Deduct",
           // "Total Discounts(AntiTheft+Handicap+AAI+VoluntaryDeduct)",
           "Total Basic Premium",
           "No Claim Bonus",
-          "Net Own Damage Premium",
+         // "Net Own Damage Premium",
           "Total A"
         ],
 
@@ -258,8 +258,8 @@ class InsuranceCarResultScreen extends StatelessWidget {
         ],
 
         "[C] Liability Premium": [
-          "Liability Premium (TP)",
-          "CNG/LPG kit",
+          "Basic Liability Premium",
+          "CNG/LPG kit (TP)",
           "Geographical Extn (TP)",
           "PA to Owner Driver",
           "LL to Paid Driver",

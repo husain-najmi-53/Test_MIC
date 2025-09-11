@@ -235,22 +235,22 @@ class _TrailerFormScreenState extends State<TrailerFormScreen> {
         "Vehicle Basic Rate": vehicleBasicRate.toStringAsFixed(3),
         "Basic for Vehicle": basicOdPremium.toStringAsFixed(2),
         "IMT 23": imt23Amount.toStringAsFixed(2),
-        "CNG/LPG kit (Externally Fitted)": cngLpgPremium.toStringAsFixed(2),
-        "Basic OD Premium Before discount":
+        "CNG/LPG kit": cngLpgPremium.toStringAsFixed(2),
+        "Basic OD before Discount":
             basicOdBeforeDiscount.toStringAsFixed(2),
-        "Discount on OD Premium": discountOdPremium.toStringAsFixed(2),
-        "Loading on OD Premium": loadingOdPremium.toStringAsFixed(2),
+        "Discount on OD": discountOdPremium.toStringAsFixed(2),
+        "Loading Discount Premium": loadingOdPremium.toStringAsFixed(2),
         "Basic OD Before NCB": odBeforeNcb.toStringAsFixed(2),
         "No Claim Bonus": ncbAmount.toStringAsFixed(2),
         "Net Own Damage Premium": totalA.toStringAsFixed(2),
         "Total A": totalA.toStringAsFixed(2),
 
         // B - Liability Premium
-        "Trailer Liability Premium (TP)": liabilityPremiumTP.toStringAsFixed(2),
-        "Total Trailer Liability Premium (TP)":
+        "Trailer Liability Premium": liabilityPremiumTP.toStringAsFixed(2),
+        "Total Trailer Liability Premium":
             totalLiabilityPremiumTP.toStringAsFixed(2),
         "Restricted TPPD": restrictedTppd.toStringAsFixed(2),
-        "CNG/LPG Kit": cngTpExtra.toString(),
+        "CNG/LPG Kit (TP)": cngTpExtra.toString(),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
         "LL to Paid Driver": llToPaidDriver.toStringAsFixed(2),
         "LL to Employee Other than Paid Driver":

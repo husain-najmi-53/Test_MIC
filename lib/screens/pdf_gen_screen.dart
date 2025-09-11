@@ -249,22 +249,25 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
         final filename =
             '${vehicleType}_${company.replaceAll(' ', '_')}_$timestamp.pdf';
 
+        final currentCompanyContact = insurerContactInfo[company] ??
+            {
+              'phone': 'N/A',
+              'email': 'N/A',
+              'claims': 'Contact customer service for details.',
+            };
+
+        // Check if this is a complex form that needs special layout
+        final bool isComplexForm = vehicleType.contains("Complete");
+        
         final page = pw.Page(
           pageFormat: PdfPageFormat.a4,
-          margin: const pw.EdgeInsets.all(20),
+          margin: const pw.EdgeInsets.all(15),
           build: (context) {
-            final currentCompanyContact = insurerContactInfo[company] ??
-                {
-                  'phone': 'N/A',
-                  'email': 'N/A',
-                  'claims': 'Contact customer service for details.',
-                };
-
             return pw.Stack(
               children: [
                 _buildWatermark(),
                 pw.Container(
-                  padding: const pw.EdgeInsets.all(10),
+                  padding: const pw.EdgeInsets.all(8),
                   decoration: pw.BoxDecoration(
                     border: pw.Border.all(
                       color: PdfColors.black,
@@ -275,9 +278,9 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
                     crossAxisAlignment: pw.CrossAxisAlignment.start,
                     children: [
                       _buildQuotationHeader(),
-                      pw.SizedBox(height: 8),
+                      pw.SizedBox(height: 6),
                       _buildCompanyHeader(company),
-                      pw.SizedBox(height: 12),
+                      pw.SizedBox(height: 8),
                       pw.Row(
                         crossAxisAlignment: pw.CrossAxisAlignment.start,
                         children: [
@@ -288,36 +291,49 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
                               children: [
                                 _buildDetailsSection(
                                     quotation, includeAgentDetails),
-                                pw.SizedBox(height: 8),
+                                pw.SizedBox(height: 6),
                                 _buildVehicleDetailsSection(quotation),
                                 if (quotation.otherCoverage != null &&
-                                    quotation.otherCoverage!.isNotEmpty)
+                                    quotation.otherCoverage!.isNotEmpty) ...[
+                                  pw.SizedBox(height: 6),
                                   _buildOtherCoverageSection(quotation)!,
+                                ],
+                                // For complex forms, add contact details in the left column
+                                if (isComplexForm) ...[
+                                  pw.SizedBox(height: 8),
+                                  _buildInsurerContactSection(
+                                      company,
+                                      currentCompanyContact['phone']!,
+                                      currentCompanyContact['email']!,
+                                      currentCompanyContact['claims']!),
+                                ],
                               ],
                             ),
                           ),
-                          pw.SizedBox(width: 12),
+                          pw.SizedBox(width: 10),
                           pw.Expanded(
                             flex: 3,
                             child: pw.Column(
                               crossAxisAlignment: pw.CrossAxisAlignment.start,
                               children: [
                                 _buildPremiumSummarySection(quotation),
-                                pw.SizedBox(height: 8),
+                                pw.SizedBox(height: 6),
                                 _buildTotalPremiumSection(quotation),
                               ],
                             ),
                           ),
                         ],
                       ),
-                      pw.SizedBox(height: 12),
-                      pw.SizedBox(height: 20),
-                      _buildInsurerContactSection(
-                          company,
-                          currentCompanyContact['phone']!,
-                          currentCompanyContact['email']!,
-                          currentCompanyContact['claims']!),
-                      pw.SizedBox(height: 20),
+                      // For non-complex forms, add contact details at the bottom
+                      if (!isComplexForm) ...[
+                        pw.Spacer(),
+                        _buildInsurerContactSection(
+                            company,
+                            currentCompanyContact['phone']!,
+                            currentCompanyContact['email']!,
+                            currentCompanyContact['claims']!),
+                      ],
+                      pw.SizedBox(height: 8),
                     ],
                   ),
                 ),
@@ -325,7 +341,6 @@ class _PdfSelectionScreenState extends State<PdfSelectionScreen> {
             );
           },
         );
-
         pdf.addPage(page);
 
         final pdfBytes = await pdf.save();

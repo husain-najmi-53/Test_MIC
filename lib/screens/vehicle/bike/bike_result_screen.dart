@@ -22,8 +22,8 @@ class BikeInsuranceResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
+          "Discount on OD",
+          "Basic OD after Discount",
           "Accessories Value",
           "Total Basic Premium",
           "No Claim Bonus",
@@ -54,8 +54,8 @@ class BikeInsuranceResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
+          "Discount on OD",
+          "Basic OD after Discount",
           "Accessories Value",
           "Total Basic Premium",
           "No Claim Bonus",
@@ -64,7 +64,7 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "Total A"
         ],
         "[B] Liability Premium": [
-          "Liability Premium (TP)",
+          "Basic Liability Premium",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
@@ -87,8 +87,8 @@ class BikeInsuranceResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
+          "Discount on OD",
+          "Basic OD after Discount",
           "Accessories Value",
           "Total Basic Premium",
           "No Claim Bonus",
@@ -97,7 +97,7 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "Total A"
         ],
         "[B] Liability Premium": [
-          "Liability Premium (TP)",
+          "Basic Liability Premium",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
@@ -115,8 +115,8 @@ class BikeInsuranceResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
+          "Discount on OD",
+          "Basic OD after Discount",
           "Accessories Value",
           "Total Basic Premium",
           "No Claim Bonus",
@@ -142,8 +142,8 @@ class BikeInsuranceResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
+          "Discount on OD ",
+          "Basic OD after Discount",
           "Accessories Value",
           "Total Basic Premium",
           "No Claim Bonus",
@@ -152,7 +152,7 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "Total A"
         ],
         "[B] Liability Premium": [
-          "Liability Premium (TP)",
+          "Basic Liability Premium",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
@@ -170,8 +170,8 @@ class BikeInsuranceResultScreen extends StatelessWidget {
         "[A] Own Damage Premium Package": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
+          "Discount on OD",
+          "Basic OD after Discount",
           "Accessories Value",
           "Total Basic Premium",
           "No Claim Bonus",
@@ -180,7 +180,7 @@ class BikeInsuranceResultScreen extends StatelessWidget {
           "Total A"
         ],
         "[B] Liability Premium": [
-          "Liability Premium (TP)",
+          "Basic Liability Premium",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "PA to Unnamed Passenger",
@@ -204,21 +204,21 @@ class BikeInsuranceResultScreen extends StatelessWidget {
         "[A] Own Damage Premium": [
           "Vehicle Basic Rate",
           "Basic for Vehicle",
-          "Discount on OD Premium",
-          "Basic OD Premium after discount",
+          "Discount on OD",
+          "Basic OD after Discount",
           "Accessories Value",
           "IMT 23",
           "Total Basic Premium",
           "No Claim Bonus",
-          "Net Own Damage Premium(A)",
+          "Total A",
         ],
         "[B] Liability Premium": [
-          "Liability Premium (TP)",
+          "Basic Liability Premium",
           "Passenger Coverage",
           "PA to Owner Driver",
           "LL to Paid Driver",
           "Restricted TPPD",
-          "Total Liability Premium (B)"
+          "Total B"
         ],
         "[C] Total Premium": [
           "Total Package Premium[A+B]",

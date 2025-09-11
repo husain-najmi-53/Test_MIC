@@ -133,7 +133,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
       double TotalC = totalTp;
 
       double totalAB = netOdPremium + valueAddedService + totalTp;
-      double gst = TotalA * 0.18;
+      double gst = totalAB * 0.18;
       double otherCessAmt = (totalAB * otherCess) / 100;
       double finalPremium = totalAB + gst + otherCessAmt;
 
@@ -145,14 +145,14 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
         "Basic for Vehicle": basicOd.toStringAsFixed(2),
         "Electrical Accessories": electricAccessoriesVal.toStringAsFixed(2),
         "IMT 23": imt23Amt.toStringAsFixed(2),
-        "OD Before Discount": odBeforeDiscount.toStringAsFixed(2),
-        "Discount on OD Premium": discountAmt.toStringAsFixed(2),
+        "Basic OD before Discount": odBeforeDiscount.toStringAsFixed(2),
+        "Discount on OD": discountAmt.toStringAsFixed(2),
         //"OD After Discount": odAfterDiscount.toStringAsFixed(2),
         "Loading Discount Premium": loadingAmt.toStringAsFixed(2),
-        "OD Before NCB": odBeforeNcb.toStringAsFixed(2),
+        "Basic OD before NCB": odBeforeNcb.toStringAsFixed(2),
         "No Claim Bonus": ncbAmt.toStringAsFixed(2),
         "Net Own Damage Premium": netOdPremium.toStringAsFixed(2),
-        "Basic Liability Premium (TP)": basicTp.toStringAsFixed(2),
+        "Basic Liability Premium": basicTp.toStringAsFixed(2),
         "Value Added Service": valueAddedService.toStringAsFixed(2),
         "Total B": valueAddedService.toStringAsFixed(2),
         "PA to Owner Driver": paOwnerDriver.toStringAsFixed(2),
@@ -161,7 +161,7 @@ class _ERickshawGoodsScreenState extends State<ERickshawGoodsScreen> {
         "Total C": totalTp.toStringAsFixed(2),
         "Total package Premium (A+B+C)": totalAB.toStringAsFixed(2),
         "GST @ (18%)": gst.toStringAsFixed(2),
-        "Other Cess": otherCessAmt.toStringAsFixed(2),
+        "Other CESS": otherCessAmt.toStringAsFixed(2),
         "Final Premium": finalPremium.toStringAsFixed(2),
         "Total A": TotalA.toStringAsFixed(2),
       };
