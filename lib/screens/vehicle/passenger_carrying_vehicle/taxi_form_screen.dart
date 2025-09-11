@@ -223,7 +223,7 @@ class _TaxiFormScreenState extends State<TaxiFormScreen> {
 
       // Prepare results map
       Map<String, String> resultMap = {
-        "IDV": idv.toStringAsFixed(2),
+        "IDV": currentIdv.toStringAsFixed(2),
         // "Current IDV": currentIdv.toStringAsFixed(2),
         "Year of Manufacture": yearOfManufacture,
         "Zone": zone,

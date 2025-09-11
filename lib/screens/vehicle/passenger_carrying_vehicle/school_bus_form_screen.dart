@@ -220,7 +220,7 @@ class _SchoolBusFormScreenState extends State<SchoolBusFormScreen> {
       // ✅ Flattened Map<String, String> for result screen
       Map<String, String> resultData = {
         // Basic
-        "IDV": idv.toStringAsFixed(2),
+        "IDV": currentIdv.toStringAsFixed(2),
         // "Current IDV (₹)": currentIdv.toStringAsFixed(2),
         "Year Of Manufacture": yearOfManufacture,
         "Zone": zone,
