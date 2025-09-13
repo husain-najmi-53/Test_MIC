@@ -141,6 +141,8 @@ class _RtoZoneFinderState extends State<RtoZoneFinder> {
                               District = rtoData.rtoCodes[upCase]['District'];
                               State = rtoData.rtoCodes[upCase]['State'];
                             });
+                            //close keyboard
+                            FocusScope.of(context).unfocus();
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(content: Text("Data did not Match")),

@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:motor_insurance_app/screens/auth/single_device_check.dart';
 
 class EnterMPINScreen extends StatefulWidget {
   const EnterMPINScreen({Key? key}) : super(key: key);
@@ -13,13 +12,21 @@ class EnterMPINScreen extends StatefulWidget {
 
 class _EnterMPINScreenState extends State<EnterMPINScreen> {
   final List<String> _enteredPin = [];
+  bool _isLoading = false;
   //final _storage = const FlutterSecureStorage();
 
   Future<void> _verifyMPIN() async {
     if (_enteredPin.length != 4) return;
 
+    setState(() {
+      _isLoading = true;
+    });
+
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
+      setState(() {
+        _isLoading = false;
+      });
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Please login first")),
       );
@@ -83,6 +90,9 @@ class _EnterMPINScreenState extends State<EnterMPINScreen> {
           Navigator.pushReplacementNamed(context, '/subscribe');
         }
       } catch (e) {
+        setState(() {
+          _isLoading = false;
+        });
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text("Error checking subscription: $e"),
@@ -92,6 +102,9 @@ class _EnterMPINScreenState extends State<EnterMPINScreen> {
       }
     } else {
       // ❌ Wrong MPIN
+      setState(() {
+        _isLoading = false;
+      });
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text("Incorrect MPIN"),
@@ -104,6 +117,7 @@ class _EnterMPINScreenState extends State<EnterMPINScreen> {
   }
 
   void _onKeyPressed(String value) {
+    if (_isLoading) return; // Prevent input during loading
     if (_enteredPin.length < 4) {
       setState(() => _enteredPin.add(value));
       if (_enteredPin.length == 4) _verifyMPIN();
@@ -111,6 +125,7 @@ class _EnterMPINScreenState extends State<EnterMPINScreen> {
   }
 
   void _onBackspace() {
+    if (_isLoading) return; // Prevent input during loading
     if (_enteredPin.isNotEmpty) {
       setState(() => _enteredPin.removeLast());
     }
@@ -118,107 +133,188 @@ class _EnterMPINScreenState extends State<EnterMPINScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
+    final screenHeight = screenSize.height;
+    final screenWidth = screenSize.width;
+    
+    // Responsive sizing
+    final isSmallScreen = screenHeight < 600;
+    final buttonSize = isSmallScreen ? 48.0 : 64.0;
+    final dotSize = isSmallScreen ? 20.0 : 24.0;
+    final fontSize = isSmallScreen ? 20.0 : 24.0;
+    final verticalSpacing = isSmallScreen ? 12.0 : 16.0;
+    final horizontalSpacing = screenWidth < 350 ? 4.0 : 8.0;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Enter MPIN", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.indigo.shade700,
         elevation: 0,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Header
-            Text(
-              "Enter 4-digit verification code",
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: Colors.grey.shade700,
-                  ),
-            ),
-            const SizedBox(height: 24),
-
-            // PIN Dots
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(4, (index) {
-                return Container(
-                  width: 24,
-                  height: 24,
-                  margin: const EdgeInsets.symmetric(horizontal: 8),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: index < _enteredPin.length
-                        ? Colors.indigo.shade700
-                        : Colors.grey.shade300,
-                  ),
-                );
-              }),
-            ),
-            const SizedBox(height: 40),
-
-            // Keypad
-            Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [1, 2, 3].map((num) {
-                    return _NumberButton(
-                      number: num.toString(),
-                      onPressed: () => _onKeyPressed(num.toString()),
-                    );
-                  }).toList(),
-                ),
-                const SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [4, 5, 6].map((num) {
-                    return _NumberButton(
-                      number: num.toString(),
-                      onPressed: () => _onKeyPressed(num.toString()),
-                    );
-                  }).toList(),
-                ),
-                const SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [7, 8, 9].map((num) {
-                    return _NumberButton(
-                      number: num.toString(),
-                      onPressed: () => _onKeyPressed(num.toString()),
-                    );
-                  }).toList(),
-                ),
-                const SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const SizedBox(width: 64, height: 64), // Empty space
-                    _NumberButton(
-                      number: "0",
-                      onPressed: () => _onKeyPressed("0"),
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: screenWidth * 0.06,
+            vertical: isSmallScreen ? 16.0 : 24.0,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Header
+              Text(
+                "Enter 4-digit verification code",
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      color: Colors.grey.shade700,
+                      fontSize: isSmallScreen ? 14 : 16,
                     ),
-                    _BackspaceButton(onPressed: _onBackspace),
-                  ],
-                ),
-              ],
-            ),
-            const SizedBox(height: 24),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: isSmallScreen ? 16 : 24),
 
-            // Forgot MPIN link
-            TextButton(
-              onPressed: () {
-                Navigator.pushReplacementNamed(context, '/login');
-              },
-              child: Text(
-                "Forgot MPIN? Login with Email",
-                style: TextStyle(
-                  color: Colors.indigo.shade700,
-                  decoration: TextDecoration.underline,
+              // PIN Dots with loading overlay
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: List.generate(4, (index) {
+                      return Container(
+                        width: dotSize,
+                        height: dotSize,
+                        margin: EdgeInsets.symmetric(horizontal: horizontalSpacing),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: index < _enteredPin.length
+                              ? Colors.indigo.shade700
+                              : Colors.grey.shade300,
+                        ),
+                      );
+                    }),
+                  ),
+                  if (_isLoading)
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.9),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SizedBox(
+                            width: 16,
+                            height: 16,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                Colors.indigo.shade700,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            "Verifying...",
+                            style: TextStyle(
+                              color: Colors.indigo.shade700,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                ],
+              ),
+              SizedBox(height: isSmallScreen ? 24 : 40),
+
+              // Keypad
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: screenWidth * 0.8,
+                    maxHeight: screenHeight * 0.5,
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      // Row 1-2-3
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [1, 2, 3].map((num) {
+                          return _NumberButton(
+                            number: num.toString(),
+                            onPressed: _isLoading ? null : () => _onKeyPressed(num.toString()),
+                            size: buttonSize,
+                            fontSize: fontSize,
+                          );
+                        }).toList(),
+                      ),
+                      SizedBox(height: verticalSpacing),
+                      // Row 4-5-6
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [4, 5, 6].map((num) {
+                          return _NumberButton(
+                            number: num.toString(),
+                            onPressed: _isLoading ? null : () => _onKeyPressed(num.toString()),
+                            size: buttonSize,
+                            fontSize: fontSize,
+                          );
+                        }).toList(),
+                      ),
+                      SizedBox(height: verticalSpacing),
+                      // Row 7-8-9
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [7, 8, 9].map((num) {
+                          return _NumberButton(
+                            number: num.toString(),
+                            onPressed: _isLoading ? null : () => _onKeyPressed(num.toString()),
+                            size: buttonSize,
+                            fontSize: fontSize,
+                          );
+                        }).toList(),
+                      ),
+                      SizedBox(height: verticalSpacing),
+                      // Bottom row with empty space, 0, and backspace
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SizedBox(width: buttonSize, height: buttonSize), // Empty space
+                          _NumberButton(
+                            number: "0",
+                            onPressed: _isLoading ? null : () => _onKeyPressed("0"),
+                            size: buttonSize,
+                            fontSize: fontSize,
+                          ),
+                          _BackspaceButton(
+                            onPressed: _isLoading ? null : _onBackspace,
+                            size: buttonSize,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+              SizedBox(height: isSmallScreen ? 16 : 24),
+
+              // Forgot MPIN link
+              TextButton(
+                onPressed: _isLoading ? null : () {
+                  Navigator.pushReplacementNamed(context, '/login');
+                },
+                child: Text(
+                  "Forgot MPIN? Login with Email",
+                  style: TextStyle(
+                    color: _isLoading ? Colors.grey.shade400 : Colors.indigo.shade700,
+                    decoration: TextDecoration.underline,
+                    fontSize: isSmallScreen ? 12 : 14,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -227,31 +323,35 @@ class _EnterMPINScreenState extends State<EnterMPINScreen> {
 
 class _NumberButton extends StatelessWidget {
   final String number;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
+  final double size;
+  final double fontSize;
 
   const _NumberButton({
     required this.number,
     required this.onPressed,
+    this.size = 64.0,
+    this.fontSize = 24.0,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 64,
-      height: 64,
-      margin: const EdgeInsets.symmetric(horizontal: 8),
+      width: size,
+      height: size,
+      margin: const EdgeInsets.symmetric(horizontal: 4),
       child: TextButton(
         style: TextButton.styleFrom(
           shape: const CircleBorder(),
-          backgroundColor: Colors.grey.shade100,
+          backgroundColor: onPressed != null ? Colors.grey.shade100 : Colors.grey.shade200,
         ),
         onPressed: onPressed,
         child: Text(
           number,
-          style: const TextStyle(
-            fontSize: 24,
+          style: TextStyle(
+            fontSize: fontSize,
             fontWeight: FontWeight.bold,
-            color: Colors.black87,
+            color: onPressed != null ? Colors.black87 : Colors.grey.shade400,
           ),
         ),
       ),
@@ -260,23 +360,29 @@ class _NumberButton extends StatelessWidget {
 }
 
 class _BackspaceButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
+  final double size;
 
   const _BackspaceButton({
     required this.onPressed,
+    this.size = 64.0,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 64,
-      height: 64,
-      margin: const EdgeInsets.symmetric(horizontal: 8),
+      width: size,
+      height: size,
+      margin: const EdgeInsets.symmetric(horizontal: 4),
       child: IconButton(
-        icon: const Icon(Icons.backspace, size: 24),
+        icon: Icon(
+          Icons.backspace, 
+          size: size * 0.375, // Proportional icon size
+          color: onPressed != null ? Colors.black87 : Colors.grey.shade400,
+        ),
         style: IconButton.styleFrom(
           shape: const CircleBorder(),
-          backgroundColor: Colors.grey.shade100,
+          backgroundColor: onPressed != null ? Colors.grey.shade100 : Colors.grey.shade200,
         ),
         onPressed: onPressed,
       ),

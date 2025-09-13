@@ -44,3 +44,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# ignore const.dart
+lib/auth/const.dart
+
+# Signing keys (important!)
+android/key.properties
+android/app/my-release-key.jks

@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:motor_insurance_app/notification_services/flutter_local_notification_service.dart';
 import 'package:motor_insurance_app/screens/auth/auth_service.dart';
+import 'package:motor_insurance_app/screens/auth/set_mpin.dart';
 import 'package:motor_insurance_app/screens/auth/single_device_check.dart';
 import 'package:motor_insurance_app/screens/auth/subscribe_screen.dart';
 import 'package:motor_insurance_app/screens/custom/drawer/app_features_screen.dart';
